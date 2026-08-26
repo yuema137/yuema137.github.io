@@ -49,17 +49,23 @@ jobs:
       - run: npm run cv:png
 
       - name: Check the committed PDF matches its source
+        shell: bash
         run: |
           # Compare the TEXT LAYER, not the bytes. Chromium embeds a build
           # identity and compresses streams in ways that differ between the
           # macOS machine this is usually built on and this runner, so a byte
           # diff would fail on every push. The text layer is what actually
           # changed if someone edited the source without rebuilding.
-          pdftotext -layout /tmp/committed.pdf /tmp/committed.txt
-          pdftotext -layout assets/cv/yue-ma-cv.pdf /tmp/rebuilt.txt
+          # Whitespace is stripped before comparing: pdftotext decides where to
+          # insert spaces from glyph positions, so it emits "PRO FI L E" on one
+          # platform and "PROFILE" on another from identical output. Character
+          # content is the signal; its spacing is not. Layout itself is policed
+          # by the overflow and page-count checks in the build.
+          pdftotext -layout /tmp/committed.pdf - | tr -d '[:space:]' > /tmp/committed.txt
+          pdftotext -layout assets/cv/yue-ma-cv.pdf - | tr -d '[:space:]' > /tmp/rebuilt.txt
           if ! diff -q /tmp/committed.txt /tmp/rebuilt.txt > /dev/null; then
             echo "::error::assets/cv/yue-ma-cv.pdf is out of date. Run 'npm run cv' and commit it."
-            diff /tmp/committed.txt /tmp/rebuilt.txt | head -40
+            diff <(fold -w100 /tmp/committed.txt) <(fold -w100 /tmp/rebuilt.txt) | head -20
             exit 1
           fi
           echo "PDF is in sync with cv/resume/."

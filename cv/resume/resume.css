@@ -81,7 +81,16 @@ body{
   color:var(--ink);
   background:#8e969e;              /* screen only: contrast around the sheets */
   -webkit-font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
+
+  /* geometricPrecision, not optimizeLegibility. optimizeLegibility lets the
+     platform hint glyph advances, so macOS CoreText and Linux FreeType
+     disagree by a fraction of a pixel per character — enough to wrap a line
+     differently and produce a different PDF in CI than on a Mac.
+     geometricPrecision uses the font's own unhinted metrics, which are the
+     same bytes everywhere. Do not change this. */
+  text-rendering:geometricPrecision;
+  font-kerning:normal;
+  font-variant-ligatures:none;
 }
 
 a{color:var(--link);text-decoration:none}
