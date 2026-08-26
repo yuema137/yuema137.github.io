@@ -1,27 +1,25 @@
 /* ============================================================================
    resume.css — print-first typesetting for the two-page CV.
 
-   The document is the HTML. This file is the typesetting system. Chromium is
-   the PDF compiler (see tools/build-cv.mjs).
+   This stylesheet is ISOLATED from css/style.css on purpose. The CV and the
+   website share nothing but the font files, so editing the site cannot move a
+   line in the PDF. Do not import site CSS here, and do not add CV rules there.
 
    Read this before editing:
 
-   1. UNITS. Page geometry is in inches, type is in points. At the 96dpi CSS
-      reference, 1in = 96px and 1pt = 4/3 px, so both map exactly onto Letter
-      and neither drifts when Chromium rasterises.
+   1. UNITS. Page geometry is in inches, type in points. At the 96dpi CSS
+      reference 1in = 96px and 1pt = 4/3 px, so both land exactly on Letter.
 
-   2. NO AUTOMATIC PAGINATION. Each .page is exactly one physical sheet, with
-      an explicit page break after it. Nothing is left for the browser to
-      decide, which is the whole reason this is not LaTeX.
+   2. NO AUTOMATIC PAGINATION. Each .page is one physical sheet with an
+      explicit break after it. Chromium never chooses where the page ends.
 
-   3. FONT PATHS ARE RELATIVE, deliberately. Every other page on this site uses
+   3. FONT PATHS ARE RELATIVE, deliberately. Every other stylesheet here uses
       root-absolute paths, but the PDF build loads this file over file://,
-      where a leading slash resolves to the filesystem root. Relative paths are
+      where a leading slash means the filesystem root. Relative paths are
       correct under both file:// and https://yuema137.github.io/cv/resume/.
 
-   4. FONTS ARE SELF-HOSTED for determinism. The same bytes render on macOS and
-      on the GitHub Actions Ubuntu runner. Do not add a system-font fallback
-      that could silently change the layout in CI.
+   4. FONTS ARE SELF-HOSTED and metrics are unhinted, so the CI runner and a
+      Mac lay out identically. Do not add a system-font fallback.
    ========================================================================= */
 
 /* --- Fonts ---------------------------------------------------------------- */
@@ -33,38 +31,53 @@
 /* --- Tokens --------------------------------------------------------------- */
 
 :root{
-  /* Page geometry */
+
+  /* Page geometry -------------------------------------------------------- */
   --page-w:8.5in;
   --page-h:11in;
-  --pad-x:0.62in;
-  --pad-y:0.5in;
+  --pad-x:0.6in;
+  --pad-y:0.52in;
 
-  /* Ink. Black text, one blue for links. Nothing else carries colour. */
-  --ink:#16191c;
-  --ink-2:#3d444b;
-  --ink-3:#5c656e;
-  --rule:#c9ced3;
-  --rule-hair:#e2e6ea;
-  --link:#1a4e7a;
+  /* Ink. Black text and one print-safe dark blue for links. Nothing else in
+     the document carries colour. ---------------------------------------- */
+  /* Ink is set for PRINT, not for the screen. A grey that looks elegant on a
+     backlit display loses contrast on paper and in some PDF viewers, so the
+     body sits darker than a web design would want and the tertiary grey stays
+     above 7:1 on white. */
+  --ink:#101315;          /* headings, titles, bullet lead-ins */
+  --ink-2:#22272b;        /* body text */
+  --ink-3:#3d444a;        /* descriptions, dates, values — 9.9:1 on white */
+  --rule:#b9c0c6;
+  --link:#1a4e7a;         /* 8.7:1 on white; stays legible in greyscale print */
 
-  /* Type scale. Every size the document uses is declared here. */
+  /* Type scale ----------------------------------------------------------- */
   --t-name:23pt;
-  --t-contact:8.6pt;
-  --t-section:9.4pt;
-  --t-entry:10pt;
-  --t-body:9.4pt;
-  --t-date:8.8pt;
-  --t-pub:9pt;
+  --t-contact:9pt;
+  --t-section:11.5pt;     /* set in caps and tracked, so it reads a size up */
+  --t-entry:11pt;
+  --t-body:9.6pt;
+  --t-date:9pt;
+  --t-pub:9.3pt;
 
-  --lh-body:1.42;
-  --lh-tight:1.37;
+  --lh:1.40;
+  --lh-tight:1.35;
 
-  /* Vertical rhythm. Section spacing is the main balance control: if a page
-     runs long or short, adjust --gap-section first and the type sizes last. */
-  --gap-section:12.5pt;
-  --gap-entry:9.5pt;
-  --gap-bullet:3.2pt;
-  --indent-bullet:1.05em;
+  /* Spacing scale. FOUR STEPS. Do not introduce a fifth value — if something
+     needs different spacing, it almost certainly needs one of these.
+
+       tiny    metadata separation: title to description
+       small   inside a block: bullet to bullet, description to bullets
+       med     between sibling entries
+       large   between major sections
+     -------------------------------------------------------------------- */
+  --sp-tiny:2pt;
+  --sp-small:3.4pt;
+  --sp-med:13pt;
+  --sp-large:18pt;
+
+  --indent:1.3em;         /* bullet hang: wide enough that the dash is not
+                             glued to the text, shallow enough that it costs
+                             almost no line length */
 }
 
 /* --- Base ----------------------------------------------------------------- */
@@ -77,15 +90,15 @@ body{
   margin:0;
   font-family:Satoshi,system-ui,sans-serif;
   font-size:var(--t-body);
-  line-height:var(--lh-body);
-  color:var(--ink);
-  background:#8e969e;              /* screen only: contrast around the sheets */
+  line-height:var(--lh);
+  color:var(--ink-2);
+  background:#8b939b;              /* screen only: shows the sheet edges */
   -webkit-font-smoothing:antialiased;
 
   /* geometricPrecision, not optimizeLegibility. optimizeLegibility lets the
      platform hint glyph advances, so macOS CoreText and Linux FreeType
      disagree by a fraction of a pixel per character — enough to wrap a line
-     differently and produce a different PDF in CI than on a Mac.
+     differently and build a different PDF in CI than on a Mac.
      geometricPrecision uses the font's own unhinted metrics, which are the
      same bytes everywhere. Do not change this. */
   text-rendering:geometricPrecision;
@@ -96,51 +109,52 @@ body{
 a{color:var(--link);text-decoration:none}
 a:hover{text-decoration:underline}
 
-p{margin:0}
+h1,h2,h3,p{margin:0;font-size:inherit;font-weight:inherit}
 ul{margin:0;padding:0;list-style:none}
 
 /* --- Page container ------------------------------------------------------- */
 
+.resume{display:block}
+
 .page{
   position:relative;
+  display:block;
   width:var(--page-w);
   height:var(--page-h);
   padding:var(--pad-y) var(--pad-x);
   margin:0 auto;
   background:#fff;
-  overflow:hidden;               /* a page that overruns is a bug; clip it so
-                                    the PNG check makes the bug visible */
+  overflow:hidden;         /* a page that overruns is a bug — clip it so the
+                              build's overflow probe and the PNG both show it */
 }
 
-.page + .page{margin-top:28px}   /* screen only; removed in print */
+.page + .page{margin-top:26px}   /* screen only; removed in print */
 
 /* --- Masthead ------------------------------------------------------------- */
+
+.masthead{
+  padding-bottom:7pt;
+  border-bottom:.7pt solid var(--ink);
+  margin-bottom:var(--sp-large);
+  text-align:center;
+}
 
 .name{
   font-size:var(--t-name);
   font-weight:700;
-  letter-spacing:-.018em;
-  line-height:1.05;
-  text-align:center;
+  letter-spacing:-.02em;
+  line-height:1.04;
+  color:var(--ink);
 }
 
 .contact{
-  margin-top:6pt;
+  margin-top:5pt;
   font-size:var(--t-contact);
-  color:var(--ink-2);
-  text-align:center;
-  letter-spacing:.005em;
+  color:var(--ink-3);
 }
-.contact a{color:var(--link)}
-.contact .sep{color:var(--rule);margin:0 .5em;font-weight:400}
+.contact .sep{color:var(--rule);margin:0 .55em}
 
-.masthead{
-  padding-bottom:9pt;
-  border-bottom:.7pt solid var(--ink);
-  margin-bottom:var(--gap-section);
-}
-
-/* --- Running header (page 2 onward) -------------------------------------- */
+/* --- Running header, page 2 ----------------------------------------------- */
 
 .runhead{
   display:flex;
@@ -148,83 +162,93 @@ ul{margin:0;padding:0;list-style:none}
   align-items:baseline;
   padding-bottom:4pt;
   border-bottom:.6pt solid var(--rule);
-  margin-bottom:9pt;          /* less air than the masthead needs */
+  margin-bottom:var(--sp-large);
   font-size:var(--t-date);
   color:var(--ink-3);
 }
-.runhead b{font-weight:700;color:var(--ink-2);letter-spacing:-.006em}
+.runhead b{font-weight:700;color:var(--ink-2)}
 
 /* --- Sections ------------------------------------------------------------- */
 
-.section{margin-bottom:var(--gap-section)}
-.section:last-child{margin-bottom:0}
+/* Deliberately no rule under the heading. Hierarchy comes from caps, tracking
+   and the space above — not from a full-width line under every section, which
+   is what made the LaTeX version feel like a stack of boxes. */
+.section + .section{margin-top:var(--sp-large)}
 
 .section > h2{
-  margin:0 0 6pt;
-  padding-bottom:2.4pt;
-  border-bottom:.6pt solid var(--rule);
+  margin-bottom:var(--sp-small);
   font-size:var(--t-section);
   font-weight:700;
-  letter-spacing:.085em;
+  /* Tracking is capped at .03em on purpose. Above roughly .05em, PDF text
+     extractors start reading the wider glyph gaps as word breaks and emit
+     "L ARG E-SCALE" instead of "LARGE-SCALE", which is exactly the kind of
+     damage an ATS parser would see. Caps carry the hierarchy here; the size
+     does the rest. Verified with pdftotext — do not raise this. */
+  letter-spacing:.03em;
   text-transform:uppercase;
   color:var(--ink);
 }
 
-/* A short framing line under a section heading (used by XENONnT). */
+/* Framing line under a section heading (used by the XENONnT section). */
 .section-note{
-  margin-bottom:6pt;
-  font-size:var(--t-body);
+  margin-bottom:var(--sp-med);
   line-height:var(--lh-tight);
-  color:var(--ink-2);
+  color:var(--ink-3);
 }
 
 /* --- Entries -------------------------------------------------------------- */
 
-.entry{margin-bottom:var(--gap-entry)}
-.entry:last-child{margin-bottom:0}
+.entry + .entry{margin-top:var(--sp-med)}
 
-/* Title left, dates hard right, on one line. The dates never wrap and never
-   collide with the title: the title column is what shrinks. */
+/* Grid, not flex: the title column takes the remaining width and the date
+   column is sized to its content, so a wrapping title's continuation lines
+   align under the title and never run beneath the date. */
 .entry-head{
-  display:flex;
+  display:grid;
+  grid-template-columns:1fr auto;
+  column-gap:1.4em;
   align-items:baseline;
-  gap:1em;
-  margin-bottom:1.5pt;
+  margin-bottom:var(--sp-tiny);
 }
 .entry-title{
-  flex:1 1 auto;
-  min-width:0;
   font-size:var(--t-entry);
   font-weight:700;
-  line-height:1.25;
-  letter-spacing:-.004em;
+  line-height:1.24;
+  letter-spacing:-.006em;
+  color:var(--ink);
 }
-.entry-title .qualifier{font-weight:500;color:var(--ink-2)}
+/* A parenthetical role, e.g. "(Analysis Lead)" — part of the title, but it
+   should not carry the title's weight. */
+.entry-title .qualifier{font-weight:500;color:var(--ink-3)}
+
 .entry-date{
-  flex:0 0 auto;
   white-space:nowrap;
   font-size:var(--t-date);
   font-weight:500;
-  color:var(--ink-2);
+  color:var(--ink-3);
   font-variant-numeric:tabular-nums;
 }
 
+/* The one-line project summary. Secondary to the title, but set as running
+   prose so it never reads as a bullet. */
 .entry-sub{
-  margin-bottom:3pt;
+  margin-bottom:var(--sp-small);
   line-height:var(--lh-tight);
-  color:var(--ink-2);
+  color:var(--ink-3);
 }
-.entry-sub .arxiv{white-space:nowrap}
+
+/* The public system name leading a summary, e.g. "SIDERIUS." Wrapping it in
+   its own element means adding <a href> later is a one-token change. */
+.sysname{font-weight:700;color:var(--ink)}
 
 /* --- Bullets -------------------------------------------------------------- */
 
 .bullets > li{
   position:relative;
-  padding-left:var(--indent-bullet);
-  margin-bottom:var(--gap-bullet);
+  padding-left:var(--indent);
   line-height:var(--lh-tight);
 }
-.bullets > li:last-child{margin-bottom:0}
+.bullets > li + li{margin-top:var(--sp-small)}
 .bullets > li::before{
   content:"–";
   position:absolute;
@@ -234,45 +258,53 @@ ul{margin:0;padding:0;list-style:none}
 }
 .bullets b{font-weight:700;color:var(--ink)}
 
-/* --- Education: a compact three-column list ------------------------------- */
+/* --- Education ------------------------------------------------------------ */
 
 .rows > li{
-  display:flex;
+  display:grid;
+  grid-template-columns:1fr auto;
+  column-gap:1.4em;
   align-items:baseline;
-  gap:1em;
-  margin-bottom:2.6pt;
   line-height:var(--lh-tight);
 }
-.rows > li:last-child{margin-bottom:0}
-.rows .what{flex:1 1 auto;min-width:0}
-.rows .what b{font-weight:700}
-.rows .where{color:var(--ink-2)}
+.rows > li + li{margin-top:var(--sp-small)}
+.rows b{font-weight:700;color:var(--ink)}
+.rows .where{color:var(--ink-3)}
 .rows .when{
-  flex:0 0 auto;
   white-space:nowrap;
   font-size:var(--t-date);
   font-weight:500;
-  color:var(--ink-2);
+  color:var(--ink-3);
   font-variant-numeric:tabular-nums;
 }
 
-/* --- Skills: label column + wrapped values -------------------------------- */
+/* --- Skills --------------------------------------------------------------- */
 
-.skills{display:grid;grid-template-columns:auto 1fr;column-gap:1.1em;row-gap:3.4pt}
-.skills dt{font-weight:700;line-height:var(--lh-tight);white-space:nowrap}
-.skills dd{margin:0;line-height:var(--lh-tight);color:var(--ink-2)}
+.skills{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  column-gap:1.4em;
+  row-gap:var(--sp-small);
+}
+.skills dt{font-weight:700;line-height:var(--lh-tight);white-space:nowrap;color:var(--ink)}
+.skills dd{margin:0;line-height:var(--lh-tight);color:var(--ink-3)}
+
+/* Keeps a hyphenated term off a line break. A hyphen that lands at the end of
+   a rendered line is dropped by PDF text extractors — "action-space" comes out
+   as "actionspace", which no keyword search matches. Use on hyphenated terms
+   that matter as search keywords. */
+.nb{white-space:nowrap}
 
 /* --- Publications --------------------------------------------------------- */
 
 .pubs > li{
   position:relative;
-  padding-left:var(--indent-bullet);
-  margin-bottom:4.6pt;
+  padding-left:var(--indent);
   font-size:var(--t-pub);
   line-height:var(--lh-tight);
-  color:var(--ink-2);
+  color:var(--ink-3);
 }
-.pubs > li:last-child{margin-bottom:0}
+.pubs > li + li{margin-top:var(--sp-small)}
 .pubs > li::before{
   content:"–";
   position:absolute;
@@ -280,7 +312,7 @@ ul{margin:0;padding:0;list-style:none}
   top:0;
   color:var(--ink-3);
 }
-.pubs .title{color:var(--ink)}
+.pubs .title{color:var(--ink-2)}
 .pubs .me{font-weight:700;color:var(--ink)}
 .pubs .venue{font-style:italic}
 
@@ -289,16 +321,16 @@ ul{margin:0;padding:0;list-style:none}
 .backlink{
   display:block;
   width:var(--page-w);
-  margin:22px auto 12px;
+  margin:20px auto 14px;
   font-size:9pt;
-  color:#f2f5f8;
+  color:#eef2f6;
 }
 .backlink a{color:#fff;text-decoration:underline}
 
 /* --- Print ---------------------------------------------------------------- */
 
 @page{
-  size:8.5in 11in;
+  size:Letter;
   margin:0;
 }
 
@@ -316,9 +348,10 @@ ul{margin:0;padding:0;list-style:none}
   .page + .page{margin-top:0}
   .backlink{display:none}
 
-  /* Belt and braces: nothing inside an entry may be split, in case a future
-     edit ever removes the explicit page containers. */
-  .entry,.rows > li,.pubs > li,.bullets > li{
+  /* Belt and braces. The explicit page containers already make these
+     unreachable, but they keep a future edit that removes them from silently
+     splitting an entry across sheets. */
+  .entry,.rows > li,.pubs > li,.bullets > li,.skills{
     break-inside:avoid;
     page-break-inside:avoid;
   }

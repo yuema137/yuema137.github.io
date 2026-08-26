@@ -54,6 +54,22 @@ await page.goto(pathToFileURL(SOURCE).href, { waitUntil: "networkidle" });
    on document.fonts is what makes the output byte-stable across runs. */
 await page.evaluate(() => document.fonts.ready);
 
+/* ---- Font-load probe ----------------------------------------------------
+   Checked before anything else: if the woff2 files did not load, every later
+   measurement is describing a fallback font, and the glyph probe below would
+   report the entire alphabet as missing rather than the real cause. */
+const fontsLoaded = await page.evaluate(() =>
+  ["400", "500", "700"].filter((w) => !document.fonts.check(`${w} 12pt Satoshi`))
+);
+if (fontsLoaded.length) {
+  await browser.close();
+  fail(
+    `Satoshi failed to load at weight ${fontsLoaded.join(", ")}. ` +
+      `Check assets/fonts/satoshi-{400,500,700}.woff2 and the relative @font-face ` +
+      `paths in cv/resume/resume.css.`
+  );
+}
+
 /* ---- Layout probe -------------------------------------------------------
    Each .page is a fixed-height box with overflow:hidden, so content that runs
    long is clipped rather than reflowed. Clipping is silent in the PDF, so
@@ -169,6 +185,21 @@ if (pdfPages !== EXPECTED_PAGES) {
   fail(`PDF has ${pdfPages} pages, expected ${EXPECTED_PAGES}.`);
 }
 
+/* Letter is 612 x 792 PostScript points. A MediaBox of any other size means
+   @page stopped being honoured — the page count would not catch that. */
+const boxes = [...bytes.toString("latin1").matchAll(/\/MediaBox\s*\[\s*([\d.\s-]+?)\]/g)].map((m) =>
+  m[1].trim().split(/\s+/).map(Number)
+);
+const wrongSize = boxes.filter(
+  (b) => Math.abs(b[2] - b[0] - 612) > 1 || Math.abs(b[3] - b[1] - 792) > 1
+);
+if (wrongSize.length) {
+  fail(
+    `PDF page size is ${wrongSize[0][2] - wrongSize[0][0]} x ${wrongSize[0][3] - wrongSize[0][1]} pt, ` +
+      `expected 612 x 792 (US Letter).`
+  );
+}
+
 /* ---- Optional rasterisation --------------------------------------------
    Rendered from the finished PDF, not from the DOM, so what is inspected is
    what a reader actually receives. Needs poppler (`brew install poppler`,
@@ -177,7 +208,7 @@ if (wantPng) {
   await mkdir(PNG_DIR, { recursive: true });
   const prefix = path.join(PNG_DIR, "page");
   try {
-    await execFileAsync("pdftoppm", ["-png", "-r", "110", OUTPUT, prefix]);
+    await execFileAsync("pdftoppm", ["-png", "-r", "150", OUTPUT, prefix]);
     console.log(`  previews  build/cv-preview/page-{1,2}.png\n`);
   } catch (err) {
     console.warn(

@@ -216,6 +216,12 @@ assets/cv/yue-ma-cv.pdf The output. Committed, because Pages serves it as a file
 **Never hand-edit `assets/cv/yue-ma-cv.pdf`.** It is overwritten on every build.
 The path is linked from the homepage, `/cv/`, and LinkedIn, so it must not move.
 
+`cv/resume/` is a **build input, not a page of the site.** The site links to the
+PDF and never to the source. Nothing links to `/cv/resume/`, it is `noindex`,
+and `robots.txt` disallows it. GitHub Pages still serves every file in the
+repository, so the URL resolves for anyone who types it — keep it unlinked
+rather than assuming it is private.
+
 ### Editing it
 
 ```bash
