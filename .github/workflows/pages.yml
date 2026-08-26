@@ -1,0 +1,83 @@
+# Publishes the website to GitHub Pages.
+#
+# WHY THIS EXISTS instead of Pages' default branch publishing: the default
+# serves every file in the repository, which would put the CV source
+# (cv/resume/), the build tooling, and the README on the public site. Only the
+# site itself should be reachable. This workflow stages an explicit allowlist
+# and deploys that, so anything not named below simply does not exist at
+# yuema137.github.io.
+#
+# ADDING A NEW TOP-LEVEL SECTION: add it to PUBLISH below, or it will 404.
+# The verify step fails the deploy if an excluded path is staged by mistake.
+
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Stage the publishable files
+        run: |
+          set -euo pipefail
+          mkdir -p _site
+
+          # Everything the public site is made of. Note cv/ is copied and then
+          # cv/resume/ is removed: the CV landing page is public, its source
+          # is not.
+          PUBLISH=(
+            index.html 404.html favicon.svg robots.txt sitemap.xml .nojekyll
+            assets css js
+            blog cv projects publications research talks
+          )
+          for p in "${PUBLISH[@]}"; do
+            cp -R "$p" _site/
+          done
+
+          # The CV source. It is the build input for assets/cv/yue-ma-cv.pdf,
+          # not a page. The site links to the PDF only.
+          rm -rf _site/cv/resume
+
+      - name: Verify nothing private was staged
+        run: |
+          set -euo pipefail
+          fail=0
+          for p in cv/resume tools package.json package-lock.json README.md .github node_modules build; do
+            if [ -e "_site/$p" ]; then
+              echo "::error::_site/$p was staged but must not be published."
+              fail=1
+            fi
+          done
+          # The site must still be complete.
+          for p in index.html cv/index.html assets/cv/yue-ma-cv.pdf css/style.css .nojekyll; do
+            if [ ! -e "_site/$p" ]; then
+              echo "::error::_site/$p is missing — the site would be broken."
+              fail=1
+            fi
+          done
+          exit $fail
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4

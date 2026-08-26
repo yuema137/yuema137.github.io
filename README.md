@@ -216,11 +216,16 @@ assets/cv/yue-ma-cv.pdf The output. Committed, because Pages serves it as a file
 **Never hand-edit `assets/cv/yue-ma-cv.pdf`.** It is overwritten on every build.
 The path is linked from the homepage, `/cv/`, and LinkedIn, so it must not move.
 
-`cv/resume/` is a **build input, not a page of the site.** The site links to the
-PDF and never to the source. Nothing links to `/cv/resume/`, it is `noindex`,
-and `robots.txt` disallows it. GitHub Pages still serves every file in the
-repository, so the URL resolves for anyone who types it — keep it unlinked
-rather than assuming it is private.
+`cv/resume/` is a **build input, not a page of the site**, and it is not
+published. `.github/workflows/pages.yml` stages an explicit allowlist and
+deletes `cv/resume/` from it, so `/cv/resume/` returns 404 on the live site.
+The source is still public in this repository — the repository is public — but
+it is not part of the website.
+
+**This is why the site does not use Pages' default branch publishing:** that
+mode serves every file in the repository, including this source, the build
+tooling, and this README. If you add a new top-level section, add it to
+`PUBLISH` in that workflow or it will 404.
 
 ### Editing it
 
