@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Preparing for behavioural interviews without memorising answers — Yue Ma</title>
+    <meta name="description" content="A taxonomy of about a hundred behavioural interview questions, and a method for covering them with four or five real stories instead of a hundred rehearsed answers.">
+    <link rel="canonical" href="https://yuema137.github.io/blog/2026-01-behavioral-interviews/">
+    <link rel="alternate" hreflang="en"        href="https://yuema137.github.io/blog/2026-01-behavioral-interviews/">
+    <link rel="alternate" hreflang="zh-Hans"   href="https://yuema137.github.io/blog/2026-01-behavioral-interviews/zh/">
+    <link rel="alternate" hreflang="x-default" href="https://yuema137.github.io/blog/2026-01-behavioral-interviews/">
+    <meta name="theme-color" content="#f1f6fb" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#08131d" media="(prefers-color-scheme: dark)">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Yue Ma">
+    <meta property="og:title" content="Preparing for behavioural interviews without memorising answers">
+    <meta property="og:description" content="A taxonomy of about a hundred behavioural interview questions, and a method for covering them with four or five real stories instead of a hundred rehearsed answers.">
+    <meta property="og:url" content="https://yuema137.github.io/blog/2026-01-behavioral-interviews/">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/satoshi-400.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/satoshi-700.woff2" crossorigin>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <!-- SHARED:HEADER start ===================================================
+         Keep this block identical across every page. The ONLY permitted
+         difference between copies is aria-current="page" on the active link.
+         ====================================================================== -->
+    <header class="site-header">
+      <div class="c">
+        <a class="brand" href="/">Yue Ma</a>
+        <nav class="site-nav" aria-label="Primary">
+          <ul>
+            <li><a href="/research/">Research</a></li>
+            <li><a href="/projects/">Projects</a></li>
+            <li><a href="/publications/">Publications</a></li>
+            <li><a href="/talks/">Talks</a></li>
+            <li><a href="/blog/" aria-current="page">Blog</a></li>
+            <li><a href="/cv/">CV</a></li>
+          </ul>
+        </nav>
+        <ul class="hlinks">
+          <li><a href="https://scholar.google.com/citations?user=kfhiI_kAAAAJ&amp;hl=en">Scholar</a></li>
+          <li><a href="https://github.com/yuema137">GitHub</a></li>
+        </ul>
+      </div>
+    </header>
+    <!-- SHARED:HEADER end ==================================================== -->
+    <main id="main">
+      <div class="c">
+      <article>
+        <section class="hero hero--page">
+          <p class="meta muted"><a class="link" href="/blog/">← All posts</a></p>
+          <h1 class="mt-2">Preparing for behavioural interviews without memorising answers</h1>
+          <p class="meta muted mt-2"><time datetime="2026-01-20">20 January 2026</time></p>
+          <ul class="lang-switch mt-2">
+            <li><a aria-current="true" href="/blog/2026-01-behavioral-interviews/" hreflang="en">English</a></li>
+            <li><a href="/blog/2026-01-behavioral-interviews/zh/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <div class="prose">
+            <p class="sub" style="max-width:none">A taxonomy of about a hundred behavioural
+              questions, and a method for covering them with four or five stories instead of
+              a hundred rehearsed answers.</p>
+
+            <p>I went through general software and research-engineering interviews as a fresh
+              PhD graduate with no prior industry internship or full-time experience —
+              applying cold, without referrals. The behavioural rounds worried me more than
+              the technical ones, because there is no obvious way to rehearse them, and
+              because most of the advice out there tells you to prepare a story for every
+              question you might be asked.</p>
+
+            <p>That advice is wrong, or at least unusable. There are too many questions, you
+              cannot memorise that many answers, and an answer that sounds memorised is worse
+              than one that rambles a little. What worked instead was to spend the preparation
+              time on <strong>structure</strong> rather than volume: work out what the
+              questions actually are, group them, and then build a small set of real stories that
+              cover every category between them.</p>
+
+            <p>This post is the result. The question bank below was assembled mostly from
+              Google and Meta interview reports; the method that follows is what I would tell
+              someone starting from scratch.</p>
+
+            <div class="toc mt-4">
+              <p>Contents</p>
+              <ol>
+                <li><a href="#measuring">What the round is actually measuring</a></li>
+                <li><a href="#bank">The question bank — twelve categories</a></li>
+                <li><a href="#stories">Building the story set</a></li>
+                <li><a href="#llm">Working with an LLM without letting it write for you</a></li>
+                <li><a href="#answering">Answering: lift, don't narrate</a></li>
+                <li><a href="#mistakes">Failure modes</a></li>
+              </ol>
+            </div>
+
+            <h2 id="measuring">1. What the round is actually measuring</h2>
+
+            <p>The single most useful reframing: the interviewer is not collecting anecdotes.
+              They are looking for evidence of a small number of traits, and every question is
+              a different doorway into the same house. "Tell me about your hardest project" is
+              not a request for a hard project. It is a request for evidence that you can
+              recognise difficulty, break it down, and keep making decisions inside it.</p>
+
+            <p>Roughly, the traits being probed are:</p>
+            <ul>
+              <li><strong>Ownership</strong> — do you treat problems as yours once you see them</li>
+              <li><strong>Judgment under constraint</strong> — how you decide when you cannot do everything</li>
+              <li><strong>Conflict handling</strong> — whether disagreement makes you defensive or curious</li>
+              <li><strong>Communication</strong> — whether you can make a complicated thing legible to someone who was not there</li>
+              <li><strong>Growth</strong> — whether experience actually changes your behaviour</li>
+            </ul>
+
+            <p>Every category in the bank below maps onto one or more of these. Once you see
+              the mapping, the hundred questions collapse into something manageable.</p>
+
+            <h2 id="bank">2. The question bank — twelve categories</h2>
+
+            <p>Main questions are the top-level bullets; the indented items are follow-ups
+              that came up often enough that you should expect them. Assume you will get at
+              least two follow-ups on anything you say.</p>
+
+            <h3>1 · Projects and challenges</h3>
+            <ul>
+              <li>Describe a challenging or complex project you worked on.
+                <ul><li>What made it challenging?</li><li>What problems did you encounter?</li>
+                <li>How did you resolve them?</li><li>What was the impact — metrics, results?</li></ul></li>
+              <li>Tell me about your most interesting recent project.</li>
+              <li>Describe a time when a project did not go the way you expected.
+                <ul><li>How did you react?</li><li>What did you do afterwards — documentation, process change?</li></ul></li>
+              <li>Tell me about a time you introduced something new to your team.</li>
+              <li>Tell me about a time you did something beyond expectations.</li>
+              <li>Describe a time you stepped up and supported the team.</li>
+            </ul>
+
+            <h3>2 · Conflict and disagreement</h3>
+            <ul>
+              <li>Tell me about a time you disagreed with someone.
+                <ul><li>How did you handle the conflict?</li><li>What was the outcome?</li></ul></li>
+              <li>How do you generally deal with conflict?</li>
+              <li>Tell me about a conflict with a teammate. With a manager.</li>
+              <li>What would you do if someone on the team is hard to work with? Is not
+                collaborating? Is not meeting expectations?</li>
+              <li>Tell me about a time different perspectives led to different design decisions.
+                <ul><li>How were they merged into a better solution?</li></ul></li>
+              <li>Tell me about a time you listened to someone and changed your mind.</li>
+              <li>Tell me about a time you advocated for someone else on a team.</li>
+            </ul>
+
+            <h3>3 · Teamwork, leadership and collaboration</h3>
+            <ul>
+              <li>Describe working in a team with very different personalities or backgrounds.</li>
+              <li>How do you help others integrate into a team?</li>
+              <li>Tell me about your onboarding experience.
+                <ul><li>How did others help you?</li><li>How have you helped new members onboard?</li><li>What did you take away?</li></ul></li>
+              <li>What would you do if a team member misses deadlines? If you were the leader
+                assigning roles? If the team faced a problem nobody was familiar with?</li>
+              <li>Tell me about a time you supported inclusiveness at work.</li>
+              <li>What is your understanding of inclusiveness?</li>
+              <li>What makes a good leader or mentor?
+                <ul><li>An example from a past manager.</li></ul></li>
+            </ul>
+
+            <h3>4 · Ownership and responsibility</h3>
+            <ul>
+              <li>Tell me about a time you showed strong ownership.</li>
+              <li>Tell me about a time you took initiative beyond your responsibilities.</li>
+              <li>A bug is found right before release and there is no time to fix it. What do you do?</li>
+              <li>Compare: a bug in a project you own, a bug in a project you do not own, and a
+                bug with no dependency on your current work.
+                <ul><li>How do you prioritise and act in each case?</li></ul></li>
+              <li>Tell me about a time your integrity was tested.</li>
+            </ul>
+
+            <h3>5 · Prioritisation, deadlines and workload</h3>
+            <ul>
+              <li>Tell me about a time you had too much work.
+                <ul><li>What caused it?</li><li>How did you handle it?</li></ul></li>
+              <li>How do you prioritise tasks?</li>
+              <li>What do you do with multiple deadlines? With very tight ones?</li>
+              <li>Tell me about a time you had to multitask.
+                <ul><li>Did you complete everything?</li><li>Did you consider dropping anything?</li></ul></li>
+              <li>How do you respond when someone asks you to prioritise their request over
+                others? When you receive an unreasonable requirement?</li>
+            </ul>
+
+            <h3>6 · Learning, growth and adaptability</h3>
+            <ul>
+              <li>Tell me about a time you learned something new and changed your approach.</li>
+              <li>Tell me about a time you learned from someone else and applied it.</li>
+              <li>What have you done in the past year to improve yourself?</li>
+              <li>Tell me about a recent achievement you are proud of.</li>
+              <li>Tell me about a time you realised your method was wrong and corrected it.</li>
+            </ul>
+
+            <h3>7 · Feedback and communication</h3>
+            <ul>
+              <li>Tell me about a time you gave someone feedback.
+                <ul><li>How did they respond?</li></ul></li>
+              <li>What is good feedback versus bad feedback? Give examples.</li>
+              <li>Tell me about a time you had to manage expectations — with stakeholders, with management.</li>
+            </ul>
+
+            <h3>8 · Team dynamics and difficult situations</h3>
+            <ul>
+              <li>What would you do if someone took all the credit for the team's work? If
+                someone is not a team player? If team morale is poor?</li>
+              <li>How do you make an unstructured team more structured?</li>
+              <li>How do you handle an environment with poor work-life balance?</li>
+            </ul>
+
+            <h3>9 · Product and user thinking</h3>
+            <ul>
+              <li>If you were building a product for diverse user groups, how would you design
+                for different needs and balance the trade-offs?</li>
+              <li>Tell me about a time you improved a product or a solution.</li>
+            </ul>
+
+            <h3>10 · Career, motivation and personal</h3>
+            <ul>
+              <li>Self-introduction.</li>
+              <li>Why this company?</li>
+              <li>Short-term and long-term career goals.</li>
+              <li>Strengths and weaknesses.</li>
+              <li>What do you expect from your next manager?</li>
+              <li>What are your plans for the year?</li>
+              <li>Have you changed any habits or hobbies recently?</li>
+            </ul>
+
+            <h3>11 · Hypothetical and scenario-based</h3>
+            <ul>
+              <li>As a team leader: how do you handle missed deadlines? How do you assign roles?</li>
+              <li>You find a bug in another team's project before starting your own work. Same
+                bug, but in your own project. What changes?</li>
+              <li>A product needs to serve users globally. What would you do?</li>
+            </ul>
+
+            <h3>12 · Reflection — the universal follow-ups</h3>
+            <p>These attach to almost any answer. If you have not thought about them, the
+              follow-up is where the answer falls apart:</p>
+            <ul>
+              <li>Why did you choose that action?</li>
+              <li>What alternatives did you consider?</li>
+              <li>What would you do differently next time?</li>
+              <li>What did you learn?</li>
+            </ul>
+
+            <h2 id="stories">3. Building the story set</h2>
+
+            <p>Do not try to prepare a story per question. There are around a hundred
+              questions above; you cannot hold a hundred rehearsed answers in your head, and
+              if you could, they would sound rehearsed. My honest view is that most people
+              over-prepare for these rounds.</p>
+
+            <p>The structure that works is <strong>one core story plus a few satellites</strong>:</p>
+
+            <ul>
+              <li><strong>The core story</strong> is the most substantial project you have
+                actually done. It should be the thing your CV is built around, it should
+                involve other people, and it should be complicated enough that you can come
+                at it from several angles. A good core story answers categories
+                1, 4, 5 and 6 as it stands, and often 2 and 3 as well.</li>
+              <li><strong>Satellites</strong> are three or four smaller stories chosen
+                specifically to cover what the core story cannot. Usually that means conflict
+                (category 2), giving feedback (7), and something about team dynamics (3 or 8).</li>
+            </ul>
+
+            <p>Choose for coverage, not for how impressive the story is. A small story about
+              disagreeing with a collaborator over an analysis choice is more useful than a
+              second big project, because the second big project answers the same questions
+              the first one already did.</p>
+
+            <p>Before you write anything, build the coverage table — twelve rows, one per
+              category, and mark which story you would reach for. The empty rows tell you what to go
+              looking for in your own experience.</p>
+
+            <table>
+              <tr><th>Category</th><th>Typically covered by</th></tr>
+              <tr><td>1 Projects and challenges</td><td>Core story</td></tr>
+              <tr><td>2 Conflict</td><td>Satellite — needs a real disagreement</td></tr>
+              <tr><td>3 Teamwork and leadership</td><td>Core story or a mentoring satellite</td></tr>
+              <tr><td>4 Ownership</td><td>Core story</td></tr>
+              <tr><td>5 Prioritisation</td><td>Core story</td></tr>
+              <tr><td>6 Learning and growth</td><td>Core story, from a different angle</td></tr>
+              <tr><td>7 Feedback</td><td>Satellite — usually the hardest gap to fill</td></tr>
+              <tr><td>8 Team dynamics</td><td>Satellite</td></tr>
+              <tr><td>9 Product and users</td><td>Any story, reframed around who it was for</td></tr>
+              <tr><td>10 Career and motivation</td><td>Prepared separately; not a story</td></tr>
+              <tr><td>11 Hypotheticals</td><td>No story needed — reasoning, not recall</td></tr>
+              <tr><td>12 Reflection follow-ups</td><td>Every story must carry these</td></tr>
+            </table>
+
+            <h2 id="llm">4. Working with an LLM without letting it write for you</h2>
+
+            <p>An LLM is genuinely useful here, but only in one role: as an interviewer who
+              extracts detail from you. The moment you let it draft, it invents — plausible
+              metrics, plausible colleagues, plausible conflicts. You will not notice, and
+              then you will be asked a follow-up about a detail you never lived and cannot
+              defend.</p>
+
+            <p>So the rule is: <strong>it asks, you answer, it assembles only what you said.</strong>
+              Four prompts, in order.</p>
+
+            <h3>Step 1 — Scope the story set</h3>
+            <p>Give it your CV and the question bank, and ask for a map rather than prose.
+              What you want out of this step is the list of gaps.</p>
+<pre><code>Here is my CV, and a list of behavioural interview questions.
+
+[paste CV]
+[paste the question bank]
+
+Do not write any stories yet.
+
+1. Identify 4-6 experiences from my CV that could plausibly support answers.
+2. For each, list which of the twelve categories it could cover.
+3. Show me which categories are NOT covered by any of them.
+
+Output a coverage table and the list of gaps. Nothing else.</code></pre>
+
+            <h3>Step 2 — Let it interrogate you</h3>
+            <p>This is the step that does the work, and the one people skip. One story at a
+              time. The line about not suggesting details is the one that matters. Without it the
+              model starts offering you a version to agree with, and agreeing is much easier
+              than remembering.</p>
+<pre><code>We are going to develop one story: [one-line label].
+
+Your job is to interview me, not to write for me. Ask one question at a
+time about what actually happened. Focus on:
+
+- the constraint I was under, and who else was involved
+- what I actually did, decision by decision
+- what alternatives existed and why I rejected them
+- what the measurable outcome was
+- what I would do differently now
+
+Do not suggest details. Do not fill in gaps. Do not offer me a version to
+confirm. If I say "I don't remember" or "that didn't happen", drop that
+thread and move on.
+
+Ask up to 10 questions, then stop and show me what you have.</code></pre>
+
+            <h3>Step 3 — Assemble, with provenance</h3>
+            <p>Three lengths, because you will be asked for a summary as often as the full
+              version. The <code>[UNVERIFIED]</code> marker is what makes this safe to use —
+              anything tagged is either something you should verify or something to delete.</p>
+<pre><code>Using only facts I gave you in this conversation, draft this story in
+three lengths:
+
+- 30 seconds: the version for "give me a quick example"
+- 90 seconds: the default answer
+- follow-up material: alternatives considered, what I would do
+  differently, what I learned
+
+Mark with [UNVERIFIED] anything you inferred rather than heard from me.
+Do not smooth over gaps - leave them visible.</code></pre>
+
+            <h3>Step 4 — Audit the coverage</h3>
+            <p>Once everything is written, check the map again. It catches the common case where
+              four stories all turn out to answer category 1.</p>
+<pre><code>Here are my finished stories:
+[paste]
+
+Here is the full question list:
+[paste]
+
+For each of the twelve categories, tell me which story I would use and
+how strong the fit is: strong / workable / none.
+
+List the gaps. Do not invent new stories to fill them.</code></pre>
+
+            <h2 id="answering">5. Answering: lift, don't narrate</h2>
+
+            <p>The most common mistake is answering the question literally — as though being
+              asked for the hardest situation you have faced were a request for an accurate
+              account of that situation. It is not. Every question is an
+              opportunity to demonstrate a strength, and an answer that describes events
+              accurately but demonstrates nothing is a failed answer.</p>
+
+            <p>So every answer needs a lift at the end: the point where the story stops being
+              an event and becomes evidence.</p>
+
+            <ul>
+              <li>A setback becomes <strong>how you operate under pressure</strong>.</li>
+              <li>A conflict with a colleague becomes <strong>how you communicate</strong>.</li>
+              <li>Being overloaded becomes <strong>how you decide what not to do</strong>.</li>
+              <li>An error you made becomes <strong>how you changed your process afterwards</strong>.</li>
+            </ul>
+
+            <blockquote><p>If the interviewer could not write down a trait after your answer,
+              the answer did not land — however true it was.</p></blockquote>
+
+            <p>The lift should be one or two sentences and it should be earned by the story,
+              not bolted on. "And that taught me the importance of communication" is bolted
+              on. "I now write the disagreement down and send it to the other person before we
+              meet, because most of what looked like disagreement turned out to be two people
+              using the same word differently" is earned.</p>
+
+            <h2 id="mistakes">6. Failure modes</h2>
+
+            <ul>
+              <li><strong>Preparing volume instead of coverage.</strong> Twenty stories that
+                all answer category 1, and nothing for feedback or conflict.</li>
+              <li><strong>Letting the model write the story.</strong> It reads well and
+                collapses on the first follow-up.</li>
+              <li><strong>No numbers.</strong> "It got much faster" invites a follow-up you
+                cannot answer. Know the actual figure, or say plainly that you did not measure
+                it and what you would measure now.</li>
+              <li><strong>Conflict stories where you were right.</strong> A conflict story in
+                which you were correct all along and the other person came round demonstrates
+                nothing. The good version is one where you changed your mind, or where you
+                were right and still had to make it work with someone who disagreed.</li>
+              <li><strong>Answers with no "I".</strong> Long descriptions of what the team did.
+                The interviewer is assessing you, not the project.</li>
+              <li><strong>Sounding rehearsed.</strong> Prepare the material and the lift, not
+                the sentences.</li>
+            </ul>
+
+            <p class="muted mt-4">An earlier and shorter version of this appeared in Chinese on
+              1point3acres. This version is expanded, and the Chinese version here is expanded
+              to match.</p>
+          </div>
+        </section>
+      </article>
+      </div>
+    </main>
+    <!-- SHARED:FOOTER start ===================================================
+         Keep this block identical across every page. To bump the date, see
+         "Updating the last-updated date" in README.md.
+         ====================================================================== -->
+    <footer class="site-footer">
+      <div class="c">
+        <span>© 2026 Yue Ma · <a href="mailto:yuema9810@gmail.com">yuema9810@gmail.com</a></span>
+        <ul>
+          <li><a href="https://scholar.google.com/citations?user=kfhiI_kAAAAJ&amp;hl=en">Scholar</a></li>
+          <li><a href="https://github.com/yuema137">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/yue-ma-719818191/">LinkedIn</a></li>
+          <li><a href="/cv/">CV</a></li>
+        </ul>
+        <span>Last updated <time datetime="2026-08-25">25 August 2026</time></span>
+      </div>
+    </footer>
+    <!-- SHARED:FOOTER end ==================================================== -->
+  </body>
+</html>

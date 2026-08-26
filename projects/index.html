@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projects — Yue Ma</title>
+    <meta name="description" content="SIDERIUS, SciTra, FrontierPhysics, and research threads in machine learning and statistical inference.">
+    <link rel="canonical" href="https://yuema137.github.io/projects/">
+    <meta name="theme-color" content="#f1f6fb" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#08131d" media="(prefers-color-scheme: dark)">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Yue Ma">
+    <meta property="og:title" content="Projects — Yue Ma">
+    <meta property="og:description" content="SIDERIUS, SciTra, FrontierPhysics, and research threads in machine learning and statistical inference.">
+    <meta property="og:url" content="https://yuema137.github.io/projects/">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/satoshi-400.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/satoshi-700.woff2" crossorigin>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <!-- SHARED:HEADER start ===================================================
+         Keep this block identical across every page. The ONLY permitted
+         difference between copies is aria-current="page" on the active link.
+         ====================================================================== -->
+    <header class="site-header">
+      <div class="c">
+        <a class="brand" href="/">Yue Ma</a>
+        <nav class="site-nav" aria-label="Primary">
+          <ul>
+            <li><a href="/research/">Research</a></li>
+            <li><a href="/projects/" aria-current="page">Projects</a></li>
+            <li><a href="/publications/">Publications</a></li>
+            <li><a href="/talks/">Talks</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/cv/">CV</a></li>
+          </ul>
+        </nav>
+        <ul class="hlinks">
+          <li><a href="https://scholar.google.com/citations?user=kfhiI_kAAAAJ&amp;hl=en">Google Scholar</a></li>
+          <li><a href="https://github.com/yuema137">GitHub</a></li>
+        </ul>
+      </div>
+    </header>
+    <!-- SHARED:HEADER end ==================================================== -->
+    <main id="main">
+      <div class="c">
+      <section class="hero hero--page">
+        <h1>Projects</h1>
+        <p class="sub">What I build and what I contributed. Papers are on the
+          <a class="link" href="/publications/">publications</a> page; full detail is in
+          the <a class="link" href="/cv/">CV</a>.</p>
+      </section>
+
+      <section class="section" aria-labelledby="agentic">
+        <div class="sh"><h2 id="agentic">Agentic systems and scientific evaluation</h2></div>
+        <ul class="grid grid--1">
+          <li class="card">
+            <p class="eyebrow">01 · Agentic system · Feb 2026 – present</p>
+            <h3>SIDERIUS</h3>
+            <p>A closed-loop agentic system for autonomous research: it proposes,
+              implements, and evaluates machine-learning experiments under real compute
+              budgets. Work spans multi-agent workflow design, online resource control,
+              and reliable long-horizon execution.</p>
+            <ul class="foot"><li>Sole architect and developer</li></ul>
+          </li>
+          <li class="card">
+            <p class="eyebrow">02 · Evaluation infrastructure · Jul 2026 – present</p>
+            <h3>SciTra</h3>
+            <p>Cost-aware evaluation and decision-trajectory infrastructure for scientific
+              agents, built with 50+ scientists across 20+ institutions in collaboration
+              with BenchFlow.</p>
+            <ul class="foot"><li>Founder and lead</li>
+              <li><a href="https://scitra.org">scitra.org ↗</a></li>
+              <li><a href="https://github.com/benchflow-ai/benchflow">BenchFlow ↗</a></li></ul>
+          </li>
+          <li class="card">
+            <p class="eyebrow">03 · Benchmark · Jul 2026 – present</p>
+            <h3>FrontierPhysics</h3>
+            <p>A benchmark evaluating how AI agents carry out frontier physics research
+              iteratively, from literature review through research-plan implementation, on
+              tasks that take PhD-level researchers weeks. Built by the BenchFlow team with
+              contributors across universities, national laboratories, and industry.</p>
+            <ul class="foot"><li>Core team</li>
+              <li><a href="https://www.benchflow.ai/frontierphysics">frontierphysics ↗</a></li></ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" aria-labelledby="ml">
+        <div class="sh"><h2 id="ml">Machine learning research</h2></div>
+        <ul class="grid grid--2">
+          <li class="card">
+            <p class="eyebrow">Nov 2024 – Jun 2025</p>
+            <h3>Adaptive Neural Processes for Extreme Forecasting</h3>
+            <p>Probabilistic forecasting under distribution shift and limited observations,
+              with a focus on few-shot adaptation to extreme regimes never seen during
+              training.</p>
+            <ul class="foot"><li><a href="https://arxiv.org/abs/2602.04609">arXiv:2602.04609 ↗</a></li></ul>
+          </li>
+          <li class="card">
+            <p class="eyebrow">Jul 2024 – Oct 2024</p>
+            <h3>Multi-Fidelity Surrogate Modeling for Scientific Simulation</h3>
+            <p>Learning efficient surrogates for computationally expensive, high-variance
+              detector simulations, combining Gaussian Processes and Neural Processes for
+              rare-event emulation.</p>
+            <p class="meta">Contributed core algorithms and derivations to the ICLR 2025
+              Spotlight paper “RESuM” (acknowledged for significant contribution).</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" aria-labelledby="inference">
+        <div class="sh"><h2 id="inference">Statistical inference and scientific computing</h2></div>
+        <p class="measure muted">Research within the XENONnT Collaboration, a 200+ scientist
+          international experiment operating petabyte-scale data systems for dark-matter and
+          solar-neutrino searches.</p>
+        <ul class="grid grid--2 mt-3">
+          <li class="card">
+            <p class="eyebrow">XENONnT · Oct 2020 – present</p>
+            <h3>Probabilistic modeling and statistical inference</h3>
+            <p>Bayesian and maximum-likelihood inference for the first measurement of solar
+              pp neutrinos at ultra-low momentum transfer, including calibration, data
+              selection, and Monte Carlo workflows for uncertainty and sensitivity
+              estimation.</p>
+          </li>
+          <li class="card">
+            <p class="eyebrow">Maintainer · Jan 2024 – present</p>
+            <h3>strax and straxen</h3>
+            <p>Open-source data frameworks processing petabyte-scale detector data for 200+
+              collaborators, with work on ETL performance and memory-efficient processing.</p>
+            <ul class="foot"><li><a href="https://github.com/AxFoundation/strax">strax ↗</a></li>
+              <li><a href="https://github.com/XENONnT/straxen">straxen ↗</a></li></ul>
+          </li>
+        </ul>
+      </section>
+      </div>
+    </main>
+    <!-- SHARED:FOOTER start ===================================================
+         Keep this block identical across every page. To bump the date, see
+         "Updating the last-updated date" in README.md.
+         ====================================================================== -->
+    <footer class="site-footer">
+      <div class="c">
+        <span>© 2026 Yue Ma · <a href="mailto:yuema9810@gmail.com">yuema9810@gmail.com</a></span>
+        <ul>
+          <li><a href="https://scholar.google.com/citations?user=kfhiI_kAAAAJ&amp;hl=en">Google Scholar</a></li>
+          <li><a href="https://github.com/yuema137">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/yue-ma-719818191/">LinkedIn</a></li>
+          <li><a href="/cv/">CV</a></li>
+        </ul>
+        <span>Last updated <time datetime="2026-08-25">25 August 2026</time></span>
+      </div>
+    </footer>
+    <!-- SHARED:FOOTER end ==================================================== -->
+  </body>
+</html>

@@ -1,15 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yue Ma</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <main>
-    <h1>Yue Ma</h1>
-    <p>Personal website under construction.</p>
-  </main>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yue Ma</title>
+    <meta name="description" content="Yue Ma — postdoctoral researcher at the Halıcıoğlu Data Science Institute, UC San Diego. Resource-efficient agents for science and engineering.">
+    <link rel="canonical" href="https://yuema137.github.io/">
+    <meta name="theme-color" content="#f1f6fb" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#08131d" media="(prefers-color-scheme: dark)">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Yue Ma">
+    <meta property="og:title" content="Yue Ma">
+    <meta property="og:description" content="Yue Ma — postdoctoral researcher at the Halıcıoğlu Data Science Institute, UC San Diego. Resource-efficient agents for science and engineering.">
+    <meta property="og:url" content="https://yuema137.github.io/">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/satoshi-400.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/satoshi-700.woff2" crossorigin>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <!-- SHARED:HEADER start ===================================================
+         Keep this block identical across every page. The ONLY permitted
+         difference between copies is aria-current="page" on the active link.
+         ====================================================================== -->
+    <header class="site-header">
+      <div class="c">
+        <a class="brand" href="/">Yue Ma</a>
+        <nav class="site-nav" aria-label="Primary">
+          <ul>
+            <li><a href="/research/">Research</a></li>
+            <li><a href="/projects/">Projects</a></li>
+            <li><a href="/publications/">Publications</a></li>
+            <li><a href="/talks/">Talks</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/cv/">CV</a></li>
+          </ul>
+        </nav>
+        <ul class="hlinks">
+          <li><a href="https://scholar.google.com/citations?user=kfhiI_kAAAAJ&amp;hl=en">Google Scholar</a></li>
+          <li><a href="https://github.com/yuema137">GitHub</a></li>
+        </ul>
+      </div>
+    </header>
+    <!-- SHARED:HEADER end ==================================================== -->
+    <main id="main">
+      <div class="c">
+
+      <section class="hero">
+        <div class="hero__text">
+          <p class="badge">Postdoctoral Researcher · Halıcıoğlu Data Science Institute, UC San Diego</p>
+          <h1>Resource-efficient agents for science and engineering</h1>
+          <p class="sub">AI agents can already generate work at scale. Turning that into
+            real acceleration in science and engineering means accounting for what each
+            step actually costs. I build the agents, the evaluations, and the benchmarks
+            around that constraint. That instinct comes from particle physics, where
+            every measurement is genuinely expensive and progress depends as much on
+            engineering as on science.</p>
+          <div class="btns">
+            <a class="btn btn--p" href="/assets/cv/yue-ma-cv.pdf">Download CV</a>
+            <a class="btn btn--s" href="https://scholar.google.com/citations?user=kfhiI_kAAAAJ&amp;hl=en">Google Scholar</a>
+            <a class="btn btn--s" href="mailto:yuema9810@gmail.com">Email</a>
+          </div>
+        </div>
+        <img class="pf" src="/assets/images/profile.jpg"
+             srcset="/assets/images/profile.jpg 360w, /assets/images/profile@2x.jpg 720w"
+             sizes="164px" width="360" height="360" alt="Yue Ma">
+      </section>
+
+      <section class="section" aria-labelledby="h-work">
+        <div class="sh"><h2 id="h-work">What I work on</h2><a href="/research/">Research →</a></div>
+        <ul class="int">
+          <li><b><i class="n">01</i>Cost-aware agentic systems</b><span>Closed-loop systems that propose, implement, and evaluate experiments under real compute budgets.</span></li>
+          <li><b><i class="n">02</i>Scientific agent evaluation</b><span>Judging agents by outcomes, resource use, and full decision trajectories.</span></li>
+          <li><b><i class="n">03</i>ML for scientific discovery</b><span>Neural processes and multi-fidelity surrogates for expensive simulation.</span></li>
+          <li><b><i class="n">04</i>Statistical inference at scale</b><span>Bayesian and likelihood methods for rare-event searches, and the data systems behind them.</span></li>
+        </ul>
+      </section>
+
+      <!-- Mirrors /projects/ — keep the top three in sync by hand. -->
+      <section class="section" aria-labelledby="h-build">
+        <div class="sh"><h2 id="h-build">What I build</h2><a href="/projects/">Projects →</a></div>
+        <ul class="grid">
+          <li class="card">
+            <p class="eyebrow">01 · Agentic system</p>
+            <h3>SIDERIUS</h3>
+            <p>A closed-loop agentic system for autonomous research under real compute budgets.</p>
+            <ul class="foot"><li>Sole architect</li><li>Feb 2026 –</li></ul>
+          </li>
+          <li class="card">
+            <p class="eyebrow">02 · Evaluation</p>
+            <h3>SciTra</h3>
+            <p>Cost-aware evaluation and decision-trajectory infrastructure. 50+ scientists, 20+ institutions, with BenchFlow.</p>
+            <ul class="foot"><li><a href="https://scitra.org">scitra.org ↗</a></li><li>Founder &amp; lead</li></ul>
+          </li>
+          <li class="card">
+            <p class="eyebrow">03 · Benchmark</p>
+            <h3>FrontierPhysics</h3>
+            <p>Evaluating how AI agents carry out frontier physics research iteratively, with the BenchFlow team.</p>
+            <ul class="foot"><li><a href="https://www.benchflow.ai/frontierphysics">benchflow.ai ↗</a></li><li>Core team</li></ul>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Mirrors /publications/ — top three only. -->
+      <section class="section" aria-labelledby="h-pubs">
+        <div class="sh"><h2 id="h-pubs">Selected publications</h2><a href="/publications/">All publications →</a></div>
+        <ul class="rows">
+          <li class="row"><span class="y">—</span>
+            <span class="t">SIDERIUS<span class="up">In preparation</span>
+              <span class="a">Resource-aware multi-agent systems for autonomous machine-learning research.</span></span>
+            <span class="lks"><a class="lk" href="/projects/#agentic">Project ↗</a></span></li>
+          <li class="row"><span class="y">—</span>
+            <span class="t">FrontierPhysics<span class="up">In preparation</span>
+              <span class="a">A benchmark for how AI agents carry out frontier physics research.</span></span>
+            <span class="lks"><a class="lk" href="https://www.benchflow.ai/frontierphysics">benchflow.ai ↗</a></span></li>
+          <li class="row"><span class="y">2026</span>
+            <span class="t">Resilient Load Forecasting under Climate Change: Adaptive Conditional Neural Processes
+              <span class="a">Chenxi Hu, <strong>Yue Ma</strong>, Yifan Wu, Yunhe Hou · Preprint</span></span>
+            <a class="lk" href="https://arxiv.org/abs/2602.04609">arXiv ↗</a></li>
+          <li class="row"><span class="y">2023</span>
+            <span class="t">First Dark Matter Search with Nuclear Recoils from XENONnT
+              <span class="a">XENON Collaboration · Phys. Rev. Lett. 131, 041003</span>
+              <span class="contrib">Core contributor · event selection, efficiency modelling, background modelling</span></span></li>
+          <li class="row"><span class="y">2022</span>
+            <span class="t">Search for New Physics in Electronic Recoil Data from XENONnT
+              <span class="a">XENON Collaboration · Phys. Rev. Lett. 129, 161805</span>
+              <span class="contrib">Core contributor · detector response calibration, data processing algorithms</span></span></li>
+        </ul>
+      </section>
+
+      <!-- Mirrors /talks/ — upcoming and most recent only. -->
+      <section class="section" aria-labelledby="h-talks">
+        <div class="sh"><h2 id="h-talks">Talks</h2><a href="/talks/">All talks →</a></div>
+        <ul class="rows">
+          <li class="row"><span class="y">2026-09-02</span>
+            <span class="t">SIDERIUS: Resource-Aware Multi-Agent System for Automated Machine Learning<span class="up">Upcoming</span>
+              <span class="a">Fast Machine Learning for Science Conference 2026, UC San Diego · Invited talk</span></span>
+            <span class="lks"><a class="lk" href="https://indico.cern.ch/event/1654479/contributions/7210316/">Programme ↗</a></span></li>
+          <li class="row"><span class="y">2026-03-16</span>
+            <span class="t">TIDMAD: A Sandbox for Physics-Informed LLM Agents in Dark Matter Searches
+              <span class="a">APS Global Physics Summit 2026 · Invited talk</span></span>
+            <span class="lks"><a class="lk" href="/assets/slides/2026-03-aps-tidmad.pdf">Slides ↗</a></span></li>
+        </ul>
+      </section>
+
+      <!-- Mirrors /blog/ — two or three most recent. -->
+      <section class="section" aria-labelledby="h-blog">
+        <div class="sh"><h2 id="h-blog">Latest writing</h2><a href="/blog/">All posts →</a></div>
+        <ul class="rows">
+          <li class="row"><span class="y">2026-08</span>
+            <span class="t"><a href="/blog/2026-08-av-evaluation/">Verification, validation and metrics for autonomous vehicles</a>
+              <span class="a">Evaluating systems whose failures are rare, expensive and safety-critical.</span></span>
+            <a class="lk" href="/blog/2026-08-av-evaluation/">Read ↗</a></li>
+          <li class="row"><span class="y">2026-01</span>
+            <span class="t"><a href="/blog/2026-01-behavioral-interviews/">Preparing for behavioural interviews without memorising answers</a>
+              <span class="a">Covering ~100 behavioural questions with four or five real stories.</span></span>
+            <a class="lk" href="/blog/2026-01-behavioral-interviews/">Read ↗</a></li>
+        </ul>
+      </section>
+
+      </div>
+    </main>
+    <!-- SHARED:FOOTER start ===================================================
+         Keep this block identical across every page. To bump the date, see
+         "Updating the last-updated date" in README.md.
+         ====================================================================== -->
+    <footer class="site-footer">
+      <div class="c">
+        <span>© 2026 Yue Ma · <a href="mailto:yuema9810@gmail.com">yuema9810@gmail.com</a></span>
+        <ul>
+          <li><a href="https://scholar.google.com/citations?user=kfhiI_kAAAAJ&amp;hl=en">Google Scholar</a></li>
+          <li><a href="https://github.com/yuema137">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/yue-ma-719818191/">LinkedIn</a></li>
+          <li><a href="/cv/">CV</a></li>
+        </ul>
+        <span>Last updated <time datetime="2026-08-25">25 August 2026</time></span>
+      </div>
+    </footer>
+    <!-- SHARED:FOOTER end ==================================================== -->
+  </body>
 </html>

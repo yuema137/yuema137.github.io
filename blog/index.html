@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog — Yue Ma</title>
+    <meta name="description" content="Research notes and technical write-ups.">
+    <link rel="canonical" href="https://yuema137.github.io/blog/">
+    <meta name="theme-color" content="#f1f6fb" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#08131d" media="(prefers-color-scheme: dark)">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Yue Ma">
+    <meta property="og:title" content="Blog — Yue Ma">
+    <meta property="og:description" content="Research notes and technical write-ups.">
+    <meta property="og:url" content="https://yuema137.github.io/blog/">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/satoshi-400.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/satoshi-700.woff2" crossorigin>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <!-- SHARED:HEADER start ===================================================
+         Keep this block identical across every page. The ONLY permitted
+         difference between copies is aria-current="page" on the active link.
+         ====================================================================== -->
+    <header class="site-header">
+      <div class="c">
+        <a class="brand" href="/">Yue Ma</a>
+        <nav class="site-nav" aria-label="Primary">
+          <ul>
+            <li><a href="/research/">Research</a></li>
+            <li><a href="/projects/">Projects</a></li>
+            <li><a href="/publications/">Publications</a></li>
+            <li><a href="/talks/">Talks</a></li>
+            <li><a href="/blog/" aria-current="page">Blog</a></li>
+            <li><a href="/cv/">CV</a></li>
+          </ul>
+        </nav>
+        <ul class="hlinks">
+          <li><a href="https://scholar.google.com/citations?user=kfhiI_kAAAAJ&amp;hl=en">Google Scholar</a></li>
+          <li><a href="https://github.com/yuema137">GitHub</a></li>
+        </ul>
+      </div>
+    </header>
+    <!-- SHARED:HEADER end ==================================================== -->
+    <main id="main">
+      <div class="c">
+      <section class="hero hero--page">
+        <h1>Blog</h1>
+        <p class="sub">Research notes and technical write-ups. English is the default;
+          some posts also have a Chinese version.</p>
+      </section>
+
+      <section class="section" aria-labelledby="h-posts">
+        <div class="sh"><h2 id="h-posts">Posts</h2></div>
+
+        <!-- Filled in by /js/blog-tags.js. Hidden until then, so no dead control
+             appears if JavaScript is unavailable. -->
+        <div class="tagbar" data-tagbar hidden aria-label="Filter posts by tag"></div>
+
+        <!-- MAINTENANCE: newest first, updated by hand. Give each row a data-tags
+             attribute — the filter bar is built from these, so nothing else needs
+             changing when you add a post or a new tag. See README.md. -->
+        <ul class="rows" data-taglist>
+          <li class="row" data-tags="evaluation autonomous-driving benchmarks">
+            <span class="y">2026-08-25</span>
+            <span class="t"><a href="/blog/2026-08-av-evaluation/">Verification, validation and metrics for autonomous vehicles</a>
+              <span class="a">How self-driving systems are checked, trusted and measured — and how to evaluate anything whose failures are rare and expensive. English and <span lang="zh-Hans">简体中文</span>, switchable in the document.</span>
+              <ul class="tags">
+                <li><a href="/blog/?tag=evaluation" data-tag="evaluation">evaluation</a></li>
+                <li><a href="/blog/?tag=autonomous-driving" data-tag="autonomous-driving">autonomous driving</a></li>
+                <li><a href="/blog/?tag=benchmarks" data-tag="benchmarks">benchmarks</a></li>
+              </ul></span>
+            <a class="lk" href="/blog/2026-08-av-evaluation/">Read ↗</a></li>
+
+          <li class="row" data-tags="career interviewing llm-workflow">
+            <span class="y">2026-01-20</span>
+            <span class="t"><a href="/blog/2026-01-behavioral-interviews/">Preparing for behavioural interviews without memorising answers</a>
+              <span class="a">A taxonomy of ~100 behavioural questions, and how to cover them with four or five real stories. English and <span lang="zh-Hans">简体中文</span>.</span>
+              <ul class="tags">
+                <li><a href="/blog/?tag=career" data-tag="career">career</a></li>
+                <li><a href="/blog/?tag=interviewing" data-tag="interviewing">interviewing</a></li>
+                <li><a href="/blog/?tag=llm-workflow" data-tag="llm-workflow">llm workflow</a></li>
+              </ul></span>
+            <a class="lk" href="/blog/2026-01-behavioral-interviews/">Read ↗</a></li>
+        </ul>
+      </section>
+      </div>
+    </main>
+    <script src="/js/blog-tags.js" defer></script>
+    <!-- SHARED:FOOTER start ===================================================
+         Keep this block identical across every page. To bump the date, see
+         "Updating the last-updated date" in README.md.
+         ====================================================================== -->
+    <footer class="site-footer">
+      <div class="c">
+        <span>© 2026 Yue Ma · <a href="mailto:yuema9810@gmail.com">yuema9810@gmail.com</a></span>
+        <ul>
+          <li><a href="https://scholar.google.com/citations?user=kfhiI_kAAAAJ&amp;hl=en">Google Scholar</a></li>
+          <li><a href="https://github.com/yuema137">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/yue-ma-719818191/">LinkedIn</a></li>
+          <li><a href="/cv/">CV</a></li>
+        </ul>
+        <span>Last updated <time datetime="2026-08-25">25 August 2026</time></span>
+      </div>
+    </footer>
+    <!-- SHARED:FOOTER end ==================================================== -->
+  </body>
+</html>
