@@ -1,0 +1,319 @@
+/* ============================================================================
+   resume.css — print-first typesetting for the two-page CV.
+
+   The document is the HTML. This file is the typesetting system. Chromium is
+   the PDF compiler (see tools/build-cv.mjs).
+
+   Read this before editing:
+
+   1. UNITS. Page geometry is in inches, type is in points. At the 96dpi CSS
+      reference, 1in = 96px and 1pt = 4/3 px, so both map exactly onto Letter
+      and neither drifts when Chromium rasterises.
+
+   2. NO AUTOMATIC PAGINATION. Each .page is exactly one physical sheet, with
+      an explicit page break after it. Nothing is left for the browser to
+      decide, which is the whole reason this is not LaTeX.
+
+   3. FONT PATHS ARE RELATIVE, deliberately. Every other page on this site uses
+      root-absolute paths, but the PDF build loads this file over file://,
+      where a leading slash resolves to the filesystem root. Relative paths are
+      correct under both file:// and https://yuema137.github.io/cv/resume/.
+
+   4. FONTS ARE SELF-HOSTED for determinism. The same bytes render on macOS and
+      on the GitHub Actions Ubuntu runner. Do not add a system-font fallback
+      that could silently change the layout in CI.
+   ========================================================================= */
+
+/* --- Fonts ---------------------------------------------------------------- */
+
+@font-face{font-family:Satoshi;src:url(../../assets/fonts/satoshi-400.woff2) format("woff2");font-weight:400;font-style:normal;font-display:block}
+@font-face{font-family:Satoshi;src:url(../../assets/fonts/satoshi-500.woff2) format("woff2");font-weight:500;font-style:normal;font-display:block}
+@font-face{font-family:Satoshi;src:url(../../assets/fonts/satoshi-700.woff2) format("woff2");font-weight:700;font-style:normal;font-display:block}
+
+/* --- Tokens --------------------------------------------------------------- */
+
+:root{
+  /* Page geometry */
+  --page-w:8.5in;
+  --page-h:11in;
+  --pad-x:0.62in;
+  --pad-y:0.5in;
+
+  /* Ink. Black text, one blue for links. Nothing else carries colour. */
+  --ink:#16191c;
+  --ink-2:#3d444b;
+  --ink-3:#5c656e;
+  --rule:#c9ced3;
+  --rule-hair:#e2e6ea;
+  --link:#1a4e7a;
+
+  /* Type scale. Every size the document uses is declared here. */
+  --t-name:23pt;
+  --t-contact:8.6pt;
+  --t-section:9.4pt;
+  --t-entry:10pt;
+  --t-body:9.4pt;
+  --t-date:8.8pt;
+  --t-pub:9pt;
+
+  --lh-body:1.42;
+  --lh-tight:1.37;
+
+  /* Vertical rhythm. Section spacing is the main balance control: if a page
+     runs long or short, adjust --gap-section first and the type sizes last. */
+  --gap-section:12.5pt;
+  --gap-entry:9.5pt;
+  --gap-bullet:3.2pt;
+  --indent-bullet:1.05em;
+}
+
+/* --- Base ----------------------------------------------------------------- */
+
+*{box-sizing:border-box}
+
+html{-webkit-text-size-adjust:100%}
+
+body{
+  margin:0;
+  font-family:Satoshi,system-ui,sans-serif;
+  font-size:var(--t-body);
+  line-height:var(--lh-body);
+  color:var(--ink);
+  background:#8e969e;              /* screen only: contrast around the sheets */
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+
+/* --- Page container ------------------------------------------------------- */
+
+.page{
+  position:relative;
+  width:var(--page-w);
+  height:var(--page-h);
+  padding:var(--pad-y) var(--pad-x);
+  margin:0 auto;
+  background:#fff;
+  overflow:hidden;               /* a page that overruns is a bug; clip it so
+                                    the PNG check makes the bug visible */
+}
+
+.page + .page{margin-top:28px}   /* screen only; removed in print */
+
+/* --- Masthead ------------------------------------------------------------- */
+
+.name{
+  font-size:var(--t-name);
+  font-weight:700;
+  letter-spacing:-.018em;
+  line-height:1.05;
+  text-align:center;
+}
+
+.contact{
+  margin-top:6pt;
+  font-size:var(--t-contact);
+  color:var(--ink-2);
+  text-align:center;
+  letter-spacing:.005em;
+}
+.contact a{color:var(--link)}
+.contact .sep{color:var(--rule);margin:0 .5em;font-weight:400}
+
+.masthead{
+  padding-bottom:9pt;
+  border-bottom:.7pt solid var(--ink);
+  margin-bottom:var(--gap-section);
+}
+
+/* --- Running header (page 2 onward) -------------------------------------- */
+
+.runhead{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  padding-bottom:4pt;
+  border-bottom:.6pt solid var(--rule);
+  margin-bottom:9pt;          /* less air than the masthead needs */
+  font-size:var(--t-date);
+  color:var(--ink-3);
+}
+.runhead b{font-weight:700;color:var(--ink-2);letter-spacing:-.006em}
+
+/* --- Sections ------------------------------------------------------------- */
+
+.section{margin-bottom:var(--gap-section)}
+.section:last-child{margin-bottom:0}
+
+.section > h2{
+  margin:0 0 6pt;
+  padding-bottom:2.4pt;
+  border-bottom:.6pt solid var(--rule);
+  font-size:var(--t-section);
+  font-weight:700;
+  letter-spacing:.085em;
+  text-transform:uppercase;
+  color:var(--ink);
+}
+
+/* A short framing line under a section heading (used by XENONnT). */
+.section-note{
+  margin-bottom:6pt;
+  font-size:var(--t-body);
+  line-height:var(--lh-tight);
+  color:var(--ink-2);
+}
+
+/* --- Entries -------------------------------------------------------------- */
+
+.entry{margin-bottom:var(--gap-entry)}
+.entry:last-child{margin-bottom:0}
+
+/* Title left, dates hard right, on one line. The dates never wrap and never
+   collide with the title: the title column is what shrinks. */
+.entry-head{
+  display:flex;
+  align-items:baseline;
+  gap:1em;
+  margin-bottom:1.5pt;
+}
+.entry-title{
+  flex:1 1 auto;
+  min-width:0;
+  font-size:var(--t-entry);
+  font-weight:700;
+  line-height:1.25;
+  letter-spacing:-.004em;
+}
+.entry-title .qualifier{font-weight:500;color:var(--ink-2)}
+.entry-date{
+  flex:0 0 auto;
+  white-space:nowrap;
+  font-size:var(--t-date);
+  font-weight:500;
+  color:var(--ink-2);
+  font-variant-numeric:tabular-nums;
+}
+
+.entry-sub{
+  margin-bottom:3pt;
+  line-height:var(--lh-tight);
+  color:var(--ink-2);
+}
+.entry-sub .arxiv{white-space:nowrap}
+
+/* --- Bullets -------------------------------------------------------------- */
+
+.bullets > li{
+  position:relative;
+  padding-left:var(--indent-bullet);
+  margin-bottom:var(--gap-bullet);
+  line-height:var(--lh-tight);
+}
+.bullets > li:last-child{margin-bottom:0}
+.bullets > li::before{
+  content:"–";
+  position:absolute;
+  left:0;
+  top:0;
+  color:var(--ink-3);
+}
+.bullets b{font-weight:700;color:var(--ink)}
+
+/* --- Education: a compact three-column list ------------------------------- */
+
+.rows > li{
+  display:flex;
+  align-items:baseline;
+  gap:1em;
+  margin-bottom:2.6pt;
+  line-height:var(--lh-tight);
+}
+.rows > li:last-child{margin-bottom:0}
+.rows .what{flex:1 1 auto;min-width:0}
+.rows .what b{font-weight:700}
+.rows .where{color:var(--ink-2)}
+.rows .when{
+  flex:0 0 auto;
+  white-space:nowrap;
+  font-size:var(--t-date);
+  font-weight:500;
+  color:var(--ink-2);
+  font-variant-numeric:tabular-nums;
+}
+
+/* --- Skills: label column + wrapped values -------------------------------- */
+
+.skills{display:grid;grid-template-columns:auto 1fr;column-gap:1.1em;row-gap:3.4pt}
+.skills dt{font-weight:700;line-height:var(--lh-tight);white-space:nowrap}
+.skills dd{margin:0;line-height:var(--lh-tight);color:var(--ink-2)}
+
+/* --- Publications --------------------------------------------------------- */
+
+.pubs > li{
+  position:relative;
+  padding-left:var(--indent-bullet);
+  margin-bottom:4.6pt;
+  font-size:var(--t-pub);
+  line-height:var(--lh-tight);
+  color:var(--ink-2);
+}
+.pubs > li:last-child{margin-bottom:0}
+.pubs > li::before{
+  content:"–";
+  position:absolute;
+  left:0;
+  top:0;
+  color:var(--ink-3);
+}
+.pubs .title{color:var(--ink)}
+.pubs .me{font-weight:700;color:var(--ink)}
+.pubs .venue{font-style:italic}
+
+/* --- Screen-only site link ------------------------------------------------ */
+
+.backlink{
+  display:block;
+  width:var(--page-w);
+  margin:22px auto 12px;
+  font-size:9pt;
+  color:#f2f5f8;
+}
+.backlink a{color:#fff;text-decoration:underline}
+
+/* --- Print ---------------------------------------------------------------- */
+
+@page{
+  size:8.5in 11in;
+  margin:0;
+}
+
+@media print{
+  body{background:#fff}
+  .page{
+    margin:0;
+    break-after:page;
+    page-break-after:always;
+  }
+  .page:last-of-type{
+    break-after:auto;
+    page-break-after:auto;
+  }
+  .page + .page{margin-top:0}
+  .backlink{display:none}
+
+  /* Belt and braces: nothing inside an entry may be split, in case a future
+     edit ever removes the explicit page containers. */
+  .entry,.rows > li,.pubs > li,.bullets > li{
+    break-inside:avoid;
+    page-break-inside:avoid;
+  }
+  h2{break-after:avoid;page-break-after:avoid}
+
+  a{text-decoration:none}
+}

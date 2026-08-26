@@ -51,9 +51,13 @@
       <section class="hero hero--page">
         <h1>CV</h1>
         <p class="sub">A summary of my background. The PDF is the authoritative version.</p>
-        <!-- The PDF lives at a stable path: to publish a newer CV, overwrite
-             assets/cv/yue-ma-cv.pdf and update the date line below. No HTML change. -->
-        <div class="btns"><a class="btn btn--p" href="/assets/cv/yue-ma-cv.pdf">Download CV (PDF)</a></div>
+        <!-- The PDF is GENERATED. Do not hand-edit assets/cv/yue-ma-cv.pdf.
+             Source: cv/resume/index.html + cv/resume/resume.css
+             Rebuild: npm run cv:png   (then look at build/cv-preview/*.png)
+             The path is stable and linked from several pages; do not move it.
+             Only the date line below is edited by hand. -->
+        <div class="btns"><a class="btn btn--p" href="/assets/cv/yue-ma-cv.pdf">Download CV (PDF)</a>
+          <a class="btn btn--s" href="/cv/resume/">Read it in the browser</a></div>
         <p class="meta muted mt-2">PDF last updated August 2026.</p>
       </section>
 

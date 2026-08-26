@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yue Ma — CV</title>
+    <meta name="description" content="Curriculum vitae of Yue Ma — postdoctoral researcher at the Halıcıoğlu Data Science Institute, UC San Diego.">
+    <link rel="canonical" href="https://yuema137.github.io/cv/resume/">
+    <meta name="robots" content="noindex">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <!-- Paths below are RELATIVE on purpose: the PDF build loads this file over
+         file://, where a leading slash resolves to the filesystem root.
+         See the header comment in resume.css. -->
+    <link rel="stylesheet" href="resume.css">
+  </head>
+  <body>
+
+    <!-- ======================================================================
+         MAINTENANCE
+
+         This document is the source of truth for assets/cv/yue-ma-cv.pdf.
+         After ANY edit run:  npm run cv:png
+         then look at the two PNGs it writes. The build fails loudly if the
+         output is not exactly two pages.
+
+         The two <section class="page"> containers are physical sheets. Content
+         does not flow between them — if page one grows too tall it is CLIPPED,
+         not pushed. That is deliberate: a clipped page is obvious in the PNG,
+         a silently reflowed one is not.
+
+         To rebalance, reach for the tokens in resume.css in this order:
+           1. --gap-section / --gap-entry   (whitespace)
+           2. --lh-tight                    (line height)
+           3. --t-body                      (type size — last resort)
+         ================================================================== -->
+
+    <!-- ================================ PAGE 1 ============================ -->
+    <section class="page">
+
+      <header class="masthead">
+        <p class="name">Yue&nbsp;Ma</p>
+        <p class="contact">
+          <a href="https://www.linkedin.com/in/yue-ma-719818191/">LinkedIn</a><span class="sep">|</span><a href="https://github.com/yuema137">GitHub</a><span class="sep">|</span><a href="https://scholar.google.com/citations?user=kfhiI_kAAAAJ&amp;hl=en">Google Scholar</a><span class="sep">|</span><a href="https://yuema137.github.io">yuema137.github.io</a><span class="sep">|</span><a href="mailto:yuema9810@gmail.com">yuema9810@gmail.com</a>
+        </p>
+      </header>
+
+      <section class="section">
+        <h2>Profile</h2>
+        <p>Research Engineer and Physics Ph.D. building cost-aware agentic systems that automate
+          long-horizon experimental loops in machine learning and science. Develops evaluation
+          frameworks and trajectory infrastructure to capture, analyze, and improve scientific
+          decision-making under real compute constraints.</p>
+      </section>
+
+      <section class="section">
+        <h2>Education &amp; Academic Positions</h2>
+        <ul class="rows">
+          <li><span class="what"><b>Postdoctoral Researcher</b>, <span class="where">Halıcıoğlu Data Science Institute, UC San Diego</span></span><span class="when">Mar 2026 – Present</span></li>
+          <li><span class="what"><b>Ph.D. in Particle Physics</b>, <span class="where">University of California, San Diego</span></span><span class="when">Oct 2020 – Feb 2026</span></li>
+          <li><span class="what"><b>B.S. in Physics</b>, <span class="where">Nanjing University</span></span><span class="when">Aug 2016 – Jun 2020</span></li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Agentic Systems, Evaluation, and Research Infrastructure</h2>
+
+        <article class="entry">
+          <div class="entry-head">
+            <p class="entry-title">SIDERIUS: Resource-Aware Multi-Agent System for Autonomous Research</p>
+            <p class="entry-date">Feb 2026 – Present</p>
+          </div>
+          <p class="entry-sub">A closed-loop agentic system for proposing, implementing, and evaluating
+            machine-learning experiments under online compute constraints. Sole architect and developer;
+            initially deployed on scientific time-series denoising and now extending to additional domains.</p>
+          <ul class="bullets">
+            <li><b>Multi-Agent Research Runtime:</b> Designed a typed 6-agent workflow spanning literature
+              review, hypothesis generation, PyTorch implementation, validation, experimentation, and
+              interpretation, with structured findings and failure evidence propagated across iterations.</li>
+            <li><b>Online Resource Control:</b> Built dynamic runtime and GPU-memory calibration, isolated
+              per-candidate measurement, and admission control across trial-, formal-, and campaign-level
+              compute budgets.</li>
+            <li><b>Reliable Long-Horizon Execution:</b> Implemented scientific-quality gates, watchdogs,
+              bounded retries, fail-closed budget enforcement, and resumable state; achieved over a 5×
+              denoising improvement during autonomous campaigns on the TIDMAD benchmark.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="entry-head">
+            <p class="entry-title">SciTra: Cost-Aware Scientific-Agent Evaluation and Trajectory Infrastructure</p>
+            <p class="entry-date">Jul 2026 – Present</p>
+          </div>
+          <p class="entry-sub">Founder and lead of a 50+ scientist, 20+ institution collaboration developing
+            scientific-agent evaluations and decision-trajectory infrastructure.</p>
+          <ul class="bullets">
+            <li><b>Cost-Aware Scientific Evaluation:</b> Formalized open-ended tasks around expensive
+              iterative decisions, treating experiment cost rather than idea generation as the primary
+              scaling bottleneck; coordinated 30+ task ideas across 11 domains.</li>
+            <li><b>Scientific Decision Trajectories:</b> Built a cross-vendor runtime that captures
+              expert–agent interactions, tool use, Git changes, failures, and explicit cost, output, and
+              decision records as typed trajectories of how scientific choices are made and revised.</li>
+            <li><b>Auditable Research Infrastructure:</b> Implemented append-only declarations, frozen
+              evidence, integrity manifests, interrupted-run recovery, and deterministic export for
+              reproducible trajectory evaluation.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="entry-head">
+            <p class="entry-title">FrontierPhysics: Benchmark for Iterative Frontier Physics Research <span class="qualifier">(Core Team)</span></p>
+            <p class="entry-date">Jul 2026 – Present</p>
+          </div>
+          <p class="entry-sub">Core team member on a benchmark, built with the BenchFlow team, that
+            evaluates how AI agents carry out frontier physics research iteratively.</p>
+          <ul class="bullets">
+            <li><b>Iterative Research Tasks:</b> Tasks spanning literature review through research-plan
+              implementation, drawn from problems that take PhD-level researchers weeks rather than from
+              questions with a single retrievable answer.</li>
+            <li><b>Cross-Institution Task Development:</b> Built with contributors across universities,
+              national laboratories, and industry, so that task difficulty is set by working physicists
+              rather than by benchmark authors.</li>
+          </ul>
+        </article>
+
+      </section>
+    </section>
+
+    <!-- ================================ PAGE 2 ============================ -->
+    <section class="page">
+
+      <div class="runhead"><span><b>Yue Ma</b> — Curriculum Vitae</span><span>Page 2 of 2</span></div>
+
+      <section class="section">
+        <h2>Machine Learning Research</h2>
+
+        <article class="entry">
+          <div class="entry-head">
+            <p class="entry-title">Adaptive Neural Processes for Extreme Forecasting</p>
+            <p class="entry-date">Nov 2024 – Jun 2025</p>
+          </div>
+          <p class="entry-sub">Probabilistic forecasting under distribution shifts and limited observations.
+            <span class="arxiv"><a href="https://arxiv.org/abs/2602.04609">arXiv:2602.04609</a></span></p>
+          <ul class="bullets">
+            <li><b>Model Development:</b> Conceived and derived AdaCNP, a target-conditioned
+              context-reweighting mechanism that enables few-shot adaptation to unseen extreme regimes
+              without retraining.</li>
+            <li><b>Experimental Evaluation:</b> Achieved a 22% reduction in MSE and the best negative
+              log-likelihood among Neural Process baselines across two real-world power-system datasets.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="entry-head">
+            <p class="entry-title">Multi-Fidelity Surrogate Modeling for Scientific Simulation</p>
+            <p class="entry-date">Jul 2024 – Oct 2024</p>
+          </div>
+          <p class="entry-sub">Learning efficient surrogates for computationally expensive, high-variance
+            detector simulations.</p>
+          <ul class="bullets">
+            <li><b>Scientific ML System:</b> Developed a multi-fidelity surrogate combining Gaussian
+              Processes and Neural Processes to emulate high-dimensional rare-event simulations.</li>
+            <li><b>Compute-Efficient Optimization:</b> Reduced simulation cost by 96.7% while improving
+              background-suppression efficiency by 66.5%; contributed core algorithms and derivations to the
+              ICLR 2025 Spotlight paper “RESuM” (acknowledged for significant contribution).</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2>Statistical Inference and Large-Scale Scientific Computing</h2>
+        <p class="section-note">Research within the XENONnT Collaboration, a 200+ scientist international
+          experiment operating petabyte-scale data systems for dark-matter and solar-neutrino searches.</p>
+
+        <article class="entry">
+          <div class="entry-head">
+            <p class="entry-title">Probabilistic Modeling and Statistical Inference <span class="qualifier">(Analysis Lead)</span></p>
+            <p class="entry-date">Oct 2020 – Present</p>
+          </div>
+          <p class="entry-sub">Leading a team of ~20 scientists developing the first measurement of solar pp
+            neutrinos at ultra-low momentum transfer.</p>
+          <ul class="bullets">
+            <li><b>Inference and Calibration:</b> Developed Bayesian and maximum-likelihood inference
+              frameworks, improving the precision of efficiency estimates by 60% through new calibration
+              strategies and data-selection methods.</li>
+            <li><b>Experimental Evaluation:</b> Built Monte Carlo workflows for uncertainty propagation,
+              sensitivity estimation, goodness-of-fit testing, and hypothesis testing, informing analysis
+              design and experimental strategy.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="entry-head">
+            <p class="entry-title">Data Infrastructure and High-Throughput Computing</p>
+            <p class="entry-date">Jan 2024 – Present</p>
+          </div>
+          <ul class="bullets">
+            <li><b>Distributed Data Systems:</b> Key maintainer of the open-source strax and straxen
+              frameworks processing petabyte-scale detector data for 200+ collaborators.</li>
+            <li><b>Performance Optimization:</b> Reduced ETL processing latency by 40% through vectorized
+              NumPy and Pandas workflows, Numba acceleration, and memory-efficient data processing.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2>Technical Skills</h2>
+        <dl class="skills">
+          <dt>Programming &amp; ML</dt>
+          <dd>Python, PyTorch, NumPy, Pandas, SciPy, Scikit-learn, C/C++, Bash, Linux, Git</dd>
+          <dt>Agents &amp; Evaluation</dt>
+          <dd>LLM agent orchestration, autonomous experimental loops, resource-aware evaluation, trajectory
+            instrumentation, failure diagnostics, multi-agent systems</dd>
+          <dt>Systems &amp; Infrastructure</dt>
+          <dd>Pydantic, FastAPI, pytest, GitHub Actions, SLURM/HPC, ETL pipelines, resource monitoring and
+            performance optimization</dd>
+        </dl>
+      </section>
+
+      <section class="section">
+        <h2>Selected Publications</h2>
+        <ul class="pubs">
+          <li>Chenxi Hu, <span class="me">Yue Ma</span>, Yifan Wu, Yunhe Hou (2026).
+            <span class="title">“Resilient Load Forecasting under Climate Change: Adaptive Conditional Neural
+            Processes for Few-Shot Extreme Load Forecasting”.</span>
+            <a href="https://arxiv.org/abs/2602.04609">arXiv:2602.04609</a>.</li>
+          <li>XENON Collaboration, E. Aprile <i>et al.</i> (2023).
+            <span class="title">“First Dark Matter Search with Nuclear Recoils from the XENONnT Experiment”.</span>
+            <span class="venue">Physical Review Letters</span> <b>131</b>, 041003.</li>
+          <li>XENON Collaboration, E. Aprile <i>et al.</i> (2022).
+            <span class="title">“Search for New Physics in Electronic Recoil Data from XENONnT”.</span>
+            <span class="venue">Physical Review Letters</span> <b>129</b>, 161805.</li>
+        </ul>
+      </section>
+
+    </section>
+
+    <p class="backlink"><a href="/cv/">← Back to yuema137.github.io</a> · This page is the source of the <a href="/assets/cv/yue-ma-cv.pdf">PDF</a>.</p>
+
+  </body>
+</html>
