@@ -1,0 +1,79 @@
+# Rebuilds the CV PDF from cv/resume/ and checks that the committed PDF is in
+# sync with its source.
+#
+# The PDF is committed to the repository because GitHub Pages serves it
+# directly from the branch — /assets/cv/yue-ma-cv.pdf has to exist as a file,
+# not as a build artifact. So this workflow does not publish anything. It
+# verifies that whoever last edited the source also ran `npm run cv`.
+
+name: Build CV
+
+on:
+  push:
+    paths:
+      - "cv/resume/**"
+      - "tools/build-cv.mjs"
+      - "assets/fonts/**"
+      - "package.json"
+      - ".github/workflows/build-cv.yml"
+  pull_request:
+    paths:
+      - "cv/resume/**"
+      - "tools/build-cv.mjs"
+      - "assets/fonts/**"
+      - "package.json"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+
+      # pdftoppm, for the page previews uploaded below.
+      - run: sudo apt-get install -y --no-install-recommends poppler-utils
+
+      - name: Stash the committed PDF before the build overwrites it
+        run: cp assets/cv/yue-ma-cv.pdf /tmp/committed.pdf
+
+      # Fails if the source overflows a page, if a glyph is missing from the
+      # embedded font, or if the output is not exactly two Letter pages.
+      - run: npm run cv:png
+
+      - name: Check the committed PDF matches its source
+        shell: bash
+        run: |
+          # Compare the TEXT LAYER, not the bytes. Chromium embeds a build
+          # identity and compresses streams in ways that differ between the
+          # macOS machine this is usually built on and this runner, so a byte
+          # diff would fail on every push. The text layer is what actually
+          # changed if someone edited the source without rebuilding.
+          # Whitespace is stripped before comparing: pdftotext decides where to
+          # insert spaces from glyph positions, so it emits "PRO FI L E" on one
+          # platform and "PROFILE" on another from identical output. Character
+          # content is the signal; its spacing is not. Layout itself is policed
+          # by the overflow and page-count checks in the build.
+          pdftotext -layout /tmp/committed.pdf - | tr -d '[:space:]' > /tmp/committed.txt
+          pdftotext -layout assets/cv/yue-ma-cv.pdf - | tr -d '[:space:]' > /tmp/rebuilt.txt
+          if ! diff -q /tmp/committed.txt /tmp/rebuilt.txt > /dev/null; then
+            echo "::error::assets/cv/yue-ma-cv.pdf is out of date. Run 'npm run cv' and commit it."
+            diff <(fold -w100 /tmp/committed.txt) <(fold -w100 /tmp/rebuilt.txt) | head -20
+            exit 1
+          fi
+          echo "PDF is in sync with cv/resume/."
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cv-preview
+          path: |
+            assets/cv/yue-ma-cv.pdf
+            build/cv-preview/*.png

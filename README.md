@@ -26,6 +26,7 @@ publications/           Formal scholarly output, reverse-chronological
 talks/                  Conference talks, seminars, invited talks
 blog/                   Post index + one directory per post
 cv/                     Web summary + PDF download
+cv/resume/              The CV itself — source of the PDF (see "The CV")
 404.html                Served automatically by GitHub Pages
 
 css/style.css           The entire stylesheet, in six commented sections
@@ -33,7 +34,10 @@ assets/fonts/           Satoshi woff2 (400/500/700), self-hosted
 assets/images/          Photos, figures
 assets/papers/          Self-hosted paper PDFs (prefer arXiv links)
 assets/slides/          Talk slide decks
-assets/cv/              CV PDF
+assets/cv/              CV PDF — GENERATED, do not hand-edit
+
+tools/build-cv.mjs      Compiles cv/resume/ to the CV PDF
+package.json            Build tooling only. Nothing here ships to the browser.
 
 .nojekyll               Required — keep. Disables Jekyll processing.
 robots.txt, sitemap.xml Maintained by hand
@@ -197,6 +201,90 @@ filename, so the URL does not expose a personal file name.
 
 Never publish the editable source (`.key`, `.pptx`) — only the PDF.
 
+## The CV
+
+The CV is an HTML document that Chromium prints to PDF. There is no LaTeX and
+no Overleaf.
+
+```
+cv/resume/index.html    The document. Content lives here.
+cv/resume/resume.css    The typesetting. Layout lives here.
+tools/build-cv.mjs      The compiler.
+assets/cv/yue-ma-cv.pdf The output. Committed, because Pages serves it as a file.
+```
+
+**Never hand-edit `assets/cv/yue-ma-cv.pdf`.** It is overwritten on every build.
+The path is linked from the homepage, `/cv/`, and LinkedIn, so it must not move.
+
+`cv/resume/` is a **build input, not a page of the site.** The site links to the
+PDF and never to the source. Nothing links to `/cv/resume/`, it is `noindex`,
+and `robots.txt` disallows it. GitHub Pages still serves every file in the
+repository, so the URL resolves for anyone who types it — keep it unlinked
+rather than assuming it is private.
+
+### Editing it
+
+```bash
+npm install                 # once
+npx playwright install chromium   # once
+npm run cv:png              # build the PDF and render both pages to PNG
+```
+
+Then **look at `build/cv-preview/page-1.png` and `page-2.png`.** The build
+succeeding is not the same as the CV looking right. This step is the entire
+reason the migration happened.
+
+### Two pages, explicitly
+
+Each `<section class="page">` is one physical sheet with a fixed height and
+`overflow:hidden`. Content does **not** flow between them. Page one running
+long does not push text to page two — it clips it. That is deliberate: a
+clipped page is loud, a silently reflowed one is not, and uncontrolled
+pagination is exactly what made the LaTeX version painful.
+
+So when you add content, you also decide which page it belongs on.
+
+### What the build refuses to do
+
+`npm run cv` fails, rather than producing a subtly wrong PDF, when:
+
+| Check | Why it exists |
+|---|---|
+| A page's content overflows its sheet | Clipping is invisible in a diff |
+| The PDF is not exactly two pages | A stray third page is easy to miss |
+| A character is missing from Satoshi | Chromium would substitute a system font, and the PDF would render differently on the CI runner than on a Mac |
+
+It also prints how full each page is. Aim for **90–97%** on both. Below ~85%
+looks unfinished; above 97% leaves no room for the next edit.
+
+### Rebalancing
+
+Reach for the tokens in `resume.css` in this order, and stop as soon as it
+looks right:
+
+1. `--gap-section`, `--gap-entry`, `--gap-bullet` — whitespace
+2. `--lh-tight` — line height
+3. `--t-body` — type size, last resort
+
+Do not fix a long page by shrinking the whole document.
+
+### Fonts
+
+`resume.css` uses **relative** font paths (`../../assets/fonts/...`), unlike
+every other stylesheet here. This is required: the build loads the page over
+`file://`, where a leading `/` resolves to the filesystem root. Relative paths
+are correct under both `file://` and `https://yuema137.github.io/cv/resume/`.
+
+Fonts are self-hosted so the CI runner and a Mac produce the same layout. Do
+not add a system-font fallback.
+
+### CI
+
+`.github/workflows/build-cv.yml` rebuilds the PDF on any change to the source
+and fails if the committed PDF is stale, comparing text layers rather than
+bytes. It uploads both page PNGs as an artifact, so a pull request can be
+reviewed by looking at it.
+
 ## Content that is mirrored
 
 The homepage repeats a short version of content that lives elsewhere:
@@ -213,6 +301,11 @@ syncing is cheaper than any abstraction.
 
 ## Deliberately not used
 
-React, Next.js, Vue, Svelte, Tailwind, npm, bundlers, static-site generators,
-webfonts, analytics, and external runtime dependencies of any kind. The site
-loads one HTML file and one stylesheet.
+React, Next.js, Vue, Svelte, Tailwind, bundlers, static-site generators,
+webfonts, analytics, and external runtime dependencies of any kind. Every page
+loads one HTML file and one stylesheet, and nothing else.
+
+The one npm dependency, Playwright, is **build tooling for the CV only**. It is
+a devDependency, it runs on your machine or in CI, and not one byte of it
+reaches a visitor. Adding npm packages that ship to the browser is still off
+the table.
