@@ -7,8 +7,6 @@ on:
 permissions:
   contents: write
   pull-requests: write
-  pages: write
-  id-token: write
 
 concurrency:
   group: scieval-sync
@@ -72,23 +70,9 @@ jobs:
           PR_NUMBER: ${{ steps.pull-request.outputs.number }}
         run: gh pr merge "$PR_NUMBER" --squash --delete-branch
 
-  deploy:
-    needs: validate-and-merge
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: main
-
-      - name: Stage and verify the last-known-good site
-        run: bash tools/stage-pages.sh _site
-
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Request a main-branch Pages deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api --method POST "repos/${{ github.repository }}/dispatches" \
+            -f event_type=scieval_snapshot_merged
