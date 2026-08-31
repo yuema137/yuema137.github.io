@@ -35,45 +35,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Stage the publishable files
-        run: |
-          set -euo pipefail
-          mkdir -p _site
-
-          # Everything the public site is made of. Note cv/ is copied and then
-          # cv/resume/ is removed: the CV landing page is public, its source
-          # is not.
-          PUBLISH=(
-            index.html 404.html favicon.svg robots.txt sitemap.xml .nojekyll
-            assets css js
-            blog cv projects publications research talks
-          )
-          for p in "${PUBLISH[@]}"; do
-            cp -R "$p" _site/
-          done
-
-          # The CV source. It is the build input for assets/cv/yue-ma-cv.pdf,
-          # not a page. The site links to the PDF only.
-          rm -rf _site/cv/resume
-
-      - name: Verify nothing private was staged
-        run: |
-          set -euo pipefail
-          fail=0
-          for p in cv/resume tools package.json package-lock.json README.md .github node_modules build; do
-            if [ -e "_site/$p" ]; then
-              echo "::error::_site/$p was staged but must not be published."
-              fail=1
-            fi
-          done
-          # The site must still be complete.
-          for p in index.html cv/index.html assets/cv/yue-ma-cv.pdf css/style.css .nojekyll; do
-            if [ ! -e "_site/$p" ]; then
-              echo "::error::_site/$p is missing — the site would be broken."
-              fail=1
-            fi
-          done
-          exit $fail
+      - name: Stage and verify the last-known-good site
+        run: bash tools/stage-pages.sh _site
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
