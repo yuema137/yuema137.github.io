@@ -27,6 +27,7 @@ talks/                  Conference talks, seminars, invited talks
 blog/                   Post index + one directory per post
 cv/                     Web summary + PDF download
 cv/resume/              The CV itself — source of the PDF (see "The CV")
+scieval/                Generated, self-contained SciEval snapshot
 404.html                Served automatically by GitHub Pages
 
 css/style.css           The entire stylesheet, in six commented sections
@@ -44,11 +45,21 @@ robots.txt, sitemap.xml Maintained by hand
 favicon.svg
 ```
 
+`scieval/` is an intentionally isolated exception to the site's hand-written
+page structure. It is generated and validated in
+`yuema137/scientific-eval-environments`, then synchronized here through a PR
+that is restricted to `scieval/**`. The main Pages workflow only copies the
+last-known-good snapshot; it never builds SciEval or shares its CSS and
+JavaScript with the personal site.
+
 ## Conventions
 
 **All internal paths are root-absolute.** Write `/css/style.css` and
 `/assets/images/x.jpg`, never `css/style.css`. Relative paths break on every
 page that is not at the site root.
+
+The generated `scieval/` snapshot is the sole exception: all of its paths are
+relative to `/scieval/` so the bundle remains self-contained and portable.
 
 **Header and footer are duplicated in every page**, wrapped in
 `<!-- SHARED:HEADER start -->` / `<!-- SHARED:FOOTER start -->` markers. There

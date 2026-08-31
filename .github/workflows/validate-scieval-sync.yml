@@ -1,0 +1,94 @@
+name: Validate and Publish SciEval Snapshot
+
+on:
+  push:
+    branches: [auto/scieval-sync]
+
+permissions:
+  contents: write
+  pull-requests: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: scieval-sync
+  cancel-in-progress: true
+
+jobs:
+  validate-and-merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Enforce the isolated publication boundary
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git diff --name-only origin/main...HEAD > "$RUNNER_TEMP/changed-files.txt"
+          if grep -Ev '^scieval/' "$RUNNER_TEMP/changed-files.txt" | grep -q .; then
+            echo "::error::The automated snapshot branch may only change scieval/."
+            cat "$RUNNER_TEMP/changed-files.txt"
+            exit 1
+          fi
+
+      - name: Validate the static snapshot
+        run: |
+          set -euo pipefail
+          test -f scieval/index.html
+          test -f scieval/app.js
+          test -f scieval/styles.css
+          test -f scieval/data/index.json
+          test -f scieval/documents/en/README.json
+          test -f scieval/documents/zh/README.json
+          test -f scieval/manifest.json
+          test -z "$(find scieval -type l -print -quit)"
+          test -z "$(find scieval -name '*.md' -print -quit)"
+          node --check scieval/app.js
+          python3 -m json.tool scieval/data/index.json >/dev/null
+          python3 -m json.tool scieval/manifest.json >/dev/null
+
+      - name: Open or refresh the generated snapshot PR
+        id: pull-request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          existing="$(gh pr list --head auto/scieval-sync --base main --state open --json number --jq '.[0].number')"
+          if [ -z "$existing" ]; then
+            gh pr create \
+              --base main \
+              --head auto/scieval-sync \
+              --title "Update SciEval explorer snapshot" \
+              --body "Publishes the latest validated SciEval render bundle under \`/scieval/\`. The source Markdown was reviewed and merged in \`yuema137/scientific-eval-environments\`; this PR contains generated static files only."
+            existing="$(gh pr list --head auto/scieval-sync --base main --state open --json number --jq '.[0].number')"
+          fi
+          echo "number=$existing" >> "$GITHUB_OUTPUT"
+
+      - name: Merge the validated machine-owned PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ steps.pull-request.outputs.number }}
+        run: gh pr merge "$PR_NUMBER" --squash --delete-branch
+
+  deploy:
+    needs: validate-and-merge
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Stage and verify the last-known-good site
+        run: bash tools/stage-pages.sh _site
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4
