@@ -36,6 +36,17 @@ else
   echo "Warning: no SciEval snapshot is present; publishing the main site without it." >&2
 fi
 
+# BLE is an optional, already-validated snapshot. Failure here removes the
+# partial copy and leaves the rest of the personal site publishable.
+if [ -d ble ]; then
+  if ! cp -R ble "$output/"; then
+    echo "Warning: BLE could not be staged; publishing the main site without it." >&2
+    rm -rf "$output/ble"
+  fi
+else
+  echo "Warning: no BLE snapshot is present; publishing the main site without it." >&2
+fi
+
 for path in cv/resume tools package.json package-lock.json README.md .github node_modules build; do
   if [ -e "$output/$path" ]; then
     echo "$output/$path was staged but must not be published." >&2
