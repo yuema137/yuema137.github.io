@@ -1,0 +1,67 @@
+name: Validate and Publish BLE Snapshot
+
+on:
+  push:
+    branches: [auto/ble-sync]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: ble-sync
+  cancel-in-progress: true
+
+jobs:
+  validate-and-merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Enforce the isolated publication boundary
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git diff --name-only origin/main...HEAD > "$RUNNER_TEMP/changed-files.txt"
+          if grep -Ev '^ble/' "$RUNNER_TEMP/changed-files.txt" | grep -q .; then
+            echo "::error::The automated BLE snapshot branch may only change ble/."
+            cat "$RUNNER_TEMP/changed-files.txt"
+            exit 1
+          fi
+      - name: Validate the static snapshot
+        run: |
+          set -euo pipefail
+          test -f ble/index.html
+          test -f ble/app.js
+          test -f ble/styles.css
+          test -f ble/data/benchmarks.json
+          test -f ble/manifest.json
+          test -z "$(find ble -type l -print -quit)"
+          test -z "$(find ble -name '*.md' -print -quit)"
+          node --check ble/app.js
+          python3 -m json.tool ble/data/benchmarks.json >/dev/null
+          python3 -m json.tool ble/manifest.json >/dev/null
+      - name: Open or refresh the generated snapshot PR
+        id: pull-request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          existing="$(gh pr list --head auto/ble-sync --base main --state open --json number --jq '.[0].number')"
+          if [ -z "$existing" ]; then
+            gh pr create --base main --head auto/ble-sync \
+              --title "Update BLE snapshot" \
+              --body "Publishes the latest validated BLE static snapshot under \`/ble/\`. The source data and code live in \`yuema137/benchs-last-exam\`; this PR contains generated files only."
+            existing="$(gh pr list --head auto/ble-sync --base main --state open --json number --jq '.[0].number')"
+          fi
+          echo "number=$existing" >> "$GITHUB_OUTPUT"
+      - name: Merge the validated machine-owned PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ steps.pull-request.outputs.number }}
+        run: gh pr merge "$PR_NUMBER" --squash --delete-branch
+      - name: Request a main-branch Pages deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/${{ github.repository }}/dispatches" -f event_type=ble_snapshot_merged
