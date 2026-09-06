@@ -1,0 +1,1536 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "cursorbench-3-2",
+    "name": "CursorBench 3.2",
+    "domain": "Software engineering",
+    "release": "2026-07-08",
+    "source": "https://cursor.com/cn/cursorbench",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Agent",
+    "tags": [
+      "multi-file",
+      "coding",
+      "tool use"
+    ],
+    "metric": "Score",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "cursorbench-3-2-metric-v1",
+    "protocol_id": "cursorbench-3-2-source-export-v1",
+    "canonical_score": {
+      "series_id": "cursorbench-3-2-canonical-score",
+      "role": "canonical",
+      "metric_id": "cursorbench-3-2-metric-v1",
+      "metric_name": "Score",
+      "protocol_id": "cursorbench-3-2-source-export-v1",
+      "task_set_id": "cursorbench-3-2-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "cursorbench-3-2-canonical",
+    "summary": {
+      "en": "CursorBench 3.2 evaluates agents on ambiguous, multi-file software tasks drawn from real Cursor sessions.",
+      "zh": "CursorBench 3.2 \u8bc4\u4f30 agent \u80fd\u4e0d\u80fd\u5b8c\u6210\u6765\u81ea\u771f\u5b9e Cursor session\u3001\u542b\u7cca\u4e14\u6d89\u53ca\u591a\u4e2a\u6587\u4ef6\u7684\u8f6f\u4ef6\u4efb\u52a1\u3002"
+    },
+    "task_format": {
+      "en": "The agent receives a multi-file coding task and uses an editing environment and tools to modify the codebase.",
+      "zh": "agent \u4f1a\u6536\u5230\u4e00\u4e2a\u6d89\u53ca\u591a\u4e2a\u6587\u4ef6\u7684 coding task\uff0c\u5e76\u4f7f\u7528\u7f16\u8f91\u73af\u5883\u548c\u5de5\u5177\u4fee\u6539 codebase\u3002"
+    },
+    "scoring": {
+      "metric_name": "Task score",
+      "explanation": {
+        "en": "The score is the percentage of tasks completed successfully under Cursor's task grader. Reported cost is estimated from token usage and published model pricing.",
+        "zh": "\u5206\u6570\u662f\u6309\u7167 Cursor task grader \u6210\u529f\u5b8c\u6210\u7684 task \u6bd4\u4f8b\u3002\u62a5\u544a\u7684 cost \u6839\u636e token \u7528\u91cf\u548c\u516c\u5f00 model \u5b9a\u4ef7\u4f30\u7b97\u3002"
+      }
+    },
+    "evaluation_target": "environment_outcome",
+    "observation_count": 8,
+    "evidence_record_count": 8,
+    "observations": [
+      {
+        "observation_id": "obs-0-734-93cd802246c2f0c0",
+        "benchmark_id": "cursorbench-3-2",
+        "benchmark_version_id": "cursorbench-3-2-canonical",
+        "model_id": "model-claude-fable-5-1-max-c194931f4ebd95c1",
+        "model_configuration": "Claude Fable 5.1 Max",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-1-max",
+        "model_family_id": "anthropic-claude-fable-5-1-max",
+        "model": "Claude Fable 5.1 Max",
+        "organization": "Anthropic",
+        "score": 0.734,
+        "input_score": 0.734,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "9.64",
+        "metric_id": "cursorbench-3-2-metric-v1",
+        "protocol_id": "cursorbench-3-2-source-export-v1",
+        "task_set_id": "cursorbench-3-2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-3-2-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-09-01",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-09-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+              "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e",
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-09-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e",
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c"
+        ],
+        "score_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+        ],
+        "source": "https://cursor.com/cn/cursorbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cost-9-64-name-claude-fable-5-1-max-notes-cursor-ec854d45a8f68470"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-728-b4c633be8cc3ac33",
+        "benchmark_id": "cursorbench-3-2",
+        "benchmark_version_id": "cursorbench-3-2-canonical",
+        "model_id": "model-claude-fable-5-1-extra-high-4ed2565cf809827a",
+        "model_configuration": "Claude Fable 5.1 Extra High",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-1-extra-high",
+        "model_family_id": "anthropic-claude-fable-5-1-extra-high",
+        "model": "Claude Fable 5.1 Extra High",
+        "organization": "Anthropic",
+        "score": 0.728,
+        "input_score": 0.728,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "6.96",
+        "metric_id": "cursorbench-3-2-metric-v1",
+        "protocol_id": "cursorbench-3-2-source-export-v1",
+        "task_set_id": "cursorbench-3-2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-3-2-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-09-01",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-09-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+              "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e",
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-09-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e",
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c"
+        ],
+        "score_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+        ],
+        "source": "https://cursor.com/cn/cursorbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cost-6-96-name-claude-fable-5-1-extra-high-notes-248a0822c7960db2"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-708-39e0ed40797e078f",
+        "benchmark_id": "cursorbench-3-2",
+        "benchmark_version_id": "cursorbench-3-2-canonical",
+        "model_id": "model-grok-4-6-extra-high-510927798c232cf8",
+        "model_configuration": "Grok 4.6 Extra High",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-6-extra-high",
+        "model_family_id": "xai-grok-4-6-extra-high",
+        "model": "Grok 4.6 Extra High",
+        "organization": "xAI",
+        "score": 0.708,
+        "input_score": 0.708,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "2.81",
+        "metric_id": "cursorbench-3-2-metric-v1",
+        "protocol_id": "cursorbench-3-2-source-export-v1",
+        "task_set_id": "cursorbench-3-2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-3-2-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-08-12",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-08-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-08-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067",
+              "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e",
+          "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-08-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-08-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e",
+          "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
+        ],
+        "score_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+        ],
+        "source": "https://cursor.com/cn/cursorbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cost-2-81-name-grok-4-6-extra-high-notes-cursorb-c0ce16a0915d5f10"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-705-1bac7437d864a2ba",
+        "benchmark_id": "cursorbench-3-2",
+        "benchmark_version_id": "cursorbench-3-2-canonical",
+        "model_id": "model-claude-fable-5-max-3c3bcde9dab8523f",
+        "model_configuration": "Claude Fable 5 Max",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-max",
+        "model_family_id": "anthropic-claude-fable-5-max",
+        "model": "Claude Fable 5 Max",
+        "organization": "Anthropic",
+        "score": 0.705,
+        "input_score": 0.705,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "17.32",
+        "metric_id": "cursorbench-3-2-metric-v1",
+        "protocol_id": "cursorbench-3-2-source-export-v1",
+        "task_set_id": "cursorbench-3-2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-3-2-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-06-09",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-06-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-06-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-06-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-06-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+        ],
+        "score_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+        ],
+        "source": "https://cursor.com/cn/cursorbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cost-17-32-name-claude-fable-5-max-notes-cursorb-c6158fc7ea3d6d7f"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-7-49099ad555c35b0d",
+        "benchmark_id": "cursorbench-3-2",
+        "benchmark_version_id": "cursorbench-3-2-canonical",
+        "model_id": "model-claude-opus-5-max-7d92235259930139",
+        "model_configuration": "Claude Opus 5 Max",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-max",
+        "model_family_id": "anthropic-claude-opus-5-max",
+        "model": "Claude Opus 5 Max",
+        "organization": "Anthropic",
+        "score": 0.7,
+        "input_score": 0.7,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "8.23",
+        "metric_id": "cursorbench-3-2-metric-v1",
+        "protocol_id": "cursorbench-3-2-source-export-v1",
+        "task_set_id": "cursorbench-3-2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-3-2-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-24",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-07-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+        ],
+        "score_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+        ],
+        "source": "https://cursor.com/cn/cursorbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cost-8-23-name-claude-opus-5-max-notes-cursorben-d8dc5fb0489f4226"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-699-8f90e6e4bd442e48",
+        "benchmark_id": "cursorbench-3-2",
+        "benchmark_version_id": "cursorbench-3-2-canonical",
+        "model_id": "model-grok-4-6-high-f25eb4c2e60e3c96",
+        "model_configuration": "Grok 4.6 High",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-6-high",
+        "model_family_id": "xai-grok-4-6-high",
+        "model": "Grok 4.6 High",
+        "organization": "xAI",
+        "score": 0.699,
+        "input_score": 0.699,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "2.34",
+        "metric_id": "cursorbench-3-2-metric-v1",
+        "protocol_id": "cursorbench-3-2-source-export-v1",
+        "task_set_id": "cursorbench-3-2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-3-2-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-08-12",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-08-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-08-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067",
+              "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e",
+          "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-08-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-08-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e",
+          "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
+        ],
+        "score_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+        ],
+        "source": "https://cursor.com/cn/cursorbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cost-2-34-name-grok-4-6-high-notes-cursorbench-3-2b664057780174c1"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-672-985b235c8c626ec1",
+        "benchmark_id": "cursorbench-3-2",
+        "benchmark_version_id": "cursorbench-3-2-canonical",
+        "model_id": "model-gpt-5-6-sol-max-7bbcab2b311e20d4",
+        "model_configuration": "GPT-5.6 Sol Max",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol-max",
+        "model_family_id": "openai-gpt-5-6-sol-max",
+        "model": "GPT-5.6 Sol Max",
+        "organization": "OpenAI",
+        "score": 0.672,
+        "input_score": 0.672,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "5.69",
+        "metric_id": "cursorbench-3-2-metric-v1",
+        "protocol_id": "cursorbench-3-2-source-export-v1",
+        "task_set_id": "cursorbench-3-2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-3-2-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+        ],
+        "score_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+        ],
+        "source": "https://cursor.com/cn/cursorbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cost-5-69-name-gpt-5-6-sol-max-notes-cursorbench-48712321839dcbd2"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-692-f269cccd7eecb6e8",
+        "benchmark_id": "cursorbench-3-2",
+        "benchmark_version_id": "cursorbench-3-2-canonical",
+        "model_id": "model-gemini-3-8-flash-high-92406615928e7be8",
+        "model_configuration": "Gemini 3.8 Flash High",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-8-flash-high",
+        "model_family_id": "google-gemini-3-8-flash-high",
+        "model": "Gemini 3.8 Flash High",
+        "organization": "Google",
+        "score": 0.692,
+        "input_score": 0.692,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "2.38",
+        "metric_id": "cursorbench-3-2-metric-v1",
+        "protocol_id": "cursorbench-3-2-source-export-v1",
+        "task_set_id": "cursorbench-3-2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-3-2-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-09-02",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-09-02",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-02",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-deepmind-google-models-model-cards-gemini--1867674ae3462202",
+              "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e",
+          "resource-https-deepmind-google-models-model-cards-gemini--1867674ae3462202"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-09-02",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-02",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e",
+          "resource-https-deepmind-google-models-model-cards-gemini--1867674ae3462202"
+        ],
+        "score_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+        ],
+        "source": "https://cursor.com/cn/cursorbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cost-2-38-name-gemini-3-8-flash-high-notes-curso-5c927a35f58f66f2"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-705-1bac7437d864a2ba",
+        "benchmark_id": "cursorbench-3-2",
+        "benchmark_version_id": "cursorbench-3-2-canonical",
+        "model_id": "model-claude-fable-5-max-3c3bcde9dab8523f",
+        "model_configuration": "Claude Fable 5 Max",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-max",
+        "model_family_id": "anthropic-claude-fable-5-max",
+        "model": "Claude Fable 5 Max",
+        "organization": "Anthropic",
+        "score": 0.705,
+        "input_score": 0.705,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "17.32",
+        "metric_id": "cursorbench-3-2-metric-v1",
+        "protocol_id": "cursorbench-3-2-source-export-v1",
+        "task_set_id": "cursorbench-3-2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-3-2-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-06-09",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-06-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-06-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-07-08",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-06-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+        ],
+        "score_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+        ],
+        "source": "https://cursor.com/cn/cursorbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cost-17-32-name-claude-fable-5-max-notes-cursorb-c6158fc7ea3d6d7f"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2026-07-08",
+        "frontier_observation_ids": [
+          "obs-0-705-1bac7437d864a2ba"
+        ]
+      },
+      {
+        "observation_id": "obs-0-708-39e0ed40797e078f",
+        "benchmark_id": "cursorbench-3-2",
+        "benchmark_version_id": "cursorbench-3-2-canonical",
+        "model_id": "model-grok-4-6-extra-high-510927798c232cf8",
+        "model_configuration": "Grok 4.6 Extra High",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-6-extra-high",
+        "model_family_id": "xai-grok-4-6-extra-high",
+        "model": "Grok 4.6 Extra High",
+        "organization": "xAI",
+        "score": 0.708,
+        "input_score": 0.708,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "2.81",
+        "metric_id": "cursorbench-3-2-metric-v1",
+        "protocol_id": "cursorbench-3-2-source-export-v1",
+        "task_set_id": "cursorbench-3-2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-3-2-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-08-12",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-08-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-08-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067",
+              "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e",
+          "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-08-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-08-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e",
+          "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
+        ],
+        "score_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+        ],
+        "source": "https://cursor.com/cn/cursorbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cost-2-81-name-grok-4-6-extra-high-notes-cursorb-c0ce16a0915d5f10"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2026-08-12",
+        "frontier_observation_ids": [
+          "obs-0-699-8f90e6e4bd442e48",
+          "obs-0-708-39e0ed40797e078f"
+        ]
+      },
+      {
+        "observation_id": "obs-0-734-93cd802246c2f0c0",
+        "benchmark_id": "cursorbench-3-2",
+        "benchmark_version_id": "cursorbench-3-2-canonical",
+        "model_id": "model-claude-fable-5-1-max-c194931f4ebd95c1",
+        "model_configuration": "Claude Fable 5.1 Max",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-1-max",
+        "model_family_id": "anthropic-claude-fable-5-1-max",
+        "model": "Claude Fable 5.1 Max",
+        "organization": "Anthropic",
+        "score": 0.734,
+        "input_score": 0.734,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "9.64",
+        "metric_id": "cursorbench-3-2-metric-v1",
+        "protocol_id": "cursorbench-3-2-source-export-v1",
+        "task_set_id": "cursorbench-3-2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-3-2-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-09-01",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-09-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+              "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e",
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-09-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e",
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c"
+        ],
+        "score_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+        ],
+        "source": "https://cursor.com/cn/cursorbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cost-9-64-name-claude-fable-5-1-max-notes-cursor-ec854d45a8f68470"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2026-09-01",
+        "frontier_observation_ids": [
+          "obs-0-728-b4c633be8cc3ac33",
+          "obs-0-734-93cd802246c2f0c0"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-705-1bac7437d864a2ba",
+        "benchmark_id": "cursorbench-3-2",
+        "benchmark_version_id": "cursorbench-3-2-canonical",
+        "model_id": "model-claude-fable-5-max-3c3bcde9dab8523f",
+        "model_configuration": "Claude Fable 5 Max",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-max",
+        "model_family_id": "anthropic-claude-fable-5-max",
+        "model": "Claude Fable 5 Max",
+        "organization": "Anthropic",
+        "score": 0.705,
+        "input_score": 0.705,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "17.32",
+        "metric_id": "cursorbench-3-2-metric-v1",
+        "protocol_id": "cursorbench-3-2-source-export-v1",
+        "task_set_id": "cursorbench-3-2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-3-2-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-06-09",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-06-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-06-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-07-08",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-06-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+        ],
+        "score_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+        ],
+        "source": "https://cursor.com/cn/cursorbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cost-17-32-name-claude-fable-5-max-notes-cursorb-c6158fc7ea3d6d7f"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2026-07-08",
+        "frontier_observation_ids": [
+          "obs-0-705-1bac7437d864a2ba"
+        ]
+      },
+      {
+        "observation_id": "obs-0-708-39e0ed40797e078f",
+        "benchmark_id": "cursorbench-3-2",
+        "benchmark_version_id": "cursorbench-3-2-canonical",
+        "model_id": "model-grok-4-6-extra-high-510927798c232cf8",
+        "model_configuration": "Grok 4.6 Extra High",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-6-extra-high",
+        "model_family_id": "xai-grok-4-6-extra-high",
+        "model": "Grok 4.6 Extra High",
+        "organization": "xAI",
+        "score": 0.708,
+        "input_score": 0.708,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "2.81",
+        "metric_id": "cursorbench-3-2-metric-v1",
+        "protocol_id": "cursorbench-3-2-source-export-v1",
+        "task_set_id": "cursorbench-3-2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-3-2-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-08-12",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-08-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-08-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067",
+              "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e",
+          "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-08-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-08-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e",
+          "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
+        ],
+        "score_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+        ],
+        "source": "https://cursor.com/cn/cursorbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cost-2-81-name-grok-4-6-extra-high-notes-cursorb-c0ce16a0915d5f10"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2026-08-12",
+        "frontier_observation_ids": [
+          "obs-0-699-8f90e6e4bd442e48",
+          "obs-0-708-39e0ed40797e078f"
+        ]
+      },
+      {
+        "observation_id": "obs-0-734-93cd802246c2f0c0",
+        "benchmark_id": "cursorbench-3-2",
+        "benchmark_version_id": "cursorbench-3-2-canonical",
+        "model_id": "model-claude-fable-5-1-max-c194931f4ebd95c1",
+        "model_configuration": "Claude Fable 5.1 Max",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-1-max",
+        "model_family_id": "anthropic-claude-fable-5-1-max",
+        "model": "Claude Fable 5.1 Max",
+        "organization": "Anthropic",
+        "score": 0.734,
+        "input_score": 0.734,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "9.64",
+        "metric_id": "cursorbench-3-2-metric-v1",
+        "protocol_id": "cursorbench-3-2-source-export-v1",
+        "task_set_id": "cursorbench-3-2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-3-2-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-09-01",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-09-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+              "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e",
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-09-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e",
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c"
+        ],
+        "score_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+        ],
+        "source": "https://cursor.com/cn/cursorbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cost-9-64-name-claude-fable-5-1-max-notes-cursor-ec854d45a8f68470"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2026-09-01",
+        "frontier_observation_ids": [
+          "obs-0-728-b4c633be8cc3ac33",
+          "obs-0-734-93cd802246c2f0c0"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-705-1bac7437d864a2ba",
+        "benchmark_id": "cursorbench-3-2",
+        "benchmark_version_id": "cursorbench-3-2-canonical",
+        "model_id": "model-claude-fable-5-max-3c3bcde9dab8523f",
+        "model_configuration": "Claude Fable 5 Max",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-max",
+        "model_family_id": "anthropic-claude-fable-5-max",
+        "model": "Claude Fable 5 Max",
+        "organization": "Anthropic",
+        "score": 0.705,
+        "input_score": 0.705,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "17.32",
+        "metric_id": "cursorbench-3-2-metric-v1",
+        "protocol_id": "cursorbench-3-2-source-export-v1",
+        "task_set_id": "cursorbench-3-2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-3-2-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-06-09",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-06-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-06-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-07-08",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-06-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+        ],
+        "score_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+        ],
+        "source": "https://cursor.com/cn/cursorbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cost-17-32-name-claude-fable-5-max-notes-cursorb-c6158fc7ea3d6d7f"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2026-07-08",
+        "frontier_observation_ids": [
+          "obs-0-705-1bac7437d864a2ba"
+        ]
+      },
+      {
+        "observation_id": "obs-0-708-39e0ed40797e078f",
+        "benchmark_id": "cursorbench-3-2",
+        "benchmark_version_id": "cursorbench-3-2-canonical",
+        "model_id": "model-grok-4-6-extra-high-510927798c232cf8",
+        "model_configuration": "Grok 4.6 Extra High",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-6-extra-high",
+        "model_family_id": "xai-grok-4-6-extra-high",
+        "model": "Grok 4.6 Extra High",
+        "organization": "xAI",
+        "score": 0.708,
+        "input_score": 0.708,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "2.81",
+        "metric_id": "cursorbench-3-2-metric-v1",
+        "protocol_id": "cursorbench-3-2-source-export-v1",
+        "task_set_id": "cursorbench-3-2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-3-2-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-08-12",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-08-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-08-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067",
+              "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e",
+          "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-08-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-08-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e",
+          "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
+        ],
+        "score_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+        ],
+        "source": "https://cursor.com/cn/cursorbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cost-2-81-name-grok-4-6-extra-high-notes-cursorb-c0ce16a0915d5f10"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2026-08-12",
+        "frontier_observation_ids": [
+          "obs-0-699-8f90e6e4bd442e48",
+          "obs-0-708-39e0ed40797e078f"
+        ]
+      },
+      {
+        "observation_id": "obs-0-734-93cd802246c2f0c0",
+        "benchmark_id": "cursorbench-3-2",
+        "benchmark_version_id": "cursorbench-3-2-canonical",
+        "model_id": "model-claude-fable-5-1-max-c194931f4ebd95c1",
+        "model_configuration": "Claude Fable 5.1 Max",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-1-max",
+        "model_family_id": "anthropic-claude-fable-5-1-max",
+        "model": "Claude Fable 5.1 Max",
+        "organization": "Anthropic",
+        "score": 0.734,
+        "input_score": 0.734,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "9.64",
+        "metric_id": "cursorbench-3-2-metric-v1",
+        "protocol_id": "cursorbench-3-2-source-export-v1",
+        "task_set_id": "cursorbench-3-2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-3-2-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-09-01",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-09-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+              "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e",
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-09-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e",
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c"
+        ],
+        "score_source_ids": [
+          "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+        ],
+        "source": "https://cursor.com/cn/cursorbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cost-9-64-name-claude-fable-5-1-max-notes-cursor-ec854d45a8f68470"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2026-09-01",
+        "frontier_observation_ids": [
+          "obs-0-728-b4c633be8cc3ac33",
+          "obs-0-734-93cd802246c2f0c0"
+        ]
+      }
+    ],
+    "reported_frontier": [],
+    "historical_frontier": [],
+    "retrospective_observations": [],
+    "observed_frontier": 0.734,
+    "capability_frontier_value": 0.734,
+    "reported_frontier_value": null,
+    "current_frontier": 0.734,
+    "normalized_progress": 0.734,
+    "normalized_headroom": 0.266,
+    "threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-07-08"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 60
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 60
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-07-08"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 60
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 60
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T80": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T90": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": {
+      "value": 6.96,
+      "currency": "USD",
+      "per_task": true,
+      "method": "median of reported per-task values in the curated export",
+      "source_ids": [
+        "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e",
+        "resource-https-deepmind-google-models-model-cards-gemini--1867674ae3462202",
+        "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+        "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
+      ],
+      "notes": "Cost varies by model, harness, and inference settings."
+    },
+    "coverage": {
+      "value": 0.5714285714285714,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "xAI"
+      ],
+      "panel_size": 7,
+      "status": "medium"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-cursor-com-cn-cursorbench-9196d23ebe76478e"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "unknown_public_dates",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

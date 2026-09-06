@@ -1,0 +1,1451 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "swe-bench-science",
+    "name": "SWE-bench Science",
+    "domain": "Engineering",
+    "release": "2026-08-20",
+    "source": "https://swescience.github.io/",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Agent",
+    "tags": [
+      "scientific software",
+      "repository",
+      "pass@1",
+      "test-based"
+    ],
+    "metric": "Overall",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "swe-bench-science-metric-v1",
+    "protocol_id": "swe-bench-science-source-export-v1",
+    "canonical_score": {
+      "series_id": "swe-bench-science-canonical-score",
+      "role": "canonical",
+      "metric_id": "swe-bench-science-metric-v1",
+      "metric_name": "Overall",
+      "protocol_id": "swe-bench-science-source-export-v1",
+      "task_set_id": "swe-bench-science-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "swe-bench-science-canonical",
+    "summary": {
+      "en": "SWE-bench Science measures whether coding agents can repair scientific software while preserving its scientific contracts.",
+      "zh": "SWE-bench Science \u8861\u91cf coding agent \u80fd\u4e0d\u80fd\u4fee\u590d scientific software\uff0c\u540c\u65f6\u4fdd\u6301\u5176 scientific contract\u3002"
+    },
+    "task_format": {
+      "en": "The agent edits repository-level scientific software in an execution environment and must pass the benchmark's software and scientific correctness checks.",
+      "zh": "agent \u9700\u8981\u5728 execution environment \u4e2d\u4fee\u6539 repository-level scientific software\uff0c\u5e76\u901a\u8fc7 software \u548c scientific correctness checks\u3002"
+    },
+    "scoring": {
+      "metric_name": "Overall Pass@1",
+      "explanation": {
+        "en": "Overall is the fraction of the fixed 119 tasks solved by one agent trajectory. Public, private, fail-to-pass, and task-paradigm slices remain separate columns.",
+        "zh": "Overall \u662f\u4e00\u6b21 agent trajectory \u6210\u529f\u89e3\u51b3\u56fa\u5b9a 119 \u4e2a task \u7684\u6bd4\u4f8b\u3002Public\u3001private\u3001fail-to-pass \u548c task-paradigm slice \u4fdd\u6301\u4e3a\u72ec\u7acb\u5217\u3002"
+      }
+    },
+    "evaluation_target": "environment_outcome",
+    "observation_count": 6,
+    "evidence_record_count": 6,
+    "observations": [
+      {
+        "observation_id": "obs-0-479-d3dc397d2d834e68",
+        "benchmark_id": "swe-bench-science",
+        "benchmark_version_id": "swe-bench-science-canonical",
+        "model_id": "model-claude-opus-5-bf4dc0c2f36c7035",
+        "model_configuration": "claude-opus-5",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-max",
+        "model_family_id": "anthropic-claude-opus-5",
+        "model": "Claude Opus 5 (max)",
+        "organization": "Anthropic",
+        "score": 0.479,
+        "input_score": 0.479,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "swe-bench-science-metric-v1",
+        "protocol_id": "swe-bench-science-source-export-v1",
+        "task_set_id": "swe-bench-science-canonical",
+        "metric": "Overall",
+        "score_role": "canonical",
+        "score_series_id": "swe-bench-science-canonical-score",
+        "evaluation_protocol": "SWE-bench Science fixed 119-task set; Overall Pass@1 rows retain the reported harness (Claude Code, Codex, or Kimi Code) and are not treated as bare-model results.",
+        "model_release_date": "2026-07-24",
+        "evaluation_date": "2026-09-01",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-swescience-github-io-0aeb29c844203705"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-07-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "score_source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "source": "https://swescience.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-swe-science-claude-opus-5-02e5c131ffe554c8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "swe-science-claude-opus-5"
+        ]
+      },
+      {
+        "observation_id": "obs-0-4202-12164a877adb2cc7",
+        "benchmark_id": "swe-bench-science",
+        "benchmark_version_id": "swe-bench-science-canonical",
+        "model_id": "model-deepseek-v4-pro-58e16efb8d26515a",
+        "model_configuration": "deepseek-v4-pro",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-v4-pro-max",
+        "model_family_id": "deepseek-deepseek-v4-pro",
+        "model": "DeepSeek V4 Pro (max)",
+        "organization": "DeepSeek",
+        "score": 0.4202,
+        "input_score": 0.4202,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "swe-bench-science-metric-v1",
+        "protocol_id": "swe-bench-science-source-export-v1",
+        "task_set_id": "swe-bench-science-canonical",
+        "metric": "Overall",
+        "score_role": "canonical",
+        "score_series_id": "swe-bench-science-canonical-score",
+        "evaluation_protocol": "SWE-bench Science fixed 119-task set; Overall Pass@1 rows retain the reported harness (Claude Code, Codex, or Kimi Code) and are not treated as bare-model results.",
+        "model_release_date": "2026-04-24",
+        "evaluation_date": "2026-09-01",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-04-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-swescience-github-io-0aeb29c844203705"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-04-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "score_source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "source": "https://swescience.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-swe-science-deepseek-v4-pro-fd9e3817fb3717ea"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "swe-science-deepseek-v4-pro"
+        ]
+      },
+      {
+        "observation_id": "obs-0-4034-f79a089562e6bba7",
+        "benchmark_id": "swe-bench-science",
+        "benchmark_version_id": "swe-bench-science-canonical",
+        "model_id": "model-gpt-5-6-sol-5f1ffa469585aab8",
+        "model_configuration": "gpt-5-6-sol",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol-max",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "GPT-5.6 Sol (max)",
+        "organization": "OpenAI",
+        "score": 0.4034,
+        "input_score": 0.4034,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "swe-bench-science-metric-v1",
+        "protocol_id": "swe-bench-science-source-export-v1",
+        "task_set_id": "swe-bench-science-canonical",
+        "metric": "Overall",
+        "score_role": "canonical",
+        "score_series_id": "swe-bench-science-canonical-score",
+        "evaluation_protocol": "SWE-bench Science fixed 119-task set; Overall Pass@1 rows retain the reported harness (Claude Code, Codex, or Kimi Code) and are not treated as bare-model results.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": "2026-09-01",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-swescience-github-io-0aeb29c844203705"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "score_source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "source": "https://swescience.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-swe-science-gpt-5-6-sol-fed0097ba801449c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "swe-science-gpt-5-6-sol"
+        ]
+      },
+      {
+        "observation_id": "obs-0-3529-610f142d2f6fe344",
+        "benchmark_id": "swe-bench-science",
+        "benchmark_version_id": "swe-bench-science-canonical",
+        "model_id": "model-kimi-k3-9c92fcdee2157869",
+        "model_configuration": "kimi-k3",
+        "model_identity_organization": "moonshot-ai",
+        "model_label_id": "kimi-k3-max",
+        "model_family_id": "moonshot-ai-kimi-k3",
+        "model": "Kimi K3 (max)",
+        "organization": "Moonshot AI",
+        "score": 0.3529,
+        "input_score": 0.3529,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "swe-bench-science-metric-v1",
+        "protocol_id": "swe-bench-science-source-export-v1",
+        "task_set_id": "swe-bench-science-canonical",
+        "metric": "Overall",
+        "score_role": "canonical",
+        "score_series_id": "swe-bench-science-canonical-score",
+        "evaluation_protocol": "SWE-bench Science fixed 119-task set; Overall Pass@1 rows retain the reported harness (Claude Code, Codex, or Kimi Code) and are not treated as bare-model results.",
+        "model_release_date": "2026-07-16",
+        "evaluation_date": "2026-09-01",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-swescience-github-io-0aeb29c844203705"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-07-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "score_source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "source": "https://swescience.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-swe-science-kimi-k3-c749ac4753fd6424"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "swe-science-kimi-k3"
+        ]
+      },
+      {
+        "observation_id": "obs-0-3193-71d75affca0642d3",
+        "benchmark_id": "swe-bench-science",
+        "benchmark_version_id": "swe-bench-science-canonical",
+        "model_id": "model-glm-5-2-c1866ad95a501fba",
+        "model_configuration": "glm-5-2",
+        "model_identity_organization": "z-ai",
+        "model_label_id": "glm-5-2-max",
+        "model_family_id": "z-ai-glm-5-2",
+        "model": "GLM-5.2 (max)",
+        "organization": "Z.ai",
+        "score": 0.3193,
+        "input_score": 0.3193,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "swe-bench-science-metric-v1",
+        "protocol_id": "swe-bench-science-source-export-v1",
+        "task_set_id": "swe-bench-science-canonical",
+        "metric": "Overall",
+        "score_role": "canonical",
+        "score_series_id": "swe-bench-science-canonical-score",
+        "evaluation_protocol": "SWE-bench Science fixed 119-task set; Overall Pass@1 rows retain the reported harness (Claude Code, Codex, or Kimi Code) and are not treated as bare-model results.",
+        "model_release_date": "2026-06-16",
+        "evaluation_date": "2026-09-01",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-06-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-06-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-swescience-github-io-0aeb29c844203705"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-06-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-06-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "score_source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "source": "https://swescience.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-swe-science-glm-5-2-f4b30505cb4c3ac9"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "swe-science-glm-5-2"
+        ]
+      },
+      {
+        "observation_id": "obs-0-2353-dfe22fbfdb819a44",
+        "benchmark_id": "swe-bench-science",
+        "benchmark_version_id": "swe-bench-science-canonical",
+        "model_id": "model-deepseek-v4-flash-127686e02a6c2c11",
+        "model_configuration": "deepseek-v4-flash",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-v4-flash-max",
+        "model_family_id": "deepseek-deepseek-v4-flash",
+        "model": "DeepSeek V4 Flash (max)",
+        "organization": "DeepSeek",
+        "score": 0.2353,
+        "input_score": 0.2353,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "swe-bench-science-metric-v1",
+        "protocol_id": "swe-bench-science-source-export-v1",
+        "task_set_id": "swe-bench-science-canonical",
+        "metric": "Overall",
+        "score_role": "canonical",
+        "score_series_id": "swe-bench-science-canonical-score",
+        "evaluation_protocol": "SWE-bench Science fixed 119-task set; Overall Pass@1 rows retain the reported harness (Claude Code, Codex, or Kimi Code) and are not treated as bare-model results.",
+        "model_release_date": "2026-04-24",
+        "evaluation_date": "2026-09-01",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-04-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-swescience-github-io-0aeb29c844203705"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-04-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "score_source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "source": "https://swescience.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-swe-science-deepseek-v4-flash-7173b228f8da547e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "swe-science-deepseek-v4-flash"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-479-d3dc397d2d834e68",
+        "benchmark_id": "swe-bench-science",
+        "benchmark_version_id": "swe-bench-science-canonical",
+        "model_id": "model-claude-opus-5-bf4dc0c2f36c7035",
+        "model_configuration": "claude-opus-5",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-max",
+        "model_family_id": "anthropic-claude-opus-5",
+        "model": "Claude Opus 5 (max)",
+        "organization": "Anthropic",
+        "score": 0.479,
+        "input_score": 0.479,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "swe-bench-science-metric-v1",
+        "protocol_id": "swe-bench-science-source-export-v1",
+        "task_set_id": "swe-bench-science-canonical",
+        "metric": "Overall",
+        "score_role": "canonical",
+        "score_series_id": "swe-bench-science-canonical-score",
+        "evaluation_protocol": "SWE-bench Science fixed 119-task set; Overall Pass@1 rows retain the reported harness (Claude Code, Codex, or Kimi Code) and are not treated as bare-model results.",
+        "model_release_date": "2026-07-24",
+        "evaluation_date": "2026-09-01",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-swescience-github-io-0aeb29c844203705"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-08-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "score_source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "source": "https://swescience.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-swe-science-claude-opus-5-02e5c131ffe554c8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "swe-science-claude-opus-5"
+        ],
+        "plot_date": "2026-08-20",
+        "frontier_observation_ids": [
+          "obs-0-2353-dfe22fbfdb819a44",
+          "obs-0-3193-71d75affca0642d3",
+          "obs-0-3529-610f142d2f6fe344",
+          "obs-0-4034-f79a089562e6bba7",
+          "obs-0-4202-12164a877adb2cc7",
+          "obs-0-479-d3dc397d2d834e68"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-479-d3dc397d2d834e68",
+        "benchmark_id": "swe-bench-science",
+        "benchmark_version_id": "swe-bench-science-canonical",
+        "model_id": "model-claude-opus-5-bf4dc0c2f36c7035",
+        "model_configuration": "claude-opus-5",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-max",
+        "model_family_id": "anthropic-claude-opus-5",
+        "model": "Claude Opus 5 (max)",
+        "organization": "Anthropic",
+        "score": 0.479,
+        "input_score": 0.479,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "swe-bench-science-metric-v1",
+        "protocol_id": "swe-bench-science-source-export-v1",
+        "task_set_id": "swe-bench-science-canonical",
+        "metric": "Overall",
+        "score_role": "canonical",
+        "score_series_id": "swe-bench-science-canonical-score",
+        "evaluation_protocol": "SWE-bench Science fixed 119-task set; Overall Pass@1 rows retain the reported harness (Claude Code, Codex, or Kimi Code) and are not treated as bare-model results.",
+        "model_release_date": "2026-07-24",
+        "evaluation_date": "2026-09-01",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-swescience-github-io-0aeb29c844203705"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-08-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "score_source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "source": "https://swescience.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-swe-science-claude-opus-5-02e5c131ffe554c8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "swe-science-claude-opus-5"
+        ],
+        "plot_date": "2026-08-20",
+        "frontier_observation_ids": [
+          "obs-0-2353-dfe22fbfdb819a44",
+          "obs-0-3193-71d75affca0642d3",
+          "obs-0-3529-610f142d2f6fe344",
+          "obs-0-4034-f79a089562e6bba7",
+          "obs-0-4202-12164a877adb2cc7",
+          "obs-0-479-d3dc397d2d834e68"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-479-d3dc397d2d834e68",
+        "benchmark_id": "swe-bench-science",
+        "benchmark_version_id": "swe-bench-science-canonical",
+        "model_id": "model-claude-opus-5-bf4dc0c2f36c7035",
+        "model_configuration": "claude-opus-5",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-max",
+        "model_family_id": "anthropic-claude-opus-5",
+        "model": "Claude Opus 5 (max)",
+        "organization": "Anthropic",
+        "score": 0.479,
+        "input_score": 0.479,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "swe-bench-science-metric-v1",
+        "protocol_id": "swe-bench-science-source-export-v1",
+        "task_set_id": "swe-bench-science-canonical",
+        "metric": "Overall",
+        "score_role": "canonical",
+        "score_series_id": "swe-bench-science-canonical-score",
+        "evaluation_protocol": "SWE-bench Science fixed 119-task set; Overall Pass@1 rows retain the reported harness (Claude Code, Codex, or Kimi Code) and are not treated as bare-model results.",
+        "model_release_date": "2026-07-24",
+        "evaluation_date": "2026-09-01",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-swescience-github-io-0aeb29c844203705"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-08-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "score_source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "source": "https://swescience.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-swe-science-claude-opus-5-02e5c131ffe554c8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "swe-science-claude-opus-5"
+        ],
+        "plot_date": "2026-08-20",
+        "frontier_observation_ids": [
+          "obs-0-2353-dfe22fbfdb819a44",
+          "obs-0-3193-71d75affca0642d3",
+          "obs-0-3529-610f142d2f6fe344",
+          "obs-0-4034-f79a089562e6bba7",
+          "obs-0-4202-12164a877adb2cc7",
+          "obs-0-479-d3dc397d2d834e68"
+        ]
+      }
+    ],
+    "reported_frontier": [],
+    "historical_frontier": [],
+    "retrospective_observations": [
+      {
+        "observation_id": "obs-0-479-d3dc397d2d834e68",
+        "benchmark_id": "swe-bench-science",
+        "benchmark_version_id": "swe-bench-science-canonical",
+        "model_id": "model-claude-opus-5-bf4dc0c2f36c7035",
+        "model_configuration": "claude-opus-5",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-max",
+        "model_family_id": "anthropic-claude-opus-5",
+        "model": "Claude Opus 5 (max)",
+        "organization": "Anthropic",
+        "score": 0.479,
+        "input_score": 0.479,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "swe-bench-science-metric-v1",
+        "protocol_id": "swe-bench-science-source-export-v1",
+        "task_set_id": "swe-bench-science-canonical",
+        "metric": "Overall",
+        "score_role": "canonical",
+        "score_series_id": "swe-bench-science-canonical-score",
+        "evaluation_protocol": "SWE-bench Science fixed 119-task set; Overall Pass@1 rows retain the reported harness (Claude Code, Codex, or Kimi Code) and are not treated as bare-model results.",
+        "model_release_date": "2026-07-24",
+        "evaluation_date": "2026-09-01",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-swescience-github-io-0aeb29c844203705"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-07-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "score_source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "source": "https://swescience.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-swe-science-claude-opus-5-02e5c131ffe554c8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "swe-science-claude-opus-5"
+        ]
+      },
+      {
+        "observation_id": "obs-0-4202-12164a877adb2cc7",
+        "benchmark_id": "swe-bench-science",
+        "benchmark_version_id": "swe-bench-science-canonical",
+        "model_id": "model-deepseek-v4-pro-58e16efb8d26515a",
+        "model_configuration": "deepseek-v4-pro",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-v4-pro-max",
+        "model_family_id": "deepseek-deepseek-v4-pro",
+        "model": "DeepSeek V4 Pro (max)",
+        "organization": "DeepSeek",
+        "score": 0.4202,
+        "input_score": 0.4202,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "swe-bench-science-metric-v1",
+        "protocol_id": "swe-bench-science-source-export-v1",
+        "task_set_id": "swe-bench-science-canonical",
+        "metric": "Overall",
+        "score_role": "canonical",
+        "score_series_id": "swe-bench-science-canonical-score",
+        "evaluation_protocol": "SWE-bench Science fixed 119-task set; Overall Pass@1 rows retain the reported harness (Claude Code, Codex, or Kimi Code) and are not treated as bare-model results.",
+        "model_release_date": "2026-04-24",
+        "evaluation_date": "2026-09-01",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-04-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-swescience-github-io-0aeb29c844203705"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-04-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "score_source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "source": "https://swescience.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-swe-science-deepseek-v4-pro-fd9e3817fb3717ea"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "swe-science-deepseek-v4-pro"
+        ]
+      },
+      {
+        "observation_id": "obs-0-4034-f79a089562e6bba7",
+        "benchmark_id": "swe-bench-science",
+        "benchmark_version_id": "swe-bench-science-canonical",
+        "model_id": "model-gpt-5-6-sol-5f1ffa469585aab8",
+        "model_configuration": "gpt-5-6-sol",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol-max",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "GPT-5.6 Sol (max)",
+        "organization": "OpenAI",
+        "score": 0.4034,
+        "input_score": 0.4034,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "swe-bench-science-metric-v1",
+        "protocol_id": "swe-bench-science-source-export-v1",
+        "task_set_id": "swe-bench-science-canonical",
+        "metric": "Overall",
+        "score_role": "canonical",
+        "score_series_id": "swe-bench-science-canonical-score",
+        "evaluation_protocol": "SWE-bench Science fixed 119-task set; Overall Pass@1 rows retain the reported harness (Claude Code, Codex, or Kimi Code) and are not treated as bare-model results.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": "2026-09-01",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-swescience-github-io-0aeb29c844203705"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "score_source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "source": "https://swescience.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-swe-science-gpt-5-6-sol-fed0097ba801449c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "swe-science-gpt-5-6-sol"
+        ]
+      },
+      {
+        "observation_id": "obs-0-3529-610f142d2f6fe344",
+        "benchmark_id": "swe-bench-science",
+        "benchmark_version_id": "swe-bench-science-canonical",
+        "model_id": "model-kimi-k3-9c92fcdee2157869",
+        "model_configuration": "kimi-k3",
+        "model_identity_organization": "moonshot-ai",
+        "model_label_id": "kimi-k3-max",
+        "model_family_id": "moonshot-ai-kimi-k3",
+        "model": "Kimi K3 (max)",
+        "organization": "Moonshot AI",
+        "score": 0.3529,
+        "input_score": 0.3529,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "swe-bench-science-metric-v1",
+        "protocol_id": "swe-bench-science-source-export-v1",
+        "task_set_id": "swe-bench-science-canonical",
+        "metric": "Overall",
+        "score_role": "canonical",
+        "score_series_id": "swe-bench-science-canonical-score",
+        "evaluation_protocol": "SWE-bench Science fixed 119-task set; Overall Pass@1 rows retain the reported harness (Claude Code, Codex, or Kimi Code) and are not treated as bare-model results.",
+        "model_release_date": "2026-07-16",
+        "evaluation_date": "2026-09-01",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-swescience-github-io-0aeb29c844203705"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-07-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "score_source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "source": "https://swescience.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-swe-science-kimi-k3-c749ac4753fd6424"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "swe-science-kimi-k3"
+        ]
+      },
+      {
+        "observation_id": "obs-0-3193-71d75affca0642d3",
+        "benchmark_id": "swe-bench-science",
+        "benchmark_version_id": "swe-bench-science-canonical",
+        "model_id": "model-glm-5-2-c1866ad95a501fba",
+        "model_configuration": "glm-5-2",
+        "model_identity_organization": "z-ai",
+        "model_label_id": "glm-5-2-max",
+        "model_family_id": "z-ai-glm-5-2",
+        "model": "GLM-5.2 (max)",
+        "organization": "Z.ai",
+        "score": 0.3193,
+        "input_score": 0.3193,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "swe-bench-science-metric-v1",
+        "protocol_id": "swe-bench-science-source-export-v1",
+        "task_set_id": "swe-bench-science-canonical",
+        "metric": "Overall",
+        "score_role": "canonical",
+        "score_series_id": "swe-bench-science-canonical-score",
+        "evaluation_protocol": "SWE-bench Science fixed 119-task set; Overall Pass@1 rows retain the reported harness (Claude Code, Codex, or Kimi Code) and are not treated as bare-model results.",
+        "model_release_date": "2026-06-16",
+        "evaluation_date": "2026-09-01",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-06-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-06-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-swescience-github-io-0aeb29c844203705"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-06-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-06-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "score_source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "source": "https://swescience.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-swe-science-glm-5-2-f4b30505cb4c3ac9"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "swe-science-glm-5-2"
+        ]
+      },
+      {
+        "observation_id": "obs-0-2353-dfe22fbfdb819a44",
+        "benchmark_id": "swe-bench-science",
+        "benchmark_version_id": "swe-bench-science-canonical",
+        "model_id": "model-deepseek-v4-flash-127686e02a6c2c11",
+        "model_configuration": "deepseek-v4-flash",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-v4-flash-max",
+        "model_family_id": "deepseek-deepseek-v4-flash",
+        "model": "DeepSeek V4 Flash (max)",
+        "organization": "DeepSeek",
+        "score": 0.2353,
+        "input_score": 0.2353,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "swe-bench-science-metric-v1",
+        "protocol_id": "swe-bench-science-source-export-v1",
+        "task_set_id": "swe-bench-science-canonical",
+        "metric": "Overall",
+        "score_role": "canonical",
+        "score_series_id": "swe-bench-science-canonical-score",
+        "evaluation_protocol": "SWE-bench Science fixed 119-task set; Overall Pass@1 rows retain the reported harness (Claude Code, Codex, or Kimi Code) and are not treated as bare-model results.",
+        "model_release_date": "2026-04-24",
+        "evaluation_date": "2026-09-01",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-04-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-swescience-github-io-0aeb29c844203705"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-04-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "score_source_ids": [
+          "resource-https-swescience-github-io-0aeb29c844203705"
+        ],
+        "source": "https://swescience.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-swe-science-deepseek-v4-flash-7173b228f8da547e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "swe-science-deepseek-v4-flash"
+        ]
+      }
+    ],
+    "observed_frontier": 0.479,
+    "capability_frontier_value": 0.479,
+    "reported_frontier_value": null,
+    "current_frontier": 0.479,
+    "normalized_progress": 0.479,
+    "normalized_headroom": 0.521,
+    "threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 17
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 17
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 17
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 17
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 17
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 17
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T80": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T90": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.42857142857142855,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "DeepSeek"
+      ],
+      "panel_size": 7,
+      "status": "medium"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-swescience-github-io-0aeb29c844203705"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "unknown_public_dates",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": true,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

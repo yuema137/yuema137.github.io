@@ -1,0 +1,1406 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "tomg-bench-v1-wacc",
+    "name": "TOMG-Bench v1 \u2014 wAcc",
+    "domain": "Chemistry",
+    "release": "2024-12-19",
+    "source": "https://github.com/phenixace/tomg-bench",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Model",
+    "tags": [
+      "molecule generation",
+      "editing",
+      "optimization"
+    ],
+    "metric": "wAcc",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "tomg-bench-v1-wacc-metric-v1",
+    "protocol_id": "tomg-bench-v1-wacc-source-export-v1",
+    "canonical_score": {
+      "series_id": "tomg-bench-v1-wacc-canonical-score",
+      "role": "canonical",
+      "metric_id": "tomg-bench-v1-wacc-metric-v1",
+      "metric_name": "wAcc",
+      "protocol_id": "tomg-bench-v1-wacc-source-export-v1",
+      "task_set_id": "tomg-bench-v1-wacc-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "tomg-bench-v1-wacc-canonical",
+    "summary": {
+      "en": "TOMG-Bench evaluates open-domain text-guided molecule generation, editing, and optimization.",
+      "zh": "TOMG-Bench \u8bc4\u4f30\u5f00\u653e\u5f0f\u6587\u672c\u5f15\u5bfc\u7684\u5206\u5b50\u751f\u6210\u3001\u7f16\u8f91\u548c\u4f18\u5316\u3002"
+    },
+    "task_format": {
+      "en": "Generate molecular structures satisfying natural-language requirements across nine fixed subtasks.",
+      "zh": "\u5728\u4e5d\u4e2a\u56fa\u5b9a\u5b50\u4efb\u52a1\u4e2d\u751f\u6210\u6ee1\u8db3\u81ea\u7136\u8bed\u8a00\u8981\u6c42\u7684\u5206\u5b50\u7ed3\u6784\u3002"
+    },
+    "scoring": {
+      "metric_name": "Weighted average accuracy",
+      "explanation": {
+        "en": "Official wAcc combines task correctness with novelty or molecular-similarity weighting over the fixed test set.",
+        "zh": "\u5b98\u65b9 wAcc \u5728\u56fa\u5b9a\u6d4b\u8bd5\u96c6\u4e0a\u7ed3\u5408\u4efb\u52a1\u6b63\u786e\u6027\u4e0e\u65b0\u9896\u6027\u6216\u5206\u5b50\u76f8\u4f3c\u5ea6\u6743\u91cd\u3002"
+      }
+    },
+    "evaluation_target": "final_output",
+    "observation_count": 9,
+    "evidence_record_count": 9,
+    "observations": [
+      {
+        "observation_id": "obs-0-1858-6f462cfe4149fa15",
+        "benchmark_id": "tomg-bench-v1-wacc",
+        "benchmark_version_id": "tomg-bench-v1-wacc-canonical",
+        "model_id": "model-gpt-3-5-turbo-130d6c1b27b8d572",
+        "model_configuration": "GPT-3.5-Turbo",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-3-5-turbo",
+        "model_family_id": "openai-gpt-3-5-turbo",
+        "model": "GPT-3.5-Turbo",
+        "organization": "OpenAI",
+        "score": 0.1858,
+        "input_score": 0.1858,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "tomg-bench-v1-wacc-metric-v1",
+        "protocol_id": "tomg-bench-v1-wacc-source-export-v1",
+        "task_set_id": "tomg-bench-v1-wacc-canonical",
+        "metric": "wAcc",
+        "score_role": "canonical",
+        "score_series_id": "tomg-bench-v1-wacc-canonical-score",
+        "evaluation_protocol": "Original TOMG-Bench v1 fixed 45,000-example test set and official weighted average accuracy; unweighted and S2 revisions excluded.",
+        "model_release_date": "2023-03-01",
+        "evaluation_date": null,
+        "result_public_date": "2024-12-19",
+        "source_publication_date": "2024-12-19",
+        "observation_date": "2023-03-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-03-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-12-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2023-03-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-03-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-12-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "source": "https://github.com/phenixace/tomg-bench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-tomg-gpt35-903b347a0afbff01"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "tomg-gpt35"
+        ]
+      },
+      {
+        "observation_id": "obs-0-3423-cc8d1b69f98396f2",
+        "benchmark_id": "tomg-bench-v1-wacc",
+        "benchmark_version_id": "tomg-bench-v1-wacc-canonical",
+        "model_id": "model-gpt-4-turbo-f43116b910ec4f9a",
+        "model_configuration": "GPT-4-Turbo",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4-turbo",
+        "model_family_id": "openai-gpt-4-turbo",
+        "model": "GPT-4-Turbo",
+        "organization": "OpenAI",
+        "score": 0.3423,
+        "input_score": 0.3423,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "tomg-bench-v1-wacc-metric-v1",
+        "protocol_id": "tomg-bench-v1-wacc-source-export-v1",
+        "task_set_id": "tomg-bench-v1-wacc-canonical",
+        "metric": "wAcc",
+        "score_role": "canonical",
+        "score_series_id": "tomg-bench-v1-wacc-canonical-score",
+        "evaluation_protocol": "Original TOMG-Bench v1 fixed 45,000-example test set and official weighted average accuracy; unweighted and S2 revisions excluded.",
+        "model_release_date": "2023-11-06",
+        "evaluation_date": null,
+        "result_public_date": "2024-12-19",
+        "source_publication_date": "2024-12-19",
+        "observation_date": "2023-11-06",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-11-06",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-12-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2023-11-06",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-11-06",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-12-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "source": "https://github.com/phenixace/tomg-bench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-tomg-gpt4turbo-7e7b05dc286c6b34"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "tomg-gpt4turbo"
+        ]
+      },
+      {
+        "observation_id": "obs-0-3047-a743a11664e9d6b2",
+        "benchmark_id": "tomg-bench-v1-wacc",
+        "benchmark_version_id": "tomg-bench-v1-wacc-canonical",
+        "model_id": "model-claude-3-4269464addb708ce",
+        "model_configuration": "Claude-3",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3",
+        "model_family_id": "anthropic-claude-3",
+        "model": "Claude-3",
+        "organization": "Anthropic",
+        "score": 0.3047,
+        "input_score": 0.3047,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "tomg-bench-v1-wacc-metric-v1",
+        "protocol_id": "tomg-bench-v1-wacc-source-export-v1",
+        "task_set_id": "tomg-bench-v1-wacc-canonical",
+        "metric": "wAcc",
+        "score_role": "canonical",
+        "score_series_id": "tomg-bench-v1-wacc-canonical-score",
+        "evaluation_protocol": "Original TOMG-Bench v1 fixed 45,000-example test set and official weighted average accuracy; unweighted and S2 revisions excluded.",
+        "model_release_date": "2024-03-04",
+        "evaluation_date": null,
+        "result_public_date": "2024-12-19",
+        "source_publication_date": "2024-12-19",
+        "observation_date": "2024-03-04",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-03-04",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-12-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-03-04",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-03-04",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-12-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "source": "https://github.com/phenixace/tomg-bench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-tomg-claude3-3819441c313581aa"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "tomg-claude3"
+        ]
+      },
+      {
+        "observation_id": "obs-0-348-86a915ad120f97ea",
+        "benchmark_id": "tomg-bench-v1-wacc",
+        "benchmark_version_id": "tomg-bench-v1-wacc-canonical",
+        "model_id": "model-gemini-1-5-pro-cbb82d54e094a69c",
+        "model_configuration": "Gemini-1.5-Pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-1-5-pro",
+        "model_family_id": "google-gemini-1-5-pro",
+        "model": "Gemini-1.5-Pro",
+        "organization": "Google",
+        "score": 0.348,
+        "input_score": 0.348,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "tomg-bench-v1-wacc-metric-v1",
+        "protocol_id": "tomg-bench-v1-wacc-source-export-v1",
+        "task_set_id": "tomg-bench-v1-wacc-canonical",
+        "metric": "wAcc",
+        "score_role": "canonical",
+        "score_series_id": "tomg-bench-v1-wacc-canonical-score",
+        "evaluation_protocol": "Original TOMG-Bench v1 fixed 45,000-example test set and official weighted average accuracy; unweighted and S2 revisions excluded.",
+        "model_release_date": "2024-02-15",
+        "evaluation_date": null,
+        "result_public_date": "2024-12-19",
+        "source_publication_date": "2024-12-19",
+        "observation_date": "2024-02-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-02-15",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-12-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-02-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-02-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-12-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "source": "https://github.com/phenixace/tomg-bench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-tomg-gemini15-de0c3c9cef730823"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "tomg-gemini15"
+        ]
+      },
+      {
+        "observation_id": "obs-0-2393-26843a5da39229a9",
+        "benchmark_id": "tomg-bench-v1-wacc",
+        "benchmark_version_id": "tomg-bench-v1-wacc-canonical",
+        "model_id": "model-llama-3-70b-instruct-int4-7267fcb1d7a2449f",
+        "model_configuration": "Llama-3-70B-Instruct-Int4",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama-3-70b-instruct-int4",
+        "model_family_id": "meta-llama-3-70b-instruct-int4",
+        "model": "Llama-3-70B-Instruct-Int4",
+        "organization": "Meta",
+        "score": 0.2393,
+        "input_score": 0.2393,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "tomg-bench-v1-wacc-metric-v1",
+        "protocol_id": "tomg-bench-v1-wacc-source-export-v1",
+        "task_set_id": "tomg-bench-v1-wacc-canonical",
+        "metric": "wAcc",
+        "score_role": "canonical",
+        "score_series_id": "tomg-bench-v1-wacc-canonical-score",
+        "evaluation_protocol": "Original TOMG-Bench v1 fixed 45,000-example test set and official weighted average accuracy; unweighted and S2 revisions excluded.",
+        "model_release_date": "2024-04-18",
+        "evaluation_date": null,
+        "result_public_date": "2024-12-19",
+        "source_publication_date": "2024-12-19",
+        "observation_date": "2024-04-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-04-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-12-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-04-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-04-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-12-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "source": "https://github.com/phenixace/tomg-bench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-tomg-llama3-999e0431eaf7a696"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "tomg-llama3"
+        ]
+      },
+      {
+        "observation_id": "obs-0-3229-8ee94b3f79220dda",
+        "benchmark_id": "tomg-bench-v1-wacc",
+        "benchmark_version_id": "tomg-bench-v1-wacc-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.3229,
+        "input_score": 0.3229,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "tomg-bench-v1-wacc-metric-v1",
+        "protocol_id": "tomg-bench-v1-wacc-source-export-v1",
+        "task_set_id": "tomg-bench-v1-wacc-canonical",
+        "metric": "wAcc",
+        "score_role": "canonical",
+        "score_series_id": "tomg-bench-v1-wacc-canonical-score",
+        "evaluation_protocol": "Original TOMG-Bench v1 fixed 45,000-example test set and official weighted average accuracy; unweighted and S2 revisions excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2024-12-19",
+        "source_publication_date": "2024-12-19",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-12-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-05-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-12-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "source": "https://github.com/phenixace/tomg-bench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-tomg-gpt4o-7b705edc9e1a40bf"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "tomg-gpt4o"
+        ]
+      },
+      {
+        "observation_id": "obs-0-3592-f4491e0b4708c623",
+        "benchmark_id": "tomg-bench-v1-wacc",
+        "benchmark_version_id": "tomg-bench-v1-wacc-canonical",
+        "model_id": "model-claude-3-5-sonnet-ca0330ced73b499d",
+        "model_configuration": "Claude-3.5-Sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet",
+        "model_family_id": "anthropic-claude-3-5-sonnet",
+        "model": "Claude-3.5-Sonnet",
+        "organization": "Anthropic",
+        "score": 0.3592,
+        "input_score": 0.3592,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "tomg-bench-v1-wacc-metric-v1",
+        "protocol_id": "tomg-bench-v1-wacc-source-export-v1",
+        "task_set_id": "tomg-bench-v1-wacc-canonical",
+        "metric": "wAcc",
+        "score_role": "canonical",
+        "score_series_id": "tomg-bench-v1-wacc-canonical-score",
+        "evaluation_protocol": "Original TOMG-Bench v1 fixed 45,000-example test set and official weighted average accuracy; unweighted and S2 revisions excluded.",
+        "model_release_date": "2024-06-20",
+        "evaluation_date": null,
+        "result_public_date": "2024-12-19",
+        "source_publication_date": "2024-12-19",
+        "observation_date": "2024-06-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-12-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-06-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-06-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-12-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "source": "https://github.com/phenixace/tomg-bench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-tomg-claude35-0cfaacb172d84458"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "tomg-claude35"
+        ]
+      },
+      {
+        "observation_id": "obs-0-1409-b783d169bdbaa0e4",
+        "benchmark_id": "tomg-bench-v1-wacc",
+        "benchmark_version_id": "tomg-bench-v1-wacc-canonical",
+        "model_id": "model-llama-3-1-8b-instruct-d2b80773af59e627",
+        "model_configuration": "Llama-3.1-8B-Instruct",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama-3-1-8b-instruct",
+        "model_family_id": "meta-llama-3-1-8b-instruct",
+        "model": "Llama-3.1-8B-Instruct",
+        "organization": "Meta",
+        "score": 0.1409,
+        "input_score": 0.1409,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "tomg-bench-v1-wacc-metric-v1",
+        "protocol_id": "tomg-bench-v1-wacc-source-export-v1",
+        "task_set_id": "tomg-bench-v1-wacc-canonical",
+        "metric": "wAcc",
+        "score_role": "canonical",
+        "score_series_id": "tomg-bench-v1-wacc-canonical-score",
+        "evaluation_protocol": "Original TOMG-Bench v1 fixed 45,000-example test set and official weighted average accuracy; unweighted and S2 revisions excluded.",
+        "model_release_date": "2024-07-23",
+        "evaluation_date": null,
+        "result_public_date": "2024-12-19",
+        "source_publication_date": "2024-12-19",
+        "observation_date": "2024-07-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-07-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-12-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-07-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-07-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-12-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "source": "https://github.com/phenixace/tomg-bench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-tomg-llama31-d9e1a6f054a07a85"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "tomg-llama31"
+        ]
+      },
+      {
+        "observation_id": "obs-0-0015-824a8e9f8ac1c5e0",
+        "benchmark_id": "tomg-bench-v1-wacc",
+        "benchmark_version_id": "tomg-bench-v1-wacc-canonical",
+        "model_id": "model-qwen2-7b-instruct-f0252c1d8aa444c2",
+        "model_configuration": "Qwen2-7B-Instruct",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen2-7b-instruct",
+        "model_family_id": "qwen-qwen2-7b-instruct",
+        "model": "Qwen2-7B-Instruct",
+        "organization": "Qwen",
+        "score": 0.0015,
+        "input_score": 0.0015,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "tomg-bench-v1-wacc-metric-v1",
+        "protocol_id": "tomg-bench-v1-wacc-source-export-v1",
+        "task_set_id": "tomg-bench-v1-wacc-canonical",
+        "metric": "wAcc",
+        "score_role": "canonical",
+        "score_series_id": "tomg-bench-v1-wacc-canonical-score",
+        "evaluation_protocol": "Original TOMG-Bench v1 fixed 45,000-example test set and official weighted average accuracy; unweighted and S2 revisions excluded.",
+        "model_release_date": "2024-06-07",
+        "evaluation_date": null,
+        "result_public_date": "2024-12-19",
+        "source_publication_date": "2024-12-19",
+        "observation_date": "2024-06-07",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-12-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-06-07",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-06-07",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-12-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "source": "https://github.com/phenixace/tomg-bench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-tomg-qwen2-2c7e8a1aeccfda0a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "tomg-qwen2"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-3592-f4491e0b4708c623",
+        "benchmark_id": "tomg-bench-v1-wacc",
+        "benchmark_version_id": "tomg-bench-v1-wacc-canonical",
+        "model_id": "model-claude-3-5-sonnet-ca0330ced73b499d",
+        "model_configuration": "Claude-3.5-Sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet",
+        "model_family_id": "anthropic-claude-3-5-sonnet",
+        "model": "Claude-3.5-Sonnet",
+        "organization": "Anthropic",
+        "score": 0.3592,
+        "input_score": 0.3592,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "tomg-bench-v1-wacc-metric-v1",
+        "protocol_id": "tomg-bench-v1-wacc-source-export-v1",
+        "task_set_id": "tomg-bench-v1-wacc-canonical",
+        "metric": "wAcc",
+        "score_role": "canonical",
+        "score_series_id": "tomg-bench-v1-wacc-canonical-score",
+        "evaluation_protocol": "Original TOMG-Bench v1 fixed 45,000-example test set and official weighted average accuracy; unweighted and S2 revisions excluded.",
+        "model_release_date": "2024-06-20",
+        "evaluation_date": null,
+        "result_public_date": "2024-12-19",
+        "source_publication_date": "2024-12-19",
+        "observation_date": "2024-06-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-12-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-12-19",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-06-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-12-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "source": "https://github.com/phenixace/tomg-bench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-tomg-claude35-0cfaacb172d84458"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "tomg-claude35"
+        ],
+        "plot_date": "2024-12-19",
+        "frontier_observation_ids": [
+          "obs-0-0015-824a8e9f8ac1c5e0",
+          "obs-0-1409-b783d169bdbaa0e4",
+          "obs-0-1858-6f462cfe4149fa15",
+          "obs-0-2393-26843a5da39229a9",
+          "obs-0-3047-a743a11664e9d6b2",
+          "obs-0-3229-8ee94b3f79220dda",
+          "obs-0-3423-cc8d1b69f98396f2",
+          "obs-0-348-86a915ad120f97ea",
+          "obs-0-3592-f4491e0b4708c623"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-3592-f4491e0b4708c623",
+        "benchmark_id": "tomg-bench-v1-wacc",
+        "benchmark_version_id": "tomg-bench-v1-wacc-canonical",
+        "model_id": "model-claude-3-5-sonnet-ca0330ced73b499d",
+        "model_configuration": "Claude-3.5-Sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet",
+        "model_family_id": "anthropic-claude-3-5-sonnet",
+        "model": "Claude-3.5-Sonnet",
+        "organization": "Anthropic",
+        "score": 0.3592,
+        "input_score": 0.3592,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "tomg-bench-v1-wacc-metric-v1",
+        "protocol_id": "tomg-bench-v1-wacc-source-export-v1",
+        "task_set_id": "tomg-bench-v1-wacc-canonical",
+        "metric": "wAcc",
+        "score_role": "canonical",
+        "score_series_id": "tomg-bench-v1-wacc-canonical-score",
+        "evaluation_protocol": "Original TOMG-Bench v1 fixed 45,000-example test set and official weighted average accuracy; unweighted and S2 revisions excluded.",
+        "model_release_date": "2024-06-20",
+        "evaluation_date": null,
+        "result_public_date": "2024-12-19",
+        "source_publication_date": "2024-12-19",
+        "observation_date": "2024-06-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-12-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-12-19",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-06-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-12-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "source": "https://github.com/phenixace/tomg-bench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-tomg-claude35-0cfaacb172d84458"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "tomg-claude35"
+        ],
+        "plot_date": "2024-12-19",
+        "frontier_observation_ids": [
+          "obs-0-0015-824a8e9f8ac1c5e0",
+          "obs-0-1409-b783d169bdbaa0e4",
+          "obs-0-1858-6f462cfe4149fa15",
+          "obs-0-2393-26843a5da39229a9",
+          "obs-0-3047-a743a11664e9d6b2",
+          "obs-0-3229-8ee94b3f79220dda",
+          "obs-0-3423-cc8d1b69f98396f2",
+          "obs-0-348-86a915ad120f97ea",
+          "obs-0-3592-f4491e0b4708c623"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-3592-f4491e0b4708c623",
+        "benchmark_id": "tomg-bench-v1-wacc",
+        "benchmark_version_id": "tomg-bench-v1-wacc-canonical",
+        "model_id": "model-claude-3-5-sonnet-ca0330ced73b499d",
+        "model_configuration": "Claude-3.5-Sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet",
+        "model_family_id": "anthropic-claude-3-5-sonnet",
+        "model": "Claude-3.5-Sonnet",
+        "organization": "Anthropic",
+        "score": 0.3592,
+        "input_score": 0.3592,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "tomg-bench-v1-wacc-metric-v1",
+        "protocol_id": "tomg-bench-v1-wacc-source-export-v1",
+        "task_set_id": "tomg-bench-v1-wacc-canonical",
+        "metric": "wAcc",
+        "score_role": "canonical",
+        "score_series_id": "tomg-bench-v1-wacc-canonical-score",
+        "evaluation_protocol": "Original TOMG-Bench v1 fixed 45,000-example test set and official weighted average accuracy; unweighted and S2 revisions excluded.",
+        "model_release_date": "2024-06-20",
+        "evaluation_date": null,
+        "result_public_date": "2024-12-19",
+        "source_publication_date": "2024-12-19",
+        "observation_date": "2024-06-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-12-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-12-19",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-06-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-12-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "source": "https://github.com/phenixace/tomg-bench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-tomg-claude35-0cfaacb172d84458"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "tomg-claude35"
+        ],
+        "plot_date": "2024-12-19",
+        "frontier_observation_ids": [
+          "obs-0-0015-824a8e9f8ac1c5e0",
+          "obs-0-1409-b783d169bdbaa0e4",
+          "obs-0-1858-6f462cfe4149fa15",
+          "obs-0-2393-26843a5da39229a9",
+          "obs-0-3047-a743a11664e9d6b2",
+          "obs-0-3229-8ee94b3f79220dda",
+          "obs-0-3423-cc8d1b69f98396f2",
+          "obs-0-348-86a915ad120f97ea",
+          "obs-0-3592-f4491e0b4708c623"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-3592-f4491e0b4708c623",
+        "benchmark_id": "tomg-bench-v1-wacc",
+        "benchmark_version_id": "tomg-bench-v1-wacc-canonical",
+        "model_id": "model-claude-3-5-sonnet-ca0330ced73b499d",
+        "model_configuration": "Claude-3.5-Sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet",
+        "model_family_id": "anthropic-claude-3-5-sonnet",
+        "model": "Claude-3.5-Sonnet",
+        "organization": "Anthropic",
+        "score": 0.3592,
+        "input_score": 0.3592,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "tomg-bench-v1-wacc-metric-v1",
+        "protocol_id": "tomg-bench-v1-wacc-source-export-v1",
+        "task_set_id": "tomg-bench-v1-wacc-canonical",
+        "metric": "wAcc",
+        "score_role": "canonical",
+        "score_series_id": "tomg-bench-v1-wacc-canonical-score",
+        "evaluation_protocol": "Original TOMG-Bench v1 fixed 45,000-example test set and official weighted average accuracy; unweighted and S2 revisions excluded.",
+        "model_release_date": "2024-06-20",
+        "evaluation_date": null,
+        "result_public_date": "2024-12-19",
+        "source_publication_date": "2024-12-19",
+        "observation_date": "2024-06-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-12-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-12-19",
+        "date_kind": "result first-public date",
+        "capability_date": "2024-06-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-12-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "source": "https://github.com/phenixace/tomg-bench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-tomg-claude35-0cfaacb172d84458"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "tomg-claude35"
+        ],
+        "plot_date": "2024-12-19",
+        "frontier_observation_ids": [
+          "obs-0-0015-824a8e9f8ac1c5e0",
+          "obs-0-1409-b783d169bdbaa0e4",
+          "obs-0-1858-6f462cfe4149fa15",
+          "obs-0-2393-26843a5da39229a9",
+          "obs-0-3047-a743a11664e9d6b2",
+          "obs-0-3229-8ee94b3f79220dda",
+          "obs-0-3423-cc8d1b69f98396f2",
+          "obs-0-348-86a915ad120f97ea",
+          "obs-0-3592-f4491e0b4708c623"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-3592-f4491e0b4708c623",
+        "benchmark_id": "tomg-bench-v1-wacc",
+        "benchmark_version_id": "tomg-bench-v1-wacc-canonical",
+        "model_id": "model-claude-3-5-sonnet-ca0330ced73b499d",
+        "model_configuration": "Claude-3.5-Sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet",
+        "model_family_id": "anthropic-claude-3-5-sonnet",
+        "model": "Claude-3.5-Sonnet",
+        "organization": "Anthropic",
+        "score": 0.3592,
+        "input_score": 0.3592,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "tomg-bench-v1-wacc-metric-v1",
+        "protocol_id": "tomg-bench-v1-wacc-source-export-v1",
+        "task_set_id": "tomg-bench-v1-wacc-canonical",
+        "metric": "wAcc",
+        "score_role": "canonical",
+        "score_series_id": "tomg-bench-v1-wacc-canonical-score",
+        "evaluation_protocol": "Original TOMG-Bench v1 fixed 45,000-example test set and official weighted average accuracy; unweighted and S2 revisions excluded.",
+        "model_release_date": "2024-06-20",
+        "evaluation_date": null,
+        "result_public_date": "2024-12-19",
+        "source_publication_date": "2024-12-19",
+        "observation_date": "2024-06-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-12-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-12-19",
+        "date_kind": "result first-public date",
+        "capability_date": "2024-06-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-12-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+        ],
+        "source": "https://github.com/phenixace/tomg-bench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-tomg-claude35-0cfaacb172d84458"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "tomg-claude35"
+        ],
+        "plot_date": "2024-12-19",
+        "frontier_observation_ids": [
+          "obs-0-0015-824a8e9f8ac1c5e0",
+          "obs-0-1409-b783d169bdbaa0e4",
+          "obs-0-1858-6f462cfe4149fa15",
+          "obs-0-2393-26843a5da39229a9",
+          "obs-0-3047-a743a11664e9d6b2",
+          "obs-0-3229-8ee94b3f79220dda",
+          "obs-0-3423-cc8d1b69f98396f2",
+          "obs-0-348-86a915ad120f97ea",
+          "obs-0-3592-f4491e0b4708c623"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.3592,
+    "capability_frontier_value": 0.3592,
+    "reported_frontier_value": 0.3592,
+    "current_frontier": 0.3592,
+    "normalized_progress": 0.3592,
+    "normalized_headroom": 0.6408,
+    "threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 626
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 626
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 626
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 626
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 626
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 626
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 626
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 626
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 626
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.7142857142857143,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "Qwen",
+        "Meta"
+      ],
+      "panel_size": 7,
+      "status": "high"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-github-com-phenixace-tomg-bench-5a91ed96ba7a724b"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": true,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": true,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

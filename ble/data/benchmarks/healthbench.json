@@ -1,0 +1,678 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "healthbench",
+    "name": "HealthBench",
+    "domain": "Health",
+    "release": "2025-05-12",
+    "source": "https://openai.com/index/healthbench/",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Model",
+    "tags": [
+      "medical",
+      "physician rubric",
+      "safety"
+    ],
+    "metric": "Score",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "healthbench-metric-v1",
+    "protocol_id": "healthbench-source-export-v1",
+    "canonical_score": {
+      "series_id": "healthbench-canonical-score",
+      "role": "canonical",
+      "metric_id": "healthbench-metric-v1",
+      "metric_name": "Score",
+      "protocol_id": "healthbench-source-export-v1",
+      "task_set_id": "healthbench-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "healthbench-canonical",
+    "summary": {
+      "en": "HealthBench tests whether models give useful and safe answers in realistic health conversations judged against physician-written criteria.",
+      "zh": "HealthBench \u6d4b\u8bd5\u6a21\u578b\u80fd\u4e0d\u80fd\u5728\u771f\u5b9e\u5065\u5eb7\u5bf9\u8bdd\u4e2d\u7ed9\u51fa\u6709\u7528\u3001\u5b89\u5168\u7684\u56de\u7b54\uff0c\u5e76\u6309\u7167\u533b\u751f\u5199\u7684\u6807\u51c6\u8fdb\u884c\u8bc4\u5206\u3002"
+    },
+    "task_format": {
+      "en": "The model receives a multi-turn conversation between a person and a health assistant, then writes the best response to the user's last message.",
+      "zh": "\u6a21\u578b\u4f1a\u6536\u5230\u4e00\u6bb5\u7528\u6237\u548c health assistant \u7684\u591a\u8f6e\u5bf9\u8bdd\uff0c\u7136\u540e\u56de\u7b54\u7528\u6237\u6700\u540e\u4e00\u6761\u6d88\u606f\u3002"
+    },
+    "scoring": {
+      "metric_name": "Physician-rubric score",
+      "explanation": {
+        "en": "A model-based grader checks physician-written criteria for each conversation. The score is the weighted proportion of criteria the response satisfies.",
+        "zh": "model-based grader \u4f1a\u68c0\u67e5\u6bcf\u6bb5\u5bf9\u8bdd\u5bf9\u5e94\u7684\u533b\u751f\u6807\u51c6\u3002\u5206\u6570\u662f\u56de\u7b54\u6ee1\u8db3\u8fd9\u4e9b\u6807\u51c6\u7684\u52a0\u6743\u6bd4\u4f8b\u3002"
+      }
+    },
+    "evaluation_target": "process_and_output",
+    "observation_count": 3,
+    "evidence_record_count": 3,
+    "observations": [
+      {
+        "observation_id": "obs-0-16-b9f66d7cf4c9c6ce",
+        "benchmark_id": "healthbench",
+        "benchmark_version_id": "healthbench-canonical",
+        "model_id": "model-gpt-3-5-turbo-130d6c1b27b8d572",
+        "model_configuration": "gpt-3-5-turbo",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-3-5-turbo",
+        "model_family_id": "openai-gpt-3-5-turbo",
+        "model": "GPT-3.5 Turbo",
+        "organization": "OpenAI",
+        "score": 0.16,
+        "input_score": 0.16,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "healthbench-metric-v1",
+        "protocol_id": "healthbench-source-export-v1",
+        "task_set_id": "healthbench-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "healthbench-canonical-score",
+        "evaluation_protocol": "HealthBench overall score; HealthBench Consensus and HealthBench Hard are separate variants and are not merged.",
+        "model_release_date": "2022-11-30",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2022-11-30",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2022-11-30",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-08775-250553189e090cd7"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-08775-250553189e090cd7"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2022-11-30",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2022-11-30",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-08775-250553189e090cd7",
+          "resource-https-openai-com-index-healthbench-eba97d45c48b70ff"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-08775-250553189e090cd7"
+        ],
+        "source": "https://arxiv.org/abs/2505.08775",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-model-version-gpt-3-5-turbo-name-gpt-3-5-turbo-n-d5f72b6c8f71e6f4"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-32-31e7d5050124a7f6",
+        "benchmark_id": "healthbench",
+        "benchmark_version_id": "healthbench-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "gpt-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.32,
+        "input_score": 0.32,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "healthbench-metric-v1",
+        "protocol_id": "healthbench-source-export-v1",
+        "task_set_id": "healthbench-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "healthbench-canonical-score",
+        "evaluation_protocol": "HealthBench overall score; HealthBench Consensus and HealthBench Hard are separate variants and are not merged.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-08775-250553189e090cd7"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-08775-250553189e090cd7"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-05-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-08775-250553189e090cd7",
+          "resource-https-openai-com-index-healthbench-eba97d45c48b70ff"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-08775-250553189e090cd7"
+        ],
+        "source": "https://arxiv.org/abs/2505.08775",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-model-version-gpt-4o-name-gpt-4o-notes-healthben-be80e491b27c6e16"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-6-5e1b5b755269604c",
+        "benchmark_id": "healthbench",
+        "benchmark_version_id": "healthbench-canonical",
+        "model_id": "model-o3-7ac6ae4921cdbada",
+        "model_configuration": "o3",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3",
+        "model_family_id": "openai-o3",
+        "model": "o3",
+        "organization": "OpenAI",
+        "score": 0.6,
+        "input_score": 0.6,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "healthbench-metric-v1",
+        "protocol_id": "healthbench-source-export-v1",
+        "task_set_id": "healthbench-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "healthbench-canonical-score",
+        "evaluation_protocol": "HealthBench overall score; HealthBench Consensus and HealthBench Hard are separate variants and are not merged.",
+        "model_release_date": "2025-04-16",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-08775-250553189e090cd7"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-08775-250553189e090cd7"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-04-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-08775-250553189e090cd7",
+          "resource-https-openai-com-index-healthbench-eba97d45c48b70ff"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-08775-250553189e090cd7"
+        ],
+        "source": "https://arxiv.org/abs/2505.08775",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-model-version-o3-name-o3-notes-healthbench-overa-6da8e5a8c68f5b1e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-6-5e1b5b755269604c",
+        "benchmark_id": "healthbench",
+        "benchmark_version_id": "healthbench-canonical",
+        "model_id": "model-o3-7ac6ae4921cdbada",
+        "model_configuration": "o3",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3",
+        "model_family_id": "openai-o3",
+        "model": "o3",
+        "organization": "OpenAI",
+        "score": 0.6,
+        "input_score": 0.6,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "healthbench-metric-v1",
+        "protocol_id": "healthbench-source-export-v1",
+        "task_set_id": "healthbench-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "healthbench-canonical-score",
+        "evaluation_protocol": "HealthBench overall score; HealthBench Consensus and HealthBench Hard are separate variants and are not merged.",
+        "model_release_date": "2025-04-16",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-08775-250553189e090cd7"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-08775-250553189e090cd7"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-05-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-08775-250553189e090cd7",
+          "resource-https-openai-com-index-healthbench-eba97d45c48b70ff"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-08775-250553189e090cd7"
+        ],
+        "source": "https://arxiv.org/abs/2505.08775",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-model-version-o3-name-o3-notes-healthbench-overa-6da8e5a8c68f5b1e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-05-12",
+        "frontier_observation_ids": [
+          "obs-0-16-b9f66d7cf4c9c6ce",
+          "obs-0-32-31e7d5050124a7f6",
+          "obs-0-6-5e1b5b755269604c"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-6-5e1b5b755269604c",
+        "benchmark_id": "healthbench",
+        "benchmark_version_id": "healthbench-canonical",
+        "model_id": "model-o3-7ac6ae4921cdbada",
+        "model_configuration": "o3",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3",
+        "model_family_id": "openai-o3",
+        "model": "o3",
+        "organization": "OpenAI",
+        "score": 0.6,
+        "input_score": 0.6,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "healthbench-metric-v1",
+        "protocol_id": "healthbench-source-export-v1",
+        "task_set_id": "healthbench-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "healthbench-canonical-score",
+        "evaluation_protocol": "HealthBench overall score; HealthBench Consensus and HealthBench Hard are separate variants and are not merged.",
+        "model_release_date": "2025-04-16",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-08775-250553189e090cd7"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-08775-250553189e090cd7"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-05-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-08775-250553189e090cd7",
+          "resource-https-openai-com-index-healthbench-eba97d45c48b70ff"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-08775-250553189e090cd7"
+        ],
+        "source": "https://arxiv.org/abs/2505.08775",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-model-version-o3-name-o3-notes-healthbench-overa-6da8e5a8c68f5b1e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-05-12",
+        "frontier_observation_ids": [
+          "obs-0-16-b9f66d7cf4c9c6ce",
+          "obs-0-32-31e7d5050124a7f6",
+          "obs-0-6-5e1b5b755269604c"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-6-5e1b5b755269604c",
+        "benchmark_id": "healthbench",
+        "benchmark_version_id": "healthbench-canonical",
+        "model_id": "model-o3-7ac6ae4921cdbada",
+        "model_configuration": "o3",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3",
+        "model_family_id": "openai-o3",
+        "model": "o3",
+        "organization": "OpenAI",
+        "score": 0.6,
+        "input_score": 0.6,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "healthbench-metric-v1",
+        "protocol_id": "healthbench-source-export-v1",
+        "task_set_id": "healthbench-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "healthbench-canonical-score",
+        "evaluation_protocol": "HealthBench overall score; HealthBench Consensus and HealthBench Hard are separate variants and are not merged.",
+        "model_release_date": "2025-04-16",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-08775-250553189e090cd7"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-08775-250553189e090cd7"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-05-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-08775-250553189e090cd7",
+          "resource-https-openai-com-index-healthbench-eba97d45c48b70ff"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-08775-250553189e090cd7"
+        ],
+        "source": "https://arxiv.org/abs/2505.08775",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-model-version-o3-name-o3-notes-healthbench-overa-6da8e5a8c68f5b1e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-05-12",
+        "frontier_observation_ids": [
+          "obs-0-16-b9f66d7cf4c9c6ce",
+          "obs-0-32-31e7d5050124a7f6",
+          "obs-0-6-5e1b5b755269604c"
+        ]
+      }
+    ],
+    "reported_frontier": [],
+    "historical_frontier": [],
+    "retrospective_observations": [],
+    "observed_frontier": 0.6,
+    "capability_frontier_value": 0.6,
+    "reported_frontier_value": null,
+    "current_frontier": 0.6,
+    "normalized_progress": 0.6,
+    "normalized_headroom": 0.4,
+    "threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2025-05-12"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 482
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 482
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2025-05-12"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 482
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 482
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T80": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T90": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.14285714285714285,
+      "represented_organizations": [
+        "OpenAI"
+      ],
+      "panel_size": 7,
+      "status": "low"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-openai-com-index-healthbench-eba97d45c48b70ff"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "unknown_public_dates",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

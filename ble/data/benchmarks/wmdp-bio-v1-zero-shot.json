@@ -1,0 +1,1937 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "wmdp-bio-v1-zero-shot",
+    "name": "WMDP-Bio v1 \u2014 Zero-shot",
+    "domain": "Life Science",
+    "release": "2024-03-05",
+    "source": "https://www.wmdp.ai/",
+    "floor": 0.25,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.25,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Model",
+    "tags": [
+      "biosecurity",
+      "multiple-choice",
+      "knowledge"
+    ],
+    "metric": "Accuracy",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "wmdp-bio-v1-zero-shot-metric-v1",
+    "protocol_id": "wmdp-bio-v1-zero-shot-source-export-v1",
+    "canonical_score": {
+      "series_id": "wmdp-bio-v1-zero-shot-canonical-score",
+      "role": "canonical",
+      "metric_id": "wmdp-bio-v1-zero-shot-metric-v1",
+      "metric_name": "Accuracy",
+      "protocol_id": "wmdp-bio-v1-zero-shot-source-export-v1",
+      "task_set_id": "wmdp-bio-v1-zero-shot-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.25,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "wmdp-bio-v1-zero-shot-canonical",
+    "summary": {
+      "en": "WMDP-Bio evaluates biosecurity-relevant biological knowledge.",
+      "zh": "WMDP-Bio \u8bc4\u4f30\u4e0e\u751f\u7269\u5b89\u5168\u76f8\u5173\u7684\u751f\u7269\u5b66\u77e5\u8bc6\u3002"
+    },
+    "task_format": {
+      "en": "Answer 1,273 four-choice questions on virology, biological agents, laboratory methods, and precursor knowledge.",
+      "zh": "\u56de\u7b54 1,273 \u9053\u6d89\u53ca\u75c5\u6bd2\u5b66\u3001\u751f\u7269\u56e0\u5b50\u3001\u5b9e\u9a8c\u65b9\u6cd5\u548c\u524d\u7f6e\u77e5\u8bc6\u7684\u56db\u9009\u4e00\u9898\u3002"
+    },
+    "scoring": {
+      "metric_name": "Mean exact-choice accuracy",
+      "explanation": {
+        "en": "Exact accuracy over the fixed WMDP-Bio v1 subset, averaged across ten zero-shot runs.",
+        "zh": "\u56fa\u5b9a WMDP-Bio v1 subset \u7684\u7cbe\u786e\u9009\u62e9\u51c6\u786e\u7387\uff0c\u53d6\u5341\u6b21 zero-shot \u8fd0\u884c\u5747\u503c\u3002"
+      }
+    },
+    "evaluation_target": "final_output",
+    "observation_count": 6,
+    "evidence_record_count": 6,
+    "observations": [
+      {
+        "observation_id": "obs-0-834-72c4c127b7a9e452",
+        "benchmark_id": "wmdp-bio-v1-zero-shot",
+        "benchmark_version_id": "wmdp-bio-v1-zero-shot-canonical",
+        "model_id": "model-claude-3-5-sonnet-20241022-64e890320834f2ae",
+        "model_configuration": "Claude-3.5-Sonnet-20241022",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet-20241022",
+        "model_family_id": "anthropic-claude-3-5-sonnet-20241022",
+        "model": "Claude-3.5-Sonnet-20241022",
+        "organization": "Anthropic",
+        "score": 0.834,
+        "input_score": 0.834,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "wmdp-bio-v1-zero-shot-metric-v1",
+        "protocol_id": "wmdp-bio-v1-zero-shot-source-export-v1",
+        "task_set_id": "wmdp-bio-v1-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "wmdp-bio-v1-zero-shot-canonical-score",
+        "evaluation_protocol": "Original WMDP-Bio v1 1,273-question subset, Inspect AI zero-shot, ten runs; chemistry, cyber, unlearning and adversarial protocols excluded.",
+        "model_release_date": "2024-10-22",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2024-10-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-10-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-10-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-10-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-www-wmdp-ai-cfa49cff8bb3ac32"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-wmdpbio-claude35-a523c39c69f54652"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "wmdpbio-claude35"
+        ]
+      },
+      {
+        "observation_id": "obs-0-85-c1652cc7f1d6276b",
+        "benchmark_id": "wmdp-bio-v1-zero-shot",
+        "benchmark_version_id": "wmdp-bio-v1-zero-shot-canonical",
+        "model_id": "model-grok-2-1212-b11e111c7ff8b085",
+        "model_configuration": "Grok-2-1212",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-2-1212",
+        "model_family_id": "xai-grok-2-1212",
+        "model": "Grok-2-1212",
+        "organization": "xAI",
+        "score": 0.85,
+        "input_score": 0.85,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "wmdp-bio-v1-zero-shot-metric-v1",
+        "protocol_id": "wmdp-bio-v1-zero-shot-source-export-v1",
+        "task_set_id": "wmdp-bio-v1-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "wmdp-bio-v1-zero-shot-canonical-score",
+        "evaluation_protocol": "Original WMDP-Bio v1 1,273-question subset, Inspect AI zero-shot, ten runs; chemistry, cyber, unlearning and adversarial protocols excluded.",
+        "model_release_date": "2024-12-12",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2024-12-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-12-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-www-wmdp-ai-cfa49cff8bb3ac32"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-wmdpbio-grok2-dcd8adadf71fd5ab"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "wmdpbio-grok2"
+        ]
+      },
+      {
+        "observation_id": "obs-0-844-d7459014d61cbc35",
+        "benchmark_id": "wmdp-bio-v1-zero-shot",
+        "benchmark_version_id": "wmdp-bio-v1-zero-shot-canonical",
+        "model_id": "model-deepseek-v3-44b935d802b0efaa",
+        "model_configuration": "DeepSeek-V3",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-v3",
+        "model_family_id": "deepseek-deepseek-v3",
+        "model": "DeepSeek-V3",
+        "organization": "DeepSeek",
+        "score": 0.844,
+        "input_score": 0.844,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "wmdp-bio-v1-zero-shot-metric-v1",
+        "protocol_id": "wmdp-bio-v1-zero-shot-source-export-v1",
+        "task_set_id": "wmdp-bio-v1-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "wmdp-bio-v1-zero-shot-canonical-score",
+        "evaluation_protocol": "Original WMDP-Bio v1 1,273-question subset, Inspect AI zero-shot, ten runs; chemistry, cyber, unlearning and adversarial protocols excluded.",
+        "model_release_date": "2024-12-26",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2024-12-26",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-26",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-12-26",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-26",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-www-wmdp-ai-cfa49cff8bb3ac32"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-wmdpbio-deepseekv3-e77fd0db5ba11b80"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "wmdpbio-deepseekv3"
+        ]
+      },
+      {
+        "observation_id": "obs-0-853-286d0cd7c87ff72d",
+        "benchmark_id": "wmdp-bio-v1-zero-shot",
+        "benchmark_version_id": "wmdp-bio-v1-zero-shot-canonical",
+        "model_id": "model-o3-mini-medium-3121d5000ac640f2",
+        "model_configuration": "o3-mini-medium",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-mini-medium",
+        "model_family_id": "openai-o3-mini-medium",
+        "model": "o3-mini-medium",
+        "organization": "OpenAI",
+        "score": 0.853,
+        "input_score": 0.853,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "wmdp-bio-v1-zero-shot-metric-v1",
+        "protocol_id": "wmdp-bio-v1-zero-shot-source-export-v1",
+        "task_set_id": "wmdp-bio-v1-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "wmdp-bio-v1-zero-shot-canonical-score",
+        "evaluation_protocol": "Original WMDP-Bio v1 1,273-question subset, Inspect AI zero-shot, ten runs; chemistry, cyber, unlearning and adversarial protocols excluded.",
+        "model_release_date": "2025-01-31",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2025-01-31",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-31",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-01-31",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-31",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-www-wmdp-ai-cfa49cff8bb3ac32"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-wmdpbio-o3mini-de94aa6ab0d8eb1a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "wmdpbio-o3mini"
+        ]
+      },
+      {
+        "observation_id": "obs-0-85-426d04c78c96455a",
+        "benchmark_id": "wmdp-bio-v1-zero-shot",
+        "benchmark_version_id": "wmdp-bio-v1-zero-shot-canonical",
+        "model_id": "model-gemini-2-0-pro-experimental-e1a54957bc3a982f",
+        "model_configuration": "Gemini-2.0-Pro-Experimental",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-0-pro-experimental",
+        "model_family_id": "google-gemini-2-0-pro-experimental",
+        "model": "Gemini-2.0-Pro-Experimental",
+        "organization": "Google",
+        "score": 0.85,
+        "input_score": 0.85,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "wmdp-bio-v1-zero-shot-metric-v1",
+        "protocol_id": "wmdp-bio-v1-zero-shot-source-export-v1",
+        "task_set_id": "wmdp-bio-v1-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "wmdp-bio-v1-zero-shot-canonical-score",
+        "evaluation_protocol": "Original WMDP-Bio v1 1,273-question subset, Inspect AI zero-shot, ten runs; chemistry, cyber, unlearning and adversarial protocols excluded.",
+        "model_release_date": "2025-02-05",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2025-02-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-02-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-www-wmdp-ai-cfa49cff8bb3ac32"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-wmdpbio-gemini20pro-c0667deb29b36382"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "wmdpbio-gemini20pro"
+        ]
+      },
+      {
+        "observation_id": "obs-0-86-b1b2cf41388d1a73",
+        "benchmark_id": "wmdp-bio-v1-zero-shot",
+        "benchmark_version_id": "wmdp-bio-v1-zero-shot-canonical",
+        "model_id": "model-llama-4-maverick-9cc7b902981846cb",
+        "model_configuration": "Llama-4-Maverick",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama-4-maverick",
+        "model_family_id": "meta-llama-4-maverick",
+        "model": "Llama-4-Maverick",
+        "organization": "Meta",
+        "score": 0.86,
+        "input_score": 0.86,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "wmdp-bio-v1-zero-shot-metric-v1",
+        "protocol_id": "wmdp-bio-v1-zero-shot-source-export-v1",
+        "task_set_id": "wmdp-bio-v1-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "wmdp-bio-v1-zero-shot-canonical-score",
+        "evaluation_protocol": "Original WMDP-Bio v1 1,273-question subset, Inspect AI zero-shot, ten runs; chemistry, cyber, unlearning and adversarial protocols excluded.",
+        "model_release_date": "2025-04-05",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2025-04-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-04-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-www-wmdp-ai-cfa49cff8bb3ac32"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-wmdpbio-llama4-a53b7384d63ff63a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "wmdpbio-llama4"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-834-72c4c127b7a9e452",
+        "benchmark_id": "wmdp-bio-v1-zero-shot",
+        "benchmark_version_id": "wmdp-bio-v1-zero-shot-canonical",
+        "model_id": "model-claude-3-5-sonnet-20241022-64e890320834f2ae",
+        "model_configuration": "Claude-3.5-Sonnet-20241022",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet-20241022",
+        "model_family_id": "anthropic-claude-3-5-sonnet-20241022",
+        "model": "Claude-3.5-Sonnet-20241022",
+        "organization": "Anthropic",
+        "score": 0.834,
+        "input_score": 0.834,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "wmdp-bio-v1-zero-shot-metric-v1",
+        "protocol_id": "wmdp-bio-v1-zero-shot-source-export-v1",
+        "task_set_id": "wmdp-bio-v1-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "wmdp-bio-v1-zero-shot-canonical-score",
+        "evaluation_protocol": "Original WMDP-Bio v1 1,273-question subset, Inspect AI zero-shot, ten runs; chemistry, cyber, unlearning and adversarial protocols excluded.",
+        "model_release_date": "2024-10-22",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2024-10-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-10-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-10-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-10-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-www-wmdp-ai-cfa49cff8bb3ac32"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-wmdpbio-claude35-a523c39c69f54652"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "wmdpbio-claude35"
+        ],
+        "plot_date": "2024-10-22",
+        "frontier_observation_ids": [
+          "obs-0-834-72c4c127b7a9e452"
+        ]
+      },
+      {
+        "observation_id": "obs-0-85-c1652cc7f1d6276b",
+        "benchmark_id": "wmdp-bio-v1-zero-shot",
+        "benchmark_version_id": "wmdp-bio-v1-zero-shot-canonical",
+        "model_id": "model-grok-2-1212-b11e111c7ff8b085",
+        "model_configuration": "Grok-2-1212",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-2-1212",
+        "model_family_id": "xai-grok-2-1212",
+        "model": "Grok-2-1212",
+        "organization": "xAI",
+        "score": 0.85,
+        "input_score": 0.85,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "wmdp-bio-v1-zero-shot-metric-v1",
+        "protocol_id": "wmdp-bio-v1-zero-shot-source-export-v1",
+        "task_set_id": "wmdp-bio-v1-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "wmdp-bio-v1-zero-shot-canonical-score",
+        "evaluation_protocol": "Original WMDP-Bio v1 1,273-question subset, Inspect AI zero-shot, ten runs; chemistry, cyber, unlearning and adversarial protocols excluded.",
+        "model_release_date": "2024-12-12",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2024-12-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-12-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-www-wmdp-ai-cfa49cff8bb3ac32"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-wmdpbio-grok2-dcd8adadf71fd5ab"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "wmdpbio-grok2"
+        ],
+        "plot_date": "2024-12-12",
+        "frontier_observation_ids": [
+          "obs-0-85-c1652cc7f1d6276b"
+        ]
+      },
+      {
+        "observation_id": "obs-0-853-286d0cd7c87ff72d",
+        "benchmark_id": "wmdp-bio-v1-zero-shot",
+        "benchmark_version_id": "wmdp-bio-v1-zero-shot-canonical",
+        "model_id": "model-o3-mini-medium-3121d5000ac640f2",
+        "model_configuration": "o3-mini-medium",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-mini-medium",
+        "model_family_id": "openai-o3-mini-medium",
+        "model": "o3-mini-medium",
+        "organization": "OpenAI",
+        "score": 0.853,
+        "input_score": 0.853,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "wmdp-bio-v1-zero-shot-metric-v1",
+        "protocol_id": "wmdp-bio-v1-zero-shot-source-export-v1",
+        "task_set_id": "wmdp-bio-v1-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "wmdp-bio-v1-zero-shot-canonical-score",
+        "evaluation_protocol": "Original WMDP-Bio v1 1,273-question subset, Inspect AI zero-shot, ten runs; chemistry, cyber, unlearning and adversarial protocols excluded.",
+        "model_release_date": "2025-01-31",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2025-01-31",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-31",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-01-31",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-31",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-www-wmdp-ai-cfa49cff8bb3ac32"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-wmdpbio-o3mini-de94aa6ab0d8eb1a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "wmdpbio-o3mini"
+        ],
+        "plot_date": "2025-01-31",
+        "frontier_observation_ids": [
+          "obs-0-853-286d0cd7c87ff72d"
+        ]
+      },
+      {
+        "observation_id": "obs-0-86-b1b2cf41388d1a73",
+        "benchmark_id": "wmdp-bio-v1-zero-shot",
+        "benchmark_version_id": "wmdp-bio-v1-zero-shot-canonical",
+        "model_id": "model-llama-4-maverick-9cc7b902981846cb",
+        "model_configuration": "Llama-4-Maverick",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama-4-maverick",
+        "model_family_id": "meta-llama-4-maverick",
+        "model": "Llama-4-Maverick",
+        "organization": "Meta",
+        "score": 0.86,
+        "input_score": 0.86,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "wmdp-bio-v1-zero-shot-metric-v1",
+        "protocol_id": "wmdp-bio-v1-zero-shot-source-export-v1",
+        "task_set_id": "wmdp-bio-v1-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "wmdp-bio-v1-zero-shot-canonical-score",
+        "evaluation_protocol": "Original WMDP-Bio v1 1,273-question subset, Inspect AI zero-shot, ten runs; chemistry, cyber, unlearning and adversarial protocols excluded.",
+        "model_release_date": "2025-04-05",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2025-04-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-04-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-www-wmdp-ai-cfa49cff8bb3ac32"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-wmdpbio-llama4-a53b7384d63ff63a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "wmdpbio-llama4"
+        ],
+        "plot_date": "2025-04-05",
+        "frontier_observation_ids": [
+          "obs-0-86-b1b2cf41388d1a73"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-834-72c4c127b7a9e452",
+        "benchmark_id": "wmdp-bio-v1-zero-shot",
+        "benchmark_version_id": "wmdp-bio-v1-zero-shot-canonical",
+        "model_id": "model-claude-3-5-sonnet-20241022-64e890320834f2ae",
+        "model_configuration": "Claude-3.5-Sonnet-20241022",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet-20241022",
+        "model_family_id": "anthropic-claude-3-5-sonnet-20241022",
+        "model": "Claude-3.5-Sonnet-20241022",
+        "organization": "Anthropic",
+        "score": 0.834,
+        "input_score": 0.834,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "wmdp-bio-v1-zero-shot-metric-v1",
+        "protocol_id": "wmdp-bio-v1-zero-shot-source-export-v1",
+        "task_set_id": "wmdp-bio-v1-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "wmdp-bio-v1-zero-shot-canonical-score",
+        "evaluation_protocol": "Original WMDP-Bio v1 1,273-question subset, Inspect AI zero-shot, ten runs; chemistry, cyber, unlearning and adversarial protocols excluded.",
+        "model_release_date": "2024-10-22",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2024-10-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-10-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-10-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-10-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-www-wmdp-ai-cfa49cff8bb3ac32"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-wmdpbio-claude35-a523c39c69f54652"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "wmdpbio-claude35"
+        ],
+        "plot_date": "2024-10-22",
+        "frontier_observation_ids": [
+          "obs-0-834-72c4c127b7a9e452"
+        ]
+      },
+      {
+        "observation_id": "obs-0-85-c1652cc7f1d6276b",
+        "benchmark_id": "wmdp-bio-v1-zero-shot",
+        "benchmark_version_id": "wmdp-bio-v1-zero-shot-canonical",
+        "model_id": "model-grok-2-1212-b11e111c7ff8b085",
+        "model_configuration": "Grok-2-1212",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-2-1212",
+        "model_family_id": "xai-grok-2-1212",
+        "model": "Grok-2-1212",
+        "organization": "xAI",
+        "score": 0.85,
+        "input_score": 0.85,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "wmdp-bio-v1-zero-shot-metric-v1",
+        "protocol_id": "wmdp-bio-v1-zero-shot-source-export-v1",
+        "task_set_id": "wmdp-bio-v1-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "wmdp-bio-v1-zero-shot-canonical-score",
+        "evaluation_protocol": "Original WMDP-Bio v1 1,273-question subset, Inspect AI zero-shot, ten runs; chemistry, cyber, unlearning and adversarial protocols excluded.",
+        "model_release_date": "2024-12-12",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2024-12-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-12-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-www-wmdp-ai-cfa49cff8bb3ac32"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-wmdpbio-grok2-dcd8adadf71fd5ab"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "wmdpbio-grok2"
+        ],
+        "plot_date": "2024-12-12",
+        "frontier_observation_ids": [
+          "obs-0-85-c1652cc7f1d6276b"
+        ]
+      },
+      {
+        "observation_id": "obs-0-853-286d0cd7c87ff72d",
+        "benchmark_id": "wmdp-bio-v1-zero-shot",
+        "benchmark_version_id": "wmdp-bio-v1-zero-shot-canonical",
+        "model_id": "model-o3-mini-medium-3121d5000ac640f2",
+        "model_configuration": "o3-mini-medium",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-mini-medium",
+        "model_family_id": "openai-o3-mini-medium",
+        "model": "o3-mini-medium",
+        "organization": "OpenAI",
+        "score": 0.853,
+        "input_score": 0.853,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "wmdp-bio-v1-zero-shot-metric-v1",
+        "protocol_id": "wmdp-bio-v1-zero-shot-source-export-v1",
+        "task_set_id": "wmdp-bio-v1-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "wmdp-bio-v1-zero-shot-canonical-score",
+        "evaluation_protocol": "Original WMDP-Bio v1 1,273-question subset, Inspect AI zero-shot, ten runs; chemistry, cyber, unlearning and adversarial protocols excluded.",
+        "model_release_date": "2025-01-31",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2025-01-31",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-31",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-01-31",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-31",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-www-wmdp-ai-cfa49cff8bb3ac32"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-wmdpbio-o3mini-de94aa6ab0d8eb1a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "wmdpbio-o3mini"
+        ],
+        "plot_date": "2025-01-31",
+        "frontier_observation_ids": [
+          "obs-0-853-286d0cd7c87ff72d"
+        ]
+      },
+      {
+        "observation_id": "obs-0-86-b1b2cf41388d1a73",
+        "benchmark_id": "wmdp-bio-v1-zero-shot",
+        "benchmark_version_id": "wmdp-bio-v1-zero-shot-canonical",
+        "model_id": "model-llama-4-maverick-9cc7b902981846cb",
+        "model_configuration": "Llama-4-Maverick",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama-4-maverick",
+        "model_family_id": "meta-llama-4-maverick",
+        "model": "Llama-4-Maverick",
+        "organization": "Meta",
+        "score": 0.86,
+        "input_score": 0.86,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "wmdp-bio-v1-zero-shot-metric-v1",
+        "protocol_id": "wmdp-bio-v1-zero-shot-source-export-v1",
+        "task_set_id": "wmdp-bio-v1-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "wmdp-bio-v1-zero-shot-canonical-score",
+        "evaluation_protocol": "Original WMDP-Bio v1 1,273-question subset, Inspect AI zero-shot, ten runs; chemistry, cyber, unlearning and adversarial protocols excluded.",
+        "model_release_date": "2025-04-05",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2025-04-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-04-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-www-wmdp-ai-cfa49cff8bb3ac32"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-wmdpbio-llama4-a53b7384d63ff63a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "wmdpbio-llama4"
+        ],
+        "plot_date": "2025-04-05",
+        "frontier_observation_ids": [
+          "obs-0-86-b1b2cf41388d1a73"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-834-72c4c127b7a9e452",
+        "benchmark_id": "wmdp-bio-v1-zero-shot",
+        "benchmark_version_id": "wmdp-bio-v1-zero-shot-canonical",
+        "model_id": "model-claude-3-5-sonnet-20241022-64e890320834f2ae",
+        "model_configuration": "Claude-3.5-Sonnet-20241022",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet-20241022",
+        "model_family_id": "anthropic-claude-3-5-sonnet-20241022",
+        "model": "Claude-3.5-Sonnet-20241022",
+        "organization": "Anthropic",
+        "score": 0.834,
+        "input_score": 0.834,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "wmdp-bio-v1-zero-shot-metric-v1",
+        "protocol_id": "wmdp-bio-v1-zero-shot-source-export-v1",
+        "task_set_id": "wmdp-bio-v1-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "wmdp-bio-v1-zero-shot-canonical-score",
+        "evaluation_protocol": "Original WMDP-Bio v1 1,273-question subset, Inspect AI zero-shot, ten runs; chemistry, cyber, unlearning and adversarial protocols excluded.",
+        "model_release_date": "2024-10-22",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2024-10-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-10-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-10-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-10-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-www-wmdp-ai-cfa49cff8bb3ac32"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-wmdpbio-claude35-a523c39c69f54652"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "wmdpbio-claude35"
+        ],
+        "plot_date": "2024-10-22",
+        "frontier_observation_ids": [
+          "obs-0-834-72c4c127b7a9e452"
+        ]
+      },
+      {
+        "observation_id": "obs-0-85-c1652cc7f1d6276b",
+        "benchmark_id": "wmdp-bio-v1-zero-shot",
+        "benchmark_version_id": "wmdp-bio-v1-zero-shot-canonical",
+        "model_id": "model-grok-2-1212-b11e111c7ff8b085",
+        "model_configuration": "Grok-2-1212",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-2-1212",
+        "model_family_id": "xai-grok-2-1212",
+        "model": "Grok-2-1212",
+        "organization": "xAI",
+        "score": 0.85,
+        "input_score": 0.85,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "wmdp-bio-v1-zero-shot-metric-v1",
+        "protocol_id": "wmdp-bio-v1-zero-shot-source-export-v1",
+        "task_set_id": "wmdp-bio-v1-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "wmdp-bio-v1-zero-shot-canonical-score",
+        "evaluation_protocol": "Original WMDP-Bio v1 1,273-question subset, Inspect AI zero-shot, ten runs; chemistry, cyber, unlearning and adversarial protocols excluded.",
+        "model_release_date": "2024-12-12",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2024-12-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-12-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-www-wmdp-ai-cfa49cff8bb3ac32"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-wmdpbio-grok2-dcd8adadf71fd5ab"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "wmdpbio-grok2"
+        ],
+        "plot_date": "2024-12-12",
+        "frontier_observation_ids": [
+          "obs-0-85-c1652cc7f1d6276b"
+        ]
+      },
+      {
+        "observation_id": "obs-0-853-286d0cd7c87ff72d",
+        "benchmark_id": "wmdp-bio-v1-zero-shot",
+        "benchmark_version_id": "wmdp-bio-v1-zero-shot-canonical",
+        "model_id": "model-o3-mini-medium-3121d5000ac640f2",
+        "model_configuration": "o3-mini-medium",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-mini-medium",
+        "model_family_id": "openai-o3-mini-medium",
+        "model": "o3-mini-medium",
+        "organization": "OpenAI",
+        "score": 0.853,
+        "input_score": 0.853,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "wmdp-bio-v1-zero-shot-metric-v1",
+        "protocol_id": "wmdp-bio-v1-zero-shot-source-export-v1",
+        "task_set_id": "wmdp-bio-v1-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "wmdp-bio-v1-zero-shot-canonical-score",
+        "evaluation_protocol": "Original WMDP-Bio v1 1,273-question subset, Inspect AI zero-shot, ten runs; chemistry, cyber, unlearning and adversarial protocols excluded.",
+        "model_release_date": "2025-01-31",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2025-01-31",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-31",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-01-31",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-31",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-www-wmdp-ai-cfa49cff8bb3ac32"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-wmdpbio-o3mini-de94aa6ab0d8eb1a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "wmdpbio-o3mini"
+        ],
+        "plot_date": "2025-01-31",
+        "frontier_observation_ids": [
+          "obs-0-853-286d0cd7c87ff72d"
+        ]
+      },
+      {
+        "observation_id": "obs-0-86-b1b2cf41388d1a73",
+        "benchmark_id": "wmdp-bio-v1-zero-shot",
+        "benchmark_version_id": "wmdp-bio-v1-zero-shot-canonical",
+        "model_id": "model-llama-4-maverick-9cc7b902981846cb",
+        "model_configuration": "Llama-4-Maverick",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama-4-maverick",
+        "model_family_id": "meta-llama-4-maverick",
+        "model": "Llama-4-Maverick",
+        "organization": "Meta",
+        "score": 0.86,
+        "input_score": 0.86,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "wmdp-bio-v1-zero-shot-metric-v1",
+        "protocol_id": "wmdp-bio-v1-zero-shot-source-export-v1",
+        "task_set_id": "wmdp-bio-v1-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "wmdp-bio-v1-zero-shot-canonical-score",
+        "evaluation_protocol": "Original WMDP-Bio v1 1,273-question subset, Inspect AI zero-shot, ten runs; chemistry, cyber, unlearning and adversarial protocols excluded.",
+        "model_release_date": "2025-04-05",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2025-04-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-04-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-www-wmdp-ai-cfa49cff8bb3ac32"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-wmdpbio-llama4-a53b7384d63ff63a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "wmdpbio-llama4"
+        ],
+        "plot_date": "2025-04-05",
+        "frontier_observation_ids": [
+          "obs-0-86-b1b2cf41388d1a73"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-86-b1b2cf41388d1a73",
+        "benchmark_id": "wmdp-bio-v1-zero-shot",
+        "benchmark_version_id": "wmdp-bio-v1-zero-shot-canonical",
+        "model_id": "model-llama-4-maverick-9cc7b902981846cb",
+        "model_configuration": "Llama-4-Maverick",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama-4-maverick",
+        "model_family_id": "meta-llama-4-maverick",
+        "model": "Llama-4-Maverick",
+        "organization": "Meta",
+        "score": 0.86,
+        "input_score": 0.86,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "wmdp-bio-v1-zero-shot-metric-v1",
+        "protocol_id": "wmdp-bio-v1-zero-shot-source-export-v1",
+        "task_set_id": "wmdp-bio-v1-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "wmdp-bio-v1-zero-shot-canonical-score",
+        "evaluation_protocol": "Original WMDP-Bio v1 1,273-question subset, Inspect AI zero-shot, ten runs; chemistry, cyber, unlearning and adversarial protocols excluded.",
+        "model_release_date": "2025-04-05",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2025-04-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-05-09",
+        "date_kind": "result first-public date",
+        "capability_date": "2025-04-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-www-wmdp-ai-cfa49cff8bb3ac32"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-wmdpbio-llama4-a53b7384d63ff63a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "wmdpbio-llama4"
+        ],
+        "plot_date": "2025-05-09",
+        "frontier_observation_ids": [
+          "obs-0-834-72c4c127b7a9e452",
+          "obs-0-844-d7459014d61cbc35",
+          "obs-0-85-426d04c78c96455a",
+          "obs-0-85-c1652cc7f1d6276b",
+          "obs-0-853-286d0cd7c87ff72d",
+          "obs-0-86-b1b2cf41388d1a73"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-86-b1b2cf41388d1a73",
+        "benchmark_id": "wmdp-bio-v1-zero-shot",
+        "benchmark_version_id": "wmdp-bio-v1-zero-shot-canonical",
+        "model_id": "model-llama-4-maverick-9cc7b902981846cb",
+        "model_configuration": "Llama-4-Maverick",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama-4-maverick",
+        "model_family_id": "meta-llama-4-maverick",
+        "model": "Llama-4-Maverick",
+        "organization": "Meta",
+        "score": 0.86,
+        "input_score": 0.86,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "wmdp-bio-v1-zero-shot-metric-v1",
+        "protocol_id": "wmdp-bio-v1-zero-shot-source-export-v1",
+        "task_set_id": "wmdp-bio-v1-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "wmdp-bio-v1-zero-shot-canonical-score",
+        "evaluation_protocol": "Original WMDP-Bio v1 1,273-question subset, Inspect AI zero-shot, ten runs; chemistry, cyber, unlearning and adversarial protocols excluded.",
+        "model_release_date": "2025-04-05",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2025-04-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-05-09",
+        "date_kind": "result first-public date",
+        "capability_date": "2025-04-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-www-wmdp-ai-cfa49cff8bb3ac32"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-wmdpbio-llama4-a53b7384d63ff63a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "wmdpbio-llama4"
+        ],
+        "plot_date": "2025-05-09",
+        "frontier_observation_ids": [
+          "obs-0-834-72c4c127b7a9e452",
+          "obs-0-844-d7459014d61cbc35",
+          "obs-0-85-426d04c78c96455a",
+          "obs-0-85-c1652cc7f1d6276b",
+          "obs-0-853-286d0cd7c87ff72d",
+          "obs-0-86-b1b2cf41388d1a73"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.86,
+    "capability_frontier_value": 0.86,
+    "reported_frontier_value": 0.86,
+    "current_frontier": 0.86,
+    "normalized_progress": 0.8133333333333334,
+    "normalized_headroom": 0.18666666666666665,
+    "threshold_days": {
+      "T50": {
+        "status": "reached",
+        "days": 231,
+        "qualifying_observation_date": "2024-10-22"
+      },
+      "T80": {
+        "status": "reached",
+        "days": 332,
+        "qualifying_observation_date": "2025-01-31"
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 915
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "reached",
+        "days": 231,
+        "qualifying_observation_date": "2024-10-22"
+      },
+      "T80": {
+        "status": "reached",
+        "days": 332,
+        "qualifying_observation_date": "2025-01-31"
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 915
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "reached",
+        "days": 430,
+        "qualifying_observation_date": "2025-05-09"
+      },
+      "T80": {
+        "status": "reached",
+        "days": 430,
+        "qualifying_observation_date": "2025-05-09"
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 915
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.8571428571428571,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "DeepSeek",
+        "Meta",
+        "xAI"
+      ],
+      "panel_size": 7,
+      "status": "high"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-www-wmdp-ai-cfa49cff8bb3ac32"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": true,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

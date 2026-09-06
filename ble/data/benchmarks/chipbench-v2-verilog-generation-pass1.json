@@ -1,0 +1,1764 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "chipbench-v2-verilog-generation-pass1",
+    "name": "ChipBench v2 \u2014 Verilog Pass@1",
+    "domain": "Electrical Engineering",
+    "release": "2026-01-29",
+    "source": "https://github.com/zhongkaiyu/ChipBench",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Model",
+    "tags": [
+      "Verilog",
+      "hardware",
+      "simulation"
+    ],
+    "metric": "Pass@1",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "chipbench-v2-verilog-generation-pass1-metric-v1",
+    "protocol_id": "chipbench-v2-verilog-generation-pass1-source-export-v1",
+    "canonical_score": {
+      "series_id": "chipbench-v2-verilog-generation-pass1-canonical-score",
+      "role": "canonical",
+      "metric_id": "chipbench-v2-verilog-generation-pass1-metric-v1",
+      "metric_name": "Pass@1",
+      "protocol_id": "chipbench-v2-verilog-generation-pass1-source-export-v1",
+      "task_set_id": "chipbench-v2-verilog-generation-pass1-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "chipbench-v2-verilog-generation-pass1-canonical",
+    "summary": {
+      "en": "ChipBench evaluates generation of structurally complex, simulation-verified Verilog hardware modules.",
+      "zh": "ChipBench \u8bc4\u4f30\u6a21\u578b\u751f\u6210\u7ed3\u6784\u590d\u6742\u3001\u901a\u8fc7\u4eff\u771f\u9a8c\u8bc1\u7684 Verilog \u786c\u4ef6\u6a21\u5757\u7684\u80fd\u529b\u3002"
+    },
+    "task_format": {
+      "en": "Given a hardware specification and supplied interfaces, the model writes a complete implementation for one of 44 modules.",
+      "zh": "\u6a21\u578b\u6839\u636e\u786c\u4ef6\u89c4\u683c\u548c\u63d0\u4f9b\u7684\u63a5\u53e3\uff0c\u4e3a 44 \u4e2a\u6a21\u5757\u4e4b\u4e00\u751f\u6210\u5b8c\u6574\u5b9e\u73b0\u3002"
+    },
+    "scoring": {
+      "metric_name": "Macro-average Verilog generation Pass@1",
+      "explanation": {
+        "en": "Pass@1 estimates one-sample compile-and-test success; the headline is the unweighted mean across CPU-IP, hierarchical, and self-contained categories.",
+        "zh": "Pass@1 \u4f30\u8ba1\u5355\u6b21\u751f\u6210\u901a\u8fc7\u7f16\u8bd1\u548c\u5168\u90e8\u6d4b\u8bd5\u7684\u6982\u7387\uff1bheadline \u662f CPU-IP\u3001\u5c42\u6b21\u6a21\u5757\u548c\u72ec\u7acb\u6a21\u5757\u4e09\u4e2a\u7c7b\u522b\u7684\u975e\u52a0\u6743\u5e73\u5747\u3002"
+      }
+    },
+    "evaluation_target": "environment_outcome",
+    "observation_count": 13,
+    "evidence_record_count": 13,
+    "observations": [
+      {
+        "observation_id": "obs-0-0815-068a193a382743f1",
+        "benchmark_id": "chipbench-v2-verilog-generation-pass1",
+        "benchmark_version_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "model_id": "model-gpt-3-5-turbo-0125-59c7fa350aec7db2",
+        "model_configuration": "gpt-3.5-turbo-0125",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-3-5-turbo-0125",
+        "model_family_id": "openai-gpt-3-5-turbo-0125",
+        "model": "gpt-3.5-turbo-0125",
+        "organization": "OpenAI",
+        "score": 0.0815,
+        "input_score": 0.0815,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "chipbench-v2-verilog-generation-pass1-metric-v1",
+        "protocol_id": "chipbench-v2-verilog-generation-pass1-source-export-v1",
+        "task_set_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chipbench-v2-verilog-generation-pass1-canonical-score",
+        "evaluation_protocol": "ChipBench arXiv-v2 fixed 44 Verilog-generation modules, single model, temperature 0.85, top-p 0.95, paper Average Pass@1; debugging, MAGE and Pass@k are excluded.",
+        "model_release_date": "2024-01-25",
+        "evaluation_date": null,
+        "result_public_date": "2026-02-01",
+        "source_publication_date": "2026-02-01",
+        "observation_date": "2024-01-25",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-01-25",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-02-01",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-01-25",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-01-25",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-02-01",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca",
+          "resource-https-github-com-zhongkaiyu-chipbench-9ccbb59943378422"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "source": "https://arxiv.org/abs/2601.21448",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chipbench-gpt35-9b4e18a44db0640d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chipbench-gpt35"
+        ]
+      },
+      {
+        "observation_id": "obs-0-0704-b9921c85184873b0",
+        "benchmark_id": "chipbench-v2-verilog-generation-pass1",
+        "benchmark_version_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "model_id": "model-llama-3-1-8b-instruct-d2b80773af59e627",
+        "model_configuration": "Llama-3.1-8B-Instruct",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama-3-1-8b-instruct",
+        "model_family_id": "meta-llama-3-1-8b-instruct",
+        "model": "Llama-3.1-8B-Instruct",
+        "organization": "Meta",
+        "score": 0.0704,
+        "input_score": 0.0704,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "chipbench-v2-verilog-generation-pass1-metric-v1",
+        "protocol_id": "chipbench-v2-verilog-generation-pass1-source-export-v1",
+        "task_set_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chipbench-v2-verilog-generation-pass1-canonical-score",
+        "evaluation_protocol": "ChipBench arXiv-v2 fixed 44 Verilog-generation modules, single model, temperature 0.85, top-p 0.95, paper Average Pass@1; debugging, MAGE and Pass@k are excluded.",
+        "model_release_date": "2024-07-23",
+        "evaluation_date": null,
+        "result_public_date": "2026-02-01",
+        "source_publication_date": "2026-02-01",
+        "observation_date": "2024-07-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-07-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-02-01",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-07-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-07-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-02-01",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca",
+          "resource-https-github-com-zhongkaiyu-chipbench-9ccbb59943378422"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "source": "https://arxiv.org/abs/2601.21448",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chipbench-llama31-e19c82a233736c1a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chipbench-llama31"
+        ]
+      },
+      {
+        "observation_id": "obs-0-2926-238c09fd9e37ab51",
+        "benchmark_id": "chipbench-v2-verilog-generation-pass1",
+        "benchmark_version_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "model_id": "model-deepseek-v2-5-api-deepseek-coder-90cab00ea7ec532d",
+        "model_configuration": "DeepSeek-V2.5-API-deepseek-coder",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-v2-5-api-deepseek-coder",
+        "model_family_id": "deepseek-deepseek-v2-5-api-deepseek-coder",
+        "model": "DeepSeek-V2.5-API-deepseek-coder",
+        "organization": "DeepSeek",
+        "score": 0.2926,
+        "input_score": 0.2926,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "chipbench-v2-verilog-generation-pass1-metric-v1",
+        "protocol_id": "chipbench-v2-verilog-generation-pass1-source-export-v1",
+        "task_set_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chipbench-v2-verilog-generation-pass1-canonical-score",
+        "evaluation_protocol": "ChipBench arXiv-v2 fixed 44 Verilog-generation modules, single model, temperature 0.85, top-p 0.95, paper Average Pass@1; debugging, MAGE and Pass@k are excluded.",
+        "model_release_date": "2024-09-05",
+        "evaluation_date": null,
+        "result_public_date": "2026-02-01",
+        "source_publication_date": "2026-02-01",
+        "observation_date": "2024-09-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-09-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-02-01",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-09-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-09-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-02-01",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca",
+          "resource-https-github-com-zhongkaiyu-chipbench-9ccbb59943378422"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "source": "https://arxiv.org/abs/2601.21448",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chipbench-deepseekcoder-3647633162dc17e7"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chipbench-deepseekcoder"
+        ]
+      },
+      {
+        "observation_id": "obs-0-1037-ca8f0065100e971a",
+        "benchmark_id": "chipbench-v2-verilog-generation-pass1",
+        "benchmark_version_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "model_id": "model-gpt-4o-2024-11-20-a2c62b9cadad1de5",
+        "model_configuration": "gpt-4o-2024-11-20",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o-2024-11-20",
+        "model_family_id": "openai-gpt-4o-2024-11-20",
+        "model": "gpt-4o-2024-11-20",
+        "organization": "OpenAI",
+        "score": 0.1037,
+        "input_score": 0.1037,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "chipbench-v2-verilog-generation-pass1-metric-v1",
+        "protocol_id": "chipbench-v2-verilog-generation-pass1-source-export-v1",
+        "task_set_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chipbench-v2-verilog-generation-pass1-canonical-score",
+        "evaluation_protocol": "ChipBench arXiv-v2 fixed 44 Verilog-generation modules, single model, temperature 0.85, top-p 0.95, paper Average Pass@1; debugging, MAGE and Pass@k are excluded.",
+        "model_release_date": "2024-11-20",
+        "evaluation_date": null,
+        "result_public_date": "2026-02-01",
+        "source_publication_date": "2026-02-01",
+        "observation_date": "2024-11-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-11-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-02-01",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-11-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-11-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-02-01",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca",
+          "resource-https-github-com-zhongkaiyu-chipbench-9ccbb59943378422"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "source": "https://arxiv.org/abs/2601.21448",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chipbench-gpt4o-d1656540362e5f4d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chipbench-gpt4o"
+        ]
+      },
+      {
+        "observation_id": "obs-0-0704-43e5e638abda4978",
+        "benchmark_id": "chipbench-v2-verilog-generation-pass1",
+        "benchmark_version_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "model_id": "model-llama-3-3-70b-b2558997542f03ed",
+        "model_configuration": "Llama-3.3-70B",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama-3-3-70b",
+        "model_family_id": "meta-llama-3-3-70b",
+        "model": "Llama-3.3-70B",
+        "organization": "Meta",
+        "score": 0.0704,
+        "input_score": 0.0704,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "chipbench-v2-verilog-generation-pass1-metric-v1",
+        "protocol_id": "chipbench-v2-verilog-generation-pass1-source-export-v1",
+        "task_set_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chipbench-v2-verilog-generation-pass1-canonical-score",
+        "evaluation_protocol": "ChipBench arXiv-v2 fixed 44 Verilog-generation modules, single model, temperature 0.85, top-p 0.95, paper Average Pass@1; debugging, MAGE and Pass@k are excluded.",
+        "model_release_date": "2024-12-06",
+        "evaluation_date": null,
+        "result_public_date": "2026-02-01",
+        "source_publication_date": "2026-02-01",
+        "observation_date": "2024-12-06",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-06",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-02-01",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-12-06",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-06",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-02-01",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca",
+          "resource-https-github-com-zhongkaiyu-chipbench-9ccbb59943378422"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "source": "https://arxiv.org/abs/2601.21448",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chipbench-llama33-2bba832b8fb89151"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chipbench-llama33"
+        ]
+      },
+      {
+        "observation_id": "obs-0-237-2d421c858aa10d3d",
+        "benchmark_id": "chipbench-v2-verilog-generation-pass1",
+        "benchmark_version_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "model_id": "model-deepseek-r1-18eed2738c2c0e2c",
+        "model_configuration": "DeepSeek-R1",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-r1",
+        "model_family_id": "deepseek-deepseek-r1",
+        "model": "DeepSeek-R1",
+        "organization": "DeepSeek",
+        "score": 0.237,
+        "input_score": 0.237,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "chipbench-v2-verilog-generation-pass1-metric-v1",
+        "protocol_id": "chipbench-v2-verilog-generation-pass1-source-export-v1",
+        "task_set_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chipbench-v2-verilog-generation-pass1-canonical-score",
+        "evaluation_protocol": "ChipBench arXiv-v2 fixed 44 Verilog-generation modules, single model, temperature 0.85, top-p 0.95, paper Average Pass@1; debugging, MAGE and Pass@k are excluded.",
+        "model_release_date": "2025-01-20",
+        "evaluation_date": null,
+        "result_public_date": "2026-02-01",
+        "source_publication_date": "2026-02-01",
+        "observation_date": "2025-01-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-02-01",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-01-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-02-01",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca",
+          "resource-https-github-com-zhongkaiyu-chipbench-9ccbb59943378422"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "source": "https://arxiv.org/abs/2601.21448",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chipbench-deepseekr1-079532bb27e118f4"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chipbench-deepseekr1"
+        ]
+      },
+      {
+        "observation_id": "obs-0-0111-507d62e45ace2fcf",
+        "benchmark_id": "chipbench-v2-verilog-generation-pass1",
+        "benchmark_version_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "model_id": "model-gemini-2-5-pro-53e6252cbff1cfa8",
+        "model_configuration": "Gemini-2.5-Pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-5-pro",
+        "model_family_id": "google-gemini-2-5-pro",
+        "model": "Gemini-2.5-Pro",
+        "organization": "Google",
+        "score": 0.0111,
+        "input_score": 0.0111,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "chipbench-v2-verilog-generation-pass1-metric-v1",
+        "protocol_id": "chipbench-v2-verilog-generation-pass1-source-export-v1",
+        "task_set_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chipbench-v2-verilog-generation-pass1-canonical-score",
+        "evaluation_protocol": "ChipBench arXiv-v2 fixed 44 Verilog-generation modules, single model, temperature 0.85, top-p 0.95, paper Average Pass@1; debugging, MAGE and Pass@k are excluded.",
+        "model_release_date": "2025-06-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-02-01",
+        "source_publication_date": "2026-02-01",
+        "observation_date": "2025-06-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-06-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-02-01",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-06-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-06-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-02-01",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca",
+          "resource-https-github-com-zhongkaiyu-chipbench-9ccbb59943378422"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "source": "https://arxiv.org/abs/2601.21448",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chipbench-gemini25-16bdd04d8c6a49ae"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chipbench-gemini25"
+        ]
+      },
+      {
+        "observation_id": "obs-0-2481-97b97ff1ddd5d632",
+        "benchmark_id": "chipbench-v2-verilog-generation-pass1",
+        "benchmark_version_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "model_id": "model-gpt-5-cdd3b6d6cb9421c1",
+        "model_configuration": "GPT-5",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5",
+        "model_family_id": "openai-gpt-5",
+        "model": "GPT-5",
+        "organization": "OpenAI",
+        "score": 0.2481,
+        "input_score": 0.2481,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "chipbench-v2-verilog-generation-pass1-metric-v1",
+        "protocol_id": "chipbench-v2-verilog-generation-pass1-source-export-v1",
+        "task_set_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chipbench-v2-verilog-generation-pass1-canonical-score",
+        "evaluation_protocol": "ChipBench arXiv-v2 fixed 44 Verilog-generation modules, single model, temperature 0.85, top-p 0.95, paper Average Pass@1; debugging, MAGE and Pass@k are excluded.",
+        "model_release_date": "2025-08-07",
+        "evaluation_date": null,
+        "result_public_date": "2026-02-01",
+        "source_publication_date": "2026-02-01",
+        "observation_date": "2025-08-07",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-08-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-02-01",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-08-07",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-08-07",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-02-01",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca",
+          "resource-https-github-com-zhongkaiyu-chipbench-9ccbb59943378422"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "source": "https://arxiv.org/abs/2601.21448",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chipbench-gpt5-858a11b3ca107496"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chipbench-gpt5"
+        ]
+      },
+      {
+        "observation_id": "obs-0-1259-2e38e1c4740ac869",
+        "benchmark_id": "chipbench-v2-verilog-generation-pass1",
+        "benchmark_version_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "model_id": "model-claude-sonnet-4-5-1375953e5a053324",
+        "model_configuration": "Claude-Sonnet-4.5",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-sonnet-4-5",
+        "model_family_id": "anthropic-claude-sonnet-4-5",
+        "model": "Claude-Sonnet-4.5",
+        "organization": "Anthropic",
+        "score": 0.1259,
+        "input_score": 0.1259,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "chipbench-v2-verilog-generation-pass1-metric-v1",
+        "protocol_id": "chipbench-v2-verilog-generation-pass1-source-export-v1",
+        "task_set_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chipbench-v2-verilog-generation-pass1-canonical-score",
+        "evaluation_protocol": "ChipBench arXiv-v2 fixed 44 Verilog-generation modules, single model, temperature 0.85, top-p 0.95, paper Average Pass@1; debugging, MAGE and Pass@k are excluded.",
+        "model_release_date": "2025-09-29",
+        "evaluation_date": null,
+        "result_public_date": "2026-02-01",
+        "source_publication_date": "2026-02-01",
+        "observation_date": "2025-09-29",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-09-29",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-02-01",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-09-29",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-09-29",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-02-01",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca",
+          "resource-https-github-com-zhongkaiyu-chipbench-9ccbb59943378422"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "source": "https://arxiv.org/abs/2601.21448",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chipbench-sonnet45-d8dc83d95b5238b4"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chipbench-sonnet45"
+        ]
+      },
+      {
+        "observation_id": "obs-0-1926-ebe721b43f43beb9",
+        "benchmark_id": "chipbench-v2-verilog-generation-pass1",
+        "benchmark_version_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "model_id": "model-claude-haiku-4-5-976811a5f0cceb54",
+        "model_configuration": "Claude-Haiku-4.5",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-haiku-4-5",
+        "model_family_id": "anthropic-claude-haiku-4-5",
+        "model": "Claude-Haiku-4.5",
+        "organization": "Anthropic",
+        "score": 0.1926,
+        "input_score": 0.1926,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "chipbench-v2-verilog-generation-pass1-metric-v1",
+        "protocol_id": "chipbench-v2-verilog-generation-pass1-source-export-v1",
+        "task_set_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chipbench-v2-verilog-generation-pass1-canonical-score",
+        "evaluation_protocol": "ChipBench arXiv-v2 fixed 44 Verilog-generation modules, single model, temperature 0.85, top-p 0.95, paper Average Pass@1; debugging, MAGE and Pass@k are excluded.",
+        "model_release_date": "2025-10-15",
+        "evaluation_date": null,
+        "result_public_date": "2026-02-01",
+        "source_publication_date": "2026-02-01",
+        "observation_date": "2025-10-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-10-15",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-02-01",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-10-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-10-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-02-01",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca",
+          "resource-https-github-com-zhongkaiyu-chipbench-9ccbb59943378422"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "source": "https://arxiv.org/abs/2601.21448",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chipbench-haiku45-611065c9f7b15d44"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chipbench-haiku45"
+        ]
+      },
+      {
+        "observation_id": "obs-0-3074-27fc9dd762b1db46",
+        "benchmark_id": "chipbench-v2-verilog-generation-pass1",
+        "benchmark_version_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "model_id": "model-claude-opus-4-5-eb206cfae35041a3",
+        "model_configuration": "Claude-Opus-4.5",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-5",
+        "model_family_id": "anthropic-claude-opus-4-5",
+        "model": "Claude-Opus-4.5",
+        "organization": "Anthropic",
+        "score": 0.3074,
+        "input_score": 0.3074,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "chipbench-v2-verilog-generation-pass1-metric-v1",
+        "protocol_id": "chipbench-v2-verilog-generation-pass1-source-export-v1",
+        "task_set_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chipbench-v2-verilog-generation-pass1-canonical-score",
+        "evaluation_protocol": "ChipBench arXiv-v2 fixed 44 Verilog-generation modules, single model, temperature 0.85, top-p 0.95, paper Average Pass@1; debugging, MAGE and Pass@k are excluded.",
+        "model_release_date": "2025-11-24",
+        "evaluation_date": null,
+        "result_public_date": "2026-02-01",
+        "source_publication_date": "2026-02-01",
+        "observation_date": "2025-11-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-11-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-02-01",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-11-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-11-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-02-01",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca",
+          "resource-https-github-com-zhongkaiyu-chipbench-9ccbb59943378422"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "source": "https://arxiv.org/abs/2601.21448",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chipbench-opus45-db99966dd70edd67"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chipbench-opus45"
+        ]
+      },
+      {
+        "observation_id": "obs-0-2629-9dda839fc5114c77",
+        "benchmark_id": "chipbench-v2-verilog-generation-pass1",
+        "benchmark_version_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "model_id": "model-gpt-5-2-8af9dc0bd1f19a37",
+        "model_configuration": "GPT-5.2",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-2",
+        "model_family_id": "openai-gpt-5-2",
+        "model": "GPT-5.2",
+        "organization": "OpenAI",
+        "score": 0.2629,
+        "input_score": 0.2629,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "chipbench-v2-verilog-generation-pass1-metric-v1",
+        "protocol_id": "chipbench-v2-verilog-generation-pass1-source-export-v1",
+        "task_set_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chipbench-v2-verilog-generation-pass1-canonical-score",
+        "evaluation_protocol": "ChipBench arXiv-v2 fixed 44 Verilog-generation modules, single model, temperature 0.85, top-p 0.95, paper Average Pass@1; debugging, MAGE and Pass@k are excluded.",
+        "model_release_date": "2025-12-11",
+        "evaluation_date": null,
+        "result_public_date": "2026-02-01",
+        "source_publication_date": "2026-02-01",
+        "observation_date": "2025-12-11",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-12-11",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-02-01",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-12-11",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-12-11",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-02-01",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca",
+          "resource-https-github-com-zhongkaiyu-chipbench-9ccbb59943378422"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "source": "https://arxiv.org/abs/2601.21448",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chipbench-gpt52-9620c150371b2c07"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chipbench-gpt52"
+        ]
+      },
+      {
+        "observation_id": "obs-0-3074-8ebab99c21d6be51",
+        "benchmark_id": "chipbench-v2-verilog-generation-pass1",
+        "benchmark_version_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "model_id": "model-gemini-3-flash-1b8511e8298853b3",
+        "model_configuration": "Gemini-3-Flash",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-flash",
+        "model_family_id": "google-gemini-3-flash",
+        "model": "Gemini-3-Flash",
+        "organization": "Google",
+        "score": 0.3074,
+        "input_score": 0.3074,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "chipbench-v2-verilog-generation-pass1-metric-v1",
+        "protocol_id": "chipbench-v2-verilog-generation-pass1-source-export-v1",
+        "task_set_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chipbench-v2-verilog-generation-pass1-canonical-score",
+        "evaluation_protocol": "ChipBench arXiv-v2 fixed 44 Verilog-generation modules, single model, temperature 0.85, top-p 0.95, paper Average Pass@1; debugging, MAGE and Pass@k are excluded.",
+        "model_release_date": "2025-12-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-02-01",
+        "source_publication_date": "2026-02-01",
+        "observation_date": "2025-12-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-12-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-02-01",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-12-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-12-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-02-01",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca",
+          "resource-https-github-com-zhongkaiyu-chipbench-9ccbb59943378422"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "source": "https://arxiv.org/abs/2601.21448",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chipbench-gemini3flash-b36533e0d433a15a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chipbench-gemini3flash"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-3074-8ebab99c21d6be51",
+        "benchmark_id": "chipbench-v2-verilog-generation-pass1",
+        "benchmark_version_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "model_id": "model-gemini-3-flash-1b8511e8298853b3",
+        "model_configuration": "Gemini-3-Flash",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-flash",
+        "model_family_id": "google-gemini-3-flash",
+        "model": "Gemini-3-Flash",
+        "organization": "Google",
+        "score": 0.3074,
+        "input_score": 0.3074,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "chipbench-v2-verilog-generation-pass1-metric-v1",
+        "protocol_id": "chipbench-v2-verilog-generation-pass1-source-export-v1",
+        "task_set_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chipbench-v2-verilog-generation-pass1-canonical-score",
+        "evaluation_protocol": "ChipBench arXiv-v2 fixed 44 Verilog-generation modules, single model, temperature 0.85, top-p 0.95, paper Average Pass@1; debugging, MAGE and Pass@k are excluded.",
+        "model_release_date": "2025-12-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-02-01",
+        "source_publication_date": "2026-02-01",
+        "observation_date": "2025-12-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-12-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-02-01",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-01-29",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-12-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-02-01",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca",
+          "resource-https-github-com-zhongkaiyu-chipbench-9ccbb59943378422"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "source": "https://arxiv.org/abs/2601.21448",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chipbench-gemini3flash-b36533e0d433a15a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chipbench-gemini3flash"
+        ],
+        "plot_date": "2026-01-29",
+        "frontier_observation_ids": [
+          "obs-0-0111-507d62e45ace2fcf",
+          "obs-0-0704-b9921c85184873b0",
+          "obs-0-0704-43e5e638abda4978",
+          "obs-0-0815-068a193a382743f1",
+          "obs-0-1037-ca8f0065100e971a",
+          "obs-0-1259-2e38e1c4740ac869",
+          "obs-0-1926-ebe721b43f43beb9",
+          "obs-0-237-2d421c858aa10d3d",
+          "obs-0-2481-97b97ff1ddd5d632",
+          "obs-0-2629-9dda839fc5114c77",
+          "obs-0-2926-238c09fd9e37ab51",
+          "obs-0-3074-27fc9dd762b1db46",
+          "obs-0-3074-8ebab99c21d6be51"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-3074-8ebab99c21d6be51",
+        "benchmark_id": "chipbench-v2-verilog-generation-pass1",
+        "benchmark_version_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "model_id": "model-gemini-3-flash-1b8511e8298853b3",
+        "model_configuration": "Gemini-3-Flash",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-flash",
+        "model_family_id": "google-gemini-3-flash",
+        "model": "Gemini-3-Flash",
+        "organization": "Google",
+        "score": 0.3074,
+        "input_score": 0.3074,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "chipbench-v2-verilog-generation-pass1-metric-v1",
+        "protocol_id": "chipbench-v2-verilog-generation-pass1-source-export-v1",
+        "task_set_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chipbench-v2-verilog-generation-pass1-canonical-score",
+        "evaluation_protocol": "ChipBench arXiv-v2 fixed 44 Verilog-generation modules, single model, temperature 0.85, top-p 0.95, paper Average Pass@1; debugging, MAGE and Pass@k are excluded.",
+        "model_release_date": "2025-12-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-02-01",
+        "source_publication_date": "2026-02-01",
+        "observation_date": "2025-12-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-12-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-02-01",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-01-29",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-12-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-02-01",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca",
+          "resource-https-github-com-zhongkaiyu-chipbench-9ccbb59943378422"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "source": "https://arxiv.org/abs/2601.21448",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chipbench-gemini3flash-b36533e0d433a15a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chipbench-gemini3flash"
+        ],
+        "plot_date": "2026-01-29",
+        "frontier_observation_ids": [
+          "obs-0-0111-507d62e45ace2fcf",
+          "obs-0-0704-b9921c85184873b0",
+          "obs-0-0704-43e5e638abda4978",
+          "obs-0-0815-068a193a382743f1",
+          "obs-0-1037-ca8f0065100e971a",
+          "obs-0-1259-2e38e1c4740ac869",
+          "obs-0-1926-ebe721b43f43beb9",
+          "obs-0-237-2d421c858aa10d3d",
+          "obs-0-2481-97b97ff1ddd5d632",
+          "obs-0-2629-9dda839fc5114c77",
+          "obs-0-2926-238c09fd9e37ab51",
+          "obs-0-3074-27fc9dd762b1db46",
+          "obs-0-3074-8ebab99c21d6be51"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-3074-8ebab99c21d6be51",
+        "benchmark_id": "chipbench-v2-verilog-generation-pass1",
+        "benchmark_version_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "model_id": "model-gemini-3-flash-1b8511e8298853b3",
+        "model_configuration": "Gemini-3-Flash",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-flash",
+        "model_family_id": "google-gemini-3-flash",
+        "model": "Gemini-3-Flash",
+        "organization": "Google",
+        "score": 0.3074,
+        "input_score": 0.3074,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "chipbench-v2-verilog-generation-pass1-metric-v1",
+        "protocol_id": "chipbench-v2-verilog-generation-pass1-source-export-v1",
+        "task_set_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chipbench-v2-verilog-generation-pass1-canonical-score",
+        "evaluation_protocol": "ChipBench arXiv-v2 fixed 44 Verilog-generation modules, single model, temperature 0.85, top-p 0.95, paper Average Pass@1; debugging, MAGE and Pass@k are excluded.",
+        "model_release_date": "2025-12-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-02-01",
+        "source_publication_date": "2026-02-01",
+        "observation_date": "2025-12-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-12-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-02-01",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-01-29",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-12-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-02-01",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca",
+          "resource-https-github-com-zhongkaiyu-chipbench-9ccbb59943378422"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "source": "https://arxiv.org/abs/2601.21448",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chipbench-gemini3flash-b36533e0d433a15a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chipbench-gemini3flash"
+        ],
+        "plot_date": "2026-01-29",
+        "frontier_observation_ids": [
+          "obs-0-0111-507d62e45ace2fcf",
+          "obs-0-0704-b9921c85184873b0",
+          "obs-0-0704-43e5e638abda4978",
+          "obs-0-0815-068a193a382743f1",
+          "obs-0-1037-ca8f0065100e971a",
+          "obs-0-1259-2e38e1c4740ac869",
+          "obs-0-1926-ebe721b43f43beb9",
+          "obs-0-237-2d421c858aa10d3d",
+          "obs-0-2481-97b97ff1ddd5d632",
+          "obs-0-2629-9dda839fc5114c77",
+          "obs-0-2926-238c09fd9e37ab51",
+          "obs-0-3074-27fc9dd762b1db46",
+          "obs-0-3074-8ebab99c21d6be51"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-3074-8ebab99c21d6be51",
+        "benchmark_id": "chipbench-v2-verilog-generation-pass1",
+        "benchmark_version_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "model_id": "model-gemini-3-flash-1b8511e8298853b3",
+        "model_configuration": "Gemini-3-Flash",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-flash",
+        "model_family_id": "google-gemini-3-flash",
+        "model": "Gemini-3-Flash",
+        "organization": "Google",
+        "score": 0.3074,
+        "input_score": 0.3074,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "chipbench-v2-verilog-generation-pass1-metric-v1",
+        "protocol_id": "chipbench-v2-verilog-generation-pass1-source-export-v1",
+        "task_set_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chipbench-v2-verilog-generation-pass1-canonical-score",
+        "evaluation_protocol": "ChipBench arXiv-v2 fixed 44 Verilog-generation modules, single model, temperature 0.85, top-p 0.95, paper Average Pass@1; debugging, MAGE and Pass@k are excluded.",
+        "model_release_date": "2025-12-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-02-01",
+        "source_publication_date": "2026-02-01",
+        "observation_date": "2025-12-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-12-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-02-01",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-02-01",
+        "date_kind": "result first-public date",
+        "capability_date": "2025-12-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-02-01",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca",
+          "resource-https-github-com-zhongkaiyu-chipbench-9ccbb59943378422"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "source": "https://arxiv.org/abs/2601.21448",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chipbench-gemini3flash-b36533e0d433a15a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chipbench-gemini3flash"
+        ],
+        "plot_date": "2026-02-01",
+        "frontier_observation_ids": [
+          "obs-0-0111-507d62e45ace2fcf",
+          "obs-0-0704-b9921c85184873b0",
+          "obs-0-0704-43e5e638abda4978",
+          "obs-0-0815-068a193a382743f1",
+          "obs-0-1037-ca8f0065100e971a",
+          "obs-0-1259-2e38e1c4740ac869",
+          "obs-0-1926-ebe721b43f43beb9",
+          "obs-0-237-2d421c858aa10d3d",
+          "obs-0-2481-97b97ff1ddd5d632",
+          "obs-0-2629-9dda839fc5114c77",
+          "obs-0-2926-238c09fd9e37ab51",
+          "obs-0-3074-27fc9dd762b1db46",
+          "obs-0-3074-8ebab99c21d6be51"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-3074-8ebab99c21d6be51",
+        "benchmark_id": "chipbench-v2-verilog-generation-pass1",
+        "benchmark_version_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "model_id": "model-gemini-3-flash-1b8511e8298853b3",
+        "model_configuration": "Gemini-3-Flash",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-flash",
+        "model_family_id": "google-gemini-3-flash",
+        "model": "Gemini-3-Flash",
+        "organization": "Google",
+        "score": 0.3074,
+        "input_score": 0.3074,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "chipbench-v2-verilog-generation-pass1-metric-v1",
+        "protocol_id": "chipbench-v2-verilog-generation-pass1-source-export-v1",
+        "task_set_id": "chipbench-v2-verilog-generation-pass1-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chipbench-v2-verilog-generation-pass1-canonical-score",
+        "evaluation_protocol": "ChipBench arXiv-v2 fixed 44 Verilog-generation modules, single model, temperature 0.85, top-p 0.95, paper Average Pass@1; debugging, MAGE and Pass@k are excluded.",
+        "model_release_date": "2025-12-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-02-01",
+        "source_publication_date": "2026-02-01",
+        "observation_date": "2025-12-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-12-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-02-01",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-02-01",
+        "date_kind": "result first-public date",
+        "capability_date": "2025-12-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-02-01",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca",
+          "resource-https-github-com-zhongkaiyu-chipbench-9ccbb59943378422"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-21448-a47d65600c1d1eca"
+        ],
+        "source": "https://arxiv.org/abs/2601.21448",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chipbench-gemini3flash-b36533e0d433a15a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chipbench-gemini3flash"
+        ],
+        "plot_date": "2026-02-01",
+        "frontier_observation_ids": [
+          "obs-0-0111-507d62e45ace2fcf",
+          "obs-0-0704-b9921c85184873b0",
+          "obs-0-0704-43e5e638abda4978",
+          "obs-0-0815-068a193a382743f1",
+          "obs-0-1037-ca8f0065100e971a",
+          "obs-0-1259-2e38e1c4740ac869",
+          "obs-0-1926-ebe721b43f43beb9",
+          "obs-0-237-2d421c858aa10d3d",
+          "obs-0-2481-97b97ff1ddd5d632",
+          "obs-0-2629-9dda839fc5114c77",
+          "obs-0-2926-238c09fd9e37ab51",
+          "obs-0-3074-27fc9dd762b1db46",
+          "obs-0-3074-8ebab99c21d6be51"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.3074,
+    "capability_frontier_value": 0.3074,
+    "reported_frontier_value": 0.3074,
+    "current_frontier": 0.3074,
+    "normalized_progress": 0.3074,
+    "normalized_headroom": 0.6926,
+    "threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 220
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 220
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 220
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 220
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 220
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 220
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 220
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 220
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 220
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.7142857142857143,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "DeepSeek",
+        "Meta"
+      ],
+      "panel_size": 7,
+      "status": "high"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-github-com-zhongkaiyu-chipbench-9ccbb59943378422"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": true,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

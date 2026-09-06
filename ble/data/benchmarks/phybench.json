@@ -1,0 +1,1634 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "phybench",
+    "name": "PHYBench",
+    "domain": "Physics",
+    "release": "2025-04-22",
+    "source": "https://arxiv.org/abs/2504.16074",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Model",
+    "tags": [
+      "physics",
+      "multi-step",
+      "verifiable",
+      "accuracy"
+    ],
+    "metric": "Accuracy",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "phybench-metric-v1",
+    "protocol_id": "phybench-source-export-v1",
+    "canonical_score": {
+      "series_id": "phybench-canonical-score",
+      "role": "canonical",
+      "metric_id": "phybench-metric-v1",
+      "metric_name": "Accuracy",
+      "protocol_id": "phybench-source-export-v1",
+      "task_set_id": "phybench-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "phybench-canonical",
+    "summary": {
+      "en": "PHYBench evaluates models on original physics problems spanning physical perception and multi-step reasoning.",
+      "zh": "PHYBench \u8bc4\u4f30\u6a21\u578b\u89e3\u51b3\u539f\u521b\u7269\u7406\u95ee\u9898\u3001\u8fdb\u884c\u7269\u7406\u611f\u77e5\u548c\u591a\u6b65\u63a8\u7406\u7684\u80fd\u529b\u3002"
+    },
+    "task_format": {
+      "en": "The model solves a fixed set of 500 original physics problems and submits answers checked by the benchmark's verification procedure.",
+      "zh": "\u6a21\u578b\u9700\u8981\u89e3\u51b3\u56fa\u5b9a\u7684 500 \u9053\u539f\u521b\u7269\u7406\u9898\uff0c\u5e76\u63d0\u4ea4\u7531 benchmark verification procedure \u68c0\u67e5\u7684\u7b54\u6848\u3002"
+    },
+    "scoring": {
+      "metric_name": "Accuracy",
+      "explanation": {
+        "en": "Accuracy is the fraction of the fixed PHYBench problems answered correctly. The benchmark also reports an EED score, but EED is a separate metric and is not merged here.",
+        "zh": "Accuracy \u662f\u56fa\u5b9a PHYBench \u9898\u76ee\u4e2d\u7b54\u5bf9\u7684\u6bd4\u4f8b\u3002benchmark \u8fd8\u62a5\u544a EED score\uff0c\u4f46 EED \u662f\u72ec\u7acb metric\uff0c\u672c\u5361\u4e0d\u5c06\u5b83\u5408\u5e76\u3002"
+      }
+    },
+    "evaluation_target": "final_output",
+    "observation_count": 4,
+    "evidence_record_count": 4,
+    "observations": [
+      {
+        "observation_id": "obs-0-369-9e91917cfd311016",
+        "benchmark_id": "phybench",
+        "benchmark_version_id": "phybench-canonical",
+        "model_id": "model-gemini-2-5-pro-53e6252cbff1cfa8",
+        "model_configuration": "gemini-2-5-pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-5-pro",
+        "model_family_id": "google-gemini-2-5-pro",
+        "model": "Gemini 2.5 Pro",
+        "organization": "Google",
+        "score": 0.369,
+        "input_score": 0.369,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "phybench-metric-v1",
+        "protocol_id": "phybench-source-export-v1",
+        "task_set_id": "phybench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "phybench-canonical-score",
+        "evaluation_protocol": "PHYBench fixed 500-problem accuracy series. EED Score, prompting variants, and materially different leaderboard settings remain separate measurement objects.",
+        "model_release_date": "2025-03-25",
+        "evaluation_date": "2025-04-22",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-03-25",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-03-25",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-04-22",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-03-25",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-03-25",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8"
+        ],
+        "source": "https://arxiv.org/abs/2504.16074",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-phybench-gemini-2-5-pro-672e048d27bb1652"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "phybench-gemini-2-5-pro"
+        ]
+      },
+      {
+        "observation_id": "obs-0-5107-f2ec582af6669497",
+        "benchmark_id": "phybench",
+        "benchmark_version_id": "phybench-canonical",
+        "model_id": "model-gpt-5-cdd3b6d6cb9421c1",
+        "model_configuration": "gpt-5",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5",
+        "model_family_id": "openai-gpt-5",
+        "model": "GPT-5",
+        "organization": "OpenAI",
+        "score": 0.5107,
+        "input_score": 0.5107,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "phybench-metric-v1",
+        "protocol_id": "phybench-source-export-v1",
+        "task_set_id": "phybench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "phybench-canonical-score",
+        "evaluation_protocol": "PHYBench fixed 500-problem accuracy series. EED Score, prompting variants, and materially different leaderboard settings remain separate measurement objects.",
+        "model_release_date": "2025-08-07",
+        "evaluation_date": "2025-09-01",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-08-07",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-08-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-09-01",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-08-07",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-08-07",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8",
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "score_source_ids": [
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "source": "https://www.phybench.cn/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-phybench-gpt-5-dc021dc1f16cd5c3"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "phybench-gpt-5"
+        ]
+      },
+      {
+        "observation_id": "obs-0-6139-93efe0ae1154c07a",
+        "benchmark_id": "phybench",
+        "benchmark_version_id": "phybench-canonical",
+        "model_id": "model-gemini-3-pro-preview-6f9ce4666001cc6e",
+        "model_configuration": "gemini-3-pro-preview",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-pro-preview",
+        "model_family_id": "google-gemini-3-pro-preview",
+        "model": "Gemini 3 Pro Preview",
+        "organization": "Google",
+        "score": 0.6139,
+        "input_score": 0.6139,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "phybench-metric-v1",
+        "protocol_id": "phybench-source-export-v1",
+        "task_set_id": "phybench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "phybench-canonical-score",
+        "evaluation_protocol": "PHYBench fixed 500-problem accuracy series. EED Score, prompting variants, and materially different leaderboard settings remain separate measurement objects.",
+        "model_release_date": "2025-11-18",
+        "evaluation_date": "2025-11-20",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-11-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-11-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-11-20",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-11-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-11-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8",
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "score_source_ids": [
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "source": "https://www.phybench.cn/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-phybench-gemini-3-pro-ac810a97dbb3318c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "phybench-gemini-3-pro"
+        ]
+      },
+      {
+        "observation_id": "obs-0-3083-9d0ede26b799e86e",
+        "benchmark_id": "phybench",
+        "benchmark_version_id": "phybench-canonical",
+        "model_id": "model-claude-sonnet-4-thinking-21299c24cb19fc0d",
+        "model_configuration": "claude-sonnet-4-thinking",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-4-sonnet-thinking",
+        "model_family_id": "anthropic-claude-4-sonnet-thinking",
+        "model": "Claude 4 Sonnet Thinking",
+        "organization": "Anthropic",
+        "score": 0.3083,
+        "input_score": 0.3083,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "phybench-metric-v1",
+        "protocol_id": "phybench-source-export-v1",
+        "task_set_id": "phybench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "phybench-canonical-score",
+        "evaluation_protocol": "PHYBench fixed 500-problem accuracy series. EED Score, prompting variants, and materially different leaderboard settings remain separate measurement objects.",
+        "model_release_date": "2025-05-22",
+        "evaluation_date": "2025-06-01",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-05-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-05-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-06-01",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-05-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-05-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8",
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "score_source_ids": [
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "source": "https://www.phybench.cn/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-phybench-claude-sonnet-4-1372dc298024ca65"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "phybench-claude-sonnet-4"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-369-9e91917cfd311016",
+        "benchmark_id": "phybench",
+        "benchmark_version_id": "phybench-canonical",
+        "model_id": "model-gemini-2-5-pro-53e6252cbff1cfa8",
+        "model_configuration": "gemini-2-5-pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-5-pro",
+        "model_family_id": "google-gemini-2-5-pro",
+        "model": "Gemini 2.5 Pro",
+        "organization": "Google",
+        "score": 0.369,
+        "input_score": 0.369,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "phybench-metric-v1",
+        "protocol_id": "phybench-source-export-v1",
+        "task_set_id": "phybench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "phybench-canonical-score",
+        "evaluation_protocol": "PHYBench fixed 500-problem accuracy series. EED Score, prompting variants, and materially different leaderboard settings remain separate measurement objects.",
+        "model_release_date": "2025-03-25",
+        "evaluation_date": "2025-04-22",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-03-25",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-03-25",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-04-22",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-04-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-03-25",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8"
+        ],
+        "source": "https://arxiv.org/abs/2504.16074",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-phybench-gemini-2-5-pro-672e048d27bb1652"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "phybench-gemini-2-5-pro"
+        ],
+        "plot_date": "2025-04-22",
+        "frontier_observation_ids": [
+          "obs-0-369-9e91917cfd311016"
+        ]
+      },
+      {
+        "observation_id": "obs-0-5107-f2ec582af6669497",
+        "benchmark_id": "phybench",
+        "benchmark_version_id": "phybench-canonical",
+        "model_id": "model-gpt-5-cdd3b6d6cb9421c1",
+        "model_configuration": "gpt-5",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5",
+        "model_family_id": "openai-gpt-5",
+        "model": "GPT-5",
+        "organization": "OpenAI",
+        "score": 0.5107,
+        "input_score": 0.5107,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "phybench-metric-v1",
+        "protocol_id": "phybench-source-export-v1",
+        "task_set_id": "phybench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "phybench-canonical-score",
+        "evaluation_protocol": "PHYBench fixed 500-problem accuracy series. EED Score, prompting variants, and materially different leaderboard settings remain separate measurement objects.",
+        "model_release_date": "2025-08-07",
+        "evaluation_date": "2025-09-01",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-08-07",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-08-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-09-01",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-08-07",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-08-07",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8",
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "score_source_ids": [
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "source": "https://www.phybench.cn/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-phybench-gpt-5-dc021dc1f16cd5c3"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "phybench-gpt-5"
+        ],
+        "plot_date": "2025-08-07",
+        "frontier_observation_ids": [
+          "obs-0-5107-f2ec582af6669497"
+        ]
+      },
+      {
+        "observation_id": "obs-0-6139-93efe0ae1154c07a",
+        "benchmark_id": "phybench",
+        "benchmark_version_id": "phybench-canonical",
+        "model_id": "model-gemini-3-pro-preview-6f9ce4666001cc6e",
+        "model_configuration": "gemini-3-pro-preview",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-pro-preview",
+        "model_family_id": "google-gemini-3-pro-preview",
+        "model": "Gemini 3 Pro Preview",
+        "organization": "Google",
+        "score": 0.6139,
+        "input_score": 0.6139,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "phybench-metric-v1",
+        "protocol_id": "phybench-source-export-v1",
+        "task_set_id": "phybench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "phybench-canonical-score",
+        "evaluation_protocol": "PHYBench fixed 500-problem accuracy series. EED Score, prompting variants, and materially different leaderboard settings remain separate measurement objects.",
+        "model_release_date": "2025-11-18",
+        "evaluation_date": "2025-11-20",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-11-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-11-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-11-20",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-11-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-11-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8",
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "score_source_ids": [
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "source": "https://www.phybench.cn/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-phybench-gemini-3-pro-ac810a97dbb3318c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "phybench-gemini-3-pro"
+        ],
+        "plot_date": "2025-11-18",
+        "frontier_observation_ids": [
+          "obs-0-6139-93efe0ae1154c07a"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-369-9e91917cfd311016",
+        "benchmark_id": "phybench",
+        "benchmark_version_id": "phybench-canonical",
+        "model_id": "model-gemini-2-5-pro-53e6252cbff1cfa8",
+        "model_configuration": "gemini-2-5-pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-5-pro",
+        "model_family_id": "google-gemini-2-5-pro",
+        "model": "Gemini 2.5 Pro",
+        "organization": "Google",
+        "score": 0.369,
+        "input_score": 0.369,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "phybench-metric-v1",
+        "protocol_id": "phybench-source-export-v1",
+        "task_set_id": "phybench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "phybench-canonical-score",
+        "evaluation_protocol": "PHYBench fixed 500-problem accuracy series. EED Score, prompting variants, and materially different leaderboard settings remain separate measurement objects.",
+        "model_release_date": "2025-03-25",
+        "evaluation_date": "2025-04-22",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-03-25",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-03-25",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-04-22",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-04-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-03-25",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8"
+        ],
+        "source": "https://arxiv.org/abs/2504.16074",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-phybench-gemini-2-5-pro-672e048d27bb1652"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "phybench-gemini-2-5-pro"
+        ],
+        "plot_date": "2025-04-22",
+        "frontier_observation_ids": [
+          "obs-0-369-9e91917cfd311016"
+        ]
+      },
+      {
+        "observation_id": "obs-0-5107-f2ec582af6669497",
+        "benchmark_id": "phybench",
+        "benchmark_version_id": "phybench-canonical",
+        "model_id": "model-gpt-5-cdd3b6d6cb9421c1",
+        "model_configuration": "gpt-5",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5",
+        "model_family_id": "openai-gpt-5",
+        "model": "GPT-5",
+        "organization": "OpenAI",
+        "score": 0.5107,
+        "input_score": 0.5107,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "phybench-metric-v1",
+        "protocol_id": "phybench-source-export-v1",
+        "task_set_id": "phybench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "phybench-canonical-score",
+        "evaluation_protocol": "PHYBench fixed 500-problem accuracy series. EED Score, prompting variants, and materially different leaderboard settings remain separate measurement objects.",
+        "model_release_date": "2025-08-07",
+        "evaluation_date": "2025-09-01",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-08-07",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-08-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-09-01",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-08-07",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-08-07",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8",
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "score_source_ids": [
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "source": "https://www.phybench.cn/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-phybench-gpt-5-dc021dc1f16cd5c3"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "phybench-gpt-5"
+        ],
+        "plot_date": "2025-08-07",
+        "frontier_observation_ids": [
+          "obs-0-5107-f2ec582af6669497"
+        ]
+      },
+      {
+        "observation_id": "obs-0-6139-93efe0ae1154c07a",
+        "benchmark_id": "phybench",
+        "benchmark_version_id": "phybench-canonical",
+        "model_id": "model-gemini-3-pro-preview-6f9ce4666001cc6e",
+        "model_configuration": "gemini-3-pro-preview",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-pro-preview",
+        "model_family_id": "google-gemini-3-pro-preview",
+        "model": "Gemini 3 Pro Preview",
+        "organization": "Google",
+        "score": 0.6139,
+        "input_score": 0.6139,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "phybench-metric-v1",
+        "protocol_id": "phybench-source-export-v1",
+        "task_set_id": "phybench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "phybench-canonical-score",
+        "evaluation_protocol": "PHYBench fixed 500-problem accuracy series. EED Score, prompting variants, and materially different leaderboard settings remain separate measurement objects.",
+        "model_release_date": "2025-11-18",
+        "evaluation_date": "2025-11-20",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-11-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-11-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-11-20",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-11-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-11-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8",
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "score_source_ids": [
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "source": "https://www.phybench.cn/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-phybench-gemini-3-pro-ac810a97dbb3318c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "phybench-gemini-3-pro"
+        ],
+        "plot_date": "2025-11-18",
+        "frontier_observation_ids": [
+          "obs-0-6139-93efe0ae1154c07a"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-369-9e91917cfd311016",
+        "benchmark_id": "phybench",
+        "benchmark_version_id": "phybench-canonical",
+        "model_id": "model-gemini-2-5-pro-53e6252cbff1cfa8",
+        "model_configuration": "gemini-2-5-pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-5-pro",
+        "model_family_id": "google-gemini-2-5-pro",
+        "model": "Gemini 2.5 Pro",
+        "organization": "Google",
+        "score": 0.369,
+        "input_score": 0.369,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "phybench-metric-v1",
+        "protocol_id": "phybench-source-export-v1",
+        "task_set_id": "phybench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "phybench-canonical-score",
+        "evaluation_protocol": "PHYBench fixed 500-problem accuracy series. EED Score, prompting variants, and materially different leaderboard settings remain separate measurement objects.",
+        "model_release_date": "2025-03-25",
+        "evaluation_date": "2025-04-22",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-03-25",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-03-25",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-04-22",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-04-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-03-25",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8"
+        ],
+        "source": "https://arxiv.org/abs/2504.16074",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-phybench-gemini-2-5-pro-672e048d27bb1652"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "phybench-gemini-2-5-pro"
+        ],
+        "plot_date": "2025-04-22",
+        "frontier_observation_ids": [
+          "obs-0-369-9e91917cfd311016"
+        ]
+      },
+      {
+        "observation_id": "obs-0-5107-f2ec582af6669497",
+        "benchmark_id": "phybench",
+        "benchmark_version_id": "phybench-canonical",
+        "model_id": "model-gpt-5-cdd3b6d6cb9421c1",
+        "model_configuration": "gpt-5",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5",
+        "model_family_id": "openai-gpt-5",
+        "model": "GPT-5",
+        "organization": "OpenAI",
+        "score": 0.5107,
+        "input_score": 0.5107,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "phybench-metric-v1",
+        "protocol_id": "phybench-source-export-v1",
+        "task_set_id": "phybench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "phybench-canonical-score",
+        "evaluation_protocol": "PHYBench fixed 500-problem accuracy series. EED Score, prompting variants, and materially different leaderboard settings remain separate measurement objects.",
+        "model_release_date": "2025-08-07",
+        "evaluation_date": "2025-09-01",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-08-07",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-08-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-09-01",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-08-07",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-08-07",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8",
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "score_source_ids": [
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "source": "https://www.phybench.cn/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-phybench-gpt-5-dc021dc1f16cd5c3"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "phybench-gpt-5"
+        ],
+        "plot_date": "2025-08-07",
+        "frontier_observation_ids": [
+          "obs-0-5107-f2ec582af6669497"
+        ]
+      },
+      {
+        "observation_id": "obs-0-6139-93efe0ae1154c07a",
+        "benchmark_id": "phybench",
+        "benchmark_version_id": "phybench-canonical",
+        "model_id": "model-gemini-3-pro-preview-6f9ce4666001cc6e",
+        "model_configuration": "gemini-3-pro-preview",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-pro-preview",
+        "model_family_id": "google-gemini-3-pro-preview",
+        "model": "Gemini 3 Pro Preview",
+        "organization": "Google",
+        "score": 0.6139,
+        "input_score": 0.6139,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "phybench-metric-v1",
+        "protocol_id": "phybench-source-export-v1",
+        "task_set_id": "phybench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "phybench-canonical-score",
+        "evaluation_protocol": "PHYBench fixed 500-problem accuracy series. EED Score, prompting variants, and materially different leaderboard settings remain separate measurement objects.",
+        "model_release_date": "2025-11-18",
+        "evaluation_date": "2025-11-20",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-11-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-11-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-11-20",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-11-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-11-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8",
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "score_source_ids": [
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "source": "https://www.phybench.cn/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-phybench-gemini-3-pro-ac810a97dbb3318c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "phybench-gemini-3-pro"
+        ],
+        "plot_date": "2025-11-18",
+        "frontier_observation_ids": [
+          "obs-0-6139-93efe0ae1154c07a"
+        ]
+      }
+    ],
+    "reported_frontier": [],
+    "historical_frontier": [],
+    "retrospective_observations": [
+      {
+        "observation_id": "obs-0-369-9e91917cfd311016",
+        "benchmark_id": "phybench",
+        "benchmark_version_id": "phybench-canonical",
+        "model_id": "model-gemini-2-5-pro-53e6252cbff1cfa8",
+        "model_configuration": "gemini-2-5-pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-5-pro",
+        "model_family_id": "google-gemini-2-5-pro",
+        "model": "Gemini 2.5 Pro",
+        "organization": "Google",
+        "score": 0.369,
+        "input_score": 0.369,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "phybench-metric-v1",
+        "protocol_id": "phybench-source-export-v1",
+        "task_set_id": "phybench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "phybench-canonical-score",
+        "evaluation_protocol": "PHYBench fixed 500-problem accuracy series. EED Score, prompting variants, and materially different leaderboard settings remain separate measurement objects.",
+        "model_release_date": "2025-03-25",
+        "evaluation_date": "2025-04-22",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-03-25",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-03-25",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-04-22",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-03-25",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-03-25",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8"
+        ],
+        "source": "https://arxiv.org/abs/2504.16074",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-phybench-gemini-2-5-pro-672e048d27bb1652"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "phybench-gemini-2-5-pro"
+        ]
+      },
+      {
+        "observation_id": "obs-0-5107-f2ec582af6669497",
+        "benchmark_id": "phybench",
+        "benchmark_version_id": "phybench-canonical",
+        "model_id": "model-gpt-5-cdd3b6d6cb9421c1",
+        "model_configuration": "gpt-5",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5",
+        "model_family_id": "openai-gpt-5",
+        "model": "GPT-5",
+        "organization": "OpenAI",
+        "score": 0.5107,
+        "input_score": 0.5107,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "phybench-metric-v1",
+        "protocol_id": "phybench-source-export-v1",
+        "task_set_id": "phybench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "phybench-canonical-score",
+        "evaluation_protocol": "PHYBench fixed 500-problem accuracy series. EED Score, prompting variants, and materially different leaderboard settings remain separate measurement objects.",
+        "model_release_date": "2025-08-07",
+        "evaluation_date": "2025-09-01",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-08-07",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-08-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-09-01",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-08-07",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-08-07",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8",
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "score_source_ids": [
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "source": "https://www.phybench.cn/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-phybench-gpt-5-dc021dc1f16cd5c3"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "phybench-gpt-5"
+        ]
+      },
+      {
+        "observation_id": "obs-0-6139-93efe0ae1154c07a",
+        "benchmark_id": "phybench",
+        "benchmark_version_id": "phybench-canonical",
+        "model_id": "model-gemini-3-pro-preview-6f9ce4666001cc6e",
+        "model_configuration": "gemini-3-pro-preview",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-pro-preview",
+        "model_family_id": "google-gemini-3-pro-preview",
+        "model": "Gemini 3 Pro Preview",
+        "organization": "Google",
+        "score": 0.6139,
+        "input_score": 0.6139,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "phybench-metric-v1",
+        "protocol_id": "phybench-source-export-v1",
+        "task_set_id": "phybench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "phybench-canonical-score",
+        "evaluation_protocol": "PHYBench fixed 500-problem accuracy series. EED Score, prompting variants, and materially different leaderboard settings remain separate measurement objects.",
+        "model_release_date": "2025-11-18",
+        "evaluation_date": "2025-11-20",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-11-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-11-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-11-20",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-11-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-11-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8",
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "score_source_ids": [
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "source": "https://www.phybench.cn/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-phybench-gemini-3-pro-ac810a97dbb3318c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "phybench-gemini-3-pro"
+        ]
+      },
+      {
+        "observation_id": "obs-0-3083-9d0ede26b799e86e",
+        "benchmark_id": "phybench",
+        "benchmark_version_id": "phybench-canonical",
+        "model_id": "model-claude-sonnet-4-thinking-21299c24cb19fc0d",
+        "model_configuration": "claude-sonnet-4-thinking",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-4-sonnet-thinking",
+        "model_family_id": "anthropic-claude-4-sonnet-thinking",
+        "model": "Claude 4 Sonnet Thinking",
+        "organization": "Anthropic",
+        "score": 0.3083,
+        "input_score": 0.3083,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "phybench-metric-v1",
+        "protocol_id": "phybench-source-export-v1",
+        "task_set_id": "phybench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "phybench-canonical-score",
+        "evaluation_protocol": "PHYBench fixed 500-problem accuracy series. EED Score, prompting variants, and materially different leaderboard settings remain separate measurement objects.",
+        "model_release_date": "2025-05-22",
+        "evaluation_date": "2025-06-01",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-05-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-05-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-06-01",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-05-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-05-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8",
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "score_source_ids": [
+          "resource-https-www-phybench-cn-leaderboard-bc34e2084dfb2000"
+        ],
+        "source": "https://www.phybench.cn/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-phybench-claude-sonnet-4-1372dc298024ca65"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "phybench-claude-sonnet-4"
+        ]
+      }
+    ],
+    "observed_frontier": 0.6139,
+    "capability_frontier_value": 0.6139,
+    "reported_frontier_value": null,
+    "current_frontier": 0.6139,
+    "normalized_progress": 0.6139,
+    "normalized_headroom": 0.3861,
+    "threshold_days": {
+      "T50": {
+        "status": "reached",
+        "days": 107,
+        "qualifying_observation_date": "2025-08-07"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 502
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 502
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "reached",
+        "days": 107,
+        "qualifying_observation_date": "2025-08-07"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 502
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 502
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T80": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T90": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      }
+    },
+    "velocity_180d": 0.0354988380952381,
+    "capability_velocity_180d": 0.0354988380952381,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.42857142857142855,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google"
+      ],
+      "panel_size": 7,
+      "status": "medium"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-arxiv-org-abs-2504-16074-cae316cedcb16bf8"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "unknown_public_dates",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

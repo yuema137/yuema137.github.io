@@ -1,0 +1,2988 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "cybench",
+    "name": "CyBench",
+    "domain": "Cybersecurity",
+    "release": "2024-08-01",
+    "source": "https://cybench.github.io/",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Agent",
+    "tags": [
+      "cybersecurity",
+      "terminal",
+      "environment"
+    ],
+    "metric": "Unguided % Solved",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "cybench-metric-v1",
+    "protocol_id": "cybench-source-export-v1",
+    "canonical_score": {
+      "series_id": "cybench-canonical-score",
+      "role": "canonical",
+      "metric_id": "cybench-metric-v1",
+      "metric_name": "Unguided % Solved",
+      "protocol_id": "cybench-source-export-v1",
+      "task_set_id": "cybench-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [
+      {
+        "series_id": "cybench-auxiliary-cybench-noncanonical-subset-or-unverified",
+        "role": "auxiliary",
+        "label": "Auxiliary / non-canonical protocol",
+        "metric_id": "cybench-metric-v1",
+        "metric_name": "Unguided % Solved",
+        "protocol_id": "cybench-noncanonical-subset-or-unverified",
+        "task_set_id": "cybench-subset-or-unverified",
+        "lifecycle_eligible": false,
+        "explanation": {
+          "en": "Preserved for comparison, but excluded from leaderboard sorting and lifecycle metrics because its task set or protocol differs from the canonical score.",
+          "zh": "\u8be5\u5e8f\u5217\u4fdd\u7559\u7528\u4e8e\u6bd4\u8f83\uff0c\u4f46\u56e0 task set \u6216 protocol \u4e0e canonical score \u4e0d\u540c\uff0c\u4e0d\u53c2\u4e0e\u6392\u884c\u699c\u6392\u5e8f\u548c lifecycle \u6307\u6807\u3002"
+        },
+        "observation_ids": [
+          "obs-0-93-9415044486d4dfc7",
+          "obs-0-82-2f5980d5f3ae7f2a",
+          "obs-0-6-3dc73e28403d998f",
+          "obs-0-55-59e573f4de1015e9",
+          "obs-0-43-2c102bd59661388a",
+          "obs-0-42-6c925195ca4544da",
+          "obs-0-39-b59160ae35ff9e0f",
+          "obs-0-38-d68321690b48128e",
+          "obs-0-35-bc1e45d07bd16f32",
+          "obs-0-3-8841be12e00d4a5a",
+          "obs-1-07e512f3d3c863de",
+          "obs-0-96-0f6d9cd176fae685"
+        ],
+        "frontier_events": [
+          {
+            "observation_id": "obs-0-38-d68321690b48128e",
+            "benchmark_id": "cybench",
+            "benchmark_version_id": "cybench-canonical",
+            "model_id": "model-claude-opus-4-20250514-7e00cf964a5f50cb",
+            "model_configuration": "claude-opus-4-20250514",
+            "model_identity_organization": "anthropic",
+            "model_label_id": "claude-opus-4-20250514",
+            "model_family_id": "anthropic-claude-opus-4-20250514",
+            "model": "claude-opus-4-20250514",
+            "organization": "Anthropic",
+            "score": 0.38,
+            "input_score": 0.38,
+            "input_unit": "fraction",
+            "reported_cost_per_task": null,
+            "metric_id": "cybench-metric-v1",
+            "protocol_id": "cybench-noncanonical-subset-or-unverified",
+            "task_set_id": "cybench-subset-or-unverified",
+            "metric": "Unguided % Solved",
+            "score_role": "auxiliary",
+            "score_series_id": "cybench-auxiliary-cybench-noncanonical-subset-or-unverified",
+            "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+            "model_release_date": "2025-05-22",
+            "evaluation_date": null,
+            "result_public_date": null,
+            "source_publication_date": null,
+            "observation_date": "2025-05-22",
+            "observation_date_precision": "day",
+            "observation_date_sources": [
+              {
+                "date": "2025-05-22",
+                "kind": "model_release_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+                ]
+              }
+            ],
+            "observation_date_source_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ],
+            "evaluation_date_sources": [],
+            "score_publication_date_sources": [],
+            "ingested_at": "2026-09-06",
+            "date_precision": "day",
+            "date_notes": "A score-publication date is not present in the source export.",
+            "date": "2025-05-22",
+            "date_kind": "earliest_observation_evidence_date",
+            "capability_date": "2025-05-22",
+            "capability_date_meaning": "earliest_observation_evidence_date",
+            "reported_date_meaning": "result_public_date",
+            "historical_frontier_date": null,
+            "temporal_class": "historical_or_unknown",
+            "retrospective": false,
+            "capability_frontier_eligible": false,
+            "historical_frontier_eligible": false,
+            "eligibility_reason": "Excluded from the canonical CyBench frontier because the source uses a 35/37-task subset or does not pin the task set.",
+            "contemporaneous": true,
+            "source_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ],
+            "score_source_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ],
+            "source": "https://cybench.github.io/",
+            "notes": "Operational evaluation timeline only; not a historical public-result date.",
+            "evidence_ids": [
+              "evidence-rechs1d8fptudbn0r-31d3dc49c2687958"
+            ],
+            "evidence_count": 1,
+            "source_row_ids": [
+              "recHS1d8FpTudBN0R"
+            ],
+            "plot_date": "2025-05-22",
+            "frontier_observation_ids": [
+              "obs-0-35-bc1e45d07bd16f32",
+              "obs-0-38-d68321690b48128e"
+            ]
+          },
+          {
+            "observation_id": "obs-0-43-2c102bd59661388a",
+            "benchmark_id": "cybench",
+            "benchmark_version_id": "cybench-canonical",
+            "model_id": "model-grok-4-0709-f17b779e3adc7195",
+            "model_configuration": "grok-4-0709",
+            "model_identity_organization": "xai",
+            "model_label_id": "grok-4-0709",
+            "model_family_id": "xai-grok-4-0709",
+            "model": "grok-4-0709",
+            "organization": "xAI",
+            "score": 0.43,
+            "input_score": 0.43,
+            "input_unit": "fraction",
+            "reported_cost_per_task": null,
+            "metric_id": "cybench-metric-v1",
+            "protocol_id": "cybench-noncanonical-subset-or-unverified",
+            "task_set_id": "cybench-subset-or-unverified",
+            "metric": "Unguided % Solved",
+            "score_role": "auxiliary",
+            "score_series_id": "cybench-auxiliary-cybench-noncanonical-subset-or-unverified",
+            "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+            "model_release_date": "2025-07-09",
+            "evaluation_date": null,
+            "result_public_date": null,
+            "source_publication_date": null,
+            "observation_date": "2025-07-09",
+            "observation_date_precision": "day",
+            "observation_date_sources": [
+              {
+                "date": "2025-07-09",
+                "kind": "model_release_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-data-x-ai-2025-08-20-grok-4-model-card-pdf-4388a267a3b5f333"
+                ]
+              }
+            ],
+            "observation_date_source_ids": [
+              "resource-https-data-x-ai-2025-08-20-grok-4-model-card-pdf-4388a267a3b5f333"
+            ],
+            "evaluation_date_sources": [],
+            "score_publication_date_sources": [],
+            "ingested_at": "2026-09-06",
+            "date_precision": "day",
+            "date_notes": "A score-publication date is not present in the source export.",
+            "date": "2025-07-09",
+            "date_kind": "earliest_observation_evidence_date",
+            "capability_date": "2025-07-09",
+            "capability_date_meaning": "earliest_observation_evidence_date",
+            "reported_date_meaning": "result_public_date",
+            "historical_frontier_date": null,
+            "temporal_class": "historical_or_unknown",
+            "retrospective": false,
+            "capability_frontier_eligible": false,
+            "historical_frontier_eligible": false,
+            "eligibility_reason": "Excluded from the canonical CyBench frontier because the source uses a 35/37-task subset or does not pin the task set.",
+            "contemporaneous": true,
+            "source_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b",
+              "resource-https-data-x-ai-2025-08-20-grok-4-model-card-pdf-4388a267a3b5f333"
+            ],
+            "score_source_ids": [
+              "resource-https-data-x-ai-2025-08-20-grok-4-model-card-pdf-4388a267a3b5f333"
+            ],
+            "source": "https://data.x.ai/2025-08-20-grok-4-model-card.pdf",
+            "notes": "Operational evaluation timeline only; not a historical public-result date.",
+            "evidence_ids": [
+              "evidence-rec77ohcmurvwgzvd-e7eadef656eacbd7"
+            ],
+            "evidence_count": 1,
+            "source_row_ids": [
+              "rec77oHCMurVWgzvd"
+            ],
+            "plot_date": "2025-07-09",
+            "frontier_observation_ids": [
+              "obs-0-43-2c102bd59661388a"
+            ]
+          },
+          {
+            "observation_id": "obs-0-6-3dc73e28403d998f",
+            "benchmark_id": "cybench",
+            "benchmark_version_id": "cybench-canonical",
+            "model_id": "model-claude-sonnet-4-5-20250929-unknown-545755dffe6b52ca",
+            "model_configuration": "claude-sonnet-4-5-20250929_unknown",
+            "model_identity_organization": "anthropic",
+            "model_label_id": "claude-sonnet-4-5-20250929-unknown",
+            "model_family_id": "anthropic-claude-sonnet-4-5-20250929-unknown",
+            "model": "claude-sonnet-4-5-20250929_unknown",
+            "organization": "Anthropic",
+            "score": 0.6,
+            "input_score": 0.6,
+            "input_unit": "fraction",
+            "reported_cost_per_task": null,
+            "metric_id": "cybench-metric-v1",
+            "protocol_id": "cybench-noncanonical-subset-or-unverified",
+            "task_set_id": "cybench-subset-or-unverified",
+            "metric": "Unguided % Solved",
+            "score_role": "auxiliary",
+            "score_series_id": "cybench-auxiliary-cybench-noncanonical-subset-or-unverified",
+            "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+            "model_release_date": "2025-09-29",
+            "evaluation_date": null,
+            "result_public_date": null,
+            "source_publication_date": null,
+            "observation_date": "2025-09-29",
+            "observation_date_precision": "day",
+            "observation_date_sources": [
+              {
+                "date": "2025-09-29",
+                "kind": "model_release_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-assets-anthropic-com-m-64823ba7485345a7-cl-c5a73309c3caaf92"
+                ]
+              }
+            ],
+            "observation_date_source_ids": [
+              "resource-https-assets-anthropic-com-m-64823ba7485345a7-cl-c5a73309c3caaf92"
+            ],
+            "evaluation_date_sources": [],
+            "score_publication_date_sources": [],
+            "ingested_at": "2026-09-06",
+            "date_precision": "day",
+            "date_notes": "A score-publication date is not present in the source export.",
+            "date": "2025-09-29",
+            "date_kind": "earliest_observation_evidence_date",
+            "capability_date": "2025-09-29",
+            "capability_date_meaning": "earliest_observation_evidence_date",
+            "reported_date_meaning": "result_public_date",
+            "historical_frontier_date": null,
+            "temporal_class": "historical_or_unknown",
+            "retrospective": false,
+            "capability_frontier_eligible": false,
+            "historical_frontier_eligible": false,
+            "eligibility_reason": "Excluded from the canonical CyBench frontier because the source uses a 35/37-task subset or does not pin the task set.",
+            "contemporaneous": true,
+            "source_ids": [
+              "resource-https-assets-anthropic-com-m-64823ba7485345a7-cl-c5a73309c3caaf92",
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ],
+            "score_source_ids": [
+              "resource-https-assets-anthropic-com-m-64823ba7485345a7-cl-c5a73309c3caaf92"
+            ],
+            "source": "https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf",
+            "notes": "Operational evaluation timeline only; not a historical public-result date.",
+            "evidence_ids": [
+              "evidence-recbfgpb81lszllev-b75a0f123633eaa0"
+            ],
+            "evidence_count": 1,
+            "source_row_ids": [
+              "recbFGPB81lSzLlEv"
+            ],
+            "plot_date": "2025-09-29",
+            "frontier_observation_ids": [
+              "obs-0-55-59e573f4de1015e9",
+              "obs-0-6-3dc73e28403d998f"
+            ]
+          },
+          {
+            "observation_id": "obs-0-82-2f5980d5f3ae7f2a",
+            "benchmark_id": "cybench",
+            "benchmark_version_id": "cybench-canonical",
+            "model_id": "model-claude-opus-4-5-20251101-unknown-9c58f792c396dd1a",
+            "model_configuration": "claude-opus-4-5-20251101_unknown",
+            "model_identity_organization": "anthropic",
+            "model_label_id": "claude-opus-4-5-20251101-unknown",
+            "model_family_id": "anthropic-claude-opus-4-5-20251101-unknown",
+            "model": "claude-opus-4-5-20251101_unknown",
+            "organization": "Anthropic",
+            "score": 0.82,
+            "input_score": 0.82,
+            "input_unit": "fraction",
+            "reported_cost_per_task": null,
+            "metric_id": "cybench-metric-v1",
+            "protocol_id": "cybench-noncanonical-subset-or-unverified",
+            "task_set_id": "cybench-subset-or-unverified",
+            "metric": "Unguided % Solved",
+            "score_role": "auxiliary",
+            "score_series_id": "cybench-auxiliary-cybench-noncanonical-subset-or-unverified",
+            "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+            "model_release_date": "2025-11-24",
+            "evaluation_date": null,
+            "result_public_date": null,
+            "source_publication_date": null,
+            "observation_date": "2025-11-24",
+            "observation_date_precision": "day",
+            "observation_date_sources": [
+              {
+                "date": "2025-11-24",
+                "kind": "model_release_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-assets-anthropic-com-m-64823ba7485345a7-cl-c5a73309c3caaf92"
+                ]
+              }
+            ],
+            "observation_date_source_ids": [
+              "resource-https-assets-anthropic-com-m-64823ba7485345a7-cl-c5a73309c3caaf92"
+            ],
+            "evaluation_date_sources": [],
+            "score_publication_date_sources": [],
+            "ingested_at": "2026-09-06",
+            "date_precision": "day",
+            "date_notes": "A score-publication date is not present in the source export.",
+            "date": "2025-11-24",
+            "date_kind": "earliest_observation_evidence_date",
+            "capability_date": "2025-11-24",
+            "capability_date_meaning": "earliest_observation_evidence_date",
+            "reported_date_meaning": "result_public_date",
+            "historical_frontier_date": null,
+            "temporal_class": "historical_or_unknown",
+            "retrospective": false,
+            "capability_frontier_eligible": false,
+            "historical_frontier_eligible": false,
+            "eligibility_reason": "Excluded from the canonical CyBench frontier because the source uses a 35/37-task subset or does not pin the task set.",
+            "contemporaneous": true,
+            "source_ids": [
+              "resource-https-assets-anthropic-com-m-64823ba7485345a7-cl-c5a73309c3caaf92",
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ],
+            "score_source_ids": [
+              "resource-https-assets-anthropic-com-m-64823ba7485345a7-cl-c5a73309c3caaf92"
+            ],
+            "source": "https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf",
+            "notes": "Operational evaluation timeline only; not a historical public-result date.",
+            "evidence_ids": [
+              "evidence-recjjyw1k1nv8z47n-712b1d309c904629"
+            ],
+            "evidence_count": 1,
+            "source_row_ids": [
+              "recJjYw1K1NV8Z47n"
+            ],
+            "plot_date": "2025-11-24",
+            "frontier_observation_ids": [
+              "obs-0-82-2f5980d5f3ae7f2a"
+            ]
+          },
+          {
+            "observation_id": "obs-0-93-9415044486d4dfc7",
+            "benchmark_id": "cybench",
+            "benchmark_version_id": "cybench-canonical",
+            "model_id": "model-claude-opus-4-6-unknown-45df8625b789774e",
+            "model_configuration": "claude-opus-4-6_unknown",
+            "model_identity_organization": "anthropic",
+            "model_label_id": "claude-opus-4-6-unknown",
+            "model_family_id": "anthropic-claude-opus-4-6-unknown",
+            "model": "claude-opus-4-6_unknown",
+            "organization": "Anthropic",
+            "score": 0.93,
+            "input_score": 0.93,
+            "input_unit": "fraction",
+            "reported_cost_per_task": null,
+            "metric_id": "cybench-metric-v1",
+            "protocol_id": "cybench-noncanonical-subset-or-unverified",
+            "task_set_id": "cybench-subset-or-unverified",
+            "metric": "Unguided % Solved",
+            "score_role": "auxiliary",
+            "score_series_id": "cybench-auxiliary-cybench-noncanonical-subset-or-unverified",
+            "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+            "model_release_date": "2026-02-05",
+            "evaluation_date": null,
+            "result_public_date": null,
+            "source_publication_date": null,
+            "observation_date": "2026-02-05",
+            "observation_date_precision": "day",
+            "observation_date_sources": [
+              {
+                "date": "2026-02-05",
+                "kind": "model_release_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-www-cdn-anthropic-com-0dd865075ad3132672ee-c44de6b33233b008"
+                ]
+              }
+            ],
+            "observation_date_source_ids": [
+              "resource-https-www-cdn-anthropic-com-0dd865075ad3132672ee-c44de6b33233b008"
+            ],
+            "evaluation_date_sources": [],
+            "score_publication_date_sources": [],
+            "ingested_at": "2026-09-06",
+            "date_precision": "day",
+            "date_notes": "A score-publication date is not present in the source export.",
+            "date": "2026-02-05",
+            "date_kind": "earliest_observation_evidence_date",
+            "capability_date": "2026-02-05",
+            "capability_date_meaning": "earliest_observation_evidence_date",
+            "reported_date_meaning": "result_public_date",
+            "historical_frontier_date": null,
+            "temporal_class": "historical_or_unknown",
+            "retrospective": false,
+            "capability_frontier_eligible": false,
+            "historical_frontier_eligible": false,
+            "eligibility_reason": "Excluded from the canonical CyBench frontier because the source uses a 35/37-task subset or does not pin the task set.",
+            "contemporaneous": true,
+            "source_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b",
+              "resource-https-www-cdn-anthropic-com-0dd865075ad3132672ee-c44de6b33233b008"
+            ],
+            "score_source_ids": [
+              "resource-https-www-cdn-anthropic-com-0dd865075ad3132672ee-c44de6b33233b008"
+            ],
+            "source": "https://www-cdn.anthropic.com/0dd865075ad3132672ee0ab40b05a53f14cf5288.pdf",
+            "notes": "Operational evaluation timeline only; not a historical public-result date.",
+            "evidence_ids": [
+              "evidence-recwohnahp8uxasgz-0aced404321d52dc"
+            ],
+            "evidence_count": 1,
+            "source_row_ids": [
+              "recWoHNahp8uxAsGZ"
+            ],
+            "plot_date": "2026-02-05",
+            "frontier_observation_ids": [
+              "obs-0-93-9415044486d4dfc7"
+            ]
+          },
+          {
+            "observation_id": "obs-1-07e512f3d3c863de",
+            "benchmark_id": "cybench",
+            "benchmark_version_id": "cybench-canonical",
+            "model_id": "model-claude-mythos-preview-f731674bd5223354",
+            "model_configuration": "claude-mythos-preview",
+            "model_identity_organization": "anthropic",
+            "model_label_id": "claude-mythos-preview",
+            "model_family_id": "anthropic-claude-mythos-preview",
+            "model": "claude-mythos-preview",
+            "organization": "Anthropic",
+            "score": 1.0,
+            "input_score": 1.0,
+            "input_unit": "fraction",
+            "reported_cost_per_task": null,
+            "metric_id": "cybench-metric-v1",
+            "protocol_id": "cybench-noncanonical-subset-or-unverified",
+            "task_set_id": "cybench-subset-or-unverified",
+            "metric": "Unguided % Solved",
+            "score_role": "auxiliary",
+            "score_series_id": "cybench-auxiliary-cybench-noncanonical-subset-or-unverified",
+            "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+            "model_release_date": "2026-04-07",
+            "evaluation_date": null,
+            "result_public_date": null,
+            "source_publication_date": null,
+            "observation_date": "2026-04-07",
+            "observation_date_precision": "day",
+            "observation_date_sources": [
+              {
+                "date": "2026-04-07",
+                "kind": "model_release_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+                ]
+              }
+            ],
+            "observation_date_source_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ],
+            "evaluation_date_sources": [],
+            "score_publication_date_sources": [],
+            "ingested_at": "2026-09-06",
+            "date_precision": "day",
+            "date_notes": "A score-publication date is not present in the source export.",
+            "date": "2026-04-07",
+            "date_kind": "earliest_observation_evidence_date",
+            "capability_date": "2026-04-07",
+            "capability_date_meaning": "earliest_observation_evidence_date",
+            "reported_date_meaning": "result_public_date",
+            "historical_frontier_date": null,
+            "temporal_class": "historical_or_unknown",
+            "retrospective": false,
+            "capability_frontier_eligible": false,
+            "historical_frontier_eligible": false,
+            "eligibility_reason": "Excluded from the canonical CyBench frontier because the source uses a 35/37-task subset or does not pin the task set.",
+            "contemporaneous": true,
+            "source_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ],
+            "score_source_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ],
+            "source": "https://cybench.github.io/",
+            "notes": "Operational evaluation timeline only; not a historical public-result date.",
+            "evidence_ids": [
+              "evidence-country-united-states-of-america-model-version-c-f755c7c7889584e8"
+            ],
+            "evidence_count": 1,
+            "source_row_ids": [],
+            "plot_date": "2026-04-07",
+            "frontier_observation_ids": [
+              "obs-1-07e512f3d3c863de"
+            ]
+          }
+        ]
+      }
+    ],
+    "benchmark_version_id": "cybench-canonical",
+    "summary": {
+      "en": "CyBench tests agents on realistic cybersecurity tasks that require investigation and technical action.",
+      "zh": "CyBench \u6d4b\u8bd5 agent \u5b8c\u6210\u771f\u5b9e\u7f51\u7edc\u5b89\u5168\u4efb\u52a1\u65f6\u7684\u8c03\u67e5\u548c\u6280\u672f\u64cd\u4f5c\u80fd\u529b\u3002"
+    },
+    "task_format": {
+      "en": "The agent works in a cybersecurity environment, using available tools to investigate a challenge and produce a successful solution.",
+      "zh": "agent \u4f1a\u5728\u7f51\u7edc\u5b89\u5168\u73af\u5883\u4e2d\u4f7f\u7528\u5de5\u5177\u8c03\u67e5 challenge\uff0c\u5e76\u5b8c\u6210\u53ef\u9a8c\u8bc1\u7684\u89e3\u51b3\u65b9\u6848\u3002"
+    },
+    "scoring": {
+      "metric_name": "Unguided task success rate",
+      "explanation": {
+        "en": "A task is solved when the agent completes the challenge without task-specific guidance. The score is the fraction solved. CyBench exports this field as a ratio (for example, 0.93 means 93%), so no additional percentage conversion is applied.",
+        "zh": "agent \u5728\u6ca1\u6709 task-specific guidance \u7684\u60c5\u51b5\u4e0b\u5b8c\u6210 challenge \u624d\u7b97\u89e3\u51b3\u3002\u5206\u6570\u662f\u89e3\u51b3 task \u7684\u6bd4\u4f8b\u3002CyBench \u5bfc\u51fa\u7684\u5b57\u6bb5\u672c\u8eab\u5c31\u662f\u6bd4\u4f8b\uff08\u4f8b\u5982 0.93 \u4ee3\u8868 93%\uff09\uff0c\u6240\u4ee5\u4e0d\u4f1a\u518d\u6b21\u505a\u767e\u5206\u6bd4\u8f6c\u6362\u3002"
+      }
+    },
+    "evaluation_target": "environment_outcome",
+    "observation_count": 24,
+    "evidence_record_count": 24,
+    "observations": [
+      {
+        "observation_id": "obs-0-93-9415044486d4dfc7",
+        "benchmark_id": "cybench",
+        "benchmark_version_id": "cybench-canonical",
+        "model_id": "model-claude-opus-4-6-unknown-45df8625b789774e",
+        "model_configuration": "claude-opus-4-6_unknown",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-6-unknown",
+        "model_family_id": "anthropic-claude-opus-4-6-unknown",
+        "model": "claude-opus-4-6_unknown",
+        "organization": "Anthropic",
+        "score": 0.93,
+        "input_score": 0.93,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cybench-metric-v1",
+        "protocol_id": "cybench-noncanonical-subset-or-unverified",
+        "task_set_id": "cybench-subset-or-unverified",
+        "metric": "Unguided % Solved",
+        "score_role": "auxiliary",
+        "score_series_id": "cybench-auxiliary-cybench-noncanonical-subset-or-unverified",
+        "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+        "model_release_date": "2026-02-05",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-02-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-02-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-cdn-anthropic-com-0dd865075ad3132672ee-c44de6b33233b008"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-cdn-anthropic-com-0dd865075ad3132672ee-c44de6b33233b008"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-02-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-02-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Excluded from the canonical CyBench frontier because the source uses a 35/37-task subset or does not pin the task set.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b",
+          "resource-https-www-cdn-anthropic-com-0dd865075ad3132672ee-c44de6b33233b008"
+        ],
+        "score_source_ids": [
+          "resource-https-www-cdn-anthropic-com-0dd865075ad3132672ee-c44de6b33233b008"
+        ],
+        "source": "https://www-cdn.anthropic.com/0dd865075ad3132672ee0ab40b05a53f14cf5288.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recwohnahp8uxasgz-0aced404321d52dc"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recWoHNahp8uxAsGZ"
+        ]
+      },
+      {
+        "observation_id": "obs-0-82-2f5980d5f3ae7f2a",
+        "benchmark_id": "cybench",
+        "benchmark_version_id": "cybench-canonical",
+        "model_id": "model-claude-opus-4-5-20251101-unknown-9c58f792c396dd1a",
+        "model_configuration": "claude-opus-4-5-20251101_unknown",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-5-20251101-unknown",
+        "model_family_id": "anthropic-claude-opus-4-5-20251101-unknown",
+        "model": "claude-opus-4-5-20251101_unknown",
+        "organization": "Anthropic",
+        "score": 0.82,
+        "input_score": 0.82,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cybench-metric-v1",
+        "protocol_id": "cybench-noncanonical-subset-or-unverified",
+        "task_set_id": "cybench-subset-or-unverified",
+        "metric": "Unguided % Solved",
+        "score_role": "auxiliary",
+        "score_series_id": "cybench-auxiliary-cybench-noncanonical-subset-or-unverified",
+        "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+        "model_release_date": "2025-11-24",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-11-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-11-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-assets-anthropic-com-m-64823ba7485345a7-cl-c5a73309c3caaf92"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-assets-anthropic-com-m-64823ba7485345a7-cl-c5a73309c3caaf92"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-11-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-11-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Excluded from the canonical CyBench frontier because the source uses a 35/37-task subset or does not pin the task set.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-assets-anthropic-com-m-64823ba7485345a7-cl-c5a73309c3caaf92",
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "score_source_ids": [
+          "resource-https-assets-anthropic-com-m-64823ba7485345a7-cl-c5a73309c3caaf92"
+        ],
+        "source": "https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recjjyw1k1nv8z47n-712b1d309c904629"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recJjYw1K1NV8Z47n"
+        ]
+      },
+      {
+        "observation_id": "obs-0-6-3dc73e28403d998f",
+        "benchmark_id": "cybench",
+        "benchmark_version_id": "cybench-canonical",
+        "model_id": "model-claude-sonnet-4-5-20250929-unknown-545755dffe6b52ca",
+        "model_configuration": "claude-sonnet-4-5-20250929_unknown",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-sonnet-4-5-20250929-unknown",
+        "model_family_id": "anthropic-claude-sonnet-4-5-20250929-unknown",
+        "model": "claude-sonnet-4-5-20250929_unknown",
+        "organization": "Anthropic",
+        "score": 0.6,
+        "input_score": 0.6,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cybench-metric-v1",
+        "protocol_id": "cybench-noncanonical-subset-or-unverified",
+        "task_set_id": "cybench-subset-or-unverified",
+        "metric": "Unguided % Solved",
+        "score_role": "auxiliary",
+        "score_series_id": "cybench-auxiliary-cybench-noncanonical-subset-or-unverified",
+        "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+        "model_release_date": "2025-09-29",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-09-29",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-09-29",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-assets-anthropic-com-m-64823ba7485345a7-cl-c5a73309c3caaf92"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-assets-anthropic-com-m-64823ba7485345a7-cl-c5a73309c3caaf92"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-09-29",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-09-29",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Excluded from the canonical CyBench frontier because the source uses a 35/37-task subset or does not pin the task set.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-assets-anthropic-com-m-64823ba7485345a7-cl-c5a73309c3caaf92",
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "score_source_ids": [
+          "resource-https-assets-anthropic-com-m-64823ba7485345a7-cl-c5a73309c3caaf92"
+        ],
+        "source": "https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recbfgpb81lszllev-b75a0f123633eaa0"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recbFGPB81lSzLlEv"
+        ]
+      },
+      {
+        "observation_id": "obs-0-55-59e573f4de1015e9",
+        "benchmark_id": "cybench",
+        "benchmark_version_id": "cybench-canonical",
+        "model_id": "model-claude-sonnet-4-5-20250929-ca806d04b7dc4a03",
+        "model_configuration": "claude-sonnet-4-5-20250929",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-sonnet-4-5-20250929",
+        "model_family_id": "anthropic-claude-sonnet-4-5-20250929",
+        "model": "claude-sonnet-4-5-20250929",
+        "organization": "Anthropic",
+        "score": 0.55,
+        "input_score": 0.55,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cybench-metric-v1",
+        "protocol_id": "cybench-noncanonical-subset-or-unverified",
+        "task_set_id": "cybench-subset-or-unverified",
+        "metric": "Unguided % Solved",
+        "score_role": "auxiliary",
+        "score_series_id": "cybench-auxiliary-cybench-noncanonical-subset-or-unverified",
+        "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+        "model_release_date": "2025-09-29",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-09-29",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-09-29",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-09-29",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-09-29",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Excluded from the canonical CyBench frontier because the source uses a 35/37-task subset or does not pin the task set.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "score_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "source": "https://cybench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recpakk0ysxyhjhju-4a4fab646ab5175f"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recpAkk0ysXYhjhJu"
+        ]
+      },
+      {
+        "observation_id": "obs-0-43-2c102bd59661388a",
+        "benchmark_id": "cybench",
+        "benchmark_version_id": "cybench-canonical",
+        "model_id": "model-grok-4-0709-f17b779e3adc7195",
+        "model_configuration": "grok-4-0709",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-0709",
+        "model_family_id": "xai-grok-4-0709",
+        "model": "grok-4-0709",
+        "organization": "xAI",
+        "score": 0.43,
+        "input_score": 0.43,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cybench-metric-v1",
+        "protocol_id": "cybench-noncanonical-subset-or-unverified",
+        "task_set_id": "cybench-subset-or-unverified",
+        "metric": "Unguided % Solved",
+        "score_role": "auxiliary",
+        "score_series_id": "cybench-auxiliary-cybench-noncanonical-subset-or-unverified",
+        "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+        "model_release_date": "2025-07-09",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-data-x-ai-2025-08-20-grok-4-model-card-pdf-4388a267a3b5f333"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-data-x-ai-2025-08-20-grok-4-model-card-pdf-4388a267a3b5f333"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Excluded from the canonical CyBench frontier because the source uses a 35/37-task subset or does not pin the task set.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b",
+          "resource-https-data-x-ai-2025-08-20-grok-4-model-card-pdf-4388a267a3b5f333"
+        ],
+        "score_source_ids": [
+          "resource-https-data-x-ai-2025-08-20-grok-4-model-card-pdf-4388a267a3b5f333"
+        ],
+        "source": "https://data.x.ai/2025-08-20-grok-4-model-card.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-rec77ohcmurvwgzvd-e7eadef656eacbd7"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "rec77oHCMurVWgzvd"
+        ]
+      },
+      {
+        "observation_id": "obs-0-42-6c925195ca4544da",
+        "benchmark_id": "cybench",
+        "benchmark_version_id": "cybench-canonical",
+        "model_id": "model-claude-opus-4-1-20250805-e095d1574ac335dc",
+        "model_configuration": "claude-opus-4-1-20250805",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-1-20250805",
+        "model_family_id": "anthropic-claude-opus-4-1-20250805",
+        "model": "claude-opus-4-1-20250805",
+        "organization": "Anthropic",
+        "score": 0.42,
+        "input_score": 0.42,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cybench-metric-v1",
+        "protocol_id": "cybench-noncanonical-subset-or-unverified",
+        "task_set_id": "cybench-subset-or-unverified",
+        "metric": "Unguided % Solved",
+        "score_role": "auxiliary",
+        "score_series_id": "cybench-auxiliary-cybench-noncanonical-subset-or-unverified",
+        "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+        "model_release_date": "2025-08-05",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-08-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-08-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-08-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-08-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Excluded from the canonical CyBench frontier because the source uses a 35/37-task subset or does not pin the task set.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "score_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "source": "https://cybench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-reccu9lkrki8ddspv-8cc766fd69f4f96b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recCu9LKRKI8DDSPv"
+        ]
+      },
+      {
+        "observation_id": "obs-0-39-b59160ae35ff9e0f",
+        "benchmark_id": "cybench",
+        "benchmark_version_id": "cybench-canonical",
+        "model_id": "model-grok-4-1-e1fe05274204f3b2",
+        "model_configuration": "grok-4-1",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-1",
+        "model_family_id": "xai-grok-4-1",
+        "model": "grok-4-1",
+        "organization": "xAI",
+        "score": 0.39,
+        "input_score": 0.39,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cybench-metric-v1",
+        "protocol_id": "cybench-noncanonical-subset-or-unverified",
+        "task_set_id": "cybench-subset-or-unverified",
+        "metric": "Unguided % Solved",
+        "score_role": "auxiliary",
+        "score_series_id": "cybench-auxiliary-cybench-noncanonical-subset-or-unverified",
+        "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+        "model_release_date": "2025-11-17",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-11-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-11-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-data-x-ai-2025-11-17-grok-4-1-model-card-p-5eb26fe0595440e3"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-data-x-ai-2025-11-17-grok-4-1-model-card-p-5eb26fe0595440e3"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-11-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-11-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Excluded from the canonical CyBench frontier because the source uses a 35/37-task subset or does not pin the task set.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b",
+          "resource-https-data-x-ai-2025-11-17-grok-4-1-model-card-p-5eb26fe0595440e3"
+        ],
+        "score_source_ids": [
+          "resource-https-data-x-ai-2025-11-17-grok-4-1-model-card-p-5eb26fe0595440e3"
+        ],
+        "source": "https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recd57ck0joqmhcsh-9f5b7a36f8814fbf"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recd57Ck0JOqmhCSh"
+        ]
+      },
+      {
+        "observation_id": "obs-0-38-d68321690b48128e",
+        "benchmark_id": "cybench",
+        "benchmark_version_id": "cybench-canonical",
+        "model_id": "model-claude-opus-4-20250514-7e00cf964a5f50cb",
+        "model_configuration": "claude-opus-4-20250514",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-20250514",
+        "model_family_id": "anthropic-claude-opus-4-20250514",
+        "model": "claude-opus-4-20250514",
+        "organization": "Anthropic",
+        "score": 0.38,
+        "input_score": 0.38,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cybench-metric-v1",
+        "protocol_id": "cybench-noncanonical-subset-or-unverified",
+        "task_set_id": "cybench-subset-or-unverified",
+        "metric": "Unguided % Solved",
+        "score_role": "auxiliary",
+        "score_series_id": "cybench-auxiliary-cybench-noncanonical-subset-or-unverified",
+        "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+        "model_release_date": "2025-05-22",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-05-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-05-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-05-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-05-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Excluded from the canonical CyBench frontier because the source uses a 35/37-task subset or does not pin the task set.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "score_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "source": "https://cybench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-rechs1d8fptudbn0r-31d3dc49c2687958"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recHS1d8FpTudBN0R"
+        ]
+      },
+      {
+        "observation_id": "obs-0-35-bc1e45d07bd16f32",
+        "benchmark_id": "cybench",
+        "benchmark_version_id": "cybench-canonical",
+        "model_id": "model-claude-sonnet-4-20250514-f00868816258ebe5",
+        "model_configuration": "claude-sonnet-4-20250514",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-sonnet-4-20250514",
+        "model_family_id": "anthropic-claude-sonnet-4-20250514",
+        "model": "claude-sonnet-4-20250514",
+        "organization": "Anthropic",
+        "score": 0.35,
+        "input_score": 0.35,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cybench-metric-v1",
+        "protocol_id": "cybench-noncanonical-subset-or-unverified",
+        "task_set_id": "cybench-subset-or-unverified",
+        "metric": "Unguided % Solved",
+        "score_role": "auxiliary",
+        "score_series_id": "cybench-auxiliary-cybench-noncanonical-subset-or-unverified",
+        "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+        "model_release_date": "2025-05-22",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-05-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-05-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-05-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-05-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Excluded from the canonical CyBench frontier because the source uses a 35/37-task subset or does not pin the task set.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "score_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "source": "https://cybench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recrjrfouzg28oduu-f544a40d1f2d9597"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recrjRfouZg28oDuU"
+        ]
+      },
+      {
+        "observation_id": "obs-0-3-8841be12e00d4a5a",
+        "benchmark_id": "cybench",
+        "benchmark_version_id": "cybench-canonical",
+        "model_id": "model-grok-4-fast-0200972cc36598a1",
+        "model_configuration": "grok-4-fast",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-fast",
+        "model_family_id": "xai-grok-4-fast",
+        "model": "grok-4-fast",
+        "organization": "xAI",
+        "score": 0.3,
+        "input_score": 0.3,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cybench-metric-v1",
+        "protocol_id": "cybench-noncanonical-subset-or-unverified",
+        "task_set_id": "cybench-subset-or-unverified",
+        "metric": "Unguided % Solved",
+        "score_role": "auxiliary",
+        "score_series_id": "cybench-auxiliary-cybench-noncanonical-subset-or-unverified",
+        "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+        "model_release_date": "2025-09-19",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-09-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-09-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-data-x-ai-2025-09-19-grok-4-fast-model-car-187c8ac3fd425fbb"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-data-x-ai-2025-09-19-grok-4-fast-model-car-187c8ac3fd425fbb"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-09-19",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-09-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Excluded from the canonical CyBench frontier because the source uses a 35/37-task subset or does not pin the task set.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b",
+          "resource-https-data-x-ai-2025-09-19-grok-4-fast-model-car-187c8ac3fd425fbb"
+        ],
+        "score_source_ids": [
+          "resource-https-data-x-ai-2025-09-19-grok-4-fast-model-car-187c8ac3fd425fbb"
+        ],
+        "source": "https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recj2fztltk3wb0ys-eb686735a704c851"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recJ2fztLtK3WB0yS"
+        ]
+      },
+      {
+        "observation_id": "obs-0-225-ce8c0abda6daa1e8",
+        "benchmark_id": "cybench",
+        "benchmark_version_id": "cybench-canonical",
+        "model_id": "model-o3-mini-2025-01-31-medium-6e67aefd19594ccd",
+        "model_configuration": "o3-mini-2025-01-31_medium",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-mini-2025-01-31-medium",
+        "model_family_id": "openai-o3-mini-2025-01-31-medium",
+        "model": "o3-mini-2025-01-31_medium",
+        "organization": "OpenAI",
+        "score": 0.225,
+        "input_score": 0.225,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cybench-metric-v1",
+        "protocol_id": "cybench-source-export-v1",
+        "task_set_id": "cybench-canonical",
+        "metric": "Unguided % Solved",
+        "score_role": "canonical",
+        "score_series_id": "cybench-canonical-score",
+        "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+        "model_release_date": "2025-01-31",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-01-31",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-31",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-01-31",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-31",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "score_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "source": "https://cybench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-reczdbmmrzod4svrl-b64682e9e983f35e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recZdBmmrzod4SvRl"
+        ]
+      },
+      {
+        "observation_id": "obs-0-2-0fbaccc528b88628",
+        "benchmark_id": "cybench",
+        "benchmark_version_id": "cybench-canonical",
+        "model_id": "model-claude-3-7-sonnet-20250219-d490474de83bc9ef",
+        "model_configuration": "claude-3-7-sonnet-20250219",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-7-sonnet-20250219",
+        "model_family_id": "anthropic-claude-3-7-sonnet-20250219",
+        "model": "claude-3-7-sonnet-20250219",
+        "organization": "Anthropic",
+        "score": 0.2,
+        "input_score": 0.2,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cybench-metric-v1",
+        "protocol_id": "cybench-source-export-v1",
+        "task_set_id": "cybench-canonical",
+        "metric": "Unguided % Solved",
+        "score_role": "canonical",
+        "score_series_id": "cybench-canonical-score",
+        "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+        "model_release_date": "2025-02-24",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-02-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-02-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "score_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "source": "https://cybench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recck2h4ppj3e4qcm-4a5a009530ca9a99"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "reccK2H4ppj3E4QcM"
+        ]
+      },
+      {
+        "observation_id": "obs-0-175-7b6374300828b16f",
+        "benchmark_id": "cybench",
+        "benchmark_version_id": "cybench-canonical",
+        "model_id": "model-gpt-4-5-preview-2025-02-27-7afcc945001c9d1d",
+        "model_configuration": "gpt-4.5-preview-2025-02-27",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4-5-preview-2025-02-27",
+        "model_family_id": "openai-gpt-4-5-preview-2025-02-27",
+        "model": "gpt-4.5-preview-2025-02-27",
+        "organization": "OpenAI",
+        "score": 0.175,
+        "input_score": 0.175,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cybench-metric-v1",
+        "protocol_id": "cybench-source-export-v1",
+        "task_set_id": "cybench-canonical",
+        "metric": "Unguided % Solved",
+        "score_role": "canonical",
+        "score_series_id": "cybench-canonical-score",
+        "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+        "model_release_date": "2025-02-27",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-02-27",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-27",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-02-27",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-27",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "score_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "source": "https://cybench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-rec7snjj5vatpzzms-07c81c8349d2dd51"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "rec7SnJJ5vaTPzZMS"
+        ]
+      },
+      {
+        "observation_id": "obs-0-175-0c79aba3f232baf1",
+        "benchmark_id": "cybench",
+        "benchmark_version_id": "cybench-canonical",
+        "model_id": "model-claude-3-5-sonnet-20240620-f30b888514e2c660",
+        "model_configuration": "claude-3-5-sonnet-20240620",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet-20240620",
+        "model_family_id": "anthropic-claude-3-5-sonnet-20240620",
+        "model": "claude-3-5-sonnet-20240620",
+        "organization": "Anthropic",
+        "score": 0.175,
+        "input_score": 0.175,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cybench-metric-v1",
+        "protocol_id": "cybench-source-export-v1",
+        "task_set_id": "cybench-canonical",
+        "metric": "Unguided % Solved",
+        "score_role": "canonical",
+        "score_series_id": "cybench-canonical-score",
+        "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+        "model_release_date": "2024-06-20",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-06-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-06-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-06-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "score_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "source": "https://cybench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recndznkntpqumnmp-ff25a80dcde77595"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recnDZnKntPQUMNMP"
+        ]
+      },
+      {
+        "observation_id": "obs-0-125-861bdafd4b0c0b47",
+        "benchmark_id": "cybench",
+        "benchmark_version_id": "cybench-canonical",
+        "model_id": "model-gpt-4o-2024-11-20-a2c62b9cadad1de5",
+        "model_configuration": "gpt-4o-2024-11-20",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o-2024-11-20",
+        "model_family_id": "openai-gpt-4o-2024-11-20",
+        "model": "gpt-4o-2024-11-20",
+        "organization": "OpenAI",
+        "score": 0.125,
+        "input_score": 0.125,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cybench-metric-v1",
+        "protocol_id": "cybench-source-export-v1",
+        "task_set_id": "cybench-canonical",
+        "metric": "Unguided % Solved",
+        "score_role": "canonical",
+        "score_series_id": "cybench-canonical-score",
+        "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+        "model_release_date": "2024-11-20",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-11-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-11-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-11-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-11-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "score_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "source": "https://cybench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-reca4ghozagjnaiqp-d894a7340c2fc6e4"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "reca4ghOZAGJnaIQP"
+        ]
+      },
+      {
+        "observation_id": "obs-0-1-2aafb36144202b6d",
+        "benchmark_id": "cybench",
+        "benchmark_version_id": "cybench-canonical",
+        "model_id": "model-claude-3-opus-20240229-b954e559a788a8b4",
+        "model_configuration": "claude-3-opus-20240229",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-opus-20240229",
+        "model_family_id": "anthropic-claude-3-opus-20240229",
+        "model": "claude-3-opus-20240229",
+        "organization": "Anthropic",
+        "score": 0.1,
+        "input_score": 0.1,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cybench-metric-v1",
+        "protocol_id": "cybench-source-export-v1",
+        "task_set_id": "cybench-canonical",
+        "metric": "Unguided % Solved",
+        "score_role": "canonical",
+        "score_series_id": "cybench-canonical-score",
+        "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+        "model_release_date": "2024-02-29",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-02-29",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-02-29",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-02-29",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-02-29",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "score_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "source": "https://cybench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recbeou9mpdvdjb0j-f3f183eb0729decf"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recBEOU9mpDvDjB0J"
+        ]
+      },
+      {
+        "observation_id": "obs-0-1-a808772a18c24190",
+        "benchmark_id": "cybench",
+        "benchmark_version_id": "cybench-canonical",
+        "model_id": "model-o1-mini-2024-09-12-medium-3fce6d3cf4757001",
+        "model_configuration": "o1-mini-2024-09-12_medium",
+        "model_identity_organization": "openai",
+        "model_label_id": "o1-mini-2024-09-12-medium",
+        "model_family_id": "openai-o1-mini-2024-09-12-medium",
+        "model": "o1-mini-2024-09-12_medium",
+        "organization": "OpenAI",
+        "score": 0.1,
+        "input_score": 0.1,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cybench-metric-v1",
+        "protocol_id": "cybench-source-export-v1",
+        "task_set_id": "cybench-canonical",
+        "metric": "Unguided % Solved",
+        "score_role": "canonical",
+        "score_series_id": "cybench-canonical-score",
+        "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+        "model_release_date": "2024-09-12",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-09-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-09-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-09-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-09-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "score_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "source": "https://cybench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recddu0wr7ucjeiln-6cc10db84159aadb"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recDdu0Wr7UcjeILN"
+        ]
+      },
+      {
+        "observation_id": "obs-0-1-9f2abcad1f53fcaf",
+        "benchmark_id": "cybench",
+        "benchmark_version_id": "cybench-canonical",
+        "model_id": "model-o1-preview-2024-09-12-ac99792a0e4a182a",
+        "model_configuration": "o1-preview-2024-09-12",
+        "model_identity_organization": "openai",
+        "model_label_id": "o1-preview-2024-09-12",
+        "model_family_id": "openai-o1-preview-2024-09-12",
+        "model": "o1-preview-2024-09-12",
+        "organization": "OpenAI",
+        "score": 0.1,
+        "input_score": 0.1,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cybench-metric-v1",
+        "protocol_id": "cybench-source-export-v1",
+        "task_set_id": "cybench-canonical",
+        "metric": "Unguided % Solved",
+        "score_role": "canonical",
+        "score_series_id": "cybench-canonical-score",
+        "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+        "model_release_date": "2024-09-12",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-09-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-09-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-09-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-09-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "score_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "source": "https://cybench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recregfmnk38cjfjn-cc3366f234a4a5fa"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recrEGfmnK38cjFjn"
+        ]
+      },
+      {
+        "observation_id": "obs-0-075-e57ec3fef04dfe24",
+        "benchmark_id": "cybench",
+        "benchmark_version_id": "cybench-canonical",
+        "model_id": "model-mixtral-8x22b-instruct-v0-1-6f468ce53d313ab4",
+        "model_configuration": "Mixtral-8x22B-Instruct-v0.1",
+        "model_identity_organization": "mistral-ai",
+        "model_label_id": "mixtral-8x22b-instruct-v0-1",
+        "model_family_id": "mistral-ai-mixtral-8x22b-instruct-v0-1",
+        "model": "Mixtral-8x22B-Instruct-v0.1",
+        "organization": "Mistral AI",
+        "score": 0.075,
+        "input_score": 0.075,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cybench-metric-v1",
+        "protocol_id": "cybench-source-export-v1",
+        "task_set_id": "cybench-canonical",
+        "metric": "Unguided % Solved",
+        "score_role": "canonical",
+        "score_series_id": "cybench-canonical-score",
+        "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+        "model_release_date": "2024-04-17",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-04-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-04-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-04-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-04-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "score_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "source": "https://cybench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recfsrheuwg1wunwf-2b454bbc5705c838"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recFsRheuwg1wunwf"
+        ]
+      },
+      {
+        "observation_id": "obs-0-075-11ecf7b9121af8d6",
+        "benchmark_id": "cybench",
+        "benchmark_version_id": "cybench-canonical",
+        "model_id": "model-llama-3-1-405b-instruct-6a475483b70c041c",
+        "model_configuration": "Llama-3.1-405B-Instruct",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama-3-1-405b-instruct",
+        "model_family_id": "meta-ai-llama-3-1-405b-instruct",
+        "model": "Llama-3.1-405B-Instruct",
+        "organization": "Meta AI",
+        "score": 0.075,
+        "input_score": 0.075,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cybench-metric-v1",
+        "protocol_id": "cybench-source-export-v1",
+        "task_set_id": "cybench-canonical",
+        "metric": "Unguided % Solved",
+        "score_role": "canonical",
+        "score_series_id": "cybench-canonical-score",
+        "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+        "model_release_date": "2024-07-23",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-07-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-07-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-07-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-07-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "score_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "source": "https://cybench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-rechtqdbjxmoru18g-a551da9616061e51"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recHTQDbjXmORU18G"
+        ]
+      },
+      {
+        "observation_id": "obs-0-075-59e5d0c37e20cc77",
+        "benchmark_id": "cybench",
+        "benchmark_version_id": "cybench-canonical",
+        "model_id": "model-gemini-1-5-pro-001-feb24-cac715b4a07e87ad",
+        "model_configuration": "gemini-1.5-pro-001-feb24",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-1-5-pro-001-feb24",
+        "model_family_id": "google-deepmind-gemini-1-5-pro-001-feb24",
+        "model": "gemini-1.5-pro-001-feb24",
+        "organization": "Google DeepMind",
+        "score": 0.075,
+        "input_score": 0.075,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cybench-metric-v1",
+        "protocol_id": "cybench-source-export-v1",
+        "task_set_id": "cybench-canonical",
+        "metric": "Unguided % Solved",
+        "score_role": "canonical",
+        "score_series_id": "cybench-canonical-score",
+        "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+        "model_release_date": "2024-02-15",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-02-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-02-15",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-02-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-02-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "score_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "source": "https://cybench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-reco8bwkr3vp7mw4o-6475201e591fea19"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "reco8bWKr3VP7mW4o"
+        ]
+      },
+      {
+        "observation_id": "obs-0-05-949fbc0258cd093e",
+        "benchmark_id": "cybench",
+        "benchmark_version_id": "cybench-canonical",
+        "model_id": "model-meta-llama-3-70b-instruct-adb67a47049b509a",
+        "model_configuration": "Meta-Llama-3-70B-Instruct",
+        "model_identity_organization": "meta",
+        "model_label_id": "meta-llama-3-70b-instruct",
+        "model_family_id": "meta-ai-meta-llama-3-70b-instruct",
+        "model": "Meta-Llama-3-70B-Instruct",
+        "organization": "Meta AI",
+        "score": 0.05,
+        "input_score": 0.05,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cybench-metric-v1",
+        "protocol_id": "cybench-source-export-v1",
+        "task_set_id": "cybench-canonical",
+        "metric": "Unguided % Solved",
+        "score_role": "canonical",
+        "score_series_id": "cybench-canonical-score",
+        "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+        "model_release_date": "2024-04-18",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-04-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-04-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-04-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-04-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "score_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "source": "https://cybench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recquzjd97hyzzn2f-b341a70217aec1b7"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recqUzjd97hyzZN2f"
+        ]
+      },
+      {
+        "observation_id": "obs-1-07e512f3d3c863de",
+        "benchmark_id": "cybench",
+        "benchmark_version_id": "cybench-canonical",
+        "model_id": "model-claude-mythos-preview-f731674bd5223354",
+        "model_configuration": "claude-mythos-preview",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-mythos-preview",
+        "model_family_id": "anthropic-claude-mythos-preview",
+        "model": "claude-mythos-preview",
+        "organization": "Anthropic",
+        "score": 1.0,
+        "input_score": 1.0,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cybench-metric-v1",
+        "protocol_id": "cybench-noncanonical-subset-or-unverified",
+        "task_set_id": "cybench-subset-or-unverified",
+        "metric": "Unguided % Solved",
+        "score_role": "auxiliary",
+        "score_series_id": "cybench-auxiliary-cybench-noncanonical-subset-or-unverified",
+        "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+        "model_release_date": "2026-04-07",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-04-07",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-04-07",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-07",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Excluded from the canonical CyBench frontier because the source uses a 35/37-task subset or does not pin the task set.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "score_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "source": "https://cybench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-country-united-states-of-america-model-version-c-f755c7c7889584e8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-96-0f6d9cd176fae685",
+        "benchmark_id": "cybench",
+        "benchmark_version_id": "cybench-canonical",
+        "model_id": "model-claude-opus-4-7-20260416-3a8add611f607215",
+        "model_configuration": "claude-opus-4-7-20260416",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-7-20260416",
+        "model_family_id": "anthropic-claude-opus-4-7-20260416",
+        "model": "claude-opus-4-7-20260416",
+        "organization": "Anthropic",
+        "score": 0.96,
+        "input_score": 0.96,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cybench-metric-v1",
+        "protocol_id": "cybench-noncanonical-subset-or-unverified",
+        "task_set_id": "cybench-subset-or-unverified",
+        "metric": "Unguided % Solved",
+        "score_role": "auxiliary",
+        "score_series_id": "cybench-auxiliary-cybench-noncanonical-subset-or-unverified",
+        "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+        "model_release_date": "2026-04-16",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-04-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Excluded from the canonical CyBench frontier because the source uses a 35/37-task subset or does not pin the task set.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "score_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "source": "https://cybench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-country-united-states-of-america-model-version-c-d3171f451bfde9f2"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-175-0c79aba3f232baf1",
+        "benchmark_id": "cybench",
+        "benchmark_version_id": "cybench-canonical",
+        "model_id": "model-claude-3-5-sonnet-20240620-f30b888514e2c660",
+        "model_configuration": "claude-3-5-sonnet-20240620",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet-20240620",
+        "model_family_id": "anthropic-claude-3-5-sonnet-20240620",
+        "model": "claude-3-5-sonnet-20240620",
+        "organization": "Anthropic",
+        "score": 0.175,
+        "input_score": 0.175,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cybench-metric-v1",
+        "protocol_id": "cybench-source-export-v1",
+        "task_set_id": "cybench-canonical",
+        "metric": "Unguided % Solved",
+        "score_role": "canonical",
+        "score_series_id": "cybench-canonical-score",
+        "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+        "model_release_date": "2024-06-20",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-06-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-08-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-06-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "score_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "source": "https://cybench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recndznkntpqumnmp-ff25a80dcde77595"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recnDZnKntPQUMNMP"
+        ],
+        "plot_date": "2024-08-01",
+        "frontier_observation_ids": [
+          "obs-0-05-949fbc0258cd093e",
+          "obs-0-075-59e5d0c37e20cc77",
+          "obs-0-075-11ecf7b9121af8d6",
+          "obs-0-075-e57ec3fef04dfe24",
+          "obs-0-1-2aafb36144202b6d",
+          "obs-0-175-0c79aba3f232baf1"
+        ]
+      },
+      {
+        "observation_id": "obs-0-225-ce8c0abda6daa1e8",
+        "benchmark_id": "cybench",
+        "benchmark_version_id": "cybench-canonical",
+        "model_id": "model-o3-mini-2025-01-31-medium-6e67aefd19594ccd",
+        "model_configuration": "o3-mini-2025-01-31_medium",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-mini-2025-01-31-medium",
+        "model_family_id": "openai-o3-mini-2025-01-31-medium",
+        "model": "o3-mini-2025-01-31_medium",
+        "organization": "OpenAI",
+        "score": 0.225,
+        "input_score": 0.225,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cybench-metric-v1",
+        "protocol_id": "cybench-source-export-v1",
+        "task_set_id": "cybench-canonical",
+        "metric": "Unguided % Solved",
+        "score_role": "canonical",
+        "score_series_id": "cybench-canonical-score",
+        "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+        "model_release_date": "2025-01-31",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-01-31",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-31",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-01-31",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-31",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "score_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "source": "https://cybench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-reczdbmmrzod4svrl-b64682e9e983f35e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recZdBmmrzod4SvRl"
+        ],
+        "plot_date": "2025-01-31",
+        "frontier_observation_ids": [
+          "obs-0-225-ce8c0abda6daa1e8"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-175-0c79aba3f232baf1",
+        "benchmark_id": "cybench",
+        "benchmark_version_id": "cybench-canonical",
+        "model_id": "model-claude-3-5-sonnet-20240620-f30b888514e2c660",
+        "model_configuration": "claude-3-5-sonnet-20240620",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet-20240620",
+        "model_family_id": "anthropic-claude-3-5-sonnet-20240620",
+        "model": "claude-3-5-sonnet-20240620",
+        "organization": "Anthropic",
+        "score": 0.175,
+        "input_score": 0.175,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cybench-metric-v1",
+        "protocol_id": "cybench-source-export-v1",
+        "task_set_id": "cybench-canonical",
+        "metric": "Unguided % Solved",
+        "score_role": "canonical",
+        "score_series_id": "cybench-canonical-score",
+        "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+        "model_release_date": "2024-06-20",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-06-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-08-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-06-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "score_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "source": "https://cybench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recndznkntpqumnmp-ff25a80dcde77595"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recnDZnKntPQUMNMP"
+        ],
+        "plot_date": "2024-08-01",
+        "frontier_observation_ids": [
+          "obs-0-05-949fbc0258cd093e",
+          "obs-0-075-59e5d0c37e20cc77",
+          "obs-0-075-11ecf7b9121af8d6",
+          "obs-0-075-e57ec3fef04dfe24",
+          "obs-0-1-2aafb36144202b6d",
+          "obs-0-175-0c79aba3f232baf1"
+        ]
+      },
+      {
+        "observation_id": "obs-0-225-ce8c0abda6daa1e8",
+        "benchmark_id": "cybench",
+        "benchmark_version_id": "cybench-canonical",
+        "model_id": "model-o3-mini-2025-01-31-medium-6e67aefd19594ccd",
+        "model_configuration": "o3-mini-2025-01-31_medium",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-mini-2025-01-31-medium",
+        "model_family_id": "openai-o3-mini-2025-01-31-medium",
+        "model": "o3-mini-2025-01-31_medium",
+        "organization": "OpenAI",
+        "score": 0.225,
+        "input_score": 0.225,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cybench-metric-v1",
+        "protocol_id": "cybench-source-export-v1",
+        "task_set_id": "cybench-canonical",
+        "metric": "Unguided % Solved",
+        "score_role": "canonical",
+        "score_series_id": "cybench-canonical-score",
+        "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+        "model_release_date": "2025-01-31",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-01-31",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-31",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-01-31",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-31",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "score_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "source": "https://cybench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-reczdbmmrzod4svrl-b64682e9e983f35e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recZdBmmrzod4SvRl"
+        ],
+        "plot_date": "2025-01-31",
+        "frontier_observation_ids": [
+          "obs-0-225-ce8c0abda6daa1e8"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-175-0c79aba3f232baf1",
+        "benchmark_id": "cybench",
+        "benchmark_version_id": "cybench-canonical",
+        "model_id": "model-claude-3-5-sonnet-20240620-f30b888514e2c660",
+        "model_configuration": "claude-3-5-sonnet-20240620",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet-20240620",
+        "model_family_id": "anthropic-claude-3-5-sonnet-20240620",
+        "model": "claude-3-5-sonnet-20240620",
+        "organization": "Anthropic",
+        "score": 0.175,
+        "input_score": 0.175,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cybench-metric-v1",
+        "protocol_id": "cybench-source-export-v1",
+        "task_set_id": "cybench-canonical",
+        "metric": "Unguided % Solved",
+        "score_role": "canonical",
+        "score_series_id": "cybench-canonical-score",
+        "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+        "model_release_date": "2024-06-20",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-06-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-08-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-06-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "score_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "source": "https://cybench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recndznkntpqumnmp-ff25a80dcde77595"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recnDZnKntPQUMNMP"
+        ],
+        "plot_date": "2024-08-01",
+        "frontier_observation_ids": [
+          "obs-0-05-949fbc0258cd093e",
+          "obs-0-075-59e5d0c37e20cc77",
+          "obs-0-075-11ecf7b9121af8d6",
+          "obs-0-075-e57ec3fef04dfe24",
+          "obs-0-1-2aafb36144202b6d",
+          "obs-0-175-0c79aba3f232baf1"
+        ]
+      },
+      {
+        "observation_id": "obs-0-225-ce8c0abda6daa1e8",
+        "benchmark_id": "cybench",
+        "benchmark_version_id": "cybench-canonical",
+        "model_id": "model-o3-mini-2025-01-31-medium-6e67aefd19594ccd",
+        "model_configuration": "o3-mini-2025-01-31_medium",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-mini-2025-01-31-medium",
+        "model_family_id": "openai-o3-mini-2025-01-31-medium",
+        "model": "o3-mini-2025-01-31_medium",
+        "organization": "OpenAI",
+        "score": 0.225,
+        "input_score": 0.225,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cybench-metric-v1",
+        "protocol_id": "cybench-source-export-v1",
+        "task_set_id": "cybench-canonical",
+        "metric": "Unguided % Solved",
+        "score_role": "canonical",
+        "score_series_id": "cybench-canonical-score",
+        "evaluation_protocol": "CyBench official 40-task CTF benchmark. Results from 35-task, 37-task, or unverified task-set variants remain canonical provenance observations but are excluded from the primary capability frontier.",
+        "model_release_date": "2025-01-31",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-01-31",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-31",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-01-31",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-31",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "score_source_ids": [
+          "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+        ],
+        "source": "https://cybench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-reczdbmmrzod4svrl-b64682e9e983f35e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recZdBmmrzod4SvRl"
+        ],
+        "plot_date": "2025-01-31",
+        "frontier_observation_ids": [
+          "obs-0-225-ce8c0abda6daa1e8"
+        ]
+      }
+    ],
+    "reported_frontier": [],
+    "historical_frontier": [],
+    "retrospective_observations": [],
+    "observed_frontier": 0.225,
+    "capability_frontier_value": 0.225,
+    "reported_frontier_value": null,
+    "current_frontier": 0.225,
+    "normalized_progress": 0.225,
+    "normalized_headroom": 0.775,
+    "threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 766
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 766
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 766
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 766
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 766
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 766
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T80": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T90": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      }
+    },
+    "velocity_180d": 0.008316939890710386,
+    "capability_velocity_180d": 0.008316939890710386,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.7142857142857143,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "Meta",
+        "xAI"
+      ],
+      "panel_size": 7,
+      "status": "high"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-cybench-github-io-6f82df1df4ae0c1b"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "unknown_public_dates",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": true,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": true,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

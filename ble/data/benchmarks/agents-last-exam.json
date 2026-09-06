@@ -1,0 +1,1582 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "agents-last-exam",
+    "name": "Agents' Last Exam (ALE-V1)",
+    "domain": "General agent tasks",
+    "release": "2026-06-03",
+    "source": "https://agents-last-exam.org/leaderboard",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Agent",
+    "tags": [
+      "long-horizon",
+      "professional work",
+      "verifiable"
+    ],
+    "metric": "Pass Rate",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "agents-last-exam-metric-v1",
+    "protocol_id": "agents-last-exam-source-export-v1",
+    "canonical_score": {
+      "series_id": "agents-last-exam-canonical-score",
+      "role": "canonical",
+      "metric_id": "agents-last-exam-metric-v1",
+      "metric_name": "Pass Rate",
+      "protocol_id": "agents-last-exam-source-export-v1",
+      "task_set_id": "agents-last-exam-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "agents-last-exam-canonical",
+    "summary": {
+      "en": "Agents' Last Exam evaluates agents on long-horizon, economically valuable professional workflows with verifiable outcomes.",
+      "zh": "Agents' Last Exam \u8bc4\u4f30 agent \u80fd\u4e0d\u80fd\u5b8c\u6210\u6709\u660e\u786e\u9a8c\u8bc1\u7ed3\u679c\u3001\u8017\u65f6\u8f83\u957f\u4e14\u8d34\u8fd1\u771f\u5b9e\u5de5\u4f5c\u7684\u4e13\u4e1a\u4efb\u52a1\u3002"
+    },
+    "task_format": {
+      "en": "An agent works through a real digital-work task using the required tools and environment, then submits an outcome that can be checked.",
+      "zh": "agent \u4f1a\u5728\u6307\u5b9a\u5de5\u5177\u548c\u73af\u5883\u4e2d\u5b8c\u6210\u771f\u5b9e\u7684\u6570\u5b57\u5de5\u4f5c\u4efb\u52a1\uff0c\u6700\u540e\u63d0\u4ea4\u4e00\u4e2a\u53ef\u4ee5\u88ab\u9a8c\u8bc1\u7684\u7ed3\u679c\u3002"
+    },
+    "scoring": {
+      "metric_name": "Pass rate",
+      "explanation": {
+        "en": "Pass rate is the share of task runs that earn a perfect score. The leaderboard also reports an average partial-credit score separately.",
+        "zh": "Pass rate \u662f\u62ff\u5230\u6ee1\u5206\u7684 task run \u5360\u6bd4\u3002leaderboard \u8fd8\u4f1a\u5355\u72ec\u62a5\u544a\u5305\u542b\u90e8\u5206\u5f97\u5206\u7684\u5e73\u5747 score\u3002"
+      }
+    },
+    "evaluation_target": "environment_outcome",
+    "observation_count": 9,
+    "evidence_record_count": 9,
+    "observations": [
+      {
+        "observation_id": "obs-0-306-66443091d670df53",
+        "benchmark_id": "agents-last-exam",
+        "benchmark_version_id": "agents-last-exam-canonical",
+        "model_id": "model-gpt-5-6-sol-5f1ffa469585aab8",
+        "model_configuration": "gpt-5-6-sol",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "gpt-5-6-sol",
+        "organization": "OpenAI",
+        "score": 0.306,
+        "input_score": 0.306,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "agents-last-exam-metric-v1",
+        "protocol_id": "agents-last-exam-source-export-v1",
+        "task_set_id": "agents-last-exam-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "agents-last-exam-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "score_source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "source": "https://agents-last-exam.org/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-gpt-5-6-sol-notes-ale-v1-overall-best-per-t-2e5309fbf2791fc9"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-593-e508d94f41459d25",
+        "benchmark_id": "agents-last-exam",
+        "benchmark_version_id": "agents-last-exam-canonical",
+        "model_id": "model-gpt-6-astra-c94798ba994c2800",
+        "model_configuration": "GPT-6 Astra",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-astra",
+        "model_family_id": "openai-gpt-6-astra",
+        "model": "GPT-6 Astra",
+        "organization": "OpenAI",
+        "score": 0.593,
+        "input_score": 0.593,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "agents-last-exam-metric-v1",
+        "protocol_id": "agents-last-exam-source-export-v1",
+        "task_set_id": "agents-last-exam-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "agents-last-exam-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-09-03",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-09-03",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-03",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+              "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-09-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-03",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca",
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+        ],
+        "score_source_ids": [
+          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+        ],
+        "source": "https://openai.com/index/gpt-6-astra",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-gpt-6-astra-notes-public-result-computer-us-0fdf4bfab03eda67"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-296-54adcb1d29bdda4a",
+        "benchmark_id": "agents-last-exam",
+        "benchmark_version_id": "agents-last-exam-canonical",
+        "model_id": "model-gpt-5-6-luna-ed419d9cd859f2ad",
+        "model_configuration": "gpt-5-6-luna",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-luna",
+        "model_family_id": "openai-gpt-5-6-luna",
+        "model": "gpt-5-6-luna",
+        "organization": "OpenAI",
+        "score": 0.296,
+        "input_score": 0.296,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "agents-last-exam-metric-v1",
+        "protocol_id": "agents-last-exam-source-export-v1",
+        "task_set_id": "agents-last-exam-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "agents-last-exam-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "score_source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "source": "https://agents-last-exam.org/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-gpt-5-6-luna-notes-ale-v1-overall-best-per--6b0d878240d86148"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-283-d86502933ac6fd4b",
+        "benchmark_id": "agents-last-exam",
+        "benchmark_version_id": "agents-last-exam-canonical",
+        "model_id": "model-kimi-k3-bb4ece99ecd683ee",
+        "model_configuration": "Kimi K3",
+        "model_identity_organization": "moonshot",
+        "model_label_id": "kimi-k3",
+        "model_family_id": "moonshot-kimi-k3",
+        "model": "Kimi K3",
+        "organization": "Moonshot",
+        "score": 0.283,
+        "input_score": 0.283,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "agents-last-exam-metric-v1",
+        "protocol_id": "agents-last-exam-source-export-v1",
+        "task_set_id": "agents-last-exam-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "agents-last-exam-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-16",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-07-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "score_source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "source": "https://agents-last-exam.org/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-kimi-k3-notes-ale-v1-overall-best-per-task--63111a274a9cd94e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-28-86eef5750340baaa",
+        "benchmark_id": "agents-last-exam",
+        "benchmark_version_id": "agents-last-exam-canonical",
+        "model_id": "model-gpt-5-6-terra-02159a9fdca39381",
+        "model_configuration": "gpt-5-6-terra",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-terra",
+        "model_family_id": "openai-gpt-5-6-terra",
+        "model": "gpt-5-6-terra",
+        "organization": "OpenAI",
+        "score": 0.28,
+        "input_score": 0.28,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "agents-last-exam-metric-v1",
+        "protocol_id": "agents-last-exam-source-export-v1",
+        "task_set_id": "agents-last-exam-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "agents-last-exam-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "score_source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "source": "https://agents-last-exam.org/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-gpt-5-6-terra-notes-ale-v1-overall-best-per-2aecf6c8945ad02f"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-27-9727d45a876211ca",
+        "benchmark_id": "agents-last-exam",
+        "benchmark_version_id": "agents-last-exam-canonical",
+        "model_id": "model-qwen-3-8-acfba633fd45cd6b",
+        "model_configuration": "qwen-3-8",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen-3-8",
+        "model_family_id": "alibaba-qwen-3-8",
+        "model": "qwen-3-8",
+        "organization": "Alibaba",
+        "score": 0.27,
+        "input_score": 0.27,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "agents-last-exam-metric-v1",
+        "protocol_id": "agents-last-exam-source-export-v1",
+        "task_set_id": "agents-last-exam-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "agents-last-exam-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-22",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-04-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-04-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "score_source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "source": "https://agents-last-exam.org/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-qwen-3-8-notes-ale-v1-overall-best-per-task-39c167f3b9ace91b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-27-b43de0023d43fb29",
+        "benchmark_id": "agents-last-exam",
+        "benchmark_version_id": "agents-last-exam-canonical",
+        "model_id": "model-grok-4-5-1314910810365ee6",
+        "model_configuration": "Grok 4.5",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-5",
+        "model_family_id": "xai-grok-4-5",
+        "model": "Grok 4.5",
+        "organization": "xAI",
+        "score": 0.27,
+        "input_score": 0.27,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "agents-last-exam-metric-v1",
+        "protocol_id": "agents-last-exam-source-export-v1",
+        "task_set_id": "agents-last-exam-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "agents-last-exam-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-08",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-08",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-08",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-07-08",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-08",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "score_source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "source": "https://agents-last-exam.org/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-grok-4-5-notes-ale-v1-overall-best-per-task-27bb72ad9dd56281"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-27-f04265efd2b16d40",
+        "benchmark_id": "agents-last-exam",
+        "benchmark_version_id": "agents-last-exam-canonical",
+        "model_id": "model-claude-opus-4-8-4b678e58822d2ea5",
+        "model_configuration": "Claude Opus 4.8",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-8",
+        "model_family_id": "anthropic-claude-opus-4-8",
+        "model": "Claude Opus 4.8",
+        "organization": "Anthropic",
+        "score": 0.27,
+        "input_score": 0.27,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "agents-last-exam-metric-v1",
+        "protocol_id": "agents-last-exam-source-export-v1",
+        "task_set_id": "agents-last-exam-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "agents-last-exam-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-05-28",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-05-28",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-05-28",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-05-28",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-05-28",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "score_source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "source": "https://agents-last-exam.org/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-claude-opus-4-8-notes-ale-v1-overall-best-p-a67d65526e39f506"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-257-5d5648a4fd663426",
+        "benchmark_id": "agents-last-exam",
+        "benchmark_version_id": "agents-last-exam-canonical",
+        "model_id": "model-claude-fable-5-7a585cedfd18fe24",
+        "model_configuration": "Claude Fable 5",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5",
+        "model_family_id": "anthropic-claude-fable-5",
+        "model": "Claude Fable 5",
+        "organization": "Anthropic",
+        "score": 0.257,
+        "input_score": 0.257,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "agents-last-exam-metric-v1",
+        "protocol_id": "agents-last-exam-source-export-v1",
+        "task_set_id": "agents-last-exam-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "agents-last-exam-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-06-09",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-06-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-06-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-06-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-06-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "score_source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "source": "https://agents-last-exam.org/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-claude-fable-5-notes-ale-v1-overall-best-pe-5ed5a9c75872bfd6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-27-9727d45a876211ca",
+        "benchmark_id": "agents-last-exam",
+        "benchmark_version_id": "agents-last-exam-canonical",
+        "model_id": "model-qwen-3-8-acfba633fd45cd6b",
+        "model_configuration": "qwen-3-8",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen-3-8",
+        "model_family_id": "alibaba-qwen-3-8",
+        "model": "qwen-3-8",
+        "organization": "Alibaba",
+        "score": 0.27,
+        "input_score": 0.27,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "agents-last-exam-metric-v1",
+        "protocol_id": "agents-last-exam-source-export-v1",
+        "task_set_id": "agents-last-exam-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "agents-last-exam-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-22",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-04-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-06-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "score_source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "source": "https://agents-last-exam.org/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-qwen-3-8-notes-ale-v1-overall-best-per-task-39c167f3b9ace91b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2026-06-03",
+        "frontier_observation_ids": [
+          "obs-0-27-f04265efd2b16d40",
+          "obs-0-27-9727d45a876211ca"
+        ]
+      },
+      {
+        "observation_id": "obs-0-306-66443091d670df53",
+        "benchmark_id": "agents-last-exam",
+        "benchmark_version_id": "agents-last-exam-canonical",
+        "model_id": "model-gpt-5-6-sol-5f1ffa469585aab8",
+        "model_configuration": "gpt-5-6-sol",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "gpt-5-6-sol",
+        "organization": "OpenAI",
+        "score": 0.306,
+        "input_score": 0.306,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "agents-last-exam-metric-v1",
+        "protocol_id": "agents-last-exam-source-export-v1",
+        "task_set_id": "agents-last-exam-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "agents-last-exam-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "score_source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "source": "https://agents-last-exam.org/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-gpt-5-6-sol-notes-ale-v1-overall-best-per-t-2e5309fbf2791fc9"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2026-07-09",
+        "frontier_observation_ids": [
+          "obs-0-28-86eef5750340baaa",
+          "obs-0-296-54adcb1d29bdda4a",
+          "obs-0-306-66443091d670df53"
+        ]
+      },
+      {
+        "observation_id": "obs-0-593-e508d94f41459d25",
+        "benchmark_id": "agents-last-exam",
+        "benchmark_version_id": "agents-last-exam-canonical",
+        "model_id": "model-gpt-6-astra-c94798ba994c2800",
+        "model_configuration": "GPT-6 Astra",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-astra",
+        "model_family_id": "openai-gpt-6-astra",
+        "model": "GPT-6 Astra",
+        "organization": "OpenAI",
+        "score": 0.593,
+        "input_score": 0.593,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "agents-last-exam-metric-v1",
+        "protocol_id": "agents-last-exam-source-export-v1",
+        "task_set_id": "agents-last-exam-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "agents-last-exam-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-09-03",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-09-03",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-03",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+              "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-09-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-03",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca",
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+        ],
+        "score_source_ids": [
+          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+        ],
+        "source": "https://openai.com/index/gpt-6-astra",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-gpt-6-astra-notes-public-result-computer-us-0fdf4bfab03eda67"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2026-09-03",
+        "frontier_observation_ids": [
+          "obs-0-593-e508d94f41459d25"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-27-9727d45a876211ca",
+        "benchmark_id": "agents-last-exam",
+        "benchmark_version_id": "agents-last-exam-canonical",
+        "model_id": "model-qwen-3-8-acfba633fd45cd6b",
+        "model_configuration": "qwen-3-8",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen-3-8",
+        "model_family_id": "alibaba-qwen-3-8",
+        "model": "qwen-3-8",
+        "organization": "Alibaba",
+        "score": 0.27,
+        "input_score": 0.27,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "agents-last-exam-metric-v1",
+        "protocol_id": "agents-last-exam-source-export-v1",
+        "task_set_id": "agents-last-exam-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "agents-last-exam-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-22",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-04-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-06-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "score_source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "source": "https://agents-last-exam.org/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-qwen-3-8-notes-ale-v1-overall-best-per-task-39c167f3b9ace91b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2026-06-03",
+        "frontier_observation_ids": [
+          "obs-0-27-f04265efd2b16d40",
+          "obs-0-27-9727d45a876211ca"
+        ]
+      },
+      {
+        "observation_id": "obs-0-306-66443091d670df53",
+        "benchmark_id": "agents-last-exam",
+        "benchmark_version_id": "agents-last-exam-canonical",
+        "model_id": "model-gpt-5-6-sol-5f1ffa469585aab8",
+        "model_configuration": "gpt-5-6-sol",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "gpt-5-6-sol",
+        "organization": "OpenAI",
+        "score": 0.306,
+        "input_score": 0.306,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "agents-last-exam-metric-v1",
+        "protocol_id": "agents-last-exam-source-export-v1",
+        "task_set_id": "agents-last-exam-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "agents-last-exam-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "score_source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "source": "https://agents-last-exam.org/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-gpt-5-6-sol-notes-ale-v1-overall-best-per-t-2e5309fbf2791fc9"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2026-07-09",
+        "frontier_observation_ids": [
+          "obs-0-28-86eef5750340baaa",
+          "obs-0-296-54adcb1d29bdda4a",
+          "obs-0-306-66443091d670df53"
+        ]
+      },
+      {
+        "observation_id": "obs-0-593-e508d94f41459d25",
+        "benchmark_id": "agents-last-exam",
+        "benchmark_version_id": "agents-last-exam-canonical",
+        "model_id": "model-gpt-6-astra-c94798ba994c2800",
+        "model_configuration": "GPT-6 Astra",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-astra",
+        "model_family_id": "openai-gpt-6-astra",
+        "model": "GPT-6 Astra",
+        "organization": "OpenAI",
+        "score": 0.593,
+        "input_score": 0.593,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "agents-last-exam-metric-v1",
+        "protocol_id": "agents-last-exam-source-export-v1",
+        "task_set_id": "agents-last-exam-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "agents-last-exam-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-09-03",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-09-03",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-03",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+              "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-09-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-03",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca",
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+        ],
+        "score_source_ids": [
+          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+        ],
+        "source": "https://openai.com/index/gpt-6-astra",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-gpt-6-astra-notes-public-result-computer-us-0fdf4bfab03eda67"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2026-09-03",
+        "frontier_observation_ids": [
+          "obs-0-593-e508d94f41459d25"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-27-9727d45a876211ca",
+        "benchmark_id": "agents-last-exam",
+        "benchmark_version_id": "agents-last-exam-canonical",
+        "model_id": "model-qwen-3-8-acfba633fd45cd6b",
+        "model_configuration": "qwen-3-8",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen-3-8",
+        "model_family_id": "alibaba-qwen-3-8",
+        "model": "qwen-3-8",
+        "organization": "Alibaba",
+        "score": 0.27,
+        "input_score": 0.27,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "agents-last-exam-metric-v1",
+        "protocol_id": "agents-last-exam-source-export-v1",
+        "task_set_id": "agents-last-exam-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "agents-last-exam-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-22",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-04-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-06-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "score_source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "source": "https://agents-last-exam.org/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-qwen-3-8-notes-ale-v1-overall-best-per-task-39c167f3b9ace91b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2026-06-03",
+        "frontier_observation_ids": [
+          "obs-0-27-f04265efd2b16d40",
+          "obs-0-27-9727d45a876211ca"
+        ]
+      },
+      {
+        "observation_id": "obs-0-306-66443091d670df53",
+        "benchmark_id": "agents-last-exam",
+        "benchmark_version_id": "agents-last-exam-canonical",
+        "model_id": "model-gpt-5-6-sol-5f1ffa469585aab8",
+        "model_configuration": "gpt-5-6-sol",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "gpt-5-6-sol",
+        "organization": "OpenAI",
+        "score": 0.306,
+        "input_score": 0.306,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "agents-last-exam-metric-v1",
+        "protocol_id": "agents-last-exam-source-export-v1",
+        "task_set_id": "agents-last-exam-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "agents-last-exam-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "score_source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+        ],
+        "source": "https://agents-last-exam.org/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-gpt-5-6-sol-notes-ale-v1-overall-best-per-t-2e5309fbf2791fc9"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2026-07-09",
+        "frontier_observation_ids": [
+          "obs-0-28-86eef5750340baaa",
+          "obs-0-296-54adcb1d29bdda4a",
+          "obs-0-306-66443091d670df53"
+        ]
+      },
+      {
+        "observation_id": "obs-0-593-e508d94f41459d25",
+        "benchmark_id": "agents-last-exam",
+        "benchmark_version_id": "agents-last-exam-canonical",
+        "model_id": "model-gpt-6-astra-c94798ba994c2800",
+        "model_configuration": "GPT-6 Astra",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-astra",
+        "model_family_id": "openai-gpt-6-astra",
+        "model": "GPT-6 Astra",
+        "organization": "OpenAI",
+        "score": 0.593,
+        "input_score": 0.593,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "agents-last-exam-metric-v1",
+        "protocol_id": "agents-last-exam-source-export-v1",
+        "task_set_id": "agents-last-exam-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "agents-last-exam-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-09-03",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-09-03",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-03",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+              "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-09-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-03",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca",
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+        ],
+        "score_source_ids": [
+          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+        ],
+        "source": "https://openai.com/index/gpt-6-astra",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-gpt-6-astra-notes-public-result-computer-us-0fdf4bfab03eda67"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2026-09-03",
+        "frontier_observation_ids": [
+          "obs-0-593-e508d94f41459d25"
+        ]
+      }
+    ],
+    "reported_frontier": [],
+    "historical_frontier": [],
+    "retrospective_observations": [],
+    "observed_frontier": 0.593,
+    "capability_frontier_value": 0.593,
+    "reported_frontier_value": null,
+    "current_frontier": 0.593,
+    "normalized_progress": 0.593,
+    "normalized_headroom": 0.40700000000000003,
+    "threshold_days": {
+      "T50": {
+        "status": "reached",
+        "days": 92,
+        "qualifying_observation_date": "2026-09-03"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 95
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 95
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "reached",
+        "days": 92,
+        "qualifying_observation_date": "2026-09-03"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 95
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 95
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T80": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T90": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.5714285714285714,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Qwen",
+        "xAI"
+      ],
+      "panel_size": 7,
+      "status": "medium"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "unknown_public_dates",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

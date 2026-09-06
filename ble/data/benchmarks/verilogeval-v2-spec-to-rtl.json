@@ -1,0 +1,1594 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "verilogeval-v2-spec-to-rtl",
+    "name": "VerilogEval v2 \u2014 Spec-to-RTL",
+    "domain": "Electrical Engineering",
+    "release": "2025-02-03",
+    "source": "https://github.com/NVlabs/verilog-eval",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Model",
+    "tags": [
+      "RTL",
+      "SystemVerilog",
+      "simulation"
+    ],
+    "metric": "Pass@1",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "verilogeval-v2-spec-to-rtl-metric-v1",
+    "protocol_id": "verilogeval-v2-spec-to-rtl-source-export-v1",
+    "canonical_score": {
+      "series_id": "verilogeval-v2-spec-to-rtl-canonical-score",
+      "role": "canonical",
+      "metric_id": "verilogeval-v2-spec-to-rtl-metric-v1",
+      "metric_name": "Pass@1",
+      "protocol_id": "verilogeval-v2-spec-to-rtl-source-export-v1",
+      "task_set_id": "verilogeval-v2-spec-to-rtl-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "verilogeval-v2-spec-to-rtl-canonical",
+    "summary": {
+      "en": "VerilogEval v2 measures whether models can translate digital-hardware specifications into functionally correct SystemVerilog RTL modules.",
+      "zh": "VerilogEval v2 \u6d4b\u8bd5\u6a21\u578b\u80fd\u5426\u628a\u6570\u5b57\u7535\u8def\u81ea\u7136\u8bed\u8a00\u89c4\u683c\u8f6c\u6362\u6210\u529f\u80fd\u6b63\u786e\u7684 SystemVerilog RTL \u6a21\u5757\u3002"
+    },
+    "task_format": {
+      "en": "The model receives a natural-language hardware specification and port interface, then generates one complete SystemVerilog TopModule.",
+      "zh": "\u6a21\u578b\u4f1a\u6536\u5230\u81ea\u7136\u8bed\u8a00\u786c\u4ef6\u89c4\u683c\u548c\u7aef\u53e3\u63a5\u53e3\uff0c\u518d\u751f\u6210\u4e00\u4e2a\u5b8c\u6574\u7684 SystemVerilog TopModule\u3002"
+    },
+    "scoring": {
+      "metric_name": "Simulator-verified Pass@1",
+      "explanation": {
+        "en": "The score is the fraction of 156 corrected v2 tasks whose single zero-shot RTL response compiles and passes Icarus Verilog functional simulation.",
+        "zh": "\u5206\u6570\u662f 156 \u4e2a\u4fee\u8ba2\u540e v2 task \u4e2d\uff0c\u5355\u6b21 zero-shot RTL \u56de\u7b54\u80fd\u591f\u7f16\u8bd1\u5e76\u901a\u8fc7 Icarus Verilog \u529f\u80fd\u4eff\u771f\u7684\u6bd4\u4f8b\u3002"
+      }
+    },
+    "evaluation_target": "environment_outcome",
+    "observation_count": 11,
+    "evidence_record_count": 11,
+    "observations": [
+      {
+        "observation_id": "obs-0-046-9dfc63fc3ddc73bf",
+        "benchmark_id": "verilogeval-v2-spec-to-rtl",
+        "benchmark_version_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "model_id": "model-llama2-70b-63fc596318dd7d31",
+        "model_configuration": "Llama2-70B",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama2-70b",
+        "model_family_id": "meta-llama2-70b",
+        "model": "Llama2-70B",
+        "organization": "Meta",
+        "score": 0.046,
+        "input_score": 0.046,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "verilogeval-v2-spec-to-rtl-metric-v1",
+        "protocol_id": "verilogeval-v2-spec-to-rtl-source-export-v1",
+        "task_set_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "verilogeval-v2-spec-to-rtl-canonical-score",
+        "evaluation_protocol": "VerilogEval v2 corrected 156-task human set, Specification-to-RTL, zero-shot, temperature 0, top-p 0.01, n=1, official extraction and Icarus Verilog v12 simulation. Completion, one-shot, stochastic, v1, and MachineEval rows are excluded.",
+        "model_release_date": "2023-07-18",
+        "evaluation_date": null,
+        "result_public_date": "2025-02-03",
+        "source_publication_date": "2025-02-03",
+        "observation_date": "2023-07-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-07-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-02-03",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2023-07-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-07-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-02-03",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b",
+          "resource-https-github-com-nvlabs-verilog-eval-df598dc595fa03cb"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "source": "https://arxiv.org/abs/2408.11053v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-verilogeval-llama2-5c57bb7c293cb42c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "verilogeval-llama2"
+        ]
+      },
+      {
+        "observation_id": "obs-0-066-e2104e488be2fcc5",
+        "benchmark_id": "verilogeval-v2-spec-to-rtl",
+        "benchmark_version_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "model_id": "model-codegemma-7b-9f6b0ad87e17b2f3",
+        "model_configuration": "CodeGemma-7B",
+        "model_identity_organization": "google",
+        "model_label_id": "codegemma-7b",
+        "model_family_id": "google-codegemma-7b",
+        "model": "CodeGemma-7B",
+        "organization": "Google",
+        "score": 0.066,
+        "input_score": 0.066,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "verilogeval-v2-spec-to-rtl-metric-v1",
+        "protocol_id": "verilogeval-v2-spec-to-rtl-source-export-v1",
+        "task_set_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "verilogeval-v2-spec-to-rtl-canonical-score",
+        "evaluation_protocol": "VerilogEval v2 corrected 156-task human set, Specification-to-RTL, zero-shot, temperature 0, top-p 0.01, n=1, official extraction and Icarus Verilog v12 simulation. Completion, one-shot, stochastic, v1, and MachineEval rows are excluded.",
+        "model_release_date": "2024-04-09",
+        "evaluation_date": null,
+        "result_public_date": "2025-02-03",
+        "source_publication_date": "2025-02-03",
+        "observation_date": "2024-04-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-04-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-02-03",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-04-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-04-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-02-03",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b",
+          "resource-https-github-com-nvlabs-verilog-eval-df598dc595fa03cb"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "source": "https://arxiv.org/abs/2408.11053v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-verilogeval-codegemma-344c5410b372589c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "verilogeval-codegemma"
+        ]
+      },
+      {
+        "observation_id": "obs-0-191-51845190f2c15a73",
+        "benchmark_id": "verilogeval-v2-spec-to-rtl",
+        "benchmark_version_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "model_id": "model-llama3-1-8b-de6a852037d68e1f",
+        "model_configuration": "Llama3.1-8B",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama3-1-8b",
+        "model_family_id": "meta-llama3-1-8b",
+        "model": "Llama3.1-8B",
+        "organization": "Meta",
+        "score": 0.191,
+        "input_score": 0.191,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "verilogeval-v2-spec-to-rtl-metric-v1",
+        "protocol_id": "verilogeval-v2-spec-to-rtl-source-export-v1",
+        "task_set_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "verilogeval-v2-spec-to-rtl-canonical-score",
+        "evaluation_protocol": "VerilogEval v2 corrected 156-task human set, Specification-to-RTL, zero-shot, temperature 0, top-p 0.01, n=1, official extraction and Icarus Verilog v12 simulation. Completion, one-shot, stochastic, v1, and MachineEval rows are excluded.",
+        "model_release_date": "2024-07-23",
+        "evaluation_date": null,
+        "result_public_date": "2025-02-03",
+        "source_publication_date": "2025-02-03",
+        "observation_date": "2024-07-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-07-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-02-03",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-07-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-07-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-02-03",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b",
+          "resource-https-github-com-nvlabs-verilog-eval-df598dc595fa03cb"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "source": "https://arxiv.org/abs/2408.11053v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-verilogeval-llama31-8b-29de1c3c6383fbe7"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "verilogeval-llama31-8b"
+        ]
+      },
+      {
+        "observation_id": "obs-0-217-7153e99abb5a52af",
+        "benchmark_id": "verilogeval-v2-spec-to-rtl",
+        "benchmark_version_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "model_id": "model-deepseek-coder-33b-654173fa1a467fc6",
+        "model_configuration": "DeepSeek-Coder-33B",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-coder-33b",
+        "model_family_id": "deepseek-deepseek-coder-33b",
+        "model": "DeepSeek-Coder-33B",
+        "organization": "DeepSeek",
+        "score": 0.217,
+        "input_score": 0.217,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "verilogeval-v2-spec-to-rtl-metric-v1",
+        "protocol_id": "verilogeval-v2-spec-to-rtl-source-export-v1",
+        "task_set_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "verilogeval-v2-spec-to-rtl-canonical-score",
+        "evaluation_protocol": "VerilogEval v2 corrected 156-task human set, Specification-to-RTL, zero-shot, temperature 0, top-p 0.01, n=1, official extraction and Icarus Verilog v12 simulation. Completion, one-shot, stochastic, v1, and MachineEval rows are excluded.",
+        "model_release_date": "2023-11-29",
+        "evaluation_date": null,
+        "result_public_date": "2025-02-03",
+        "source_publication_date": "2025-02-03",
+        "observation_date": "2023-11-29",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-11-29",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-02-03",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2023-11-29",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-11-29",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-02-03",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b",
+          "resource-https-github-com-nvlabs-verilog-eval-df598dc595fa03cb"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "source": "https://arxiv.org/abs/2408.11053v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-verilogeval-deepseek33-1bbbaf38abf694b1"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "verilogeval-deepseek33"
+        ]
+      },
+      {
+        "observation_id": "obs-0-296-e5e4d44f1bede19c",
+        "benchmark_id": "verilogeval-v2-spec-to-rtl",
+        "benchmark_version_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "model_id": "model-deepseek-coder-6-7b-8bf570b5f18ce7f8",
+        "model_configuration": "DeepSeek-Coder-6.7B",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-coder-6-7b",
+        "model_family_id": "deepseek-deepseek-coder-6-7b",
+        "model": "DeepSeek-Coder-6.7B",
+        "organization": "DeepSeek",
+        "score": 0.296,
+        "input_score": 0.296,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "verilogeval-v2-spec-to-rtl-metric-v1",
+        "protocol_id": "verilogeval-v2-spec-to-rtl-source-export-v1",
+        "task_set_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "verilogeval-v2-spec-to-rtl-canonical-score",
+        "evaluation_protocol": "VerilogEval v2 corrected 156-task human set, Specification-to-RTL, zero-shot, temperature 0, top-p 0.01, n=1, official extraction and Icarus Verilog v12 simulation. Completion, one-shot, stochastic, v1, and MachineEval rows are excluded.",
+        "model_release_date": "2023-11-29",
+        "evaluation_date": null,
+        "result_public_date": "2025-02-03",
+        "source_publication_date": "2025-02-03",
+        "observation_date": "2023-11-29",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-11-29",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-02-03",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2023-11-29",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-11-29",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-02-03",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b",
+          "resource-https-github-com-nvlabs-verilog-eval-df598dc595fa03cb"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "source": "https://arxiv.org/abs/2408.11053v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-verilogeval-deepseek67-c5d01e28eb4e92c2"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "verilogeval-deepseek67"
+        ]
+      },
+      {
+        "observation_id": "obs-0-32-465946081d42a99e",
+        "benchmark_id": "verilogeval-v2-spec-to-rtl",
+        "benchmark_version_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "model_id": "model-gpt-4-0613-62cb7991ba660b6f",
+        "model_configuration": "GPT-4-0613",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4-0613",
+        "model_family_id": "openai-gpt-4-0613",
+        "model": "GPT-4-0613",
+        "organization": "OpenAI",
+        "score": 0.32,
+        "input_score": 0.32,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "verilogeval-v2-spec-to-rtl-metric-v1",
+        "protocol_id": "verilogeval-v2-spec-to-rtl-source-export-v1",
+        "task_set_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "verilogeval-v2-spec-to-rtl-canonical-score",
+        "evaluation_protocol": "VerilogEval v2 corrected 156-task human set, Specification-to-RTL, zero-shot, temperature 0, top-p 0.01, n=1, official extraction and Icarus Verilog v12 simulation. Completion, one-shot, stochastic, v1, and MachineEval rows are excluded.",
+        "model_release_date": "2023-06-13",
+        "evaluation_date": null,
+        "result_public_date": "2025-02-03",
+        "source_publication_date": "2025-02-03",
+        "observation_date": "2023-06-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-06-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-02-03",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2023-06-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-06-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-02-03",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b",
+          "resource-https-github-com-nvlabs-verilog-eval-df598dc595fa03cb"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "source": "https://arxiv.org/abs/2408.11053v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-verilogeval-gpt4-2e826ac4b66e3f6f"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "verilogeval-gpt4"
+        ]
+      },
+      {
+        "observation_id": "obs-0-408-e53b4354cb9a3071",
+        "benchmark_id": "verilogeval-v2-spec-to-rtl",
+        "benchmark_version_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "model_id": "model-llama3-70b-3d6dc858a66d2194",
+        "model_configuration": "Llama3-70B",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama3-70b",
+        "model_family_id": "meta-llama3-70b",
+        "model": "Llama3-70B",
+        "organization": "Meta",
+        "score": 0.408,
+        "input_score": 0.408,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "verilogeval-v2-spec-to-rtl-metric-v1",
+        "protocol_id": "verilogeval-v2-spec-to-rtl-source-export-v1",
+        "task_set_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "verilogeval-v2-spec-to-rtl-canonical-score",
+        "evaluation_protocol": "VerilogEval v2 corrected 156-task human set, Specification-to-RTL, zero-shot, temperature 0, top-p 0.01, n=1, official extraction and Icarus Verilog v12 simulation. Completion, one-shot, stochastic, v1, and MachineEval rows are excluded.",
+        "model_release_date": "2024-04-18",
+        "evaluation_date": null,
+        "result_public_date": "2025-02-03",
+        "source_publication_date": "2025-02-03",
+        "observation_date": "2024-04-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-04-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-02-03",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-04-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-04-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-02-03",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b",
+          "resource-https-github-com-nvlabs-verilog-eval-df598dc595fa03cb"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "source": "https://arxiv.org/abs/2408.11053v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-verilogeval-llama3-70b-70b09051e0925f24"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "verilogeval-llama3-70b"
+        ]
+      },
+      {
+        "observation_id": "obs-0-428-6658a57395b33c0d",
+        "benchmark_id": "verilogeval-v2-spec-to-rtl",
+        "benchmark_version_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "model_id": "model-llama3-1-70b-cb05ba7d26761ecb",
+        "model_configuration": "Llama3.1-70B",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama3-1-70b",
+        "model_family_id": "meta-llama3-1-70b",
+        "model": "Llama3.1-70B",
+        "organization": "Meta",
+        "score": 0.428,
+        "input_score": 0.428,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "verilogeval-v2-spec-to-rtl-metric-v1",
+        "protocol_id": "verilogeval-v2-spec-to-rtl-source-export-v1",
+        "task_set_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "verilogeval-v2-spec-to-rtl-canonical-score",
+        "evaluation_protocol": "VerilogEval v2 corrected 156-task human set, Specification-to-RTL, zero-shot, temperature 0, top-p 0.01, n=1, official extraction and Icarus Verilog v12 simulation. Completion, one-shot, stochastic, v1, and MachineEval rows are excluded.",
+        "model_release_date": "2024-07-23",
+        "evaluation_date": null,
+        "result_public_date": "2025-02-03",
+        "source_publication_date": "2025-02-03",
+        "observation_date": "2024-07-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-07-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-02-03",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-07-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-07-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-02-03",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b",
+          "resource-https-github-com-nvlabs-verilog-eval-df598dc595fa03cb"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "source": "https://arxiv.org/abs/2408.11053v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-verilogeval-llama31-70b-ba04e13c8be852ce"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "verilogeval-llama31-70b"
+        ]
+      },
+      {
+        "observation_id": "obs-0-572-ca5ecab8575ad547",
+        "benchmark_id": "verilogeval-v2-spec-to-rtl",
+        "benchmark_version_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "model_id": "model-llama3-1-405b-862c3c1ac82267a0",
+        "model_configuration": "Llama3.1-405B",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama3-1-405b",
+        "model_family_id": "meta-llama3-1-405b",
+        "model": "Llama3.1-405B",
+        "organization": "Meta",
+        "score": 0.572,
+        "input_score": 0.572,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "verilogeval-v2-spec-to-rtl-metric-v1",
+        "protocol_id": "verilogeval-v2-spec-to-rtl-source-export-v1",
+        "task_set_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "verilogeval-v2-spec-to-rtl-canonical-score",
+        "evaluation_protocol": "VerilogEval v2 corrected 156-task human set, Specification-to-RTL, zero-shot, temperature 0, top-p 0.01, n=1, official extraction and Icarus Verilog v12 simulation. Completion, one-shot, stochastic, v1, and MachineEval rows are excluded.",
+        "model_release_date": "2024-07-23",
+        "evaluation_date": null,
+        "result_public_date": "2025-02-03",
+        "source_publication_date": "2025-02-03",
+        "observation_date": "2024-07-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-07-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-02-03",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-07-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-07-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-02-03",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b",
+          "resource-https-github-com-nvlabs-verilog-eval-df598dc595fa03cb"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "source": "https://arxiv.org/abs/2408.11053v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-verilogeval-llama31-405b-94b303724c6b090a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "verilogeval-llama31-405b"
+        ]
+      },
+      {
+        "observation_id": "obs-0-596-8afcd11d02c88c26",
+        "benchmark_id": "verilogeval-v2-spec-to-rtl",
+        "benchmark_version_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "model_id": "model-gpt-4-turbo-1106-preview-9e9364c5dd276cad",
+        "model_configuration": "GPT-4-Turbo-1106-preview",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4-turbo-1106-preview",
+        "model_family_id": "openai-gpt-4-turbo-1106-preview",
+        "model": "GPT-4-Turbo-1106-preview",
+        "organization": "OpenAI",
+        "score": 0.596,
+        "input_score": 0.596,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "verilogeval-v2-spec-to-rtl-metric-v1",
+        "protocol_id": "verilogeval-v2-spec-to-rtl-source-export-v1",
+        "task_set_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "verilogeval-v2-spec-to-rtl-canonical-score",
+        "evaluation_protocol": "VerilogEval v2 corrected 156-task human set, Specification-to-RTL, zero-shot, temperature 0, top-p 0.01, n=1, official extraction and Icarus Verilog v12 simulation. Completion, one-shot, stochastic, v1, and MachineEval rows are excluded.",
+        "model_release_date": "2023-11-06",
+        "evaluation_date": null,
+        "result_public_date": "2025-02-03",
+        "source_publication_date": "2025-02-03",
+        "observation_date": "2023-11-06",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-11-06",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-02-03",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2023-11-06",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-11-06",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-02-03",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b",
+          "resource-https-github-com-nvlabs-verilog-eval-df598dc595fa03cb"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "source": "https://arxiv.org/abs/2408.11053v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-verilogeval-gpt4-turbo-5fd408258a2b34d8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "verilogeval-gpt4-turbo"
+        ]
+      },
+      {
+        "observation_id": "obs-0-625-e67798ad44811aec",
+        "benchmark_id": "verilogeval-v2-spec-to-rtl",
+        "benchmark_version_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.625,
+        "input_score": 0.625,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "verilogeval-v2-spec-to-rtl-metric-v1",
+        "protocol_id": "verilogeval-v2-spec-to-rtl-source-export-v1",
+        "task_set_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "verilogeval-v2-spec-to-rtl-canonical-score",
+        "evaluation_protocol": "VerilogEval v2 corrected 156-task human set, Specification-to-RTL, zero-shot, temperature 0, top-p 0.01, n=1, official extraction and Icarus Verilog v12 simulation. Completion, one-shot, stochastic, v1, and MachineEval rows are excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2025-02-03",
+        "source_publication_date": "2025-02-03",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-02-03",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-05-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-02-03",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b",
+          "resource-https-github-com-nvlabs-verilog-eval-df598dc595fa03cb"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "source": "https://arxiv.org/abs/2408.11053v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-verilogeval-gpt4o-e0836a2a61ef4e19"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "verilogeval-gpt4o"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-625-e67798ad44811aec",
+        "benchmark_id": "verilogeval-v2-spec-to-rtl",
+        "benchmark_version_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.625,
+        "input_score": 0.625,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "verilogeval-v2-spec-to-rtl-metric-v1",
+        "protocol_id": "verilogeval-v2-spec-to-rtl-source-export-v1",
+        "task_set_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "verilogeval-v2-spec-to-rtl-canonical-score",
+        "evaluation_protocol": "VerilogEval v2 corrected 156-task human set, Specification-to-RTL, zero-shot, temperature 0, top-p 0.01, n=1, official extraction and Icarus Verilog v12 simulation. Completion, one-shot, stochastic, v1, and MachineEval rows are excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2025-02-03",
+        "source_publication_date": "2025-02-03",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-02-03",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-02-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-02-03",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b",
+          "resource-https-github-com-nvlabs-verilog-eval-df598dc595fa03cb"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "source": "https://arxiv.org/abs/2408.11053v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-verilogeval-gpt4o-e0836a2a61ef4e19"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "verilogeval-gpt4o"
+        ],
+        "plot_date": "2025-02-03",
+        "frontier_observation_ids": [
+          "obs-0-046-9dfc63fc3ddc73bf",
+          "obs-0-066-e2104e488be2fcc5",
+          "obs-0-191-51845190f2c15a73",
+          "obs-0-217-7153e99abb5a52af",
+          "obs-0-296-e5e4d44f1bede19c",
+          "obs-0-32-465946081d42a99e",
+          "obs-0-408-e53b4354cb9a3071",
+          "obs-0-428-6658a57395b33c0d",
+          "obs-0-572-ca5ecab8575ad547",
+          "obs-0-596-8afcd11d02c88c26",
+          "obs-0-625-e67798ad44811aec"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-625-e67798ad44811aec",
+        "benchmark_id": "verilogeval-v2-spec-to-rtl",
+        "benchmark_version_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.625,
+        "input_score": 0.625,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "verilogeval-v2-spec-to-rtl-metric-v1",
+        "protocol_id": "verilogeval-v2-spec-to-rtl-source-export-v1",
+        "task_set_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "verilogeval-v2-spec-to-rtl-canonical-score",
+        "evaluation_protocol": "VerilogEval v2 corrected 156-task human set, Specification-to-RTL, zero-shot, temperature 0, top-p 0.01, n=1, official extraction and Icarus Verilog v12 simulation. Completion, one-shot, stochastic, v1, and MachineEval rows are excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2025-02-03",
+        "source_publication_date": "2025-02-03",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-02-03",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-02-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-02-03",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b",
+          "resource-https-github-com-nvlabs-verilog-eval-df598dc595fa03cb"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "source": "https://arxiv.org/abs/2408.11053v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-verilogeval-gpt4o-e0836a2a61ef4e19"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "verilogeval-gpt4o"
+        ],
+        "plot_date": "2025-02-03",
+        "frontier_observation_ids": [
+          "obs-0-046-9dfc63fc3ddc73bf",
+          "obs-0-066-e2104e488be2fcc5",
+          "obs-0-191-51845190f2c15a73",
+          "obs-0-217-7153e99abb5a52af",
+          "obs-0-296-e5e4d44f1bede19c",
+          "obs-0-32-465946081d42a99e",
+          "obs-0-408-e53b4354cb9a3071",
+          "obs-0-428-6658a57395b33c0d",
+          "obs-0-572-ca5ecab8575ad547",
+          "obs-0-596-8afcd11d02c88c26",
+          "obs-0-625-e67798ad44811aec"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-625-e67798ad44811aec",
+        "benchmark_id": "verilogeval-v2-spec-to-rtl",
+        "benchmark_version_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.625,
+        "input_score": 0.625,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "verilogeval-v2-spec-to-rtl-metric-v1",
+        "protocol_id": "verilogeval-v2-spec-to-rtl-source-export-v1",
+        "task_set_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "verilogeval-v2-spec-to-rtl-canonical-score",
+        "evaluation_protocol": "VerilogEval v2 corrected 156-task human set, Specification-to-RTL, zero-shot, temperature 0, top-p 0.01, n=1, official extraction and Icarus Verilog v12 simulation. Completion, one-shot, stochastic, v1, and MachineEval rows are excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2025-02-03",
+        "source_publication_date": "2025-02-03",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-02-03",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-02-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-02-03",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b",
+          "resource-https-github-com-nvlabs-verilog-eval-df598dc595fa03cb"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "source": "https://arxiv.org/abs/2408.11053v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-verilogeval-gpt4o-e0836a2a61ef4e19"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "verilogeval-gpt4o"
+        ],
+        "plot_date": "2025-02-03",
+        "frontier_observation_ids": [
+          "obs-0-046-9dfc63fc3ddc73bf",
+          "obs-0-066-e2104e488be2fcc5",
+          "obs-0-191-51845190f2c15a73",
+          "obs-0-217-7153e99abb5a52af",
+          "obs-0-296-e5e4d44f1bede19c",
+          "obs-0-32-465946081d42a99e",
+          "obs-0-408-e53b4354cb9a3071",
+          "obs-0-428-6658a57395b33c0d",
+          "obs-0-572-ca5ecab8575ad547",
+          "obs-0-596-8afcd11d02c88c26",
+          "obs-0-625-e67798ad44811aec"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-625-e67798ad44811aec",
+        "benchmark_id": "verilogeval-v2-spec-to-rtl",
+        "benchmark_version_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.625,
+        "input_score": 0.625,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "verilogeval-v2-spec-to-rtl-metric-v1",
+        "protocol_id": "verilogeval-v2-spec-to-rtl-source-export-v1",
+        "task_set_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "verilogeval-v2-spec-to-rtl-canonical-score",
+        "evaluation_protocol": "VerilogEval v2 corrected 156-task human set, Specification-to-RTL, zero-shot, temperature 0, top-p 0.01, n=1, official extraction and Icarus Verilog v12 simulation. Completion, one-shot, stochastic, v1, and MachineEval rows are excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2025-02-03",
+        "source_publication_date": "2025-02-03",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-02-03",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-02-03",
+        "date_kind": "result first-public date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-02-03",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b",
+          "resource-https-github-com-nvlabs-verilog-eval-df598dc595fa03cb"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "source": "https://arxiv.org/abs/2408.11053v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-verilogeval-gpt4o-e0836a2a61ef4e19"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "verilogeval-gpt4o"
+        ],
+        "plot_date": "2025-02-03",
+        "frontier_observation_ids": [
+          "obs-0-046-9dfc63fc3ddc73bf",
+          "obs-0-066-e2104e488be2fcc5",
+          "obs-0-191-51845190f2c15a73",
+          "obs-0-217-7153e99abb5a52af",
+          "obs-0-296-e5e4d44f1bede19c",
+          "obs-0-32-465946081d42a99e",
+          "obs-0-408-e53b4354cb9a3071",
+          "obs-0-428-6658a57395b33c0d",
+          "obs-0-572-ca5ecab8575ad547",
+          "obs-0-596-8afcd11d02c88c26",
+          "obs-0-625-e67798ad44811aec"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-625-e67798ad44811aec",
+        "benchmark_id": "verilogeval-v2-spec-to-rtl",
+        "benchmark_version_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.625,
+        "input_score": 0.625,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "verilogeval-v2-spec-to-rtl-metric-v1",
+        "protocol_id": "verilogeval-v2-spec-to-rtl-source-export-v1",
+        "task_set_id": "verilogeval-v2-spec-to-rtl-canonical",
+        "metric": "Pass@1",
+        "score_role": "canonical",
+        "score_series_id": "verilogeval-v2-spec-to-rtl-canonical-score",
+        "evaluation_protocol": "VerilogEval v2 corrected 156-task human set, Specification-to-RTL, zero-shot, temperature 0, top-p 0.01, n=1, official extraction and Icarus Verilog v12 simulation. Completion, one-shot, stochastic, v1, and MachineEval rows are excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2025-02-03",
+        "source_publication_date": "2025-02-03",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-02-03",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-02-03",
+        "date_kind": "result first-public date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-02-03",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b",
+          "resource-https-github-com-nvlabs-verilog-eval-df598dc595fa03cb"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2408-11053v2-f8d9c4b7589bf83b"
+        ],
+        "source": "https://arxiv.org/abs/2408.11053v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-verilogeval-gpt4o-e0836a2a61ef4e19"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "verilogeval-gpt4o"
+        ],
+        "plot_date": "2025-02-03",
+        "frontier_observation_ids": [
+          "obs-0-046-9dfc63fc3ddc73bf",
+          "obs-0-066-e2104e488be2fcc5",
+          "obs-0-191-51845190f2c15a73",
+          "obs-0-217-7153e99abb5a52af",
+          "obs-0-296-e5e4d44f1bede19c",
+          "obs-0-32-465946081d42a99e",
+          "obs-0-408-e53b4354cb9a3071",
+          "obs-0-428-6658a57395b33c0d",
+          "obs-0-572-ca5ecab8575ad547",
+          "obs-0-596-8afcd11d02c88c26",
+          "obs-0-625-e67798ad44811aec"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.625,
+    "capability_frontier_value": 0.625,
+    "reported_frontier_value": 0.625,
+    "current_frontier": 0.625,
+    "normalized_progress": 0.625,
+    "normalized_headroom": 0.375,
+    "threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2025-02-03"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 580
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 580
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2025-02-03"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 580
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 580
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2025-02-03"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 580
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 580
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.5714285714285714,
+      "represented_organizations": [
+        "OpenAI",
+        "Google",
+        "DeepSeek",
+        "Meta"
+      ],
+      "panel_size": 7,
+      "status": "medium"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-github-com-nvlabs-verilog-eval-df598dc595fa03cb"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

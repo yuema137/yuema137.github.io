@@ -1,0 +1,1110 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "superglue",
+    "name": "SuperGLUE",
+    "domain": "General knowledge & reasoning",
+    "release": "2019-05-01",
+    "source": "https://super.gluebenchmark.com/",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Model",
+    "tags": [
+      "language understanding",
+      "multi-task"
+    ],
+    "metric": "Score",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "superglue-metric-v1",
+    "protocol_id": "superglue-source-export-v1",
+    "canonical_score": {
+      "series_id": "superglue-canonical-score",
+      "role": "canonical",
+      "metric_id": "superglue-metric-v1",
+      "metric_name": "Score",
+      "protocol_id": "superglue-source-export-v1",
+      "task_set_id": "superglue-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "superglue-canonical",
+    "summary": {
+      "en": "SuperGLUE tests language understanding across several difficult reading, reasoning, and linguistic tasks.",
+      "zh": "SuperGLUE \u6d4b\u8bd5\u6a21\u578b\u5728\u9605\u8bfb\u7406\u89e3\u3001\u63a8\u7406\u548c\u8bed\u8a00\u5b66\u7b49\u591a\u7c7b\u4efb\u52a1\u4e0a\u7684\u8bed\u8a00\u7406\u89e3\u80fd\u529b\u3002"
+    },
+    "task_format": {
+      "en": "The suite contains several task formats, including classification, entailment, and question answering. The model produces the required answer for each task.",
+      "zh": "\u8fd9\u4e2a suite \u5305\u542b\u5206\u7c7b\u3001\u8574\u542b\u5224\u65ad\u548c\u95ee\u7b54\u7b49\u591a\u79cd task format\uff0c\u6a21\u578b\u9700\u8981\u6309\u6bcf\u7c7b task \u7684\u8981\u6c42\u4f5c\u7b54\u3002"
+    },
+    "scoring": {
+      "metric_name": "Aggregate task score",
+      "explanation": {
+        "en": "Each task uses its official metric, and the headline score aggregates the task scores according to the benchmark protocol.",
+        "zh": "\u6bcf\u7c7b task \u4f7f\u7528\u81ea\u5df1\u7684\u5b98\u65b9 metric\uff0cheadline score \u6309 benchmark protocol \u6c47\u603b\u5404\u9879 task score\u3002"
+      }
+    },
+    "evaluation_target": "final_output",
+    "observation_count": 10,
+    "evidence_record_count": 10,
+    "observations": [
+      {
+        "observation_id": "obs-0-718-2123ed13bca1f42b",
+        "benchmark_id": "superglue",
+        "benchmark_version_id": "superglue-canonical",
+        "model_id": "model-text-davinci-001-10148c0d84547549",
+        "model_configuration": "text-davinci-001",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-3-few-shot",
+        "model_family_id": "openai-gpt-3-few-shot",
+        "model": "GPT-3 Few-Shot",
+        "organization": "OpenAI",
+        "score": 0.718,
+        "input_score": 0.718,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "superglue-metric-v1",
+        "protocol_id": "superglue-source-export-v1",
+        "task_set_id": "superglue-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "superglue-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2022-01-27",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2022-01-27",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2022-01-27",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2005-14165-2cab3ea10b8b7ae2"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2005-14165-2cab3ea10b8b7ae2"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2022-01-27",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2022-01-27",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2005-14165-2cab3ea10b8b7ae2",
+          "resource-https-super-gluebenchmark-com-e8e3ea39ab15fd13"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2005-14165-2cab3ea10b8b7ae2"
+        ],
+        "source": "https://arxiv.org/abs/2005.14165",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recjdkkqvd43gczig-dd168e116e067658"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recjdKkQvD43gCZIG"
+        ]
+      },
+      {
+        "observation_id": "obs-0-751-9a1b5d06da19149d",
+        "benchmark_id": "superglue",
+        "benchmark_version_id": "superglue-canonical",
+        "model_id": "model-t5-base-08e00d2c1e9d4d33",
+        "model_configuration": "T5-Base",
+        "model_identity_organization": "unknown",
+        "model_label_id": "t5-base",
+        "model_family_id": "unknown-t5-base",
+        "model": "T5-Base",
+        "organization": "Unknown",
+        "score": 0.751,
+        "input_score": 0.751,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "superglue-metric-v1",
+        "protocol_id": "superglue-source-export-v1",
+        "task_set_id": "superglue-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "superglue-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": null,
+        "observation_date_precision": null,
+        "observation_date_sources": [],
+        "observation_date_source_ids": [],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": null,
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": null,
+        "date_kind": "unknown",
+        "capability_date": null,
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2101-03961-bf9cd21d7a7afdff",
+          "resource-https-super-gluebenchmark-com-e8e3ea39ab15fd13"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2101-03961-bf9cd21d7a7afdff"
+        ],
+        "source": "https://arxiv.org/abs/2101.03961",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-reczequjtxyiuuetc-e4daadf1e1f4a628"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recZEQUJTXyiuueTC"
+        ]
+      },
+      {
+        "observation_id": "obs-0-733-d40d0363fd9d9dde",
+        "benchmark_id": "superglue",
+        "benchmark_version_id": "superglue-canonical",
+        "model_id": "model-switch-base-f57ee44a1952b12c",
+        "model_configuration": "Switch-Base",
+        "model_identity_organization": "unknown",
+        "model_label_id": "switch-base",
+        "model_family_id": "unknown-switch-base",
+        "model": "Switch-Base",
+        "organization": "Unknown",
+        "score": 0.733,
+        "input_score": 0.733,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "superglue-metric-v1",
+        "protocol_id": "superglue-source-export-v1",
+        "task_set_id": "superglue-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "superglue-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": null,
+        "observation_date_precision": null,
+        "observation_date_sources": [],
+        "observation_date_source_ids": [],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": null,
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": null,
+        "date_kind": "unknown",
+        "capability_date": null,
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2101-03961-bf9cd21d7a7afdff",
+          "resource-https-super-gluebenchmark-com-e8e3ea39ab15fd13"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2101-03961-bf9cd21d7a7afdff"
+        ],
+        "source": "https://arxiv.org/abs/2101.03961",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-rec295hte28fpsmih-ace4621e76cd0b1e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "rec295HTE28FPSMIh"
+        ]
+      },
+      {
+        "observation_id": "obs-0-827-58a8183abca1c46f",
+        "benchmark_id": "superglue",
+        "benchmark_version_id": "superglue-canonical",
+        "model_id": "model-t5-large-3fb77ee173679631",
+        "model_configuration": "T5-Large",
+        "model_identity_organization": "unknown",
+        "model_label_id": "t5-large",
+        "model_family_id": "unknown-t5-large",
+        "model": "T5-Large",
+        "organization": "Unknown",
+        "score": 0.827,
+        "input_score": 0.827,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "superglue-metric-v1",
+        "protocol_id": "superglue-source-export-v1",
+        "task_set_id": "superglue-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "superglue-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": null,
+        "observation_date_precision": null,
+        "observation_date_sources": [],
+        "observation_date_source_ids": [],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": null,
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": null,
+        "date_kind": "unknown",
+        "capability_date": null,
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2101-03961-bf9cd21d7a7afdff",
+          "resource-https-super-gluebenchmark-com-e8e3ea39ab15fd13"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2101-03961-bf9cd21d7a7afdff"
+        ],
+        "source": "https://arxiv.org/abs/2101.03961",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recymbngi1ozrdodb-1ca47017ecf78a9b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recyMbNGI1OZRdoDb"
+        ]
+      },
+      {
+        "observation_id": "obs-0-847-1a091fb78dfd8a42",
+        "benchmark_id": "superglue",
+        "benchmark_version_id": "superglue-canonical",
+        "model_id": "model-switch-large-23a4fa466260d13e",
+        "model_configuration": "Switch-Large",
+        "model_identity_organization": "unknown",
+        "model_label_id": "switch-large",
+        "model_family_id": "unknown-switch-large",
+        "model": "Switch-Large",
+        "organization": "Unknown",
+        "score": 0.847,
+        "input_score": 0.847,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "superglue-metric-v1",
+        "protocol_id": "superglue-source-export-v1",
+        "task_set_id": "superglue-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "superglue-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": null,
+        "observation_date_precision": null,
+        "observation_date_sources": [],
+        "observation_date_source_ids": [],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": null,
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": null,
+        "date_kind": "unknown",
+        "capability_date": null,
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2101-03961-bf9cd21d7a7afdff",
+          "resource-https-super-gluebenchmark-com-e8e3ea39ab15fd13"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2101-03961-bf9cd21d7a7afdff"
+        ],
+        "source": "https://arxiv.org/abs/2101.03961",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recoy50npqz1hm303-a3a3368a20ca913e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recOy50NpQz1hM303"
+        ]
+      },
+      {
+        "observation_id": "obs-0-633-4419a45ccbb03f15",
+        "benchmark_id": "superglue",
+        "benchmark_version_id": "superglue-canonical",
+        "model_id": "model-t5-small-ec82342fc489d204",
+        "model_configuration": "T5-Small",
+        "model_identity_organization": "unknown",
+        "model_label_id": "t5-small",
+        "model_family_id": "unknown-t5-small",
+        "model": "T5-Small",
+        "organization": "Unknown",
+        "score": 0.633,
+        "input_score": 0.633,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "superglue-metric-v1",
+        "protocol_id": "superglue-source-export-v1",
+        "task_set_id": "superglue-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "superglue-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": null,
+        "observation_date_precision": null,
+        "observation_date_sources": [],
+        "observation_date_source_ids": [],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": null,
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": null,
+        "date_kind": "unknown",
+        "capability_date": null,
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-1910-10683-887da5f02141c29f",
+          "resource-https-super-gluebenchmark-com-e8e3ea39ab15fd13"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-1910-10683-887da5f02141c29f"
+        ],
+        "source": "https://arxiv.org/abs/1910.10683",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-rectwenga0zxohjxs-6f990b73608cca8d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "rectWEngA0ZxOhjXS"
+        ]
+      },
+      {
+        "observation_id": "obs-0-762-8ee85c6967d5ac8b",
+        "benchmark_id": "superglue",
+        "benchmark_version_id": "superglue-canonical",
+        "model_id": "model-t5-base-08e00d2c1e9d4d33",
+        "model_configuration": "T5-Base",
+        "model_identity_organization": "unknown",
+        "model_label_id": "t5-base",
+        "model_family_id": "unknown-t5-base",
+        "model": "T5-Base",
+        "organization": "Unknown",
+        "score": 0.762,
+        "input_score": 0.762,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "superglue-metric-v1",
+        "protocol_id": "superglue-source-export-v1",
+        "task_set_id": "superglue-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "superglue-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": null,
+        "observation_date_precision": null,
+        "observation_date_sources": [],
+        "observation_date_source_ids": [],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": null,
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": null,
+        "date_kind": "unknown",
+        "capability_date": null,
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-1910-10683-887da5f02141c29f",
+          "resource-https-super-gluebenchmark-com-e8e3ea39ab15fd13"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-1910-10683-887da5f02141c29f"
+        ],
+        "source": "https://arxiv.org/abs/1910.10683",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-reckojji7dpv8cmey-87b01ebd8e31435f"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recKOjji7dPv8CMeY"
+        ]
+      },
+      {
+        "observation_id": "obs-0-823-ac24f66cb1a250b2",
+        "benchmark_id": "superglue",
+        "benchmark_version_id": "superglue-canonical",
+        "model_id": "model-t5-large-3fb77ee173679631",
+        "model_configuration": "T5-Large",
+        "model_identity_organization": "unknown",
+        "model_label_id": "t5-large",
+        "model_family_id": "unknown-t5-large",
+        "model": "T5-Large",
+        "organization": "Unknown",
+        "score": 0.823,
+        "input_score": 0.823,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "superglue-metric-v1",
+        "protocol_id": "superglue-source-export-v1",
+        "task_set_id": "superglue-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "superglue-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": null,
+        "observation_date_precision": null,
+        "observation_date_sources": [],
+        "observation_date_source_ids": [],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": null,
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": null,
+        "date_kind": "unknown",
+        "capability_date": null,
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-1910-10683-887da5f02141c29f",
+          "resource-https-super-gluebenchmark-com-e8e3ea39ab15fd13"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-1910-10683-887da5f02141c29f"
+        ],
+        "source": "https://arxiv.org/abs/1910.10683",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recn2aeodht6ox1s3-5402ad0215dd7a10"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recn2AEOdhT6ox1s3"
+        ]
+      },
+      {
+        "observation_id": "obs-0-864-15a722143580f493",
+        "benchmark_id": "superglue",
+        "benchmark_version_id": "superglue-canonical",
+        "model_id": "model-t5-3b-809f5a377251188e",
+        "model_configuration": "T5-3B",
+        "model_identity_organization": "google",
+        "model_label_id": "t5-3b",
+        "model_family_id": "google-t5-3b",
+        "model": "T5-3B",
+        "organization": "Google",
+        "score": 0.864,
+        "input_score": 0.864,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "superglue-metric-v1",
+        "protocol_id": "superglue-source-export-v1",
+        "task_set_id": "superglue-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "superglue-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": null,
+        "observation_date_precision": null,
+        "observation_date_sources": [],
+        "observation_date_source_ids": [],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": null,
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": null,
+        "date_kind": "unknown",
+        "capability_date": null,
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-1910-10683-887da5f02141c29f",
+          "resource-https-super-gluebenchmark-com-e8e3ea39ab15fd13"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-1910-10683-887da5f02141c29f"
+        ],
+        "source": "https://arxiv.org/abs/1910.10683",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recsycrajtvmbwsu7-5802d34436f708f0"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recsyCrajtvMBWsU7"
+        ]
+      },
+      {
+        "observation_id": "obs-0-889-ec5a0c956ceb6f16",
+        "benchmark_id": "superglue",
+        "benchmark_version_id": "superglue-canonical",
+        "model_id": "model-t5-11b-730016dc6e643d5b",
+        "model_configuration": "T5-11B",
+        "model_identity_organization": "google",
+        "model_label_id": "t5-11b",
+        "model_family_id": "google-t5-11b",
+        "model": "T5-11B",
+        "organization": "Google",
+        "score": 0.889,
+        "input_score": 0.889,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "superglue-metric-v1",
+        "protocol_id": "superglue-source-export-v1",
+        "task_set_id": "superglue-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "superglue-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": null,
+        "observation_date_precision": null,
+        "observation_date_sources": [],
+        "observation_date_source_ids": [],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": null,
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": null,
+        "date_kind": "unknown",
+        "capability_date": null,
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-1910-10683-887da5f02141c29f",
+          "resource-https-super-gluebenchmark-com-e8e3ea39ab15fd13"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-1910-10683-887da5f02141c29f"
+        ],
+        "source": "https://arxiv.org/abs/1910.10683",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recyisvsc8fwnwpwj-07cf63dec42e7bb5"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recyISVSc8fWnwPWJ"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-718-2123ed13bca1f42b",
+        "benchmark_id": "superglue",
+        "benchmark_version_id": "superglue-canonical",
+        "model_id": "model-text-davinci-001-10148c0d84547549",
+        "model_configuration": "text-davinci-001",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-3-few-shot",
+        "model_family_id": "openai-gpt-3-few-shot",
+        "model": "GPT-3 Few-Shot",
+        "organization": "OpenAI",
+        "score": 0.718,
+        "input_score": 0.718,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "superglue-metric-v1",
+        "protocol_id": "superglue-source-export-v1",
+        "task_set_id": "superglue-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "superglue-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2022-01-27",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2022-01-27",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2022-01-27",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2005-14165-2cab3ea10b8b7ae2"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2005-14165-2cab3ea10b8b7ae2"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2022-01-27",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2022-01-27",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2005-14165-2cab3ea10b8b7ae2",
+          "resource-https-super-gluebenchmark-com-e8e3ea39ab15fd13"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2005-14165-2cab3ea10b8b7ae2"
+        ],
+        "source": "https://arxiv.org/abs/2005.14165",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recjdkkqvd43gczig-dd168e116e067658"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recjdKkQvD43gCZIG"
+        ],
+        "plot_date": "2022-01-27",
+        "frontier_observation_ids": [
+          "obs-0-718-2123ed13bca1f42b"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-718-2123ed13bca1f42b",
+        "benchmark_id": "superglue",
+        "benchmark_version_id": "superglue-canonical",
+        "model_id": "model-text-davinci-001-10148c0d84547549",
+        "model_configuration": "text-davinci-001",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-3-few-shot",
+        "model_family_id": "openai-gpt-3-few-shot",
+        "model": "GPT-3 Few-Shot",
+        "organization": "OpenAI",
+        "score": 0.718,
+        "input_score": 0.718,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "superglue-metric-v1",
+        "protocol_id": "superglue-source-export-v1",
+        "task_set_id": "superglue-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "superglue-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2022-01-27",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2022-01-27",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2022-01-27",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2005-14165-2cab3ea10b8b7ae2"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2005-14165-2cab3ea10b8b7ae2"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2022-01-27",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2022-01-27",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2005-14165-2cab3ea10b8b7ae2",
+          "resource-https-super-gluebenchmark-com-e8e3ea39ab15fd13"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2005-14165-2cab3ea10b8b7ae2"
+        ],
+        "source": "https://arxiv.org/abs/2005.14165",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recjdkkqvd43gczig-dd168e116e067658"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recjdKkQvD43gCZIG"
+        ],
+        "plot_date": "2022-01-27",
+        "frontier_observation_ids": [
+          "obs-0-718-2123ed13bca1f42b"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-718-2123ed13bca1f42b",
+        "benchmark_id": "superglue",
+        "benchmark_version_id": "superglue-canonical",
+        "model_id": "model-text-davinci-001-10148c0d84547549",
+        "model_configuration": "text-davinci-001",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-3-few-shot",
+        "model_family_id": "openai-gpt-3-few-shot",
+        "model": "GPT-3 Few-Shot",
+        "organization": "OpenAI",
+        "score": 0.718,
+        "input_score": 0.718,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "superglue-metric-v1",
+        "protocol_id": "superglue-source-export-v1",
+        "task_set_id": "superglue-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "superglue-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2022-01-27",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2022-01-27",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2022-01-27",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2005-14165-2cab3ea10b8b7ae2"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2005-14165-2cab3ea10b8b7ae2"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2022-01-27",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2022-01-27",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2005-14165-2cab3ea10b8b7ae2",
+          "resource-https-super-gluebenchmark-com-e8e3ea39ab15fd13"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2005-14165-2cab3ea10b8b7ae2"
+        ],
+        "source": "https://arxiv.org/abs/2005.14165",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recjdkkqvd43gczig-dd168e116e067658"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recjdKkQvD43gCZIG"
+        ],
+        "plot_date": "2022-01-27",
+        "frontier_observation_ids": [
+          "obs-0-718-2123ed13bca1f42b"
+        ]
+      }
+    ],
+    "reported_frontier": [],
+    "historical_frontier": [],
+    "retrospective_observations": [],
+    "observed_frontier": 0.718,
+    "capability_frontier_value": 0.718,
+    "reported_frontier_value": null,
+    "current_frontier": 0.718,
+    "normalized_progress": 0.718,
+    "normalized_headroom": 0.28200000000000003,
+    "threshold_days": {
+      "T50": {
+        "status": "reached",
+        "days": 1002,
+        "qualifying_observation_date": "2022-01-27"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 2685
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 2685
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "reached",
+        "days": 1002,
+        "qualifying_observation_date": "2022-01-27"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 2685
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 2685
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T80": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T90": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.2857142857142857,
+      "represented_organizations": [
+        "OpenAI",
+        "Google"
+      ],
+      "panel_size": 7,
+      "status": "low"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-super-gluebenchmark-com-e8e3ea39ab15fd13"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "unknown_public_dates",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": true,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

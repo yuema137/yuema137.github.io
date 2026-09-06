@@ -1,0 +1,1679 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "pubmedqa-pqal-test500-zero-shot",
+    "name": "PubMedQA \u2014 PQA-L Test 500",
+    "domain": "Life Science",
+    "release": "2019-09-13",
+    "source": "https://github.com/pubmedqa/pubmedqa",
+    "floor": 0.333,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.333,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Model",
+    "tags": [
+      "biomedicine",
+      "multiple-choice",
+      "evidence"
+    ],
+    "metric": "Accuracy",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "pubmedqa-pqal-test500-zero-shot-metric-v1",
+    "protocol_id": "pubmedqa-pqal-test500-zero-shot-source-export-v1",
+    "canonical_score": {
+      "series_id": "pubmedqa-pqal-test500-zero-shot-canonical-score",
+      "role": "canonical",
+      "metric_id": "pubmedqa-pqal-test500-zero-shot-metric-v1",
+      "metric_name": "Accuracy",
+      "protocol_id": "pubmedqa-pqal-test500-zero-shot-source-export-v1",
+      "task_set_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.333,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+    "summary": {
+      "en": "PubMedQA measures biomedical evidence reasoning over expert-labelled PubMed questions.",
+      "zh": "PubMedQA \u4f7f\u7528\u4e13\u5bb6\u6807\u6ce8\u7684 PubMed \u95ee\u9898\u8bc4\u4f30\u751f\u7269\u533b\u5b66\u8bc1\u636e\u63a8\u7406\u3002"
+    },
+    "task_format": {
+      "en": "Given a research question and abstract without its conclusion, select yes, no, or maybe.",
+      "zh": "\u7ed9\u5b9a\u7814\u7a76\u95ee\u9898\u53ca\u53bb\u6389\u7ed3\u8bba\u7684\u6458\u8981\uff0c\u9009\u62e9 yes\u3001no \u6216 maybe\u3002"
+    },
+    "scoring": {
+      "metric_name": "Mean exact-choice accuracy",
+      "explanation": {
+        "en": "Exact accuracy on the fixed 500-question PQA-L test split, averaged across ten zero-shot runs.",
+        "zh": "\u56fa\u5b9a 500 \u9898 PQA-L test split \u7684\u7cbe\u786e\u9009\u62e9\u51c6\u786e\u7387\uff0c\u53d6\u5341\u6b21 zero-shot \u8fd0\u884c\u5747\u503c\u3002"
+      }
+    },
+    "evaluation_target": "final_output",
+    "observation_count": 6,
+    "evidence_record_count": 6,
+    "observations": [
+      {
+        "observation_id": "obs-0-778-f3dfa9e5c270ee2e",
+        "benchmark_id": "pubmedqa-pqal-test500-zero-shot",
+        "benchmark_version_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "model_id": "model-claude-3-5-sonnet-20241022-64e890320834f2ae",
+        "model_configuration": "Claude-3.5-Sonnet-20241022",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet-20241022",
+        "model_family_id": "anthropic-claude-3-5-sonnet-20241022",
+        "model": "Claude-3.5-Sonnet-20241022",
+        "organization": "Anthropic",
+        "score": 0.778,
+        "input_score": 0.778,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "pubmedqa-pqal-test500-zero-shot-metric-v1",
+        "protocol_id": "pubmedqa-pqal-test500-zero-shot-source-export-v1",
+        "task_set_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "pubmedqa-pqal-test500-zero-shot-canonical-score",
+        "evaluation_protocol": "PQA-L expert-labelled 500-question test split, Inspect AI zero-shot direct choice, ten runs; other PubMedQA splits and fine-tuned results excluded.",
+        "model_release_date": "2024-10-22",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2024-10-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-10-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-10-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-10-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-github-com-pubmedqa-pubmedqa-9c5aa707998eddb8"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-pubmedqa-claude35-c2b461ace2af5177"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "pubmedqa-claude35"
+        ]
+      },
+      {
+        "observation_id": "obs-0-768-1bf462a1b5f19c75",
+        "benchmark_id": "pubmedqa-pqal-test500-zero-shot",
+        "benchmark_version_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "model_id": "model-grok-2-1212-b11e111c7ff8b085",
+        "model_configuration": "Grok-2-1212",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-2-1212",
+        "model_family_id": "xai-grok-2-1212",
+        "model": "Grok-2-1212",
+        "organization": "xAI",
+        "score": 0.768,
+        "input_score": 0.768,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "pubmedqa-pqal-test500-zero-shot-metric-v1",
+        "protocol_id": "pubmedqa-pqal-test500-zero-shot-source-export-v1",
+        "task_set_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "pubmedqa-pqal-test500-zero-shot-canonical-score",
+        "evaluation_protocol": "PQA-L expert-labelled 500-question test split, Inspect AI zero-shot direct choice, ten runs; other PubMedQA splits and fine-tuned results excluded.",
+        "model_release_date": "2024-12-12",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2024-12-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-12-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-github-com-pubmedqa-pubmedqa-9c5aa707998eddb8"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-pubmedqa-grok2-bf38803c9b23b698"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "pubmedqa-grok2"
+        ]
+      },
+      {
+        "observation_id": "obs-0-724-2175417e7d2a4958",
+        "benchmark_id": "pubmedqa-pqal-test500-zero-shot",
+        "benchmark_version_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "model_id": "model-deepseek-v3-44b935d802b0efaa",
+        "model_configuration": "DeepSeek-V3",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-v3",
+        "model_family_id": "deepseek-deepseek-v3",
+        "model": "DeepSeek-V3",
+        "organization": "DeepSeek",
+        "score": 0.724,
+        "input_score": 0.724,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "pubmedqa-pqal-test500-zero-shot-metric-v1",
+        "protocol_id": "pubmedqa-pqal-test500-zero-shot-source-export-v1",
+        "task_set_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "pubmedqa-pqal-test500-zero-shot-canonical-score",
+        "evaluation_protocol": "PQA-L expert-labelled 500-question test split, Inspect AI zero-shot direct choice, ten runs; other PubMedQA splits and fine-tuned results excluded.",
+        "model_release_date": "2024-12-26",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2024-12-26",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-26",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-12-26",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-26",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-github-com-pubmedqa-pubmedqa-9c5aa707998eddb8"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-pubmedqa-deepseekv3-ffec6b73b659d4c5"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "pubmedqa-deepseekv3"
+        ]
+      },
+      {
+        "observation_id": "obs-0-78-f5fbef4e889e8cce",
+        "benchmark_id": "pubmedqa-pqal-test500-zero-shot",
+        "benchmark_version_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "model_id": "model-o3-mini-medium-3121d5000ac640f2",
+        "model_configuration": "o3-mini-medium",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-mini-medium",
+        "model_family_id": "openai-o3-mini-medium",
+        "model": "o3-mini-medium",
+        "organization": "OpenAI",
+        "score": 0.78,
+        "input_score": 0.78,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "pubmedqa-pqal-test500-zero-shot-metric-v1",
+        "protocol_id": "pubmedqa-pqal-test500-zero-shot-source-export-v1",
+        "task_set_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "pubmedqa-pqal-test500-zero-shot-canonical-score",
+        "evaluation_protocol": "PQA-L expert-labelled 500-question test split, Inspect AI zero-shot direct choice, ten runs; other PubMedQA splits and fine-tuned results excluded.",
+        "model_release_date": "2025-01-31",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2025-01-31",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-31",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-01-31",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-31",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-github-com-pubmedqa-pubmedqa-9c5aa707998eddb8"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-pubmedqa-o3mini-707355516be07c44"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "pubmedqa-o3mini"
+        ]
+      },
+      {
+        "observation_id": "obs-0-711-ceb7631164c136ff",
+        "benchmark_id": "pubmedqa-pqal-test500-zero-shot",
+        "benchmark_version_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "model_id": "model-gemini-2-0-pro-experimental-e1a54957bc3a982f",
+        "model_configuration": "Gemini-2.0-Pro-Experimental",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-0-pro-experimental",
+        "model_family_id": "google-gemini-2-0-pro-experimental",
+        "model": "Gemini-2.0-Pro-Experimental",
+        "organization": "Google",
+        "score": 0.711,
+        "input_score": 0.711,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "pubmedqa-pqal-test500-zero-shot-metric-v1",
+        "protocol_id": "pubmedqa-pqal-test500-zero-shot-source-export-v1",
+        "task_set_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "pubmedqa-pqal-test500-zero-shot-canonical-score",
+        "evaluation_protocol": "PQA-L expert-labelled 500-question test split, Inspect AI zero-shot direct choice, ten runs; other PubMedQA splits and fine-tuned results excluded.",
+        "model_release_date": "2025-02-05",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2025-02-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-02-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-github-com-pubmedqa-pubmedqa-9c5aa707998eddb8"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-pubmedqa-gemini20pro-0012ea5ff6599f70"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "pubmedqa-gemini20pro"
+        ]
+      },
+      {
+        "observation_id": "obs-0-791-584751aa190852b2",
+        "benchmark_id": "pubmedqa-pqal-test500-zero-shot",
+        "benchmark_version_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "model_id": "model-llama-4-maverick-9cc7b902981846cb",
+        "model_configuration": "Llama-4-Maverick",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama-4-maverick",
+        "model_family_id": "meta-llama-4-maverick",
+        "model": "Llama-4-Maverick",
+        "organization": "Meta",
+        "score": 0.791,
+        "input_score": 0.791,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "pubmedqa-pqal-test500-zero-shot-metric-v1",
+        "protocol_id": "pubmedqa-pqal-test500-zero-shot-source-export-v1",
+        "task_set_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "pubmedqa-pqal-test500-zero-shot-canonical-score",
+        "evaluation_protocol": "PQA-L expert-labelled 500-question test split, Inspect AI zero-shot direct choice, ten runs; other PubMedQA splits and fine-tuned results excluded.",
+        "model_release_date": "2025-04-05",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2025-04-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-04-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-github-com-pubmedqa-pubmedqa-9c5aa707998eddb8"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-pubmedqa-llama4-2074c899a8f2483b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "pubmedqa-llama4"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-778-f3dfa9e5c270ee2e",
+        "benchmark_id": "pubmedqa-pqal-test500-zero-shot",
+        "benchmark_version_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "model_id": "model-claude-3-5-sonnet-20241022-64e890320834f2ae",
+        "model_configuration": "Claude-3.5-Sonnet-20241022",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet-20241022",
+        "model_family_id": "anthropic-claude-3-5-sonnet-20241022",
+        "model": "Claude-3.5-Sonnet-20241022",
+        "organization": "Anthropic",
+        "score": 0.778,
+        "input_score": 0.778,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "pubmedqa-pqal-test500-zero-shot-metric-v1",
+        "protocol_id": "pubmedqa-pqal-test500-zero-shot-source-export-v1",
+        "task_set_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "pubmedqa-pqal-test500-zero-shot-canonical-score",
+        "evaluation_protocol": "PQA-L expert-labelled 500-question test split, Inspect AI zero-shot direct choice, ten runs; other PubMedQA splits and fine-tuned results excluded.",
+        "model_release_date": "2024-10-22",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2024-10-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-10-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-10-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-10-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-github-com-pubmedqa-pubmedqa-9c5aa707998eddb8"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-pubmedqa-claude35-c2b461ace2af5177"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "pubmedqa-claude35"
+        ],
+        "plot_date": "2024-10-22",
+        "frontier_observation_ids": [
+          "obs-0-778-f3dfa9e5c270ee2e"
+        ]
+      },
+      {
+        "observation_id": "obs-0-78-f5fbef4e889e8cce",
+        "benchmark_id": "pubmedqa-pqal-test500-zero-shot",
+        "benchmark_version_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "model_id": "model-o3-mini-medium-3121d5000ac640f2",
+        "model_configuration": "o3-mini-medium",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-mini-medium",
+        "model_family_id": "openai-o3-mini-medium",
+        "model": "o3-mini-medium",
+        "organization": "OpenAI",
+        "score": 0.78,
+        "input_score": 0.78,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "pubmedqa-pqal-test500-zero-shot-metric-v1",
+        "protocol_id": "pubmedqa-pqal-test500-zero-shot-source-export-v1",
+        "task_set_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "pubmedqa-pqal-test500-zero-shot-canonical-score",
+        "evaluation_protocol": "PQA-L expert-labelled 500-question test split, Inspect AI zero-shot direct choice, ten runs; other PubMedQA splits and fine-tuned results excluded.",
+        "model_release_date": "2025-01-31",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2025-01-31",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-31",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-01-31",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-31",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-github-com-pubmedqa-pubmedqa-9c5aa707998eddb8"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-pubmedqa-o3mini-707355516be07c44"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "pubmedqa-o3mini"
+        ],
+        "plot_date": "2025-01-31",
+        "frontier_observation_ids": [
+          "obs-0-78-f5fbef4e889e8cce"
+        ]
+      },
+      {
+        "observation_id": "obs-0-791-584751aa190852b2",
+        "benchmark_id": "pubmedqa-pqal-test500-zero-shot",
+        "benchmark_version_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "model_id": "model-llama-4-maverick-9cc7b902981846cb",
+        "model_configuration": "Llama-4-Maverick",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama-4-maverick",
+        "model_family_id": "meta-llama-4-maverick",
+        "model": "Llama-4-Maverick",
+        "organization": "Meta",
+        "score": 0.791,
+        "input_score": 0.791,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "pubmedqa-pqal-test500-zero-shot-metric-v1",
+        "protocol_id": "pubmedqa-pqal-test500-zero-shot-source-export-v1",
+        "task_set_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "pubmedqa-pqal-test500-zero-shot-canonical-score",
+        "evaluation_protocol": "PQA-L expert-labelled 500-question test split, Inspect AI zero-shot direct choice, ten runs; other PubMedQA splits and fine-tuned results excluded.",
+        "model_release_date": "2025-04-05",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2025-04-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-04-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-github-com-pubmedqa-pubmedqa-9c5aa707998eddb8"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-pubmedqa-llama4-2074c899a8f2483b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "pubmedqa-llama4"
+        ],
+        "plot_date": "2025-04-05",
+        "frontier_observation_ids": [
+          "obs-0-791-584751aa190852b2"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-778-f3dfa9e5c270ee2e",
+        "benchmark_id": "pubmedqa-pqal-test500-zero-shot",
+        "benchmark_version_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "model_id": "model-claude-3-5-sonnet-20241022-64e890320834f2ae",
+        "model_configuration": "Claude-3.5-Sonnet-20241022",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet-20241022",
+        "model_family_id": "anthropic-claude-3-5-sonnet-20241022",
+        "model": "Claude-3.5-Sonnet-20241022",
+        "organization": "Anthropic",
+        "score": 0.778,
+        "input_score": 0.778,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "pubmedqa-pqal-test500-zero-shot-metric-v1",
+        "protocol_id": "pubmedqa-pqal-test500-zero-shot-source-export-v1",
+        "task_set_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "pubmedqa-pqal-test500-zero-shot-canonical-score",
+        "evaluation_protocol": "PQA-L expert-labelled 500-question test split, Inspect AI zero-shot direct choice, ten runs; other PubMedQA splits and fine-tuned results excluded.",
+        "model_release_date": "2024-10-22",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2024-10-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-10-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-10-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-10-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-github-com-pubmedqa-pubmedqa-9c5aa707998eddb8"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-pubmedqa-claude35-c2b461ace2af5177"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "pubmedqa-claude35"
+        ],
+        "plot_date": "2024-10-22",
+        "frontier_observation_ids": [
+          "obs-0-778-f3dfa9e5c270ee2e"
+        ]
+      },
+      {
+        "observation_id": "obs-0-78-f5fbef4e889e8cce",
+        "benchmark_id": "pubmedqa-pqal-test500-zero-shot",
+        "benchmark_version_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "model_id": "model-o3-mini-medium-3121d5000ac640f2",
+        "model_configuration": "o3-mini-medium",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-mini-medium",
+        "model_family_id": "openai-o3-mini-medium",
+        "model": "o3-mini-medium",
+        "organization": "OpenAI",
+        "score": 0.78,
+        "input_score": 0.78,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "pubmedqa-pqal-test500-zero-shot-metric-v1",
+        "protocol_id": "pubmedqa-pqal-test500-zero-shot-source-export-v1",
+        "task_set_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "pubmedqa-pqal-test500-zero-shot-canonical-score",
+        "evaluation_protocol": "PQA-L expert-labelled 500-question test split, Inspect AI zero-shot direct choice, ten runs; other PubMedQA splits and fine-tuned results excluded.",
+        "model_release_date": "2025-01-31",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2025-01-31",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-31",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-01-31",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-31",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-github-com-pubmedqa-pubmedqa-9c5aa707998eddb8"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-pubmedqa-o3mini-707355516be07c44"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "pubmedqa-o3mini"
+        ],
+        "plot_date": "2025-01-31",
+        "frontier_observation_ids": [
+          "obs-0-78-f5fbef4e889e8cce"
+        ]
+      },
+      {
+        "observation_id": "obs-0-791-584751aa190852b2",
+        "benchmark_id": "pubmedqa-pqal-test500-zero-shot",
+        "benchmark_version_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "model_id": "model-llama-4-maverick-9cc7b902981846cb",
+        "model_configuration": "Llama-4-Maverick",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama-4-maverick",
+        "model_family_id": "meta-llama-4-maverick",
+        "model": "Llama-4-Maverick",
+        "organization": "Meta",
+        "score": 0.791,
+        "input_score": 0.791,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "pubmedqa-pqal-test500-zero-shot-metric-v1",
+        "protocol_id": "pubmedqa-pqal-test500-zero-shot-source-export-v1",
+        "task_set_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "pubmedqa-pqal-test500-zero-shot-canonical-score",
+        "evaluation_protocol": "PQA-L expert-labelled 500-question test split, Inspect AI zero-shot direct choice, ten runs; other PubMedQA splits and fine-tuned results excluded.",
+        "model_release_date": "2025-04-05",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2025-04-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-04-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-github-com-pubmedqa-pubmedqa-9c5aa707998eddb8"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-pubmedqa-llama4-2074c899a8f2483b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "pubmedqa-llama4"
+        ],
+        "plot_date": "2025-04-05",
+        "frontier_observation_ids": [
+          "obs-0-791-584751aa190852b2"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-778-f3dfa9e5c270ee2e",
+        "benchmark_id": "pubmedqa-pqal-test500-zero-shot",
+        "benchmark_version_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "model_id": "model-claude-3-5-sonnet-20241022-64e890320834f2ae",
+        "model_configuration": "Claude-3.5-Sonnet-20241022",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet-20241022",
+        "model_family_id": "anthropic-claude-3-5-sonnet-20241022",
+        "model": "Claude-3.5-Sonnet-20241022",
+        "organization": "Anthropic",
+        "score": 0.778,
+        "input_score": 0.778,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "pubmedqa-pqal-test500-zero-shot-metric-v1",
+        "protocol_id": "pubmedqa-pqal-test500-zero-shot-source-export-v1",
+        "task_set_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "pubmedqa-pqal-test500-zero-shot-canonical-score",
+        "evaluation_protocol": "PQA-L expert-labelled 500-question test split, Inspect AI zero-shot direct choice, ten runs; other PubMedQA splits and fine-tuned results excluded.",
+        "model_release_date": "2024-10-22",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2024-10-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-10-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-10-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-10-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-github-com-pubmedqa-pubmedqa-9c5aa707998eddb8"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-pubmedqa-claude35-c2b461ace2af5177"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "pubmedqa-claude35"
+        ],
+        "plot_date": "2024-10-22",
+        "frontier_observation_ids": [
+          "obs-0-778-f3dfa9e5c270ee2e"
+        ]
+      },
+      {
+        "observation_id": "obs-0-78-f5fbef4e889e8cce",
+        "benchmark_id": "pubmedqa-pqal-test500-zero-shot",
+        "benchmark_version_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "model_id": "model-o3-mini-medium-3121d5000ac640f2",
+        "model_configuration": "o3-mini-medium",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-mini-medium",
+        "model_family_id": "openai-o3-mini-medium",
+        "model": "o3-mini-medium",
+        "organization": "OpenAI",
+        "score": 0.78,
+        "input_score": 0.78,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "pubmedqa-pqal-test500-zero-shot-metric-v1",
+        "protocol_id": "pubmedqa-pqal-test500-zero-shot-source-export-v1",
+        "task_set_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "pubmedqa-pqal-test500-zero-shot-canonical-score",
+        "evaluation_protocol": "PQA-L expert-labelled 500-question test split, Inspect AI zero-shot direct choice, ten runs; other PubMedQA splits and fine-tuned results excluded.",
+        "model_release_date": "2025-01-31",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2025-01-31",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-31",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-01-31",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-31",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-github-com-pubmedqa-pubmedqa-9c5aa707998eddb8"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-pubmedqa-o3mini-707355516be07c44"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "pubmedqa-o3mini"
+        ],
+        "plot_date": "2025-01-31",
+        "frontier_observation_ids": [
+          "obs-0-78-f5fbef4e889e8cce"
+        ]
+      },
+      {
+        "observation_id": "obs-0-791-584751aa190852b2",
+        "benchmark_id": "pubmedqa-pqal-test500-zero-shot",
+        "benchmark_version_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "model_id": "model-llama-4-maverick-9cc7b902981846cb",
+        "model_configuration": "Llama-4-Maverick",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama-4-maverick",
+        "model_family_id": "meta-llama-4-maverick",
+        "model": "Llama-4-Maverick",
+        "organization": "Meta",
+        "score": 0.791,
+        "input_score": 0.791,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "pubmedqa-pqal-test500-zero-shot-metric-v1",
+        "protocol_id": "pubmedqa-pqal-test500-zero-shot-source-export-v1",
+        "task_set_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "pubmedqa-pqal-test500-zero-shot-canonical-score",
+        "evaluation_protocol": "PQA-L expert-labelled 500-question test split, Inspect AI zero-shot direct choice, ten runs; other PubMedQA splits and fine-tuned results excluded.",
+        "model_release_date": "2025-04-05",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2025-04-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-04-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-github-com-pubmedqa-pubmedqa-9c5aa707998eddb8"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-pubmedqa-llama4-2074c899a8f2483b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "pubmedqa-llama4"
+        ],
+        "plot_date": "2025-04-05",
+        "frontier_observation_ids": [
+          "obs-0-791-584751aa190852b2"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-791-584751aa190852b2",
+        "benchmark_id": "pubmedqa-pqal-test500-zero-shot",
+        "benchmark_version_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "model_id": "model-llama-4-maverick-9cc7b902981846cb",
+        "model_configuration": "Llama-4-Maverick",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama-4-maverick",
+        "model_family_id": "meta-llama-4-maverick",
+        "model": "Llama-4-Maverick",
+        "organization": "Meta",
+        "score": 0.791,
+        "input_score": 0.791,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "pubmedqa-pqal-test500-zero-shot-metric-v1",
+        "protocol_id": "pubmedqa-pqal-test500-zero-shot-source-export-v1",
+        "task_set_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "pubmedqa-pqal-test500-zero-shot-canonical-score",
+        "evaluation_protocol": "PQA-L expert-labelled 500-question test split, Inspect AI zero-shot direct choice, ten runs; other PubMedQA splits and fine-tuned results excluded.",
+        "model_release_date": "2025-04-05",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2025-04-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-05-09",
+        "date_kind": "result first-public date",
+        "capability_date": "2025-04-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-github-com-pubmedqa-pubmedqa-9c5aa707998eddb8"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-pubmedqa-llama4-2074c899a8f2483b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "pubmedqa-llama4"
+        ],
+        "plot_date": "2025-05-09",
+        "frontier_observation_ids": [
+          "obs-0-711-ceb7631164c136ff",
+          "obs-0-724-2175417e7d2a4958",
+          "obs-0-768-1bf462a1b5f19c75",
+          "obs-0-778-f3dfa9e5c270ee2e",
+          "obs-0-78-f5fbef4e889e8cce",
+          "obs-0-791-584751aa190852b2"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-791-584751aa190852b2",
+        "benchmark_id": "pubmedqa-pqal-test500-zero-shot",
+        "benchmark_version_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "model_id": "model-llama-4-maverick-9cc7b902981846cb",
+        "model_configuration": "Llama-4-Maverick",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama-4-maverick",
+        "model_family_id": "meta-llama-4-maverick",
+        "model": "Llama-4-Maverick",
+        "organization": "Meta",
+        "score": 0.791,
+        "input_score": 0.791,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "pubmedqa-pqal-test500-zero-shot-metric-v1",
+        "protocol_id": "pubmedqa-pqal-test500-zero-shot-source-export-v1",
+        "task_set_id": "pubmedqa-pqal-test500-zero-shot-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "pubmedqa-pqal-test500-zero-shot-canonical-score",
+        "evaluation_protocol": "PQA-L expert-labelled 500-question test split, Inspect AI zero-shot direct choice, ten runs; other PubMedQA splits and fine-tuned results excluded.",
+        "model_release_date": "2025-04-05",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-09",
+        "source_publication_date": "2025-05-09",
+        "observation_date": "2025-04-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+              "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-09",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-05-09",
+        "date_kind": "result first-public date",
+        "capability_date": "2025-04-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-09",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750",
+          "resource-https-github-com-pubmedqa-pubmedqa-9c5aa707998eddb8"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-06108-7f441e80c752a750"
+        ],
+        "source": "https://arxiv.org/abs/2505.06108",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-pubmedqa-llama4-2074c899a8f2483b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "pubmedqa-llama4"
+        ],
+        "plot_date": "2025-05-09",
+        "frontier_observation_ids": [
+          "obs-0-711-ceb7631164c136ff",
+          "obs-0-724-2175417e7d2a4958",
+          "obs-0-768-1bf462a1b5f19c75",
+          "obs-0-778-f3dfa9e5c270ee2e",
+          "obs-0-78-f5fbef4e889e8cce",
+          "obs-0-791-584751aa190852b2"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.791,
+    "capability_frontier_value": 0.791,
+    "reported_frontier_value": 0.791,
+    "current_frontier": 0.791,
+    "normalized_progress": 0.6866566716641679,
+    "normalized_headroom": 0.3133433283358321,
+    "threshold_days": {
+      "T50": {
+        "status": "reached",
+        "days": 1866,
+        "qualifying_observation_date": "2024-10-22"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 2550
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 2550
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "reached",
+        "days": 1866,
+        "qualifying_observation_date": "2024-10-22"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 2550
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 2550
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "reached",
+        "days": 2065,
+        "qualifying_observation_date": "2025-05-09"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 2550
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 2550
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.8571428571428571,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "DeepSeek",
+        "Meta",
+        "xAI"
+      ],
+      "panel_size": 7,
+      "status": "high"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-github-com-pubmedqa-pubmedqa-9c5aa707998eddb8"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": true,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

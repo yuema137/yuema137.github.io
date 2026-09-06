@@ -1,0 +1,1076 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "gmai-mmbench-v7-test",
+    "name": "GMAI-MMBench v7 Test",
+    "domain": "Life Science",
+    "release": "2024-10-21",
+    "source": "https://arxiv.org/abs/2408.03361",
+    "floor": 0.2594,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.2594,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Model",
+    "tags": [
+      "medical imaging",
+      "multimodal",
+      "VQA"
+    ],
+    "metric": "Accuracy",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "gmai-mmbench-v7-test-metric-v1",
+    "protocol_id": "gmai-mmbench-v7-test-source-export-v1",
+    "canonical_score": {
+      "series_id": "gmai-mmbench-v7-test-canonical-score",
+      "role": "canonical",
+      "metric_id": "gmai-mmbench-v7-test-metric-v1",
+      "metric_name": "Accuracy",
+      "protocol_id": "gmai-mmbench-v7-test-source-export-v1",
+      "task_set_id": "gmai-mmbench-v7-test-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.2594,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "gmai-mmbench-v7-test-canonical",
+    "summary": {
+      "en": "GMAI-MMBench measures broad medical-image understanding across clinical tasks, departments, modalities, and perceptual granularities.",
+      "zh": "GMAI-MMBench \u6d4b\u8bd5\u6a21\u578b\u8de8\u4e34\u5e8a\u4efb\u52a1\u3001\u79d1\u5ba4\u3001\u5f71\u50cf\u6a21\u6001\u548c\u611f\u77e5\u7c92\u5ea6\u7406\u89e3\u533b\u5b66\u56fe\u50cf\u7684\u80fd\u529b\u3002"
+    },
+    "task_format": {
+      "en": "The model receives a medical image and a variable-choice single-answer question, then returns one option without demonstrations.",
+      "zh": "\u6a21\u578b\u4f1a\u6536\u5230\u4e00\u5f20\u533b\u5b66\u56fe\u50cf\u548c\u4e00\u9053\u9009\u9879\u6570\u91cf\u4e0d\u56fa\u5b9a\u7684 single-answer question\uff0c\u5e76\u5728\u65e0 demonstration \u7684\u6761\u4ef6\u4e0b\u8fd4\u56de\u4e00\u4e2a\u9009\u9879\u3002"
+    },
+    "scoring": {
+      "metric_name": "Macro-averaged single-choice accuracy",
+      "explanation": {
+        "en": "The score is macro-averaged accuracy on the fixed 21,281-question v7 single-choice test set.",
+        "zh": "\u5206\u6570\u662f\u56fa\u5b9a 21,281 \u9053 v7 single-choice test set \u4e0a\u7684 macro-averaged accuracy\u3002"
+      }
+    },
+    "evaluation_target": "final_output",
+    "observation_count": 5,
+    "evidence_record_count": 5,
+    "observations": [
+      {
+        "observation_id": "obs-0-3244-d6879ee5b16bc1ba",
+        "benchmark_id": "gmai-mmbench-v7-test",
+        "benchmark_version_id": "gmai-mmbench-v7-test-canonical",
+        "model_id": "model-claude3-opus-e441470a2a902f6a",
+        "model_configuration": "Claude3-Opus",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude3-opus",
+        "model_family_id": "anthropic-claude3-opus",
+        "model": "Claude3-Opus",
+        "organization": "Anthropic",
+        "score": 0.3244,
+        "input_score": 0.3244,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gmai-mmbench-v7-test-metric-v1",
+        "protocol_id": "gmai-mmbench-v7-test-source-export-v1",
+        "task_set_id": "gmai-mmbench-v7-test-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "gmai-mmbench-v7-test-canonical-score",
+        "evaluation_protocol": "GMAI-MMBench arXiv v7 fixed 21,281-question single-choice test split, zero-shot VLMEvalKit protocol. Validation and multi-label metrics are excluded.",
+        "model_release_date": "2024-03-04",
+        "evaluation_date": null,
+        "result_public_date": "2024-10-21",
+        "source_publication_date": "2024-10-21",
+        "observation_date": "2024-03-04",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-03-04",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-10-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-03-04",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-03-04",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-10-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2408-03361-2eec8d0a7d562295",
+          "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+        ],
+        "source": "https://arxiv.org/abs/2408.03361v7",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gmai-claude3-opus-50d15bb999df9508"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gmai-claude3-opus"
+        ]
+      },
+      {
+        "observation_id": "obs-0-4216-c0bc64d7e46f6ae5",
+        "benchmark_id": "gmai-mmbench-v7-test",
+        "benchmark_version_id": "gmai-mmbench-v7-test-canonical",
+        "model_id": "model-qwen-vl-max-0b1475022f8e2f06",
+        "model_configuration": "Qwen-VL-Max",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen-vl-max",
+        "model_family_id": "qwen-qwen-vl-max",
+        "model": "Qwen-VL-Max",
+        "organization": "Qwen",
+        "score": 0.4216,
+        "input_score": 0.4216,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gmai-mmbench-v7-test-metric-v1",
+        "protocol_id": "gmai-mmbench-v7-test-source-export-v1",
+        "task_set_id": "gmai-mmbench-v7-test-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "gmai-mmbench-v7-test-canonical-score",
+        "evaluation_protocol": "GMAI-MMBench arXiv v7 fixed 21,281-question single-choice test split, zero-shot VLMEvalKit protocol. Validation and multi-label metrics are excluded.",
+        "model_release_date": "2024-01-24",
+        "evaluation_date": null,
+        "result_public_date": "2024-10-21",
+        "source_publication_date": "2024-10-21",
+        "observation_date": "2024-01-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-01-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-10-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-01-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-01-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-10-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2408-03361-2eec8d0a7d562295",
+          "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+        ],
+        "source": "https://arxiv.org/abs/2408.03361v7",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gmai-qwen-vl-max-2f2f8b60529a5fa4"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gmai-qwen-vl-max"
+        ]
+      },
+      {
+        "observation_id": "obs-0-4343-c387b5638d98a1cb",
+        "benchmark_id": "gmai-mmbench-v7-test",
+        "benchmark_version_id": "gmai-mmbench-v7-test-canonical",
+        "model_id": "model-deepseek-vl-7b-bc9ff987ded5e185",
+        "model_configuration": "DeepSeek-VL-7B",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-vl-7b",
+        "model_family_id": "deepseek-deepseek-vl-7b",
+        "model": "DeepSeek-VL-7B",
+        "organization": "DeepSeek",
+        "score": 0.4343,
+        "input_score": 0.4343,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gmai-mmbench-v7-test-metric-v1",
+        "protocol_id": "gmai-mmbench-v7-test-source-export-v1",
+        "task_set_id": "gmai-mmbench-v7-test-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "gmai-mmbench-v7-test-canonical-score",
+        "evaluation_protocol": "GMAI-MMBench arXiv v7 fixed 21,281-question single-choice test split, zero-shot VLMEvalKit protocol. Validation and multi-label metrics are excluded.",
+        "model_release_date": "2024-03-11",
+        "evaluation_date": null,
+        "result_public_date": "2024-10-21",
+        "source_publication_date": "2024-10-21",
+        "observation_date": "2024-03-11",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-03-11",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-10-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-03-11",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-03-11",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-10-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2408-03361-2eec8d0a7d562295",
+          "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+        ],
+        "source": "https://arxiv.org/abs/2408.03361v7",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gmai-deepseek-vl-42ea9815dfbe45d8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gmai-deepseek-vl"
+        ]
+      },
+      {
+        "observation_id": "obs-0-4836-fd8b37b1f7d8d4e8",
+        "benchmark_id": "gmai-mmbench-v7-test",
+        "benchmark_version_id": "gmai-mmbench-v7-test-canonical",
+        "model_id": "model-gemini-1-5-4eae67c0d4df77d2",
+        "model_configuration": "Gemini 1.5",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-1-5",
+        "model_family_id": "google-gemini-1-5",
+        "model": "Gemini 1.5",
+        "organization": "Google",
+        "score": 0.4836,
+        "input_score": 0.4836,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gmai-mmbench-v7-test-metric-v1",
+        "protocol_id": "gmai-mmbench-v7-test-source-export-v1",
+        "task_set_id": "gmai-mmbench-v7-test-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "gmai-mmbench-v7-test-canonical-score",
+        "evaluation_protocol": "GMAI-MMBench arXiv v7 fixed 21,281-question single-choice test split, zero-shot VLMEvalKit protocol. Validation and multi-label metrics are excluded.",
+        "model_release_date": "2024-02-15",
+        "evaluation_date": null,
+        "result_public_date": "2024-10-21",
+        "source_publication_date": "2024-10-21",
+        "observation_date": "2024-02-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-02-15",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-10-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-02-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-02-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-10-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2408-03361-2eec8d0a7d562295",
+          "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+        ],
+        "source": "https://arxiv.org/abs/2408.03361v7",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gmai-gemini15-ac52955c67c6f8cd"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gmai-gemini15"
+        ]
+      },
+      {
+        "observation_id": "obs-0-5396-8e57ecc9ba32bc96",
+        "benchmark_id": "gmai-mmbench-v7-test",
+        "benchmark_version_id": "gmai-mmbench-v7-test-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.5396,
+        "input_score": 0.5396,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gmai-mmbench-v7-test-metric-v1",
+        "protocol_id": "gmai-mmbench-v7-test-source-export-v1",
+        "task_set_id": "gmai-mmbench-v7-test-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "gmai-mmbench-v7-test-canonical-score",
+        "evaluation_protocol": "GMAI-MMBench arXiv v7 fixed 21,281-question single-choice test split, zero-shot VLMEvalKit protocol. Validation and multi-label metrics are excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2024-10-21",
+        "source_publication_date": "2024-10-21",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-10-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-05-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-10-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2408-03361-2eec8d0a7d562295",
+          "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+        ],
+        "source": "https://arxiv.org/abs/2408.03361v7",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gmai-gpt4o-6684128e3e2c2e4c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gmai-gpt4o"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-5396-8e57ecc9ba32bc96",
+        "benchmark_id": "gmai-mmbench-v7-test",
+        "benchmark_version_id": "gmai-mmbench-v7-test-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.5396,
+        "input_score": 0.5396,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gmai-mmbench-v7-test-metric-v1",
+        "protocol_id": "gmai-mmbench-v7-test-source-export-v1",
+        "task_set_id": "gmai-mmbench-v7-test-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "gmai-mmbench-v7-test-canonical-score",
+        "evaluation_protocol": "GMAI-MMBench arXiv v7 fixed 21,281-question single-choice test split, zero-shot VLMEvalKit protocol. Validation and multi-label metrics are excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2024-10-21",
+        "source_publication_date": "2024-10-21",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-10-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-10-21",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-10-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2408-03361-2eec8d0a7d562295",
+          "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+        ],
+        "source": "https://arxiv.org/abs/2408.03361v7",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gmai-gpt4o-6684128e3e2c2e4c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gmai-gpt4o"
+        ],
+        "plot_date": "2024-10-21",
+        "frontier_observation_ids": [
+          "obs-0-3244-d6879ee5b16bc1ba",
+          "obs-0-4216-c0bc64d7e46f6ae5",
+          "obs-0-4343-c387b5638d98a1cb",
+          "obs-0-4836-fd8b37b1f7d8d4e8",
+          "obs-0-5396-8e57ecc9ba32bc96"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-5396-8e57ecc9ba32bc96",
+        "benchmark_id": "gmai-mmbench-v7-test",
+        "benchmark_version_id": "gmai-mmbench-v7-test-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.5396,
+        "input_score": 0.5396,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gmai-mmbench-v7-test-metric-v1",
+        "protocol_id": "gmai-mmbench-v7-test-source-export-v1",
+        "task_set_id": "gmai-mmbench-v7-test-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "gmai-mmbench-v7-test-canonical-score",
+        "evaluation_protocol": "GMAI-MMBench arXiv v7 fixed 21,281-question single-choice test split, zero-shot VLMEvalKit protocol. Validation and multi-label metrics are excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2024-10-21",
+        "source_publication_date": "2024-10-21",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-10-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-10-21",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-10-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2408-03361-2eec8d0a7d562295",
+          "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+        ],
+        "source": "https://arxiv.org/abs/2408.03361v7",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gmai-gpt4o-6684128e3e2c2e4c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gmai-gpt4o"
+        ],
+        "plot_date": "2024-10-21",
+        "frontier_observation_ids": [
+          "obs-0-3244-d6879ee5b16bc1ba",
+          "obs-0-4216-c0bc64d7e46f6ae5",
+          "obs-0-4343-c387b5638d98a1cb",
+          "obs-0-4836-fd8b37b1f7d8d4e8",
+          "obs-0-5396-8e57ecc9ba32bc96"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-5396-8e57ecc9ba32bc96",
+        "benchmark_id": "gmai-mmbench-v7-test",
+        "benchmark_version_id": "gmai-mmbench-v7-test-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.5396,
+        "input_score": 0.5396,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gmai-mmbench-v7-test-metric-v1",
+        "protocol_id": "gmai-mmbench-v7-test-source-export-v1",
+        "task_set_id": "gmai-mmbench-v7-test-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "gmai-mmbench-v7-test-canonical-score",
+        "evaluation_protocol": "GMAI-MMBench arXiv v7 fixed 21,281-question single-choice test split, zero-shot VLMEvalKit protocol. Validation and multi-label metrics are excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2024-10-21",
+        "source_publication_date": "2024-10-21",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-10-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-10-21",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-10-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2408-03361-2eec8d0a7d562295",
+          "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+        ],
+        "source": "https://arxiv.org/abs/2408.03361v7",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gmai-gpt4o-6684128e3e2c2e4c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gmai-gpt4o"
+        ],
+        "plot_date": "2024-10-21",
+        "frontier_observation_ids": [
+          "obs-0-3244-d6879ee5b16bc1ba",
+          "obs-0-4216-c0bc64d7e46f6ae5",
+          "obs-0-4343-c387b5638d98a1cb",
+          "obs-0-4836-fd8b37b1f7d8d4e8",
+          "obs-0-5396-8e57ecc9ba32bc96"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-5396-8e57ecc9ba32bc96",
+        "benchmark_id": "gmai-mmbench-v7-test",
+        "benchmark_version_id": "gmai-mmbench-v7-test-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.5396,
+        "input_score": 0.5396,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gmai-mmbench-v7-test-metric-v1",
+        "protocol_id": "gmai-mmbench-v7-test-source-export-v1",
+        "task_set_id": "gmai-mmbench-v7-test-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "gmai-mmbench-v7-test-canonical-score",
+        "evaluation_protocol": "GMAI-MMBench arXiv v7 fixed 21,281-question single-choice test split, zero-shot VLMEvalKit protocol. Validation and multi-label metrics are excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2024-10-21",
+        "source_publication_date": "2024-10-21",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-10-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-10-21",
+        "date_kind": "result first-public date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-10-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2408-03361-2eec8d0a7d562295",
+          "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+        ],
+        "source": "https://arxiv.org/abs/2408.03361v7",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gmai-gpt4o-6684128e3e2c2e4c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gmai-gpt4o"
+        ],
+        "plot_date": "2024-10-21",
+        "frontier_observation_ids": [
+          "obs-0-3244-d6879ee5b16bc1ba",
+          "obs-0-4216-c0bc64d7e46f6ae5",
+          "obs-0-4343-c387b5638d98a1cb",
+          "obs-0-4836-fd8b37b1f7d8d4e8",
+          "obs-0-5396-8e57ecc9ba32bc96"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-5396-8e57ecc9ba32bc96",
+        "benchmark_id": "gmai-mmbench-v7-test",
+        "benchmark_version_id": "gmai-mmbench-v7-test-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.5396,
+        "input_score": 0.5396,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gmai-mmbench-v7-test-metric-v1",
+        "protocol_id": "gmai-mmbench-v7-test-source-export-v1",
+        "task_set_id": "gmai-mmbench-v7-test-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "gmai-mmbench-v7-test-canonical-score",
+        "evaluation_protocol": "GMAI-MMBench arXiv v7 fixed 21,281-question single-choice test split, zero-shot VLMEvalKit protocol. Validation and multi-label metrics are excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2024-10-21",
+        "source_publication_date": "2024-10-21",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-10-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-10-21",
+        "date_kind": "result first-public date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-10-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2408-03361-2eec8d0a7d562295",
+          "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2408-03361v7-012bb2d4d41c0dbf"
+        ],
+        "source": "https://arxiv.org/abs/2408.03361v7",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gmai-gpt4o-6684128e3e2c2e4c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gmai-gpt4o"
+        ],
+        "plot_date": "2024-10-21",
+        "frontier_observation_ids": [
+          "obs-0-3244-d6879ee5b16bc1ba",
+          "obs-0-4216-c0bc64d7e46f6ae5",
+          "obs-0-4343-c387b5638d98a1cb",
+          "obs-0-4836-fd8b37b1f7d8d4e8",
+          "obs-0-5396-8e57ecc9ba32bc96"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.5396,
+    "capability_frontier_value": 0.5396,
+    "reported_frontier_value": 0.5396,
+    "current_frontier": 0.5396,
+    "normalized_progress": 0.378341884958142,
+    "normalized_headroom": 0.621658115041858,
+    "threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 685
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 685
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 685
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 685
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 685
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 685
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 685
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 685
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 685
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.7142857142857143,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "DeepSeek",
+        "Qwen"
+      ],
+      "panel_size": 7,
+      "status": "high"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-arxiv-org-abs-2408-03361-2eec8d0a7d562295"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": true,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": true,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

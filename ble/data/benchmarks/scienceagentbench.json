@@ -1,0 +1,1786 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "scienceagentbench",
+    "name": "ScienceAgentBench",
+    "domain": "Science / research",
+    "release": "2024-10-07",
+    "source": "https://hal.cs.princeton.edu/scienceagentbench",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Agent",
+    "tags": [
+      "scientific discovery",
+      "Python",
+      "verified"
+    ],
+    "metric": "Accuracy",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "scienceagentbench-metric-v1",
+    "protocol_id": "scienceagentbench-source-export-v1",
+    "canonical_score": {
+      "series_id": "scienceagentbench-canonical-score",
+      "role": "canonical",
+      "metric_id": "scienceagentbench-metric-v1",
+      "metric_name": "Accuracy",
+      "protocol_id": "scienceagentbench-source-export-v1",
+      "task_set_id": "scienceagentbench-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "scienceagentbench-canonical",
+    "summary": {
+      "en": "ScienceAgentBench evaluates language agents on reproducible, data-driven scientific discovery tasks sourced from peer-reviewed publications.",
+      "zh": "ScienceAgentBench \u8bc4\u4f30 language agent \u5728\u53ef\u590d\u73b0\u3001\u6765\u81ea\u540c\u884c\u8bc4\u5ba1\u8bba\u6587\u7684 data-driven scientific discovery task \u4e0a\u7684\u8868\u73b0\u3002"
+    },
+    "task_format": {
+      "en": "The agent must produce a self-contained Python program that analyzes scientific data and generates the required result in a reproducible environment.",
+      "zh": "agent \u9700\u8981\u751f\u6210\u4e00\u4e2a self-contained Python program\uff0c\u5728\u53ef\u590d\u73b0\u73af\u5883\u4e2d\u5206\u6790\u79d1\u5b66\u6570\u636e\u5e76\u4ea7\u51fa\u8981\u6c42\u7684\u7ed3\u679c\u3002"
+    },
+    "scoring": {
+      "metric_name": "Scientific task accuracy",
+      "explanation": {
+        "en": "Accuracy is the fraction of benchmark tasks for which the generated program and its executed result satisfy the task evaluator. The leaderboard also reports total API cost separately.",
+        "zh": "Accuracy \u662f\u751f\u6210\u7684\u7a0b\u5e8f\u53ca\u5176\u6267\u884c\u7ed3\u679c\u6ee1\u8db3 task evaluator \u7684 benchmark task \u5360\u6bd4\u3002leaderboard \u8fd8\u4f1a\u5355\u72ec\u62a5\u544a\u603b API cost\u3002"
+      }
+    },
+    "evaluation_target": "environment_outcome",
+    "observation_count": 9,
+    "evidence_record_count": 9,
+    "observations": [
+      {
+        "observation_id": "obs-0-2353-caca111af47713cb",
+        "benchmark_id": "scienceagentbench",
+        "benchmark_version_id": "scienceagentbench-canonical",
+        "model_id": "model-deepseek-r1-18eed2738c2c0e2c",
+        "model_configuration": "deepseek-r1",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-r1",
+        "model_family_id": "deepseek-deepseek-r1",
+        "model": "DeepSeek R1",
+        "organization": "DeepSeek",
+        "score": 0.2353,
+        "input_score": 0.2353,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "scienceagentbench-metric-v1",
+        "protocol_id": "scienceagentbench-source-export-v1",
+        "task_set_id": "scienceagentbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "scienceagentbench-canonical-score",
+        "evaluation_protocol": "ScienceAgentBench 102-task release with the HAL leaderboard's verified accuracy results. SAB Self-Debug and HAL Generalist Agent are retained as distinct scaffolds; no cost total is treated as per-task cost.",
+        "model_release_date": "2025-01-20",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-01-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-01-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "source": "https://hal.cs.princeton.edu/scienceagentbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-2353-model-version-deepseek-r1-name-d-3a6c452b7867b3c4"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-3039-586772b059fd17fe",
+        "benchmark_id": "scienceagentbench",
+        "benchmark_version_id": "scienceagentbench-canonical",
+        "model_id": "model-claude-3-7-sonnet-105c2d3675a935dc",
+        "model_configuration": "claude-3-7-sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-7-sonnet",
+        "model_family_id": "anthropic-claude-3-7-sonnet",
+        "model": "Claude 3.7 Sonnet",
+        "organization": "Anthropic",
+        "score": 0.3039,
+        "input_score": 0.3039,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "scienceagentbench-metric-v1",
+        "protocol_id": "scienceagentbench-source-export-v1",
+        "task_set_id": "scienceagentbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "scienceagentbench-canonical-score",
+        "evaluation_protocol": "ScienceAgentBench 102-task release with the HAL leaderboard's verified accuracy results. SAB Self-Debug and HAL Generalist Agent are retained as distinct scaffolds; no cost total is treated as per-task cost.",
+        "model_release_date": "2025-02-24",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-02-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-02-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "source": "https://hal.cs.princeton.edu/scienceagentbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-3039-model-version-claude-3-7-sonnet--7568d0ba345c9b11"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-1275-fe78d2c116013873",
+        "benchmark_id": "scienceagentbench",
+        "benchmark_version_id": "scienceagentbench-canonical",
+        "model_id": "model-gemini-2-0-flash-c7f695767f575f5b",
+        "model_configuration": "gemini-2-0-flash",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-0-flash",
+        "model_family_id": "google-gemini-2-0-flash",
+        "model": "Gemini 2.0 Flash",
+        "organization": "Google",
+        "score": 0.1275,
+        "input_score": 0.1275,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "scienceagentbench-metric-v1",
+        "protocol_id": "scienceagentbench-source-export-v1",
+        "task_set_id": "scienceagentbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "scienceagentbench-canonical-score",
+        "evaluation_protocol": "ScienceAgentBench 102-task release with the HAL leaderboard's verified accuracy results. SAB Self-Debug and HAL Generalist Agent are retained as distinct scaffolds; no cost total is treated as per-task cost.",
+        "model_release_date": "2024-12-11",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-12-11",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-11",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-12-11",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-11",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "source": "https://hal.cs.princeton.edu/scienceagentbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-1275-model-version-gemini-2-0-flash-n-c398efcad47e604f"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-2451-faf3888e611de819",
+        "benchmark_id": "scienceagentbench",
+        "benchmark_version_id": "scienceagentbench-canonical",
+        "model_id": "model-gpt-4-1-2a78dbfa263e7293",
+        "model_configuration": "gpt-4-1",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4-1",
+        "model_family_id": "openai-gpt-4-1",
+        "model": "GPT-4.1",
+        "organization": "OpenAI",
+        "score": 0.2451,
+        "input_score": 0.2451,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "scienceagentbench-metric-v1",
+        "protocol_id": "scienceagentbench-source-export-v1",
+        "task_set_id": "scienceagentbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "scienceagentbench-canonical-score",
+        "evaluation_protocol": "ScienceAgentBench 102-task release with the HAL leaderboard's verified accuracy results. SAB Self-Debug and HAL Generalist Agent are retained as distinct scaffolds; no cost total is treated as per-task cost.",
+        "model_release_date": "2025-04-14",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-04-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-04-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "source": "https://hal.cs.princeton.edu/scienceagentbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-2451-model-version-gpt-4-1-name-gpt-4-f0ac5d91d1ce0a92"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-3333-d3bb5c3828f2433d",
+        "benchmark_id": "scienceagentbench",
+        "benchmark_version_id": "scienceagentbench-canonical",
+        "model_id": "model-o3-medium-b0925616b588292e",
+        "model_configuration": "o3-medium",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-medium",
+        "model_family_id": "openai-o3-medium",
+        "model": "o3 Medium",
+        "organization": "OpenAI",
+        "score": 0.3333,
+        "input_score": 0.3333,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "scienceagentbench-metric-v1",
+        "protocol_id": "scienceagentbench-source-export-v1",
+        "task_set_id": "scienceagentbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "scienceagentbench-canonical-score",
+        "evaluation_protocol": "ScienceAgentBench 102-task release with the HAL leaderboard's verified accuracy results. SAB Self-Debug and HAL Generalist Agent are retained as distinct scaffolds; no cost total is treated as per-task cost.",
+        "model_release_date": "2025-04-16",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-04-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "source": "https://hal.cs.princeton.edu/scienceagentbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-3333-model-version-o3-medium-name-o3--8c7fe40937aa9e55"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-2745-7f113516e7348823",
+        "benchmark_id": "scienceagentbench",
+        "benchmark_version_id": "scienceagentbench-canonical",
+        "model_id": "model-o4-mini-high-940194bad1253594",
+        "model_configuration": "o4-mini-high",
+        "model_identity_organization": "openai",
+        "model_label_id": "o4-mini-high",
+        "model_family_id": "openai-o4-mini-high",
+        "model": "o4-mini High",
+        "organization": "OpenAI",
+        "score": 0.2745,
+        "input_score": 0.2745,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "scienceagentbench-metric-v1",
+        "protocol_id": "scienceagentbench-source-export-v1",
+        "task_set_id": "scienceagentbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "scienceagentbench-canonical-score",
+        "evaluation_protocol": "ScienceAgentBench 102-task release with the HAL leaderboard's verified accuracy results. SAB Self-Debug and HAL Generalist Agent are retained as distinct scaffolds; no cost total is treated as per-task cost.",
+        "model_release_date": "2025-04-16",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-04-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "source": "https://hal.cs.princeton.edu/scienceagentbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-2745-model-version-o4-mini-high-name--390807d92bcc91e7"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-3039-ccee061a9cb727e4",
+        "benchmark_id": "scienceagentbench",
+        "benchmark_version_id": "scienceagentbench-canonical",
+        "model_id": "model-gpt-5-medium-42055abb803677e4",
+        "model_configuration": "gpt-5-medium",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-medium",
+        "model_family_id": "openai-gpt-5-medium",
+        "model": "GPT-5 Medium",
+        "organization": "OpenAI",
+        "score": 0.3039,
+        "input_score": 0.3039,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "scienceagentbench-metric-v1",
+        "protocol_id": "scienceagentbench-source-export-v1",
+        "task_set_id": "scienceagentbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "scienceagentbench-canonical-score",
+        "evaluation_protocol": "ScienceAgentBench 102-task release with the HAL leaderboard's verified accuracy results. SAB Self-Debug and HAL Generalist Agent are retained as distinct scaffolds; no cost total is treated as per-task cost.",
+        "model_release_date": "2025-08-07",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-08-07",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-08-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-08-07",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-08-07",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "source": "https://hal.cs.princeton.edu/scienceagentbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-3039-model-version-gpt-5-medium-name--dded1348aefbe5f1"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-2745-46f42f4344850b0a",
+        "benchmark_id": "scienceagentbench",
+        "benchmark_version_id": "scienceagentbench-canonical",
+        "model_id": "model-claude-opus-4-1-6fed76395b63255e",
+        "model_configuration": "claude-opus-4-1",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-1",
+        "model_family_id": "anthropic-claude-opus-4-1",
+        "model": "Claude Opus 4.1",
+        "organization": "Anthropic",
+        "score": 0.2745,
+        "input_score": 0.2745,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "scienceagentbench-metric-v1",
+        "protocol_id": "scienceagentbench-source-export-v1",
+        "task_set_id": "scienceagentbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "scienceagentbench-canonical-score",
+        "evaluation_protocol": "ScienceAgentBench 102-task release with the HAL leaderboard's verified accuracy results. SAB Self-Debug and HAL Generalist Agent are retained as distinct scaffolds; no cost total is treated as per-task cost.",
+        "model_release_date": "2025-08-05",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-08-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-08-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-08-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-08-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "source": "https://hal.cs.princeton.edu/scienceagentbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-2745-model-version-claude-opus-4-1-na-3b83821e082a06f5"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-3039-13547032ce4e4abb",
+        "benchmark_id": "scienceagentbench",
+        "benchmark_version_id": "scienceagentbench-canonical",
+        "model_id": "model-claude-sonnet-4-5-1375953e5a053324",
+        "model_configuration": "claude-sonnet-4-5",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-sonnet-4-5",
+        "model_family_id": "anthropic-claude-sonnet-4-5",
+        "model": "Claude Sonnet 4.5",
+        "organization": "Anthropic",
+        "score": 0.3039,
+        "input_score": 0.3039,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "scienceagentbench-metric-v1",
+        "protocol_id": "scienceagentbench-source-export-v1",
+        "task_set_id": "scienceagentbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "scienceagentbench-canonical-score",
+        "evaluation_protocol": "ScienceAgentBench 102-task release with the HAL leaderboard's verified accuracy results. SAB Self-Debug and HAL Generalist Agent are retained as distinct scaffolds; no cost total is treated as per-task cost.",
+        "model_release_date": "2025-09-29",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-09-29",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-09-29",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-09-29",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-09-29",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "source": "https://hal.cs.princeton.edu/scienceagentbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-3039-model-version-claude-sonnet-4-5--2ac16d66a1228725"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-1275-fe78d2c116013873",
+        "benchmark_id": "scienceagentbench",
+        "benchmark_version_id": "scienceagentbench-canonical",
+        "model_id": "model-gemini-2-0-flash-c7f695767f575f5b",
+        "model_configuration": "gemini-2-0-flash",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-0-flash",
+        "model_family_id": "google-gemini-2-0-flash",
+        "model": "Gemini 2.0 Flash",
+        "organization": "Google",
+        "score": 0.1275,
+        "input_score": 0.1275,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "scienceagentbench-metric-v1",
+        "protocol_id": "scienceagentbench-source-export-v1",
+        "task_set_id": "scienceagentbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "scienceagentbench-canonical-score",
+        "evaluation_protocol": "ScienceAgentBench 102-task release with the HAL leaderboard's verified accuracy results. SAB Self-Debug and HAL Generalist Agent are retained as distinct scaffolds; no cost total is treated as per-task cost.",
+        "model_release_date": "2024-12-11",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-12-11",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-11",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-12-11",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-11",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "source": "https://hal.cs.princeton.edu/scienceagentbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-1275-model-version-gemini-2-0-flash-n-c398efcad47e604f"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2024-12-11",
+        "frontier_observation_ids": [
+          "obs-0-1275-fe78d2c116013873"
+        ]
+      },
+      {
+        "observation_id": "obs-0-2353-caca111af47713cb",
+        "benchmark_id": "scienceagentbench",
+        "benchmark_version_id": "scienceagentbench-canonical",
+        "model_id": "model-deepseek-r1-18eed2738c2c0e2c",
+        "model_configuration": "deepseek-r1",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-r1",
+        "model_family_id": "deepseek-deepseek-r1",
+        "model": "DeepSeek R1",
+        "organization": "DeepSeek",
+        "score": 0.2353,
+        "input_score": 0.2353,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "scienceagentbench-metric-v1",
+        "protocol_id": "scienceagentbench-source-export-v1",
+        "task_set_id": "scienceagentbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "scienceagentbench-canonical-score",
+        "evaluation_protocol": "ScienceAgentBench 102-task release with the HAL leaderboard's verified accuracy results. SAB Self-Debug and HAL Generalist Agent are retained as distinct scaffolds; no cost total is treated as per-task cost.",
+        "model_release_date": "2025-01-20",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-01-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-01-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "source": "https://hal.cs.princeton.edu/scienceagentbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-2353-model-version-deepseek-r1-name-d-3a6c452b7867b3c4"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-01-20",
+        "frontier_observation_ids": [
+          "obs-0-2353-caca111af47713cb"
+        ]
+      },
+      {
+        "observation_id": "obs-0-3039-586772b059fd17fe",
+        "benchmark_id": "scienceagentbench",
+        "benchmark_version_id": "scienceagentbench-canonical",
+        "model_id": "model-claude-3-7-sonnet-105c2d3675a935dc",
+        "model_configuration": "claude-3-7-sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-7-sonnet",
+        "model_family_id": "anthropic-claude-3-7-sonnet",
+        "model": "Claude 3.7 Sonnet",
+        "organization": "Anthropic",
+        "score": 0.3039,
+        "input_score": 0.3039,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "scienceagentbench-metric-v1",
+        "protocol_id": "scienceagentbench-source-export-v1",
+        "task_set_id": "scienceagentbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "scienceagentbench-canonical-score",
+        "evaluation_protocol": "ScienceAgentBench 102-task release with the HAL leaderboard's verified accuracy results. SAB Self-Debug and HAL Generalist Agent are retained as distinct scaffolds; no cost total is treated as per-task cost.",
+        "model_release_date": "2025-02-24",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-02-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-02-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "source": "https://hal.cs.princeton.edu/scienceagentbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-3039-model-version-claude-3-7-sonnet--7568d0ba345c9b11"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-02-24",
+        "frontier_observation_ids": [
+          "obs-0-3039-586772b059fd17fe"
+        ]
+      },
+      {
+        "observation_id": "obs-0-3333-d3bb5c3828f2433d",
+        "benchmark_id": "scienceagentbench",
+        "benchmark_version_id": "scienceagentbench-canonical",
+        "model_id": "model-o3-medium-b0925616b588292e",
+        "model_configuration": "o3-medium",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-medium",
+        "model_family_id": "openai-o3-medium",
+        "model": "o3 Medium",
+        "organization": "OpenAI",
+        "score": 0.3333,
+        "input_score": 0.3333,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "scienceagentbench-metric-v1",
+        "protocol_id": "scienceagentbench-source-export-v1",
+        "task_set_id": "scienceagentbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "scienceagentbench-canonical-score",
+        "evaluation_protocol": "ScienceAgentBench 102-task release with the HAL leaderboard's verified accuracy results. SAB Self-Debug and HAL Generalist Agent are retained as distinct scaffolds; no cost total is treated as per-task cost.",
+        "model_release_date": "2025-04-16",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-04-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "source": "https://hal.cs.princeton.edu/scienceagentbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-3333-model-version-o3-medium-name-o3--8c7fe40937aa9e55"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-04-16",
+        "frontier_observation_ids": [
+          "obs-0-2745-7f113516e7348823",
+          "obs-0-3333-d3bb5c3828f2433d"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-1275-fe78d2c116013873",
+        "benchmark_id": "scienceagentbench",
+        "benchmark_version_id": "scienceagentbench-canonical",
+        "model_id": "model-gemini-2-0-flash-c7f695767f575f5b",
+        "model_configuration": "gemini-2-0-flash",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-0-flash",
+        "model_family_id": "google-gemini-2-0-flash",
+        "model": "Gemini 2.0 Flash",
+        "organization": "Google",
+        "score": 0.1275,
+        "input_score": 0.1275,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "scienceagentbench-metric-v1",
+        "protocol_id": "scienceagentbench-source-export-v1",
+        "task_set_id": "scienceagentbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "scienceagentbench-canonical-score",
+        "evaluation_protocol": "ScienceAgentBench 102-task release with the HAL leaderboard's verified accuracy results. SAB Self-Debug and HAL Generalist Agent are retained as distinct scaffolds; no cost total is treated as per-task cost.",
+        "model_release_date": "2024-12-11",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-12-11",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-11",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-12-11",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-11",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "source": "https://hal.cs.princeton.edu/scienceagentbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-1275-model-version-gemini-2-0-flash-n-c398efcad47e604f"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2024-12-11",
+        "frontier_observation_ids": [
+          "obs-0-1275-fe78d2c116013873"
+        ]
+      },
+      {
+        "observation_id": "obs-0-2353-caca111af47713cb",
+        "benchmark_id": "scienceagentbench",
+        "benchmark_version_id": "scienceagentbench-canonical",
+        "model_id": "model-deepseek-r1-18eed2738c2c0e2c",
+        "model_configuration": "deepseek-r1",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-r1",
+        "model_family_id": "deepseek-deepseek-r1",
+        "model": "DeepSeek R1",
+        "organization": "DeepSeek",
+        "score": 0.2353,
+        "input_score": 0.2353,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "scienceagentbench-metric-v1",
+        "protocol_id": "scienceagentbench-source-export-v1",
+        "task_set_id": "scienceagentbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "scienceagentbench-canonical-score",
+        "evaluation_protocol": "ScienceAgentBench 102-task release with the HAL leaderboard's verified accuracy results. SAB Self-Debug and HAL Generalist Agent are retained as distinct scaffolds; no cost total is treated as per-task cost.",
+        "model_release_date": "2025-01-20",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-01-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-01-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "source": "https://hal.cs.princeton.edu/scienceagentbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-2353-model-version-deepseek-r1-name-d-3a6c452b7867b3c4"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-01-20",
+        "frontier_observation_ids": [
+          "obs-0-2353-caca111af47713cb"
+        ]
+      },
+      {
+        "observation_id": "obs-0-3039-586772b059fd17fe",
+        "benchmark_id": "scienceagentbench",
+        "benchmark_version_id": "scienceagentbench-canonical",
+        "model_id": "model-claude-3-7-sonnet-105c2d3675a935dc",
+        "model_configuration": "claude-3-7-sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-7-sonnet",
+        "model_family_id": "anthropic-claude-3-7-sonnet",
+        "model": "Claude 3.7 Sonnet",
+        "organization": "Anthropic",
+        "score": 0.3039,
+        "input_score": 0.3039,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "scienceagentbench-metric-v1",
+        "protocol_id": "scienceagentbench-source-export-v1",
+        "task_set_id": "scienceagentbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "scienceagentbench-canonical-score",
+        "evaluation_protocol": "ScienceAgentBench 102-task release with the HAL leaderboard's verified accuracy results. SAB Self-Debug and HAL Generalist Agent are retained as distinct scaffolds; no cost total is treated as per-task cost.",
+        "model_release_date": "2025-02-24",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-02-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-02-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "source": "https://hal.cs.princeton.edu/scienceagentbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-3039-model-version-claude-3-7-sonnet--7568d0ba345c9b11"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-02-24",
+        "frontier_observation_ids": [
+          "obs-0-3039-586772b059fd17fe"
+        ]
+      },
+      {
+        "observation_id": "obs-0-3333-d3bb5c3828f2433d",
+        "benchmark_id": "scienceagentbench",
+        "benchmark_version_id": "scienceagentbench-canonical",
+        "model_id": "model-o3-medium-b0925616b588292e",
+        "model_configuration": "o3-medium",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-medium",
+        "model_family_id": "openai-o3-medium",
+        "model": "o3 Medium",
+        "organization": "OpenAI",
+        "score": 0.3333,
+        "input_score": 0.3333,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "scienceagentbench-metric-v1",
+        "protocol_id": "scienceagentbench-source-export-v1",
+        "task_set_id": "scienceagentbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "scienceagentbench-canonical-score",
+        "evaluation_protocol": "ScienceAgentBench 102-task release with the HAL leaderboard's verified accuracy results. SAB Self-Debug and HAL Generalist Agent are retained as distinct scaffolds; no cost total is treated as per-task cost.",
+        "model_release_date": "2025-04-16",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-04-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "source": "https://hal.cs.princeton.edu/scienceagentbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-3333-model-version-o3-medium-name-o3--8c7fe40937aa9e55"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-04-16",
+        "frontier_observation_ids": [
+          "obs-0-2745-7f113516e7348823",
+          "obs-0-3333-d3bb5c3828f2433d"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-1275-fe78d2c116013873",
+        "benchmark_id": "scienceagentbench",
+        "benchmark_version_id": "scienceagentbench-canonical",
+        "model_id": "model-gemini-2-0-flash-c7f695767f575f5b",
+        "model_configuration": "gemini-2-0-flash",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-0-flash",
+        "model_family_id": "google-gemini-2-0-flash",
+        "model": "Gemini 2.0 Flash",
+        "organization": "Google",
+        "score": 0.1275,
+        "input_score": 0.1275,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "scienceagentbench-metric-v1",
+        "protocol_id": "scienceagentbench-source-export-v1",
+        "task_set_id": "scienceagentbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "scienceagentbench-canonical-score",
+        "evaluation_protocol": "ScienceAgentBench 102-task release with the HAL leaderboard's verified accuracy results. SAB Self-Debug and HAL Generalist Agent are retained as distinct scaffolds; no cost total is treated as per-task cost.",
+        "model_release_date": "2024-12-11",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-12-11",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-11",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-12-11",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-11",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "source": "https://hal.cs.princeton.edu/scienceagentbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-1275-model-version-gemini-2-0-flash-n-c398efcad47e604f"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2024-12-11",
+        "frontier_observation_ids": [
+          "obs-0-1275-fe78d2c116013873"
+        ]
+      },
+      {
+        "observation_id": "obs-0-2353-caca111af47713cb",
+        "benchmark_id": "scienceagentbench",
+        "benchmark_version_id": "scienceagentbench-canonical",
+        "model_id": "model-deepseek-r1-18eed2738c2c0e2c",
+        "model_configuration": "deepseek-r1",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-r1",
+        "model_family_id": "deepseek-deepseek-r1",
+        "model": "DeepSeek R1",
+        "organization": "DeepSeek",
+        "score": 0.2353,
+        "input_score": 0.2353,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "scienceagentbench-metric-v1",
+        "protocol_id": "scienceagentbench-source-export-v1",
+        "task_set_id": "scienceagentbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "scienceagentbench-canonical-score",
+        "evaluation_protocol": "ScienceAgentBench 102-task release with the HAL leaderboard's verified accuracy results. SAB Self-Debug and HAL Generalist Agent are retained as distinct scaffolds; no cost total is treated as per-task cost.",
+        "model_release_date": "2025-01-20",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-01-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-01-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "source": "https://hal.cs.princeton.edu/scienceagentbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-2353-model-version-deepseek-r1-name-d-3a6c452b7867b3c4"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-01-20",
+        "frontier_observation_ids": [
+          "obs-0-2353-caca111af47713cb"
+        ]
+      },
+      {
+        "observation_id": "obs-0-3039-586772b059fd17fe",
+        "benchmark_id": "scienceagentbench",
+        "benchmark_version_id": "scienceagentbench-canonical",
+        "model_id": "model-claude-3-7-sonnet-105c2d3675a935dc",
+        "model_configuration": "claude-3-7-sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-7-sonnet",
+        "model_family_id": "anthropic-claude-3-7-sonnet",
+        "model": "Claude 3.7 Sonnet",
+        "organization": "Anthropic",
+        "score": 0.3039,
+        "input_score": 0.3039,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "scienceagentbench-metric-v1",
+        "protocol_id": "scienceagentbench-source-export-v1",
+        "task_set_id": "scienceagentbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "scienceagentbench-canonical-score",
+        "evaluation_protocol": "ScienceAgentBench 102-task release with the HAL leaderboard's verified accuracy results. SAB Self-Debug and HAL Generalist Agent are retained as distinct scaffolds; no cost total is treated as per-task cost.",
+        "model_release_date": "2025-02-24",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-02-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-02-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "source": "https://hal.cs.princeton.edu/scienceagentbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-3039-model-version-claude-3-7-sonnet--7568d0ba345c9b11"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-02-24",
+        "frontier_observation_ids": [
+          "obs-0-3039-586772b059fd17fe"
+        ]
+      },
+      {
+        "observation_id": "obs-0-3333-d3bb5c3828f2433d",
+        "benchmark_id": "scienceagentbench",
+        "benchmark_version_id": "scienceagentbench-canonical",
+        "model_id": "model-o3-medium-b0925616b588292e",
+        "model_configuration": "o3-medium",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-medium",
+        "model_family_id": "openai-o3-medium",
+        "model": "o3 Medium",
+        "organization": "OpenAI",
+        "score": 0.3333,
+        "input_score": 0.3333,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "scienceagentbench-metric-v1",
+        "protocol_id": "scienceagentbench-source-export-v1",
+        "task_set_id": "scienceagentbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "scienceagentbench-canonical-score",
+        "evaluation_protocol": "ScienceAgentBench 102-task release with the HAL leaderboard's verified accuracy results. SAB Self-Debug and HAL Generalist Agent are retained as distinct scaffolds; no cost total is treated as per-task cost.",
+        "model_release_date": "2025-04-16",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-04-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+        ],
+        "source": "https://hal.cs.princeton.edu/scienceagentbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-3333-model-version-o3-medium-name-o3--8c7fe40937aa9e55"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-04-16",
+        "frontier_observation_ids": [
+          "obs-0-2745-7f113516e7348823",
+          "obs-0-3333-d3bb5c3828f2433d"
+        ]
+      }
+    ],
+    "reported_frontier": [],
+    "historical_frontier": [],
+    "retrospective_observations": [],
+    "observed_frontier": 0.3333,
+    "capability_frontier_value": 0.3333,
+    "reported_frontier_value": null,
+    "current_frontier": 0.3333,
+    "normalized_progress": 0.3333,
+    "normalized_headroom": 0.6667000000000001,
+    "threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 699
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 699
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 699
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 699
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 699
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 699
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T80": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T90": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.5714285714285714,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "DeepSeek"
+      ],
+      "panel_size": 7,
+      "status": "medium"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-hal-cs-princeton-edu-scienceagentbench-5f32eb43271d6f2f"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "unknown_public_dates",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": true,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": true,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

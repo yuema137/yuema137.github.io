@@ -1,0 +1,2764 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "the-agent-company",
+    "name": "TheAgentCompany",
+    "domain": "General agent tasks",
+    "release": "2024-10-01",
+    "source": "https://the-agent-company.com/",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Agent",
+    "tags": [
+      "workplace",
+      "multi-step",
+      "browser",
+      "coding"
+    ],
+    "metric": "% Resolved",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "the-agent-company-metric-v1",
+    "protocol_id": "the-agent-company-source-export-v1",
+    "canonical_score": {
+      "series_id": "the-agent-company-canonical-score",
+      "role": "canonical",
+      "metric_id": "the-agent-company-metric-v1",
+      "metric_name": "% Resolved",
+      "protocol_id": "the-agent-company-source-export-v1",
+      "task_set_id": "the-agent-company-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "the-agent-company-canonical",
+    "summary": {
+      "en": "TheAgentCompany evaluates agents on multi-step knowledge-work tasks inside a simulated software company.",
+      "zh": "TheAgentCompany \u5728\u6a21\u62df\u7684\u8f6f\u4ef6\u516c\u53f8\u73af\u5883\u4e2d\u8bc4\u4f30 agent \u5b8c\u6210\u591a\u6b65\u77e5\u8bc6\u5de5\u4f5c\u7684\u80fd\u529b\u3002"
+    },
+    "task_format": {
+      "en": "An agent works across browser, office, communication, and coding tools to complete a workplace task; success is checked against the resulting state and deliverable.",
+      "zh": "agent \u9700\u8981\u8de8\u6d4f\u89c8\u5668\u3001\u529e\u516c\u3001\u6c9f\u901a\u548c coding \u5de5\u5177\u5b8c\u6210 workplace task\uff0c\u7ed3\u679c\u901a\u8fc7\u6700\u7ec8\u72b6\u6001\u548c\u4ea4\u4ed8\u7269\u68c0\u67e5\u3002"
+    },
+    "scoring": {
+      "metric_name": "Task resolution rate",
+      "explanation": {
+        "en": "The score is the share of tasks resolved under the benchmark's task-specific checks. Partial progress is reported separately from the resolved-task rate.",
+        "zh": "\u5206\u6570\u662f\u6309\u7167 task \u4e13\u7528\u68c0\u67e5\u6210\u529f\u5b8c\u6210\u7684 task \u5360\u6bd4\u3002\u90e8\u5206\u5b8c\u6210\u8fdb\u5ea6\u548c resolved-task rate \u5206\u5f00\u62a5\u544a\u3002"
+      }
+    },
+    "evaluation_target": "environment_outcome",
+    "observation_count": 16,
+    "evidence_record_count": 16,
+    "observations": [
+      {
+        "observation_id": "obs-0-24-9c8e6d18898d0559",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-claude-3-5-sonnet-20241022-64e890320834f2ae",
+        "model_configuration": "claude-3-5-sonnet-20241022",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "openhands-claude-3-5-sonnet",
+        "model_family_id": "anthropic-openhands-claude-3-5-sonnet",
+        "model": "OpenHands + Claude 3.5 Sonnet",
+        "organization": "Anthropic",
+        "score": 0.24,
+        "input_score": 0.24,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2024-10-22",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-10-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-10-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-10-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-10-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-24-score-0-344-average-costs-6-34-ave-9601fc96279e3834"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-114-6c0774508f20321e",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-gemini-2-0-flash-001-bc5e9762ba39c858",
+        "model_configuration": "gemini-2.0-flash-001",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-0-flash",
+        "model_family_id": "google-deepmind-google-gemini-2-0-flash",
+        "model": "Gemini 2.0 Flash",
+        "organization": "Google DeepMind,Google",
+        "score": 0.114,
+        "input_score": 0.114,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2025-02-05",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-02-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-02-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-114-score-0-19-average-costs-0-79-ave-d723e572d06498c2"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-086-45f816728bba8948",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-gpt-4o-2024-11-20-a2c62b9cadad1de5",
+        "model_configuration": "gpt-4o-2024-11-20",
+        "model_identity_organization": "openai",
+        "model_label_id": "openhands-gpt-4o",
+        "model_family_id": "openai-openhands-gpt-4o",
+        "model": "OpenHands + GPT 4o",
+        "organization": "OpenAI",
+        "score": 0.086,
+        "input_score": 0.086,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2024-11-20",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-11-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-11-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-11-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-11-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-086-score-0-167-average-costs-1-29-av-754bd4eb472d77ee"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-074-6b2812e69e0a1ec9",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-llama-3-1-405b-instruct-6a475483b70c041c",
+        "model_configuration": "Llama-3.1-405B-Instruct",
+        "model_identity_organization": "meta",
+        "model_label_id": "openhands-llama-3-1-405b",
+        "model_family_id": "meta-ai-openhands-llama-3-1-405b",
+        "model": "OpenHands + Llama-3.1-405b",
+        "organization": "Meta AI",
+        "score": 0.074,
+        "input_score": 0.074,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2024-07-23",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-07-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-07-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-07-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-07-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-074-score-0-141-average-costs-3-21-av-a6c50b4ee2872429"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-069-a56878809ac87545",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-llama-3-1-70b-instruct-8e3dc2ce6d5cbd60",
+        "model_configuration": "Llama-3.1-70B-Instruct",
+        "model_identity_organization": "meta",
+        "model_label_id": "openhands-llama-3-3-70b",
+        "model_family_id": "meta-ai-openhands-llama-3-3-70b",
+        "model": "OpenHands + LLama-3.3-70b",
+        "organization": "Meta AI",
+        "score": 0.069,
+        "input_score": 0.069,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2024-07-23",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-07-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-07-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-07-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-07-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-069-score-0-128-average-costs-0-93-av-38c88cf5c715215b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-057-c44598b4ac026ce3",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-qwen2-5-72b-instruct-fa1e319088d20301",
+        "model_configuration": "qwen2.5-72b-instruct",
+        "model_identity_organization": "qwen",
+        "model_label_id": "openhands-qwen-2-5-72b",
+        "model_family_id": "alibaba-openhands-qwen-2-5-72b",
+        "model": "OpenHands + Qwen-2.5-72b",
+        "organization": "Alibaba",
+        "score": 0.057,
+        "input_score": 0.057,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2024-09-19",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-09-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-09-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-09-19",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-09-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-057-score-0-118-average-costs-1-53-av-525e57e5598e7ab8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-034-98aad34a85a85ab8",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-gemini-1-5-pro-002-e4b949df0dc70929",
+        "model_configuration": "gemini-1.5-pro-002",
+        "model_identity_organization": "google",
+        "model_label_id": "openhands-gemini-1-5-pro",
+        "model_family_id": "google-deepmind-openhands-gemini-1-5-pro",
+        "model": "OpenHands + Gemini 1.5 Pro",
+        "organization": "Google DeepMind",
+        "score": 0.034,
+        "input_score": 0.034,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2024-09-24",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-09-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-09-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-09-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-09-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-034-score-0-08-average-costs-6-78-ave-cca22de9d477953d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-017-6f0ee06a3f6e31b8",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-llama-3-1-70b-instruct-8e3dc2ce6d5cbd60",
+        "model_configuration": "Llama-3.1-70B-Instruct",
+        "model_identity_organization": "meta",
+        "model_label_id": "openhands-llama-3-1-70b",
+        "model_family_id": "meta-ai-openhands-llama-3-1-70b",
+        "model": "OpenHands + Llama-3.1-70b",
+        "organization": "Meta AI",
+        "score": 0.017,
+        "input_score": 0.017,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2024-07-23",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-07-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-07-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-07-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-07-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-017-score-0-065-average-costs-0-83-av-8afa4fee487e7fb2"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-017-598517079fea98b8",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-amazon-nova-pro-v1-0-7c9bdf0a224815dd",
+        "model_configuration": "amazon.nova-pro-v1:0",
+        "model_identity_organization": "amazon",
+        "model_label_id": "openhands-amazon-nova-pro-v1-0",
+        "model_family_id": "amazon-openhands-amazon-nova-pro-v1-0",
+        "model": "OpenHands + Amazon Nova Pro V1:0",
+        "organization": "Amazon",
+        "score": 0.017,
+        "input_score": 0.017,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2024-12-03",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-12-03",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-03",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-12-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-03",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-017-score-0-057-average-costs-1-55-av-f6068d2709fb2ce3"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-011-0c3f16c2a697dc67",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-qwen2-72b-instruct-92f8236f48ff64bc",
+        "model_configuration": "qwen2-72b-instruct",
+        "model_identity_organization": "qwen",
+        "model_label_id": "openhands-qwen-2-72b",
+        "model_family_id": "alibaba-openhands-qwen-2-72b",
+        "model": "OpenHands + Qwen-2-72b",
+        "organization": "Alibaba",
+        "score": 0.011,
+        "input_score": 0.011,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2024-06-07",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-06-07",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-06-07",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-06-07",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-011-score-0-042-average-costs-0-28-av-27bddf8fa47f227a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-411-5c1074002905ab4b",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-gemini-2-5-flash-preview-09-2025-8acc20cdce5638b4",
+        "model_configuration": "gemini-2.5-flash-preview-09-2025",
+        "model_identity_organization": "google",
+        "model_label_id": "muse-gemini-2-5-flash",
+        "model_family_id": "google-deepmind-muse-gemini-2-5-flash",
+        "model": "MUSE + Gemini 2.5 Flash",
+        "organization": "Google DeepMind",
+        "score": 0.411,
+        "input_score": 0.411,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2025-09-25",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-09-25",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-09-25",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-09-25",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-09-25",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-411-score-0-518-benchmark-organizatio-e693dff7cf41aa8a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-429-2c32c66534c76f36",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-deepseek-v3-2-exp-c9c6cdcbc433b763",
+        "model_configuration": "DeepSeek-V3.2-Exp",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "tte-matrixagent-deepseek-v3-2",
+        "model_family_id": "deepseek-tte-matrixagent-deepseek-v3-2",
+        "model": "TTE-MatrixAgent + Deepseek-V3.2",
+        "organization": "DeepSeek",
+        "score": 0.429,
+        "input_score": 0.429,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2025-09-29",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-09-29",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-09-29",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-09-29",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-09-29",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-429-score-0-524-average-costs-0-4-ave-b966c1d66e44341b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-331-eb7d43bf932db27e",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-claude-sonnet-4-20250514-f00868816258ebe5",
+        "model_configuration": "claude-sonnet-4-20250514",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "openhands-versa-claude-sonnet-4",
+        "model_family_id": "anthropic-openhands-versa-claude-sonnet-4",
+        "model": "OpenHands-Versa + Claude Sonnet 4",
+        "organization": "Anthropic",
+        "score": 0.331,
+        "input_score": 0.331,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2025-05-22",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-05-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-05-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-05-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-05-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-331-score-0-432-average-costs-1-63-av-ef2c788d5cb9bf01"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-309-b19e926dd470f776",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-claude-3-7-sonnet-20250219-d490474de83bc9ef",
+        "model_configuration": "claude-3-7-sonnet-20250219",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "openhands-versa-claude-3-7-sonnet",
+        "model_family_id": "anthropic-openhands-versa-claude-3-7-sonnet",
+        "model": "OpenHands-Versa + Claude 3.7 Sonnet",
+        "organization": "Anthropic",
+        "score": 0.309,
+        "input_score": 0.309,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2025-02-24",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-02-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-02-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-309-score-0-402-average-costs-3-7-ave-b926f3115ecf7462"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-303-bfcdf6c85917e616",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-gemini-2-5-pro-preview-05-06-fb7bf9aae81961c1",
+        "model_configuration": "gemini-2.5-pro-preview-05-06",
+        "model_identity_organization": "google",
+        "model_label_id": "openhands-gemini-2-5-pro",
+        "model_family_id": "google-deepmind-openhands-gemini-2-5-pro",
+        "model": "OpenHands + Gemini 2.5 Pro",
+        "organization": "Google DeepMind",
+        "score": 0.303,
+        "input_score": 0.303,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2025-05-06",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-05-06",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-05-06",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-05-06",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-05-06",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-303-score-0-393-average-costs-4-23-av-f438f67b0bf2e9e2"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-263-047205760527942e",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-claude-3-7-sonnet-20250219-d490474de83bc9ef",
+        "model_configuration": "claude-3-7-sonnet-20250219",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "openhands-claude-3-7-sonnet",
+        "model_family_id": "anthropic-openhands-claude-3-7-sonnet",
+        "model": "OpenHands + Claude 3.7 Sonnet",
+        "organization": "Anthropic",
+        "score": 0.263,
+        "input_score": 0.263,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2025-02-24",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-02-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-02-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-263-score-0-364-average-costs-4-05-av-99c8bd8ad5ad341c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-074-6b2812e69e0a1ec9",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-llama-3-1-405b-instruct-6a475483b70c041c",
+        "model_configuration": "Llama-3.1-405B-Instruct",
+        "model_identity_organization": "meta",
+        "model_label_id": "openhands-llama-3-1-405b",
+        "model_family_id": "meta-ai-openhands-llama-3-1-405b",
+        "model": "OpenHands + Llama-3.1-405b",
+        "organization": "Meta AI",
+        "score": 0.074,
+        "input_score": 0.074,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2024-07-23",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-07-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-07-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-10-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-07-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-074-score-0-141-average-costs-3-21-av-a6c50b4ee2872429"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2024-10-01",
+        "frontier_observation_ids": [
+          "obs-0-011-0c3f16c2a697dc67",
+          "obs-0-017-6f0ee06a3f6e31b8",
+          "obs-0-034-98aad34a85a85ab8",
+          "obs-0-057-c44598b4ac026ce3",
+          "obs-0-069-a56878809ac87545",
+          "obs-0-074-6b2812e69e0a1ec9"
+        ]
+      },
+      {
+        "observation_id": "obs-0-24-9c8e6d18898d0559",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-claude-3-5-sonnet-20241022-64e890320834f2ae",
+        "model_configuration": "claude-3-5-sonnet-20241022",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "openhands-claude-3-5-sonnet",
+        "model_family_id": "anthropic-openhands-claude-3-5-sonnet",
+        "model": "OpenHands + Claude 3.5 Sonnet",
+        "organization": "Anthropic",
+        "score": 0.24,
+        "input_score": 0.24,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2024-10-22",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-10-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-10-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-10-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-10-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-24-score-0-344-average-costs-6-34-ave-9601fc96279e3834"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2024-10-22",
+        "frontier_observation_ids": [
+          "obs-0-24-9c8e6d18898d0559"
+        ]
+      },
+      {
+        "observation_id": "obs-0-309-b19e926dd470f776",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-claude-3-7-sonnet-20250219-d490474de83bc9ef",
+        "model_configuration": "claude-3-7-sonnet-20250219",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "openhands-versa-claude-3-7-sonnet",
+        "model_family_id": "anthropic-openhands-versa-claude-3-7-sonnet",
+        "model": "OpenHands-Versa + Claude 3.7 Sonnet",
+        "organization": "Anthropic",
+        "score": 0.309,
+        "input_score": 0.309,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2025-02-24",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-02-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-02-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-309-score-0-402-average-costs-3-7-ave-b926f3115ecf7462"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-02-24",
+        "frontier_observation_ids": [
+          "obs-0-263-047205760527942e",
+          "obs-0-309-b19e926dd470f776"
+        ]
+      },
+      {
+        "observation_id": "obs-0-331-eb7d43bf932db27e",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-claude-sonnet-4-20250514-f00868816258ebe5",
+        "model_configuration": "claude-sonnet-4-20250514",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "openhands-versa-claude-sonnet-4",
+        "model_family_id": "anthropic-openhands-versa-claude-sonnet-4",
+        "model": "OpenHands-Versa + Claude Sonnet 4",
+        "organization": "Anthropic",
+        "score": 0.331,
+        "input_score": 0.331,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2025-05-22",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-05-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-05-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-05-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-05-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-331-score-0-432-average-costs-1-63-av-ef2c788d5cb9bf01"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-05-22",
+        "frontier_observation_ids": [
+          "obs-0-331-eb7d43bf932db27e"
+        ]
+      },
+      {
+        "observation_id": "obs-0-411-5c1074002905ab4b",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-gemini-2-5-flash-preview-09-2025-8acc20cdce5638b4",
+        "model_configuration": "gemini-2.5-flash-preview-09-2025",
+        "model_identity_organization": "google",
+        "model_label_id": "muse-gemini-2-5-flash",
+        "model_family_id": "google-deepmind-muse-gemini-2-5-flash",
+        "model": "MUSE + Gemini 2.5 Flash",
+        "organization": "Google DeepMind",
+        "score": 0.411,
+        "input_score": 0.411,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2025-09-25",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-09-25",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-09-25",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-09-25",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-09-25",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-411-score-0-518-benchmark-organizatio-e693dff7cf41aa8a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-09-25",
+        "frontier_observation_ids": [
+          "obs-0-411-5c1074002905ab4b"
+        ]
+      },
+      {
+        "observation_id": "obs-0-429-2c32c66534c76f36",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-deepseek-v3-2-exp-c9c6cdcbc433b763",
+        "model_configuration": "DeepSeek-V3.2-Exp",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "tte-matrixagent-deepseek-v3-2",
+        "model_family_id": "deepseek-tte-matrixagent-deepseek-v3-2",
+        "model": "TTE-MatrixAgent + Deepseek-V3.2",
+        "organization": "DeepSeek",
+        "score": 0.429,
+        "input_score": 0.429,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2025-09-29",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-09-29",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-09-29",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-09-29",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-09-29",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-429-score-0-524-average-costs-0-4-ave-b966c1d66e44341b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-09-29",
+        "frontier_observation_ids": [
+          "obs-0-429-2c32c66534c76f36"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-074-6b2812e69e0a1ec9",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-llama-3-1-405b-instruct-6a475483b70c041c",
+        "model_configuration": "Llama-3.1-405B-Instruct",
+        "model_identity_organization": "meta",
+        "model_label_id": "openhands-llama-3-1-405b",
+        "model_family_id": "meta-ai-openhands-llama-3-1-405b",
+        "model": "OpenHands + Llama-3.1-405b",
+        "organization": "Meta AI",
+        "score": 0.074,
+        "input_score": 0.074,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2024-07-23",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-07-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-07-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-10-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-07-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-074-score-0-141-average-costs-3-21-av-a6c50b4ee2872429"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2024-10-01",
+        "frontier_observation_ids": [
+          "obs-0-011-0c3f16c2a697dc67",
+          "obs-0-017-6f0ee06a3f6e31b8",
+          "obs-0-034-98aad34a85a85ab8",
+          "obs-0-057-c44598b4ac026ce3",
+          "obs-0-069-a56878809ac87545",
+          "obs-0-074-6b2812e69e0a1ec9"
+        ]
+      },
+      {
+        "observation_id": "obs-0-24-9c8e6d18898d0559",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-claude-3-5-sonnet-20241022-64e890320834f2ae",
+        "model_configuration": "claude-3-5-sonnet-20241022",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "openhands-claude-3-5-sonnet",
+        "model_family_id": "anthropic-openhands-claude-3-5-sonnet",
+        "model": "OpenHands + Claude 3.5 Sonnet",
+        "organization": "Anthropic",
+        "score": 0.24,
+        "input_score": 0.24,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2024-10-22",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-10-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-10-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-10-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-10-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-24-score-0-344-average-costs-6-34-ave-9601fc96279e3834"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2024-10-22",
+        "frontier_observation_ids": [
+          "obs-0-24-9c8e6d18898d0559"
+        ]
+      },
+      {
+        "observation_id": "obs-0-309-b19e926dd470f776",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-claude-3-7-sonnet-20250219-d490474de83bc9ef",
+        "model_configuration": "claude-3-7-sonnet-20250219",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "openhands-versa-claude-3-7-sonnet",
+        "model_family_id": "anthropic-openhands-versa-claude-3-7-sonnet",
+        "model": "OpenHands-Versa + Claude 3.7 Sonnet",
+        "organization": "Anthropic",
+        "score": 0.309,
+        "input_score": 0.309,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2025-02-24",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-02-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-02-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-309-score-0-402-average-costs-3-7-ave-b926f3115ecf7462"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-02-24",
+        "frontier_observation_ids": [
+          "obs-0-263-047205760527942e",
+          "obs-0-309-b19e926dd470f776"
+        ]
+      },
+      {
+        "observation_id": "obs-0-331-eb7d43bf932db27e",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-claude-sonnet-4-20250514-f00868816258ebe5",
+        "model_configuration": "claude-sonnet-4-20250514",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "openhands-versa-claude-sonnet-4",
+        "model_family_id": "anthropic-openhands-versa-claude-sonnet-4",
+        "model": "OpenHands-Versa + Claude Sonnet 4",
+        "organization": "Anthropic",
+        "score": 0.331,
+        "input_score": 0.331,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2025-05-22",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-05-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-05-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-05-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-05-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-331-score-0-432-average-costs-1-63-av-ef2c788d5cb9bf01"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-05-22",
+        "frontier_observation_ids": [
+          "obs-0-331-eb7d43bf932db27e"
+        ]
+      },
+      {
+        "observation_id": "obs-0-411-5c1074002905ab4b",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-gemini-2-5-flash-preview-09-2025-8acc20cdce5638b4",
+        "model_configuration": "gemini-2.5-flash-preview-09-2025",
+        "model_identity_organization": "google",
+        "model_label_id": "muse-gemini-2-5-flash",
+        "model_family_id": "google-deepmind-muse-gemini-2-5-flash",
+        "model": "MUSE + Gemini 2.5 Flash",
+        "organization": "Google DeepMind",
+        "score": 0.411,
+        "input_score": 0.411,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2025-09-25",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-09-25",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-09-25",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-09-25",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-09-25",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-411-score-0-518-benchmark-organizatio-e693dff7cf41aa8a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-09-25",
+        "frontier_observation_ids": [
+          "obs-0-411-5c1074002905ab4b"
+        ]
+      },
+      {
+        "observation_id": "obs-0-429-2c32c66534c76f36",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-deepseek-v3-2-exp-c9c6cdcbc433b763",
+        "model_configuration": "DeepSeek-V3.2-Exp",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "tte-matrixagent-deepseek-v3-2",
+        "model_family_id": "deepseek-tte-matrixagent-deepseek-v3-2",
+        "model": "TTE-MatrixAgent + Deepseek-V3.2",
+        "organization": "DeepSeek",
+        "score": 0.429,
+        "input_score": 0.429,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2025-09-29",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-09-29",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-09-29",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-09-29",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-09-29",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-429-score-0-524-average-costs-0-4-ave-b966c1d66e44341b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-09-29",
+        "frontier_observation_ids": [
+          "obs-0-429-2c32c66534c76f36"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-074-6b2812e69e0a1ec9",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-llama-3-1-405b-instruct-6a475483b70c041c",
+        "model_configuration": "Llama-3.1-405B-Instruct",
+        "model_identity_organization": "meta",
+        "model_label_id": "openhands-llama-3-1-405b",
+        "model_family_id": "meta-ai-openhands-llama-3-1-405b",
+        "model": "OpenHands + Llama-3.1-405b",
+        "organization": "Meta AI",
+        "score": 0.074,
+        "input_score": 0.074,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2024-07-23",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-07-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-07-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-10-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-07-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-074-score-0-141-average-costs-3-21-av-a6c50b4ee2872429"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2024-10-01",
+        "frontier_observation_ids": [
+          "obs-0-011-0c3f16c2a697dc67",
+          "obs-0-017-6f0ee06a3f6e31b8",
+          "obs-0-034-98aad34a85a85ab8",
+          "obs-0-057-c44598b4ac026ce3",
+          "obs-0-069-a56878809ac87545",
+          "obs-0-074-6b2812e69e0a1ec9"
+        ]
+      },
+      {
+        "observation_id": "obs-0-24-9c8e6d18898d0559",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-claude-3-5-sonnet-20241022-64e890320834f2ae",
+        "model_configuration": "claude-3-5-sonnet-20241022",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "openhands-claude-3-5-sonnet",
+        "model_family_id": "anthropic-openhands-claude-3-5-sonnet",
+        "model": "OpenHands + Claude 3.5 Sonnet",
+        "organization": "Anthropic",
+        "score": 0.24,
+        "input_score": 0.24,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2024-10-22",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-10-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-10-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-10-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-10-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-24-score-0-344-average-costs-6-34-ave-9601fc96279e3834"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2024-10-22",
+        "frontier_observation_ids": [
+          "obs-0-24-9c8e6d18898d0559"
+        ]
+      },
+      {
+        "observation_id": "obs-0-309-b19e926dd470f776",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-claude-3-7-sonnet-20250219-d490474de83bc9ef",
+        "model_configuration": "claude-3-7-sonnet-20250219",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "openhands-versa-claude-3-7-sonnet",
+        "model_family_id": "anthropic-openhands-versa-claude-3-7-sonnet",
+        "model": "OpenHands-Versa + Claude 3.7 Sonnet",
+        "organization": "Anthropic",
+        "score": 0.309,
+        "input_score": 0.309,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2025-02-24",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-02-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-02-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-309-score-0-402-average-costs-3-7-ave-b926f3115ecf7462"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-02-24",
+        "frontier_observation_ids": [
+          "obs-0-263-047205760527942e",
+          "obs-0-309-b19e926dd470f776"
+        ]
+      },
+      {
+        "observation_id": "obs-0-331-eb7d43bf932db27e",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-claude-sonnet-4-20250514-f00868816258ebe5",
+        "model_configuration": "claude-sonnet-4-20250514",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "openhands-versa-claude-sonnet-4",
+        "model_family_id": "anthropic-openhands-versa-claude-sonnet-4",
+        "model": "OpenHands-Versa + Claude Sonnet 4",
+        "organization": "Anthropic",
+        "score": 0.331,
+        "input_score": 0.331,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2025-05-22",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-05-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-05-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-05-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-05-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-331-score-0-432-average-costs-1-63-av-ef2c788d5cb9bf01"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-05-22",
+        "frontier_observation_ids": [
+          "obs-0-331-eb7d43bf932db27e"
+        ]
+      },
+      {
+        "observation_id": "obs-0-411-5c1074002905ab4b",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-gemini-2-5-flash-preview-09-2025-8acc20cdce5638b4",
+        "model_configuration": "gemini-2.5-flash-preview-09-2025",
+        "model_identity_organization": "google",
+        "model_label_id": "muse-gemini-2-5-flash",
+        "model_family_id": "google-deepmind-muse-gemini-2-5-flash",
+        "model": "MUSE + Gemini 2.5 Flash",
+        "organization": "Google DeepMind",
+        "score": 0.411,
+        "input_score": 0.411,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2025-09-25",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-09-25",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-09-25",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-09-25",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-09-25",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-411-score-0-518-benchmark-organizatio-e693dff7cf41aa8a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-09-25",
+        "frontier_observation_ids": [
+          "obs-0-411-5c1074002905ab4b"
+        ]
+      },
+      {
+        "observation_id": "obs-0-429-2c32c66534c76f36",
+        "benchmark_id": "the-agent-company",
+        "benchmark_version_id": "the-agent-company-canonical",
+        "model_id": "model-deepseek-v3-2-exp-c9c6cdcbc433b763",
+        "model_configuration": "DeepSeek-V3.2-Exp",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "tte-matrixagent-deepseek-v3-2",
+        "model_family_id": "deepseek-tte-matrixagent-deepseek-v3-2",
+        "model": "TTE-MatrixAgent + Deepseek-V3.2",
+        "organization": "DeepSeek",
+        "score": 0.429,
+        "input_score": 0.429,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "the-agent-company-metric-v1",
+        "protocol_id": "the-agent-company-source-export-v1",
+        "task_set_id": "the-agent-company-canonical",
+        "metric": "% Resolved",
+        "score_role": "canonical",
+        "score_series_id": "the-agent-company-canonical-score",
+        "evaluation_protocol": "TheAgentCompany v1 evaluation export; OpenHands scaffold and model identity are retained in each observation. The benchmark release date is the public v1 launch month; the shared observation-time policy drives the lifecycle timeline.",
+        "model_release_date": "2025-09-29",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-09-29",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-09-29",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-the-agent-company-com-0be6a8d37abd047f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-09-29",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-09-29",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "score_source_ids": [
+          "resource-https-the-agent-company-com-0be6a8d37abd047f"
+        ],
+        "source": "https://the-agent-company.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-resolved-0-429-score-0-524-average-costs-0-4-ave-b966c1d66e44341b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-09-29",
+        "frontier_observation_ids": [
+          "obs-0-429-2c32c66534c76f36"
+        ]
+      }
+    ],
+    "reported_frontier": [],
+    "historical_frontier": [],
+    "retrospective_observations": [],
+    "observed_frontier": 0.429,
+    "capability_frontier_value": 0.429,
+    "reported_frontier_value": null,
+    "current_frontier": 0.429,
+    "normalized_progress": 0.429,
+    "normalized_headroom": 0.571,
+    "threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 705
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 705
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 705
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 705
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 705
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 705
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T80": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T90": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      }
+    },
+    "velocity_180d": 0.016833179723502303,
+    "capability_velocity_180d": 0.016833179723502303,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.8571428571428571,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "DeepSeek",
+        "Qwen",
+        "Meta"
+      ],
+      "panel_size": 7,
+      "status": "high"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-the-agent-company-com-0be6a8d37abd047f"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "unknown_public_dates",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": true,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": true,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

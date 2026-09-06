@@ -1,0 +1,1793 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "gaia",
+    "name": "GAIA",
+    "domain": "General agent tasks",
+    "release": "2023-11-21",
+    "source": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Agent",
+    "tags": [
+      "browsing",
+      "multimodal",
+      "tool use",
+      "long-horizon"
+    ],
+    "metric": "Average score",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "gaia-metric-v1",
+    "protocol_id": "gaia-source-export-v1",
+    "canonical_score": {
+      "series_id": "gaia-canonical-score",
+      "role": "canonical",
+      "metric_id": "gaia-metric-v1",
+      "metric_name": "Average score",
+      "protocol_id": "gaia-source-export-v1",
+      "task_set_id": "gaia-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "gaia-canonical",
+    "summary": {
+      "en": "GAIA tests general-purpose assistants on real-world questions that require reasoning, multimodal understanding, web browsing, and tool use.",
+      "zh": "GAIA \u6d4b\u8bd5\u901a\u7528 assistant \u89e3\u51b3\u771f\u5b9e\u4e16\u754c\u95ee\u9898\u7684\u80fd\u529b\uff0c\u8fd9\u4e9b\u95ee\u9898\u53ef\u80fd\u9700\u8981\u63a8\u7406\u3001\u591a\u6a21\u6001\u7406\u89e3\u3001\u7f51\u9875\u6d4f\u89c8\u548c\u5de5\u5177\u4f7f\u7528\u3002"
+    },
+    "task_format": {
+      "en": "The agent receives a real-world question, sometimes with an attached file, and must research, reason, use tools, and submit one final answer. The benchmark has three difficulty levels and separate public validation and private test sets.",
+      "zh": "agent \u4f1a\u6536\u5230\u4e00\u4e2a\u771f\u5b9e\u4e16\u754c\u95ee\u9898\uff0c\u6709\u65f6\u8fd8\u4f1a\u9644\u5e26\u6587\u4ef6\uff0c\u9700\u8981\u68c0\u7d22\u3001\u63a8\u7406\u3001\u4f7f\u7528\u5de5\u5177\uff0c\u5e76\u63d0\u4ea4\u4e00\u4e2a\u6700\u7ec8\u7b54\u6848\u3002benchmark \u5206\u4e3a\u4e09\u4e2a\u96be\u5ea6\u7b49\u7ea7\uff0c\u5e76\u6709\u516c\u5f00 validation set \u548c\u7b54\u6848\u4fdd\u5bc6\u7684 test set\u3002"
+    },
+    "scoring": {
+      "metric_name": "Exact-answer task success rate",
+      "explanation": {
+        "en": "A task is correct when the final answer matches the reference answer under the official scorer. The overall score is the fraction of tasks solved, with level-specific scores reported separately.",
+        "zh": "\u6309\u7167\u5b98\u65b9 scorer\uff0c\u6700\u7ec8\u7b54\u6848\u548c\u6807\u51c6\u7b54\u6848\u5339\u914d\u65f6 task \u624d\u7b97\u6b63\u786e\u3002overall score \u662f\u89e3\u51b3 task \u5360\u5168\u90e8 task \u7684\u6bd4\u4f8b\uff0c\u5404\u96be\u5ea6\u7b49\u7ea7\u8fd8\u4f1a\u5206\u522b\u62a5\u544a\u5206\u6570\u3002"
+      }
+    },
+    "evaluation_target": "environment_outcome",
+    "observation_count": 6,
+    "evidence_record_count": 6,
+    "observations": [
+      {
+        "observation_id": "obs-0-3223-95617c5cb9607566",
+        "benchmark_id": "gaia",
+        "benchmark_version_id": "gaia-canonical",
+        "model_id": "model-multi-agent-experiment-v0-1-368e0324edec2555",
+        "model_configuration": "Multi-Agent Experiment v0.1",
+        "model_identity_organization": "msr-ai-frontiers",
+        "model_label_id": "multi-agent-experiment-v0-1",
+        "model_family_id": "msr-ai-frontiers-multi-agent-experiment-v0-1",
+        "model": "Multi-Agent Experiment v0.1",
+        "organization": "MSR AI Frontiers",
+        "score": 0.3223,
+        "input_score": 0.3223,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gaia-metric-v1",
+        "protocol_id": "gaia-source-export-v1",
+        "task_set_id": "gaia-canonical",
+        "metric": "Average score",
+        "score_role": "canonical",
+        "score_series_id": "gaia-canonical-score",
+        "evaluation_protocol": "GAIA 2023 fixed benchmark release; official leaderboard average score across levels. Public leaderboard submission dates are preserved only as evidence metadata and are not substituted for a defensible agent/system release date, so lifecycle metrics remain Unknown until such dates are curated.",
+        "model_release_date": "2024-03-01",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-03-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-03-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-03-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-03-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "score_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "source": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-score-0-3223-model-version-multi-agent-e-5171d31859e53ca1"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-3322-9cf138906ad23056",
+        "benchmark_id": "gaia",
+        "benchmark_version_id": "gaia-canonical",
+        "model_id": "model-hugging-face-agents-gpt-4o-f068b84a0377560b",
+        "model_configuration": "Hugging Face Agents + GPT-4o",
+        "model_identity_organization": "hugging-face",
+        "model_label_id": "hugging-face-agents-gpt-4o",
+        "model_family_id": "hugging-face-hugging-face-agents-gpt-4o",
+        "model": "Hugging Face Agents + GPT-4o",
+        "organization": "Hugging Face",
+        "score": 0.3322,
+        "input_score": 0.3322,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gaia-metric-v1",
+        "protocol_id": "gaia-source-export-v1",
+        "task_set_id": "gaia-canonical",
+        "metric": "Average score",
+        "score_role": "canonical",
+        "score_series_id": "gaia-canonical-score",
+        "evaluation_protocol": "GAIA 2023 fixed benchmark release; official leaderboard average score across levels. Public leaderboard submission dates are preserved only as evidence metadata and are not substituted for a defensible agent/system release date, so lifecycle metrics remain Unknown until such dates are curated.",
+        "model_release_date": "2024-06-27",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-06-27",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-27",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-06-27",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-06-27",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "score_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "source": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-score-0-3322-model-version-hugging-face--c0bd91eaf081a45a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-3787-15e5dc4d2f487972",
+        "benchmark_id": "gaia",
+        "benchmark_version_id": "gaia-canonical",
+        "model_id": "model-magentic-1-o1-c58e4bffcdf28223",
+        "model_configuration": "Magentic-1 (o1)",
+        "model_identity_organization": "msr-ai-frontiers",
+        "model_label_id": "magentic-1-o1",
+        "model_family_id": "msr-ai-frontiers-magentic-1",
+        "model": "Magentic-1 (o1)",
+        "organization": "MSR AI Frontiers",
+        "score": 0.3787,
+        "input_score": 0.3787,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gaia-metric-v1",
+        "protocol_id": "gaia-source-export-v1",
+        "task_set_id": "gaia-canonical",
+        "metric": "Average score",
+        "score_role": "canonical",
+        "score_series_id": "gaia-canonical-score",
+        "evaluation_protocol": "GAIA 2023 fixed benchmark release; official leaderboard average score across levels. Public leaderboard submission dates are preserved only as evidence metadata and are not substituted for a defensible agent/system release date, so lifecycle metrics remain Unknown until such dates are curated.",
+        "model_release_date": "2024-10-19",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-10-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-10-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-10-19",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-10-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "score_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "source": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-score-0-3787-model-version-magentic-1-o1-75e7945ad8b7c742"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-6678-05752bc4f9a81094",
+        "benchmark_id": "gaia",
+        "benchmark_version_id": "gaia-canonical",
+        "model_id": "model-trase-agent-v0-3-3b4f06b7e2249880",
+        "model_configuration": "Trase Agent v0.3",
+        "model_identity_organization": "trase-systems",
+        "model_label_id": "trase-agent-v0-3",
+        "model_family_id": "trase-systems-trase-agent-v0-3",
+        "model": "Trase Agent v0.3",
+        "organization": "Trase Systems",
+        "score": 0.6678,
+        "input_score": 0.6678,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gaia-metric-v1",
+        "protocol_id": "gaia-source-export-v1",
+        "task_set_id": "gaia-canonical",
+        "metric": "Average score",
+        "score_role": "canonical",
+        "score_series_id": "gaia-canonical-score",
+        "evaluation_protocol": "GAIA 2023 fixed benchmark release; official leaderboard average score across levels. Public leaderboard submission dates are preserved only as evidence metadata and are not substituted for a defensible agent/system release date, so lifecycle metrics remain Unknown until such dates are curated.",
+        "model_release_date": "2025-02-19",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-02-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-02-19",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "score_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "source": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-score-0-6678-model-version-trase-agent-v-cd0008bec8fbda6a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-4718-3751b3d80e10955a",
+        "benchmark_id": "gaia",
+        "benchmark_version_id": "gaia-canonical",
+        "model_id": "model-tapeagents-browsergym-48cb4da758d13d69",
+        "model_configuration": "TapeAgents & BrowserGym",
+        "model_identity_organization": "servicenow-research",
+        "model_label_id": "tapeagents-browsergym",
+        "model_family_id": "servicenow-research-tapeagents-browsergym",
+        "model": "TapeAgents & BrowserGym",
+        "organization": "ServiceNow Research",
+        "score": 0.4718,
+        "input_score": 0.4718,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gaia-metric-v1",
+        "protocol_id": "gaia-source-export-v1",
+        "task_set_id": "gaia-canonical",
+        "metric": "Average score",
+        "score_role": "canonical",
+        "score_series_id": "gaia-canonical-score",
+        "evaluation_protocol": "GAIA 2023 fixed benchmark release; official leaderboard average score across levels. Public leaderboard submission dates are preserved only as evidence metadata and are not substituted for a defensible agent/system release date, so lifecycle metrics remain Unknown until such dates are curated.",
+        "model_release_date": "2025-03-05",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-03-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-03-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-03-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-03-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "score_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "source": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-score-0-4718-model-version-tapeagents-br-1e08f286379dd6a7"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-7475-5cf6107e7cfa73e1",
+        "benchmark_id": "gaia",
+        "benchmark_version_id": "gaia-canonical",
+        "model_id": "model-h2ogpte-agent-v1-6-27-7bda3b35a770f670",
+        "model_configuration": "h2oGPTe Agent v1.6.27",
+        "model_identity_organization": "h2o-ai",
+        "model_label_id": "h2ogpte-agent-v1-6-27",
+        "model_family_id": "h2o-ai-h2ogpte-agent-v1-6-27",
+        "model": "h2oGPTe Agent v1.6.27",
+        "organization": "h2o.ai",
+        "score": 0.7475,
+        "input_score": 0.7475,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gaia-metric-v1",
+        "protocol_id": "gaia-source-export-v1",
+        "task_set_id": "gaia-canonical",
+        "metric": "Average score",
+        "score_role": "canonical",
+        "score_series_id": "gaia-canonical-score",
+        "evaluation_protocol": "GAIA 2023 fixed benchmark release; official leaderboard average score across levels. Public leaderboard submission dates are preserved only as evidence metadata and are not substituted for a defensible agent/system release date, so lifecycle metrics remain Unknown until such dates are curated.",
+        "model_release_date": "2025-03-20",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-03-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-03-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-03-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-03-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "score_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "source": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-score-0-7475-model-version-h2ogpte-agent-ebbf6d3ab03e6bfb"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-3223-95617c5cb9607566",
+        "benchmark_id": "gaia",
+        "benchmark_version_id": "gaia-canonical",
+        "model_id": "model-multi-agent-experiment-v0-1-368e0324edec2555",
+        "model_configuration": "Multi-Agent Experiment v0.1",
+        "model_identity_organization": "msr-ai-frontiers",
+        "model_label_id": "multi-agent-experiment-v0-1",
+        "model_family_id": "msr-ai-frontiers-multi-agent-experiment-v0-1",
+        "model": "Multi-Agent Experiment v0.1",
+        "organization": "MSR AI Frontiers",
+        "score": 0.3223,
+        "input_score": 0.3223,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gaia-metric-v1",
+        "protocol_id": "gaia-source-export-v1",
+        "task_set_id": "gaia-canonical",
+        "metric": "Average score",
+        "score_role": "canonical",
+        "score_series_id": "gaia-canonical-score",
+        "evaluation_protocol": "GAIA 2023 fixed benchmark release; official leaderboard average score across levels. Public leaderboard submission dates are preserved only as evidence metadata and are not substituted for a defensible agent/system release date, so lifecycle metrics remain Unknown until such dates are curated.",
+        "model_release_date": "2024-03-01",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-03-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-03-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-03-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-03-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "score_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "source": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-score-0-3223-model-version-multi-agent-e-5171d31859e53ca1"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2024-03-01",
+        "frontier_observation_ids": [
+          "obs-0-3223-95617c5cb9607566"
+        ]
+      },
+      {
+        "observation_id": "obs-0-3322-9cf138906ad23056",
+        "benchmark_id": "gaia",
+        "benchmark_version_id": "gaia-canonical",
+        "model_id": "model-hugging-face-agents-gpt-4o-f068b84a0377560b",
+        "model_configuration": "Hugging Face Agents + GPT-4o",
+        "model_identity_organization": "hugging-face",
+        "model_label_id": "hugging-face-agents-gpt-4o",
+        "model_family_id": "hugging-face-hugging-face-agents-gpt-4o",
+        "model": "Hugging Face Agents + GPT-4o",
+        "organization": "Hugging Face",
+        "score": 0.3322,
+        "input_score": 0.3322,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gaia-metric-v1",
+        "protocol_id": "gaia-source-export-v1",
+        "task_set_id": "gaia-canonical",
+        "metric": "Average score",
+        "score_role": "canonical",
+        "score_series_id": "gaia-canonical-score",
+        "evaluation_protocol": "GAIA 2023 fixed benchmark release; official leaderboard average score across levels. Public leaderboard submission dates are preserved only as evidence metadata and are not substituted for a defensible agent/system release date, so lifecycle metrics remain Unknown until such dates are curated.",
+        "model_release_date": "2024-06-27",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-06-27",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-27",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-06-27",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-06-27",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "score_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "source": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-score-0-3322-model-version-hugging-face--c0bd91eaf081a45a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2024-06-27",
+        "frontier_observation_ids": [
+          "obs-0-3322-9cf138906ad23056"
+        ]
+      },
+      {
+        "observation_id": "obs-0-3787-15e5dc4d2f487972",
+        "benchmark_id": "gaia",
+        "benchmark_version_id": "gaia-canonical",
+        "model_id": "model-magentic-1-o1-c58e4bffcdf28223",
+        "model_configuration": "Magentic-1 (o1)",
+        "model_identity_organization": "msr-ai-frontiers",
+        "model_label_id": "magentic-1-o1",
+        "model_family_id": "msr-ai-frontiers-magentic-1",
+        "model": "Magentic-1 (o1)",
+        "organization": "MSR AI Frontiers",
+        "score": 0.3787,
+        "input_score": 0.3787,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gaia-metric-v1",
+        "protocol_id": "gaia-source-export-v1",
+        "task_set_id": "gaia-canonical",
+        "metric": "Average score",
+        "score_role": "canonical",
+        "score_series_id": "gaia-canonical-score",
+        "evaluation_protocol": "GAIA 2023 fixed benchmark release; official leaderboard average score across levels. Public leaderboard submission dates are preserved only as evidence metadata and are not substituted for a defensible agent/system release date, so lifecycle metrics remain Unknown until such dates are curated.",
+        "model_release_date": "2024-10-19",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-10-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-10-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-10-19",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-10-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "score_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "source": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-score-0-3787-model-version-magentic-1-o1-75e7945ad8b7c742"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2024-10-19",
+        "frontier_observation_ids": [
+          "obs-0-3787-15e5dc4d2f487972"
+        ]
+      },
+      {
+        "observation_id": "obs-0-6678-05752bc4f9a81094",
+        "benchmark_id": "gaia",
+        "benchmark_version_id": "gaia-canonical",
+        "model_id": "model-trase-agent-v0-3-3b4f06b7e2249880",
+        "model_configuration": "Trase Agent v0.3",
+        "model_identity_organization": "trase-systems",
+        "model_label_id": "trase-agent-v0-3",
+        "model_family_id": "trase-systems-trase-agent-v0-3",
+        "model": "Trase Agent v0.3",
+        "organization": "Trase Systems",
+        "score": 0.6678,
+        "input_score": 0.6678,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gaia-metric-v1",
+        "protocol_id": "gaia-source-export-v1",
+        "task_set_id": "gaia-canonical",
+        "metric": "Average score",
+        "score_role": "canonical",
+        "score_series_id": "gaia-canonical-score",
+        "evaluation_protocol": "GAIA 2023 fixed benchmark release; official leaderboard average score across levels. Public leaderboard submission dates are preserved only as evidence metadata and are not substituted for a defensible agent/system release date, so lifecycle metrics remain Unknown until such dates are curated.",
+        "model_release_date": "2025-02-19",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-02-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-02-19",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "score_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "source": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-score-0-6678-model-version-trase-agent-v-cd0008bec8fbda6a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-02-19",
+        "frontier_observation_ids": [
+          "obs-0-6678-05752bc4f9a81094"
+        ]
+      },
+      {
+        "observation_id": "obs-0-7475-5cf6107e7cfa73e1",
+        "benchmark_id": "gaia",
+        "benchmark_version_id": "gaia-canonical",
+        "model_id": "model-h2ogpte-agent-v1-6-27-7bda3b35a770f670",
+        "model_configuration": "h2oGPTe Agent v1.6.27",
+        "model_identity_organization": "h2o-ai",
+        "model_label_id": "h2ogpte-agent-v1-6-27",
+        "model_family_id": "h2o-ai-h2ogpte-agent-v1-6-27",
+        "model": "h2oGPTe Agent v1.6.27",
+        "organization": "h2o.ai",
+        "score": 0.7475,
+        "input_score": 0.7475,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gaia-metric-v1",
+        "protocol_id": "gaia-source-export-v1",
+        "task_set_id": "gaia-canonical",
+        "metric": "Average score",
+        "score_role": "canonical",
+        "score_series_id": "gaia-canonical-score",
+        "evaluation_protocol": "GAIA 2023 fixed benchmark release; official leaderboard average score across levels. Public leaderboard submission dates are preserved only as evidence metadata and are not substituted for a defensible agent/system release date, so lifecycle metrics remain Unknown until such dates are curated.",
+        "model_release_date": "2025-03-20",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-03-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-03-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-03-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-03-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "score_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "source": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-score-0-7475-model-version-h2ogpte-agent-ebbf6d3ab03e6bfb"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-03-20",
+        "frontier_observation_ids": [
+          "obs-0-7475-5cf6107e7cfa73e1"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-3223-95617c5cb9607566",
+        "benchmark_id": "gaia",
+        "benchmark_version_id": "gaia-canonical",
+        "model_id": "model-multi-agent-experiment-v0-1-368e0324edec2555",
+        "model_configuration": "Multi-Agent Experiment v0.1",
+        "model_identity_organization": "msr-ai-frontiers",
+        "model_label_id": "multi-agent-experiment-v0-1",
+        "model_family_id": "msr-ai-frontiers-multi-agent-experiment-v0-1",
+        "model": "Multi-Agent Experiment v0.1",
+        "organization": "MSR AI Frontiers",
+        "score": 0.3223,
+        "input_score": 0.3223,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gaia-metric-v1",
+        "protocol_id": "gaia-source-export-v1",
+        "task_set_id": "gaia-canonical",
+        "metric": "Average score",
+        "score_role": "canonical",
+        "score_series_id": "gaia-canonical-score",
+        "evaluation_protocol": "GAIA 2023 fixed benchmark release; official leaderboard average score across levels. Public leaderboard submission dates are preserved only as evidence metadata and are not substituted for a defensible agent/system release date, so lifecycle metrics remain Unknown until such dates are curated.",
+        "model_release_date": "2024-03-01",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-03-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-03-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-03-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-03-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "score_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "source": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-score-0-3223-model-version-multi-agent-e-5171d31859e53ca1"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2024-03-01",
+        "frontier_observation_ids": [
+          "obs-0-3223-95617c5cb9607566"
+        ]
+      },
+      {
+        "observation_id": "obs-0-3322-9cf138906ad23056",
+        "benchmark_id": "gaia",
+        "benchmark_version_id": "gaia-canonical",
+        "model_id": "model-hugging-face-agents-gpt-4o-f068b84a0377560b",
+        "model_configuration": "Hugging Face Agents + GPT-4o",
+        "model_identity_organization": "hugging-face",
+        "model_label_id": "hugging-face-agents-gpt-4o",
+        "model_family_id": "hugging-face-hugging-face-agents-gpt-4o",
+        "model": "Hugging Face Agents + GPT-4o",
+        "organization": "Hugging Face",
+        "score": 0.3322,
+        "input_score": 0.3322,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gaia-metric-v1",
+        "protocol_id": "gaia-source-export-v1",
+        "task_set_id": "gaia-canonical",
+        "metric": "Average score",
+        "score_role": "canonical",
+        "score_series_id": "gaia-canonical-score",
+        "evaluation_protocol": "GAIA 2023 fixed benchmark release; official leaderboard average score across levels. Public leaderboard submission dates are preserved only as evidence metadata and are not substituted for a defensible agent/system release date, so lifecycle metrics remain Unknown until such dates are curated.",
+        "model_release_date": "2024-06-27",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-06-27",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-27",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-06-27",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-06-27",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "score_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "source": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-score-0-3322-model-version-hugging-face--c0bd91eaf081a45a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2024-06-27",
+        "frontier_observation_ids": [
+          "obs-0-3322-9cf138906ad23056"
+        ]
+      },
+      {
+        "observation_id": "obs-0-3787-15e5dc4d2f487972",
+        "benchmark_id": "gaia",
+        "benchmark_version_id": "gaia-canonical",
+        "model_id": "model-magentic-1-o1-c58e4bffcdf28223",
+        "model_configuration": "Magentic-1 (o1)",
+        "model_identity_organization": "msr-ai-frontiers",
+        "model_label_id": "magentic-1-o1",
+        "model_family_id": "msr-ai-frontiers-magentic-1",
+        "model": "Magentic-1 (o1)",
+        "organization": "MSR AI Frontiers",
+        "score": 0.3787,
+        "input_score": 0.3787,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gaia-metric-v1",
+        "protocol_id": "gaia-source-export-v1",
+        "task_set_id": "gaia-canonical",
+        "metric": "Average score",
+        "score_role": "canonical",
+        "score_series_id": "gaia-canonical-score",
+        "evaluation_protocol": "GAIA 2023 fixed benchmark release; official leaderboard average score across levels. Public leaderboard submission dates are preserved only as evidence metadata and are not substituted for a defensible agent/system release date, so lifecycle metrics remain Unknown until such dates are curated.",
+        "model_release_date": "2024-10-19",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-10-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-10-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-10-19",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-10-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "score_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "source": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-score-0-3787-model-version-magentic-1-o1-75e7945ad8b7c742"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2024-10-19",
+        "frontier_observation_ids": [
+          "obs-0-3787-15e5dc4d2f487972"
+        ]
+      },
+      {
+        "observation_id": "obs-0-6678-05752bc4f9a81094",
+        "benchmark_id": "gaia",
+        "benchmark_version_id": "gaia-canonical",
+        "model_id": "model-trase-agent-v0-3-3b4f06b7e2249880",
+        "model_configuration": "Trase Agent v0.3",
+        "model_identity_organization": "trase-systems",
+        "model_label_id": "trase-agent-v0-3",
+        "model_family_id": "trase-systems-trase-agent-v0-3",
+        "model": "Trase Agent v0.3",
+        "organization": "Trase Systems",
+        "score": 0.6678,
+        "input_score": 0.6678,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gaia-metric-v1",
+        "protocol_id": "gaia-source-export-v1",
+        "task_set_id": "gaia-canonical",
+        "metric": "Average score",
+        "score_role": "canonical",
+        "score_series_id": "gaia-canonical-score",
+        "evaluation_protocol": "GAIA 2023 fixed benchmark release; official leaderboard average score across levels. Public leaderboard submission dates are preserved only as evidence metadata and are not substituted for a defensible agent/system release date, so lifecycle metrics remain Unknown until such dates are curated.",
+        "model_release_date": "2025-02-19",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-02-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-02-19",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "score_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "source": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-score-0-6678-model-version-trase-agent-v-cd0008bec8fbda6a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-02-19",
+        "frontier_observation_ids": [
+          "obs-0-6678-05752bc4f9a81094"
+        ]
+      },
+      {
+        "observation_id": "obs-0-7475-5cf6107e7cfa73e1",
+        "benchmark_id": "gaia",
+        "benchmark_version_id": "gaia-canonical",
+        "model_id": "model-h2ogpte-agent-v1-6-27-7bda3b35a770f670",
+        "model_configuration": "h2oGPTe Agent v1.6.27",
+        "model_identity_organization": "h2o-ai",
+        "model_label_id": "h2ogpte-agent-v1-6-27",
+        "model_family_id": "h2o-ai-h2ogpte-agent-v1-6-27",
+        "model": "h2oGPTe Agent v1.6.27",
+        "organization": "h2o.ai",
+        "score": 0.7475,
+        "input_score": 0.7475,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gaia-metric-v1",
+        "protocol_id": "gaia-source-export-v1",
+        "task_set_id": "gaia-canonical",
+        "metric": "Average score",
+        "score_role": "canonical",
+        "score_series_id": "gaia-canonical-score",
+        "evaluation_protocol": "GAIA 2023 fixed benchmark release; official leaderboard average score across levels. Public leaderboard submission dates are preserved only as evidence metadata and are not substituted for a defensible agent/system release date, so lifecycle metrics remain Unknown until such dates are curated.",
+        "model_release_date": "2025-03-20",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-03-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-03-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-03-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-03-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "score_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "source": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-score-0-7475-model-version-h2ogpte-agent-ebbf6d3ab03e6bfb"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-03-20",
+        "frontier_observation_ids": [
+          "obs-0-7475-5cf6107e7cfa73e1"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-3223-95617c5cb9607566",
+        "benchmark_id": "gaia",
+        "benchmark_version_id": "gaia-canonical",
+        "model_id": "model-multi-agent-experiment-v0-1-368e0324edec2555",
+        "model_configuration": "Multi-Agent Experiment v0.1",
+        "model_identity_organization": "msr-ai-frontiers",
+        "model_label_id": "multi-agent-experiment-v0-1",
+        "model_family_id": "msr-ai-frontiers-multi-agent-experiment-v0-1",
+        "model": "Multi-Agent Experiment v0.1",
+        "organization": "MSR AI Frontiers",
+        "score": 0.3223,
+        "input_score": 0.3223,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gaia-metric-v1",
+        "protocol_id": "gaia-source-export-v1",
+        "task_set_id": "gaia-canonical",
+        "metric": "Average score",
+        "score_role": "canonical",
+        "score_series_id": "gaia-canonical-score",
+        "evaluation_protocol": "GAIA 2023 fixed benchmark release; official leaderboard average score across levels. Public leaderboard submission dates are preserved only as evidence metadata and are not substituted for a defensible agent/system release date, so lifecycle metrics remain Unknown until such dates are curated.",
+        "model_release_date": "2024-03-01",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-03-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-03-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-03-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-03-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "score_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "source": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-score-0-3223-model-version-multi-agent-e-5171d31859e53ca1"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2024-03-01",
+        "frontier_observation_ids": [
+          "obs-0-3223-95617c5cb9607566"
+        ]
+      },
+      {
+        "observation_id": "obs-0-3322-9cf138906ad23056",
+        "benchmark_id": "gaia",
+        "benchmark_version_id": "gaia-canonical",
+        "model_id": "model-hugging-face-agents-gpt-4o-f068b84a0377560b",
+        "model_configuration": "Hugging Face Agents + GPT-4o",
+        "model_identity_organization": "hugging-face",
+        "model_label_id": "hugging-face-agents-gpt-4o",
+        "model_family_id": "hugging-face-hugging-face-agents-gpt-4o",
+        "model": "Hugging Face Agents + GPT-4o",
+        "organization": "Hugging Face",
+        "score": 0.3322,
+        "input_score": 0.3322,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gaia-metric-v1",
+        "protocol_id": "gaia-source-export-v1",
+        "task_set_id": "gaia-canonical",
+        "metric": "Average score",
+        "score_role": "canonical",
+        "score_series_id": "gaia-canonical-score",
+        "evaluation_protocol": "GAIA 2023 fixed benchmark release; official leaderboard average score across levels. Public leaderboard submission dates are preserved only as evidence metadata and are not substituted for a defensible agent/system release date, so lifecycle metrics remain Unknown until such dates are curated.",
+        "model_release_date": "2024-06-27",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-06-27",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-27",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-06-27",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-06-27",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "score_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "source": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-score-0-3322-model-version-hugging-face--c0bd91eaf081a45a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2024-06-27",
+        "frontier_observation_ids": [
+          "obs-0-3322-9cf138906ad23056"
+        ]
+      },
+      {
+        "observation_id": "obs-0-3787-15e5dc4d2f487972",
+        "benchmark_id": "gaia",
+        "benchmark_version_id": "gaia-canonical",
+        "model_id": "model-magentic-1-o1-c58e4bffcdf28223",
+        "model_configuration": "Magentic-1 (o1)",
+        "model_identity_organization": "msr-ai-frontiers",
+        "model_label_id": "magentic-1-o1",
+        "model_family_id": "msr-ai-frontiers-magentic-1",
+        "model": "Magentic-1 (o1)",
+        "organization": "MSR AI Frontiers",
+        "score": 0.3787,
+        "input_score": 0.3787,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gaia-metric-v1",
+        "protocol_id": "gaia-source-export-v1",
+        "task_set_id": "gaia-canonical",
+        "metric": "Average score",
+        "score_role": "canonical",
+        "score_series_id": "gaia-canonical-score",
+        "evaluation_protocol": "GAIA 2023 fixed benchmark release; official leaderboard average score across levels. Public leaderboard submission dates are preserved only as evidence metadata and are not substituted for a defensible agent/system release date, so lifecycle metrics remain Unknown until such dates are curated.",
+        "model_release_date": "2024-10-19",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-10-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-10-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-10-19",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-10-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "score_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "source": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-score-0-3787-model-version-magentic-1-o1-75e7945ad8b7c742"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2024-10-19",
+        "frontier_observation_ids": [
+          "obs-0-3787-15e5dc4d2f487972"
+        ]
+      },
+      {
+        "observation_id": "obs-0-6678-05752bc4f9a81094",
+        "benchmark_id": "gaia",
+        "benchmark_version_id": "gaia-canonical",
+        "model_id": "model-trase-agent-v0-3-3b4f06b7e2249880",
+        "model_configuration": "Trase Agent v0.3",
+        "model_identity_organization": "trase-systems",
+        "model_label_id": "trase-agent-v0-3",
+        "model_family_id": "trase-systems-trase-agent-v0-3",
+        "model": "Trase Agent v0.3",
+        "organization": "Trase Systems",
+        "score": 0.6678,
+        "input_score": 0.6678,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gaia-metric-v1",
+        "protocol_id": "gaia-source-export-v1",
+        "task_set_id": "gaia-canonical",
+        "metric": "Average score",
+        "score_role": "canonical",
+        "score_series_id": "gaia-canonical-score",
+        "evaluation_protocol": "GAIA 2023 fixed benchmark release; official leaderboard average score across levels. Public leaderboard submission dates are preserved only as evidence metadata and are not substituted for a defensible agent/system release date, so lifecycle metrics remain Unknown until such dates are curated.",
+        "model_release_date": "2025-02-19",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-02-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-02-19",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "score_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "source": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-score-0-6678-model-version-trase-agent-v-cd0008bec8fbda6a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-02-19",
+        "frontier_observation_ids": [
+          "obs-0-6678-05752bc4f9a81094"
+        ]
+      },
+      {
+        "observation_id": "obs-0-7475-5cf6107e7cfa73e1",
+        "benchmark_id": "gaia",
+        "benchmark_version_id": "gaia-canonical",
+        "model_id": "model-h2ogpte-agent-v1-6-27-7bda3b35a770f670",
+        "model_configuration": "h2oGPTe Agent v1.6.27",
+        "model_identity_organization": "h2o-ai",
+        "model_label_id": "h2ogpte-agent-v1-6-27",
+        "model_family_id": "h2o-ai-h2ogpte-agent-v1-6-27",
+        "model": "h2oGPTe Agent v1.6.27",
+        "organization": "h2o.ai",
+        "score": 0.7475,
+        "input_score": 0.7475,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "gaia-metric-v1",
+        "protocol_id": "gaia-source-export-v1",
+        "task_set_id": "gaia-canonical",
+        "metric": "Average score",
+        "score_role": "canonical",
+        "score_series_id": "gaia-canonical-score",
+        "evaluation_protocol": "GAIA 2023 fixed benchmark release; official leaderboard average score across levels. Public leaderboard submission dates are preserved only as evidence metadata and are not substituted for a defensible agent/system release date, so lifecycle metrics remain Unknown until such dates are curated.",
+        "model_release_date": "2025-03-20",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-03-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-03-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-03-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-03-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "score_source_ids": [
+          "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+        ],
+        "source": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-score-0-7475-model-version-h2ogpte-agent-ebbf6d3ab03e6bfb"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-03-20",
+        "frontier_observation_ids": [
+          "obs-0-7475-5cf6107e7cfa73e1"
+        ]
+      }
+    ],
+    "reported_frontier": [],
+    "historical_frontier": [],
+    "retrospective_observations": [],
+    "observed_frontier": 0.7475,
+    "capability_frontier_value": 0.7475,
+    "reported_frontier_value": null,
+    "current_frontier": 0.7475,
+    "normalized_progress": 0.7475,
+    "normalized_headroom": 0.25249999999999995,
+    "threshold_days": {
+      "T50": {
+        "status": "reached",
+        "days": 456,
+        "qualifying_observation_date": "2025-02-19"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 1020
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 1020
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "reached",
+        "days": 456,
+        "qualifying_observation_date": "2025-02-19"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 1020
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 1020
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T80": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T90": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      }
+    },
+    "velocity_180d": 0.0475253082706767,
+    "capability_velocity_180d": 0.0475253082706767,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.0,
+      "represented_organizations": [],
+      "panel_size": 7,
+      "status": "low"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-huggingface-co-spaces-gaia-benchmark-leade-7648cf23dac6526b"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "unknown_public_dates",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": true,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

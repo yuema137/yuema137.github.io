@@ -1,0 +1,1151 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "nuclearqav2-v1-aggregate",
+    "name": "NuclearQAv2 \u2014 Aggregate",
+    "domain": "Nuclear Engineering",
+    "release": "2026-06-25",
+    "source": "https://arxiv.org/abs/2606.27047",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Model",
+    "tags": [
+      "nuclear",
+      "numerical",
+      "conceptual"
+    ],
+    "metric": "Accuracy",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "nuclearqav2-v1-aggregate-metric-v1",
+    "protocol_id": "nuclearqav2-v1-aggregate-source-export-v1",
+    "canonical_score": {
+      "series_id": "nuclearqav2-v1-aggregate-canonical-score",
+      "role": "canonical",
+      "metric_id": "nuclearqav2-v1-aggregate-metric-v1",
+      "metric_name": "Accuracy",
+      "protocol_id": "nuclearqav2-v1-aggregate-source-export-v1",
+      "task_set_id": "nuclearqav2-v1-aggregate-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "nuclearqav2-v1-aggregate-canonical",
+    "summary": {
+      "en": "NuclearQAv2 evaluates factual, numerical, and conceptual nuclear-engineering reasoning.",
+      "zh": "NuclearQAv2 \u8bc4\u4f30\u6838\u5de5\u7a0b\u4e8b\u5b9e\u77e5\u8bc6\u3001\u6570\u503c\u8ba1\u7b97\u548c\u6982\u5ff5\u63a8\u7406\u80fd\u529b\u3002"
+    },
+    "task_format": {
+      "en": "The model answers 1,239 Boolean, numerical, and short verbal nuclear-engineering questions.",
+      "zh": "\u6a21\u578b\u56de\u7b54 1,239 \u9053\u6838\u5de5\u7a0b\u5224\u65ad\u3001\u6570\u503c\u548c\u7b80\u77ed\u6982\u5ff5\u9898\u3002"
+    },
+    "scoring": {
+      "metric_name": "Question-count-weighted aggregate accuracy",
+      "explanation": {
+        "en": "Boolean exact match, 15%-tolerance numeric accuracy, and fixed GPT-J semantic verbal judgments are weighted by task counts.",
+        "zh": "\u5224\u65ad\u9898\u7cbe\u786e\u5339\u914d\u3001\u5141\u8bb8 15% \u8bef\u5dee\u7684\u6570\u503c\u9898\u548c\u56fa\u5b9a GPT-J \u8bed\u4e49\u88c1\u5224\u7684\u6982\u5ff5\u9898\u6309\u9898\u91cf\u52a0\u6743\u3002"
+      }
+    },
+    "evaluation_target": "final_output",
+    "observation_count": 6,
+    "evidence_record_count": 6,
+    "observations": [
+      {
+        "observation_id": "obs-0-6236-d9900a38c1c686e4",
+        "benchmark_id": "nuclearqav2-v1-aggregate",
+        "benchmark_version_id": "nuclearqav2-v1-aggregate-canonical",
+        "model_id": "model-llama-3-8b-instruct-3d3df85d8b50cf8e",
+        "model_configuration": "Llama-3-8B-Instruct",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama-3-8b-instruct",
+        "model_family_id": "meta-llama-3-8b-instruct",
+        "model": "Llama-3-8B-Instruct",
+        "organization": "Meta",
+        "score": 0.6236,
+        "input_score": 0.6236,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "nuclearqav2-v1-aggregate-metric-v1",
+        "protocol_id": "nuclearqav2-v1-aggregate-source-export-v1",
+        "task_set_id": "nuclearqav2-v1-aggregate-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "nuclearqav2-v1-aggregate-canonical-score",
+        "evaluation_protocol": "NuclearQAv2 arXiv-v1 1,239-question snapshot: Boolean v2, Numeric v0, Verbal v0; three runs per model and task-count-weighted aggregate.",
+        "model_release_date": "2024-04-18",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-25",
+        "source_publication_date": "2026-06-25",
+        "observation_date": "2024-04-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-04-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-25",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-04-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-04-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-25",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "source": "https://arxiv.org/abs/2606.27047",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-nuclearqa-llama3-8b-acf0358c8c0a2a0b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "nuclearqa-llama3-8b"
+        ]
+      },
+      {
+        "observation_id": "obs-0-7092-738052710eca1fc6",
+        "benchmark_id": "nuclearqav2-v1-aggregate",
+        "benchmark_version_id": "nuclearqav2-v1-aggregate-canonical",
+        "model_id": "model-llama-3-70b-instruct-9a2dcd5ad2a0723b",
+        "model_configuration": "Llama-3-70B-Instruct",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama-3-70b-instruct",
+        "model_family_id": "meta-llama-3-70b-instruct",
+        "model": "Llama-3-70B-Instruct",
+        "organization": "Meta",
+        "score": 0.7092,
+        "input_score": 0.7092,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "nuclearqav2-v1-aggregate-metric-v1",
+        "protocol_id": "nuclearqav2-v1-aggregate-source-export-v1",
+        "task_set_id": "nuclearqav2-v1-aggregate-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "nuclearqav2-v1-aggregate-canonical-score",
+        "evaluation_protocol": "NuclearQAv2 arXiv-v1 1,239-question snapshot: Boolean v2, Numeric v0, Verbal v0; three runs per model and task-count-weighted aggregate.",
+        "model_release_date": "2024-04-18",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-25",
+        "source_publication_date": "2026-06-25",
+        "observation_date": "2024-04-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-04-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-25",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-04-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-04-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-25",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "source": "https://arxiv.org/abs/2606.27047",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-nuclearqa-llama3-70b-234b17adafc9dd87"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "nuclearqa-llama3-70b"
+        ]
+      },
+      {
+        "observation_id": "obs-0-7245-95d2da58ae972638",
+        "benchmark_id": "nuclearqav2-v1-aggregate",
+        "benchmark_version_id": "nuclearqav2-v1-aggregate-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.7245,
+        "input_score": 0.7245,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "nuclearqav2-v1-aggregate-metric-v1",
+        "protocol_id": "nuclearqav2-v1-aggregate-source-export-v1",
+        "task_set_id": "nuclearqav2-v1-aggregate-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "nuclearqav2-v1-aggregate-canonical-score",
+        "evaluation_protocol": "NuclearQAv2 arXiv-v1 1,239-question snapshot: Boolean v2, Numeric v0, Verbal v0; three runs per model and task-count-weighted aggregate.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-25",
+        "source_publication_date": "2026-06-25",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-25",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-05-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-25",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "source": "https://arxiv.org/abs/2606.27047",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-nuclearqa-gpt4o-190f8ae98541d06c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "nuclearqa-gpt4o"
+        ]
+      },
+      {
+        "observation_id": "obs-0-7923-69ca0486e7ca559c",
+        "benchmark_id": "nuclearqav2-v1-aggregate",
+        "benchmark_version_id": "nuclearqav2-v1-aggregate-canonical",
+        "model_id": "model-gpt-oss-120b-a2167006e036b432",
+        "model_configuration": "gpt-oss-120B",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-oss-120b",
+        "model_family_id": "openai-gpt-oss-120b",
+        "model": "gpt-oss-120B",
+        "organization": "OpenAI",
+        "score": 0.7923,
+        "input_score": 0.7923,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "nuclearqav2-v1-aggregate-metric-v1",
+        "protocol_id": "nuclearqav2-v1-aggregate-source-export-v1",
+        "task_set_id": "nuclearqav2-v1-aggregate-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "nuclearqav2-v1-aggregate-canonical-score",
+        "evaluation_protocol": "NuclearQAv2 arXiv-v1 1,239-question snapshot: Boolean v2, Numeric v0, Verbal v0; three runs per model and task-count-weighted aggregate.",
+        "model_release_date": "2025-08-05",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-25",
+        "source_publication_date": "2026-06-25",
+        "observation_date": "2025-08-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-08-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-25",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-08-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-08-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-25",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "source": "https://arxiv.org/abs/2606.27047",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-nuclearqa-gptoss-54772f59fec4c1ed"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "nuclearqa-gptoss"
+        ]
+      },
+      {
+        "observation_id": "obs-0-7842-8e03348b3f56b9a9",
+        "benchmark_id": "nuclearqav2-v1-aggregate",
+        "benchmark_version_id": "nuclearqav2-v1-aggregate-canonical",
+        "model_id": "model-gpt-5-2-8af9dc0bd1f19a37",
+        "model_configuration": "GPT-5.2",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-2",
+        "model_family_id": "openai-gpt-5-2",
+        "model": "GPT-5.2",
+        "organization": "OpenAI",
+        "score": 0.7842,
+        "input_score": 0.7842,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "nuclearqav2-v1-aggregate-metric-v1",
+        "protocol_id": "nuclearqav2-v1-aggregate-source-export-v1",
+        "task_set_id": "nuclearqav2-v1-aggregate-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "nuclearqav2-v1-aggregate-canonical-score",
+        "evaluation_protocol": "NuclearQAv2 arXiv-v1 1,239-question snapshot: Boolean v2, Numeric v0, Verbal v0; three runs per model and task-count-weighted aggregate.",
+        "model_release_date": "2025-12-11",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-25",
+        "source_publication_date": "2026-06-25",
+        "observation_date": "2025-12-11",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-12-11",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-25",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-12-11",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-12-11",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-25",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "source": "https://arxiv.org/abs/2606.27047",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-nuclearqa-gpt52-63df53b1182d75cc"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "nuclearqa-gpt52"
+        ]
+      },
+      {
+        "observation_id": "obs-0-7891-de96dcbd6f34aafb",
+        "benchmark_id": "nuclearqav2-v1-aggregate",
+        "benchmark_version_id": "nuclearqav2-v1-aggregate-canonical",
+        "model_id": "model-gpt-5-4-e04bff139d4a64e2",
+        "model_configuration": "GPT-5.4",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-4",
+        "model_family_id": "openai-gpt-5-4",
+        "model": "GPT-5.4",
+        "organization": "OpenAI",
+        "score": 0.7891,
+        "input_score": 0.7891,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "nuclearqav2-v1-aggregate-metric-v1",
+        "protocol_id": "nuclearqav2-v1-aggregate-source-export-v1",
+        "task_set_id": "nuclearqav2-v1-aggregate-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "nuclearqav2-v1-aggregate-canonical-score",
+        "evaluation_protocol": "NuclearQAv2 arXiv-v1 1,239-question snapshot: Boolean v2, Numeric v0, Verbal v0; three runs per model and task-count-weighted aggregate.",
+        "model_release_date": "2026-03-05",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-25",
+        "source_publication_date": "2026-06-25",
+        "observation_date": "2026-03-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-03-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-25",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-03-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-03-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-25",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "source": "https://arxiv.org/abs/2606.27047",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-nuclearqa-gpt54-b80a888ffafb1f71"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "nuclearqa-gpt54"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-7923-69ca0486e7ca559c",
+        "benchmark_id": "nuclearqav2-v1-aggregate",
+        "benchmark_version_id": "nuclearqav2-v1-aggregate-canonical",
+        "model_id": "model-gpt-oss-120b-a2167006e036b432",
+        "model_configuration": "gpt-oss-120B",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-oss-120b",
+        "model_family_id": "openai-gpt-oss-120b",
+        "model": "gpt-oss-120B",
+        "organization": "OpenAI",
+        "score": 0.7923,
+        "input_score": 0.7923,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "nuclearqav2-v1-aggregate-metric-v1",
+        "protocol_id": "nuclearqav2-v1-aggregate-source-export-v1",
+        "task_set_id": "nuclearqav2-v1-aggregate-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "nuclearqav2-v1-aggregate-canonical-score",
+        "evaluation_protocol": "NuclearQAv2 arXiv-v1 1,239-question snapshot: Boolean v2, Numeric v0, Verbal v0; three runs per model and task-count-weighted aggregate.",
+        "model_release_date": "2025-08-05",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-25",
+        "source_publication_date": "2026-06-25",
+        "observation_date": "2025-08-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-08-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-25",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-06-25",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-08-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-25",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "source": "https://arxiv.org/abs/2606.27047",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-nuclearqa-gptoss-54772f59fec4c1ed"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "nuclearqa-gptoss"
+        ],
+        "plot_date": "2026-06-25",
+        "frontier_observation_ids": [
+          "obs-0-6236-d9900a38c1c686e4",
+          "obs-0-7092-738052710eca1fc6",
+          "obs-0-7245-95d2da58ae972638",
+          "obs-0-7842-8e03348b3f56b9a9",
+          "obs-0-7891-de96dcbd6f34aafb",
+          "obs-0-7923-69ca0486e7ca559c"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-7923-69ca0486e7ca559c",
+        "benchmark_id": "nuclearqav2-v1-aggregate",
+        "benchmark_version_id": "nuclearqav2-v1-aggregate-canonical",
+        "model_id": "model-gpt-oss-120b-a2167006e036b432",
+        "model_configuration": "gpt-oss-120B",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-oss-120b",
+        "model_family_id": "openai-gpt-oss-120b",
+        "model": "gpt-oss-120B",
+        "organization": "OpenAI",
+        "score": 0.7923,
+        "input_score": 0.7923,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "nuclearqav2-v1-aggregate-metric-v1",
+        "protocol_id": "nuclearqav2-v1-aggregate-source-export-v1",
+        "task_set_id": "nuclearqav2-v1-aggregate-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "nuclearqav2-v1-aggregate-canonical-score",
+        "evaluation_protocol": "NuclearQAv2 arXiv-v1 1,239-question snapshot: Boolean v2, Numeric v0, Verbal v0; three runs per model and task-count-weighted aggregate.",
+        "model_release_date": "2025-08-05",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-25",
+        "source_publication_date": "2026-06-25",
+        "observation_date": "2025-08-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-08-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-25",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-06-25",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-08-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-25",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "source": "https://arxiv.org/abs/2606.27047",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-nuclearqa-gptoss-54772f59fec4c1ed"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "nuclearqa-gptoss"
+        ],
+        "plot_date": "2026-06-25",
+        "frontier_observation_ids": [
+          "obs-0-6236-d9900a38c1c686e4",
+          "obs-0-7092-738052710eca1fc6",
+          "obs-0-7245-95d2da58ae972638",
+          "obs-0-7842-8e03348b3f56b9a9",
+          "obs-0-7891-de96dcbd6f34aafb",
+          "obs-0-7923-69ca0486e7ca559c"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-7923-69ca0486e7ca559c",
+        "benchmark_id": "nuclearqav2-v1-aggregate",
+        "benchmark_version_id": "nuclearqav2-v1-aggregate-canonical",
+        "model_id": "model-gpt-oss-120b-a2167006e036b432",
+        "model_configuration": "gpt-oss-120B",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-oss-120b",
+        "model_family_id": "openai-gpt-oss-120b",
+        "model": "gpt-oss-120B",
+        "organization": "OpenAI",
+        "score": 0.7923,
+        "input_score": 0.7923,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "nuclearqav2-v1-aggregate-metric-v1",
+        "protocol_id": "nuclearqav2-v1-aggregate-source-export-v1",
+        "task_set_id": "nuclearqav2-v1-aggregate-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "nuclearqav2-v1-aggregate-canonical-score",
+        "evaluation_protocol": "NuclearQAv2 arXiv-v1 1,239-question snapshot: Boolean v2, Numeric v0, Verbal v0; three runs per model and task-count-weighted aggregate.",
+        "model_release_date": "2025-08-05",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-25",
+        "source_publication_date": "2026-06-25",
+        "observation_date": "2025-08-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-08-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-25",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-06-25",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-08-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-25",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "source": "https://arxiv.org/abs/2606.27047",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-nuclearqa-gptoss-54772f59fec4c1ed"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "nuclearqa-gptoss"
+        ],
+        "plot_date": "2026-06-25",
+        "frontier_observation_ids": [
+          "obs-0-6236-d9900a38c1c686e4",
+          "obs-0-7092-738052710eca1fc6",
+          "obs-0-7245-95d2da58ae972638",
+          "obs-0-7842-8e03348b3f56b9a9",
+          "obs-0-7891-de96dcbd6f34aafb",
+          "obs-0-7923-69ca0486e7ca559c"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-7923-69ca0486e7ca559c",
+        "benchmark_id": "nuclearqav2-v1-aggregate",
+        "benchmark_version_id": "nuclearqav2-v1-aggregate-canonical",
+        "model_id": "model-gpt-oss-120b-a2167006e036b432",
+        "model_configuration": "gpt-oss-120B",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-oss-120b",
+        "model_family_id": "openai-gpt-oss-120b",
+        "model": "gpt-oss-120B",
+        "organization": "OpenAI",
+        "score": 0.7923,
+        "input_score": 0.7923,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "nuclearqav2-v1-aggregate-metric-v1",
+        "protocol_id": "nuclearqav2-v1-aggregate-source-export-v1",
+        "task_set_id": "nuclearqav2-v1-aggregate-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "nuclearqav2-v1-aggregate-canonical-score",
+        "evaluation_protocol": "NuclearQAv2 arXiv-v1 1,239-question snapshot: Boolean v2, Numeric v0, Verbal v0; three runs per model and task-count-weighted aggregate.",
+        "model_release_date": "2025-08-05",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-25",
+        "source_publication_date": "2026-06-25",
+        "observation_date": "2025-08-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-08-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-25",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-06-25",
+        "date_kind": "result first-public date",
+        "capability_date": "2025-08-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-25",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "source": "https://arxiv.org/abs/2606.27047",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-nuclearqa-gptoss-54772f59fec4c1ed"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "nuclearqa-gptoss"
+        ],
+        "plot_date": "2026-06-25",
+        "frontier_observation_ids": [
+          "obs-0-6236-d9900a38c1c686e4",
+          "obs-0-7092-738052710eca1fc6",
+          "obs-0-7245-95d2da58ae972638",
+          "obs-0-7842-8e03348b3f56b9a9",
+          "obs-0-7891-de96dcbd6f34aafb",
+          "obs-0-7923-69ca0486e7ca559c"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-7923-69ca0486e7ca559c",
+        "benchmark_id": "nuclearqav2-v1-aggregate",
+        "benchmark_version_id": "nuclearqav2-v1-aggregate-canonical",
+        "model_id": "model-gpt-oss-120b-a2167006e036b432",
+        "model_configuration": "gpt-oss-120B",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-oss-120b",
+        "model_family_id": "openai-gpt-oss-120b",
+        "model": "gpt-oss-120B",
+        "organization": "OpenAI",
+        "score": 0.7923,
+        "input_score": 0.7923,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "nuclearqav2-v1-aggregate-metric-v1",
+        "protocol_id": "nuclearqav2-v1-aggregate-source-export-v1",
+        "task_set_id": "nuclearqav2-v1-aggregate-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "nuclearqav2-v1-aggregate-canonical-score",
+        "evaluation_protocol": "NuclearQAv2 arXiv-v1 1,239-question snapshot: Boolean v2, Numeric v0, Verbal v0; three runs per model and task-count-weighted aggregate.",
+        "model_release_date": "2025-08-05",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-25",
+        "source_publication_date": "2026-06-25",
+        "observation_date": "2025-08-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-08-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-25",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-06-25",
+        "date_kind": "result first-public date",
+        "capability_date": "2025-08-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-25",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+        ],
+        "source": "https://arxiv.org/abs/2606.27047",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-nuclearqa-gptoss-54772f59fec4c1ed"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "nuclearqa-gptoss"
+        ],
+        "plot_date": "2026-06-25",
+        "frontier_observation_ids": [
+          "obs-0-6236-d9900a38c1c686e4",
+          "obs-0-7092-738052710eca1fc6",
+          "obs-0-7245-95d2da58ae972638",
+          "obs-0-7842-8e03348b3f56b9a9",
+          "obs-0-7891-de96dcbd6f34aafb",
+          "obs-0-7923-69ca0486e7ca559c"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.7923,
+    "capability_frontier_value": 0.7923,
+    "reported_frontier_value": 0.7923,
+    "current_frontier": 0.7923,
+    "normalized_progress": 0.7923,
+    "normalized_headroom": 0.2077,
+    "threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-06-25"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 73
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 73
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-06-25"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 73
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 73
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-06-25"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 73
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 73
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.2857142857142857,
+      "represented_organizations": [
+        "OpenAI",
+        "Meta"
+      ],
+      "panel_size": 7,
+      "status": "low"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-arxiv-org-abs-2606-27047-043cc0fe3e833f7c"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

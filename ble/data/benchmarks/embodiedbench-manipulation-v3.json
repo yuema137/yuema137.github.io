@@ -1,0 +1,1162 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "embodiedbench-manipulation-v3",
+    "name": "EmbodiedBench \u2014 Manipulation v3",
+    "domain": "Robotics",
+    "release": "2025-06-05",
+    "source": "https://github.com/EmbodiedBench/EmbodiedBench",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Agent",
+    "tags": [
+      "manipulation",
+      "simulation",
+      "closed loop"
+    ],
+    "metric": "Success rate",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "embodiedbench-manipulation-v3-metric-v1",
+    "protocol_id": "embodiedbench-manipulation-v3-source-export-v1",
+    "canonical_score": {
+      "series_id": "embodiedbench-manipulation-v3-canonical-score",
+      "role": "canonical",
+      "metric_id": "embodiedbench-manipulation-v3-metric-v1",
+      "metric_name": "Success rate",
+      "protocol_id": "embodiedbench-manipulation-v3-source-export-v1",
+      "task_set_id": "embodiedbench-manipulation-v3-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "embodiedbench-manipulation-v3-canonical",
+    "summary": {
+      "en": "EmbodiedBench Manipulation measures whether a vision-language agent can complete simulated robot-arm manipulation through closed-loop actions.",
+      "zh": "EmbodiedBench Manipulation \u6d4b\u8bd5\u89c6\u89c9\u8bed\u8a00 agent \u80fd\u5426\u901a\u8fc7\u95ed\u73af\u52a8\u4f5c\u5b8c\u6210\u6a21\u62df\u673a\u68b0\u81c2\u64cd\u4f5c\u4efb\u52a1\u3002"
+    },
+    "task_format": {
+      "en": "The agent observes 500x500 simulator images and issues up to 15 seven-dimensional Franka-arm actions to complete one of 228 tasks.",
+      "zh": "agent \u89c2\u5bdf 500\u00d7500 simulator \u56fe\u50cf\uff0c\u5e76\u53d1\u51fa\u6700\u591a 15 \u4e2a\u4e03\u7ef4 Franka \u673a\u68b0\u81c2\u52a8\u4f5c\u6765\u5b8c\u6210 228 \u4e2a task \u4e4b\u4e00\u3002"
+    },
+    "scoring": {
+      "metric_name": "Task success rate",
+      "explanation": {
+        "en": "Each episode receives binary credit from its simulator-defined goal condition; the score is the percentage of 228 successful episodes.",
+        "zh": "\u6bcf\u4e2a episode \u6309 simulator \u5b9a\u4e49\u7684\u76ee\u6807\u6761\u4ef6\u83b7\u5f97\u4e8c\u5143\u5206\u6570\uff0c\u6700\u7ec8\u5f97\u5206\u662f 228 \u4e2a episode \u7684\u6210\u529f\u6bd4\u4f8b\u3002"
+      }
+    },
+    "evaluation_target": "environment_outcome",
+    "observation_count": 6,
+    "evidence_record_count": 6,
+    "observations": [
+      {
+        "observation_id": "obs-0-149-a06e493ea2c26cae",
+        "benchmark_id": "embodiedbench-manipulation-v3",
+        "benchmark_version_id": "embodiedbench-manipulation-v3-canonical",
+        "model_id": "model-llama-3-2-90b-vision-instruct-fc9f99aaff47ebbb",
+        "model_configuration": "Llama-3.2-90B-Vision-Instruct",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama-3-2-90b-vision-instruct",
+        "model_family_id": "meta-llama-3-2-90b-vision-instruct",
+        "model": "Llama-3.2-90B-Vision-Instruct",
+        "organization": "Meta",
+        "score": 0.149,
+        "input_score": 0.149,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "embodiedbench-manipulation-v3-metric-v1",
+        "protocol_id": "embodiedbench-manipulation-v3-source-export-v1",
+        "task_set_id": "embodiedbench-manipulation-v3-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "embodiedbench-manipulation-v3-canonical-score",
+        "evaluation_protocol": "EmbodiedBench v3 EB-Manipulation fixed 228-instance default protocol, detection boxes enabled, task-specific demonstrations, 15-step limit, temperature 0. Other EmbodiedBench environments are excluded.",
+        "model_release_date": "2024-09-25",
+        "evaluation_date": null,
+        "result_public_date": "2025-06-05",
+        "source_publication_date": "2025-06-05",
+        "observation_date": "2024-09-25",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-09-25",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-06-05",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-09-25",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-09-25",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-06-05",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea",
+          "resource-https-github-com-embodiedbench-embodiedbench-b6c6c45b057447c6"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+        ],
+        "source": "https://arxiv.org/abs/2502.09560",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eb-manipulation-llama32-95db27f40a2fd45a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eb-manipulation-llama32"
+        ]
+      },
+      {
+        "observation_id": "obs-0-167-0f8f035d911a9418",
+        "benchmark_id": "embodiedbench-manipulation-v3",
+        "benchmark_version_id": "embodiedbench-manipulation-v3-canonical",
+        "model_id": "model-gemini-2-0-flash-c7f695767f575f5b",
+        "model_configuration": "Gemini-2.0-flash",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-0-flash",
+        "model_family_id": "google-gemini-2-0-flash",
+        "model": "Gemini-2.0-flash",
+        "organization": "Google",
+        "score": 0.167,
+        "input_score": 0.167,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "embodiedbench-manipulation-v3-metric-v1",
+        "protocol_id": "embodiedbench-manipulation-v3-source-export-v1",
+        "task_set_id": "embodiedbench-manipulation-v3-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "embodiedbench-manipulation-v3-canonical-score",
+        "evaluation_protocol": "EmbodiedBench v3 EB-Manipulation fixed 228-instance default protocol, detection boxes enabled, task-specific demonstrations, 15-step limit, temperature 0. Other EmbodiedBench environments are excluded.",
+        "model_release_date": "2024-12-11",
+        "evaluation_date": null,
+        "result_public_date": "2025-06-05",
+        "source_publication_date": "2025-06-05",
+        "observation_date": "2024-12-11",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-11",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-06-05",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-12-11",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-11",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-06-05",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea",
+          "resource-https-github-com-embodiedbench-embodiedbench-b6c6c45b057447c6"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+        ],
+        "source": "https://arxiv.org/abs/2502.09560",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eb-manipulation-gemini20-22e3eff4676610ed"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eb-manipulation-gemini20"
+        ]
+      },
+      {
+        "observation_id": "obs-0-18-94b5af6b6af822ea",
+        "benchmark_id": "embodiedbench-manipulation-v3",
+        "benchmark_version_id": "embodiedbench-manipulation-v3-canonical",
+        "model_id": "model-qwen-vl-max-0b1475022f8e2f06",
+        "model_configuration": "Qwen-VL-Max",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen-vl-max",
+        "model_family_id": "qwen-qwen-vl-max",
+        "model": "Qwen-VL-Max",
+        "organization": "Qwen",
+        "score": 0.18,
+        "input_score": 0.18,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "embodiedbench-manipulation-v3-metric-v1",
+        "protocol_id": "embodiedbench-manipulation-v3-source-export-v1",
+        "task_set_id": "embodiedbench-manipulation-v3-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "embodiedbench-manipulation-v3-canonical-score",
+        "evaluation_protocol": "EmbodiedBench v3 EB-Manipulation fixed 228-instance default protocol, detection boxes enabled, task-specific demonstrations, 15-step limit, temperature 0. Other EmbodiedBench environments are excluded.",
+        "model_release_date": "2024-01-24",
+        "evaluation_date": null,
+        "result_public_date": "2025-06-05",
+        "source_publication_date": "2025-06-05",
+        "observation_date": "2024-01-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-01-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-06-05",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-01-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-01-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-06-05",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea",
+          "resource-https-github-com-embodiedbench-embodiedbench-b6c6c45b057447c6"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+        ],
+        "source": "https://arxiv.org/abs/2502.09560",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eb-manipulation-qwen-vl-max-0ae3e1dee91eb751"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eb-manipulation-qwen-vl-max"
+        ]
+      },
+      {
+        "observation_id": "obs-0-211-8c8eb46168f00ed5",
+        "benchmark_id": "embodiedbench-manipulation-v3",
+        "benchmark_version_id": "embodiedbench-manipulation-v3-canonical",
+        "model_id": "model-gemini-1-5-pro-cbb82d54e094a69c",
+        "model_configuration": "Gemini-1.5-Pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-1-5-pro",
+        "model_family_id": "google-gemini-1-5-pro",
+        "model": "Gemini-1.5-Pro",
+        "organization": "Google",
+        "score": 0.211,
+        "input_score": 0.211,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "embodiedbench-manipulation-v3-metric-v1",
+        "protocol_id": "embodiedbench-manipulation-v3-source-export-v1",
+        "task_set_id": "embodiedbench-manipulation-v3-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "embodiedbench-manipulation-v3-canonical-score",
+        "evaluation_protocol": "EmbodiedBench v3 EB-Manipulation fixed 228-instance default protocol, detection boxes enabled, task-specific demonstrations, 15-step limit, temperature 0. Other EmbodiedBench environments are excluded.",
+        "model_release_date": "2024-02-15",
+        "evaluation_date": null,
+        "result_public_date": "2025-06-05",
+        "source_publication_date": "2025-06-05",
+        "observation_date": "2024-02-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-02-15",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-06-05",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-02-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-02-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-06-05",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea",
+          "resource-https-github-com-embodiedbench-embodiedbench-b6c6c45b057447c6"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+        ],
+        "source": "https://arxiv.org/abs/2502.09560",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eb-manipulation-gemini15-0919a5922028f8d1"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eb-manipulation-gemini15"
+        ]
+      },
+      {
+        "observation_id": "obs-0-285-97ea5c1d2eecf662",
+        "benchmark_id": "embodiedbench-manipulation-v3",
+        "benchmark_version_id": "embodiedbench-manipulation-v3-canonical",
+        "model_id": "model-claude-3-7-sonnet-105c2d3675a935dc",
+        "model_configuration": "Claude-3.7-Sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-7-sonnet",
+        "model_family_id": "anthropic-claude-3-7-sonnet",
+        "model": "Claude-3.7-Sonnet",
+        "organization": "Anthropic",
+        "score": 0.285,
+        "input_score": 0.285,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "embodiedbench-manipulation-v3-metric-v1",
+        "protocol_id": "embodiedbench-manipulation-v3-source-export-v1",
+        "task_set_id": "embodiedbench-manipulation-v3-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "embodiedbench-manipulation-v3-canonical-score",
+        "evaluation_protocol": "EmbodiedBench v3 EB-Manipulation fixed 228-instance default protocol, detection boxes enabled, task-specific demonstrations, 15-step limit, temperature 0. Other EmbodiedBench environments are excluded.",
+        "model_release_date": "2025-02-24",
+        "evaluation_date": null,
+        "result_public_date": "2025-06-05",
+        "source_publication_date": "2025-06-05",
+        "observation_date": "2025-02-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-06-05",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-02-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-06-05",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea",
+          "resource-https-github-com-embodiedbench-embodiedbench-b6c6c45b057447c6"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+        ],
+        "source": "https://arxiv.org/abs/2502.09560",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eb-manipulation-claude37-4e53f54d266cc00e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eb-manipulation-claude37"
+        ]
+      },
+      {
+        "observation_id": "obs-0-289-39c72042d2bbc023",
+        "benchmark_id": "embodiedbench-manipulation-v3",
+        "benchmark_version_id": "embodiedbench-manipulation-v3-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.289,
+        "input_score": 0.289,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "embodiedbench-manipulation-v3-metric-v1",
+        "protocol_id": "embodiedbench-manipulation-v3-source-export-v1",
+        "task_set_id": "embodiedbench-manipulation-v3-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "embodiedbench-manipulation-v3-canonical-score",
+        "evaluation_protocol": "EmbodiedBench v3 EB-Manipulation fixed 228-instance default protocol, detection boxes enabled, task-specific demonstrations, 15-step limit, temperature 0. Other EmbodiedBench environments are excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2025-06-05",
+        "source_publication_date": "2025-06-05",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-06-05",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-05-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-06-05",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea",
+          "resource-https-github-com-embodiedbench-embodiedbench-b6c6c45b057447c6"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+        ],
+        "source": "https://arxiv.org/abs/2502.09560",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eb-manipulation-gpt4o-e2778657f2f574b6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eb-manipulation-gpt4o"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-289-39c72042d2bbc023",
+        "benchmark_id": "embodiedbench-manipulation-v3",
+        "benchmark_version_id": "embodiedbench-manipulation-v3-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.289,
+        "input_score": 0.289,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "embodiedbench-manipulation-v3-metric-v1",
+        "protocol_id": "embodiedbench-manipulation-v3-source-export-v1",
+        "task_set_id": "embodiedbench-manipulation-v3-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "embodiedbench-manipulation-v3-canonical-score",
+        "evaluation_protocol": "EmbodiedBench v3 EB-Manipulation fixed 228-instance default protocol, detection boxes enabled, task-specific demonstrations, 15-step limit, temperature 0. Other EmbodiedBench environments are excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2025-06-05",
+        "source_publication_date": "2025-06-05",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-06-05",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-06-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-06-05",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea",
+          "resource-https-github-com-embodiedbench-embodiedbench-b6c6c45b057447c6"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+        ],
+        "source": "https://arxiv.org/abs/2502.09560",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eb-manipulation-gpt4o-e2778657f2f574b6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eb-manipulation-gpt4o"
+        ],
+        "plot_date": "2025-06-05",
+        "frontier_observation_ids": [
+          "obs-0-149-a06e493ea2c26cae",
+          "obs-0-167-0f8f035d911a9418",
+          "obs-0-18-94b5af6b6af822ea",
+          "obs-0-211-8c8eb46168f00ed5",
+          "obs-0-285-97ea5c1d2eecf662",
+          "obs-0-289-39c72042d2bbc023"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-289-39c72042d2bbc023",
+        "benchmark_id": "embodiedbench-manipulation-v3",
+        "benchmark_version_id": "embodiedbench-manipulation-v3-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.289,
+        "input_score": 0.289,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "embodiedbench-manipulation-v3-metric-v1",
+        "protocol_id": "embodiedbench-manipulation-v3-source-export-v1",
+        "task_set_id": "embodiedbench-manipulation-v3-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "embodiedbench-manipulation-v3-canonical-score",
+        "evaluation_protocol": "EmbodiedBench v3 EB-Manipulation fixed 228-instance default protocol, detection boxes enabled, task-specific demonstrations, 15-step limit, temperature 0. Other EmbodiedBench environments are excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2025-06-05",
+        "source_publication_date": "2025-06-05",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-06-05",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-06-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-06-05",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea",
+          "resource-https-github-com-embodiedbench-embodiedbench-b6c6c45b057447c6"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+        ],
+        "source": "https://arxiv.org/abs/2502.09560",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eb-manipulation-gpt4o-e2778657f2f574b6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eb-manipulation-gpt4o"
+        ],
+        "plot_date": "2025-06-05",
+        "frontier_observation_ids": [
+          "obs-0-149-a06e493ea2c26cae",
+          "obs-0-167-0f8f035d911a9418",
+          "obs-0-18-94b5af6b6af822ea",
+          "obs-0-211-8c8eb46168f00ed5",
+          "obs-0-285-97ea5c1d2eecf662",
+          "obs-0-289-39c72042d2bbc023"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-289-39c72042d2bbc023",
+        "benchmark_id": "embodiedbench-manipulation-v3",
+        "benchmark_version_id": "embodiedbench-manipulation-v3-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.289,
+        "input_score": 0.289,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "embodiedbench-manipulation-v3-metric-v1",
+        "protocol_id": "embodiedbench-manipulation-v3-source-export-v1",
+        "task_set_id": "embodiedbench-manipulation-v3-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "embodiedbench-manipulation-v3-canonical-score",
+        "evaluation_protocol": "EmbodiedBench v3 EB-Manipulation fixed 228-instance default protocol, detection boxes enabled, task-specific demonstrations, 15-step limit, temperature 0. Other EmbodiedBench environments are excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2025-06-05",
+        "source_publication_date": "2025-06-05",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-06-05",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-06-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-06-05",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea",
+          "resource-https-github-com-embodiedbench-embodiedbench-b6c6c45b057447c6"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+        ],
+        "source": "https://arxiv.org/abs/2502.09560",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eb-manipulation-gpt4o-e2778657f2f574b6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eb-manipulation-gpt4o"
+        ],
+        "plot_date": "2025-06-05",
+        "frontier_observation_ids": [
+          "obs-0-149-a06e493ea2c26cae",
+          "obs-0-167-0f8f035d911a9418",
+          "obs-0-18-94b5af6b6af822ea",
+          "obs-0-211-8c8eb46168f00ed5",
+          "obs-0-285-97ea5c1d2eecf662",
+          "obs-0-289-39c72042d2bbc023"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-289-39c72042d2bbc023",
+        "benchmark_id": "embodiedbench-manipulation-v3",
+        "benchmark_version_id": "embodiedbench-manipulation-v3-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.289,
+        "input_score": 0.289,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "embodiedbench-manipulation-v3-metric-v1",
+        "protocol_id": "embodiedbench-manipulation-v3-source-export-v1",
+        "task_set_id": "embodiedbench-manipulation-v3-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "embodiedbench-manipulation-v3-canonical-score",
+        "evaluation_protocol": "EmbodiedBench v3 EB-Manipulation fixed 228-instance default protocol, detection boxes enabled, task-specific demonstrations, 15-step limit, temperature 0. Other EmbodiedBench environments are excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2025-06-05",
+        "source_publication_date": "2025-06-05",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-06-05",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-06-05",
+        "date_kind": "result first-public date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-06-05",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea",
+          "resource-https-github-com-embodiedbench-embodiedbench-b6c6c45b057447c6"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+        ],
+        "source": "https://arxiv.org/abs/2502.09560",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eb-manipulation-gpt4o-e2778657f2f574b6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eb-manipulation-gpt4o"
+        ],
+        "plot_date": "2025-06-05",
+        "frontier_observation_ids": [
+          "obs-0-149-a06e493ea2c26cae",
+          "obs-0-167-0f8f035d911a9418",
+          "obs-0-18-94b5af6b6af822ea",
+          "obs-0-211-8c8eb46168f00ed5",
+          "obs-0-285-97ea5c1d2eecf662",
+          "obs-0-289-39c72042d2bbc023"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-289-39c72042d2bbc023",
+        "benchmark_id": "embodiedbench-manipulation-v3",
+        "benchmark_version_id": "embodiedbench-manipulation-v3-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.289,
+        "input_score": 0.289,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "embodiedbench-manipulation-v3-metric-v1",
+        "protocol_id": "embodiedbench-manipulation-v3-source-export-v1",
+        "task_set_id": "embodiedbench-manipulation-v3-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "embodiedbench-manipulation-v3-canonical-score",
+        "evaluation_protocol": "EmbodiedBench v3 EB-Manipulation fixed 228-instance default protocol, detection boxes enabled, task-specific demonstrations, 15-step limit, temperature 0. Other EmbodiedBench environments are excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2025-06-05",
+        "source_publication_date": "2025-06-05",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-06-05",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-06-05",
+        "date_kind": "result first-public date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-06-05",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea",
+          "resource-https-github-com-embodiedbench-embodiedbench-b6c6c45b057447c6"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2502-09560-c4485d074f6307ea"
+        ],
+        "source": "https://arxiv.org/abs/2502.09560",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eb-manipulation-gpt4o-e2778657f2f574b6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eb-manipulation-gpt4o"
+        ],
+        "plot_date": "2025-06-05",
+        "frontier_observation_ids": [
+          "obs-0-149-a06e493ea2c26cae",
+          "obs-0-167-0f8f035d911a9418",
+          "obs-0-18-94b5af6b6af822ea",
+          "obs-0-211-8c8eb46168f00ed5",
+          "obs-0-285-97ea5c1d2eecf662",
+          "obs-0-289-39c72042d2bbc023"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.289,
+    "capability_frontier_value": 0.289,
+    "reported_frontier_value": 0.289,
+    "current_frontier": 0.289,
+    "normalized_progress": 0.289,
+    "normalized_headroom": 0.7110000000000001,
+    "threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 458
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 458
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 458
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 458
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 458
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 458
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 458
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 458
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 458
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.7142857142857143,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "Qwen",
+        "Meta"
+      ],
+      "panel_size": 7,
+      "status": "high"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-github-com-embodiedbench-embodiedbench-b6c6c45b057447c6"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": true,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": true,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

@@ -1,0 +1,1254 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "cladbench-v1",
+    "name": "CladBench v1",
+    "domain": "Energy & Infrastructure",
+    "release": "2026-08-13",
+    "source": "https://github.com/cladbrain/cladbench",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Model",
+    "tags": [
+      "built environment",
+      "regulation",
+      "net zero"
+    ],
+    "metric": "Score",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "cladbench-v1-metric-v1",
+    "protocol_id": "cladbench-v1-source-export-v1",
+    "canonical_score": {
+      "series_id": "cladbench-v1-canonical-score",
+      "role": "canonical",
+      "metric_id": "cladbench-v1-metric-v1",
+      "metric_name": "Score",
+      "protocol_id": "cladbench-v1-source-export-v1",
+      "task_set_id": "cladbench-v1-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "cladbench-v1-canonical",
+    "summary": {
+      "en": "CladBench evaluates professional built-environment work across regulation, energy, BIM, retrofit, building systems, carbon, and net-zero planning.",
+      "zh": "CladBench \u8bc4\u4f30\u5efa\u7b51\u89c4\u8303\u3001\u80fd\u6e90\u3001BIM\u3001\u6539\u9020\u3001\u5efa\u7b51\u7cfb\u7edf\u3001\u78b3\u6392\u653e\u548c\u51c0\u96f6\u89c4\u5212\u7b49\u5efa\u6210\u73af\u5883\u4e13\u4e1a\u80fd\u529b\u3002"
+    },
+    "task_format": {
+      "en": "The model completes 536 public questions spanning multiple choice, short answer, rationale, open answer, and ranking formats.",
+      "zh": "\u6a21\u578b\u5b8c\u6210 536 \u9053\u516c\u5f00\u9898\u76ee\uff0c\u9898\u578b\u5305\u62ec\u9009\u62e9\u3001\u77ed\u7b54\u3001\u7406\u7531\u8bf4\u660e\u3001\u5f00\u653e\u56de\u7b54\u548c\u6392\u5e8f\u3002"
+    },
+    "scoring": {
+      "metric_name": "Weighted normalized score",
+      "explanation": {
+        "en": "Each item is normalized to 0-1 by its deterministic or rubric scorer, and the headline score is the question-count-weighted mean.",
+        "zh": "\u6bcf\u9898\u7531\u56fa\u5b9a deterministic \u6216 rubric scorer \u5f52\u4e00\u5316\u5230 0\u20131\uff0cheadline score \u662f\u6309\u9898\u76ee\u6570\u52a0\u6743\u7684\u5e73\u5747\u503c\u3002"
+      }
+    },
+    "evaluation_target": "process_and_output",
+    "observation_count": 7,
+    "evidence_record_count": 7,
+    "observations": [
+      {
+        "observation_id": "obs-0-54-cff3704c20c3bf2b",
+        "benchmark_id": "cladbench-v1",
+        "benchmark_version_id": "cladbench-v1-canonical",
+        "model_id": "model-qwen-2-5-7b-instruct-turbo-538c6aff596107e7",
+        "model_configuration": "Qwen-2.5-7B-Instruct-Turbo",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen-2-5-7b-instruct-turbo",
+        "model_family_id": "qwen-qwen-2-5-7b-instruct-turbo",
+        "model": "Qwen-2.5-7B-Instruct-Turbo",
+        "organization": "Qwen",
+        "score": 0.54,
+        "input_score": 0.54,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cladbench-v1-metric-v1",
+        "protocol_id": "cladbench-v1-source-export-v1",
+        "task_set_id": "cladbench-v1-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "cladbench-v1-canonical-score",
+        "evaluation_protocol": "CladBench v1 public 536-question split, dataset hash e4695eb32bcbab13, harness 2.0.0, frozen 2026-08-13 results. Private holdout is excluded.",
+        "model_release_date": "2024-09-19",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-13",
+        "source_publication_date": "2026-08-13",
+        "observation_date": "2024-09-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-09-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-13",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-09-19",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-09-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-13",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-9a56fc83166ac5eb",
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "source": "https://github.com/cladbrain/cladbench/blob/main/docs/results_tables.md",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cladbench-qwen25-9be41cecee5fe341"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "cladbench-qwen25"
+        ]
+      },
+      {
+        "observation_id": "obs-0-655-bef610cac75ca5fd",
+        "benchmark_id": "cladbench-v1",
+        "benchmark_version_id": "cladbench-v1-canonical",
+        "model_id": "model-llama-3-3-70b-instruct-turbo-786bd4f5ef2a049a",
+        "model_configuration": "Llama-3.3-70B-Instruct-Turbo",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama-3-3-70b-instruct-turbo",
+        "model_family_id": "meta-llama-3-3-70b-instruct-turbo",
+        "model": "Llama-3.3-70B-Instruct-Turbo",
+        "organization": "Meta",
+        "score": 0.655,
+        "input_score": 0.655,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cladbench-v1-metric-v1",
+        "protocol_id": "cladbench-v1-source-export-v1",
+        "task_set_id": "cladbench-v1-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "cladbench-v1-canonical-score",
+        "evaluation_protocol": "CladBench v1 public 536-question split, dataset hash e4695eb32bcbab13, harness 2.0.0, frozen 2026-08-13 results. Private holdout is excluded.",
+        "model_release_date": "2024-12-06",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-13",
+        "source_publication_date": "2026-08-13",
+        "observation_date": "2024-12-06",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-06",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-13",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-12-06",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-06",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-13",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-9a56fc83166ac5eb",
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "source": "https://github.com/cladbrain/cladbench/blob/main/docs/results_tables.md",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cladbench-llama33-c4996b220c0b42bc"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "cladbench-llama33"
+        ]
+      },
+      {
+        "observation_id": "obs-0-691-abbaeb56e7e39e04",
+        "benchmark_id": "cladbench-v1",
+        "benchmark_version_id": "cladbench-v1-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.691,
+        "input_score": 0.691,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cladbench-v1-metric-v1",
+        "protocol_id": "cladbench-v1-source-export-v1",
+        "task_set_id": "cladbench-v1-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "cladbench-v1-canonical-score",
+        "evaluation_protocol": "CladBench v1 public 536-question split, dataset hash e4695eb32bcbab13, harness 2.0.0, frozen 2026-08-13 results. Private holdout is excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-13",
+        "source_publication_date": "2026-08-13",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-13",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-05-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-13",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-9a56fc83166ac5eb",
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "source": "https://github.com/cladbrain/cladbench/blob/main/docs/results_tables.md",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cladbench-gpt4o-d2fcd3ae4d5c93f1"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "cladbench-gpt4o"
+        ]
+      },
+      {
+        "observation_id": "obs-0-823-4c21e2665c1b7afd",
+        "benchmark_id": "cladbench-v1",
+        "benchmark_version_id": "cladbench-v1-canonical",
+        "model_id": "model-gpt-5-cdd3b6d6cb9421c1",
+        "model_configuration": "GPT-5",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5",
+        "model_family_id": "openai-gpt-5",
+        "model": "GPT-5",
+        "organization": "OpenAI",
+        "score": 0.823,
+        "input_score": 0.823,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cladbench-v1-metric-v1",
+        "protocol_id": "cladbench-v1-source-export-v1",
+        "task_set_id": "cladbench-v1-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "cladbench-v1-canonical-score",
+        "evaluation_protocol": "CladBench v1 public 536-question split, dataset hash e4695eb32bcbab13, harness 2.0.0, frozen 2026-08-13 results. Private holdout is excluded.",
+        "model_release_date": "2025-08-07",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-13",
+        "source_publication_date": "2026-08-13",
+        "observation_date": "2025-08-07",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-08-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-13",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-08-07",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-08-07",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-13",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-9a56fc83166ac5eb",
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "source": "https://github.com/cladbrain/cladbench/blob/main/docs/results_tables.md",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cladbench-gpt5-cd11e67319055dbf"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "cladbench-gpt5"
+        ]
+      },
+      {
+        "observation_id": "obs-0-831-5af2f9aa80ae4750",
+        "benchmark_id": "cladbench-v1",
+        "benchmark_version_id": "cladbench-v1-canonical",
+        "model_id": "model-gemini-2-5-pro-53e6252cbff1cfa8",
+        "model_configuration": "Gemini-2.5-Pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-5-pro",
+        "model_family_id": "google-gemini-2-5-pro",
+        "model": "Gemini-2.5-Pro",
+        "organization": "Google",
+        "score": 0.831,
+        "input_score": 0.831,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cladbench-v1-metric-v1",
+        "protocol_id": "cladbench-v1-source-export-v1",
+        "task_set_id": "cladbench-v1-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "cladbench-v1-canonical-score",
+        "evaluation_protocol": "CladBench v1 public 536-question split, dataset hash e4695eb32bcbab13, harness 2.0.0, frozen 2026-08-13 results. Private holdout is excluded.",
+        "model_release_date": "2025-06-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-13",
+        "source_publication_date": "2026-08-13",
+        "observation_date": "2025-06-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-06-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-13",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-06-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-06-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-13",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-9a56fc83166ac5eb",
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "source": "https://github.com/cladbrain/cladbench/blob/main/docs/results_tables.md",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cladbench-gemini25-c790abf778415d85"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "cladbench-gemini25"
+        ]
+      },
+      {
+        "observation_id": "obs-0-869-1fb1e79c2b34aedf",
+        "benchmark_id": "cladbench-v1",
+        "benchmark_version_id": "cladbench-v1-canonical",
+        "model_id": "model-claude-opus-4-8-4b678e58822d2ea5",
+        "model_configuration": "Claude-Opus-4.8",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-8",
+        "model_family_id": "anthropic-claude-opus-4-8",
+        "model": "Claude-Opus-4.8",
+        "organization": "Anthropic",
+        "score": 0.869,
+        "input_score": 0.869,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cladbench-v1-metric-v1",
+        "protocol_id": "cladbench-v1-source-export-v1",
+        "task_set_id": "cladbench-v1-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "cladbench-v1-canonical-score",
+        "evaluation_protocol": "CladBench v1 public 536-question split, dataset hash e4695eb32bcbab13, harness 2.0.0, frozen 2026-08-13 results. Private holdout is excluded.",
+        "model_release_date": "2026-07-23",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-13",
+        "source_publication_date": "2026-08-13",
+        "observation_date": "2026-07-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-13",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-13",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-9a56fc83166ac5eb",
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "source": "https://github.com/cladbrain/cladbench/blob/main/docs/results_tables.md",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cladbench-opus48-f0ae6a05d0b17fc3"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "cladbench-opus48"
+        ]
+      },
+      {
+        "observation_id": "obs-0-888-2c16df9afd9364ed",
+        "benchmark_id": "cladbench-v1",
+        "benchmark_version_id": "cladbench-v1-canonical",
+        "model_id": "model-claude-opus-4-7-bf3d188ffeabc598",
+        "model_configuration": "Claude-Opus-4.7",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-7",
+        "model_family_id": "anthropic-claude-opus-4-7",
+        "model": "Claude-Opus-4.7",
+        "organization": "Anthropic",
+        "score": 0.888,
+        "input_score": 0.888,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cladbench-v1-metric-v1",
+        "protocol_id": "cladbench-v1-source-export-v1",
+        "task_set_id": "cladbench-v1-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "cladbench-v1-canonical-score",
+        "evaluation_protocol": "CladBench v1 public 536-question split, dataset hash e4695eb32bcbab13, harness 2.0.0, frozen 2026-08-13 results. Private holdout is excluded.",
+        "model_release_date": "2026-04-16",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-13",
+        "source_publication_date": "2026-08-13",
+        "observation_date": "2026-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-13",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-13",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-9a56fc83166ac5eb",
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "source": "https://github.com/cladbrain/cladbench/blob/main/docs/results_tables.md",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cladbench-opus47-ba02a5c0cd8cbbe6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "cladbench-opus47"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-888-2c16df9afd9364ed",
+        "benchmark_id": "cladbench-v1",
+        "benchmark_version_id": "cladbench-v1-canonical",
+        "model_id": "model-claude-opus-4-7-bf3d188ffeabc598",
+        "model_configuration": "Claude-Opus-4.7",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-7",
+        "model_family_id": "anthropic-claude-opus-4-7",
+        "model": "Claude-Opus-4.7",
+        "organization": "Anthropic",
+        "score": 0.888,
+        "input_score": 0.888,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cladbench-v1-metric-v1",
+        "protocol_id": "cladbench-v1-source-export-v1",
+        "task_set_id": "cladbench-v1-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "cladbench-v1-canonical-score",
+        "evaluation_protocol": "CladBench v1 public 536-question split, dataset hash e4695eb32bcbab13, harness 2.0.0, frozen 2026-08-13 results. Private holdout is excluded.",
+        "model_release_date": "2026-04-16",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-13",
+        "source_publication_date": "2026-08-13",
+        "observation_date": "2026-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-13",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-08-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-13",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-9a56fc83166ac5eb",
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "source": "https://github.com/cladbrain/cladbench/blob/main/docs/results_tables.md",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cladbench-opus47-ba02a5c0cd8cbbe6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "cladbench-opus47"
+        ],
+        "plot_date": "2026-08-13",
+        "frontier_observation_ids": [
+          "obs-0-54-cff3704c20c3bf2b",
+          "obs-0-655-bef610cac75ca5fd",
+          "obs-0-691-abbaeb56e7e39e04",
+          "obs-0-823-4c21e2665c1b7afd",
+          "obs-0-831-5af2f9aa80ae4750",
+          "obs-0-869-1fb1e79c2b34aedf",
+          "obs-0-888-2c16df9afd9364ed"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-888-2c16df9afd9364ed",
+        "benchmark_id": "cladbench-v1",
+        "benchmark_version_id": "cladbench-v1-canonical",
+        "model_id": "model-claude-opus-4-7-bf3d188ffeabc598",
+        "model_configuration": "Claude-Opus-4.7",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-7",
+        "model_family_id": "anthropic-claude-opus-4-7",
+        "model": "Claude-Opus-4.7",
+        "organization": "Anthropic",
+        "score": 0.888,
+        "input_score": 0.888,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cladbench-v1-metric-v1",
+        "protocol_id": "cladbench-v1-source-export-v1",
+        "task_set_id": "cladbench-v1-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "cladbench-v1-canonical-score",
+        "evaluation_protocol": "CladBench v1 public 536-question split, dataset hash e4695eb32bcbab13, harness 2.0.0, frozen 2026-08-13 results. Private holdout is excluded.",
+        "model_release_date": "2026-04-16",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-13",
+        "source_publication_date": "2026-08-13",
+        "observation_date": "2026-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-13",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-08-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-13",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-9a56fc83166ac5eb",
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "source": "https://github.com/cladbrain/cladbench/blob/main/docs/results_tables.md",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cladbench-opus47-ba02a5c0cd8cbbe6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "cladbench-opus47"
+        ],
+        "plot_date": "2026-08-13",
+        "frontier_observation_ids": [
+          "obs-0-54-cff3704c20c3bf2b",
+          "obs-0-655-bef610cac75ca5fd",
+          "obs-0-691-abbaeb56e7e39e04",
+          "obs-0-823-4c21e2665c1b7afd",
+          "obs-0-831-5af2f9aa80ae4750",
+          "obs-0-869-1fb1e79c2b34aedf",
+          "obs-0-888-2c16df9afd9364ed"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-888-2c16df9afd9364ed",
+        "benchmark_id": "cladbench-v1",
+        "benchmark_version_id": "cladbench-v1-canonical",
+        "model_id": "model-claude-opus-4-7-bf3d188ffeabc598",
+        "model_configuration": "Claude-Opus-4.7",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-7",
+        "model_family_id": "anthropic-claude-opus-4-7",
+        "model": "Claude-Opus-4.7",
+        "organization": "Anthropic",
+        "score": 0.888,
+        "input_score": 0.888,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cladbench-v1-metric-v1",
+        "protocol_id": "cladbench-v1-source-export-v1",
+        "task_set_id": "cladbench-v1-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "cladbench-v1-canonical-score",
+        "evaluation_protocol": "CladBench v1 public 536-question split, dataset hash e4695eb32bcbab13, harness 2.0.0, frozen 2026-08-13 results. Private holdout is excluded.",
+        "model_release_date": "2026-04-16",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-13",
+        "source_publication_date": "2026-08-13",
+        "observation_date": "2026-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-13",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-08-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-13",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-9a56fc83166ac5eb",
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "source": "https://github.com/cladbrain/cladbench/blob/main/docs/results_tables.md",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cladbench-opus47-ba02a5c0cd8cbbe6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "cladbench-opus47"
+        ],
+        "plot_date": "2026-08-13",
+        "frontier_observation_ids": [
+          "obs-0-54-cff3704c20c3bf2b",
+          "obs-0-655-bef610cac75ca5fd",
+          "obs-0-691-abbaeb56e7e39e04",
+          "obs-0-823-4c21e2665c1b7afd",
+          "obs-0-831-5af2f9aa80ae4750",
+          "obs-0-869-1fb1e79c2b34aedf",
+          "obs-0-888-2c16df9afd9364ed"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-888-2c16df9afd9364ed",
+        "benchmark_id": "cladbench-v1",
+        "benchmark_version_id": "cladbench-v1-canonical",
+        "model_id": "model-claude-opus-4-7-bf3d188ffeabc598",
+        "model_configuration": "Claude-Opus-4.7",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-7",
+        "model_family_id": "anthropic-claude-opus-4-7",
+        "model": "Claude-Opus-4.7",
+        "organization": "Anthropic",
+        "score": 0.888,
+        "input_score": 0.888,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cladbench-v1-metric-v1",
+        "protocol_id": "cladbench-v1-source-export-v1",
+        "task_set_id": "cladbench-v1-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "cladbench-v1-canonical-score",
+        "evaluation_protocol": "CladBench v1 public 536-question split, dataset hash e4695eb32bcbab13, harness 2.0.0, frozen 2026-08-13 results. Private holdout is excluded.",
+        "model_release_date": "2026-04-16",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-13",
+        "source_publication_date": "2026-08-13",
+        "observation_date": "2026-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-13",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-08-13",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-13",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-9a56fc83166ac5eb",
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "source": "https://github.com/cladbrain/cladbench/blob/main/docs/results_tables.md",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cladbench-opus47-ba02a5c0cd8cbbe6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "cladbench-opus47"
+        ],
+        "plot_date": "2026-08-13",
+        "frontier_observation_ids": [
+          "obs-0-54-cff3704c20c3bf2b",
+          "obs-0-655-bef610cac75ca5fd",
+          "obs-0-691-abbaeb56e7e39e04",
+          "obs-0-823-4c21e2665c1b7afd",
+          "obs-0-831-5af2f9aa80ae4750",
+          "obs-0-869-1fb1e79c2b34aedf",
+          "obs-0-888-2c16df9afd9364ed"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-888-2c16df9afd9364ed",
+        "benchmark_id": "cladbench-v1",
+        "benchmark_version_id": "cladbench-v1-canonical",
+        "model_id": "model-claude-opus-4-7-bf3d188ffeabc598",
+        "model_configuration": "Claude-Opus-4.7",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-7",
+        "model_family_id": "anthropic-claude-opus-4-7",
+        "model": "Claude-Opus-4.7",
+        "organization": "Anthropic",
+        "score": 0.888,
+        "input_score": 0.888,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cladbench-v1-metric-v1",
+        "protocol_id": "cladbench-v1-source-export-v1",
+        "task_set_id": "cladbench-v1-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "cladbench-v1-canonical-score",
+        "evaluation_protocol": "CladBench v1 public 536-question split, dataset hash e4695eb32bcbab13, harness 2.0.0, frozen 2026-08-13 results. Private holdout is excluded.",
+        "model_release_date": "2026-04-16",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-13",
+        "source_publication_date": "2026-08-13",
+        "observation_date": "2026-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-13",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-08-13",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-13",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-9a56fc83166ac5eb",
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-cladbrain-cladbench-blob-main-d-0fa59cfdc20046bf"
+        ],
+        "source": "https://github.com/cladbrain/cladbench/blob/main/docs/results_tables.md",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cladbench-opus47-ba02a5c0cd8cbbe6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "cladbench-opus47"
+        ],
+        "plot_date": "2026-08-13",
+        "frontier_observation_ids": [
+          "obs-0-54-cff3704c20c3bf2b",
+          "obs-0-655-bef610cac75ca5fd",
+          "obs-0-691-abbaeb56e7e39e04",
+          "obs-0-823-4c21e2665c1b7afd",
+          "obs-0-831-5af2f9aa80ae4750",
+          "obs-0-869-1fb1e79c2b34aedf",
+          "obs-0-888-2c16df9afd9364ed"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.888,
+    "capability_frontier_value": 0.888,
+    "reported_frontier_value": 0.888,
+    "current_frontier": 0.888,
+    "normalized_progress": 0.888,
+    "normalized_headroom": 0.11199999999999999,
+    "threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-08-13"
+      },
+      "T80": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-08-13"
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 24
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-08-13"
+      },
+      "T80": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-08-13"
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 24
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-08-13"
+      },
+      "T80": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-08-13"
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 24
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.7142857142857143,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "Qwen",
+        "Meta"
+      ],
+      "panel_size": 7,
+      "status": "high"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-github-com-cladbrain-cladbench-9a56fc83166ac5eb"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

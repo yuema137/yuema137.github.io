@@ -1,0 +1,1248 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "chemm-bench-acl2026",
+    "name": "CheMM-Bench ACL 2026",
+    "domain": "Chemistry",
+    "release": "2026-07-15",
+    "source": "https://aclanthology.org/2026.findings-acl.1341/",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Model",
+    "tags": [
+      "spectroscopy",
+      "molecular structure",
+      "multimodal"
+    ],
+    "metric": "Overall ACC",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "chemm-bench-acl2026-metric-v1",
+    "protocol_id": "chemm-bench-acl2026-source-export-v1",
+    "canonical_score": {
+      "series_id": "chemm-bench-acl2026-canonical-score",
+      "role": "canonical",
+      "metric_id": "chemm-bench-acl2026-metric-v1",
+      "metric_name": "Overall ACC",
+      "protocol_id": "chemm-bench-acl2026-source-export-v1",
+      "task_set_id": "chemm-bench-acl2026-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "chemm-bench-acl2026-canonical",
+    "summary": {
+      "en": "CheMM-Bench tests molecular reconstruction, nomenclature, molecular weight, and spectroscopy interpretation from chemical diagrams and spectra.",
+      "zh": "CheMM-Bench \u6d4b\u8bd5\u6a21\u578b\u6839\u636e\u5316\u5b66\u7ed3\u6784\u56fe\u548c\u5149\u8c31\u5b8c\u6210\u5206\u5b50\u91cd\u5efa\u3001\u547d\u540d\u3001\u5206\u5b50\u91cf\u8ba1\u7b97\u53ca\u5149\u8c31\u89e3\u91ca\u7684\u80fd\u529b\u3002"
+    },
+    "task_format": {
+      "en": "The model receives a 2D molecule diagram or up to five spectroscopy panels and returns a structured final answer.",
+      "zh": "\u6a21\u578b\u4f1a\u6536\u5230\u4e8c\u7ef4\u5206\u5b50\u56fe\u6216\u6700\u591a\u4e94\u4e2a\u5149\u8c31 panel\uff0c\u5e76\u8fd4\u56de\u7ed3\u6784\u5316\u6700\u7ec8\u7b54\u6848\u3002"
+    },
+    "scoring": {
+      "metric_name": "Micro-averaged exact accuracy",
+      "explanation": {
+        "en": "Overall ACC is exact final-answer accuracy micro-aggregated over the fixed 3,504-case test split; F1 and fuzzy or joint-SMILES variants remain separate.",
+        "zh": "Overall ACC \u662f\u56fa\u5b9a 3,504-case test split \u4e0a\u5fae\u5e73\u5747\u7684\u6700\u7ec8\u7b54\u6848\u7cbe\u786e\u5339\u914d\u7387\uff1bF1\u3001\u6a21\u7cca\u5339\u914d\u548c joint-SMILES \u6307\u6807\u4fdd\u6301\u72ec\u7acb\u3002"
+      }
+    },
+    "evaluation_target": "final_output",
+    "observation_count": 7,
+    "evidence_record_count": 7,
+    "observations": [
+      {
+        "observation_id": "obs-0-6bc8c4890b184d15",
+        "benchmark_id": "chemm-bench-acl2026",
+        "benchmark_version_id": "chemm-bench-acl2026-canonical",
+        "model_id": "model-qwen-2-5-vl-3b-23643fc9ff975e16",
+        "model_configuration": "Qwen-2.5-VL-3B",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen-2-5-vl-3b",
+        "model_family_id": "qwen-qwen-2-5-vl-3b",
+        "model": "Qwen-2.5-VL-3B",
+        "organization": "Qwen",
+        "score": 0.0,
+        "input_score": 0.0,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "chemm-bench-acl2026-metric-v1",
+        "protocol_id": "chemm-bench-acl2026-source-export-v1",
+        "task_set_id": "chemm-bench-acl2026-canonical",
+        "metric": "Overall ACC",
+        "score_role": "canonical",
+        "score_series_id": "chemm-bench-acl2026-canonical-score",
+        "evaluation_protocol": "CheMM-Bench Findings ACL 2026 fixed 3,504-case test split, official answer-field extraction, Table 2 Overall ACC. F1, fuzzy matching, and joint answer-plus-SMILES metrics are excluded.",
+        "model_release_date": "2025-02-19",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2025-02-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-02-19",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-586cd26c36d23a1e",
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "score_source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "source": "https://aclanthology.org/2026.findings-acl.1341.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chemm-qwen25-d93d89e9e4a49046"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chemm-qwen25"
+        ]
+      },
+      {
+        "observation_id": "obs-0-0031-be60bd15cab4da7a",
+        "benchmark_id": "chemm-bench-acl2026",
+        "benchmark_version_id": "chemm-bench-acl2026-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.0031,
+        "input_score": 0.0031,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "chemm-bench-acl2026-metric-v1",
+        "protocol_id": "chemm-bench-acl2026-source-export-v1",
+        "task_set_id": "chemm-bench-acl2026-canonical",
+        "metric": "Overall ACC",
+        "score_role": "canonical",
+        "score_series_id": "chemm-bench-acl2026-canonical-score",
+        "evaluation_protocol": "CheMM-Bench Findings ACL 2026 fixed 3,504-case test split, official answer-field extraction, Table 2 Overall ACC. F1, fuzzy matching, and joint answer-plus-SMILES metrics are excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-05-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-586cd26c36d23a1e",
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "score_source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "source": "https://aclanthology.org/2026.findings-acl.1341.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chemm-gpt4o-2b6213c6304f861e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chemm-gpt4o"
+        ]
+      },
+      {
+        "observation_id": "obs-0-0177-234f169601eaf269",
+        "benchmark_id": "chemm-bench-acl2026",
+        "benchmark_version_id": "chemm-bench-acl2026-canonical",
+        "model_id": "model-claude-sonnet-4-2be683d638f8d836",
+        "model_configuration": "Claude-Sonnet-4",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-sonnet-4",
+        "model_family_id": "anthropic-claude-sonnet-4",
+        "model": "Claude-Sonnet-4",
+        "organization": "Anthropic",
+        "score": 0.0177,
+        "input_score": 0.0177,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "chemm-bench-acl2026-metric-v1",
+        "protocol_id": "chemm-bench-acl2026-source-export-v1",
+        "task_set_id": "chemm-bench-acl2026-canonical",
+        "metric": "Overall ACC",
+        "score_role": "canonical",
+        "score_series_id": "chemm-bench-acl2026-canonical-score",
+        "evaluation_protocol": "CheMM-Bench Findings ACL 2026 fixed 3,504-case test split, official answer-field extraction, Table 2 Overall ACC. F1, fuzzy matching, and joint answer-plus-SMILES metrics are excluded.",
+        "model_release_date": "2025-05-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2025-05-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-05-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-05-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-05-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-586cd26c36d23a1e",
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "score_source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "source": "https://aclanthology.org/2026.findings-acl.1341.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chemm-claude4-df75c6b3271a5db9"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chemm-claude4"
+        ]
+      },
+      {
+        "observation_id": "obs-0-0334-a1b6b066754b9f45",
+        "benchmark_id": "chemm-bench-acl2026",
+        "benchmark_version_id": "chemm-bench-acl2026-canonical",
+        "model_id": "model-gpt-o3-27711872e029ffac",
+        "model_configuration": "GPT-o3",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-o3",
+        "model_family_id": "openai-gpt-o3",
+        "model": "GPT-o3",
+        "organization": "OpenAI",
+        "score": 0.0334,
+        "input_score": 0.0334,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "chemm-bench-acl2026-metric-v1",
+        "protocol_id": "chemm-bench-acl2026-source-export-v1",
+        "task_set_id": "chemm-bench-acl2026-canonical",
+        "metric": "Overall ACC",
+        "score_role": "canonical",
+        "score_series_id": "chemm-bench-acl2026-canonical-score",
+        "evaluation_protocol": "CheMM-Bench Findings ACL 2026 fixed 3,504-case test split, official answer-field extraction, Table 2 Overall ACC. F1, fuzzy matching, and joint answer-plus-SMILES metrics are excluded.",
+        "model_release_date": "2025-04-16",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2025-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-04-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-586cd26c36d23a1e",
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "score_source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "source": "https://aclanthology.org/2026.findings-acl.1341.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chemm-o3-9b82185beb70a917"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chemm-o3"
+        ]
+      },
+      {
+        "observation_id": "obs-0-0351-b16b70a9e53a6a3b",
+        "benchmark_id": "chemm-bench-acl2026",
+        "benchmark_version_id": "chemm-bench-acl2026-canonical",
+        "model_id": "model-grok-4-95b29ec1f5237f31",
+        "model_configuration": "Grok-4",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4",
+        "model_family_id": "xai-grok-4",
+        "model": "Grok-4",
+        "organization": "xAI",
+        "score": 0.0351,
+        "input_score": 0.0351,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "chemm-bench-acl2026-metric-v1",
+        "protocol_id": "chemm-bench-acl2026-source-export-v1",
+        "task_set_id": "chemm-bench-acl2026-canonical",
+        "metric": "Overall ACC",
+        "score_role": "canonical",
+        "score_series_id": "chemm-bench-acl2026-canonical-score",
+        "evaluation_protocol": "CheMM-Bench Findings ACL 2026 fixed 3,504-case test split, official answer-field extraction, Table 2 Overall ACC. F1, fuzzy matching, and joint answer-plus-SMILES metrics are excluded.",
+        "model_release_date": "2025-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2025-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-586cd26c36d23a1e",
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "score_source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "source": "https://aclanthology.org/2026.findings-acl.1341.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chemm-grok4-c74ee82574999008"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chemm-grok4"
+        ]
+      },
+      {
+        "observation_id": "obs-0-0431-6651c9b15d355f7e",
+        "benchmark_id": "chemm-bench-acl2026",
+        "benchmark_version_id": "chemm-bench-acl2026-canonical",
+        "model_id": "model-gemini-2-5-flash-b0628e9ec15ee1ca",
+        "model_configuration": "Gemini-2.5-Flash",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-5-flash",
+        "model_family_id": "google-gemini-2-5-flash",
+        "model": "Gemini-2.5-Flash",
+        "organization": "Google",
+        "score": 0.0431,
+        "input_score": 0.0431,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "chemm-bench-acl2026-metric-v1",
+        "protocol_id": "chemm-bench-acl2026-source-export-v1",
+        "task_set_id": "chemm-bench-acl2026-canonical",
+        "metric": "Overall ACC",
+        "score_role": "canonical",
+        "score_series_id": "chemm-bench-acl2026-canonical-score",
+        "evaluation_protocol": "CheMM-Bench Findings ACL 2026 fixed 3,504-case test split, official answer-field extraction, Table 2 Overall ACC. F1, fuzzy matching, and joint answer-plus-SMILES metrics are excluded.",
+        "model_release_date": "2025-04-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2025-04-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-04-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-586cd26c36d23a1e",
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "score_source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "source": "https://aclanthology.org/2026.findings-acl.1341.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chemm-gemini25-flash-8a9870a589cb8ddf"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chemm-gemini25-flash"
+        ]
+      },
+      {
+        "observation_id": "obs-0-0795-b8618a2e2f281228",
+        "benchmark_id": "chemm-bench-acl2026",
+        "benchmark_version_id": "chemm-bench-acl2026-canonical",
+        "model_id": "model-gemini-2-5-pro-53e6252cbff1cfa8",
+        "model_configuration": "Gemini-2.5-Pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-5-pro",
+        "model_family_id": "google-gemini-2-5-pro",
+        "model": "Gemini-2.5-Pro",
+        "organization": "Google",
+        "score": 0.0795,
+        "input_score": 0.0795,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "chemm-bench-acl2026-metric-v1",
+        "protocol_id": "chemm-bench-acl2026-source-export-v1",
+        "task_set_id": "chemm-bench-acl2026-canonical",
+        "metric": "Overall ACC",
+        "score_role": "canonical",
+        "score_series_id": "chemm-bench-acl2026-canonical-score",
+        "evaluation_protocol": "CheMM-Bench Findings ACL 2026 fixed 3,504-case test split, official answer-field extraction, Table 2 Overall ACC. F1, fuzzy matching, and joint answer-plus-SMILES metrics are excluded.",
+        "model_release_date": "2025-06-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2025-06-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-06-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-06-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-06-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-586cd26c36d23a1e",
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "score_source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "source": "https://aclanthology.org/2026.findings-acl.1341.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chemm-gemini25-pro-fe9361f4d8b4fc18"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chemm-gemini25-pro"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-0795-b8618a2e2f281228",
+        "benchmark_id": "chemm-bench-acl2026",
+        "benchmark_version_id": "chemm-bench-acl2026-canonical",
+        "model_id": "model-gemini-2-5-pro-53e6252cbff1cfa8",
+        "model_configuration": "Gemini-2.5-Pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-5-pro",
+        "model_family_id": "google-gemini-2-5-pro",
+        "model": "Gemini-2.5-Pro",
+        "organization": "Google",
+        "score": 0.0795,
+        "input_score": 0.0795,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "chemm-bench-acl2026-metric-v1",
+        "protocol_id": "chemm-bench-acl2026-source-export-v1",
+        "task_set_id": "chemm-bench-acl2026-canonical",
+        "metric": "Overall ACC",
+        "score_role": "canonical",
+        "score_series_id": "chemm-bench-acl2026-canonical-score",
+        "evaluation_protocol": "CheMM-Bench Findings ACL 2026 fixed 3,504-case test split, official answer-field extraction, Table 2 Overall ACC. F1, fuzzy matching, and joint answer-plus-SMILES metrics are excluded.",
+        "model_release_date": "2025-06-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2025-06-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-06-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-06-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-586cd26c36d23a1e",
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "score_source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "source": "https://aclanthology.org/2026.findings-acl.1341.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chemm-gemini25-pro-fe9361f4d8b4fc18"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chemm-gemini25-pro"
+        ],
+        "plot_date": "2026-07-15",
+        "frontier_observation_ids": [
+          "obs-0-6bc8c4890b184d15",
+          "obs-0-0031-be60bd15cab4da7a",
+          "obs-0-0177-234f169601eaf269",
+          "obs-0-0334-a1b6b066754b9f45",
+          "obs-0-0351-b16b70a9e53a6a3b",
+          "obs-0-0431-6651c9b15d355f7e",
+          "obs-0-0795-b8618a2e2f281228"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-0795-b8618a2e2f281228",
+        "benchmark_id": "chemm-bench-acl2026",
+        "benchmark_version_id": "chemm-bench-acl2026-canonical",
+        "model_id": "model-gemini-2-5-pro-53e6252cbff1cfa8",
+        "model_configuration": "Gemini-2.5-Pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-5-pro",
+        "model_family_id": "google-gemini-2-5-pro",
+        "model": "Gemini-2.5-Pro",
+        "organization": "Google",
+        "score": 0.0795,
+        "input_score": 0.0795,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "chemm-bench-acl2026-metric-v1",
+        "protocol_id": "chemm-bench-acl2026-source-export-v1",
+        "task_set_id": "chemm-bench-acl2026-canonical",
+        "metric": "Overall ACC",
+        "score_role": "canonical",
+        "score_series_id": "chemm-bench-acl2026-canonical-score",
+        "evaluation_protocol": "CheMM-Bench Findings ACL 2026 fixed 3,504-case test split, official answer-field extraction, Table 2 Overall ACC. F1, fuzzy matching, and joint answer-plus-SMILES metrics are excluded.",
+        "model_release_date": "2025-06-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2025-06-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-06-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-06-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-586cd26c36d23a1e",
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "score_source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "source": "https://aclanthology.org/2026.findings-acl.1341.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chemm-gemini25-pro-fe9361f4d8b4fc18"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chemm-gemini25-pro"
+        ],
+        "plot_date": "2026-07-15",
+        "frontier_observation_ids": [
+          "obs-0-6bc8c4890b184d15",
+          "obs-0-0031-be60bd15cab4da7a",
+          "obs-0-0177-234f169601eaf269",
+          "obs-0-0334-a1b6b066754b9f45",
+          "obs-0-0351-b16b70a9e53a6a3b",
+          "obs-0-0431-6651c9b15d355f7e",
+          "obs-0-0795-b8618a2e2f281228"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-0795-b8618a2e2f281228",
+        "benchmark_id": "chemm-bench-acl2026",
+        "benchmark_version_id": "chemm-bench-acl2026-canonical",
+        "model_id": "model-gemini-2-5-pro-53e6252cbff1cfa8",
+        "model_configuration": "Gemini-2.5-Pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-5-pro",
+        "model_family_id": "google-gemini-2-5-pro",
+        "model": "Gemini-2.5-Pro",
+        "organization": "Google",
+        "score": 0.0795,
+        "input_score": 0.0795,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "chemm-bench-acl2026-metric-v1",
+        "protocol_id": "chemm-bench-acl2026-source-export-v1",
+        "task_set_id": "chemm-bench-acl2026-canonical",
+        "metric": "Overall ACC",
+        "score_role": "canonical",
+        "score_series_id": "chemm-bench-acl2026-canonical-score",
+        "evaluation_protocol": "CheMM-Bench Findings ACL 2026 fixed 3,504-case test split, official answer-field extraction, Table 2 Overall ACC. F1, fuzzy matching, and joint answer-plus-SMILES metrics are excluded.",
+        "model_release_date": "2025-06-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2025-06-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-06-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-06-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-586cd26c36d23a1e",
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "score_source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "source": "https://aclanthology.org/2026.findings-acl.1341.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chemm-gemini25-pro-fe9361f4d8b4fc18"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chemm-gemini25-pro"
+        ],
+        "plot_date": "2026-07-15",
+        "frontier_observation_ids": [
+          "obs-0-6bc8c4890b184d15",
+          "obs-0-0031-be60bd15cab4da7a",
+          "obs-0-0177-234f169601eaf269",
+          "obs-0-0334-a1b6b066754b9f45",
+          "obs-0-0351-b16b70a9e53a6a3b",
+          "obs-0-0431-6651c9b15d355f7e",
+          "obs-0-0795-b8618a2e2f281228"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-0795-b8618a2e2f281228",
+        "benchmark_id": "chemm-bench-acl2026",
+        "benchmark_version_id": "chemm-bench-acl2026-canonical",
+        "model_id": "model-gemini-2-5-pro-53e6252cbff1cfa8",
+        "model_configuration": "Gemini-2.5-Pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-5-pro",
+        "model_family_id": "google-gemini-2-5-pro",
+        "model": "Gemini-2.5-Pro",
+        "organization": "Google",
+        "score": 0.0795,
+        "input_score": 0.0795,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "chemm-bench-acl2026-metric-v1",
+        "protocol_id": "chemm-bench-acl2026-source-export-v1",
+        "task_set_id": "chemm-bench-acl2026-canonical",
+        "metric": "Overall ACC",
+        "score_role": "canonical",
+        "score_series_id": "chemm-bench-acl2026-canonical-score",
+        "evaluation_protocol": "CheMM-Bench Findings ACL 2026 fixed 3,504-case test split, official answer-field extraction, Table 2 Overall ACC. F1, fuzzy matching, and joint answer-plus-SMILES metrics are excluded.",
+        "model_release_date": "2025-06-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2025-06-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-06-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-15",
+        "date_kind": "result first-public date",
+        "capability_date": "2025-06-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-586cd26c36d23a1e",
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "score_source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "source": "https://aclanthology.org/2026.findings-acl.1341.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chemm-gemini25-pro-fe9361f4d8b4fc18"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chemm-gemini25-pro"
+        ],
+        "plot_date": "2026-07-15",
+        "frontier_observation_ids": [
+          "obs-0-6bc8c4890b184d15",
+          "obs-0-0031-be60bd15cab4da7a",
+          "obs-0-0177-234f169601eaf269",
+          "obs-0-0334-a1b6b066754b9f45",
+          "obs-0-0351-b16b70a9e53a6a3b",
+          "obs-0-0431-6651c9b15d355f7e",
+          "obs-0-0795-b8618a2e2f281228"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-0795-b8618a2e2f281228",
+        "benchmark_id": "chemm-bench-acl2026",
+        "benchmark_version_id": "chemm-bench-acl2026-canonical",
+        "model_id": "model-gemini-2-5-pro-53e6252cbff1cfa8",
+        "model_configuration": "Gemini-2.5-Pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-5-pro",
+        "model_family_id": "google-gemini-2-5-pro",
+        "model": "Gemini-2.5-Pro",
+        "organization": "Google",
+        "score": 0.0795,
+        "input_score": 0.0795,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "chemm-bench-acl2026-metric-v1",
+        "protocol_id": "chemm-bench-acl2026-source-export-v1",
+        "task_set_id": "chemm-bench-acl2026-canonical",
+        "metric": "Overall ACC",
+        "score_role": "canonical",
+        "score_series_id": "chemm-bench-acl2026-canonical-score",
+        "evaluation_protocol": "CheMM-Bench Findings ACL 2026 fixed 3,504-case test split, official answer-field extraction, Table 2 Overall ACC. F1, fuzzy matching, and joint answer-plus-SMILES metrics are excluded.",
+        "model_release_date": "2025-06-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2025-06-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-06-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-15",
+        "date_kind": "result first-public date",
+        "capability_date": "2025-06-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-586cd26c36d23a1e",
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "score_source_ids": [
+          "resource-https-aclanthology-org-2026-findings-acl-1341-pd-f3b5082b47d79ef4"
+        ],
+        "source": "https://aclanthology.org/2026.findings-acl.1341.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chemm-gemini25-pro-fe9361f4d8b4fc18"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chemm-gemini25-pro"
+        ],
+        "plot_date": "2026-07-15",
+        "frontier_observation_ids": [
+          "obs-0-6bc8c4890b184d15",
+          "obs-0-0031-be60bd15cab4da7a",
+          "obs-0-0177-234f169601eaf269",
+          "obs-0-0334-a1b6b066754b9f45",
+          "obs-0-0351-b16b70a9e53a6a3b",
+          "obs-0-0431-6651c9b15d355f7e",
+          "obs-0-0795-b8618a2e2f281228"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.0795,
+    "capability_frontier_value": 0.0795,
+    "reported_frontier_value": 0.0795,
+    "current_frontier": 0.0795,
+    "normalized_progress": 0.0795,
+    "normalized_headroom": 0.9205,
+    "threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 53
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 53
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 53
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 53
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 53
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 53
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 53
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 53
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 53
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.7142857142857143,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "Qwen",
+        "xAI"
+      ],
+      "panel_size": 7,
+      "status": "high"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-aclanthology-org-2026-findings-acl-1341-586cd26c36d23a1e"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": true,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}
