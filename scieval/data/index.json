@@ -3804,8 +3804,8 @@
         }
       ],
       "zh": {
-        "overview": "",
-        "summary": ""
+        "overview": "Model Discovery Agent（MDA）测的不是“拿到一份现成数据以后能不能拟合出一个模型”。Agent 得自己决定下一步做什么实验，用 Bayesian posterior 维护多种 mechanistic model；要是现有候选都解释不了新证据，还得让 LLM 提出新的假设。论文把 held-out prediction error 和 mechanism recovery 画成随实验次数变化的 learning curve，直接看 agent 用多少数据才能把规律摸准。",
+        "summary": "每轮实验里，MDA 用三层 sequential Monte Carlo 更新对模型结构、参数，以及必要时 latent state 的 posterior。Value of Information 负责挑下一次 intervention；posterior predictive check 一旦发现手头的候选模型解释不通，LLM 就补充新的可执行模型结构，再由 Bayesian evidence 淘汰不合适的候选。每做完一次实验，系统都会在 agent 没跑过的 intervention 上重新评分，所以这里真正比较的是“谁更快学明白”，不是给无限数据以后谁最后能做出来。"
       },
       "domains": [
         {
@@ -10491,8 +10491,8 @@
         }
       ],
       "zh": {
-        "overview": "",
-        "summary": ""
+        "overview": "PG-HAP 训练一个轻量 policy，逐步选择 high-level reasoning action，同时让 executor LLM 完全保持冻结。",
+        "summary": "Planner 可选 Analysis、Decomposition、Reasoning、Knowledge Recall、Code Generation/Refinement、Verification 和 Final Answer。Action-dependency mask 阻止无效或重复 transition，action-diversity reward 则防止所有问题坍缩成同一模板。Qwen2.5 executor 保持冻结，因此结果能更干净地反映 high-level policy 的作用。"
       },
       "domains": [],
       "first_appeared_month": "2026-04"
@@ -12351,8 +12351,8 @@
         }
       ],
       "zh": {
-        "overview": "",
-        "summary": ""
+        "overview": "HiPER 把 interactive LLM-agent policy 分成提出 subgoal 的高层 planner 与执行环境 action 的低层 executor，并在两层分别分配 RL credit。",
+        "summary": "Flat agent RL 只有一个时间尺度，要把稀疏 terminal reward 传过很长的 action sequence。HiPER 让高层 policy 先提出 subgoal，再由 executor 用多个环境 action 完成它。Hierarchical Advantage Estimation 在每个 subgoal 内聚合 return，并协调 planner 与 executor 的更新。"
       },
       "domains": [],
       "first_appeared_month": "2026-02"
@@ -13542,8 +13542,8 @@
         }
       ],
       "zh": {
-        "overview": "",
-        "summary": ""
+        "overview": "MetaAct-RL 把语言模型推理写成一串语义 meta-action 的选择与执行，例如 forward reasoning、critique 和 refinement。",
+        "summary": "该方法围绕高层 thinking action 标注并训练 reasoning trace，再用 length reward、regularization 和 key-state restart 做 RL，促使模型使用更多样的 action。六个 benchmark 上，论文报告 Llama-3.2-1B 相对 vanilla RL 平均提高 7.99 分，Llama-3.1-8B 提高 7.17 分；Qwen2.5-1.5B 在 AIME 2024 上提高 7.5 分。"
       },
       "domains": [],
       "first_appeared_month": "2026-01"
@@ -15863,8 +15863,8 @@
         }
       ],
       "zh": {
-        "overview": "",
-        "summary": ""
+        "overview": "PTA-GRPO 从 chain-of-thought trace 中提炼简短 high-level guidance，再用 RL 同时优化 plan quality 与细粒度 reasoning。",
+        "summary": "第一阶段把详细 solution trace 总结成 analytic plan，用 plan–reasoning pair 做 SFT。第二阶段加入 guidance-aware GRPO，同时奖励最终答案与 high-level plan 质量。这里的层级是「先给 plan，再生成 token-level reasoning」，不是两个模块分别在不同环境时间尺度上行动。"
       },
       "domains": [],
       "first_appeared_month": "2025-10"
@@ -19004,7 +19004,20 @@
         }
       ],
       "activities": [],
-      "links": [],
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://openreview.net/forum?id=sHKQbqIXGI"
+        },
+        {
+          "label": "Venue",
+          "url": "https://neurips.cc/virtual/2025/124512"
+        },
+        {
+          "label": "Distribution",
+          "url": "https://pypi.org/project/traxgen/"
+        }
+      ],
       "zh": {
         "overview": "Traxgen 是一个面向 AI-agent 评估的**确定性** ground-truth trajectory 生成工具包。它把结构化的 workflow 规范与用户数据编译成一份有向无环图（DAG），进而生成完整规定的参考 trajectory——把 LLM 从 ground-truth 生成流程中移除。论文同时发布一份含 675 个任务实例的配套 benchmark，用于以 Traxgen 生成的参考对比六个 LLM 的规划能力。",
         "summary": "Traxgen 主张：trajectory 级 agent 评估依赖高质量的参考 trajectory，而基于 LLM 的参考生成慢、噪声大，也不适用于合规敏感领域。它提供一个完全确定性的替代方案：workflow 以 JSON 描述——包含 steps、soft-ordering blocks 与基于用户数据的 conditional 规则；工具包把每对 workflow–user 编译为 DAG，按条件裁剪，并枚举有效 trajectory。论文既贡献了工具包（MIT 许可），也贡献了一份配套 benchmark，用来在其确定性参考之上比较六个 LLM。"
@@ -19114,8 +19127,8 @@
         }
       ],
       "zh": {
-        "overview": "",
-        "summary": ""
+        "overview": "Beyond 'Aha!' 先把 deduction、induction 和 abduction 显式训练成可复用 meta-ability，再做领域 RL，不再依赖 outcome RL 偶然产生这些行为。",
+        "summary": "论文分别为 deduction、induction 和 abduction 构造 self-verifiable synthetic task，单独 align 三种能力，合并 parameter state，最后再做 domain-specific RL。数学、coding 和 science evaluation 用来检验：显式训练 reasoning primitive，是否比等待 self-correction、backtracking 或 verification 从 outcome reward 中随机出现更稳定。"
       },
       "domains": [],
       "first_appeared_month": "2025-05"
@@ -20036,8 +20049,8 @@
         }
       ],
       "zh": {
-        "overview": "",
-        "summary": ""
+        "overview": "CoLA 为 LLM 学出一个紧凑 latent action space，使 policy 的 decision representation 不再由 token vocabulary 直接决定。",
+        "summary": "CoLA 用面向 future token 的 inverse-dynamics model 提取 latent action，把 LLM 调成由 action 控制的 language world model，再通过 behavior cloning 或 RL 训练 action policy。实验覆盖数学、preference control、ALFWorld 和 ScienceWorld，并区分 seen 与 unseen agent task。"
       },
       "domains": [],
       "first_appeared_month": "2025-03"
@@ -22784,8 +22797,8 @@
         }
       ],
       "zh": {
-        "overview": "",
-        "summary": ""
+        "overview": "MA-RLHF 不再逐 token 更新 policy，而是把一段 token 或更高层语言结构当作 macro-action，用实验检验更粗的时间粒度能否改善 RLHF 的 credit assignment 与学习效率。",
+        "summary": "普通 RLHF 把每个 subword token 当成一个 action，sequence reward 与要负责的 decision 相距很远。MA-RLHF 在 semi-Markov formulation 下把相邻 token 合成 macro-action。论文覆盖 summarization、dialogue、question answering 和 program synthesis，并报告达到 vanilla RLHF 同等表现所需训练时间约少 1.7–2 倍。"
       },
       "domains": [],
       "first_appeared_month": "2024-10"
