@@ -1,0 +1,927 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "msqa",
+    "name": "MSQA",
+    "domain": "Materials Science",
+    "release": "2025-05-29",
+    "source": "https://arxiv.org/abs/2505.23982",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Model",
+    "tags": [
+      "materials",
+      "graduate-level",
+      "reasoning"
+    ],
+    "metric": "Overall accuracy",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "msqa-metric-v1",
+    "protocol_id": "msqa-source-export-v1",
+    "canonical_score": {
+      "series_id": "msqa-canonical-score",
+      "role": "canonical",
+      "metric_id": "msqa-metric-v1",
+      "metric_name": "Overall accuracy",
+      "protocol_id": "msqa-source-export-v1",
+      "task_set_id": "msqa-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "msqa-canonical",
+    "summary": {
+      "en": "MSQA evaluates graduate-level materials-science knowledge and multi-step reasoning across seven materials subfields.",
+      "zh": "MSQA \u8bc4\u4f30\u6a21\u578b\u5728\u4e03\u4e2a\u6750\u6599\u79d1\u5b66\u5b50\u9886\u57df\u4e2d\u7684\u7814\u7a76\u751f\u7ea7\u77e5\u8bc6\u548c\u591a\u6b65\u63a8\u7406\u80fd\u529b\u3002"
+    },
+    "task_format": {
+      "en": "The benchmark contains graduate-level materials questions in long-answer and binary-answer formats; this card uses the fixed overall accuracy series reported by the unified ScienceEval panel.",
+      "zh": "benchmark \u5305\u542b graduate-level materials question\uff0c\u5206\u4e3a long-answer \u548c binary-answer format\uff1b\u672c\u5361\u4f7f\u7528\u7edf\u4e00 ScienceEval panel \u62a5\u544a\u7684 fixed overall accuracy series\u3002"
+    },
+    "scoring": {
+      "metric_name": "Overall accuracy",
+      "explanation": {
+        "en": "The score is the fraction of MSQA questions answered correctly under the selected fixed evaluation format. Long-answer, binary-answer, retrieval-augmented, and domain-specific variants are not silently merged.",
+        "zh": "\u5206\u6570\u662f\u5728\u9009\u5b9a fixed evaluation format \u4e0b\u7b54\u5bf9 MSQA question \u7684\u6bd4\u4f8b\u3002long-answer\u3001binary-answer\u3001retrieval-augmented \u548c domain-specific variant \u4e0d\u4f1a\u88ab\u9759\u9ed8\u5408\u5e76\u3002"
+      }
+    },
+    "evaluation_target": "final_output",
+    "observation_count": 6,
+    "evidence_record_count": 6,
+    "observations": [
+      {
+        "observation_id": "obs-0-7123-e394ebc02767d08e",
+        "benchmark_id": "msqa",
+        "benchmark_version_id": "msqa-canonical",
+        "model_id": "model-gemini-2-5-pro-20250617-42a97b2c06b66276",
+        "model_configuration": "gemini-2-5-pro-20250617",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-5-pro",
+        "model_family_id": "google-deepmind-gemini-2-5-pro",
+        "model": "Gemini 2.5 Pro",
+        "organization": "Google DeepMind",
+        "score": 0.7123,
+        "input_score": 0.7123,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "msqa-metric-v1",
+        "protocol_id": "msqa-source-export-v1",
+        "task_set_id": "msqa-canonical",
+        "metric": "Overall accuracy",
+        "score_role": "canonical",
+        "score_series_id": "msqa-canonical-score",
+        "evaluation_protocol": "MSQA fixed benchmark scored through the public ScienceEval overall panel; scores are normalized from percentage values. The paper's long-answer and binary-answer modes remain a documented protocol caveat.",
+        "model_release_date": "2025-06-17",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-06-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-06-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-06-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-06-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-23982-2f68ce32c8d16438",
+          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+        ],
+        "source": "https://github.com/ScienceOne-AI/ScienceEval",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-msqa-gemini-2-5-pro-e257b85a7ef16d58"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "msqa-gemini-2-5-pro"
+        ]
+      },
+      {
+        "observation_id": "obs-0-7018-2748b05b2208613b",
+        "benchmark_id": "msqa",
+        "benchmark_version_id": "msqa-canonical",
+        "model_id": "model-claude-sonnet-4-20250522-bd236032a6d4b861",
+        "model_configuration": "claude-sonnet-4-20250522",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-sonnet-4",
+        "model_family_id": "anthropic-claude-sonnet-4",
+        "model": "Claude Sonnet 4",
+        "organization": "Anthropic",
+        "score": 0.7018,
+        "input_score": 0.7018,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "msqa-metric-v1",
+        "protocol_id": "msqa-source-export-v1",
+        "task_set_id": "msqa-canonical",
+        "metric": "Overall accuracy",
+        "score_role": "canonical",
+        "score_series_id": "msqa-canonical-score",
+        "evaluation_protocol": "MSQA fixed benchmark scored through the public ScienceEval overall panel; scores are normalized from percentage values. The paper's long-answer and binary-answer modes remain a documented protocol caveat.",
+        "model_release_date": "2025-05-22",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-05-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-05-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-05-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-05-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-23982-2f68ce32c8d16438",
+          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+        ],
+        "source": "https://github.com/ScienceOne-AI/ScienceEval",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-msqa-claude-sonnet-4-b5b409a2c32f4ee8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "msqa-claude-sonnet-4"
+        ]
+      },
+      {
+        "observation_id": "obs-0-825-fb05e7aecc81a82d",
+        "benchmark_id": "msqa",
+        "benchmark_version_id": "msqa-canonical",
+        "model_id": "model-o3-high-2025-04-16-0aa6839a37041892",
+        "model_configuration": "o3-high-2025-04-16",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-high",
+        "model_family_id": "openai-o3",
+        "model": "o3 (high)",
+        "organization": "OpenAI",
+        "score": 0.825,
+        "input_score": 0.825,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "msqa-metric-v1",
+        "protocol_id": "msqa-source-export-v1",
+        "task_set_id": "msqa-canonical",
+        "metric": "Overall accuracy",
+        "score_role": "canonical",
+        "score_series_id": "msqa-canonical-score",
+        "evaluation_protocol": "MSQA fixed benchmark scored through the public ScienceEval overall panel; scores are normalized from percentage values. The paper's long-answer and binary-answer modes remain a documented protocol caveat.",
+        "model_release_date": "2025-04-16",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-04-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-23982-2f68ce32c8d16438",
+          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+        ],
+        "source": "https://github.com/ScienceOne-AI/ScienceEval",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-msqa-o3-high-c2b5080bd73dc4d1"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "msqa-o3-high"
+        ]
+      },
+      {
+        "observation_id": "obs-0-7764-377adf94555f0f27",
+        "benchmark_id": "msqa",
+        "benchmark_version_id": "msqa-canonical",
+        "model_id": "model-deepseek-r1-0528-8286c72fa3c74a07",
+        "model_configuration": "deepseek-r1-0528",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-r1-0528",
+        "model_family_id": "deepseek-deepseek-r1-0528",
+        "model": "DeepSeek R1 0528",
+        "organization": "DeepSeek",
+        "score": 0.7764,
+        "input_score": 0.7764,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "msqa-metric-v1",
+        "protocol_id": "msqa-source-export-v1",
+        "task_set_id": "msqa-canonical",
+        "metric": "Overall accuracy",
+        "score_role": "canonical",
+        "score_series_id": "msqa-canonical-score",
+        "evaluation_protocol": "MSQA fixed benchmark scored through the public ScienceEval overall panel; scores are normalized from percentage values. The paper's long-answer and binary-answer modes remain a documented protocol caveat.",
+        "model_release_date": "2025-05-28",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-05-28",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-05-28",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-05-28",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-05-28",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-23982-2f68ce32c8d16438",
+          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+        ],
+        "source": "https://github.com/ScienceOne-AI/ScienceEval",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-msqa-deepseek-r1-0528-0c5a47f69387b855"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "msqa-deepseek-r1-0528"
+        ]
+      },
+      {
+        "observation_id": "obs-0-7525-da71c573f8dff01e",
+        "benchmark_id": "msqa",
+        "benchmark_version_id": "msqa-canonical",
+        "model_id": "model-qwen3-235b-20250428-e8d3d69e1d36adad",
+        "model_configuration": "qwen3-235b-20250428",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen3-235b",
+        "model_family_id": "alibaba-qwen-qwen3-235b",
+        "model": "Qwen3 235B",
+        "organization": "Alibaba/Qwen",
+        "score": 0.7525,
+        "input_score": 0.7525,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "msqa-metric-v1",
+        "protocol_id": "msqa-source-export-v1",
+        "task_set_id": "msqa-canonical",
+        "metric": "Overall accuracy",
+        "score_role": "canonical",
+        "score_series_id": "msqa-canonical-score",
+        "evaluation_protocol": "MSQA fixed benchmark scored through the public ScienceEval overall panel; scores are normalized from percentage values. The paper's long-answer and binary-answer modes remain a documented protocol caveat.",
+        "model_release_date": "2025-04-28",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-04-28",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-28",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-04-28",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-28",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-23982-2f68ce32c8d16438",
+          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+        ],
+        "source": "https://github.com/ScienceOne-AI/ScienceEval",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-msqa-qwen3-235b-88c0ce46db7384ae"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "msqa-qwen3-235b"
+        ]
+      },
+      {
+        "observation_id": "obs-0-7923-daa19e290a597a39",
+        "benchmark_id": "msqa",
+        "benchmark_version_id": "msqa-canonical",
+        "model_id": "model-doubao-1-6-thinking-7ab0a76c29d3d99c",
+        "model_configuration": "doubao-1-6-thinking",
+        "model_identity_organization": "bytedance",
+        "model_label_id": "doubao-1-6-thinking",
+        "model_family_id": "bytedance-doubao-1-6-thinking",
+        "model": "Doubao 1.6 Thinking",
+        "organization": "ByteDance",
+        "score": 0.7923,
+        "input_score": 0.7923,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "msqa-metric-v1",
+        "protocol_id": "msqa-source-export-v1",
+        "task_set_id": "msqa-canonical",
+        "metric": "Overall accuracy",
+        "score_role": "canonical",
+        "score_series_id": "msqa-canonical-score",
+        "evaluation_protocol": "MSQA fixed benchmark scored through the public ScienceEval overall panel; scores are normalized from percentage values. The paper's long-answer and binary-answer modes remain a documented protocol caveat.",
+        "model_release_date": "2025-05-20",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-05-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-05-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-05-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-05-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-23982-2f68ce32c8d16438",
+          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+        ],
+        "source": "https://github.com/ScienceOne-AI/ScienceEval",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-msqa-doubao-1-6-thinking-3a6aeeb42b820e3f"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "msqa-doubao-1-6-thinking"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-825-fb05e7aecc81a82d",
+        "benchmark_id": "msqa",
+        "benchmark_version_id": "msqa-canonical",
+        "model_id": "model-o3-high-2025-04-16-0aa6839a37041892",
+        "model_configuration": "o3-high-2025-04-16",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-high",
+        "model_family_id": "openai-o3",
+        "model": "o3 (high)",
+        "organization": "OpenAI",
+        "score": 0.825,
+        "input_score": 0.825,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "msqa-metric-v1",
+        "protocol_id": "msqa-source-export-v1",
+        "task_set_id": "msqa-canonical",
+        "metric": "Overall accuracy",
+        "score_role": "canonical",
+        "score_series_id": "msqa-canonical-score",
+        "evaluation_protocol": "MSQA fixed benchmark scored through the public ScienceEval overall panel; scores are normalized from percentage values. The paper's long-answer and binary-answer modes remain a documented protocol caveat.",
+        "model_release_date": "2025-04-16",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-05-29",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-23982-2f68ce32c8d16438",
+          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+        ],
+        "source": "https://github.com/ScienceOne-AI/ScienceEval",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-msqa-o3-high-c2b5080bd73dc4d1"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "msqa-o3-high"
+        ],
+        "plot_date": "2025-05-29",
+        "frontier_observation_ids": [
+          "obs-0-7018-2748b05b2208613b",
+          "obs-0-7525-da71c573f8dff01e",
+          "obs-0-7764-377adf94555f0f27",
+          "obs-0-7923-daa19e290a597a39",
+          "obs-0-825-fb05e7aecc81a82d"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-825-fb05e7aecc81a82d",
+        "benchmark_id": "msqa",
+        "benchmark_version_id": "msqa-canonical",
+        "model_id": "model-o3-high-2025-04-16-0aa6839a37041892",
+        "model_configuration": "o3-high-2025-04-16",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-high",
+        "model_family_id": "openai-o3",
+        "model": "o3 (high)",
+        "organization": "OpenAI",
+        "score": 0.825,
+        "input_score": 0.825,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "msqa-metric-v1",
+        "protocol_id": "msqa-source-export-v1",
+        "task_set_id": "msqa-canonical",
+        "metric": "Overall accuracy",
+        "score_role": "canonical",
+        "score_series_id": "msqa-canonical-score",
+        "evaluation_protocol": "MSQA fixed benchmark scored through the public ScienceEval overall panel; scores are normalized from percentage values. The paper's long-answer and binary-answer modes remain a documented protocol caveat.",
+        "model_release_date": "2025-04-16",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-05-29",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-23982-2f68ce32c8d16438",
+          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+        ],
+        "source": "https://github.com/ScienceOne-AI/ScienceEval",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-msqa-o3-high-c2b5080bd73dc4d1"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "msqa-o3-high"
+        ],
+        "plot_date": "2025-05-29",
+        "frontier_observation_ids": [
+          "obs-0-7018-2748b05b2208613b",
+          "obs-0-7525-da71c573f8dff01e",
+          "obs-0-7764-377adf94555f0f27",
+          "obs-0-7923-daa19e290a597a39",
+          "obs-0-825-fb05e7aecc81a82d"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-825-fb05e7aecc81a82d",
+        "benchmark_id": "msqa",
+        "benchmark_version_id": "msqa-canonical",
+        "model_id": "model-o3-high-2025-04-16-0aa6839a37041892",
+        "model_configuration": "o3-high-2025-04-16",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-high",
+        "model_family_id": "openai-o3",
+        "model": "o3 (high)",
+        "organization": "OpenAI",
+        "score": 0.825,
+        "input_score": 0.825,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "msqa-metric-v1",
+        "protocol_id": "msqa-source-export-v1",
+        "task_set_id": "msqa-canonical",
+        "metric": "Overall accuracy",
+        "score_role": "canonical",
+        "score_series_id": "msqa-canonical-score",
+        "evaluation_protocol": "MSQA fixed benchmark scored through the public ScienceEval overall panel; scores are normalized from percentage values. The paper's long-answer and binary-answer modes remain a documented protocol caveat.",
+        "model_release_date": "2025-04-16",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-05-29",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-23982-2f68ce32c8d16438",
+          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
+        ],
+        "source": "https://github.com/ScienceOne-AI/ScienceEval",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-msqa-o3-high-c2b5080bd73dc4d1"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "msqa-o3-high"
+        ],
+        "plot_date": "2025-05-29",
+        "frontier_observation_ids": [
+          "obs-0-7018-2748b05b2208613b",
+          "obs-0-7525-da71c573f8dff01e",
+          "obs-0-7764-377adf94555f0f27",
+          "obs-0-7923-daa19e290a597a39",
+          "obs-0-825-fb05e7aecc81a82d"
+        ]
+      }
+    ],
+    "reported_frontier": [],
+    "historical_frontier": [],
+    "retrospective_observations": [],
+    "observed_frontier": 0.825,
+    "capability_frontier_value": 0.825,
+    "reported_frontier_value": null,
+    "current_frontier": 0.825,
+    "normalized_progress": 0.825,
+    "normalized_headroom": 0.17500000000000004,
+    "threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2025-05-29"
+      },
+      "T80": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2025-05-29"
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 465
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2025-05-29"
+      },
+      "T80": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2025-05-29"
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 465
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T80": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T90": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.7142857142857143,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "DeepSeek",
+        "Qwen"
+      ],
+      "panel_size": 7,
+      "status": "high"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-arxiv-org-abs-2505-23982-2f68ce32c8d16438"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "unknown_public_dates",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

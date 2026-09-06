@@ -1,0 +1,4435 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "video-mme",
+    "name": "Video-MME",
+    "domain": "Multimodal",
+    "release": "2024-06-03",
+    "source": "https://video-mme.github.io/home_page.html",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Model",
+    "tags": [
+      "video",
+      "temporal reasoning",
+      "no subtitles"
+    ],
+    "metric": "Overall (no subtitles)",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "video-mme-metric-v1",
+    "protocol_id": "video-mme-source-export-v1",
+    "canonical_score": {
+      "series_id": "video-mme-canonical-score",
+      "role": "canonical",
+      "metric_id": "video-mme-metric-v1",
+      "metric_name": "Overall (no subtitles)",
+      "protocol_id": "video-mme-source-export-v1",
+      "task_set_id": "video-mme-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "video-mme-canonical",
+    "summary": {
+      "en": "Video-MME tests multimodal models on questions about short, medium, and long videos across diverse visual domains.",
+      "zh": "Video-MME \u6d4b\u8bd5 multimodal model \u7406\u89e3\u77ed\u3001\u4e2d\u3001\u957f\u89c6\u9891\u7684\u80fd\u529b\uff0c\u8986\u76d6\u591a\u4e2a\u89c6\u89c9\u9886\u57df\u3002"
+    },
+    "task_format": {
+      "en": "Each item provides a video and a multiple-choice question. The model answers questions that may require visual, audio, subtitle, and temporal understanding; this card uses the no-subtitles overall score.",
+      "zh": "\u6bcf\u4e2a task \u4f1a\u63d0\u4f9b\u4e00\u6bb5\u89c6\u9891\u548c\u4e00\u9053\u9009\u62e9\u9898\u3002\u6a21\u578b\u9700\u8981\u7ed3\u5408\u89c6\u89c9\u3001\u97f3\u9891\u3001\u5b57\u5e55\u548c\u65f6\u95f4\u4fe1\u606f\u56de\u7b54\u95ee\u9898\uff1b\u672c\u5361\u4f7f\u7528 no-subtitles overall score\u3002"
+    },
+    "scoring": {
+      "metric_name": "Overall accuracy without subtitles",
+      "explanation": {
+        "en": "The score is the fraction of video questions answered correctly under the official no-subtitles setting. Subtitle and duration-specific scores are separate metrics.",
+        "zh": "\u5206\u6570\u662f\u5728\u5b98\u65b9 no-subtitles \u8bbe\u7f6e\u4e0b\u7b54\u5bf9\u89c6\u9891\u95ee\u9898\u7684\u6bd4\u4f8b\u3002\u5e26\u5b57\u5e55\u548c\u4e0d\u540c\u89c6\u9891\u65f6\u957f\u7684\u5206\u6570\u5c5e\u4e8e\u5176\u4ed6\u72ec\u7acb metric\u3002"
+      }
+    },
+    "evaluation_target": "final_output",
+    "observation_count": 50,
+    "evidence_record_count": 50,
+    "observations": [
+      {
+        "observation_id": "obs-0-797-e7161bf308ae2b21",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-video-salmonn-2plus-ea6efff62b2db53b",
+        "model_configuration": "video-SALMONN-2plus",
+        "model_identity_organization": "bytedance",
+        "model_label_id": "video-salmonn-2",
+        "model_family_id": "bytedance-video-salmonn-2",
+        "model": "video-SALMONN 2+",
+        "organization": "ByteDance",
+        "score": 0.797,
+        "input_score": 0.797,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2025-06-18",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-06-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-06-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-06-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-06-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recmr6dqjqaa5csl1-e88cc96412f8a3d3"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recMr6dqjQaA5cSL1"
+        ]
+      },
+      {
+        "observation_id": "obs-0-75-5ec99e43f41f3ca0",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-gemini-1-5-pro-001-feb24-cac715b4a07e87ad",
+        "model_configuration": "gemini-1.5-pro-001-feb24",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-1-5-pro",
+        "model_family_id": "google-deepmind-gemini-1-5-pro",
+        "model": "Gemini 1.5 Pro",
+        "organization": "Google DeepMind",
+        "score": 0.75,
+        "input_score": 0.75,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-02-15",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-02-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-02-15",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-02-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-02-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-rec5bpmcd8lfz4vl5-773ee9c945efb874"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "rec5BPMcD8LfZ4vl5"
+        ]
+      },
+      {
+        "observation_id": "obs-0-75-e764368bba95bdd6",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-gemini-1-5-pro-001-cf2516cce1080105",
+        "model_configuration": "gemini-1.5-pro-001",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-1-5-pro",
+        "model_family_id": "google-deepmind-gemini-1-5-pro",
+        "model": "Gemini 1.5 Pro",
+        "organization": "Google DeepMind",
+        "score": 0.75,
+        "input_score": 0.75,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-05-14",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-05-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-05-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-reck8bdyl7vsievif-0db43c9b23361b13"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "reck8Bdyl7VsIEVIf"
+        ]
+      },
+      {
+        "observation_id": "obs-0-735-daf3dc239ab2a4e6",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-qwen2-5-vl-72b-instruct-88135914578e187e",
+        "model_configuration": "Qwen2.5-VL-72B-Instruct",
+        "model_identity_organization": "qwen",
+        "model_label_id": "adaretake",
+        "model_family_id": "alibaba-adaretake",
+        "model": "AdaReTaKe",
+        "organization": "Alibaba",
+        "score": 0.735,
+        "input_score": 0.735,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-09-19",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-09-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-09-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-09-19",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-09-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recyqau4pcagm8idv-4a9272ab9be93c41"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recyqau4pcAgM8IdV"
+        ]
+      },
+      {
+        "observation_id": "obs-0-721-eb76d8a3852a0b6e",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-internvl2-5-78b-1c0f9d48003ba892",
+        "model_configuration": "InternVL2_5-78B",
+        "model_identity_organization": "shanghai-ai-lab-sensetime-tsinghua-university-nanjing-university-fudan-university-chinese-university-of-hong-kong-cuhk-shanghai-jiao-tong-university",
+        "model_label_id": "internvl2-5",
+        "model_family_id": "shanghai-ai-lab-sensetime-tsinghua-university-nanjing-university-fudan-university-chinese-university-of-hong-kong-cuhk-shanghai-jiao-tong-university-internvl2-5",
+        "model": "InternVL2.5",
+        "organization": "Shanghai AI Lab,SenseTime,Tsinghua University,Nanjing University,Fudan University,Chinese University of Hong Kong (CUHK),Shanghai Jiao Tong University",
+        "score": 0.721,
+        "input_score": 0.721,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-12-06",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-12-06",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-06",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-12-06",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-06",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recttivwzcyya09a1-b0ea30306a6eef5b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recttiVwZcyyA09a1"
+        ]
+      },
+      {
+        "observation_id": "obs-0-719-b2a4b990c28605ca",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-gpt-4o-2024-11-20-a2c62b9cadad1de5",
+        "model_configuration": "gpt-4o-2024-11-20",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.7190000000000001,
+        "input_score": 0.7190000000000001,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-11-20",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-11-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-11-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-11-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-11-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recod4uad0cyeyws2-b1411b98c7f287da"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recOD4UAd0CyEyws2"
+        ]
+      },
+      {
+        "observation_id": "obs-0-719-edd2917a1749452e",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-gpt-4o-2024-08-06-1dd50f58d8c57cf8",
+        "model_configuration": "gpt-4o-2024-08-06",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.719,
+        "input_score": 0.719,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-08-06",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-08-06",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-08-06",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-08-06",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-08-06",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-reciiwrdoigvihqq5-d8545cf1e688b845"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "reciIWRDoigviHQq5"
+        ]
+      },
+      {
+        "observation_id": "obs-0-712-2d2f19ce3e1c287c",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-qwen2-vl-72b-instruct-e37bf080578fce0b",
+        "model_configuration": "Qwen2-VL-72B-Instruct",
+        "model_identity_organization": "unknown",
+        "model_label_id": "qwen2-vl",
+        "model_family_id": "unknown-qwen2-vl",
+        "model": "Qwen2-VL",
+        "organization": "Unknown",
+        "score": 0.712,
+        "input_score": 0.712,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-08-29",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-08-29",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-08-29",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-08-29",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-08-29",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recntv6tukbzxupmj-dbaa56c5a23bbcf9"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recNTV6TuKBZxUPMJ"
+        ]
+      },
+      {
+        "observation_id": "obs-0-706-f48ead7581e245be",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-llava-video-72b-qwen2-22258210188bc460",
+        "model_configuration": "LLaVA-Video-72B-Qwen2",
+        "model_identity_organization": "unknown",
+        "model_label_id": "llava-video",
+        "model_family_id": "unknown-llava-video",
+        "model": "LLaVA-Video",
+        "organization": "Unknown",
+        "score": 0.706,
+        "input_score": 0.706,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-09-02",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-09-02",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-09-02",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-09-02",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-09-02",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-rec33j119rjerottd-a8ab00dfc8fb12f0"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "rec33J119RJErottD"
+        ]
+      },
+      {
+        "observation_id": "obs-0-703-7a06abe0d04dd2cc",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-linvt-a195cfcd55e76135",
+        "model_configuration": "LinVT",
+        "model_identity_organization": "unknown",
+        "model_label_id": "linvt",
+        "model_family_id": "unknown-linvt",
+        "model": "LinVT",
+        "organization": "Unknown",
+        "score": 0.703,
+        "input_score": 0.703,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-12-06",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-12-06",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-06",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-12-06",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-06",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recn2bfy04euyvh4s-bcd9b86c9ad00f6a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recN2BfY04EUYvH4S"
+        ]
+      },
+      {
+        "observation_id": "obs-0-703-9201f9d49eede95b",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-gemini-1-5-flash-001-1ba31d6560a12e7d",
+        "model_configuration": "gemini-1.5-flash-001",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-1-5-flash",
+        "model_family_id": "google-deepmind-gemini-1-5-flash",
+        "model": "Gemini 1.5 Flash",
+        "organization": "Google DeepMind",
+        "score": 0.703,
+        "input_score": 0.703,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-05-23",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-05-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-05-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-receult4wllzwvco3-ce57747f06bca6ba"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "receUlT4WLLzwVco3"
+        ]
+      },
+      {
+        "observation_id": "obs-0-676-93b49827b515e2f7",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-aria-ef2d6d96ff26b34b",
+        "model_configuration": "Aria",
+        "model_identity_organization": "unknown",
+        "model_label_id": "aria",
+        "model_family_id": "unknown-aria",
+        "model": "Aria",
+        "organization": "Unknown",
+        "score": 0.676,
+        "input_score": 0.676,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-09-30",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-09-30",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-09-30",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-09-30",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-09-30",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-rec2dra44hjkagmos-5bf32c23eeafc025"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "rec2drA44hjKaGmOS"
+        ]
+      },
+      {
+        "observation_id": "obs-0-675-8296865706a54870",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-vilamp-llava-qwen-fa75b36e594ca44b",
+        "model_configuration": "ViLAMP-llava-qwen",
+        "model_identity_organization": "unknown",
+        "model_label_id": "vilamp",
+        "model_family_id": "unknown-vilamp",
+        "model": "ViLAMP",
+        "organization": "Unknown",
+        "score": 0.675,
+        "input_score": 0.675,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2025-05-01",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-05-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-05-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-05-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-05-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recljfsysntta3eto-5ff0fbd6b12da373"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recLjfSysntta3ETO"
+        ]
+      },
+      {
+        "observation_id": "obs-0-673-9a0e001fa8abdfe6",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-oryx-1-5-32b-1569190fad8633e6",
+        "model_configuration": "Oryx-1.5-32B",
+        "model_identity_organization": "unknown",
+        "model_label_id": "oryx-1-5",
+        "model_family_id": "unknown-oryx-1-5",
+        "model": "Oryx-1.5",
+        "organization": "Unknown",
+        "score": 0.673,
+        "input_score": 0.673,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-10-22",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-10-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-10-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-10-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-10-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-rectt20objadt0ubt-62834bda856bf9cd"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recTT20ObJAdT0UBT"
+        ]
+      },
+      {
+        "observation_id": "obs-0-663-6fdc507ee1196344",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-llava-onevision-72b-0bf9ba6af2103a84",
+        "model_configuration": "LLaVA-OneVision 72B",
+        "model_identity_organization": "unknown",
+        "model_label_id": "llava-onevision",
+        "model_family_id": "unknown-llava-onevision",
+        "model": "LLaVA-OneVision",
+        "organization": "Unknown",
+        "score": 0.663,
+        "input_score": 0.663,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-08-06",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-08-06",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-08-06",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-08-06",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-08-06",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recuquasbzz7qk9od-5bae26c71d2ad592"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recuqUAsbZZ7qK9OD"
+        ]
+      },
+      {
+        "observation_id": "obs-0-662-f18af5772783456c",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-videollama3-7b-825ccbd486794e19",
+        "model_configuration": "VideoLLAMA3-7B",
+        "model_identity_organization": "unknown",
+        "model_label_id": "videollama-3",
+        "model_family_id": "unknown-videollama-3",
+        "model": "VideoLLaMA 3",
+        "organization": "Unknown",
+        "score": 0.662,
+        "input_score": 0.662,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-01-22",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-01-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-01-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-01-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-01-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recp8umu5rkuzgrrn-7c3708c8fa36b94a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recp8umU5rkUZgRrN"
+        ]
+      },
+      {
+        "observation_id": "obs-0-659-d3b260add4d5b6e9",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-llava-video-7b-qwen2-9ba25b3fbebb58dd",
+        "model_configuration": "LLaVA-Video-7B-Qwen2",
+        "model_identity_organization": "unknown",
+        "model_label_id": "quota",
+        "model_family_id": "unknown-quota",
+        "model": "QuoTA",
+        "organization": "Unknown",
+        "score": 0.659,
+        "input_score": 0.659,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-09-02",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-09-02",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-09-02",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-09-02",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-09-02",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recqh96esjbt6a8oi-6796813c652acf63"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recqH96EsjBT6A8oI"
+        ]
+      },
+      {
+        "observation_id": "obs-0-656-abb9e5a9b35e0dda",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-llava-video-7b-qwen2-tpo-a010c6e28b40c93b",
+        "model_configuration": "LLaVA-Video-7B-Qwen2-TPO",
+        "model_identity_organization": "unknown",
+        "model_label_id": "tpo",
+        "model_family_id": "unknown-tpo",
+        "model": "TPO",
+        "organization": "Unknown",
+        "score": 0.656,
+        "input_score": 0.656,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2025-01-19",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-01-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-01-19",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recvtrkdvgoac2rw0-d91a94a27be4d732"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recvTrkDVgOaC2rW0"
+        ]
+      },
+      {
+        "observation_id": "obs-0-653-28fec4dfebabdf71",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-videochat-flash-qwen2-7b-res448-1a096627500e469a",
+        "model_configuration": "VideoChat-Flash-Qwen2-7B_res448",
+        "model_identity_organization": "unknown",
+        "model_label_id": "videochat-flash",
+        "model_family_id": "unknown-videochat-flash",
+        "model": "VideoChat-Flash",
+        "organization": "Unknown",
+        "score": 0.653,
+        "input_score": 0.653,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2025-01-11",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-01-11",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-11",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-01-11",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-11",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-rec1d4opdkm5e2gva-d618612628fb9695"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "rec1d4OPDkM5E2gva"
+        ]
+      },
+      {
+        "observation_id": "obs-0-648-eea0617ffffa2b15",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-gpt-4o-mini-2024-07-18-708e3b7a7cc85780",
+        "model_configuration": "gpt-4o-mini-2024-07-18",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o-mini",
+        "model_family_id": "openai-gpt-4o-mini",
+        "model": "GPT-4o mini",
+        "organization": "OpenAI",
+        "score": 0.648,
+        "input_score": 0.648,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-07-18",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-07-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-07-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-07-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-07-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recxpv4vq3bapmf47-58ef8f3f8870c763"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recXpV4vq3BApmF47"
+        ]
+      },
+      {
+        "observation_id": "obs-0-646-d619b7f7c0555b9c",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-bytevideollm-14b-7653982f34fdc9c9",
+        "model_configuration": "ByteVideoLLM-14B",
+        "model_identity_organization": "unknown",
+        "model_label_id": "bytevideollm",
+        "model_family_id": "unknown-bytevideollm",
+        "model": "ByteVideoLLM",
+        "organization": "Unknown",
+        "score": 0.646,
+        "input_score": 0.646,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-10-13",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-10-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-10-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-10-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-10-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recmpyoexatyatbmf-d4d238cc14e4b459"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recMPYOeXatYatbmF"
+        ]
+      },
+      {
+        "observation_id": "obs-0-642-4b7e8dcc57aa0b6a",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-nvila-8b-991c0a08e8ad2151",
+        "model_configuration": "NVILA-8B",
+        "model_identity_organization": "nvidia-massachusetts-institute-of-technology-mit-university-of-california-uc-berkeley-university-of-california-san-diego-university-of-washington-tsinghua-university",
+        "model_label_id": "nvila",
+        "model_family_id": "nvidia-massachusetts-institute-of-technology-mit-university-of-california-uc-berkeley-university-of-california-san-diego-university-of-washington-tsinghua-university-nvila",
+        "model": "NVILA",
+        "organization": "NVIDIA,Massachusetts Institute of Technology (MIT),University of California (UC) Berkeley,University of California San Diego,University of Washington,Tsinghua University",
+        "score": 0.642,
+        "input_score": 0.642,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-12-10",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-12-10",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-10",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-12-10",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-10",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recvdeyzzdklyzjyx-b31d3ae1d13647a5"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recvDeYZzDKLYzJYX"
+        ]
+      },
+      {
+        "observation_id": "obs-0-641-56486b6a5b199a17",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-livecc-7b-instruct-272a37ca382e1b27",
+        "model_configuration": "LiveCC-7B-Instruct",
+        "model_identity_organization": "unknown",
+        "model_label_id": "livecc",
+        "model_family_id": "unknown-livecc",
+        "model": "LiveCC",
+        "organization": "Unknown",
+        "score": 0.641,
+        "input_score": 0.641,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-04-12",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-04-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-04-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-04-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-04-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recnjdgh8iwzuvb9e-623a9792a4c66058"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recnjdgH8IWzUvB9e"
+        ]
+      },
+      {
+        "observation_id": "obs-0-639-ac8b25286ed55bd9",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-qwen2-vl-7b-instruct-78bdf62f822aa645",
+        "model_configuration": "Qwen2-VL-7B-Instruct",
+        "model_identity_organization": "unknown",
+        "model_label_id": "retake",
+        "model_family_id": "unknown-retake",
+        "model": "ReTaKe",
+        "organization": "Unknown",
+        "score": 0.639,
+        "input_score": 0.639,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-08-29",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-08-29",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-08-29",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-08-29",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-08-29",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recwrrzvp9jl8tpkx-507e0516446c6b01"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recWRrzvp9jl8TpKx"
+        ]
+      },
+      {
+        "observation_id": "obs-0-639-23cf2d24e2536949",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-minicpm-o-2-6-301f9812c3d262bf",
+        "model_configuration": "MiniCPM-o-2_6",
+        "model_identity_organization": "unknown",
+        "model_label_id": "minicpm-o-2-6",
+        "model_family_id": "unknown-minicpm-o-2-6",
+        "model": "MiniCPM-o 2.6",
+        "organization": "Unknown",
+        "score": 0.639,
+        "input_score": 0.639,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2025-01-12",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-01-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-01-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recxflzgxlg3ufpxr-270119daa383e21d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recxfLZgXLg3UfPxr"
+        ]
+      },
+      {
+        "observation_id": "obs-0-624-dee4820541ac6958",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-videollama2-7b-1804253402e6ad9b",
+        "model_configuration": "VideoLLAMA2-7B",
+        "model_identity_organization": "unknown",
+        "model_label_id": "videollama-2",
+        "model_family_id": "unknown-videollama-2",
+        "model": "VideoLLaMA 2",
+        "organization": "Unknown",
+        "score": 0.624,
+        "input_score": 0.624,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-06-12",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-06-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-06-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-06-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-reco3uq0kh0zhwbus-3265c3a7c71a37b5"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "reco3UQ0Kh0ZHWbUs"
+        ]
+      },
+      {
+        "observation_id": "obs-0-612-7e9b3d9b16318ff5",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-internvl2-40b-834133fd7a61db70",
+        "model_configuration": "InternVL2-40B",
+        "model_identity_organization": "shanghai-ai-lab",
+        "model_label_id": "internvl2",
+        "model_family_id": "shanghai-ai-lab-internvl2",
+        "model": "InternVL2",
+        "organization": "Shanghai AI Lab",
+        "score": 0.612,
+        "input_score": 0.612,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-07-08",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-07-08",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-07-08",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-07-08",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-07-08",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recxqz2p5emcnapk5-0f47dab58f4c72ca"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recXqZ2P5EMCNApk5"
+        ]
+      },
+      {
+        "observation_id": "obs-0-609-57f4b398ae802ccd",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-minicpm-v-2-6-baee1264f630ab43",
+        "model_configuration": "MiniCPM-V-2_6",
+        "model_identity_organization": "unknown",
+        "model_label_id": "minicpm-v-2-6",
+        "model_family_id": "unknown-minicpm-v-2-6",
+        "model": "MiniCPM-V 2.6",
+        "organization": "Unknown",
+        "score": 0.609,
+        "input_score": 0.609,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-08-03",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-08-03",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-08-03",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-08-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-08-03",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recef1qqg9rg72v8p-99858f64b97da505"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recEF1QQG9rG72v8p"
+        ]
+      },
+      {
+        "observation_id": "obs-0-6-33ba0c87170da5d2",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-claude-3-5-sonnet-20240620-f30b888514e2c660",
+        "model_configuration": "claude-3-5-sonnet-20240620",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet",
+        "model_family_id": "anthropic-claude-3-5-sonnet",
+        "model": "Claude 3.5 Sonnet",
+        "organization": "Anthropic",
+        "score": 0.6,
+        "input_score": 0.6,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-06-20",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-06-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-06-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-06-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recjfbtbgqksinewl-2077da8277b49e0c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recjfbtBgqksInEwl"
+        ]
+      },
+      {
+        "observation_id": "obs-0-6-e416250000508af0",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-claude-3-5-sonnet-20241022-64e890320834f2ae",
+        "model_configuration": "claude-3-5-sonnet-20241022",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet",
+        "model_family_id": "anthropic-claude-3-5-sonnet",
+        "model": "Claude 3.5 Sonnet",
+        "organization": "Anthropic",
+        "score": 0.6,
+        "input_score": 0.6,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-10-22",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-10-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-10-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-10-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-10-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recgtjjxzbctkdkog-37b9de6028cf1d87"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recgtjJXzBCTKdKog"
+        ]
+      },
+      {
+        "observation_id": "obs-0-599-09d06a9480f58e35",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-gpt-4-1106-vision-preview-7e6540232386bda6",
+        "model_configuration": "gpt-4-1106-vision-preview",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4vopenai",
+        "model_family_id": "openai-gpt-4vopenai",
+        "model": "GPT-4VOpenAI",
+        "organization": "OpenAI",
+        "score": 0.599,
+        "input_score": 0.599,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2023-11-06",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2023-11-06",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-11-06",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2023-11-06",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-11-06",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-rec0rsn6z7fjhjwm6-94f99c851c358da0"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "rec0rSn6Z7fJHJWM6"
+        ]
+      },
+      {
+        "observation_id": "obs-0-593-66f545bf109ae6f3",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-mplug-owl3-7b-241101-7e1641ccce8b247d",
+        "model_configuration": "mPLUG-Owl3-7B-241101",
+        "model_identity_organization": "unknown",
+        "model_label_id": "mplug-owl3",
+        "model_family_id": "unknown-mplug-owl3",
+        "model": "mPLUG-Owl3",
+        "organization": "Unknown",
+        "score": 0.593,
+        "input_score": 0.593,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-11-26",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-11-26",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-11-26",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-11-26",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-11-26",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-reclqfawdpsipdavy-cd3e4546f4a92838"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recLqfawDPsiPdaVY"
+        ]
+      },
+      {
+        "observation_id": "obs-0-573-9b8f2a9a132a1c5e",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-timemarker-70395e0f3b399667",
+        "model_configuration": "TimeMarker",
+        "model_identity_organization": "unknown",
+        "model_label_id": "timemarker",
+        "model_family_id": "unknown-timemarker",
+        "model": "TimeMarker",
+        "organization": "Unknown",
+        "score": 0.573,
+        "input_score": 0.573,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-11-27",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-11-27",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-11-27",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-11-27",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-11-27",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recd1q3orjqejjqds-3d5940b2ab0080de"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recd1Q3oRJQEjjQds"
+        ]
+      },
+      {
+        "observation_id": "obs-0-561-963f0ca47cb17e39",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-vita-1-5-a6d3dbba852f23f9",
+        "model_configuration": "VITA-1.5",
+        "model_identity_organization": "unknown",
+        "model_label_id": "vita-1-5",
+        "model_family_id": "unknown-vita-1-5",
+        "model": "VITA 1.5",
+        "organization": "Unknown",
+        "score": 0.561,
+        "input_score": 0.561,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-12-20",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-12-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-12-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-reclvobe3rjvqpola-b638059da93d66fa"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recLvOBE3RjvQPOLA"
+        ]
+      },
+      {
+        "observation_id": "obs-0-56-f2cf200a109c127d",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-kangaroo-f42a3196b2132040",
+        "model_configuration": "kangaroo",
+        "model_identity_organization": "unknown",
+        "model_label_id": "kangaroo",
+        "model_family_id": "unknown-kangaroo",
+        "model": "Kangaroo",
+        "organization": "Unknown",
+        "score": 0.56,
+        "input_score": 0.56,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-11-13",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-11-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-11-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-11-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-11-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recobner7nhveo2xn-22fb421f85aa5e5f"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recoBNEr7nHVeo2XN"
+        ]
+      },
+      {
+        "observation_id": "obs-0-558-7333682ea431d4fe",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-vita-e8a666d12514d748",
+        "model_configuration": "VITA",
+        "model_identity_organization": "unknown",
+        "model_label_id": "vita",
+        "model_family_id": "unknown-vita",
+        "model": "VITA",
+        "organization": "Unknown",
+        "score": 0.558,
+        "input_score": 0.558,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-08-12",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-08-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-08-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-08-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-08-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recmboqfiqkjsw8ha-4e6778b0ec8962b3"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recMBoQfiQKjSw8Ha"
+        ]
+      },
+      {
+        "observation_id": "obs-0-555-b9f5dde9f0ed4c7c",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-video-xl-7b-111cf64370804622",
+        "model_configuration": "Video-XL-7B",
+        "model_identity_organization": "unknown",
+        "model_label_id": "video-xl",
+        "model_family_id": "unknown-video-xl",
+        "model": "Video-XL",
+        "organization": "Unknown",
+        "score": 0.555,
+        "input_score": 0.555,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-10-17",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-10-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-10-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-10-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-10-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recznmfnwxboyighe-76679dec362020f7"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "reczNMfNWxBOyIgHe"
+        ]
+      },
+      {
+        "observation_id": "obs-0-532-714e65b70f451943",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-video-ccam-7b-v1-2-b9fadad60ae2272c",
+        "model_configuration": "Video-CCAM-7B-v1.2",
+        "model_identity_organization": "unknown",
+        "model_label_id": "video-ccam",
+        "model_family_id": "unknown-video-ccam",
+        "model": "Video-CCAM",
+        "organization": "Unknown",
+        "score": 0.532,
+        "input_score": 0.532,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-09-29",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-09-29",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-09-29",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-09-29",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-09-29",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recaiaisywfnhl0uc-f394ccb718435d96"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recAiAIsYwfNhL0uc"
+        ]
+      },
+      {
+        "observation_id": "obs-0-529-cd3adde1069d3227",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-long-llava-qwen2-7b-bb3e8a2273c83e13",
+        "model_configuration": "long-llava-qwen2-7b",
+        "model_identity_organization": "unknown",
+        "model_label_id": "long-llava",
+        "model_family_id": "unknown-long-llava",
+        "model": "Long-LLaVA",
+        "organization": "Unknown",
+        "score": 0.529,
+        "input_score": 0.529,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-08-30",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-08-30",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-08-30",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-08-30",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-08-30",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-rec8uner00onqulzz-d2a46bb2e24685cc"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "rec8UNeR00oNQulzZ"
+        ]
+      },
+      {
+        "observation_id": "obs-0-526-b27b45afdbce4594",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-longva-7b-c4446c3e3caf05f9",
+        "model_configuration": "LongVA-7B",
+        "model_identity_organization": "unknown",
+        "model_label_id": "longva",
+        "model_family_id": "unknown-longva",
+        "model": "LongVA",
+        "organization": "Unknown",
+        "score": 0.526,
+        "input_score": 0.526,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-06-13",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-06-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-06-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-06-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recxnvdhbeeilestd-bdb375c8042668fa"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recXnvdHbEEIlEstD"
+        ]
+      },
+      {
+        "observation_id": "obs-0-513-80b8d4139d27689f",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-qwen-vl-max-f0a9024ba6e1d945",
+        "model_configuration": "Qwen-VL-Max",
+        "model_identity_organization": "unknown",
+        "model_label_id": "qwen-vl-max",
+        "model_family_id": "unknown-qwen-vl-max",
+        "model": "Qwen-VL-Max",
+        "organization": "Unknown",
+        "score": 0.513,
+        "input_score": 0.513,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-01-18",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-01-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-01-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-01-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-01-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recick6wpjnrbf1pn-bb6dd5ff7f1965eb"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recick6WPjNRBf1pn"
+        ]
+      },
+      {
+        "observation_id": "obs-0-507-a8d749e194028bcc",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-internvl-chat-v1-5-d7b23728f2b60b01",
+        "model_configuration": "InternVL-Chat-V1-5",
+        "model_identity_organization": "unknown",
+        "model_label_id": "internvl-chat-v1-5",
+        "model_family_id": "unknown-internvl-chat-v1-5",
+        "model": "InternVL-Chat-V1.5",
+        "organization": "Unknown",
+        "score": 0.507,
+        "input_score": 0.507,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-04-18",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-04-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-04-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-04-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-04-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-reczynngnbstc73ao-3f62069250e3c79d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recZYnngnbStc73AO"
+        ]
+      },
+      {
+        "observation_id": "obs-0-453-1829a6f921c40933",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-slime-llama3-8b-1cdf74434a6c990e",
+        "model_configuration": "SliME-Llama3-8B",
+        "model_identity_organization": "unknown",
+        "model_label_id": "slime",
+        "model_family_id": "unknown-slime",
+        "model": "SliME",
+        "organization": "Unknown",
+        "score": 0.453,
+        "input_score": 0.453,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-06-02",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-06-02",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-02",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-06-02",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-06-02",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recwvewgg3xqbod9k-31fd70d38f114794"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recWVEWgg3xqBoD9K"
+        ]
+      },
+      {
+        "observation_id": "obs-0-432-053b0bac4430e9f0",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-chat-uni-vi-7b-v1-5-100k-sg-wv-92656ab3064cfa95",
+        "model_configuration": "Chat-Uni-Vi-7B-v1.5 + 100k SG-WV",
+        "model_identity_organization": "unknown",
+        "model_label_id": "sharegeminixmu",
+        "model_family_id": "unknown-sharegeminixmu",
+        "model": "ShareGeminiXMU",
+        "organization": "Unknown",
+        "score": 0.432,
+        "input_score": 0.432,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-06-20",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-06-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-06-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-06-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-rec1hunrkmcosfrav-961c4be95782317a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "rec1HuNrKMcoSfrAv"
+        ]
+      },
+      {
+        "observation_id": "obs-0-411-cdd78e4adaad6c8d",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-qwen-vl-chat-bb48e376e4ca94af",
+        "model_configuration": "Qwen-VL-Chat",
+        "model_identity_organization": "unknown",
+        "model_label_id": "qwen-vl-chat",
+        "model_family_id": "unknown-qwen-vl-chat",
+        "model": "Qwen-VL-Chat",
+        "organization": "Unknown",
+        "score": 0.411,
+        "input_score": 0.411,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2023-08-20",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2023-08-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-08-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2023-08-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-08-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recvxdjuupsef1kyv-4c1d51c850e2819d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recVxdjuUpSEf1kyV"
+        ]
+      },
+      {
+        "observation_id": "obs-0-406-aab476537b2832f8",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-chat-univi-7b-v1-5-6702d200149d3e4f",
+        "model_configuration": "Chat-UniVi-7B-v1.5",
+        "model_identity_organization": "unknown",
+        "model_label_id": "chat-univi-v1-5",
+        "model_family_id": "unknown-chat-univi-v1-5",
+        "model": "Chat-UniVi-v1.5",
+        "organization": "Unknown",
+        "score": 0.406,
+        "input_score": 0.406,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-04-23",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-04-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-04-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-04-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-04-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-reculoau9rnedohhm-dafc3dbe377c93c7"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "reculoAu9RneDOhhM"
+        ]
+      },
+      {
+        "observation_id": "obs-0-399-a7bbc0ce36c632d3",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-sharegpt4video-8b-2f5dc9841c2262e9",
+        "model_configuration": "sharegpt4video-8b",
+        "model_identity_organization": "unknown",
+        "model_label_id": "sharegpt4video",
+        "model_family_id": "unknown-sharegpt4video",
+        "model": "ShareGPT4Video",
+        "organization": "Unknown",
+        "score": 0.399,
+        "input_score": 0.399,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-05-27",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-05-27",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-27",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-05-27",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-27",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recxdo9bjzfqsklr7-31d340c3ee80dfa9"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recXDO9BjzFQSKlr7"
+        ]
+      },
+      {
+        "observation_id": "obs-0-399-15e88780cdb430bb",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-video-llava-7b-5e8904723e022b26",
+        "model_configuration": "Video-LLaVA-7B",
+        "model_identity_organization": "unknown",
+        "model_label_id": "video-llava",
+        "model_family_id": "unknown-video-llava",
+        "model": "Video-LLaVA",
+        "organization": "Unknown",
+        "score": 0.399,
+        "input_score": 0.399,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2023-11-17",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2023-11-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-11-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2023-11-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-11-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recmrfidef4es3i1u-ca7d59e6d520c065"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recmRFidEf4Es3i1U"
+        ]
+      },
+      {
+        "observation_id": "obs-0-395-3790b19104a83435",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-video-chat2-mistral-68130aef7512dff0",
+        "model_configuration": "video_chat2_mistral",
+        "model_identity_organization": "unknown",
+        "model_label_id": "videochat2-mistral",
+        "model_family_id": "unknown-videochat2-mistral",
+        "model": "VideoChat2-Mistral",
+        "organization": "Unknown",
+        "score": 0.395,
+        "input_score": 0.395,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2023-11-29",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2023-11-29",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-11-29",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2023-11-29",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-11-29",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recace67schsfylk1-0990b736ac64c71a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recACe67sCHSfYlk1"
+        ]
+      },
+      {
+        "observation_id": "obs-0-379-fb5202e6b63bc196",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-st-llm-94c825d6d033cb19",
+        "model_configuration": "ST-LLM",
+        "model_identity_organization": "unknown",
+        "model_label_id": "st-llm",
+        "model_family_id": "unknown-st-llm",
+        "model": "ST-LLM",
+        "organization": "Unknown",
+        "score": 0.379,
+        "input_score": 0.379,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-03-28",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-03-28",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-03-28",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-03-28",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-03-28",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recxdgfkkjvk7ky7x-d28d62092d899d11"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recXDGFkKjvk7Ky7X"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-75-e764368bba95bdd6",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-gemini-1-5-pro-001-cf2516cce1080105",
+        "model_configuration": "gemini-1.5-pro-001",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-1-5-pro",
+        "model_family_id": "google-deepmind-gemini-1-5-pro",
+        "model": "Gemini 1.5 Pro",
+        "organization": "Google DeepMind",
+        "score": 0.75,
+        "input_score": 0.75,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-05-14",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-05-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-06-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-reck8bdyl7vsievif-0db43c9b23361b13"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "reck8Bdyl7VsIEVIf"
+        ],
+        "plot_date": "2024-06-03",
+        "frontier_observation_ids": [
+          "obs-0-379-fb5202e6b63bc196",
+          "obs-0-395-3790b19104a83435",
+          "obs-0-399-a7bbc0ce36c632d3",
+          "obs-0-399-15e88780cdb430bb",
+          "obs-0-406-aab476537b2832f8",
+          "obs-0-411-cdd78e4adaad6c8d",
+          "obs-0-453-1829a6f921c40933",
+          "obs-0-507-a8d749e194028bcc",
+          "obs-0-513-80b8d4139d27689f",
+          "obs-0-599-09d06a9480f58e35",
+          "obs-0-641-56486b6a5b199a17",
+          "obs-0-662-f18af5772783456c",
+          "obs-0-703-9201f9d49eede95b",
+          "obs-0-75-5ec99e43f41f3ca0",
+          "obs-0-75-e764368bba95bdd6"
+        ]
+      },
+      {
+        "observation_id": "obs-0-797-e7161bf308ae2b21",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-video-salmonn-2plus-ea6efff62b2db53b",
+        "model_configuration": "video-SALMONN-2plus",
+        "model_identity_organization": "bytedance",
+        "model_label_id": "video-salmonn-2",
+        "model_family_id": "bytedance-video-salmonn-2",
+        "model": "video-SALMONN 2+",
+        "organization": "ByteDance",
+        "score": 0.797,
+        "input_score": 0.797,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2025-06-18",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-06-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-06-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-06-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-06-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recmr6dqjqaa5csl1-e88cc96412f8a3d3"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recMr6dqjQaA5cSL1"
+        ],
+        "plot_date": "2025-06-18",
+        "frontier_observation_ids": [
+          "obs-0-797-e7161bf308ae2b21"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-75-e764368bba95bdd6",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-gemini-1-5-pro-001-cf2516cce1080105",
+        "model_configuration": "gemini-1.5-pro-001",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-1-5-pro",
+        "model_family_id": "google-deepmind-gemini-1-5-pro",
+        "model": "Gemini 1.5 Pro",
+        "organization": "Google DeepMind",
+        "score": 0.75,
+        "input_score": 0.75,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-05-14",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-05-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-06-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-reck8bdyl7vsievif-0db43c9b23361b13"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "reck8Bdyl7VsIEVIf"
+        ],
+        "plot_date": "2024-06-03",
+        "frontier_observation_ids": [
+          "obs-0-379-fb5202e6b63bc196",
+          "obs-0-395-3790b19104a83435",
+          "obs-0-399-a7bbc0ce36c632d3",
+          "obs-0-399-15e88780cdb430bb",
+          "obs-0-406-aab476537b2832f8",
+          "obs-0-411-cdd78e4adaad6c8d",
+          "obs-0-453-1829a6f921c40933",
+          "obs-0-507-a8d749e194028bcc",
+          "obs-0-513-80b8d4139d27689f",
+          "obs-0-599-09d06a9480f58e35",
+          "obs-0-641-56486b6a5b199a17",
+          "obs-0-662-f18af5772783456c",
+          "obs-0-703-9201f9d49eede95b",
+          "obs-0-75-5ec99e43f41f3ca0",
+          "obs-0-75-e764368bba95bdd6"
+        ]
+      },
+      {
+        "observation_id": "obs-0-797-e7161bf308ae2b21",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-video-salmonn-2plus-ea6efff62b2db53b",
+        "model_configuration": "video-SALMONN-2plus",
+        "model_identity_organization": "bytedance",
+        "model_label_id": "video-salmonn-2",
+        "model_family_id": "bytedance-video-salmonn-2",
+        "model": "video-SALMONN 2+",
+        "organization": "ByteDance",
+        "score": 0.797,
+        "input_score": 0.797,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2025-06-18",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-06-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-06-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-06-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-06-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recmr6dqjqaa5csl1-e88cc96412f8a3d3"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recMr6dqjQaA5cSL1"
+        ],
+        "plot_date": "2025-06-18",
+        "frontier_observation_ids": [
+          "obs-0-797-e7161bf308ae2b21"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-75-e764368bba95bdd6",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-gemini-1-5-pro-001-cf2516cce1080105",
+        "model_configuration": "gemini-1.5-pro-001",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-1-5-pro",
+        "model_family_id": "google-deepmind-gemini-1-5-pro",
+        "model": "Gemini 1.5 Pro",
+        "organization": "Google DeepMind",
+        "score": 0.75,
+        "input_score": 0.75,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2024-05-14",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-05-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-06-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-reck8bdyl7vsievif-0db43c9b23361b13"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "reck8Bdyl7VsIEVIf"
+        ],
+        "plot_date": "2024-06-03",
+        "frontier_observation_ids": [
+          "obs-0-379-fb5202e6b63bc196",
+          "obs-0-395-3790b19104a83435",
+          "obs-0-399-a7bbc0ce36c632d3",
+          "obs-0-399-15e88780cdb430bb",
+          "obs-0-406-aab476537b2832f8",
+          "obs-0-411-cdd78e4adaad6c8d",
+          "obs-0-453-1829a6f921c40933",
+          "obs-0-507-a8d749e194028bcc",
+          "obs-0-513-80b8d4139d27689f",
+          "obs-0-599-09d06a9480f58e35",
+          "obs-0-641-56486b6a5b199a17",
+          "obs-0-662-f18af5772783456c",
+          "obs-0-703-9201f9d49eede95b",
+          "obs-0-75-5ec99e43f41f3ca0",
+          "obs-0-75-e764368bba95bdd6"
+        ]
+      },
+      {
+        "observation_id": "obs-0-797-e7161bf308ae2b21",
+        "benchmark_id": "video-mme",
+        "benchmark_version_id": "video-mme-canonical",
+        "model_id": "model-video-salmonn-2plus-ea6efff62b2db53b",
+        "model_configuration": "video-SALMONN-2plus",
+        "model_identity_organization": "bytedance",
+        "model_label_id": "video-salmonn-2",
+        "model_family_id": "bytedance-video-salmonn-2",
+        "model": "video-SALMONN 2+",
+        "organization": "ByteDance",
+        "score": 0.797,
+        "input_score": 0.797,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "video-mme-metric-v1",
+        "protocol_id": "video-mme-source-export-v1",
+        "task_set_id": "video-mme-canonical",
+        "metric": "Overall (no subtitles)",
+        "score_role": "canonical",
+        "score_series_id": "video-mme-canonical-score",
+        "evaluation_protocol": "Video-MME original benchmark, overall no-subtitles score; Video-MME-v2 is a separate benchmark object.",
+        "model_release_date": "2025-06-18",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-06-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-06-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-06-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-06-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "score_source_ids": [
+          "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+        ],
+        "source": "https://video-mme.github.io/home_page.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-recmr6dqjqaa5csl1-e88cc96412f8a3d3"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "recMr6dqjQaA5cSL1"
+        ],
+        "plot_date": "2025-06-18",
+        "frontier_observation_ids": [
+          "obs-0-797-e7161bf308ae2b21"
+        ]
+      }
+    ],
+    "reported_frontier": [],
+    "historical_frontier": [],
+    "retrospective_observations": [],
+    "observed_frontier": 0.797,
+    "capability_frontier_value": 0.797,
+    "reported_frontier_value": null,
+    "current_frontier": 0.797,
+    "normalized_progress": 0.797,
+    "normalized_headroom": 0.20299999999999996,
+    "threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2024-06-03"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 825
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 825
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2024-06-03"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 825
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 825
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T80": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T90": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      }
+    },
+    "velocity_180d": 0.0037649473684210565,
+    "capability_velocity_180d": 0.0037649473684210565,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.5714285714285714,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "Qwen"
+      ],
+      "panel_size": 7,
+      "status": "medium"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-video-mme-github-io-home-page-html-6d4370199ef1050d"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "unknown_public_dates",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": true,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

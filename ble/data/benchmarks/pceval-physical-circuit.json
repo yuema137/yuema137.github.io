@@ -1,0 +1,1076 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "pceval-physical-circuit",
+    "name": "PCEval \u2014 Physical Circuit",
+    "domain": "Electrical Engineering",
+    "release": "2025-12-31",
+    "source": "https://github.com/Null99-Dog/PCEval-Dataset",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Model",
+    "tags": [
+      "Arduino",
+      "breadboard",
+      "simulation"
+    ],
+    "metric": "Success rate",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "pceval-physical-circuit-metric-v1",
+    "protocol_id": "pceval-physical-circuit-source-export-v1",
+    "canonical_score": {
+      "series_id": "pceval-physical-circuit-canonical-score",
+      "role": "canonical",
+      "metric_id": "pceval-physical-circuit-metric-v1",
+      "metric_name": "Success rate",
+      "protocol_id": "pceval-physical-circuit-source-export-v1",
+      "task_set_id": "pceval-physical-circuit-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "pceval-physical-circuit-canonical",
+    "summary": {
+      "en": "PCEval tests whether models can turn an Arduino project description and program into a functional, physically buildable breadboard layout.",
+      "zh": "PCEval \u6d4b\u8bd5\u6a21\u578b\u80fd\u5426\u628a Arduino \u9879\u76ee\u63cf\u8ff0\u548c\u7a0b\u5e8f\u8f6c\u6362\u6210\u529f\u80fd\u6b63\u786e\u3001\u5b9e\u9645\u53ef\u642d\u5efa\u7684\u9762\u5305\u677f\u7535\u8def\u5e03\u5c40\u3002"
+    },
+    "task_format": {
+      "en": "Given a project description and reference Arduino code, the model generates a structured physical breadboard circuit for Wokwi execution.",
+      "zh": "\u6a21\u578b\u6839\u636e\u9879\u76ee\u63cf\u8ff0\u548c\u53c2\u8003 Arduino code\uff0c\u751f\u6210\u7528\u4e8e Wokwi \u6267\u884c\u7684\u7ed3\u6784\u5316\u7269\u7406\u9762\u5305\u677f\u7535\u8def\u3002"
+    },
+    "scoring": {
+      "metric_name": "Physical-circuit success rate",
+      "explanation": {
+        "en": "The score averages 250 binary trials; a layout passes only when the Wokwi scenario succeeds and physical pin/connectivity constraints are satisfied.",
+        "zh": "\u5206\u6570\u662f 250 \u6b21\u4e8c\u5143\u8bd5\u9a8c\u7684\u5e73\u5747\u503c\uff1b\u5e03\u5c40\u5fc5\u987b\u901a\u8fc7 Wokwi scenario\uff0c\u5e76\u6ee1\u8db3\u7269\u7406\u5f15\u811a\u4e0e\u8fde\u63a5\u7ea6\u675f\u624d\u7b97\u6210\u529f\u3002"
+      }
+    },
+    "evaluation_target": "environment_outcome",
+    "observation_count": 5,
+    "evidence_record_count": 5,
+    "observations": [
+      {
+        "observation_id": "obs-0-012-576af461406a600a",
+        "benchmark_id": "pceval-physical-circuit",
+        "benchmark_version_id": "pceval-physical-circuit-canonical",
+        "model_id": "model-deepseek-coder-v2-16b-eb4e37e29256ec67",
+        "model_configuration": "DeepSeek-Coder-V2-16B",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-coder-v2-16b",
+        "model_family_id": "deepseek-deepseek-coder-v2-16b",
+        "model": "DeepSeek-Coder-V2-16B",
+        "organization": "DeepSeek",
+        "score": 0.012,
+        "input_score": 0.012,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "pceval-physical-circuit-metric-v1",
+        "protocol_id": "pceval-physical-circuit-source-export-v1",
+        "task_set_id": "pceval-physical-circuit-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "pceval-physical-circuit-canonical-score",
+        "evaluation_protocol": "PCEval v1 fixed 50-project D,C-to-P track, five trials per project, baseline standardized prompt, Wokwi functional tests plus physical implementability checks. Self-improvement and CoT interventions are excluded.",
+        "model_release_date": "2024-06-17",
+        "evaluation_date": null,
+        "result_public_date": "2025-12-31",
+        "source_publication_date": "2025-12-31",
+        "observation_date": "2024-06-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-12-31",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-06-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-06-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-12-31",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739",
+          "resource-https-github-com-null99-dog-pceval-dataset-bcaac1447000c942"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739"
+        ],
+        "source": "https://arxiv.org/abs/2601.02404",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-pceval-deepseek-coder-v2-74cbc11bf520041e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "pceval-deepseek-coder-v2"
+        ]
+      },
+      {
+        "observation_id": "obs-0-02-a88dc80cb2160d87",
+        "benchmark_id": "pceval-physical-circuit",
+        "benchmark_version_id": "pceval-physical-circuit-canonical",
+        "model_id": "model-llama-3-1-8b-a4b2890006db2944",
+        "model_configuration": "Llama-3.1-8B",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama-3-1-8b",
+        "model_family_id": "meta-llama-3-1-8b",
+        "model": "Llama-3.1-8B",
+        "organization": "Meta",
+        "score": 0.02,
+        "input_score": 0.02,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "pceval-physical-circuit-metric-v1",
+        "protocol_id": "pceval-physical-circuit-source-export-v1",
+        "task_set_id": "pceval-physical-circuit-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "pceval-physical-circuit-canonical-score",
+        "evaluation_protocol": "PCEval v1 fixed 50-project D,C-to-P track, five trials per project, baseline standardized prompt, Wokwi functional tests plus physical implementability checks. Self-improvement and CoT interventions are excluded.",
+        "model_release_date": "2024-07-23",
+        "evaluation_date": null,
+        "result_public_date": "2025-12-31",
+        "source_publication_date": "2025-12-31",
+        "observation_date": "2024-07-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-07-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-12-31",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-07-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-07-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-12-31",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739",
+          "resource-https-github-com-null99-dog-pceval-dataset-bcaac1447000c942"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739"
+        ],
+        "source": "https://arxiv.org/abs/2601.02404",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-pceval-llama31-0150157c33ad801b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "pceval-llama31"
+        ]
+      },
+      {
+        "observation_id": "obs-0-136-630b80344b73cb09",
+        "benchmark_id": "pceval-physical-circuit",
+        "benchmark_version_id": "pceval-physical-circuit-canonical",
+        "model_id": "model-claude-3-7-sonnet-105c2d3675a935dc",
+        "model_configuration": "Claude-3.7-Sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-7-sonnet",
+        "model_family_id": "anthropic-claude-3-7-sonnet",
+        "model": "Claude-3.7-Sonnet",
+        "organization": "Anthropic",
+        "score": 0.136,
+        "input_score": 0.136,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "pceval-physical-circuit-metric-v1",
+        "protocol_id": "pceval-physical-circuit-source-export-v1",
+        "task_set_id": "pceval-physical-circuit-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "pceval-physical-circuit-canonical-score",
+        "evaluation_protocol": "PCEval v1 fixed 50-project D,C-to-P track, five trials per project, baseline standardized prompt, Wokwi functional tests plus physical implementability checks. Self-improvement and CoT interventions are excluded.",
+        "model_release_date": "2025-02-24",
+        "evaluation_date": null,
+        "result_public_date": "2025-12-31",
+        "source_publication_date": "2025-12-31",
+        "observation_date": "2025-02-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-12-31",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-02-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-12-31",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739",
+          "resource-https-github-com-null99-dog-pceval-dataset-bcaac1447000c942"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739"
+        ],
+        "source": "https://arxiv.org/abs/2601.02404",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-pceval-claude37-f3a6ba6e4b54e373"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "pceval-claude37"
+        ]
+      },
+      {
+        "observation_id": "obs-0-196-7c96513611c482df",
+        "benchmark_id": "pceval-physical-circuit",
+        "benchmark_version_id": "pceval-physical-circuit-canonical",
+        "model_id": "model-gemini-2-0-flash-c7f695767f575f5b",
+        "model_configuration": "Gemini-2.0-Flash",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-0-flash",
+        "model_family_id": "google-gemini-2-0-flash",
+        "model": "Gemini-2.0-Flash",
+        "organization": "Google",
+        "score": 0.196,
+        "input_score": 0.196,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "pceval-physical-circuit-metric-v1",
+        "protocol_id": "pceval-physical-circuit-source-export-v1",
+        "task_set_id": "pceval-physical-circuit-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "pceval-physical-circuit-canonical-score",
+        "evaluation_protocol": "PCEval v1 fixed 50-project D,C-to-P track, five trials per project, baseline standardized prompt, Wokwi functional tests plus physical implementability checks. Self-improvement and CoT interventions are excluded.",
+        "model_release_date": "2024-12-11",
+        "evaluation_date": null,
+        "result_public_date": "2025-12-31",
+        "source_publication_date": "2025-12-31",
+        "observation_date": "2024-12-11",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-11",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-12-31",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-12-11",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-11",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-12-31",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739",
+          "resource-https-github-com-null99-dog-pceval-dataset-bcaac1447000c942"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739"
+        ],
+        "source": "https://arxiv.org/abs/2601.02404",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-pceval-gemini20-49a81a1f71960ed0"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "pceval-gemini20"
+        ]
+      },
+      {
+        "observation_id": "obs-0-452-b8b4f784b037f030",
+        "benchmark_id": "pceval-physical-circuit",
+        "benchmark_version_id": "pceval-physical-circuit-canonical",
+        "model_id": "model-o3-mini-c8cc52bda8f726c8",
+        "model_configuration": "o3-mini",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-mini",
+        "model_family_id": "openai-o3-mini",
+        "model": "o3-mini",
+        "organization": "OpenAI",
+        "score": 0.452,
+        "input_score": 0.452,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "pceval-physical-circuit-metric-v1",
+        "protocol_id": "pceval-physical-circuit-source-export-v1",
+        "task_set_id": "pceval-physical-circuit-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "pceval-physical-circuit-canonical-score",
+        "evaluation_protocol": "PCEval v1 fixed 50-project D,C-to-P track, five trials per project, baseline standardized prompt, Wokwi functional tests plus physical implementability checks. Self-improvement and CoT interventions are excluded.",
+        "model_release_date": "2025-01-31",
+        "evaluation_date": null,
+        "result_public_date": "2025-12-31",
+        "source_publication_date": "2025-12-31",
+        "observation_date": "2025-01-31",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-31",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-12-31",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-01-31",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-31",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-12-31",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739",
+          "resource-https-github-com-null99-dog-pceval-dataset-bcaac1447000c942"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739"
+        ],
+        "source": "https://arxiv.org/abs/2601.02404",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-pceval-o3-mini-2438010814cd8ceb"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "pceval-o3-mini"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-452-b8b4f784b037f030",
+        "benchmark_id": "pceval-physical-circuit",
+        "benchmark_version_id": "pceval-physical-circuit-canonical",
+        "model_id": "model-o3-mini-c8cc52bda8f726c8",
+        "model_configuration": "o3-mini",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-mini",
+        "model_family_id": "openai-o3-mini",
+        "model": "o3-mini",
+        "organization": "OpenAI",
+        "score": 0.452,
+        "input_score": 0.452,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "pceval-physical-circuit-metric-v1",
+        "protocol_id": "pceval-physical-circuit-source-export-v1",
+        "task_set_id": "pceval-physical-circuit-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "pceval-physical-circuit-canonical-score",
+        "evaluation_protocol": "PCEval v1 fixed 50-project D,C-to-P track, five trials per project, baseline standardized prompt, Wokwi functional tests plus physical implementability checks. Self-improvement and CoT interventions are excluded.",
+        "model_release_date": "2025-01-31",
+        "evaluation_date": null,
+        "result_public_date": "2025-12-31",
+        "source_publication_date": "2025-12-31",
+        "observation_date": "2025-01-31",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-31",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-12-31",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-12-31",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-31",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-12-31",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739",
+          "resource-https-github-com-null99-dog-pceval-dataset-bcaac1447000c942"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739"
+        ],
+        "source": "https://arxiv.org/abs/2601.02404",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-pceval-o3-mini-2438010814cd8ceb"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "pceval-o3-mini"
+        ],
+        "plot_date": "2025-12-31",
+        "frontier_observation_ids": [
+          "obs-0-012-576af461406a600a",
+          "obs-0-02-a88dc80cb2160d87",
+          "obs-0-136-630b80344b73cb09",
+          "obs-0-196-7c96513611c482df",
+          "obs-0-452-b8b4f784b037f030"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-452-b8b4f784b037f030",
+        "benchmark_id": "pceval-physical-circuit",
+        "benchmark_version_id": "pceval-physical-circuit-canonical",
+        "model_id": "model-o3-mini-c8cc52bda8f726c8",
+        "model_configuration": "o3-mini",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-mini",
+        "model_family_id": "openai-o3-mini",
+        "model": "o3-mini",
+        "organization": "OpenAI",
+        "score": 0.452,
+        "input_score": 0.452,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "pceval-physical-circuit-metric-v1",
+        "protocol_id": "pceval-physical-circuit-source-export-v1",
+        "task_set_id": "pceval-physical-circuit-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "pceval-physical-circuit-canonical-score",
+        "evaluation_protocol": "PCEval v1 fixed 50-project D,C-to-P track, five trials per project, baseline standardized prompt, Wokwi functional tests plus physical implementability checks. Self-improvement and CoT interventions are excluded.",
+        "model_release_date": "2025-01-31",
+        "evaluation_date": null,
+        "result_public_date": "2025-12-31",
+        "source_publication_date": "2025-12-31",
+        "observation_date": "2025-01-31",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-31",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-12-31",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-12-31",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-31",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-12-31",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739",
+          "resource-https-github-com-null99-dog-pceval-dataset-bcaac1447000c942"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739"
+        ],
+        "source": "https://arxiv.org/abs/2601.02404",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-pceval-o3-mini-2438010814cd8ceb"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "pceval-o3-mini"
+        ],
+        "plot_date": "2025-12-31",
+        "frontier_observation_ids": [
+          "obs-0-012-576af461406a600a",
+          "obs-0-02-a88dc80cb2160d87",
+          "obs-0-136-630b80344b73cb09",
+          "obs-0-196-7c96513611c482df",
+          "obs-0-452-b8b4f784b037f030"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-452-b8b4f784b037f030",
+        "benchmark_id": "pceval-physical-circuit",
+        "benchmark_version_id": "pceval-physical-circuit-canonical",
+        "model_id": "model-o3-mini-c8cc52bda8f726c8",
+        "model_configuration": "o3-mini",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-mini",
+        "model_family_id": "openai-o3-mini",
+        "model": "o3-mini",
+        "organization": "OpenAI",
+        "score": 0.452,
+        "input_score": 0.452,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "pceval-physical-circuit-metric-v1",
+        "protocol_id": "pceval-physical-circuit-source-export-v1",
+        "task_set_id": "pceval-physical-circuit-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "pceval-physical-circuit-canonical-score",
+        "evaluation_protocol": "PCEval v1 fixed 50-project D,C-to-P track, five trials per project, baseline standardized prompt, Wokwi functional tests plus physical implementability checks. Self-improvement and CoT interventions are excluded.",
+        "model_release_date": "2025-01-31",
+        "evaluation_date": null,
+        "result_public_date": "2025-12-31",
+        "source_publication_date": "2025-12-31",
+        "observation_date": "2025-01-31",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-31",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-12-31",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-12-31",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-31",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-12-31",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739",
+          "resource-https-github-com-null99-dog-pceval-dataset-bcaac1447000c942"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739"
+        ],
+        "source": "https://arxiv.org/abs/2601.02404",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-pceval-o3-mini-2438010814cd8ceb"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "pceval-o3-mini"
+        ],
+        "plot_date": "2025-12-31",
+        "frontier_observation_ids": [
+          "obs-0-012-576af461406a600a",
+          "obs-0-02-a88dc80cb2160d87",
+          "obs-0-136-630b80344b73cb09",
+          "obs-0-196-7c96513611c482df",
+          "obs-0-452-b8b4f784b037f030"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-452-b8b4f784b037f030",
+        "benchmark_id": "pceval-physical-circuit",
+        "benchmark_version_id": "pceval-physical-circuit-canonical",
+        "model_id": "model-o3-mini-c8cc52bda8f726c8",
+        "model_configuration": "o3-mini",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-mini",
+        "model_family_id": "openai-o3-mini",
+        "model": "o3-mini",
+        "organization": "OpenAI",
+        "score": 0.452,
+        "input_score": 0.452,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "pceval-physical-circuit-metric-v1",
+        "protocol_id": "pceval-physical-circuit-source-export-v1",
+        "task_set_id": "pceval-physical-circuit-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "pceval-physical-circuit-canonical-score",
+        "evaluation_protocol": "PCEval v1 fixed 50-project D,C-to-P track, five trials per project, baseline standardized prompt, Wokwi functional tests plus physical implementability checks. Self-improvement and CoT interventions are excluded.",
+        "model_release_date": "2025-01-31",
+        "evaluation_date": null,
+        "result_public_date": "2025-12-31",
+        "source_publication_date": "2025-12-31",
+        "observation_date": "2025-01-31",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-31",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-12-31",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-12-31",
+        "date_kind": "result first-public date",
+        "capability_date": "2025-01-31",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-12-31",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739",
+          "resource-https-github-com-null99-dog-pceval-dataset-bcaac1447000c942"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739"
+        ],
+        "source": "https://arxiv.org/abs/2601.02404",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-pceval-o3-mini-2438010814cd8ceb"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "pceval-o3-mini"
+        ],
+        "plot_date": "2025-12-31",
+        "frontier_observation_ids": [
+          "obs-0-012-576af461406a600a",
+          "obs-0-02-a88dc80cb2160d87",
+          "obs-0-136-630b80344b73cb09",
+          "obs-0-196-7c96513611c482df",
+          "obs-0-452-b8b4f784b037f030"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-452-b8b4f784b037f030",
+        "benchmark_id": "pceval-physical-circuit",
+        "benchmark_version_id": "pceval-physical-circuit-canonical",
+        "model_id": "model-o3-mini-c8cc52bda8f726c8",
+        "model_configuration": "o3-mini",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-mini",
+        "model_family_id": "openai-o3-mini",
+        "model": "o3-mini",
+        "organization": "OpenAI",
+        "score": 0.452,
+        "input_score": 0.452,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "pceval-physical-circuit-metric-v1",
+        "protocol_id": "pceval-physical-circuit-source-export-v1",
+        "task_set_id": "pceval-physical-circuit-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "pceval-physical-circuit-canonical-score",
+        "evaluation_protocol": "PCEval v1 fixed 50-project D,C-to-P track, five trials per project, baseline standardized prompt, Wokwi functional tests plus physical implementability checks. Self-improvement and CoT interventions are excluded.",
+        "model_release_date": "2025-01-31",
+        "evaluation_date": null,
+        "result_public_date": "2025-12-31",
+        "source_publication_date": "2025-12-31",
+        "observation_date": "2025-01-31",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-31",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-12-31",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-12-31",
+        "date_kind": "result first-public date",
+        "capability_date": "2025-01-31",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-12-31",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739",
+          "resource-https-github-com-null99-dog-pceval-dataset-bcaac1447000c942"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02404-ba80ab53d64f9739"
+        ],
+        "source": "https://arxiv.org/abs/2601.02404",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-pceval-o3-mini-2438010814cd8ceb"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "pceval-o3-mini"
+        ],
+        "plot_date": "2025-12-31",
+        "frontier_observation_ids": [
+          "obs-0-012-576af461406a600a",
+          "obs-0-02-a88dc80cb2160d87",
+          "obs-0-136-630b80344b73cb09",
+          "obs-0-196-7c96513611c482df",
+          "obs-0-452-b8b4f784b037f030"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.452,
+    "capability_frontier_value": 0.452,
+    "reported_frontier_value": 0.452,
+    "current_frontier": 0.452,
+    "normalized_progress": 0.452,
+    "normalized_headroom": 0.548,
+    "threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 249
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 249
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 249
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 249
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 249
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 249
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 249
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 249
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 249
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.7142857142857143,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "DeepSeek",
+        "Meta"
+      ],
+      "panel_size": 7,
+      "status": "high"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-github-com-null99-dog-pceval-dataset-bcaac1447000c942"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": true,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

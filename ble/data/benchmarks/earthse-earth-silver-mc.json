@@ -1,0 +1,1238 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "earthse-earth-silver-mc",
+    "name": "EarthSE \u2014 Earth-Silver MC",
+    "domain": "Earth Science",
+    "release": "2025-05-30",
+    "source": "https://arxiv.org/html/2505.17139",
+    "floor": 0.25,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.25,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Model",
+    "tags": [
+      "geoscience",
+      "multiple-choice",
+      "expert reviewed"
+    ],
+    "metric": "Accuracy",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "earthse-earth-silver-mc-metric-v1",
+    "protocol_id": "earthse-earth-silver-mc-source-export-v1",
+    "canonical_score": {
+      "series_id": "earthse-earth-silver-mc-canonical-score",
+      "role": "canonical",
+      "metric_id": "earthse-earth-silver-mc-metric-v1",
+      "metric_name": "Accuracy",
+      "protocol_id": "earthse-earth-silver-mc-source-export-v1",
+      "task_set_id": "earthse-earth-silver-mc-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.25,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "earthse-earth-silver-mc-canonical",
+    "summary": {
+      "en": "EarthSE tests specialist Earth-science reasoning on expert-reviewed multiple-choice questions.",
+      "zh": "EarthSE \u4f7f\u7528\u4e13\u5bb6\u5ba1\u6838\u7684\u9009\u62e9\u9898\u6d4b\u8bd5\u4e13\u4e1a\u5730\u7403\u79d1\u5b66\u63a8\u7406\u80fd\u529b\u3002"
+    },
+    "task_format": {
+      "en": "The model answers the fixed 250-item Earth-Silver four-choice set.",
+      "zh": "\u6a21\u578b\u56de\u7b54\u56fa\u5b9a\u7684 250 \u9053 Earth-Silver \u56db\u9009\u4e00\u9898\u3002"
+    },
+    "scoring": {
+      "metric_name": "Exact-choice accuracy",
+      "explanation": {
+        "en": "The score is the fraction of Earth-Silver questions whose selected option matches the answer key.",
+        "zh": "\u5206\u6570\u662f Earth-Silver \u4e2d\u6240\u9009\u9009\u9879\u4e0e\u7b54\u6848\u4e00\u81f4\u7684\u9898\u76ee\u6bd4\u4f8b\u3002"
+      }
+    },
+    "evaluation_target": "final_output",
+    "observation_count": 7,
+    "evidence_record_count": 7,
+    "observations": [
+      {
+        "observation_id": "obs-0-56-26e668de7bba8602",
+        "benchmark_id": "earthse-earth-silver-mc",
+        "benchmark_version_id": "earthse-earth-silver-mc-canonical",
+        "model_id": "model-llama-3-1-70b-instruct-8e3dc2ce6d5cbd60",
+        "model_configuration": "Llama-3.1-70B-Instruct",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama-3-1-70b-instruct",
+        "model_family_id": "meta-llama-3-1-70b-instruct",
+        "model": "Llama-3.1-70B-Instruct",
+        "organization": "Meta",
+        "score": 0.56,
+        "input_score": 0.56,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "earthse-earth-silver-mc-metric-v1",
+        "protocol_id": "earthse-earth-silver-mc-source-export-v1",
+        "task_set_id": "earthse-earth-silver-mc-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "earthse-earth-silver-mc-canonical-score",
+        "evaluation_protocol": "EarthSE paper v3 Earth-Silver fixed 250-item multiple-choice series; other EarthSE tiers and generation tasks are excluded.",
+        "model_release_date": "2024-07-23",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-30",
+        "source_publication_date": "2025-05-30",
+        "observation_date": "2024-07-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-07-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-30",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-07-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-07-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-30",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "source": "https://arxiv.org/abs/2505.17139",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-earthse-llama31-5cbdd35fcdb545f4"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "earthse-llama31"
+        ]
+      },
+      {
+        "observation_id": "obs-0-536-fd8fc64a0a829113",
+        "benchmark_id": "earthse-earth-silver-mc",
+        "benchmark_version_id": "earthse-earth-silver-mc-canonical",
+        "model_id": "model-qwen2-5-72b-instruct-fa1e319088d20301",
+        "model_configuration": "Qwen2.5-72B-Instruct",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen2-5-72b-instruct",
+        "model_family_id": "qwen-qwen2-5-72b-instruct",
+        "model": "Qwen2.5-72B-Instruct",
+        "organization": "Qwen",
+        "score": 0.536,
+        "input_score": 0.536,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "earthse-earth-silver-mc-metric-v1",
+        "protocol_id": "earthse-earth-silver-mc-source-export-v1",
+        "task_set_id": "earthse-earth-silver-mc-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "earthse-earth-silver-mc-canonical-score",
+        "evaluation_protocol": "EarthSE paper v3 Earth-Silver fixed 250-item multiple-choice series; other EarthSE tiers and generation tasks are excluded.",
+        "model_release_date": "2024-09-19",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-30",
+        "source_publication_date": "2025-05-30",
+        "observation_date": "2024-09-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-09-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-30",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-09-19",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-09-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-30",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "source": "https://arxiv.org/abs/2505.17139",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-earthse-qwen25-c33458aa5047a756"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "earthse-qwen25"
+        ]
+      },
+      {
+        "observation_id": "obs-0-58-75088b6298bf195c",
+        "benchmark_id": "earthse-earth-silver-mc",
+        "benchmark_version_id": "earthse-earth-silver-mc-canonical",
+        "model_id": "model-deepseek-v3-44b935d802b0efaa",
+        "model_configuration": "DeepSeek-V3",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-v3",
+        "model_family_id": "deepseek-deepseek-v3",
+        "model": "DeepSeek-V3",
+        "organization": "DeepSeek",
+        "score": 0.58,
+        "input_score": 0.58,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "earthse-earth-silver-mc-metric-v1",
+        "protocol_id": "earthse-earth-silver-mc-source-export-v1",
+        "task_set_id": "earthse-earth-silver-mc-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "earthse-earth-silver-mc-canonical-score",
+        "evaluation_protocol": "EarthSE paper v3 Earth-Silver fixed 250-item multiple-choice series; other EarthSE tiers and generation tasks are excluded.",
+        "model_release_date": "2024-12-26",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-30",
+        "source_publication_date": "2025-05-30",
+        "observation_date": "2024-12-26",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-26",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-30",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-12-26",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-26",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-30",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "source": "https://arxiv.org/abs/2505.17139",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-earthse-deepseekv3-e92a087aa05f0cb7"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "earthse-deepseekv3"
+        ]
+      },
+      {
+        "observation_id": "obs-0-532-d339417f07fefc2d",
+        "benchmark_id": "earthse-earth-silver-mc",
+        "benchmark_version_id": "earthse-earth-silver-mc-canonical",
+        "model_id": "model-grok-3-1058780ff56728b0",
+        "model_configuration": "Grok-3",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-3",
+        "model_family_id": "xai-grok-3",
+        "model": "Grok-3",
+        "organization": "xAI",
+        "score": 0.532,
+        "input_score": 0.532,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "earthse-earth-silver-mc-metric-v1",
+        "protocol_id": "earthse-earth-silver-mc-source-export-v1",
+        "task_set_id": "earthse-earth-silver-mc-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "earthse-earth-silver-mc-canonical-score",
+        "evaluation_protocol": "EarthSE paper v3 Earth-Silver fixed 250-item multiple-choice series; other EarthSE tiers and generation tasks are excluded.",
+        "model_release_date": "2025-02-17",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-30",
+        "source_publication_date": "2025-05-30",
+        "observation_date": "2025-02-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-30",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-02-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-30",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "source": "https://arxiv.org/abs/2505.17139",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-earthse-grok3-8c07c611bb5f05b1"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "earthse-grok3"
+        ]
+      },
+      {
+        "observation_id": "obs-0-624-f2c300c0b6f5b1f8",
+        "benchmark_id": "earthse-earth-silver-mc",
+        "benchmark_version_id": "earthse-earth-silver-mc-canonical",
+        "model_id": "model-claude-3-7-sonnet-105c2d3675a935dc",
+        "model_configuration": "Claude-3.7-Sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-7-sonnet",
+        "model_family_id": "anthropic-claude-3-7-sonnet",
+        "model": "Claude-3.7-Sonnet",
+        "organization": "Anthropic",
+        "score": 0.624,
+        "input_score": 0.624,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "earthse-earth-silver-mc-metric-v1",
+        "protocol_id": "earthse-earth-silver-mc-source-export-v1",
+        "task_set_id": "earthse-earth-silver-mc-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "earthse-earth-silver-mc-canonical-score",
+        "evaluation_protocol": "EarthSE paper v3 Earth-Silver fixed 250-item multiple-choice series; other EarthSE tiers and generation tasks are excluded.",
+        "model_release_date": "2025-02-24",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-30",
+        "source_publication_date": "2025-05-30",
+        "observation_date": "2025-02-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-30",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-02-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-30",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "source": "https://arxiv.org/abs/2505.17139",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-earthse-sonnet37-a92679a9a60f2e9c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "earthse-sonnet37"
+        ]
+      },
+      {
+        "observation_id": "obs-0-58-0c31dfb0bbd1b0e2",
+        "benchmark_id": "earthse-earth-silver-mc",
+        "benchmark_version_id": "earthse-earth-silver-mc-canonical",
+        "model_id": "model-gemini-2-5-pro-53e6252cbff1cfa8",
+        "model_configuration": "Gemini-2.5-Pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-5-pro",
+        "model_family_id": "google-gemini-2-5-pro",
+        "model": "Gemini-2.5-Pro",
+        "organization": "Google",
+        "score": 0.58,
+        "input_score": 0.58,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "earthse-earth-silver-mc-metric-v1",
+        "protocol_id": "earthse-earth-silver-mc-source-export-v1",
+        "task_set_id": "earthse-earth-silver-mc-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "earthse-earth-silver-mc-canonical-score",
+        "evaluation_protocol": "EarthSE paper v3 Earth-Silver fixed 250-item multiple-choice series; other EarthSE tiers and generation tasks are excluded.",
+        "model_release_date": "2025-03-25",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-30",
+        "source_publication_date": "2025-05-30",
+        "observation_date": "2025-03-25",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-03-25",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-30",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-03-25",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-03-25",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-30",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "source": "https://arxiv.org/abs/2505.17139",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-earthse-gemini25-3f0ee209bd5ef9fc"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "earthse-gemini25"
+        ]
+      },
+      {
+        "observation_id": "obs-0-556-0364a2ff22baf6af",
+        "benchmark_id": "earthse-earth-silver-mc",
+        "benchmark_version_id": "earthse-earth-silver-mc-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.556,
+        "input_score": 0.556,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "earthse-earth-silver-mc-metric-v1",
+        "protocol_id": "earthse-earth-silver-mc-source-export-v1",
+        "task_set_id": "earthse-earth-silver-mc-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "earthse-earth-silver-mc-canonical-score",
+        "evaluation_protocol": "EarthSE paper v3 Earth-Silver fixed 250-item multiple-choice series; other EarthSE tiers and generation tasks are excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-30",
+        "source_publication_date": "2025-05-30",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-30",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-05-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-30",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "source": "https://arxiv.org/abs/2505.17139",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-earthse-gpt4o-9ea6c1e6f8f49f78"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "earthse-gpt4o"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-624-f2c300c0b6f5b1f8",
+        "benchmark_id": "earthse-earth-silver-mc",
+        "benchmark_version_id": "earthse-earth-silver-mc-canonical",
+        "model_id": "model-claude-3-7-sonnet-105c2d3675a935dc",
+        "model_configuration": "Claude-3.7-Sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-7-sonnet",
+        "model_family_id": "anthropic-claude-3-7-sonnet",
+        "model": "Claude-3.7-Sonnet",
+        "organization": "Anthropic",
+        "score": 0.624,
+        "input_score": 0.624,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "earthse-earth-silver-mc-metric-v1",
+        "protocol_id": "earthse-earth-silver-mc-source-export-v1",
+        "task_set_id": "earthse-earth-silver-mc-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "earthse-earth-silver-mc-canonical-score",
+        "evaluation_protocol": "EarthSE paper v3 Earth-Silver fixed 250-item multiple-choice series; other EarthSE tiers and generation tasks are excluded.",
+        "model_release_date": "2025-02-24",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-30",
+        "source_publication_date": "2025-05-30",
+        "observation_date": "2025-02-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-30",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-05-30",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-30",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "source": "https://arxiv.org/abs/2505.17139",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-earthse-sonnet37-a92679a9a60f2e9c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "earthse-sonnet37"
+        ],
+        "plot_date": "2025-05-30",
+        "frontier_observation_ids": [
+          "obs-0-532-d339417f07fefc2d",
+          "obs-0-536-fd8fc64a0a829113",
+          "obs-0-556-0364a2ff22baf6af",
+          "obs-0-56-26e668de7bba8602",
+          "obs-0-58-75088b6298bf195c",
+          "obs-0-58-0c31dfb0bbd1b0e2",
+          "obs-0-624-f2c300c0b6f5b1f8"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-624-f2c300c0b6f5b1f8",
+        "benchmark_id": "earthse-earth-silver-mc",
+        "benchmark_version_id": "earthse-earth-silver-mc-canonical",
+        "model_id": "model-claude-3-7-sonnet-105c2d3675a935dc",
+        "model_configuration": "Claude-3.7-Sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-7-sonnet",
+        "model_family_id": "anthropic-claude-3-7-sonnet",
+        "model": "Claude-3.7-Sonnet",
+        "organization": "Anthropic",
+        "score": 0.624,
+        "input_score": 0.624,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "earthse-earth-silver-mc-metric-v1",
+        "protocol_id": "earthse-earth-silver-mc-source-export-v1",
+        "task_set_id": "earthse-earth-silver-mc-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "earthse-earth-silver-mc-canonical-score",
+        "evaluation_protocol": "EarthSE paper v3 Earth-Silver fixed 250-item multiple-choice series; other EarthSE tiers and generation tasks are excluded.",
+        "model_release_date": "2025-02-24",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-30",
+        "source_publication_date": "2025-05-30",
+        "observation_date": "2025-02-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-30",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-05-30",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-30",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "source": "https://arxiv.org/abs/2505.17139",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-earthse-sonnet37-a92679a9a60f2e9c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "earthse-sonnet37"
+        ],
+        "plot_date": "2025-05-30",
+        "frontier_observation_ids": [
+          "obs-0-532-d339417f07fefc2d",
+          "obs-0-536-fd8fc64a0a829113",
+          "obs-0-556-0364a2ff22baf6af",
+          "obs-0-56-26e668de7bba8602",
+          "obs-0-58-75088b6298bf195c",
+          "obs-0-58-0c31dfb0bbd1b0e2",
+          "obs-0-624-f2c300c0b6f5b1f8"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-624-f2c300c0b6f5b1f8",
+        "benchmark_id": "earthse-earth-silver-mc",
+        "benchmark_version_id": "earthse-earth-silver-mc-canonical",
+        "model_id": "model-claude-3-7-sonnet-105c2d3675a935dc",
+        "model_configuration": "Claude-3.7-Sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-7-sonnet",
+        "model_family_id": "anthropic-claude-3-7-sonnet",
+        "model": "Claude-3.7-Sonnet",
+        "organization": "Anthropic",
+        "score": 0.624,
+        "input_score": 0.624,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "earthse-earth-silver-mc-metric-v1",
+        "protocol_id": "earthse-earth-silver-mc-source-export-v1",
+        "task_set_id": "earthse-earth-silver-mc-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "earthse-earth-silver-mc-canonical-score",
+        "evaluation_protocol": "EarthSE paper v3 Earth-Silver fixed 250-item multiple-choice series; other EarthSE tiers and generation tasks are excluded.",
+        "model_release_date": "2025-02-24",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-30",
+        "source_publication_date": "2025-05-30",
+        "observation_date": "2025-02-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-30",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-05-30",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-30",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "source": "https://arxiv.org/abs/2505.17139",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-earthse-sonnet37-a92679a9a60f2e9c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "earthse-sonnet37"
+        ],
+        "plot_date": "2025-05-30",
+        "frontier_observation_ids": [
+          "obs-0-532-d339417f07fefc2d",
+          "obs-0-536-fd8fc64a0a829113",
+          "obs-0-556-0364a2ff22baf6af",
+          "obs-0-56-26e668de7bba8602",
+          "obs-0-58-75088b6298bf195c",
+          "obs-0-58-0c31dfb0bbd1b0e2",
+          "obs-0-624-f2c300c0b6f5b1f8"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-624-f2c300c0b6f5b1f8",
+        "benchmark_id": "earthse-earth-silver-mc",
+        "benchmark_version_id": "earthse-earth-silver-mc-canonical",
+        "model_id": "model-claude-3-7-sonnet-105c2d3675a935dc",
+        "model_configuration": "Claude-3.7-Sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-7-sonnet",
+        "model_family_id": "anthropic-claude-3-7-sonnet",
+        "model": "Claude-3.7-Sonnet",
+        "organization": "Anthropic",
+        "score": 0.624,
+        "input_score": 0.624,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "earthse-earth-silver-mc-metric-v1",
+        "protocol_id": "earthse-earth-silver-mc-source-export-v1",
+        "task_set_id": "earthse-earth-silver-mc-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "earthse-earth-silver-mc-canonical-score",
+        "evaluation_protocol": "EarthSE paper v3 Earth-Silver fixed 250-item multiple-choice series; other EarthSE tiers and generation tasks are excluded.",
+        "model_release_date": "2025-02-24",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-30",
+        "source_publication_date": "2025-05-30",
+        "observation_date": "2025-02-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-30",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-05-30",
+        "date_kind": "result first-public date",
+        "capability_date": "2025-02-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-30",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "source": "https://arxiv.org/abs/2505.17139",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-earthse-sonnet37-a92679a9a60f2e9c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "earthse-sonnet37"
+        ],
+        "plot_date": "2025-05-30",
+        "frontier_observation_ids": [
+          "obs-0-532-d339417f07fefc2d",
+          "obs-0-536-fd8fc64a0a829113",
+          "obs-0-556-0364a2ff22baf6af",
+          "obs-0-56-26e668de7bba8602",
+          "obs-0-58-75088b6298bf195c",
+          "obs-0-58-0c31dfb0bbd1b0e2",
+          "obs-0-624-f2c300c0b6f5b1f8"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-624-f2c300c0b6f5b1f8",
+        "benchmark_id": "earthse-earth-silver-mc",
+        "benchmark_version_id": "earthse-earth-silver-mc-canonical",
+        "model_id": "model-claude-3-7-sonnet-105c2d3675a935dc",
+        "model_configuration": "Claude-3.7-Sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-7-sonnet",
+        "model_family_id": "anthropic-claude-3-7-sonnet",
+        "model": "Claude-3.7-Sonnet",
+        "organization": "Anthropic",
+        "score": 0.624,
+        "input_score": 0.624,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "earthse-earth-silver-mc-metric-v1",
+        "protocol_id": "earthse-earth-silver-mc-source-export-v1",
+        "task_set_id": "earthse-earth-silver-mc-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "earthse-earth-silver-mc-canonical-score",
+        "evaluation_protocol": "EarthSE paper v3 Earth-Silver fixed 250-item multiple-choice series; other EarthSE tiers and generation tasks are excluded.",
+        "model_release_date": "2025-02-24",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-30",
+        "source_publication_date": "2025-05-30",
+        "observation_date": "2025-02-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-30",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-05-30",
+        "date_kind": "result first-public date",
+        "capability_date": "2025-02-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-30",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+        ],
+        "source": "https://arxiv.org/abs/2505.17139",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-earthse-sonnet37-a92679a9a60f2e9c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "earthse-sonnet37"
+        ],
+        "plot_date": "2025-05-30",
+        "frontier_observation_ids": [
+          "obs-0-532-d339417f07fefc2d",
+          "obs-0-536-fd8fc64a0a829113",
+          "obs-0-556-0364a2ff22baf6af",
+          "obs-0-56-26e668de7bba8602",
+          "obs-0-58-75088b6298bf195c",
+          "obs-0-58-0c31dfb0bbd1b0e2",
+          "obs-0-624-f2c300c0b6f5b1f8"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.624,
+    "capability_frontier_value": 0.624,
+    "reported_frontier_value": 0.624,
+    "current_frontier": 0.624,
+    "normalized_progress": 0.49866666666666665,
+    "normalized_headroom": 0.5013333333333334,
+    "threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 464
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 464
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 464
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 464
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 464
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 464
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 464
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 464
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 464
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 1.0,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "DeepSeek",
+        "Qwen",
+        "Meta",
+        "xAI"
+      ],
+      "panel_size": 7,
+      "status": "high"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-arxiv-org-abs-2505-17139-d7ba84ad17472c19"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": true,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": true,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

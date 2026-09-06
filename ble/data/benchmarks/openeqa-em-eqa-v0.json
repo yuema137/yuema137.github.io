@@ -1,0 +1,905 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "openeqa-em-eqa-v0",
+    "name": "OpenEQA EM-EQA v0",
+    "domain": "Robotics",
+    "release": "2024-04-11",
+    "source": "https://open-eqa.github.io/",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Model",
+    "tags": [
+      "embodied QA",
+      "spatial memory",
+      "multimodal"
+    ],
+    "metric": "LLM-Match",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "openeqa-em-eqa-v0-metric-v1",
+    "protocol_id": "openeqa-em-eqa-v0-source-export-v1",
+    "canonical_score": {
+      "series_id": "openeqa-em-eqa-v0-canonical-score",
+      "role": "canonical",
+      "metric_id": "openeqa-em-eqa-v0-metric-v1",
+      "metric_name": "LLM-Match",
+      "protocol_id": "openeqa-em-eqa-v0-source-export-v1",
+      "task_set_id": "openeqa-em-eqa-v0-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "openeqa-em-eqa-v0-canonical",
+    "summary": {
+      "en": "OpenEQA EM-EQA measures whether a multimodal model can remember and reason about a previously observed 3D environment.",
+      "zh": "OpenEQA EM-EQA \u6d4b\u8bd5\u591a\u6a21\u6001\u6a21\u578b\u80fd\u5426\u8bb0\u4f4f\u5e76\u63a8\u7406\u5148\u524d\u89c2\u5bdf\u8fc7\u7684\u4e09\u7ef4\u73af\u5883\u3002"
+    },
+    "task_format": {
+      "en": "The model receives an open-ended embodied question and sampled frames from a prerecorded egocentric environment history.",
+      "zh": "\u6a21\u578b\u4f1a\u6536\u5230\u4e00\u9053\u5f00\u653e\u5f0f\u5177\u8eab\u95ee\u9898\uff0c\u4ee5\u53ca\u4ece\u9884\u5f55\u7b2c\u4e00\u4eba\u79f0\u73af\u5883\u5386\u53f2\u4e2d\u91c7\u6837\u7684\u56fe\u50cf\u5e27\u3002"
+    },
+    "scoring": {
+      "metric_name": "Normalized LLM-Match",
+      "explanation": {
+        "en": "A pinned GPT-4 judge rates each answer from 1 to 5; ratings are linearly normalized to 0-100 and averaged over 1,636 questions.",
+        "zh": "\u56fa\u5b9a GPT-4 judge \u5c06\u6bcf\u4e2a\u7b54\u6848\u8bc4\u4e3a 1\u20135 \u5206\uff0c\u518d\u7ebf\u6027\u5f52\u4e00\u5316\u5230 0\u2013100\uff0c\u5e76\u5728 1,636 \u9053\u9898\u4e0a\u53d6\u5e73\u5747\u3002"
+      }
+    },
+    "evaluation_target": "final_output",
+    "observation_count": 3,
+    "evidence_record_count": 3,
+    "observations": [
+      {
+        "observation_id": "obs-0-363-f374c374ff9dd66c",
+        "benchmark_id": "openeqa-em-eqa-v0",
+        "benchmark_version_id": "openeqa-em-eqa-v0-canonical",
+        "model_id": "model-claude-3-opus-20-frames-b9baa6244ed2e672",
+        "model_configuration": "Claude 3 Opus 20 frames",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-opus-20-frames",
+        "model_family_id": "anthropic-claude-3-opus-20-frames",
+        "model": "Claude 3 Opus 20 frames",
+        "organization": "Anthropic",
+        "score": 0.363,
+        "input_score": 0.363,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "openeqa-em-eqa-v0-metric-v1",
+        "protocol_id": "openeqa-em-eqa-v0-source-export-v1",
+        "task_set_id": "openeqa-em-eqa-v0-canonical",
+        "metric": "LLM-Match",
+        "score_role": "canonical",
+        "score_series_id": "openeqa-em-eqa-v0-canonical-score",
+        "evaluation_protocol": "OpenEQA v0 fixed 1,636-question EM-EQA split with source-specific published frame budgets and official GPT-4-1106-preview LLM-Match judge. Active A-EQA is excluded.",
+        "model_release_date": "2024-03-04",
+        "evaluation_date": null,
+        "result_public_date": "2024-04-11",
+        "source_publication_date": "2024-04-11",
+        "observation_date": "2024-03-04",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-03-04",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-04-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-03-04",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-03-04",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-04-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-open-eqa-github-io-8d2f29cb799635e6",
+          "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+        ],
+        "score_source_ids": [
+          "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+        ],
+        "source": "https://open-eqa.github.io/assets/pdfs/paper.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-openeqa-claude3-opus-e73fde0db73e3e7d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "openeqa-claude3-opus"
+        ]
+      },
+      {
+        "observation_id": "obs-0-449-0bc1c824e8627b40",
+        "benchmark_id": "openeqa-em-eqa-v0",
+        "benchmark_version_id": "openeqa-em-eqa-v0-canonical",
+        "model_id": "model-gemini-1-0-pro-vision-15-frames-ef10198bee5cf029",
+        "model_configuration": "Gemini 1.0 Pro Vision 15 frames",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-1-0-pro-vision-15-frames",
+        "model_family_id": "google-gemini-1-0-pro-vision-15-frames",
+        "model": "Gemini 1.0 Pro Vision 15 frames",
+        "organization": "Google",
+        "score": 0.449,
+        "input_score": 0.449,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "openeqa-em-eqa-v0-metric-v1",
+        "protocol_id": "openeqa-em-eqa-v0-source-export-v1",
+        "task_set_id": "openeqa-em-eqa-v0-canonical",
+        "metric": "LLM-Match",
+        "score_role": "canonical",
+        "score_series_id": "openeqa-em-eqa-v0-canonical-score",
+        "evaluation_protocol": "OpenEQA v0 fixed 1,636-question EM-EQA split with source-specific published frame budgets and official GPT-4-1106-preview LLM-Match judge. Active A-EQA is excluded.",
+        "model_release_date": "2023-12-06",
+        "evaluation_date": null,
+        "result_public_date": "2024-04-11",
+        "source_publication_date": "2024-04-11",
+        "observation_date": "2023-12-06",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-12-06",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-04-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2023-12-06",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-12-06",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-04-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-open-eqa-github-io-8d2f29cb799635e6",
+          "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+        ],
+        "score_source_ids": [
+          "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+        ],
+        "source": "https://open-eqa.github.io/assets/pdfs/paper.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-openeqa-gemini-pro-vision-a17dd6886f8343c5"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "openeqa-gemini-pro-vision"
+        ]
+      },
+      {
+        "observation_id": "obs-0-553-b9df41978786848a",
+        "benchmark_id": "openeqa-em-eqa-v0",
+        "benchmark_version_id": "openeqa-em-eqa-v0-canonical",
+        "model_id": "model-gpt-4v-50-frames-4587529737616530",
+        "model_configuration": "GPT-4V 50 frames",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4v-50-frames",
+        "model_family_id": "openai-gpt-4v-50-frames",
+        "model": "GPT-4V 50 frames",
+        "organization": "OpenAI",
+        "score": 0.553,
+        "input_score": 0.553,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "openeqa-em-eqa-v0-metric-v1",
+        "protocol_id": "openeqa-em-eqa-v0-source-export-v1",
+        "task_set_id": "openeqa-em-eqa-v0-canonical",
+        "metric": "LLM-Match",
+        "score_role": "canonical",
+        "score_series_id": "openeqa-em-eqa-v0-canonical-score",
+        "evaluation_protocol": "OpenEQA v0 fixed 1,636-question EM-EQA split with source-specific published frame budgets and official GPT-4-1106-preview LLM-Match judge. Active A-EQA is excluded.",
+        "model_release_date": "2023-09-25",
+        "evaluation_date": null,
+        "result_public_date": "2024-04-11",
+        "source_publication_date": "2024-04-11",
+        "observation_date": "2023-09-25",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-09-25",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-04-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2023-09-25",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-09-25",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-04-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-open-eqa-github-io-8d2f29cb799635e6",
+          "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+        ],
+        "score_source_ids": [
+          "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+        ],
+        "source": "https://open-eqa.github.io/assets/pdfs/paper.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-openeqa-gpt4v-4f7853d19c969440"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "openeqa-gpt4v"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-553-b9df41978786848a",
+        "benchmark_id": "openeqa-em-eqa-v0",
+        "benchmark_version_id": "openeqa-em-eqa-v0-canonical",
+        "model_id": "model-gpt-4v-50-frames-4587529737616530",
+        "model_configuration": "GPT-4V 50 frames",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4v-50-frames",
+        "model_family_id": "openai-gpt-4v-50-frames",
+        "model": "GPT-4V 50 frames",
+        "organization": "OpenAI",
+        "score": 0.553,
+        "input_score": 0.553,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "openeqa-em-eqa-v0-metric-v1",
+        "protocol_id": "openeqa-em-eqa-v0-source-export-v1",
+        "task_set_id": "openeqa-em-eqa-v0-canonical",
+        "metric": "LLM-Match",
+        "score_role": "canonical",
+        "score_series_id": "openeqa-em-eqa-v0-canonical-score",
+        "evaluation_protocol": "OpenEQA v0 fixed 1,636-question EM-EQA split with source-specific published frame budgets and official GPT-4-1106-preview LLM-Match judge. Active A-EQA is excluded.",
+        "model_release_date": "2023-09-25",
+        "evaluation_date": null,
+        "result_public_date": "2024-04-11",
+        "source_publication_date": "2024-04-11",
+        "observation_date": "2023-09-25",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-09-25",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-04-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-04-11",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-09-25",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-04-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-open-eqa-github-io-8d2f29cb799635e6",
+          "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+        ],
+        "score_source_ids": [
+          "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+        ],
+        "source": "https://open-eqa.github.io/assets/pdfs/paper.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-openeqa-gpt4v-4f7853d19c969440"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "openeqa-gpt4v"
+        ],
+        "plot_date": "2024-04-11",
+        "frontier_observation_ids": [
+          "obs-0-363-f374c374ff9dd66c",
+          "obs-0-449-0bc1c824e8627b40",
+          "obs-0-553-b9df41978786848a"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-553-b9df41978786848a",
+        "benchmark_id": "openeqa-em-eqa-v0",
+        "benchmark_version_id": "openeqa-em-eqa-v0-canonical",
+        "model_id": "model-gpt-4v-50-frames-4587529737616530",
+        "model_configuration": "GPT-4V 50 frames",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4v-50-frames",
+        "model_family_id": "openai-gpt-4v-50-frames",
+        "model": "GPT-4V 50 frames",
+        "organization": "OpenAI",
+        "score": 0.553,
+        "input_score": 0.553,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "openeqa-em-eqa-v0-metric-v1",
+        "protocol_id": "openeqa-em-eqa-v0-source-export-v1",
+        "task_set_id": "openeqa-em-eqa-v0-canonical",
+        "metric": "LLM-Match",
+        "score_role": "canonical",
+        "score_series_id": "openeqa-em-eqa-v0-canonical-score",
+        "evaluation_protocol": "OpenEQA v0 fixed 1,636-question EM-EQA split with source-specific published frame budgets and official GPT-4-1106-preview LLM-Match judge. Active A-EQA is excluded.",
+        "model_release_date": "2023-09-25",
+        "evaluation_date": null,
+        "result_public_date": "2024-04-11",
+        "source_publication_date": "2024-04-11",
+        "observation_date": "2023-09-25",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-09-25",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-04-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-04-11",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-09-25",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-04-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-open-eqa-github-io-8d2f29cb799635e6",
+          "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+        ],
+        "score_source_ids": [
+          "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+        ],
+        "source": "https://open-eqa.github.io/assets/pdfs/paper.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-openeqa-gpt4v-4f7853d19c969440"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "openeqa-gpt4v"
+        ],
+        "plot_date": "2024-04-11",
+        "frontier_observation_ids": [
+          "obs-0-363-f374c374ff9dd66c",
+          "obs-0-449-0bc1c824e8627b40",
+          "obs-0-553-b9df41978786848a"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-553-b9df41978786848a",
+        "benchmark_id": "openeqa-em-eqa-v0",
+        "benchmark_version_id": "openeqa-em-eqa-v0-canonical",
+        "model_id": "model-gpt-4v-50-frames-4587529737616530",
+        "model_configuration": "GPT-4V 50 frames",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4v-50-frames",
+        "model_family_id": "openai-gpt-4v-50-frames",
+        "model": "GPT-4V 50 frames",
+        "organization": "OpenAI",
+        "score": 0.553,
+        "input_score": 0.553,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "openeqa-em-eqa-v0-metric-v1",
+        "protocol_id": "openeqa-em-eqa-v0-source-export-v1",
+        "task_set_id": "openeqa-em-eqa-v0-canonical",
+        "metric": "LLM-Match",
+        "score_role": "canonical",
+        "score_series_id": "openeqa-em-eqa-v0-canonical-score",
+        "evaluation_protocol": "OpenEQA v0 fixed 1,636-question EM-EQA split with source-specific published frame budgets and official GPT-4-1106-preview LLM-Match judge. Active A-EQA is excluded.",
+        "model_release_date": "2023-09-25",
+        "evaluation_date": null,
+        "result_public_date": "2024-04-11",
+        "source_publication_date": "2024-04-11",
+        "observation_date": "2023-09-25",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-09-25",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-04-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-04-11",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-09-25",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-04-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-open-eqa-github-io-8d2f29cb799635e6",
+          "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+        ],
+        "score_source_ids": [
+          "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+        ],
+        "source": "https://open-eqa.github.io/assets/pdfs/paper.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-openeqa-gpt4v-4f7853d19c969440"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "openeqa-gpt4v"
+        ],
+        "plot_date": "2024-04-11",
+        "frontier_observation_ids": [
+          "obs-0-363-f374c374ff9dd66c",
+          "obs-0-449-0bc1c824e8627b40",
+          "obs-0-553-b9df41978786848a"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-553-b9df41978786848a",
+        "benchmark_id": "openeqa-em-eqa-v0",
+        "benchmark_version_id": "openeqa-em-eqa-v0-canonical",
+        "model_id": "model-gpt-4v-50-frames-4587529737616530",
+        "model_configuration": "GPT-4V 50 frames",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4v-50-frames",
+        "model_family_id": "openai-gpt-4v-50-frames",
+        "model": "GPT-4V 50 frames",
+        "organization": "OpenAI",
+        "score": 0.553,
+        "input_score": 0.553,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "openeqa-em-eqa-v0-metric-v1",
+        "protocol_id": "openeqa-em-eqa-v0-source-export-v1",
+        "task_set_id": "openeqa-em-eqa-v0-canonical",
+        "metric": "LLM-Match",
+        "score_role": "canonical",
+        "score_series_id": "openeqa-em-eqa-v0-canonical-score",
+        "evaluation_protocol": "OpenEQA v0 fixed 1,636-question EM-EQA split with source-specific published frame budgets and official GPT-4-1106-preview LLM-Match judge. Active A-EQA is excluded.",
+        "model_release_date": "2023-09-25",
+        "evaluation_date": null,
+        "result_public_date": "2024-04-11",
+        "source_publication_date": "2024-04-11",
+        "observation_date": "2023-09-25",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-09-25",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-04-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-04-11",
+        "date_kind": "result first-public date",
+        "capability_date": "2023-09-25",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-04-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-open-eqa-github-io-8d2f29cb799635e6",
+          "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+        ],
+        "score_source_ids": [
+          "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+        ],
+        "source": "https://open-eqa.github.io/assets/pdfs/paper.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-openeqa-gpt4v-4f7853d19c969440"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "openeqa-gpt4v"
+        ],
+        "plot_date": "2024-04-11",
+        "frontier_observation_ids": [
+          "obs-0-363-f374c374ff9dd66c",
+          "obs-0-449-0bc1c824e8627b40",
+          "obs-0-553-b9df41978786848a"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-553-b9df41978786848a",
+        "benchmark_id": "openeqa-em-eqa-v0",
+        "benchmark_version_id": "openeqa-em-eqa-v0-canonical",
+        "model_id": "model-gpt-4v-50-frames-4587529737616530",
+        "model_configuration": "GPT-4V 50 frames",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4v-50-frames",
+        "model_family_id": "openai-gpt-4v-50-frames",
+        "model": "GPT-4V 50 frames",
+        "organization": "OpenAI",
+        "score": 0.553,
+        "input_score": 0.553,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "openeqa-em-eqa-v0-metric-v1",
+        "protocol_id": "openeqa-em-eqa-v0-source-export-v1",
+        "task_set_id": "openeqa-em-eqa-v0-canonical",
+        "metric": "LLM-Match",
+        "score_role": "canonical",
+        "score_series_id": "openeqa-em-eqa-v0-canonical-score",
+        "evaluation_protocol": "OpenEQA v0 fixed 1,636-question EM-EQA split with source-specific published frame budgets and official GPT-4-1106-preview LLM-Match judge. Active A-EQA is excluded.",
+        "model_release_date": "2023-09-25",
+        "evaluation_date": null,
+        "result_public_date": "2024-04-11",
+        "source_publication_date": "2024-04-11",
+        "observation_date": "2023-09-25",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-09-25",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-04-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-04-11",
+        "date_kind": "result first-public date",
+        "capability_date": "2023-09-25",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-04-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-open-eqa-github-io-8d2f29cb799635e6",
+          "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+        ],
+        "score_source_ids": [
+          "resource-https-open-eqa-github-io-assets-pdfs-paper-pdf-eff8f550138e4aee"
+        ],
+        "source": "https://open-eqa.github.io/assets/pdfs/paper.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-openeqa-gpt4v-4f7853d19c969440"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "openeqa-gpt4v"
+        ],
+        "plot_date": "2024-04-11",
+        "frontier_observation_ids": [
+          "obs-0-363-f374c374ff9dd66c",
+          "obs-0-449-0bc1c824e8627b40",
+          "obs-0-553-b9df41978786848a"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.553,
+    "capability_frontier_value": 0.553,
+    "reported_frontier_value": 0.553,
+    "current_frontier": 0.553,
+    "normalized_progress": 0.553,
+    "normalized_headroom": 0.44699999999999995,
+    "threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2024-04-11"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 878
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 878
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2024-04-11"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 878
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 878
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2024-04-11"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 878
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 878
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.42857142857142855,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google"
+      ],
+      "panel_size": 7,
+      "status": "medium"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-open-eqa-github-io-8d2f29cb799635e6"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": true,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

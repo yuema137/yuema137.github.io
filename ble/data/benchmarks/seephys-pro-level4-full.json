@@ -1,0 +1,1068 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "seephys-pro-level4-full",
+    "name": "SeePhys Pro \u2014 Level 4 Full",
+    "domain": "Physics",
+    "release": "2026-05-13",
+    "source": "https://seephyspro.github.io/",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "percentage_points",
+    "evaluation_type": "Model",
+    "tags": [
+      "handwriting",
+      "vision",
+      "problem solving"
+    ],
+    "metric": "Accuracy",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "seephys-pro-level4-full-metric-v1",
+    "protocol_id": "seephys-pro-level4-full-source-export-v1",
+    "canonical_score": {
+      "series_id": "seephys-pro-level4-full-canonical-score",
+      "role": "canonical",
+      "metric_id": "seephys-pro-level4-full-metric-v1",
+      "metric_name": "Accuracy",
+      "protocol_id": "seephys-pro-level4-full-source-export-v1",
+      "task_set_id": "seephys-pro-level4-full-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "percentage_points",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "seephys-pro-level4-full-canonical",
+    "summary": {
+      "en": "SeePhys Pro evaluates physics problem solving from complete handwritten visual statements.",
+      "zh": "SeePhys Pro \u8bc4\u4f30\u6a21\u578b\u6839\u636e\u5b8c\u6574\u624b\u5199\u89c6\u89c9\u9898\u9762\u89e3\u51b3\u7269\u7406\u95ee\u9898\u7684\u80fd\u529b\u3002"
+    },
+    "task_format": {
+      "en": "Read a single image containing the statement, formulas, variables, and diagram, then return the final answer.",
+      "zh": "\u8bfb\u53d6\u4e00\u5f20\u5305\u542b\u9898\u5e72\u3001\u516c\u5f0f\u3001\u53d8\u91cf\u548c\u793a\u610f\u56fe\u7684\u56fe\u7247\uff0c\u518d\u8fd4\u56de\u6700\u7ec8\u7b54\u6848\u3002"
+    },
+    "scoring": {
+      "metric_name": "Level 4 full-test accuracy",
+      "explanation": {
+        "en": "Accuracy on 800 fixed Level-4 problems under deterministic checks plus a fixed judge for unresolved answers.",
+        "zh": "\u5728 800 \u9053\u56fa\u5b9a Level-4 \u95ee\u9898\u4e0a\uff0c\u4ee5\u786e\u5b9a\u6027\u89c4\u5219\u53ca\u56fa\u5b9a judge \u5904\u7406\u672a\u51b3\u7b54\u6848\u540e\u8ba1\u7b97\u51c6\u786e\u7387\u3002"
+      }
+    },
+    "evaluation_target": "final_output",
+    "observation_count": 5,
+    "evidence_record_count": 5,
+    "observations": [
+      {
+        "observation_id": "obs-0-232-b50656c4010fd00f",
+        "benchmark_id": "seephys-pro-level4-full",
+        "benchmark_version_id": "seephys-pro-level4-full-canonical",
+        "model_id": "model-gpt-5-cdd3b6d6cb9421c1",
+        "model_configuration": "GPT-5",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5",
+        "model_family_id": "openai-gpt-5",
+        "model": "GPT-5",
+        "organization": "OpenAI",
+        "score": 0.23199999999999998,
+        "input_score": 23.2,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "seephys-pro-level4-full-metric-v1",
+        "protocol_id": "seephys-pro-level4-full-source-export-v1",
+        "task_set_id": "seephys-pro-level4-full-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "seephys-pro-level4-full-canonical-score",
+        "evaluation_protocol": "SeePhys Pro Level 4 full 800-problem test only; testmini, cross-level average and consistency metrics excluded.",
+        "model_release_date": "2025-08-07",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-13",
+        "source_publication_date": "2026-05-13",
+        "observation_date": "2025-08-07",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-08-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-13",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-08-07",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-08-07",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-13",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+        ],
+        "score_source_ids": [
+          "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+        ],
+        "source": "https://seephyspro.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-seephys-gpt5-2e3424865f930e0e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "seephys-gpt5"
+        ]
+      },
+      {
+        "observation_id": "obs-0-455-da5e84445594195f",
+        "benchmark_id": "seephys-pro-level4-full",
+        "benchmark_version_id": "seephys-pro-level4-full-canonical",
+        "model_id": "model-gemini-3-pro-ebaa316d834e71b0",
+        "model_configuration": "Gemini-3-Pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-pro",
+        "model_family_id": "google-gemini-3-pro",
+        "model": "Gemini-3-Pro",
+        "organization": "Google",
+        "score": 0.455,
+        "input_score": 45.5,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "seephys-pro-level4-full-metric-v1",
+        "protocol_id": "seephys-pro-level4-full-source-export-v1",
+        "task_set_id": "seephys-pro-level4-full-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "seephys-pro-level4-full-canonical-score",
+        "evaluation_protocol": "SeePhys Pro Level 4 full 800-problem test only; testmini, cross-level average and consistency metrics excluded.",
+        "model_release_date": "2025-11-18",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-13",
+        "source_publication_date": "2026-05-13",
+        "observation_date": "2025-11-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-11-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-13",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-11-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-11-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-13",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+        ],
+        "score_source_ids": [
+          "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+        ],
+        "source": "https://seephyspro.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-seephys-gemini3-e6ea840055e66309"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "seephys-gemini3"
+        ]
+      },
+      {
+        "observation_id": "obs-0-3-4379ff1d56bd4e35",
+        "benchmark_id": "seephys-pro-level4-full",
+        "benchmark_version_id": "seephys-pro-level4-full-canonical",
+        "model_id": "model-claude-opus-4-6-49675742c406fafd",
+        "model_configuration": "Claude-Opus-4.6",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-6",
+        "model_family_id": "anthropic-claude-opus-4-6",
+        "model": "Claude-Opus-4.6",
+        "organization": "Anthropic",
+        "score": 0.3,
+        "input_score": 30.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "seephys-pro-level4-full-metric-v1",
+        "protocol_id": "seephys-pro-level4-full-source-export-v1",
+        "task_set_id": "seephys-pro-level4-full-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "seephys-pro-level4-full-canonical-score",
+        "evaluation_protocol": "SeePhys Pro Level 4 full 800-problem test only; testmini, cross-level average and consistency metrics excluded.",
+        "model_release_date": "2026-02-05",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-13",
+        "source_publication_date": "2026-05-13",
+        "observation_date": "2026-02-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-02-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-13",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-02-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-02-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-13",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+        ],
+        "score_source_ids": [
+          "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+        ],
+        "source": "https://seephyspro.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-seephys-opus46-de4aedf82f172c23"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "seephys-opus46"
+        ]
+      },
+      {
+        "observation_id": "obs-0-256-f1f3106b69dc2070",
+        "benchmark_id": "seephys-pro-level4-full",
+        "benchmark_version_id": "seephys-pro-level4-full-canonical",
+        "model_id": "model-qwen3-5-27b-bfc5e7f90a87b780",
+        "model_configuration": "Qwen3.5-27B",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen3-5-27b",
+        "model_family_id": "qwen-alibaba-qwen3-5-27b",
+        "model": "Qwen3.5-27B",
+        "organization": "Qwen/Alibaba",
+        "score": 0.256,
+        "input_score": 25.6,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "seephys-pro-level4-full-metric-v1",
+        "protocol_id": "seephys-pro-level4-full-source-export-v1",
+        "task_set_id": "seephys-pro-level4-full-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "seephys-pro-level4-full-canonical-score",
+        "evaluation_protocol": "SeePhys Pro Level 4 full 800-problem test only; testmini, cross-level average and consistency metrics excluded.",
+        "model_release_date": "2026-02-24",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-13",
+        "source_publication_date": "2026-05-13",
+        "observation_date": "2026-02-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-02-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-13",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-02-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-02-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-13",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+        ],
+        "score_source_ids": [
+          "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+        ],
+        "source": "https://seephyspro.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-seephys-qwen35-f49fee85feb6427d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "seephys-qwen35"
+        ]
+      },
+      {
+        "observation_id": "obs-0-53-62d70b4ce5dec2cf",
+        "benchmark_id": "seephys-pro-level4-full",
+        "benchmark_version_id": "seephys-pro-level4-full-canonical",
+        "model_id": "model-gpt-5-4-e04bff139d4a64e2",
+        "model_configuration": "GPT-5.4",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-4",
+        "model_family_id": "openai-gpt-5-4",
+        "model": "GPT-5.4",
+        "organization": "OpenAI",
+        "score": 0.53,
+        "input_score": 53.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "seephys-pro-level4-full-metric-v1",
+        "protocol_id": "seephys-pro-level4-full-source-export-v1",
+        "task_set_id": "seephys-pro-level4-full-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "seephys-pro-level4-full-canonical-score",
+        "evaluation_protocol": "SeePhys Pro Level 4 full 800-problem test only; testmini, cross-level average and consistency metrics excluded.",
+        "model_release_date": "2026-03-05",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-13",
+        "source_publication_date": "2026-05-13",
+        "observation_date": "2026-03-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-03-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-13",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-03-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-03-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-13",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+        ],
+        "score_source_ids": [
+          "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+        ],
+        "source": "https://seephyspro.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-seephys-gpt54-c5119a3368e6fcf8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "seephys-gpt54"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-53-62d70b4ce5dec2cf",
+        "benchmark_id": "seephys-pro-level4-full",
+        "benchmark_version_id": "seephys-pro-level4-full-canonical",
+        "model_id": "model-gpt-5-4-e04bff139d4a64e2",
+        "model_configuration": "GPT-5.4",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-4",
+        "model_family_id": "openai-gpt-5-4",
+        "model": "GPT-5.4",
+        "organization": "OpenAI",
+        "score": 0.53,
+        "input_score": 53.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "seephys-pro-level4-full-metric-v1",
+        "protocol_id": "seephys-pro-level4-full-source-export-v1",
+        "task_set_id": "seephys-pro-level4-full-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "seephys-pro-level4-full-canonical-score",
+        "evaluation_protocol": "SeePhys Pro Level 4 full 800-problem test only; testmini, cross-level average and consistency metrics excluded.",
+        "model_release_date": "2026-03-05",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-13",
+        "source_publication_date": "2026-05-13",
+        "observation_date": "2026-03-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-03-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-13",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-05-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-03-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-13",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+        ],
+        "score_source_ids": [
+          "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+        ],
+        "source": "https://seephyspro.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-seephys-gpt54-c5119a3368e6fcf8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "seephys-gpt54"
+        ],
+        "plot_date": "2026-05-13",
+        "frontier_observation_ids": [
+          "obs-0-232-b50656c4010fd00f",
+          "obs-0-256-f1f3106b69dc2070",
+          "obs-0-3-4379ff1d56bd4e35",
+          "obs-0-455-da5e84445594195f",
+          "obs-0-53-62d70b4ce5dec2cf"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-53-62d70b4ce5dec2cf",
+        "benchmark_id": "seephys-pro-level4-full",
+        "benchmark_version_id": "seephys-pro-level4-full-canonical",
+        "model_id": "model-gpt-5-4-e04bff139d4a64e2",
+        "model_configuration": "GPT-5.4",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-4",
+        "model_family_id": "openai-gpt-5-4",
+        "model": "GPT-5.4",
+        "organization": "OpenAI",
+        "score": 0.53,
+        "input_score": 53.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "seephys-pro-level4-full-metric-v1",
+        "protocol_id": "seephys-pro-level4-full-source-export-v1",
+        "task_set_id": "seephys-pro-level4-full-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "seephys-pro-level4-full-canonical-score",
+        "evaluation_protocol": "SeePhys Pro Level 4 full 800-problem test only; testmini, cross-level average and consistency metrics excluded.",
+        "model_release_date": "2026-03-05",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-13",
+        "source_publication_date": "2026-05-13",
+        "observation_date": "2026-03-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-03-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-13",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-05-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-03-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-13",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+        ],
+        "score_source_ids": [
+          "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+        ],
+        "source": "https://seephyspro.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-seephys-gpt54-c5119a3368e6fcf8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "seephys-gpt54"
+        ],
+        "plot_date": "2026-05-13",
+        "frontier_observation_ids": [
+          "obs-0-232-b50656c4010fd00f",
+          "obs-0-256-f1f3106b69dc2070",
+          "obs-0-3-4379ff1d56bd4e35",
+          "obs-0-455-da5e84445594195f",
+          "obs-0-53-62d70b4ce5dec2cf"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-53-62d70b4ce5dec2cf",
+        "benchmark_id": "seephys-pro-level4-full",
+        "benchmark_version_id": "seephys-pro-level4-full-canonical",
+        "model_id": "model-gpt-5-4-e04bff139d4a64e2",
+        "model_configuration": "GPT-5.4",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-4",
+        "model_family_id": "openai-gpt-5-4",
+        "model": "GPT-5.4",
+        "organization": "OpenAI",
+        "score": 0.53,
+        "input_score": 53.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "seephys-pro-level4-full-metric-v1",
+        "protocol_id": "seephys-pro-level4-full-source-export-v1",
+        "task_set_id": "seephys-pro-level4-full-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "seephys-pro-level4-full-canonical-score",
+        "evaluation_protocol": "SeePhys Pro Level 4 full 800-problem test only; testmini, cross-level average and consistency metrics excluded.",
+        "model_release_date": "2026-03-05",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-13",
+        "source_publication_date": "2026-05-13",
+        "observation_date": "2026-03-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-03-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-13",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-05-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-03-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-13",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+        ],
+        "score_source_ids": [
+          "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+        ],
+        "source": "https://seephyspro.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-seephys-gpt54-c5119a3368e6fcf8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "seephys-gpt54"
+        ],
+        "plot_date": "2026-05-13",
+        "frontier_observation_ids": [
+          "obs-0-232-b50656c4010fd00f",
+          "obs-0-256-f1f3106b69dc2070",
+          "obs-0-3-4379ff1d56bd4e35",
+          "obs-0-455-da5e84445594195f",
+          "obs-0-53-62d70b4ce5dec2cf"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-53-62d70b4ce5dec2cf",
+        "benchmark_id": "seephys-pro-level4-full",
+        "benchmark_version_id": "seephys-pro-level4-full-canonical",
+        "model_id": "model-gpt-5-4-e04bff139d4a64e2",
+        "model_configuration": "GPT-5.4",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-4",
+        "model_family_id": "openai-gpt-5-4",
+        "model": "GPT-5.4",
+        "organization": "OpenAI",
+        "score": 0.53,
+        "input_score": 53.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "seephys-pro-level4-full-metric-v1",
+        "protocol_id": "seephys-pro-level4-full-source-export-v1",
+        "task_set_id": "seephys-pro-level4-full-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "seephys-pro-level4-full-canonical-score",
+        "evaluation_protocol": "SeePhys Pro Level 4 full 800-problem test only; testmini, cross-level average and consistency metrics excluded.",
+        "model_release_date": "2026-03-05",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-13",
+        "source_publication_date": "2026-05-13",
+        "observation_date": "2026-03-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-03-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-13",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-05-13",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-03-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-13",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+        ],
+        "score_source_ids": [
+          "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+        ],
+        "source": "https://seephyspro.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-seephys-gpt54-c5119a3368e6fcf8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "seephys-gpt54"
+        ],
+        "plot_date": "2026-05-13",
+        "frontier_observation_ids": [
+          "obs-0-232-b50656c4010fd00f",
+          "obs-0-256-f1f3106b69dc2070",
+          "obs-0-3-4379ff1d56bd4e35",
+          "obs-0-455-da5e84445594195f",
+          "obs-0-53-62d70b4ce5dec2cf"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-53-62d70b4ce5dec2cf",
+        "benchmark_id": "seephys-pro-level4-full",
+        "benchmark_version_id": "seephys-pro-level4-full-canonical",
+        "model_id": "model-gpt-5-4-e04bff139d4a64e2",
+        "model_configuration": "GPT-5.4",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-4",
+        "model_family_id": "openai-gpt-5-4",
+        "model": "GPT-5.4",
+        "organization": "OpenAI",
+        "score": 0.53,
+        "input_score": 53.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "seephys-pro-level4-full-metric-v1",
+        "protocol_id": "seephys-pro-level4-full-source-export-v1",
+        "task_set_id": "seephys-pro-level4-full-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "seephys-pro-level4-full-canonical-score",
+        "evaluation_protocol": "SeePhys Pro Level 4 full 800-problem test only; testmini, cross-level average and consistency metrics excluded.",
+        "model_release_date": "2026-03-05",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-13",
+        "source_publication_date": "2026-05-13",
+        "observation_date": "2026-03-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-03-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-13",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-05-13",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-03-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-13",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+        ],
+        "score_source_ids": [
+          "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+        ],
+        "source": "https://seephyspro.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-seephys-gpt54-c5119a3368e6fcf8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "seephys-gpt54"
+        ],
+        "plot_date": "2026-05-13",
+        "frontier_observation_ids": [
+          "obs-0-232-b50656c4010fd00f",
+          "obs-0-256-f1f3106b69dc2070",
+          "obs-0-3-4379ff1d56bd4e35",
+          "obs-0-455-da5e84445594195f",
+          "obs-0-53-62d70b4ce5dec2cf"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.53,
+    "capability_frontier_value": 0.53,
+    "reported_frontier_value": 0.53,
+    "current_frontier": 0.53,
+    "normalized_progress": 0.53,
+    "normalized_headroom": 0.47,
+    "threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-05-13"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 116
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 116
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-05-13"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 116
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 116
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-05-13"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 116
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 116
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.5714285714285714,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "Qwen"
+      ],
+      "panel_size": 7,
+      "status": "medium"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-seephyspro-github-io-71a62ff223e3dbfa"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

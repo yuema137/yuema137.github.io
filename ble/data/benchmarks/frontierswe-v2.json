@@ -1,0 +1,1361 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "frontierswe-v2",
+    "name": "FrontierSWE V2",
+    "domain": "Software engineering",
+    "release": "2026-07-01",
+    "source": "https://www.frontierswe.com/",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Agent",
+    "tags": [
+      "repository",
+      "quality",
+      "multi-run"
+    ],
+    "metric": "Score",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "frontierswe-v2-metric-v1",
+    "protocol_id": "frontierswe-v2-source-export-v1",
+    "canonical_score": {
+      "series_id": "frontierswe-v2-canonical-score",
+      "role": "canonical",
+      "metric_id": "frontierswe-v2-metric-v1",
+      "metric_name": "Score",
+      "protocol_id": "frontierswe-v2-source-export-v1",
+      "task_set_id": "frontierswe-v2-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "frontierswe-v2-canonical",
+    "summary": {
+      "en": "FrontierSWE V2 evaluates coding agents on difficult software tasks using separate implementation, performance, and research-quality dimensions.",
+      "zh": "FrontierSWE V2 \u4ece implementation\u3001performance \u548c research quality \u7b49\u7ef4\u5ea6\u8bc4\u4f30 agent \u5b8c\u6210\u9ad8\u96be\u5ea6\u8f6f\u4ef6\u4efb\u52a1\u7684\u80fd\u529b\u3002"
+    },
+    "task_format": {
+      "en": "The agent works on repository-level engineering tasks and submits changes evaluated across implementation correctness, performance, and research-oriented quality criteria.",
+      "zh": "agent \u9700\u8981\u5b8c\u6210 repository-level engineering task \u5e76\u63d0\u4ea4\u4fee\u6539\uff0c\u7ed3\u679c\u4f1a\u4ece\u5b9e\u73b0\u6b63\u786e\u6027\u3001\u6027\u80fd\u548c research quality \u7b49\u7ef4\u5ea6\u8bc4\u4f30\u3002"
+    },
+    "scoring": {
+      "metric_name": "Mean@5 composite score",
+      "explanation": {
+        "en": "The headline score is the mean across five runs of the benchmark's composite score; the implementation, performance, and research components are preserved as supporting evidence.",
+        "zh": "headline score \u662f\u4e94\u6b21\u8fd0\u884c\u4e2d composite score \u7684\u5747\u503c\uff1bimplementation\u3001performance \u548c research \u5206\u9879\u4f5c\u4e3a supporting evidence \u4fdd\u7559\u3002"
+      }
+    },
+    "evaluation_target": "environment_outcome",
+    "observation_count": 9,
+    "evidence_record_count": 9,
+    "observations": [
+      {
+        "observation_id": "obs-0-5629079-cc7972a85a32c1a1",
+        "benchmark_id": "frontierswe-v2",
+        "benchmark_version_id": "frontierswe-v2-canonical",
+        "model_id": "model-claude-fable-5-1-max-c194931f4ebd95c1",
+        "model_configuration": "claude-fable-5-1_max",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-1",
+        "model_family_id": "anthropic-claude-fable-5-1",
+        "model": "Claude Fable 5.1",
+        "organization": "Anthropic",
+        "score": 0.5629079,
+        "input_score": 0.5629079,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "138.55",
+        "metric_id": "frontierswe-v2-metric-v1",
+        "protocol_id": "frontierswe-v2-source-export-v1",
+        "task_set_id": "frontierswe-v2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "frontierswe-v2-canonical-score",
+        "evaluation_protocol": "FrontierSWE V2 public leaderboard export; Mean@5 rows using the proximus harness are kept together, while Best@5 and Worst@5 are not substituted for the headline metric.",
+        "model_release_date": "2026-09-01",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-09-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+              "resource-https-www-frontierswe-com-595e7d6ffd585872"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-09-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "score_source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "source": "https://www.frontierswe.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-cost-usd-138-55-model-version-claude-fab-002de6254f29954f"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-32202467-b64bb2853864465d",
+        "benchmark_id": "frontierswe-v2",
+        "benchmark_version_id": "frontierswe-v2-canonical",
+        "model_id": "model-gpt-5-6-sol-max-7bbcab2b311e20d4",
+        "model_configuration": "gpt-5.6-sol_max",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6",
+        "model_family_id": "openai-gpt-5-6",
+        "model": "GPT-5.6",
+        "organization": "OpenAI",
+        "score": 0.32202467,
+        "input_score": 0.32202467,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "179.64",
+        "metric_id": "frontierswe-v2-metric-v1",
+        "protocol_id": "frontierswe-v2-source-export-v1",
+        "task_set_id": "frontierswe-v2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "frontierswe-v2-canonical-score",
+        "evaluation_protocol": "FrontierSWE V2 public leaderboard export; Mean@5 rows using the proximus harness are kept together, while Best@5 and Worst@5 are not substituted for the headline metric.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-frontierswe-com-595e7d6ffd585872"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "score_source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "source": "https://www.frontierswe.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-cost-usd-179-64-model-version-gpt-5-6-so-c37cf18241fb8a3f"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-30181864-36dcd2a68d0eb2e6",
+        "benchmark_id": "frontierswe-v2",
+        "benchmark_version_id": "frontierswe-v2-canonical",
+        "model_id": "model-glm-5-3-max-a4f40cdaaa22c40e",
+        "model_configuration": "glm-5.3_max",
+        "model_identity_organization": "z-ai",
+        "model_label_id": "glm-5-3",
+        "model_family_id": "z-ai-glm-5-3",
+        "model": "GLM-5.3",
+        "organization": "Z.ai",
+        "score": 0.30181864,
+        "input_score": 0.30181864,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "97.22",
+        "metric_id": "frontierswe-v2-metric-v1",
+        "protocol_id": "frontierswe-v2-source-export-v1",
+        "task_set_id": "frontierswe-v2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "frontierswe-v2-canonical-score",
+        "evaluation_protocol": "FrontierSWE V2 public leaderboard export; Mean@5 rows using the proximus harness are kept together, while Best@5 and Worst@5 are not substituted for the headline metric.",
+        "model_release_date": "2026-08-14",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-08-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-08-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-frontierswe-com-595e7d6ffd585872"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-08-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-08-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "score_source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "source": "https://www.frontierswe.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-cost-usd-97-22-model-version-glm-5-3-max-0fd849271afa18d2"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-25865032-f7e71705032dd87d",
+        "benchmark_id": "frontierswe-v2",
+        "benchmark_version_id": "frontierswe-v2-canonical",
+        "model_id": "model-kimi-k3-max-3e2be7fd8cbbf4a5",
+        "model_configuration": "kimi-k3_max",
+        "model_identity_organization": "moonshot",
+        "model_label_id": "kimi-k3",
+        "model_family_id": "moonshot-kimi-k3",
+        "model": "Kimi K3",
+        "organization": "Moonshot",
+        "score": 0.25865032,
+        "input_score": 0.25865032,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "109.71",
+        "metric_id": "frontierswe-v2-metric-v1",
+        "protocol_id": "frontierswe-v2-source-export-v1",
+        "task_set_id": "frontierswe-v2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "frontierswe-v2-canonical-score",
+        "evaluation_protocol": "FrontierSWE V2 public leaderboard export; Mean@5 rows using the proximus harness are kept together, while Best@5 and Worst@5 are not substituted for the headline metric.",
+        "model_release_date": "2026-07-16",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-frontierswe-com-595e7d6ffd585872"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-07-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "score_source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "source": "https://www.frontierswe.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-cost-usd-109-71-model-version-kimi-k3-ma-99c75a69ce96cdf1"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-25286196-4484179bc1ccc21c",
+        "benchmark_id": "frontierswe-v2",
+        "benchmark_version_id": "frontierswe-v2-canonical",
+        "model_id": "model-grok-4-6-xhigh-e4b8bfd2e56a4f1e",
+        "model_configuration": "grok-4.6_xhigh",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-6",
+        "model_family_id": "xai-grok-4-6",
+        "model": "Grok 4.6",
+        "organization": "xAI",
+        "score": 0.25286196,
+        "input_score": 0.25286196,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "243.43",
+        "metric_id": "frontierswe-v2-metric-v1",
+        "protocol_id": "frontierswe-v2-source-export-v1",
+        "task_set_id": "frontierswe-v2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "frontierswe-v2-canonical-score",
+        "evaluation_protocol": "FrontierSWE V2 public leaderboard export; Mean@5 rows using the proximus harness are kept together, while Best@5 and Worst@5 are not substituted for the headline metric.",
+        "model_release_date": "2026-08-12",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-08-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-08-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067",
+              "resource-https-www-frontierswe-com-595e7d6ffd585872"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872",
+          "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-08-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-08-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872",
+          "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
+        ],
+        "score_source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "source": "https://www.frontierswe.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-cost-usd-243-43-model-version-grok-4-6-x-acf1046bcf7069c8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-20260591-70b0eb4f9c686358",
+        "benchmark_id": "frontierswe-v2",
+        "benchmark_version_id": "frontierswe-v2-canonical",
+        "model_id": "model-gemini-3-7-flash-high-eec46759215feb87",
+        "model_configuration": "gemini-3.7-flash_high",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-7-flash",
+        "model_family_id": "google-deepmind-gemini-3-7-flash",
+        "model": "Gemini 3.7 Flash",
+        "organization": "Google DeepMind",
+        "score": 0.20260591,
+        "input_score": 0.20260591,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "34.14",
+        "metric_id": "frontierswe-v2-metric-v1",
+        "protocol_id": "frontierswe-v2-source-export-v1",
+        "task_set_id": "frontierswe-v2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "frontierswe-v2-canonical-score",
+        "evaluation_protocol": "FrontierSWE V2 public leaderboard export; Mean@5 rows using the proximus harness are kept together, while Best@5 and Worst@5 are not substituted for the headline metric.",
+        "model_release_date": "2026-08-13",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-08-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-08-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-frontierswe-com-595e7d6ffd585872"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-08-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-08-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "score_source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "source": "https://www.frontierswe.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-cost-usd-34-14-model-version-gemini-3-7--95f42633956d066b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-15809351-3b2283a1ebe3bec0",
+        "benchmark_id": "frontierswe-v2",
+        "benchmark_version_id": "frontierswe-v2-canonical",
+        "model_id": "model-qwen3-8-max-xhigh-6fc5380c1e79c5d1",
+        "model_configuration": "qwen3.8-max_xhigh",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen3-8-max",
+        "model_family_id": "alibaba-qwen3-8-max",
+        "model": "Qwen3.8-Max",
+        "organization": "Alibaba",
+        "score": 0.15809351,
+        "input_score": 0.15809351,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "55.14",
+        "metric_id": "frontierswe-v2-metric-v1",
+        "protocol_id": "frontierswe-v2-source-export-v1",
+        "task_set_id": "frontierswe-v2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "frontierswe-v2-canonical-score",
+        "evaluation_protocol": "FrontierSWE V2 public leaderboard export; Mean@5 rows using the proximus harness are kept together, while Best@5 and Worst@5 are not substituted for the headline metric.",
+        "model_release_date": "2026-08-02",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-08-02",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-08-02",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-docs-modelstudio-console-alibabacloud-com--6742ad46468fc647",
+              "resource-https-www-frontierswe-com-595e7d6ffd585872"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-docs-modelstudio-console-alibabacloud-com--6742ad46468fc647",
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-08-02",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-08-02",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-docs-modelstudio-console-alibabacloud-com--6742ad46468fc647",
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "score_source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "source": "https://www.frontierswe.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-cost-usd-55-14-model-version-qwen3-8-max-bd7da374024cc9ee"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-11970256-a9ed4b32e455f18e",
+        "benchmark_id": "frontierswe-v2",
+        "benchmark_version_id": "frontierswe-v2-canonical",
+        "model_id": "model-muse-spark-1-2-xhigh-ff82c1592e6c19b6",
+        "model_configuration": "muse-spark-1.2_xhigh",
+        "model_identity_organization": "meta",
+        "model_label_id": "muse-spark-1-2",
+        "model_family_id": "meta-ai-muse-spark-1-2",
+        "model": "Muse Spark 1.2",
+        "organization": "Meta AI",
+        "score": 0.11970256,
+        "input_score": 0.11970256,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "27.81",
+        "metric_id": "frontierswe-v2-metric-v1",
+        "protocol_id": "frontierswe-v2-source-export-v1",
+        "task_set_id": "frontierswe-v2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "frontierswe-v2-canonical-score",
+        "evaluation_protocol": "FrontierSWE V2 public leaderboard export; Mean@5 rows using the proximus harness are kept together, while Best@5 and Worst@5 are not substituted for the headline metric.",
+        "model_release_date": "2026-08-05",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-08-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-08-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-frontierswe-com-595e7d6ffd585872"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-08-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-08-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "score_source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "source": "https://www.frontierswe.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-cost-usd-27-81-model-version-muse-spark--dad1cf29ba1549ad"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-04118886-e4d6514a1a532fb3",
+        "benchmark_id": "frontierswe-v2",
+        "benchmark_version_id": "frontierswe-v2-canonical",
+        "model_id": "model-inkling-xhigh-85c0dd461bbe2848",
+        "model_configuration": "inkling_xhigh",
+        "model_identity_organization": "thinking-machines",
+        "model_label_id": "inkling",
+        "model_family_id": "thinking-machines-inkling",
+        "model": "Inkling",
+        "organization": "Thinking Machines",
+        "score": 0.04118886,
+        "input_score": 0.04118886,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "9.15",
+        "metric_id": "frontierswe-v2-metric-v1",
+        "protocol_id": "frontierswe-v2-source-export-v1",
+        "task_set_id": "frontierswe-v2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "frontierswe-v2-canonical-score",
+        "evaluation_protocol": "FrontierSWE V2 public leaderboard export; Mean@5 rows using the proximus harness are kept together, while Best@5 and Worst@5 are not substituted for the headline metric.",
+        "model_release_date": "2026-07-15",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-frontierswe-com-595e7d6ffd585872"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-07-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "score_source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "source": "https://www.frontierswe.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-cost-usd-9-15-model-version-inkling-xhig-86d795df783ddb0c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-32202467-b64bb2853864465d",
+        "benchmark_id": "frontierswe-v2",
+        "benchmark_version_id": "frontierswe-v2-canonical",
+        "model_id": "model-gpt-5-6-sol-max-7bbcab2b311e20d4",
+        "model_configuration": "gpt-5.6-sol_max",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6",
+        "model_family_id": "openai-gpt-5-6",
+        "model": "GPT-5.6",
+        "organization": "OpenAI",
+        "score": 0.32202467,
+        "input_score": 0.32202467,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "179.64",
+        "metric_id": "frontierswe-v2-metric-v1",
+        "protocol_id": "frontierswe-v2-source-export-v1",
+        "task_set_id": "frontierswe-v2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "frontierswe-v2-canonical-score",
+        "evaluation_protocol": "FrontierSWE V2 public leaderboard export; Mean@5 rows using the proximus harness are kept together, while Best@5 and Worst@5 are not substituted for the headline metric.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-frontierswe-com-595e7d6ffd585872"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "score_source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "source": "https://www.frontierswe.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-cost-usd-179-64-model-version-gpt-5-6-so-c37cf18241fb8a3f"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2026-07-09",
+        "frontier_observation_ids": [
+          "obs-0-32202467-b64bb2853864465d"
+        ]
+      },
+      {
+        "observation_id": "obs-0-5629079-cc7972a85a32c1a1",
+        "benchmark_id": "frontierswe-v2",
+        "benchmark_version_id": "frontierswe-v2-canonical",
+        "model_id": "model-claude-fable-5-1-max-c194931f4ebd95c1",
+        "model_configuration": "claude-fable-5-1_max",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-1",
+        "model_family_id": "anthropic-claude-fable-5-1",
+        "model": "Claude Fable 5.1",
+        "organization": "Anthropic",
+        "score": 0.5629079,
+        "input_score": 0.5629079,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "138.55",
+        "metric_id": "frontierswe-v2-metric-v1",
+        "protocol_id": "frontierswe-v2-source-export-v1",
+        "task_set_id": "frontierswe-v2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "frontierswe-v2-canonical-score",
+        "evaluation_protocol": "FrontierSWE V2 public leaderboard export; Mean@5 rows using the proximus harness are kept together, while Best@5 and Worst@5 are not substituted for the headline metric.",
+        "model_release_date": "2026-09-01",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-09-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+              "resource-https-www-frontierswe-com-595e7d6ffd585872"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-09-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "score_source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "source": "https://www.frontierswe.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-cost-usd-138-55-model-version-claude-fab-002de6254f29954f"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2026-09-01",
+        "frontier_observation_ids": [
+          "obs-0-5629079-cc7972a85a32c1a1"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-32202467-b64bb2853864465d",
+        "benchmark_id": "frontierswe-v2",
+        "benchmark_version_id": "frontierswe-v2-canonical",
+        "model_id": "model-gpt-5-6-sol-max-7bbcab2b311e20d4",
+        "model_configuration": "gpt-5.6-sol_max",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6",
+        "model_family_id": "openai-gpt-5-6",
+        "model": "GPT-5.6",
+        "organization": "OpenAI",
+        "score": 0.32202467,
+        "input_score": 0.32202467,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "179.64",
+        "metric_id": "frontierswe-v2-metric-v1",
+        "protocol_id": "frontierswe-v2-source-export-v1",
+        "task_set_id": "frontierswe-v2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "frontierswe-v2-canonical-score",
+        "evaluation_protocol": "FrontierSWE V2 public leaderboard export; Mean@5 rows using the proximus harness are kept together, while Best@5 and Worst@5 are not substituted for the headline metric.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-frontierswe-com-595e7d6ffd585872"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "score_source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "source": "https://www.frontierswe.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-cost-usd-179-64-model-version-gpt-5-6-so-c37cf18241fb8a3f"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2026-07-09",
+        "frontier_observation_ids": [
+          "obs-0-32202467-b64bb2853864465d"
+        ]
+      },
+      {
+        "observation_id": "obs-0-5629079-cc7972a85a32c1a1",
+        "benchmark_id": "frontierswe-v2",
+        "benchmark_version_id": "frontierswe-v2-canonical",
+        "model_id": "model-claude-fable-5-1-max-c194931f4ebd95c1",
+        "model_configuration": "claude-fable-5-1_max",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-1",
+        "model_family_id": "anthropic-claude-fable-5-1",
+        "model": "Claude Fable 5.1",
+        "organization": "Anthropic",
+        "score": 0.5629079,
+        "input_score": 0.5629079,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "138.55",
+        "metric_id": "frontierswe-v2-metric-v1",
+        "protocol_id": "frontierswe-v2-source-export-v1",
+        "task_set_id": "frontierswe-v2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "frontierswe-v2-canonical-score",
+        "evaluation_protocol": "FrontierSWE V2 public leaderboard export; Mean@5 rows using the proximus harness are kept together, while Best@5 and Worst@5 are not substituted for the headline metric.",
+        "model_release_date": "2026-09-01",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-09-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+              "resource-https-www-frontierswe-com-595e7d6ffd585872"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-09-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "score_source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "source": "https://www.frontierswe.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-cost-usd-138-55-model-version-claude-fab-002de6254f29954f"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2026-09-01",
+        "frontier_observation_ids": [
+          "obs-0-5629079-cc7972a85a32c1a1"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-32202467-b64bb2853864465d",
+        "benchmark_id": "frontierswe-v2",
+        "benchmark_version_id": "frontierswe-v2-canonical",
+        "model_id": "model-gpt-5-6-sol-max-7bbcab2b311e20d4",
+        "model_configuration": "gpt-5.6-sol_max",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6",
+        "model_family_id": "openai-gpt-5-6",
+        "model": "GPT-5.6",
+        "organization": "OpenAI",
+        "score": 0.32202467,
+        "input_score": 0.32202467,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "179.64",
+        "metric_id": "frontierswe-v2-metric-v1",
+        "protocol_id": "frontierswe-v2-source-export-v1",
+        "task_set_id": "frontierswe-v2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "frontierswe-v2-canonical-score",
+        "evaluation_protocol": "FrontierSWE V2 public leaderboard export; Mean@5 rows using the proximus harness are kept together, while Best@5 and Worst@5 are not substituted for the headline metric.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-frontierswe-com-595e7d6ffd585872"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "score_source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "source": "https://www.frontierswe.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-cost-usd-179-64-model-version-gpt-5-6-so-c37cf18241fb8a3f"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2026-07-09",
+        "frontier_observation_ids": [
+          "obs-0-32202467-b64bb2853864465d"
+        ]
+      },
+      {
+        "observation_id": "obs-0-5629079-cc7972a85a32c1a1",
+        "benchmark_id": "frontierswe-v2",
+        "benchmark_version_id": "frontierswe-v2-canonical",
+        "model_id": "model-claude-fable-5-1-max-c194931f4ebd95c1",
+        "model_configuration": "claude-fable-5-1_max",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-1",
+        "model_family_id": "anthropic-claude-fable-5-1",
+        "model": "Claude Fable 5.1",
+        "organization": "Anthropic",
+        "score": 0.5629079,
+        "input_score": 0.5629079,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "138.55",
+        "metric_id": "frontierswe-v2-metric-v1",
+        "protocol_id": "frontierswe-v2-source-export-v1",
+        "task_set_id": "frontierswe-v2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "frontierswe-v2-canonical-score",
+        "evaluation_protocol": "FrontierSWE V2 public leaderboard export; Mean@5 rows using the proximus harness are kept together, while Best@5 and Worst@5 are not substituted for the headline metric.",
+        "model_release_date": "2026-09-01",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-09-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+              "resource-https-www-frontierswe-com-595e7d6ffd585872"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-09-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "score_source_ids": [
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "source": "https://www.frontierswe.com/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-average-cost-usd-138-55-model-version-claude-fab-002de6254f29954f"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2026-09-01",
+        "frontier_observation_ids": [
+          "obs-0-5629079-cc7972a85a32c1a1"
+        ]
+      }
+    ],
+    "reported_frontier": [],
+    "historical_frontier": [],
+    "retrospective_observations": [],
+    "observed_frontier": 0.5629079,
+    "capability_frontier_value": 0.5629079,
+    "reported_frontier_value": null,
+    "current_frontier": 0.5629079,
+    "normalized_progress": 0.5629079,
+    "normalized_headroom": 0.4370921,
+    "threshold_days": {
+      "T50": {
+        "status": "reached",
+        "days": 62,
+        "qualifying_observation_date": "2026-09-01"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 67
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 67
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "reached",
+        "days": 62,
+        "qualifying_observation_date": "2026-09-01"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 67
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 67
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T80": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T90": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": {
+      "value": 97.22,
+      "currency": "USD",
+      "per_task": true,
+      "method": "median of reported per-task values in the curated export",
+      "source_ids": [
+        "resource-https-docs-modelstudio-console-alibabacloud-com--6742ad46468fc647",
+        "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+        "resource-https-www-frontierswe-com-595e7d6ffd585872",
+        "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
+      ],
+      "notes": "Cost varies by model, harness, and inference settings."
+    },
+    "coverage": {
+      "value": 0.8571428571428571,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "Qwen",
+        "Meta",
+        "xAI"
+      ],
+      "panel_size": 7,
+      "status": "high"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-www-frontierswe-com-595e7d6ffd585872"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "unknown_public_dates",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

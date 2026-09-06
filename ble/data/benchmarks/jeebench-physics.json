@@ -1,0 +1,901 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "jeebench-physics",
+    "name": "JEEBench Physics",
+    "domain": "Physics",
+    "release": "2023-05-24",
+    "source": "https://aclanthology.org/2023.emnlp-main.468/",
+    "floor": 0.103,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.103,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Model",
+    "tags": [
+      "engineering exam",
+      "partial credit",
+      "quantitative"
+    ],
+    "metric": "Partial-credit mean",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "jeebench-physics-metric-v1",
+    "protocol_id": "jeebench-physics-source-export-v1",
+    "canonical_score": {
+      "series_id": "jeebench-physics-canonical-score",
+      "role": "canonical",
+      "metric_id": "jeebench-physics-metric-v1",
+      "metric_name": "Partial-credit mean",
+      "protocol_id": "jeebench-physics-source-export-v1",
+      "task_set_id": "jeebench-physics-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.103,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "jeebench-physics-canonical",
+    "summary": {
+      "en": "JEEBench Physics measures text-only quantitative reasoning on fixed JEE Advanced physics questions with heterogeneous answer types.",
+      "zh": "JEEBench Physics \u4f7f\u7528\u56fa\u5b9a JEE Advanced \u7269\u7406\u9898\uff0c\u6d4b\u8bd5\u6a21\u578b\u5728\u591a\u79cd\u7b54\u6848\u7c7b\u578b\u4e0b\u7684\u7eaf\u6587\u672c\u5b9a\u91cf\u63a8\u7406\u80fd\u529b\u3002"
+    },
+    "task_format": {
+      "en": "The model solves 123 text-only Physics questions and returns single-choice, multiple-choice, integer, or numeric answers.",
+      "zh": "\u6a21\u578b\u89e3\u51b3 123 \u9053\u7eaf\u6587\u672c Physics \u9898\uff0c\u5e76\u8fd4\u56de\u5355\u9009\u3001\u591a\u9009\u3001\u6574\u6570\u6216\u6570\u503c\u7b54\u6848\u3002"
+    },
+    "scoring": {
+      "metric_name": "Physics partial-credit mean",
+      "explanation": {
+        "en": "Single and integer answers use exact match, numeric answers use 0.01 tolerance, and multi-select answers receive the published partial-credit rule before averaging.",
+        "zh": "\u5355\u9009\u548c\u6574\u6570\u9898\u4e25\u683c\u5339\u914d\uff0c\u6570\u503c\u9898\u5141\u8bb8 0.01 \u8bef\u5dee\uff0c\u591a\u9009\u9898\u6309\u8bba\u6587\u89c4\u5219\u7ed9\u90e8\u5206\u5206\uff0c\u518d\u5bf9 123 \u9053\u9898\u53d6\u5e73\u5747\u3002"
+      }
+    },
+    "evaluation_target": "final_output",
+    "observation_count": 3,
+    "evidence_record_count": 3,
+    "observations": [
+      {
+        "observation_id": "obs-0-146-ec28903dc6bbc74a",
+        "benchmark_id": "jeebench-physics",
+        "benchmark_version_id": "jeebench-physics-canonical",
+        "model_id": "model-palm-2-text-bison-001-3efddb518828f267",
+        "model_configuration": "PaLM-2-text-bison-001",
+        "model_identity_organization": "google",
+        "model_label_id": "palm-2-text-bison-001",
+        "model_family_id": "google-palm-2-text-bison-001",
+        "model": "PaLM-2-text-bison-001",
+        "organization": "Google",
+        "score": 0.146,
+        "input_score": 0.146,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "jeebench-physics-metric-v1",
+        "protocol_id": "jeebench-physics-source-export-v1",
+        "task_set_id": "jeebench-physics-canonical",
+        "metric": "Partial-credit mean",
+        "score_role": "canonical",
+        "score_series_id": "jeebench-physics-canonical-score",
+        "evaluation_protocol": "JEEBench EMNLP 2023 fixed 123-question Physics slice, vanilla zero-shot, temperature 0, no CoT/few-shot/tools/self-consistency, published partial-credit metric.",
+        "model_release_date": "2023-05-10",
+        "evaluation_date": null,
+        "result_public_date": "2023-10-11",
+        "source_publication_date": "2023-10-11",
+        "observation_date": "2023-05-10",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-05-10",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2023-10-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2023-05-10",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-05-10",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2023-10-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-aclanthology-org-2023-emnlp-main-468-7a97a9f374a1c64b",
+          "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+        ],
+        "score_source_ids": [
+          "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+        ],
+        "source": "https://aclanthology.org/2023.emnlp-main.468.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-jeebench-palm2-dd7bce21c995b27b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "jeebench-palm2"
+        ]
+      },
+      {
+        "observation_id": "obs-0-173-678306f5ea3414bb",
+        "benchmark_id": "jeebench-physics",
+        "benchmark_version_id": "jeebench-physics-canonical",
+        "model_id": "model-gpt-3-5-turbo-130d6c1b27b8d572",
+        "model_configuration": "GPT-3.5-Turbo",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-3-5-turbo",
+        "model_family_id": "openai-gpt-3-5-turbo",
+        "model": "GPT-3.5-Turbo",
+        "organization": "OpenAI",
+        "score": 0.173,
+        "input_score": 0.173,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "jeebench-physics-metric-v1",
+        "protocol_id": "jeebench-physics-source-export-v1",
+        "task_set_id": "jeebench-physics-canonical",
+        "metric": "Partial-credit mean",
+        "score_role": "canonical",
+        "score_series_id": "jeebench-physics-canonical-score",
+        "evaluation_protocol": "JEEBench EMNLP 2023 fixed 123-question Physics slice, vanilla zero-shot, temperature 0, no CoT/few-shot/tools/self-consistency, published partial-credit metric.",
+        "model_release_date": "2022-11-30",
+        "evaluation_date": null,
+        "result_public_date": "2023-10-11",
+        "source_publication_date": "2023-10-11",
+        "observation_date": "2022-11-30",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2022-11-30",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2023-10-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2022-11-30",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2022-11-30",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2023-10-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-aclanthology-org-2023-emnlp-main-468-7a97a9f374a1c64b",
+          "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+        ],
+        "score_source_ids": [
+          "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+        ],
+        "source": "https://aclanthology.org/2023.emnlp-main.468.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-jeebench-gpt35-46af728f9483ef1e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "jeebench-gpt35"
+        ]
+      },
+      {
+        "observation_id": "obs-0-352-c6ec09a1d1ef606c",
+        "benchmark_id": "jeebench-physics",
+        "benchmark_version_id": "jeebench-physics-canonical",
+        "model_id": "model-gpt-4-0314-b1af4bf3e2d91d9c",
+        "model_configuration": "GPT-4-0314",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4-0314",
+        "model_family_id": "openai-gpt-4-0314",
+        "model": "GPT-4-0314",
+        "organization": "OpenAI",
+        "score": 0.352,
+        "input_score": 0.352,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "jeebench-physics-metric-v1",
+        "protocol_id": "jeebench-physics-source-export-v1",
+        "task_set_id": "jeebench-physics-canonical",
+        "metric": "Partial-credit mean",
+        "score_role": "canonical",
+        "score_series_id": "jeebench-physics-canonical-score",
+        "evaluation_protocol": "JEEBench EMNLP 2023 fixed 123-question Physics slice, vanilla zero-shot, temperature 0, no CoT/few-shot/tools/self-consistency, published partial-credit metric.",
+        "model_release_date": "2023-03-14",
+        "evaluation_date": null,
+        "result_public_date": "2023-10-11",
+        "source_publication_date": "2023-10-11",
+        "observation_date": "2023-03-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-03-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2023-10-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2023-03-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-03-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2023-10-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-aclanthology-org-2023-emnlp-main-468-7a97a9f374a1c64b",
+          "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+        ],
+        "score_source_ids": [
+          "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+        ],
+        "source": "https://aclanthology.org/2023.emnlp-main.468.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-jeebench-gpt4-7d6bcba6ec8b49e4"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "jeebench-gpt4"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-352-c6ec09a1d1ef606c",
+        "benchmark_id": "jeebench-physics",
+        "benchmark_version_id": "jeebench-physics-canonical",
+        "model_id": "model-gpt-4-0314-b1af4bf3e2d91d9c",
+        "model_configuration": "GPT-4-0314",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4-0314",
+        "model_family_id": "openai-gpt-4-0314",
+        "model": "GPT-4-0314",
+        "organization": "OpenAI",
+        "score": 0.352,
+        "input_score": 0.352,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "jeebench-physics-metric-v1",
+        "protocol_id": "jeebench-physics-source-export-v1",
+        "task_set_id": "jeebench-physics-canonical",
+        "metric": "Partial-credit mean",
+        "score_role": "canonical",
+        "score_series_id": "jeebench-physics-canonical-score",
+        "evaluation_protocol": "JEEBench EMNLP 2023 fixed 123-question Physics slice, vanilla zero-shot, temperature 0, no CoT/few-shot/tools/self-consistency, published partial-credit metric.",
+        "model_release_date": "2023-03-14",
+        "evaluation_date": null,
+        "result_public_date": "2023-10-11",
+        "source_publication_date": "2023-10-11",
+        "observation_date": "2023-03-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-03-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2023-10-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2023-05-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-03-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2023-10-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-aclanthology-org-2023-emnlp-main-468-7a97a9f374a1c64b",
+          "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+        ],
+        "score_source_ids": [
+          "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+        ],
+        "source": "https://aclanthology.org/2023.emnlp-main.468.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-jeebench-gpt4-7d6bcba6ec8b49e4"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "jeebench-gpt4"
+        ],
+        "plot_date": "2023-05-24",
+        "frontier_observation_ids": [
+          "obs-0-146-ec28903dc6bbc74a",
+          "obs-0-173-678306f5ea3414bb",
+          "obs-0-352-c6ec09a1d1ef606c"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-352-c6ec09a1d1ef606c",
+        "benchmark_id": "jeebench-physics",
+        "benchmark_version_id": "jeebench-physics-canonical",
+        "model_id": "model-gpt-4-0314-b1af4bf3e2d91d9c",
+        "model_configuration": "GPT-4-0314",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4-0314",
+        "model_family_id": "openai-gpt-4-0314",
+        "model": "GPT-4-0314",
+        "organization": "OpenAI",
+        "score": 0.352,
+        "input_score": 0.352,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "jeebench-physics-metric-v1",
+        "protocol_id": "jeebench-physics-source-export-v1",
+        "task_set_id": "jeebench-physics-canonical",
+        "metric": "Partial-credit mean",
+        "score_role": "canonical",
+        "score_series_id": "jeebench-physics-canonical-score",
+        "evaluation_protocol": "JEEBench EMNLP 2023 fixed 123-question Physics slice, vanilla zero-shot, temperature 0, no CoT/few-shot/tools/self-consistency, published partial-credit metric.",
+        "model_release_date": "2023-03-14",
+        "evaluation_date": null,
+        "result_public_date": "2023-10-11",
+        "source_publication_date": "2023-10-11",
+        "observation_date": "2023-03-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-03-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2023-10-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2023-05-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-03-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2023-10-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-aclanthology-org-2023-emnlp-main-468-7a97a9f374a1c64b",
+          "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+        ],
+        "score_source_ids": [
+          "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+        ],
+        "source": "https://aclanthology.org/2023.emnlp-main.468.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-jeebench-gpt4-7d6bcba6ec8b49e4"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "jeebench-gpt4"
+        ],
+        "plot_date": "2023-05-24",
+        "frontier_observation_ids": [
+          "obs-0-146-ec28903dc6bbc74a",
+          "obs-0-173-678306f5ea3414bb",
+          "obs-0-352-c6ec09a1d1ef606c"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-352-c6ec09a1d1ef606c",
+        "benchmark_id": "jeebench-physics",
+        "benchmark_version_id": "jeebench-physics-canonical",
+        "model_id": "model-gpt-4-0314-b1af4bf3e2d91d9c",
+        "model_configuration": "GPT-4-0314",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4-0314",
+        "model_family_id": "openai-gpt-4-0314",
+        "model": "GPT-4-0314",
+        "organization": "OpenAI",
+        "score": 0.352,
+        "input_score": 0.352,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "jeebench-physics-metric-v1",
+        "protocol_id": "jeebench-physics-source-export-v1",
+        "task_set_id": "jeebench-physics-canonical",
+        "metric": "Partial-credit mean",
+        "score_role": "canonical",
+        "score_series_id": "jeebench-physics-canonical-score",
+        "evaluation_protocol": "JEEBench EMNLP 2023 fixed 123-question Physics slice, vanilla zero-shot, temperature 0, no CoT/few-shot/tools/self-consistency, published partial-credit metric.",
+        "model_release_date": "2023-03-14",
+        "evaluation_date": null,
+        "result_public_date": "2023-10-11",
+        "source_publication_date": "2023-10-11",
+        "observation_date": "2023-03-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-03-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2023-10-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2023-05-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-03-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2023-10-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-aclanthology-org-2023-emnlp-main-468-7a97a9f374a1c64b",
+          "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+        ],
+        "score_source_ids": [
+          "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+        ],
+        "source": "https://aclanthology.org/2023.emnlp-main.468.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-jeebench-gpt4-7d6bcba6ec8b49e4"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "jeebench-gpt4"
+        ],
+        "plot_date": "2023-05-24",
+        "frontier_observation_ids": [
+          "obs-0-146-ec28903dc6bbc74a",
+          "obs-0-173-678306f5ea3414bb",
+          "obs-0-352-c6ec09a1d1ef606c"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-352-c6ec09a1d1ef606c",
+        "benchmark_id": "jeebench-physics",
+        "benchmark_version_id": "jeebench-physics-canonical",
+        "model_id": "model-gpt-4-0314-b1af4bf3e2d91d9c",
+        "model_configuration": "GPT-4-0314",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4-0314",
+        "model_family_id": "openai-gpt-4-0314",
+        "model": "GPT-4-0314",
+        "organization": "OpenAI",
+        "score": 0.352,
+        "input_score": 0.352,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "jeebench-physics-metric-v1",
+        "protocol_id": "jeebench-physics-source-export-v1",
+        "task_set_id": "jeebench-physics-canonical",
+        "metric": "Partial-credit mean",
+        "score_role": "canonical",
+        "score_series_id": "jeebench-physics-canonical-score",
+        "evaluation_protocol": "JEEBench EMNLP 2023 fixed 123-question Physics slice, vanilla zero-shot, temperature 0, no CoT/few-shot/tools/self-consistency, published partial-credit metric.",
+        "model_release_date": "2023-03-14",
+        "evaluation_date": null,
+        "result_public_date": "2023-10-11",
+        "source_publication_date": "2023-10-11",
+        "observation_date": "2023-03-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-03-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2023-10-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2023-10-11",
+        "date_kind": "result first-public date",
+        "capability_date": "2023-03-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2023-10-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-aclanthology-org-2023-emnlp-main-468-7a97a9f374a1c64b",
+          "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+        ],
+        "score_source_ids": [
+          "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+        ],
+        "source": "https://aclanthology.org/2023.emnlp-main.468.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-jeebench-gpt4-7d6bcba6ec8b49e4"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "jeebench-gpt4"
+        ],
+        "plot_date": "2023-10-11",
+        "frontier_observation_ids": [
+          "obs-0-146-ec28903dc6bbc74a",
+          "obs-0-173-678306f5ea3414bb",
+          "obs-0-352-c6ec09a1d1ef606c"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-352-c6ec09a1d1ef606c",
+        "benchmark_id": "jeebench-physics",
+        "benchmark_version_id": "jeebench-physics-canonical",
+        "model_id": "model-gpt-4-0314-b1af4bf3e2d91d9c",
+        "model_configuration": "GPT-4-0314",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4-0314",
+        "model_family_id": "openai-gpt-4-0314",
+        "model": "GPT-4-0314",
+        "organization": "OpenAI",
+        "score": 0.352,
+        "input_score": 0.352,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "jeebench-physics-metric-v1",
+        "protocol_id": "jeebench-physics-source-export-v1",
+        "task_set_id": "jeebench-physics-canonical",
+        "metric": "Partial-credit mean",
+        "score_role": "canonical",
+        "score_series_id": "jeebench-physics-canonical-score",
+        "evaluation_protocol": "JEEBench EMNLP 2023 fixed 123-question Physics slice, vanilla zero-shot, temperature 0, no CoT/few-shot/tools/self-consistency, published partial-credit metric.",
+        "model_release_date": "2023-03-14",
+        "evaluation_date": null,
+        "result_public_date": "2023-10-11",
+        "source_publication_date": "2023-10-11",
+        "observation_date": "2023-03-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-03-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2023-10-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2023-10-11",
+        "date_kind": "result first-public date",
+        "capability_date": "2023-03-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2023-10-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-aclanthology-org-2023-emnlp-main-468-7a97a9f374a1c64b",
+          "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+        ],
+        "score_source_ids": [
+          "resource-https-aclanthology-org-2023-emnlp-main-468-pdf-5ff13e69efbf6866"
+        ],
+        "source": "https://aclanthology.org/2023.emnlp-main.468.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-jeebench-gpt4-7d6bcba6ec8b49e4"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "jeebench-gpt4"
+        ],
+        "plot_date": "2023-10-11",
+        "frontier_observation_ids": [
+          "obs-0-146-ec28903dc6bbc74a",
+          "obs-0-173-678306f5ea3414bb",
+          "obs-0-352-c6ec09a1d1ef606c"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.352,
+    "capability_frontier_value": 0.352,
+    "reported_frontier_value": 0.352,
+    "current_frontier": 0.352,
+    "normalized_progress": 0.27759197324414714,
+    "normalized_headroom": 0.7224080267558528,
+    "threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 1201
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 1201
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 1201
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 1201
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 1201
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 1201
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 1201
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 1201
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 1201
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.2857142857142857,
+      "represented_organizations": [
+        "OpenAI",
+        "Google"
+      ],
+      "panel_size": 7,
+      "status": "low"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-aclanthology-org-2023-emnlp-main-468-7a97a9f374a1c64b"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": true,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

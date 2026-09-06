@@ -1,0 +1,1503 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "mollangbench-v1-generation-pass1",
+    "name": "MolLangBench v1 \u2014 Generation",
+    "domain": "Chemistry",
+    "release": "2025-05-21",
+    "source": "https://github.com/TheLuoFengLab/MolLangBench",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Model",
+    "tags": [
+      "SMILES",
+      "molecule generation",
+      "exact structure"
+    ],
+    "metric": "Accuracy",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "mollangbench-v1-generation-pass1-metric-v1",
+    "protocol_id": "mollangbench-v1-generation-pass1-source-export-v1",
+    "canonical_score": {
+      "series_id": "mollangbench-v1-generation-pass1-canonical-score",
+      "role": "canonical",
+      "metric_id": "mollangbench-v1-generation-pass1-metric-v1",
+      "metric_name": "Accuracy",
+      "protocol_id": "mollangbench-v1-generation-pass1-source-export-v1",
+      "task_set_id": "mollangbench-v1-generation-pass1-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "mollangbench-v1-generation-pass1-canonical",
+    "summary": {
+      "en": "MolLangBench tests exact molecular reconstruction from expert-written text descriptions.",
+      "zh": "MolLangBench \u6d4b\u8bd5\u6839\u636e\u4e13\u5bb6\u7f16\u5199\u7684\u6587\u672c\u63cf\u8ff0\u7cbe\u786e\u91cd\u5efa\u5206\u5b50\u3002"
+    },
+    "task_format": {
+      "en": "Generate a SMILES string for the uniquely specified molecular structure in each of 200 prompts.",
+      "zh": "\u4e3a 200 \u6761\u65e0\u6b67\u4e49\u63cf\u8ff0\u4e2d\u7684\u552f\u4e00\u5206\u5b50\u7ed3\u6784\u751f\u6210 SMILES\u3002"
+    },
+    "scoring": {
+      "metric_name": "First-attempt generation accuracy",
+      "explanation": {
+        "en": "A response is correct only when the valid SMILES has the required molecular structure; validity alone is insufficient.",
+        "zh": "\u53ea\u6709\u6709\u6548 SMILES \u5bf9\u5e94\u6240\u9700\u5206\u5b50\u7ed3\u6784\u624d\u8ba1\u4e3a\u6b63\u786e\uff1b\u4ec5\u8bed\u6cd5\u6709\u6548\u4e0d\u8ba1\u5206\u3002"
+      }
+    },
+    "evaluation_target": "final_output",
+    "observation_count": 10,
+    "evidence_record_count": 10,
+    "observations": [
+      {
+        "observation_id": "obs-0-005-1f6770c74871ea8d",
+        "benchmark_id": "mollangbench-v1-generation-pass1",
+        "benchmark_version_id": "mollangbench-v1-generation-pass1-canonical",
+        "model_id": "model-gpt-4o-2024-11-20-a2c62b9cadad1de5",
+        "model_configuration": "gpt-4o-2024-11-20",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o-2024-11-20",
+        "model_family_id": "openai-gpt-4o-2024-11-20",
+        "model": "gpt-4o-2024-11-20",
+        "organization": "OpenAI",
+        "score": 0.005,
+        "input_score": 0.005,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "mollangbench-v1-generation-pass1-metric-v1",
+        "protocol_id": "mollangbench-v1-generation-pass1-source-export-v1",
+        "task_set_id": "mollangbench-v1-generation-pass1-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "mollangbench-v1-generation-pass1-canonical-score",
+        "evaluation_protocol": "MolLangBench arXiv-v1 molecule-generation task, 200 examples, zero-shot CoT structured prompt, first-attempt structural accuracy; validity excluded.",
+        "model_release_date": "2024-11-20",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-21",
+        "source_publication_date": "2025-05-21",
+        "observation_date": "2024-11-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-11-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-11-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-11-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac",
+          "resource-https-github-com-theluofenglab-mollangbench-d1197ec8d33b5cca"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+        ],
+        "source": "https://arxiv.org/abs/2505.15054",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-mollang-gpt4o-6fee035c4c95f8b8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "mollang-gpt4o"
+        ]
+      },
+      {
+        "observation_id": "obs-0-035-95df1d78cbbfa2a3",
+        "benchmark_id": "mollangbench-v1-generation-pass1",
+        "benchmark_version_id": "mollangbench-v1-generation-pass1-canonical",
+        "model_id": "model-o1-mini-dcb55973dd7eebb4",
+        "model_configuration": "o1-mini",
+        "model_identity_organization": "openai",
+        "model_label_id": "o1-mini",
+        "model_family_id": "openai-o1-mini",
+        "model": "o1-mini",
+        "organization": "OpenAI",
+        "score": 0.035,
+        "input_score": 0.035,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "mollangbench-v1-generation-pass1-metric-v1",
+        "protocol_id": "mollangbench-v1-generation-pass1-source-export-v1",
+        "task_set_id": "mollangbench-v1-generation-pass1-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "mollangbench-v1-generation-pass1-canonical-score",
+        "evaluation_protocol": "MolLangBench arXiv-v1 molecule-generation task, 200 examples, zero-shot CoT structured prompt, first-attempt structural accuracy; validity excluded.",
+        "model_release_date": "2024-09-12",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-21",
+        "source_publication_date": "2025-05-21",
+        "observation_date": "2024-09-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-09-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-09-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-09-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac",
+          "resource-https-github-com-theluofenglab-mollangbench-d1197ec8d33b5cca"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+        ],
+        "source": "https://arxiv.org/abs/2505.15054",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-mollang-o1mini-9fe81e36f8cef55b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "mollang-o1mini"
+        ]
+      },
+      {
+        "observation_id": "obs-0-1-5b75ab3c39893b74",
+        "benchmark_id": "mollangbench-v1-generation-pass1",
+        "benchmark_version_id": "mollangbench-v1-generation-pass1-canonical",
+        "model_id": "model-o1-2024-12-17-bd96a2e809e97518",
+        "model_configuration": "o1-2024-12-17",
+        "model_identity_organization": "openai",
+        "model_label_id": "o1-2024-12-17",
+        "model_family_id": "openai-o1-2024-12-17",
+        "model": "o1-2024-12-17",
+        "organization": "OpenAI",
+        "score": 0.1,
+        "input_score": 0.1,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "mollangbench-v1-generation-pass1-metric-v1",
+        "protocol_id": "mollangbench-v1-generation-pass1-source-export-v1",
+        "task_set_id": "mollangbench-v1-generation-pass1-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "mollangbench-v1-generation-pass1-canonical-score",
+        "evaluation_protocol": "MolLangBench arXiv-v1 molecule-generation task, 200 examples, zero-shot CoT structured prompt, first-attempt structural accuracy; validity excluded.",
+        "model_release_date": "2024-12-17",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-21",
+        "source_publication_date": "2025-05-21",
+        "observation_date": "2024-12-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-12-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac",
+          "resource-https-github-com-theluofenglab-mollangbench-d1197ec8d33b5cca"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+        ],
+        "source": "https://arxiv.org/abs/2505.15054",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-mollang-o1-f9802df46fa4d028"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "mollang-o1"
+        ]
+      },
+      {
+        "observation_id": "obs-0-045-fd8b0975b5c8b25b",
+        "benchmark_id": "mollangbench-v1-generation-pass1",
+        "benchmark_version_id": "mollangbench-v1-generation-pass1-canonical",
+        "model_id": "model-deepseek-r1-18eed2738c2c0e2c",
+        "model_configuration": "DeepSeek-R1",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-r1",
+        "model_family_id": "deepseek-deepseek-r1",
+        "model": "DeepSeek-R1",
+        "organization": "DeepSeek",
+        "score": 0.045,
+        "input_score": 0.045,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "mollangbench-v1-generation-pass1-metric-v1",
+        "protocol_id": "mollangbench-v1-generation-pass1-source-export-v1",
+        "task_set_id": "mollangbench-v1-generation-pass1-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "mollangbench-v1-generation-pass1-canonical-score",
+        "evaluation_protocol": "MolLangBench arXiv-v1 molecule-generation task, 200 examples, zero-shot CoT structured prompt, first-attempt structural accuracy; validity excluded.",
+        "model_release_date": "2025-01-20",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-21",
+        "source_publication_date": "2025-05-21",
+        "observation_date": "2025-01-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-01-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac",
+          "resource-https-github-com-theluofenglab-mollangbench-d1197ec8d33b5cca"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+        ],
+        "source": "https://arxiv.org/abs/2505.15054",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-mollang-deepseekr1-be9a009a42afaa5b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "mollang-deepseekr1"
+        ]
+      },
+      {
+        "observation_id": "obs-0-01-f1c665dfca381089",
+        "benchmark_id": "mollangbench-v1-generation-pass1",
+        "benchmark_version_id": "mollangbench-v1-generation-pass1-canonical",
+        "model_id": "model-deepseek-r1-distill-llama-70b-b1c0b44-2028ed0b09928a56",
+        "model_configuration": "DeepSeek-R1-Distill-Llama-70B-b1c0b44",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-r1-distill-llama-70b-b1c0b44",
+        "model_family_id": "deepseek-deepseek-r1-distill-llama-70b-b1c0b44",
+        "model": "DeepSeek-R1-Distill-Llama-70B-b1c0b44",
+        "organization": "DeepSeek",
+        "score": 0.01,
+        "input_score": 0.01,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "mollangbench-v1-generation-pass1-metric-v1",
+        "protocol_id": "mollangbench-v1-generation-pass1-source-export-v1",
+        "task_set_id": "mollangbench-v1-generation-pass1-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "mollangbench-v1-generation-pass1-canonical-score",
+        "evaluation_protocol": "MolLangBench arXiv-v1 molecule-generation task, 200 examples, zero-shot CoT structured prompt, first-attempt structural accuracy; validity excluded.",
+        "model_release_date": "2025-02-23",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-21",
+        "source_publication_date": "2025-05-21",
+        "observation_date": "2025-02-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-02-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac",
+          "resource-https-github-com-theluofenglab-mollangbench-d1197ec8d33b5cca"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+        ],
+        "source": "https://arxiv.org/abs/2505.15054",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-mollang-deepseekr170b-fc3334dc874bd62a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "mollang-deepseekr170b"
+        ]
+      },
+      {
+        "observation_id": "obs-0-175-e58908181b5b523b",
+        "benchmark_id": "mollangbench-v1-generation-pass1",
+        "benchmark_version_id": "mollangbench-v1-generation-pass1-canonical",
+        "model_id": "model-o3-mini-c8cc52bda8f726c8",
+        "model_configuration": "o3-mini",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-mini",
+        "model_family_id": "openai-o3-mini",
+        "model": "o3-mini",
+        "organization": "OpenAI",
+        "score": 0.175,
+        "input_score": 0.175,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "mollangbench-v1-generation-pass1-metric-v1",
+        "protocol_id": "mollangbench-v1-generation-pass1-source-export-v1",
+        "task_set_id": "mollangbench-v1-generation-pass1-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "mollangbench-v1-generation-pass1-canonical-score",
+        "evaluation_protocol": "MolLangBench arXiv-v1 molecule-generation task, 200 examples, zero-shot CoT structured prompt, first-attempt structural accuracy; validity excluded.",
+        "model_release_date": "2025-01-31",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-21",
+        "source_publication_date": "2025-05-21",
+        "observation_date": "2025-01-31",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-31",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-01-31",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-31",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac",
+          "resource-https-github-com-theluofenglab-mollangbench-d1197ec8d33b5cca"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+        ],
+        "source": "https://arxiv.org/abs/2505.15054",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-mollang-o3mini-9327aefc7da4c3ea"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "mollang-o3mini"
+        ]
+      },
+      {
+        "observation_id": "obs-0-055-8af7eea42129619b",
+        "benchmark_id": "mollangbench-v1-generation-pass1",
+        "benchmark_version_id": "mollangbench-v1-generation-pass1-canonical",
+        "model_id": "model-gpt-4-5-preview-4461efcdc14356bb",
+        "model_configuration": "GPT-4.5-preview",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4-5-preview",
+        "model_family_id": "openai-gpt-4-5-preview",
+        "model": "GPT-4.5-preview",
+        "organization": "OpenAI",
+        "score": 0.055,
+        "input_score": 0.055,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "mollangbench-v1-generation-pass1-metric-v1",
+        "protocol_id": "mollangbench-v1-generation-pass1-source-export-v1",
+        "task_set_id": "mollangbench-v1-generation-pass1-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "mollangbench-v1-generation-pass1-canonical-score",
+        "evaluation_protocol": "MolLangBench arXiv-v1 molecule-generation task, 200 examples, zero-shot CoT structured prompt, first-attempt structural accuracy; validity excluded.",
+        "model_release_date": "2025-02-27",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-21",
+        "source_publication_date": "2025-05-21",
+        "observation_date": "2025-02-27",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-27",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-02-27",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-27",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac",
+          "resource-https-github-com-theluofenglab-mollangbench-d1197ec8d33b5cca"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+        ],
+        "source": "https://arxiv.org/abs/2505.15054",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-mollang-gpt45-13ae81d05757af26"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "mollang-gpt45"
+        ]
+      },
+      {
+        "observation_id": "obs-0-035-e74d4a56c71f2eae",
+        "benchmark_id": "mollangbench-v1-generation-pass1",
+        "benchmark_version_id": "mollangbench-v1-generation-pass1-canonical",
+        "model_id": "model-gpt-4-1-2a78dbfa263e7293",
+        "model_configuration": "GPT-4.1",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4-1",
+        "model_family_id": "openai-gpt-4-1",
+        "model": "GPT-4.1",
+        "organization": "OpenAI",
+        "score": 0.035,
+        "input_score": 0.035,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "mollangbench-v1-generation-pass1-metric-v1",
+        "protocol_id": "mollangbench-v1-generation-pass1-source-export-v1",
+        "task_set_id": "mollangbench-v1-generation-pass1-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "mollangbench-v1-generation-pass1-canonical-score",
+        "evaluation_protocol": "MolLangBench arXiv-v1 molecule-generation task, 200 examples, zero-shot CoT structured prompt, first-attempt structural accuracy; validity excluded.",
+        "model_release_date": "2025-04-14",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-21",
+        "source_publication_date": "2025-05-21",
+        "observation_date": "2025-04-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-04-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac",
+          "resource-https-github-com-theluofenglab-mollangbench-d1197ec8d33b5cca"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+        ],
+        "source": "https://arxiv.org/abs/2505.15054",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-mollang-gpt41-41521f16a946a857"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "mollang-gpt41"
+        ]
+      },
+      {
+        "observation_id": "obs-0-29-9437adca4838e0cc",
+        "benchmark_id": "mollangbench-v1-generation-pass1",
+        "benchmark_version_id": "mollangbench-v1-generation-pass1-canonical",
+        "model_id": "model-o3-7ac6ae4921cdbada",
+        "model_configuration": "o3",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3",
+        "model_family_id": "openai-o3",
+        "model": "o3",
+        "organization": "OpenAI",
+        "score": 0.29,
+        "input_score": 0.29,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "mollangbench-v1-generation-pass1-metric-v1",
+        "protocol_id": "mollangbench-v1-generation-pass1-source-export-v1",
+        "task_set_id": "mollangbench-v1-generation-pass1-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "mollangbench-v1-generation-pass1-canonical-score",
+        "evaluation_protocol": "MolLangBench arXiv-v1 molecule-generation task, 200 examples, zero-shot CoT structured prompt, first-attempt structural accuracy; validity excluded.",
+        "model_release_date": "2025-04-16",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-21",
+        "source_publication_date": "2025-05-21",
+        "observation_date": "2025-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-04-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac",
+          "resource-https-github-com-theluofenglab-mollangbench-d1197ec8d33b5cca"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+        ],
+        "source": "https://arxiv.org/abs/2505.15054",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-mollang-o3-204eb4645f005210"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "mollang-o3"
+        ]
+      },
+      {
+        "observation_id": "obs-0-26-d77c1e17ab43c64c",
+        "benchmark_id": "mollangbench-v1-generation-pass1",
+        "benchmark_version_id": "mollangbench-v1-generation-pass1-canonical",
+        "model_id": "model-o4-mini-d38ed415c7600392",
+        "model_configuration": "o4-mini",
+        "model_identity_organization": "openai",
+        "model_label_id": "o4-mini",
+        "model_family_id": "openai-o4-mini",
+        "model": "o4-mini",
+        "organization": "OpenAI",
+        "score": 0.26,
+        "input_score": 0.26,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "mollangbench-v1-generation-pass1-metric-v1",
+        "protocol_id": "mollangbench-v1-generation-pass1-source-export-v1",
+        "task_set_id": "mollangbench-v1-generation-pass1-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "mollangbench-v1-generation-pass1-canonical-score",
+        "evaluation_protocol": "MolLangBench arXiv-v1 molecule-generation task, 200 examples, zero-shot CoT structured prompt, first-attempt structural accuracy; validity excluded.",
+        "model_release_date": "2025-04-16",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-21",
+        "source_publication_date": "2025-05-21",
+        "observation_date": "2025-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-04-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac",
+          "resource-https-github-com-theluofenglab-mollangbench-d1197ec8d33b5cca"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+        ],
+        "source": "https://arxiv.org/abs/2505.15054",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-mollang-o4mini-c41f166235e4c736"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "mollang-o4mini"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-29-9437adca4838e0cc",
+        "benchmark_id": "mollangbench-v1-generation-pass1",
+        "benchmark_version_id": "mollangbench-v1-generation-pass1-canonical",
+        "model_id": "model-o3-7ac6ae4921cdbada",
+        "model_configuration": "o3",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3",
+        "model_family_id": "openai-o3",
+        "model": "o3",
+        "organization": "OpenAI",
+        "score": 0.29,
+        "input_score": 0.29,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "mollangbench-v1-generation-pass1-metric-v1",
+        "protocol_id": "mollangbench-v1-generation-pass1-source-export-v1",
+        "task_set_id": "mollangbench-v1-generation-pass1-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "mollangbench-v1-generation-pass1-canonical-score",
+        "evaluation_protocol": "MolLangBench arXiv-v1 molecule-generation task, 200 examples, zero-shot CoT structured prompt, first-attempt structural accuracy; validity excluded.",
+        "model_release_date": "2025-04-16",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-21",
+        "source_publication_date": "2025-05-21",
+        "observation_date": "2025-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-05-21",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac",
+          "resource-https-github-com-theluofenglab-mollangbench-d1197ec8d33b5cca"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+        ],
+        "source": "https://arxiv.org/abs/2505.15054",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-mollang-o3-204eb4645f005210"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "mollang-o3"
+        ],
+        "plot_date": "2025-05-21",
+        "frontier_observation_ids": [
+          "obs-0-005-1f6770c74871ea8d",
+          "obs-0-01-f1c665dfca381089",
+          "obs-0-035-e74d4a56c71f2eae",
+          "obs-0-035-95df1d78cbbfa2a3",
+          "obs-0-045-fd8b0975b5c8b25b",
+          "obs-0-055-8af7eea42129619b",
+          "obs-0-1-5b75ab3c39893b74",
+          "obs-0-175-e58908181b5b523b",
+          "obs-0-26-d77c1e17ab43c64c",
+          "obs-0-29-9437adca4838e0cc"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-29-9437adca4838e0cc",
+        "benchmark_id": "mollangbench-v1-generation-pass1",
+        "benchmark_version_id": "mollangbench-v1-generation-pass1-canonical",
+        "model_id": "model-o3-7ac6ae4921cdbada",
+        "model_configuration": "o3",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3",
+        "model_family_id": "openai-o3",
+        "model": "o3",
+        "organization": "OpenAI",
+        "score": 0.29,
+        "input_score": 0.29,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "mollangbench-v1-generation-pass1-metric-v1",
+        "protocol_id": "mollangbench-v1-generation-pass1-source-export-v1",
+        "task_set_id": "mollangbench-v1-generation-pass1-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "mollangbench-v1-generation-pass1-canonical-score",
+        "evaluation_protocol": "MolLangBench arXiv-v1 molecule-generation task, 200 examples, zero-shot CoT structured prompt, first-attempt structural accuracy; validity excluded.",
+        "model_release_date": "2025-04-16",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-21",
+        "source_publication_date": "2025-05-21",
+        "observation_date": "2025-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-05-21",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac",
+          "resource-https-github-com-theluofenglab-mollangbench-d1197ec8d33b5cca"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+        ],
+        "source": "https://arxiv.org/abs/2505.15054",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-mollang-o3-204eb4645f005210"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "mollang-o3"
+        ],
+        "plot_date": "2025-05-21",
+        "frontier_observation_ids": [
+          "obs-0-005-1f6770c74871ea8d",
+          "obs-0-01-f1c665dfca381089",
+          "obs-0-035-e74d4a56c71f2eae",
+          "obs-0-035-95df1d78cbbfa2a3",
+          "obs-0-045-fd8b0975b5c8b25b",
+          "obs-0-055-8af7eea42129619b",
+          "obs-0-1-5b75ab3c39893b74",
+          "obs-0-175-e58908181b5b523b",
+          "obs-0-26-d77c1e17ab43c64c",
+          "obs-0-29-9437adca4838e0cc"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-29-9437adca4838e0cc",
+        "benchmark_id": "mollangbench-v1-generation-pass1",
+        "benchmark_version_id": "mollangbench-v1-generation-pass1-canonical",
+        "model_id": "model-o3-7ac6ae4921cdbada",
+        "model_configuration": "o3",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3",
+        "model_family_id": "openai-o3",
+        "model": "o3",
+        "organization": "OpenAI",
+        "score": 0.29,
+        "input_score": 0.29,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "mollangbench-v1-generation-pass1-metric-v1",
+        "protocol_id": "mollangbench-v1-generation-pass1-source-export-v1",
+        "task_set_id": "mollangbench-v1-generation-pass1-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "mollangbench-v1-generation-pass1-canonical-score",
+        "evaluation_protocol": "MolLangBench arXiv-v1 molecule-generation task, 200 examples, zero-shot CoT structured prompt, first-attempt structural accuracy; validity excluded.",
+        "model_release_date": "2025-04-16",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-21",
+        "source_publication_date": "2025-05-21",
+        "observation_date": "2025-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-05-21",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac",
+          "resource-https-github-com-theluofenglab-mollangbench-d1197ec8d33b5cca"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+        ],
+        "source": "https://arxiv.org/abs/2505.15054",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-mollang-o3-204eb4645f005210"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "mollang-o3"
+        ],
+        "plot_date": "2025-05-21",
+        "frontier_observation_ids": [
+          "obs-0-005-1f6770c74871ea8d",
+          "obs-0-01-f1c665dfca381089",
+          "obs-0-035-e74d4a56c71f2eae",
+          "obs-0-035-95df1d78cbbfa2a3",
+          "obs-0-045-fd8b0975b5c8b25b",
+          "obs-0-055-8af7eea42129619b",
+          "obs-0-1-5b75ab3c39893b74",
+          "obs-0-175-e58908181b5b523b",
+          "obs-0-26-d77c1e17ab43c64c",
+          "obs-0-29-9437adca4838e0cc"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-29-9437adca4838e0cc",
+        "benchmark_id": "mollangbench-v1-generation-pass1",
+        "benchmark_version_id": "mollangbench-v1-generation-pass1-canonical",
+        "model_id": "model-o3-7ac6ae4921cdbada",
+        "model_configuration": "o3",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3",
+        "model_family_id": "openai-o3",
+        "model": "o3",
+        "organization": "OpenAI",
+        "score": 0.29,
+        "input_score": 0.29,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "mollangbench-v1-generation-pass1-metric-v1",
+        "protocol_id": "mollangbench-v1-generation-pass1-source-export-v1",
+        "task_set_id": "mollangbench-v1-generation-pass1-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "mollangbench-v1-generation-pass1-canonical-score",
+        "evaluation_protocol": "MolLangBench arXiv-v1 molecule-generation task, 200 examples, zero-shot CoT structured prompt, first-attempt structural accuracy; validity excluded.",
+        "model_release_date": "2025-04-16",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-21",
+        "source_publication_date": "2025-05-21",
+        "observation_date": "2025-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-05-21",
+        "date_kind": "result first-public date",
+        "capability_date": "2025-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac",
+          "resource-https-github-com-theluofenglab-mollangbench-d1197ec8d33b5cca"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+        ],
+        "source": "https://arxiv.org/abs/2505.15054",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-mollang-o3-204eb4645f005210"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "mollang-o3"
+        ],
+        "plot_date": "2025-05-21",
+        "frontier_observation_ids": [
+          "obs-0-005-1f6770c74871ea8d",
+          "obs-0-01-f1c665dfca381089",
+          "obs-0-035-e74d4a56c71f2eae",
+          "obs-0-035-95df1d78cbbfa2a3",
+          "obs-0-045-fd8b0975b5c8b25b",
+          "obs-0-055-8af7eea42129619b",
+          "obs-0-1-5b75ab3c39893b74",
+          "obs-0-175-e58908181b5b523b",
+          "obs-0-26-d77c1e17ab43c64c",
+          "obs-0-29-9437adca4838e0cc"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-29-9437adca4838e0cc",
+        "benchmark_id": "mollangbench-v1-generation-pass1",
+        "benchmark_version_id": "mollangbench-v1-generation-pass1-canonical",
+        "model_id": "model-o3-7ac6ae4921cdbada",
+        "model_configuration": "o3",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3",
+        "model_family_id": "openai-o3",
+        "model": "o3",
+        "organization": "OpenAI",
+        "score": 0.29,
+        "input_score": 0.29,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "mollangbench-v1-generation-pass1-metric-v1",
+        "protocol_id": "mollangbench-v1-generation-pass1-source-export-v1",
+        "task_set_id": "mollangbench-v1-generation-pass1-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "mollangbench-v1-generation-pass1-canonical-score",
+        "evaluation_protocol": "MolLangBench arXiv-v1 molecule-generation task, 200 examples, zero-shot CoT structured prompt, first-attempt structural accuracy; validity excluded.",
+        "model_release_date": "2025-04-16",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-21",
+        "source_publication_date": "2025-05-21",
+        "observation_date": "2025-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-05-21",
+        "date_kind": "result first-public date",
+        "capability_date": "2025-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac",
+          "resource-https-github-com-theluofenglab-mollangbench-d1197ec8d33b5cca"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-15054-264b089e9a3c47ac"
+        ],
+        "source": "https://arxiv.org/abs/2505.15054",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-mollang-o3-204eb4645f005210"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "mollang-o3"
+        ],
+        "plot_date": "2025-05-21",
+        "frontier_observation_ids": [
+          "obs-0-005-1f6770c74871ea8d",
+          "obs-0-01-f1c665dfca381089",
+          "obs-0-035-e74d4a56c71f2eae",
+          "obs-0-035-95df1d78cbbfa2a3",
+          "obs-0-045-fd8b0975b5c8b25b",
+          "obs-0-055-8af7eea42129619b",
+          "obs-0-1-5b75ab3c39893b74",
+          "obs-0-175-e58908181b5b523b",
+          "obs-0-26-d77c1e17ab43c64c",
+          "obs-0-29-9437adca4838e0cc"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.29,
+    "capability_frontier_value": 0.29,
+    "reported_frontier_value": 0.29,
+    "current_frontier": 0.29,
+    "normalized_progress": 0.29,
+    "normalized_headroom": 0.71,
+    "threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 473
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 473
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 473
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 473
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 473
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 473
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 473
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 473
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 473
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.2857142857142857,
+      "represented_organizations": [
+        "OpenAI",
+        "DeepSeek"
+      ],
+      "panel_size": 7,
+      "status": "low"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-github-com-theluofenglab-mollangbench-d1197ec8d33b5cca"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": true,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

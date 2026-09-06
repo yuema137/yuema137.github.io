@@ -1,0 +1,607 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "bixbench",
+    "name": "BixBench",
+    "domain": "Life Science",
+    "release": "2025-03-01",
+    "source": "https://arxiv.org/abs/2503.00096",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Agent",
+    "tags": [
+      "bioinformatics",
+      "notebook",
+      "long-horizon",
+      "open-answer"
+    ],
+    "metric": "Open-answer accuracy",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "bixbench-metric-v1",
+    "protocol_id": "bixbench-source-export-v1",
+    "canonical_score": {
+      "series_id": "bixbench-canonical-score",
+      "role": "canonical",
+      "metric_id": "bixbench-metric-v1",
+      "metric_name": "Open-answer accuracy",
+      "protocol_id": "bixbench-source-export-v1",
+      "task_set_id": "bixbench-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "bixbench-canonical",
+    "summary": {
+      "en": "BixBench evaluates agents on open-ended computational-biology analyses built from real-world research notebooks and datasets.",
+      "zh": "BixBench \u8bc4\u4f30 agent \u5b8c\u6210\u5f00\u653e\u5f0f computational biology \u5206\u6790\u7684\u80fd\u529b\uff0c\u4efb\u52a1\u6765\u81ea\u771f\u5b9e research notebook \u548c\u6570\u636e\u96c6\u3002"
+    },
+    "task_format": {
+      "en": "The agent explores biological data, writes and executes Python, R, or Bash analysis code in a notebook environment, and submits answers to research questions.",
+      "zh": "agent \u9700\u8981\u5728 notebook environment \u4e2d\u63a2\u7d22\u751f\u7269\u6570\u636e\u3001\u7f16\u5199\u5e76\u6267\u884c Python\u3001R \u6216 Bash \u5206\u6790\u4ee3\u7801\uff0c\u518d\u56de\u7b54 research question\u3002"
+    },
+    "scoring": {
+      "metric_name": "Open-answer accuracy",
+      "explanation": {
+        "en": "The headline series uses binary correctness of answers across the fixed open-answer questions and repeated trajectories. The paper reports approximately 17% for Claude 3.5 Sonnet and 9% for GPT-4o; MCQ, refusal-option, and majority-vote results are separate variants.",
+        "zh": "headline series \u4f7f\u7528\u56fa\u5b9a open-answer question \u548c\u91cd\u590d trajectory \u4e0a\u7684 binary correctness\u3002\u8bba\u6587\u62a5\u544a Claude 3.5 Sonnet \u7ea6 17%\u3001GPT-4o \u7ea6 9%\uff1bMCQ\u3001\u5e26 refusal option \u548c majority-vote \u7ed3\u679c\u5c5e\u4e8e\u72ec\u7acb variant\u3002"
+      }
+    },
+    "evaluation_target": "process_and_output",
+    "observation_count": 2,
+    "evidence_record_count": 2,
+    "observations": [
+      {
+        "observation_id": "obs-0-09-2eb5d9da077a6045",
+        "benchmark_id": "bixbench",
+        "benchmark_version_id": "bixbench-canonical",
+        "model_id": "model-gpt-4o-2024-05-13-a8b4b8c99c9f9f6d",
+        "model_configuration": "gpt-4o-2024-05-13",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.09,
+        "input_score": 0.09,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "bixbench-metric-v1",
+        "protocol_id": "bixbench-source-export-v1",
+        "task_set_id": "bixbench-canonical",
+        "metric": "Open-answer accuracy",
+        "score_role": "canonical",
+        "score_series_id": "bixbench-canonical-score",
+        "evaluation_protocol": "BixBench original paper open-answer agent evaluation; custom notebook agent scaffold with repeated trajectories. Later v1.5/MCQ configurations are not merged.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2503-00096-3c2a6b276b65d241"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2503-00096-3c2a6b276b65d241"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-05-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2503-00096-3c2a6b276b65d241"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2503-00096-3c2a6b276b65d241"
+        ],
+        "source": "https://arxiv.org/abs/2503.00096",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-bixbench-gpt-4o-2885ee0e99f32f42"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "bixbench-gpt-4o"
+        ]
+      },
+      {
+        "observation_id": "obs-0-17-db964db9c74c3b1b",
+        "benchmark_id": "bixbench",
+        "benchmark_version_id": "bixbench-canonical",
+        "model_id": "model-claude-3-5-sonnet-20240620-f30b888514e2c660",
+        "model_configuration": "claude-3-5-sonnet-20240620",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet",
+        "model_family_id": "anthropic-claude-3-5-sonnet",
+        "model": "Claude 3.5 Sonnet",
+        "organization": "Anthropic",
+        "score": 0.17,
+        "input_score": 0.17,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "bixbench-metric-v1",
+        "protocol_id": "bixbench-source-export-v1",
+        "task_set_id": "bixbench-canonical",
+        "metric": "Open-answer accuracy",
+        "score_role": "canonical",
+        "score_series_id": "bixbench-canonical-score",
+        "evaluation_protocol": "BixBench original paper open-answer agent evaluation; custom notebook agent scaffold with repeated trajectories. Later v1.5/MCQ configurations are not merged.",
+        "model_release_date": "2024-06-20",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-06-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2503-00096-3c2a6b276b65d241"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2503-00096-3c2a6b276b65d241"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-06-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-06-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2503-00096-3c2a6b276b65d241"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2503-00096-3c2a6b276b65d241"
+        ],
+        "source": "https://arxiv.org/abs/2503.00096",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-bixbench-claude-3-5-sonnet-b156da7f06f57958"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "bixbench-claude-3-5-sonnet"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-17-db964db9c74c3b1b",
+        "benchmark_id": "bixbench",
+        "benchmark_version_id": "bixbench-canonical",
+        "model_id": "model-claude-3-5-sonnet-20240620-f30b888514e2c660",
+        "model_configuration": "claude-3-5-sonnet-20240620",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet",
+        "model_family_id": "anthropic-claude-3-5-sonnet",
+        "model": "Claude 3.5 Sonnet",
+        "organization": "Anthropic",
+        "score": 0.17,
+        "input_score": 0.17,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "bixbench-metric-v1",
+        "protocol_id": "bixbench-source-export-v1",
+        "task_set_id": "bixbench-canonical",
+        "metric": "Open-answer accuracy",
+        "score_role": "canonical",
+        "score_series_id": "bixbench-canonical-score",
+        "evaluation_protocol": "BixBench original paper open-answer agent evaluation; custom notebook agent scaffold with repeated trajectories. Later v1.5/MCQ configurations are not merged.",
+        "model_release_date": "2024-06-20",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-06-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2503-00096-3c2a6b276b65d241"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2503-00096-3c2a6b276b65d241"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-03-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-06-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2503-00096-3c2a6b276b65d241"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2503-00096-3c2a6b276b65d241"
+        ],
+        "source": "https://arxiv.org/abs/2503.00096",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-bixbench-claude-3-5-sonnet-b156da7f06f57958"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "bixbench-claude-3-5-sonnet"
+        ],
+        "plot_date": "2025-03-01",
+        "frontier_observation_ids": [
+          "obs-0-09-2eb5d9da077a6045",
+          "obs-0-17-db964db9c74c3b1b"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-17-db964db9c74c3b1b",
+        "benchmark_id": "bixbench",
+        "benchmark_version_id": "bixbench-canonical",
+        "model_id": "model-claude-3-5-sonnet-20240620-f30b888514e2c660",
+        "model_configuration": "claude-3-5-sonnet-20240620",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet",
+        "model_family_id": "anthropic-claude-3-5-sonnet",
+        "model": "Claude 3.5 Sonnet",
+        "organization": "Anthropic",
+        "score": 0.17,
+        "input_score": 0.17,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "bixbench-metric-v1",
+        "protocol_id": "bixbench-source-export-v1",
+        "task_set_id": "bixbench-canonical",
+        "metric": "Open-answer accuracy",
+        "score_role": "canonical",
+        "score_series_id": "bixbench-canonical-score",
+        "evaluation_protocol": "BixBench original paper open-answer agent evaluation; custom notebook agent scaffold with repeated trajectories. Later v1.5/MCQ configurations are not merged.",
+        "model_release_date": "2024-06-20",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-06-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2503-00096-3c2a6b276b65d241"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2503-00096-3c2a6b276b65d241"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-03-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-06-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2503-00096-3c2a6b276b65d241"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2503-00096-3c2a6b276b65d241"
+        ],
+        "source": "https://arxiv.org/abs/2503.00096",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-bixbench-claude-3-5-sonnet-b156da7f06f57958"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "bixbench-claude-3-5-sonnet"
+        ],
+        "plot_date": "2025-03-01",
+        "frontier_observation_ids": [
+          "obs-0-09-2eb5d9da077a6045",
+          "obs-0-17-db964db9c74c3b1b"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-17-db964db9c74c3b1b",
+        "benchmark_id": "bixbench",
+        "benchmark_version_id": "bixbench-canonical",
+        "model_id": "model-claude-3-5-sonnet-20240620-f30b888514e2c660",
+        "model_configuration": "claude-3-5-sonnet-20240620",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet",
+        "model_family_id": "anthropic-claude-3-5-sonnet",
+        "model": "Claude 3.5 Sonnet",
+        "organization": "Anthropic",
+        "score": 0.17,
+        "input_score": 0.17,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "bixbench-metric-v1",
+        "protocol_id": "bixbench-source-export-v1",
+        "task_set_id": "bixbench-canonical",
+        "metric": "Open-answer accuracy",
+        "score_role": "canonical",
+        "score_series_id": "bixbench-canonical-score",
+        "evaluation_protocol": "BixBench original paper open-answer agent evaluation; custom notebook agent scaffold with repeated trajectories. Later v1.5/MCQ configurations are not merged.",
+        "model_release_date": "2024-06-20",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-06-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2503-00096-3c2a6b276b65d241"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2503-00096-3c2a6b276b65d241"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-03-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-06-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2503-00096-3c2a6b276b65d241"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2503-00096-3c2a6b276b65d241"
+        ],
+        "source": "https://arxiv.org/abs/2503.00096",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-bixbench-claude-3-5-sonnet-b156da7f06f57958"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "bixbench-claude-3-5-sonnet"
+        ],
+        "plot_date": "2025-03-01",
+        "frontier_observation_ids": [
+          "obs-0-09-2eb5d9da077a6045",
+          "obs-0-17-db964db9c74c3b1b"
+        ]
+      }
+    ],
+    "reported_frontier": [],
+    "historical_frontier": [],
+    "retrospective_observations": [],
+    "observed_frontier": 0.17,
+    "capability_frontier_value": 0.17,
+    "reported_frontier_value": null,
+    "current_frontier": 0.17,
+    "normalized_progress": 0.17,
+    "normalized_headroom": 0.83,
+    "threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 554
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 554
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 554
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 554
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 554
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 554
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T80": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T90": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.2857142857142857,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic"
+      ],
+      "panel_size": 7,
+      "status": "low"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-arxiv-org-abs-2503-00096-3c2a6b276b65d241"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "unknown_public_dates",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": true,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

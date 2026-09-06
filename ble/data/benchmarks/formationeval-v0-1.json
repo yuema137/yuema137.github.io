@@ -1,0 +1,1257 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "formationeval-v0-1",
+    "name": "FormationEval v0.1",
+    "domain": "Energy & Infrastructure",
+    "release": "2026-01-05",
+    "source": "https://www.formationeval.no/",
+    "floor": 0.25,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.25,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Model",
+    "tags": [
+      "petroleum",
+      "subsurface",
+      "geoscience"
+    ],
+    "metric": "Accuracy",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "formationeval-v0-1-metric-v1",
+    "protocol_id": "formationeval-v0-1-source-export-v1",
+    "canonical_score": {
+      "series_id": "formationeval-v0-1-canonical-score",
+      "role": "canonical",
+      "metric_id": "formationeval-v0-1-metric-v1",
+      "metric_name": "Accuracy",
+      "protocol_id": "formationeval-v0-1-source-export-v1",
+      "task_set_id": "formationeval-v0-1-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.25,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "formationeval-v0-1-canonical",
+    "summary": {
+      "en": "FormationEval measures petroleum geoscience and subsurface-engineering knowledge across reservoir, drilling, production, and petrophysics topics.",
+      "zh": "FormationEval \u6d4b\u8bd5\u6a21\u578b\u5728\u6cb9\u6c14\u5730\u7403\u79d1\u5b66\u3001\u50a8\u5c42\u3001\u94bb\u4e95\u3001\u751f\u4ea7\u548c\u5ca9\u77f3\u7269\u7406\u7b49\u5730\u4e0b\u5de5\u7a0b\u4e3b\u9898\u4e0a\u7684\u77e5\u8bc6\u3002"
+    },
+    "task_format": {
+      "en": "The model answers all 505 English four-choice questions zero-shot and returns one final option letter.",
+      "zh": "\u6a21\u578b\u4ee5 zero-shot \u65b9\u5f0f\u56de\u7b54\u5168\u90e8 505 \u9053\u82f1\u6587\u56db\u9009\u4e00\u9898\uff0c\u5e76\u8fd4\u56de\u4e00\u4e2a\u6700\u7ec8\u9009\u9879\u5b57\u6bcd\u3002"
+    },
+    "scoring": {
+      "metric_name": "Overall accuracy",
+      "explanation": {
+        "en": "The score is correct answers divided by 505; failed answer extraction counts as incorrect.",
+        "zh": "\u5206\u6570\u662f\u7b54\u5bf9\u9898\u6570\u9664\u4ee5 505\uff1b\u65e0\u6cd5\u63d0\u53d6\u7b54\u6848\u65f6\u6309\u9519\u8bef\u8ba1\u5206\u3002"
+      }
+    },
+    "evaluation_target": "final_output",
+    "observation_count": 7,
+    "evidence_record_count": 7,
+    "observations": [
+      {
+        "observation_id": "obs-0-931-203f6a59a853fd19",
+        "benchmark_id": "formationeval-v0-1",
+        "benchmark_version_id": "formationeval-v0-1-canonical",
+        "model_id": "model-llama-4-scout-517ecfe63c50138e",
+        "model_configuration": "Llama-4-Scout",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama-4-scout",
+        "model_family_id": "meta-llama-4-scout",
+        "model": "Llama-4-Scout",
+        "organization": "Meta",
+        "score": 0.931,
+        "input_score": 0.931,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "formationeval-v0-1-metric-v1",
+        "protocol_id": "formationeval-v0-1-source-export-v1",
+        "task_set_id": "formationeval-v0-1-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "formationeval-v0-1-canonical-score",
+        "evaluation_protocol": "FormationEval v0.1 fixed 505-item English MCQ set, zero-shot, direct A-D answer, one published run and official extraction. Later DISKOS-QA and SPE extensions are excluded.",
+        "model_release_date": "2025-04-05",
+        "evaluation_date": null,
+        "result_public_date": "2026-01-05",
+        "source_publication_date": "2026-01-05",
+        "observation_date": "2025-04-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-01-05",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-04-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-01-05",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f",
+          "resource-https-www-formationeval-no-d6b207923244cad3"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
+        ],
+        "source": "https://arxiv.org/abs/2601.02158",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-formationeval-llama4-2a4ecb772f056edc"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "formationeval-llama4"
+        ]
+      },
+      {
+        "observation_id": "obs-0-931-90349de44c60a2be",
+        "benchmark_id": "formationeval-v0-1",
+        "benchmark_version_id": "formationeval-v0-1-canonical",
+        "model_id": "model-qwen3-235b-a22b-2507-c2fa740fac5d216f",
+        "model_configuration": "Qwen3-235B-A22B-2507",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen3-235b-a22b-2507",
+        "model_family_id": "qwen-qwen3-235b-a22b-2507",
+        "model": "Qwen3-235B-A22B-2507",
+        "organization": "Qwen",
+        "score": 0.931,
+        "input_score": 0.931,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "formationeval-v0-1-metric-v1",
+        "protocol_id": "formationeval-v0-1-source-export-v1",
+        "task_set_id": "formationeval-v0-1-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "formationeval-v0-1-canonical-score",
+        "evaluation_protocol": "FormationEval v0.1 fixed 505-item English MCQ set, zero-shot, direct A-D answer, one published run and official extraction. Later DISKOS-QA and SPE extensions are excluded.",
+        "model_release_date": "2025-07-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-01-05",
+        "source_publication_date": "2026-01-05",
+        "observation_date": "2025-07-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-07-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-formationeval-no-d6b207923244cad3"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-formationeval-no-d6b207923244cad3"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-01-05",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-07-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-07-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-01-05",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-formationeval-no-d6b207923244cad3"
+        ],
+        "score_source_ids": [
+          "resource-https-www-formationeval-no-d6b207923244cad3"
+        ],
+        "source": "https://www.formationeval.no/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-formationeval-qwen3-adba0f9221b96d46"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "formationeval-qwen3"
+        ]
+      },
+      {
+        "observation_id": "obs-0-962-a5849f6b8a1b015d",
+        "benchmark_id": "formationeval-v0-1",
+        "benchmark_version_id": "formationeval-v0-1-canonical",
+        "model_id": "model-deepseek-r1-18eed2738c2c0e2c",
+        "model_configuration": "DeepSeek-R1",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-r1",
+        "model_family_id": "deepseek-deepseek-r1",
+        "model": "DeepSeek-R1",
+        "organization": "DeepSeek",
+        "score": 0.962,
+        "input_score": 0.962,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "formationeval-v0-1-metric-v1",
+        "protocol_id": "formationeval-v0-1-source-export-v1",
+        "task_set_id": "formationeval-v0-1-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "formationeval-v0-1-canonical-score",
+        "evaluation_protocol": "FormationEval v0.1 fixed 505-item English MCQ set, zero-shot, direct A-D answer, one published run and official extraction. Later DISKOS-QA and SPE extensions are excluded.",
+        "model_release_date": "2025-01-20",
+        "evaluation_date": null,
+        "result_public_date": "2026-01-05",
+        "source_publication_date": "2026-01-05",
+        "observation_date": "2025-01-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-01-05",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-01-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-01-05",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f",
+          "resource-https-www-formationeval-no-d6b207923244cad3"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
+        ],
+        "source": "https://arxiv.org/abs/2601.02158",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-formationeval-deepseek-r1-55ae8916004b4f70"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "formationeval-deepseek-r1"
+        ]
+      },
+      {
+        "observation_id": "obs-0-97-df68df7783dd1944",
+        "benchmark_id": "formationeval-v0-1",
+        "benchmark_version_id": "formationeval-v0-1-canonical",
+        "model_id": "model-claude-opus-4-5-eb206cfae35041a3",
+        "model_configuration": "Claude-Opus-4.5",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-5",
+        "model_family_id": "anthropic-claude-opus-4-5",
+        "model": "Claude-Opus-4.5",
+        "organization": "Anthropic",
+        "score": 0.97,
+        "input_score": 0.97,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "formationeval-v0-1-metric-v1",
+        "protocol_id": "formationeval-v0-1-source-export-v1",
+        "task_set_id": "formationeval-v0-1-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "formationeval-v0-1-canonical-score",
+        "evaluation_protocol": "FormationEval v0.1 fixed 505-item English MCQ set, zero-shot, direct A-D answer, one published run and official extraction. Later DISKOS-QA and SPE extensions are excluded.",
+        "model_release_date": "2025-11-24",
+        "evaluation_date": null,
+        "result_public_date": "2026-01-05",
+        "source_publication_date": "2026-01-05",
+        "observation_date": "2025-11-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-11-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-01-05",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-11-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-11-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-01-05",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f",
+          "resource-https-www-formationeval-no-d6b207923244cad3"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
+        ],
+        "source": "https://arxiv.org/abs/2601.02158",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-formationeval-opus45-75f514ad8f10efc2"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "formationeval-opus45"
+        ]
+      },
+      {
+        "observation_id": "obs-0-974-1e125b36f45212cd",
+        "benchmark_id": "formationeval-v0-1",
+        "benchmark_version_id": "formationeval-v0-1-canonical",
+        "model_id": "model-gpt-5-2-chat-medium-26aac8ee6c10160f",
+        "model_configuration": "GPT-5.2-Chat-Medium",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-2-chat-medium",
+        "model_family_id": "openai-gpt-5-2-chat-medium",
+        "model": "GPT-5.2-Chat-Medium",
+        "organization": "OpenAI",
+        "score": 0.974,
+        "input_score": 0.974,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "formationeval-v0-1-metric-v1",
+        "protocol_id": "formationeval-v0-1-source-export-v1",
+        "task_set_id": "formationeval-v0-1-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "formationeval-v0-1-canonical-score",
+        "evaluation_protocol": "FormationEval v0.1 fixed 505-item English MCQ set, zero-shot, direct A-D answer, one published run and official extraction. Later DISKOS-QA and SPE extensions are excluded.",
+        "model_release_date": "2025-12-11",
+        "evaluation_date": null,
+        "result_public_date": "2026-01-05",
+        "source_publication_date": "2026-01-05",
+        "observation_date": "2025-12-11",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-12-11",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-01-05",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-12-11",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-12-11",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-01-05",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f",
+          "resource-https-www-formationeval-no-d6b207923244cad3"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
+        ],
+        "source": "https://arxiv.org/abs/2601.02158",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-formationeval-gpt52-d9e341d4d001f013"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "formationeval-gpt52"
+        ]
+      },
+      {
+        "observation_id": "obs-0-976-aba779906c0e183d",
+        "benchmark_id": "formationeval-v0-1",
+        "benchmark_version_id": "formationeval-v0-1-canonical",
+        "model_id": "model-grok-4-1-fast-7fab41b437072258",
+        "model_configuration": "Grok-4.1-Fast",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-1-fast",
+        "model_family_id": "xai-grok-4-1-fast",
+        "model": "Grok-4.1-Fast",
+        "organization": "xAI",
+        "score": 0.976,
+        "input_score": 0.976,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "formationeval-v0-1-metric-v1",
+        "protocol_id": "formationeval-v0-1-source-export-v1",
+        "task_set_id": "formationeval-v0-1-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "formationeval-v0-1-canonical-score",
+        "evaluation_protocol": "FormationEval v0.1 fixed 505-item English MCQ set, zero-shot, direct A-D answer, one published run and official extraction. Later DISKOS-QA and SPE extensions are excluded.",
+        "model_release_date": "2025-11-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-01-05",
+        "source_publication_date": "2026-01-05",
+        "observation_date": "2025-11-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-11-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-formationeval-no-d6b207923244cad3"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-formationeval-no-d6b207923244cad3"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-01-05",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-11-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-11-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-01-05",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-formationeval-no-d6b207923244cad3"
+        ],
+        "score_source_ids": [
+          "resource-https-www-formationeval-no-d6b207923244cad3"
+        ],
+        "source": "https://www.formationeval.no/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-formationeval-grok41-c4bcc7144e0faf1b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "formationeval-grok41"
+        ]
+      },
+      {
+        "observation_id": "obs-0-998-e4a476fb14dd83ff",
+        "benchmark_id": "formationeval-v0-1",
+        "benchmark_version_id": "formationeval-v0-1-canonical",
+        "model_id": "model-gemini-3-pro-preview-6f9ce4666001cc6e",
+        "model_configuration": "Gemini-3-Pro-Preview",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-pro-preview",
+        "model_family_id": "google-gemini-3-pro-preview",
+        "model": "Gemini-3-Pro-Preview",
+        "organization": "Google",
+        "score": 0.998,
+        "input_score": 0.998,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "formationeval-v0-1-metric-v1",
+        "protocol_id": "formationeval-v0-1-source-export-v1",
+        "task_set_id": "formationeval-v0-1-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "formationeval-v0-1-canonical-score",
+        "evaluation_protocol": "FormationEval v0.1 fixed 505-item English MCQ set, zero-shot, direct A-D answer, one published run and official extraction. Later DISKOS-QA and SPE extensions are excluded.",
+        "model_release_date": "2025-11-18",
+        "evaluation_date": null,
+        "result_public_date": "2026-01-05",
+        "source_publication_date": "2026-01-05",
+        "observation_date": "2025-11-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-11-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-01-05",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-11-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-11-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-01-05",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f",
+          "resource-https-www-formationeval-no-d6b207923244cad3"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
+        ],
+        "source": "https://arxiv.org/abs/2601.02158",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-formationeval-gemini3-0e8d5f5eeddca7ef"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "formationeval-gemini3"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-998-e4a476fb14dd83ff",
+        "benchmark_id": "formationeval-v0-1",
+        "benchmark_version_id": "formationeval-v0-1-canonical",
+        "model_id": "model-gemini-3-pro-preview-6f9ce4666001cc6e",
+        "model_configuration": "Gemini-3-Pro-Preview",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-pro-preview",
+        "model_family_id": "google-gemini-3-pro-preview",
+        "model": "Gemini-3-Pro-Preview",
+        "organization": "Google",
+        "score": 0.998,
+        "input_score": 0.998,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "formationeval-v0-1-metric-v1",
+        "protocol_id": "formationeval-v0-1-source-export-v1",
+        "task_set_id": "formationeval-v0-1-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "formationeval-v0-1-canonical-score",
+        "evaluation_protocol": "FormationEval v0.1 fixed 505-item English MCQ set, zero-shot, direct A-D answer, one published run and official extraction. Later DISKOS-QA and SPE extensions are excluded.",
+        "model_release_date": "2025-11-18",
+        "evaluation_date": null,
+        "result_public_date": "2026-01-05",
+        "source_publication_date": "2026-01-05",
+        "observation_date": "2025-11-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-11-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-01-05",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-01-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-11-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-01-05",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f",
+          "resource-https-www-formationeval-no-d6b207923244cad3"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
+        ],
+        "source": "https://arxiv.org/abs/2601.02158",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-formationeval-gemini3-0e8d5f5eeddca7ef"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "formationeval-gemini3"
+        ],
+        "plot_date": "2026-01-05",
+        "frontier_observation_ids": [
+          "obs-0-931-203f6a59a853fd19",
+          "obs-0-931-90349de44c60a2be",
+          "obs-0-962-a5849f6b8a1b015d",
+          "obs-0-97-df68df7783dd1944",
+          "obs-0-974-1e125b36f45212cd",
+          "obs-0-976-aba779906c0e183d",
+          "obs-0-998-e4a476fb14dd83ff"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-998-e4a476fb14dd83ff",
+        "benchmark_id": "formationeval-v0-1",
+        "benchmark_version_id": "formationeval-v0-1-canonical",
+        "model_id": "model-gemini-3-pro-preview-6f9ce4666001cc6e",
+        "model_configuration": "Gemini-3-Pro-Preview",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-pro-preview",
+        "model_family_id": "google-gemini-3-pro-preview",
+        "model": "Gemini-3-Pro-Preview",
+        "organization": "Google",
+        "score": 0.998,
+        "input_score": 0.998,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "formationeval-v0-1-metric-v1",
+        "protocol_id": "formationeval-v0-1-source-export-v1",
+        "task_set_id": "formationeval-v0-1-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "formationeval-v0-1-canonical-score",
+        "evaluation_protocol": "FormationEval v0.1 fixed 505-item English MCQ set, zero-shot, direct A-D answer, one published run and official extraction. Later DISKOS-QA and SPE extensions are excluded.",
+        "model_release_date": "2025-11-18",
+        "evaluation_date": null,
+        "result_public_date": "2026-01-05",
+        "source_publication_date": "2026-01-05",
+        "observation_date": "2025-11-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-11-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-01-05",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-01-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-11-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-01-05",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f",
+          "resource-https-www-formationeval-no-d6b207923244cad3"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
+        ],
+        "source": "https://arxiv.org/abs/2601.02158",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-formationeval-gemini3-0e8d5f5eeddca7ef"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "formationeval-gemini3"
+        ],
+        "plot_date": "2026-01-05",
+        "frontier_observation_ids": [
+          "obs-0-931-203f6a59a853fd19",
+          "obs-0-931-90349de44c60a2be",
+          "obs-0-962-a5849f6b8a1b015d",
+          "obs-0-97-df68df7783dd1944",
+          "obs-0-974-1e125b36f45212cd",
+          "obs-0-976-aba779906c0e183d",
+          "obs-0-998-e4a476fb14dd83ff"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-998-e4a476fb14dd83ff",
+        "benchmark_id": "formationeval-v0-1",
+        "benchmark_version_id": "formationeval-v0-1-canonical",
+        "model_id": "model-gemini-3-pro-preview-6f9ce4666001cc6e",
+        "model_configuration": "Gemini-3-Pro-Preview",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-pro-preview",
+        "model_family_id": "google-gemini-3-pro-preview",
+        "model": "Gemini-3-Pro-Preview",
+        "organization": "Google",
+        "score": 0.998,
+        "input_score": 0.998,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "formationeval-v0-1-metric-v1",
+        "protocol_id": "formationeval-v0-1-source-export-v1",
+        "task_set_id": "formationeval-v0-1-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "formationeval-v0-1-canonical-score",
+        "evaluation_protocol": "FormationEval v0.1 fixed 505-item English MCQ set, zero-shot, direct A-D answer, one published run and official extraction. Later DISKOS-QA and SPE extensions are excluded.",
+        "model_release_date": "2025-11-18",
+        "evaluation_date": null,
+        "result_public_date": "2026-01-05",
+        "source_publication_date": "2026-01-05",
+        "observation_date": "2025-11-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-11-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-01-05",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-01-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-11-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-01-05",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f",
+          "resource-https-www-formationeval-no-d6b207923244cad3"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
+        ],
+        "source": "https://arxiv.org/abs/2601.02158",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-formationeval-gemini3-0e8d5f5eeddca7ef"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "formationeval-gemini3"
+        ],
+        "plot_date": "2026-01-05",
+        "frontier_observation_ids": [
+          "obs-0-931-203f6a59a853fd19",
+          "obs-0-931-90349de44c60a2be",
+          "obs-0-962-a5849f6b8a1b015d",
+          "obs-0-97-df68df7783dd1944",
+          "obs-0-974-1e125b36f45212cd",
+          "obs-0-976-aba779906c0e183d",
+          "obs-0-998-e4a476fb14dd83ff"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-998-e4a476fb14dd83ff",
+        "benchmark_id": "formationeval-v0-1",
+        "benchmark_version_id": "formationeval-v0-1-canonical",
+        "model_id": "model-gemini-3-pro-preview-6f9ce4666001cc6e",
+        "model_configuration": "Gemini-3-Pro-Preview",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-pro-preview",
+        "model_family_id": "google-gemini-3-pro-preview",
+        "model": "Gemini-3-Pro-Preview",
+        "organization": "Google",
+        "score": 0.998,
+        "input_score": 0.998,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "formationeval-v0-1-metric-v1",
+        "protocol_id": "formationeval-v0-1-source-export-v1",
+        "task_set_id": "formationeval-v0-1-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "formationeval-v0-1-canonical-score",
+        "evaluation_protocol": "FormationEval v0.1 fixed 505-item English MCQ set, zero-shot, direct A-D answer, one published run and official extraction. Later DISKOS-QA and SPE extensions are excluded.",
+        "model_release_date": "2025-11-18",
+        "evaluation_date": null,
+        "result_public_date": "2026-01-05",
+        "source_publication_date": "2026-01-05",
+        "observation_date": "2025-11-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-11-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-01-05",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-01-05",
+        "date_kind": "result first-public date",
+        "capability_date": "2025-11-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-01-05",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f",
+          "resource-https-www-formationeval-no-d6b207923244cad3"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
+        ],
+        "source": "https://arxiv.org/abs/2601.02158",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-formationeval-gemini3-0e8d5f5eeddca7ef"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "formationeval-gemini3"
+        ],
+        "plot_date": "2026-01-05",
+        "frontier_observation_ids": [
+          "obs-0-931-203f6a59a853fd19",
+          "obs-0-931-90349de44c60a2be",
+          "obs-0-962-a5849f6b8a1b015d",
+          "obs-0-97-df68df7783dd1944",
+          "obs-0-974-1e125b36f45212cd",
+          "obs-0-976-aba779906c0e183d",
+          "obs-0-998-e4a476fb14dd83ff"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-998-e4a476fb14dd83ff",
+        "benchmark_id": "formationeval-v0-1",
+        "benchmark_version_id": "formationeval-v0-1-canonical",
+        "model_id": "model-gemini-3-pro-preview-6f9ce4666001cc6e",
+        "model_configuration": "Gemini-3-Pro-Preview",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-pro-preview",
+        "model_family_id": "google-gemini-3-pro-preview",
+        "model": "Gemini-3-Pro-Preview",
+        "organization": "Google",
+        "score": 0.998,
+        "input_score": 0.998,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "formationeval-v0-1-metric-v1",
+        "protocol_id": "formationeval-v0-1-source-export-v1",
+        "task_set_id": "formationeval-v0-1-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "formationeval-v0-1-canonical-score",
+        "evaluation_protocol": "FormationEval v0.1 fixed 505-item English MCQ set, zero-shot, direct A-D answer, one published run and official extraction. Later DISKOS-QA and SPE extensions are excluded.",
+        "model_release_date": "2025-11-18",
+        "evaluation_date": null,
+        "result_public_date": "2026-01-05",
+        "source_publication_date": "2026-01-05",
+        "observation_date": "2025-11-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-11-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-01-05",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-01-05",
+        "date_kind": "result first-public date",
+        "capability_date": "2025-11-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-01-05",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f",
+          "resource-https-www-formationeval-no-d6b207923244cad3"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
+        ],
+        "source": "https://arxiv.org/abs/2601.02158",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-formationeval-gemini3-0e8d5f5eeddca7ef"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "formationeval-gemini3"
+        ],
+        "plot_date": "2026-01-05",
+        "frontier_observation_ids": [
+          "obs-0-931-203f6a59a853fd19",
+          "obs-0-931-90349de44c60a2be",
+          "obs-0-962-a5849f6b8a1b015d",
+          "obs-0-97-df68df7783dd1944",
+          "obs-0-974-1e125b36f45212cd",
+          "obs-0-976-aba779906c0e183d",
+          "obs-0-998-e4a476fb14dd83ff"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.998,
+    "capability_frontier_value": 0.998,
+    "reported_frontier_value": 0.998,
+    "current_frontier": 0.998,
+    "normalized_progress": 0.9973333333333333,
+    "normalized_headroom": 0.002666666666666706,
+    "threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-01-05"
+      },
+      "T80": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-01-05"
+      },
+      "T90": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-01-05"
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-01-05"
+      },
+      "T80": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-01-05"
+      },
+      "T90": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-01-05"
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-01-05"
+      },
+      "T80": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-01-05"
+      },
+      "T90": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-01-05"
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 1.0,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "DeepSeek",
+        "Qwen",
+        "Meta",
+        "xAI"
+      ],
+      "panel_size": 7,
+      "status": "high"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-www-formationeval-no-d6b207923244cad3"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

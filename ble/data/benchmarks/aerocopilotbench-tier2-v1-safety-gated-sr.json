@@ -1,0 +1,982 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "aerocopilotbench-tier2-v1-safety-gated-sr",
+    "name": "AeroCopilotBench Tier 2",
+    "domain": "Mechanical & Aerospace Engineering",
+    "release": "2026-08-17",
+    "source": "https://arxiv.org/html/2608.16349",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Agent",
+    "tags": [
+      "aviation",
+      "cockpit",
+      "safety"
+    ],
+    "metric": "Success rate",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "aerocopilotbench-tier2-v1-safety-gated-sr-metric-v1",
+    "protocol_id": "aerocopilotbench-tier2-v1-safety-gated-sr-source-export-v1",
+    "canonical_score": {
+      "series_id": "aerocopilotbench-tier2-v1-safety-gated-sr-canonical-score",
+      "role": "canonical",
+      "metric_id": "aerocopilotbench-tier2-v1-safety-gated-sr-metric-v1",
+      "metric_name": "Success rate",
+      "protocol_id": "aerocopilotbench-tier2-v1-safety-gated-sr-source-export-v1",
+      "task_set_id": "aerocopilotbench-tier2-v1-safety-gated-sr-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "aerocopilotbench-tier2-v1-safety-gated-sr-canonical",
+    "summary": {
+      "en": "AeroCopilotBench evaluates safe emergency procedures in a deterministic virtual cockpit.",
+      "zh": "AeroCopilotBench \u8bc4\u4f30 agent \u5728\u786e\u5b9a\u6027\u865a\u62df\u9a7e\u9a76\u8231\u4e2d\u5b89\u5168\u6267\u884c\u7d27\u6025\u7a0b\u5e8f\u3002"
+    },
+    "task_format": {
+      "en": "Diagnose cockpit state and use twelve tools to complete 73 emergency or abnormal procedures.",
+      "zh": "\u8bca\u65ad\u9a7e\u9a76\u8231\u72b6\u6001\u5e76\u4f7f\u7528 12 \u7c7b\u5de5\u5177\u5b8c\u6210 73 \u4e2a\u7d27\u6025\u6216\u5f02\u5e38\u7a0b\u5e8f\u3002"
+    },
+    "scoring": {
+      "metric_name": "Safety-gated success rate",
+      "explanation": {
+        "en": "A trial succeeds only when every goal is met with no hard safety violation; tasks are macro-averaged over three trials.",
+        "zh": "\u53ea\u6709\u5b8c\u6210\u5168\u90e8\u76ee\u6807\u4e14\u65e0\u786c\u6027\u5b89\u5168\u8fdd\u89c4\u65f6\u624d\u6210\u529f\uff1b\u6bcf\u9898\u4e09\u6b21\u540e\u8fdb\u884c\u4efb\u52a1\u7b49\u6743\u5e73\u5747\u3002"
+      }
+    },
+    "evaluation_target": "environment_outcome",
+    "observation_count": 4,
+    "evidence_record_count": 4,
+    "observations": [
+      {
+        "observation_id": "obs-0-594-09f0fb292c09cabb",
+        "benchmark_id": "aerocopilotbench-tier2-v1-safety-gated-sr",
+        "benchmark_version_id": "aerocopilotbench-tier2-v1-safety-gated-sr-canonical",
+        "model_id": "model-gemini-3-5-flash-cab40f246147caf6",
+        "model_configuration": "Gemini-3.5-Flash",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-5-flash",
+        "model_family_id": "google-gemini-3-5-flash",
+        "model": "Gemini-3.5-Flash",
+        "organization": "Google",
+        "score": 0.594,
+        "input_score": 0.594,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "aerocopilotbench-tier2-v1-safety-gated-sr-metric-v1",
+        "protocol_id": "aerocopilotbench-tier2-v1-safety-gated-sr-source-export-v1",
+        "task_set_id": "aerocopilotbench-tier2-v1-safety-gated-sr-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "aerocopilotbench-tier2-v1-safety-gated-sr-canonical-score",
+        "evaluation_protocol": "Tier 2 frozen 73 tasks, three trials, native tools, high reasoning, 48 turns, task-balanced safety-gated SR; auxiliary metrics excluded.",
+        "model_release_date": "2026-05-19",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-17",
+        "source_publication_date": "2026-08-17",
+        "observation_date": "2026-05-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-05-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-17",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-05-19",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-05-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-17",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+        ],
+        "source": "https://arxiv.org/abs/2608.16349",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-aerocopilot-gemini35flash-864d7bf5eb356da3"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "aerocopilot-gemini35flash"
+        ]
+      },
+      {
+        "observation_id": "obs-0-726-2477ca33163cac90",
+        "benchmark_id": "aerocopilotbench-tier2-v1-safety-gated-sr",
+        "benchmark_version_id": "aerocopilotbench-tier2-v1-safety-gated-sr-canonical",
+        "model_id": "model-gpt-5-6-sol-5f1ffa469585aab8",
+        "model_configuration": "GPT-5.6-sol",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "GPT-5.6-sol",
+        "organization": "OpenAI",
+        "score": 0.726,
+        "input_score": 0.726,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "aerocopilotbench-tier2-v1-safety-gated-sr-metric-v1",
+        "protocol_id": "aerocopilotbench-tier2-v1-safety-gated-sr-source-export-v1",
+        "task_set_id": "aerocopilotbench-tier2-v1-safety-gated-sr-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "aerocopilotbench-tier2-v1-safety-gated-sr-canonical-score",
+        "evaluation_protocol": "Tier 2 frozen 73 tasks, three trials, native tools, high reasoning, 48 turns, task-balanced safety-gated SR; auxiliary metrics excluded.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-17",
+        "source_publication_date": "2026-08-17",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-17",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-17",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+        ],
+        "source": "https://arxiv.org/abs/2608.16349",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-aerocopilot-gpt56sol-cacdcababf6cd429"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "aerocopilot-gpt56sol"
+        ]
+      },
+      {
+        "observation_id": "obs-0-292-568559b20894373a",
+        "benchmark_id": "aerocopilotbench-tier2-v1-safety-gated-sr",
+        "benchmark_version_id": "aerocopilotbench-tier2-v1-safety-gated-sr-canonical",
+        "model_id": "model-deepseek-v4-flash-127686e02a6c2c11",
+        "model_configuration": "DeepSeek-V4-Flash",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-v4-flash",
+        "model_family_id": "deepseek-deepseek-v4-flash",
+        "model": "DeepSeek-V4-Flash",
+        "organization": "DeepSeek",
+        "score": 0.292,
+        "input_score": 0.292,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "aerocopilotbench-tier2-v1-safety-gated-sr-metric-v1",
+        "protocol_id": "aerocopilotbench-tier2-v1-safety-gated-sr-source-export-v1",
+        "task_set_id": "aerocopilotbench-tier2-v1-safety-gated-sr-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "aerocopilotbench-tier2-v1-safety-gated-sr-canonical-score",
+        "evaluation_protocol": "Tier 2 frozen 73 tasks, three trials, native tools, high reasoning, 48 turns, task-balanced safety-gated SR; auxiliary metrics excluded.",
+        "model_release_date": "2026-07-31",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-17",
+        "source_publication_date": "2026-08-17",
+        "observation_date": "2026-07-31",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-31",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-17",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-31",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-31",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-17",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+        ],
+        "source": "https://arxiv.org/abs/2608.16349",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-aerocopilot-deepseekv4flash-ff4ee517380da2f5"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "aerocopilot-deepseekv4flash"
+        ]
+      },
+      {
+        "observation_id": "obs-0-461-fb8724803f5889b2",
+        "benchmark_id": "aerocopilotbench-tier2-v1-safety-gated-sr",
+        "benchmark_version_id": "aerocopilotbench-tier2-v1-safety-gated-sr-canonical",
+        "model_id": "model-deepseek-v4-pro-58e16efb8d26515a",
+        "model_configuration": "DeepSeek-V4-Pro",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-v4-pro",
+        "model_family_id": "deepseek-deepseek-v4-pro",
+        "model": "DeepSeek-V4-Pro",
+        "organization": "DeepSeek",
+        "score": 0.461,
+        "input_score": 0.461,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "aerocopilotbench-tier2-v1-safety-gated-sr-metric-v1",
+        "protocol_id": "aerocopilotbench-tier2-v1-safety-gated-sr-source-export-v1",
+        "task_set_id": "aerocopilotbench-tier2-v1-safety-gated-sr-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "aerocopilotbench-tier2-v1-safety-gated-sr-canonical-score",
+        "evaluation_protocol": "Tier 2 frozen 73 tasks, three trials, native tools, high reasoning, 48 turns, task-balanced safety-gated SR; auxiliary metrics excluded.",
+        "model_release_date": "2026-08-13",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-17",
+        "source_publication_date": "2026-08-17",
+        "observation_date": "2026-08-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-08-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-17",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-08-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-08-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-17",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+        ],
+        "source": "https://arxiv.org/abs/2608.16349",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-aerocopilot-deepseekv4pro-17d01953ea4599cf"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "aerocopilot-deepseekv4pro"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-726-2477ca33163cac90",
+        "benchmark_id": "aerocopilotbench-tier2-v1-safety-gated-sr",
+        "benchmark_version_id": "aerocopilotbench-tier2-v1-safety-gated-sr-canonical",
+        "model_id": "model-gpt-5-6-sol-5f1ffa469585aab8",
+        "model_configuration": "GPT-5.6-sol",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "GPT-5.6-sol",
+        "organization": "OpenAI",
+        "score": 0.726,
+        "input_score": 0.726,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "aerocopilotbench-tier2-v1-safety-gated-sr-metric-v1",
+        "protocol_id": "aerocopilotbench-tier2-v1-safety-gated-sr-source-export-v1",
+        "task_set_id": "aerocopilotbench-tier2-v1-safety-gated-sr-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "aerocopilotbench-tier2-v1-safety-gated-sr-canonical-score",
+        "evaluation_protocol": "Tier 2 frozen 73 tasks, three trials, native tools, high reasoning, 48 turns, task-balanced safety-gated SR; auxiliary metrics excluded.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-17",
+        "source_publication_date": "2026-08-17",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-17",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-08-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-17",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+        ],
+        "source": "https://arxiv.org/abs/2608.16349",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-aerocopilot-gpt56sol-cacdcababf6cd429"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "aerocopilot-gpt56sol"
+        ],
+        "plot_date": "2026-08-17",
+        "frontier_observation_ids": [
+          "obs-0-292-568559b20894373a",
+          "obs-0-461-fb8724803f5889b2",
+          "obs-0-594-09f0fb292c09cabb",
+          "obs-0-726-2477ca33163cac90"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-726-2477ca33163cac90",
+        "benchmark_id": "aerocopilotbench-tier2-v1-safety-gated-sr",
+        "benchmark_version_id": "aerocopilotbench-tier2-v1-safety-gated-sr-canonical",
+        "model_id": "model-gpt-5-6-sol-5f1ffa469585aab8",
+        "model_configuration": "GPT-5.6-sol",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "GPT-5.6-sol",
+        "organization": "OpenAI",
+        "score": 0.726,
+        "input_score": 0.726,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "aerocopilotbench-tier2-v1-safety-gated-sr-metric-v1",
+        "protocol_id": "aerocopilotbench-tier2-v1-safety-gated-sr-source-export-v1",
+        "task_set_id": "aerocopilotbench-tier2-v1-safety-gated-sr-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "aerocopilotbench-tier2-v1-safety-gated-sr-canonical-score",
+        "evaluation_protocol": "Tier 2 frozen 73 tasks, three trials, native tools, high reasoning, 48 turns, task-balanced safety-gated SR; auxiliary metrics excluded.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-17",
+        "source_publication_date": "2026-08-17",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-17",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-08-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-17",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+        ],
+        "source": "https://arxiv.org/abs/2608.16349",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-aerocopilot-gpt56sol-cacdcababf6cd429"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "aerocopilot-gpt56sol"
+        ],
+        "plot_date": "2026-08-17",
+        "frontier_observation_ids": [
+          "obs-0-292-568559b20894373a",
+          "obs-0-461-fb8724803f5889b2",
+          "obs-0-594-09f0fb292c09cabb",
+          "obs-0-726-2477ca33163cac90"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-726-2477ca33163cac90",
+        "benchmark_id": "aerocopilotbench-tier2-v1-safety-gated-sr",
+        "benchmark_version_id": "aerocopilotbench-tier2-v1-safety-gated-sr-canonical",
+        "model_id": "model-gpt-5-6-sol-5f1ffa469585aab8",
+        "model_configuration": "GPT-5.6-sol",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "GPT-5.6-sol",
+        "organization": "OpenAI",
+        "score": 0.726,
+        "input_score": 0.726,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "aerocopilotbench-tier2-v1-safety-gated-sr-metric-v1",
+        "protocol_id": "aerocopilotbench-tier2-v1-safety-gated-sr-source-export-v1",
+        "task_set_id": "aerocopilotbench-tier2-v1-safety-gated-sr-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "aerocopilotbench-tier2-v1-safety-gated-sr-canonical-score",
+        "evaluation_protocol": "Tier 2 frozen 73 tasks, three trials, native tools, high reasoning, 48 turns, task-balanced safety-gated SR; auxiliary metrics excluded.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-17",
+        "source_publication_date": "2026-08-17",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-17",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-08-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-17",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+        ],
+        "source": "https://arxiv.org/abs/2608.16349",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-aerocopilot-gpt56sol-cacdcababf6cd429"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "aerocopilot-gpt56sol"
+        ],
+        "plot_date": "2026-08-17",
+        "frontier_observation_ids": [
+          "obs-0-292-568559b20894373a",
+          "obs-0-461-fb8724803f5889b2",
+          "obs-0-594-09f0fb292c09cabb",
+          "obs-0-726-2477ca33163cac90"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-726-2477ca33163cac90",
+        "benchmark_id": "aerocopilotbench-tier2-v1-safety-gated-sr",
+        "benchmark_version_id": "aerocopilotbench-tier2-v1-safety-gated-sr-canonical",
+        "model_id": "model-gpt-5-6-sol-5f1ffa469585aab8",
+        "model_configuration": "GPT-5.6-sol",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "GPT-5.6-sol",
+        "organization": "OpenAI",
+        "score": 0.726,
+        "input_score": 0.726,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "aerocopilotbench-tier2-v1-safety-gated-sr-metric-v1",
+        "protocol_id": "aerocopilotbench-tier2-v1-safety-gated-sr-source-export-v1",
+        "task_set_id": "aerocopilotbench-tier2-v1-safety-gated-sr-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "aerocopilotbench-tier2-v1-safety-gated-sr-canonical-score",
+        "evaluation_protocol": "Tier 2 frozen 73 tasks, three trials, native tools, high reasoning, 48 turns, task-balanced safety-gated SR; auxiliary metrics excluded.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-17",
+        "source_publication_date": "2026-08-17",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-17",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-08-17",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-17",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+        ],
+        "source": "https://arxiv.org/abs/2608.16349",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-aerocopilot-gpt56sol-cacdcababf6cd429"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "aerocopilot-gpt56sol"
+        ],
+        "plot_date": "2026-08-17",
+        "frontier_observation_ids": [
+          "obs-0-292-568559b20894373a",
+          "obs-0-461-fb8724803f5889b2",
+          "obs-0-594-09f0fb292c09cabb",
+          "obs-0-726-2477ca33163cac90"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-726-2477ca33163cac90",
+        "benchmark_id": "aerocopilotbench-tier2-v1-safety-gated-sr",
+        "benchmark_version_id": "aerocopilotbench-tier2-v1-safety-gated-sr-canonical",
+        "model_id": "model-gpt-5-6-sol-5f1ffa469585aab8",
+        "model_configuration": "GPT-5.6-sol",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "GPT-5.6-sol",
+        "organization": "OpenAI",
+        "score": 0.726,
+        "input_score": 0.726,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "aerocopilotbench-tier2-v1-safety-gated-sr-metric-v1",
+        "protocol_id": "aerocopilotbench-tier2-v1-safety-gated-sr-source-export-v1",
+        "task_set_id": "aerocopilotbench-tier2-v1-safety-gated-sr-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "aerocopilotbench-tier2-v1-safety-gated-sr-canonical-score",
+        "evaluation_protocol": "Tier 2 frozen 73 tasks, three trials, native tools, high reasoning, 48 turns, task-balanced safety-gated SR; auxiliary metrics excluded.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-17",
+        "source_publication_date": "2026-08-17",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-17",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-08-17",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-17",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+        ],
+        "source": "https://arxiv.org/abs/2608.16349",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-aerocopilot-gpt56sol-cacdcababf6cd429"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "aerocopilot-gpt56sol"
+        ],
+        "plot_date": "2026-08-17",
+        "frontier_observation_ids": [
+          "obs-0-292-568559b20894373a",
+          "obs-0-461-fb8724803f5889b2",
+          "obs-0-594-09f0fb292c09cabb",
+          "obs-0-726-2477ca33163cac90"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.726,
+    "capability_frontier_value": 0.726,
+    "reported_frontier_value": 0.726,
+    "current_frontier": 0.726,
+    "normalized_progress": 0.726,
+    "normalized_headroom": 0.274,
+    "threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-08-17"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 20
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 20
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-08-17"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 20
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 20
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-08-17"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 20
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 20
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.42857142857142855,
+      "represented_organizations": [
+        "OpenAI",
+        "Google",
+        "DeepSeek"
+      ],
+      "panel_size": 7,
+      "status": "medium"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-arxiv-org-abs-2608-16349-9a8bfb74a7fb48d7"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

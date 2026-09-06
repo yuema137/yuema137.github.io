@@ -1,0 +1,1162 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "mattools-v1-pymatgen-doc-qa",
+    "name": "MatTools v1 \u2014 pymatgen Doc QA",
+    "domain": "Materials Science",
+    "release": "2025-05-16",
+    "source": "https://github.com/Grenzlinie/MatTools",
+    "floor": 0.25,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.25,
+    "progress_target": 1.0,
+    "input_unit": "percentage_points",
+    "evaluation_type": "Model",
+    "tags": [
+      "pymatgen",
+      "documentation",
+      "multiple-choice"
+    ],
+    "metric": "Accuracy",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "mattools-v1-pymatgen-doc-qa-metric-v1",
+    "protocol_id": "mattools-v1-pymatgen-doc-qa-source-export-v1",
+    "canonical_score": {
+      "series_id": "mattools-v1-pymatgen-doc-qa-canonical-score",
+      "role": "canonical",
+      "metric_id": "mattools-v1-pymatgen-doc-qa-metric-v1",
+      "metric_name": "Accuracy",
+      "protocol_id": "mattools-v1-pymatgen-doc-qa-source-export-v1",
+      "task_set_id": "mattools-v1-pymatgen-doc-qa-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "percentage_points",
+      "progress_baseline": 0.25,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "mattools-v1-pymatgen-doc-qa-canonical",
+    "summary": {
+      "en": "MatTools Doc QA measures knowledge of pymatgen documentation and API behavior.",
+      "zh": "MatTools Doc QA \u6d4b\u8bd5\u6a21\u578b\u5bf9 pymatgen \u6587\u6863\u548c API \u884c\u4e3a\u7684\u7406\u89e3\u3002"
+    },
+    "task_format": {
+      "en": "Answer 34,604 four-choice questions derived from pymatgen documentation without tools or RAG.",
+      "zh": "\u4e0d\u4f7f\u7528\u5de5\u5177\u6216 RAG\uff0c\u56de\u7b54 34,604 \u9053\u7531 pymatgen \u6587\u6863\u751f\u6210\u7684\u56db\u9009\u4e00\u95ee\u9898\u3002"
+    },
+    "scoring": {
+      "metric_name": "Documentation-QA exact accuracy",
+      "explanation": {
+        "en": "Exact A/B/C/D accuracy; malformed answer formatting is counted incorrect.",
+        "zh": "\u8ba1\u7b97 A/B/C/D \u7cbe\u786e\u51c6\u786e\u7387\uff1b\u7b54\u6848\u683c\u5f0f\u4e0d\u5408\u89c4\u8ba1\u4e3a\u9519\u8bef\u3002"
+      }
+    },
+    "evaluation_target": "final_output",
+    "observation_count": 6,
+    "evidence_record_count": 6,
+    "observations": [
+      {
+        "observation_id": "obs-0-829-c5740e9ee07575eb",
+        "benchmark_id": "mattools-v1-pymatgen-doc-qa",
+        "benchmark_version_id": "mattools-v1-pymatgen-doc-qa-canonical",
+        "model_id": "model-gemini-1-5-pro-cbb82d54e094a69c",
+        "model_configuration": "Gemini-1.5-Pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-1-5-pro",
+        "model_family_id": "google-gemini-1-5-pro",
+        "model": "Gemini-1.5-Pro",
+        "organization": "Google",
+        "score": 0.8290000000000001,
+        "input_score": 82.9,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "mattools-v1-pymatgen-doc-qa-metric-v1",
+        "protocol_id": "mattools-v1-pymatgen-doc-qa-source-export-v1",
+        "task_set_id": "mattools-v1-pymatgen-doc-qa-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "mattools-v1-pymatgen-doc-qa-canonical-score",
+        "evaluation_protocol": "MatTools v1 pymatgen_doc_qa 34,604-question track, no tools/RAG, exact-choice accuracy; code and tool-execution tracks excluded.",
+        "model_release_date": "2024-02-15",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-16",
+        "source_publication_date": "2025-05-16",
+        "observation_date": "2024-02-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-02-15",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-16",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-02-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-02-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-16",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f",
+          "resource-https-github-com-grenzlinie-mattools-9d1daa599d555372"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+        ],
+        "source": "https://arxiv.org/abs/2505.10852",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-mattools-gemini15pro-9e949874a5747446"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "mattools-gemini15pro"
+        ]
+      },
+      {
+        "observation_id": "obs-0-7637-12223c6162d74e1a",
+        "benchmark_id": "mattools-v1-pymatgen-doc-qa",
+        "benchmark_version_id": "mattools-v1-pymatgen-doc-qa-canonical",
+        "model_id": "model-gemini-1-5-flash-f76acf839a19e6d6",
+        "model_configuration": "Gemini-1.5-Flash",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-1-5-flash",
+        "model_family_id": "google-gemini-1-5-flash",
+        "model": "Gemini-1.5-Flash",
+        "organization": "Google",
+        "score": 0.7637,
+        "input_score": 76.37,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "mattools-v1-pymatgen-doc-qa-metric-v1",
+        "protocol_id": "mattools-v1-pymatgen-doc-qa-source-export-v1",
+        "task_set_id": "mattools-v1-pymatgen-doc-qa-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "mattools-v1-pymatgen-doc-qa-canonical-score",
+        "evaluation_protocol": "MatTools v1 pymatgen_doc_qa 34,604-question track, no tools/RAG, exact-choice accuracy; code and tool-execution tracks excluded.",
+        "model_release_date": "2024-05-14",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-16",
+        "source_publication_date": "2025-05-16",
+        "observation_date": "2024-05-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-16",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-05-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-16",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f",
+          "resource-https-github-com-grenzlinie-mattools-9d1daa599d555372"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+        ],
+        "source": "https://arxiv.org/abs/2505.10852",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-mattools-gemini15flash-1cdd2bd7f6e9a330"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "mattools-gemini15flash"
+        ]
+      },
+      {
+        "observation_id": "obs-0-7579-4c7fd64c1a2c0132",
+        "benchmark_id": "mattools-v1-pymatgen-doc-qa",
+        "benchmark_version_id": "mattools-v1-pymatgen-doc-qa-canonical",
+        "model_id": "model-qwen2-5-7b-instruct-3cd4d13e854127b0",
+        "model_configuration": "Qwen2.5-7B-Instruct",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen2-5-7b-instruct",
+        "model_family_id": "qwen-qwen2-5-7b-instruct",
+        "model": "Qwen2.5-7B-Instruct",
+        "organization": "Qwen",
+        "score": 0.7579,
+        "input_score": 75.79,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "mattools-v1-pymatgen-doc-qa-metric-v1",
+        "protocol_id": "mattools-v1-pymatgen-doc-qa-source-export-v1",
+        "task_set_id": "mattools-v1-pymatgen-doc-qa-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "mattools-v1-pymatgen-doc-qa-canonical-score",
+        "evaluation_protocol": "MatTools v1 pymatgen_doc_qa 34,604-question track, no tools/RAG, exact-choice accuracy; code and tool-execution tracks excluded.",
+        "model_release_date": "2024-09-19",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-16",
+        "source_publication_date": "2025-05-16",
+        "observation_date": "2024-09-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-09-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-16",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-09-19",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-09-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-16",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f",
+          "resource-https-github-com-grenzlinie-mattools-9d1daa599d555372"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+        ],
+        "source": "https://arxiv.org/abs/2505.10852",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-mattools-qwen257-af4e27393e37eb36"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "mattools-qwen257"
+        ]
+      },
+      {
+        "observation_id": "obs-0-8201-9837b374b841136d",
+        "benchmark_id": "mattools-v1-pymatgen-doc-qa",
+        "benchmark_version_id": "mattools-v1-pymatgen-doc-qa-canonical",
+        "model_id": "model-qwen2-5-32b-instruct-f1600e8673523d37",
+        "model_configuration": "Qwen2.5-32B-Instruct",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen2-5-32b-instruct",
+        "model_family_id": "qwen-qwen2-5-32b-instruct",
+        "model": "Qwen2.5-32B-Instruct",
+        "organization": "Qwen",
+        "score": 0.8201,
+        "input_score": 82.01,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "mattools-v1-pymatgen-doc-qa-metric-v1",
+        "protocol_id": "mattools-v1-pymatgen-doc-qa-source-export-v1",
+        "task_set_id": "mattools-v1-pymatgen-doc-qa-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "mattools-v1-pymatgen-doc-qa-canonical-score",
+        "evaluation_protocol": "MatTools v1 pymatgen_doc_qa 34,604-question track, no tools/RAG, exact-choice accuracy; code and tool-execution tracks excluded.",
+        "model_release_date": "2024-09-19",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-16",
+        "source_publication_date": "2025-05-16",
+        "observation_date": "2024-09-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-09-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-16",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-09-19",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-09-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-16",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f",
+          "resource-https-github-com-grenzlinie-mattools-9d1daa599d555372"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+        ],
+        "source": "https://arxiv.org/abs/2505.10852",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-mattools-qwen2532-75e63bb5e70581ae"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "mattools-qwen2532"
+        ]
+      },
+      {
+        "observation_id": "obs-0-7985-2fa3f024f54c8ff3",
+        "benchmark_id": "mattools-v1-pymatgen-doc-qa",
+        "benchmark_version_id": "mattools-v1-pymatgen-doc-qa-canonical",
+        "model_id": "model-qwen2-5-coder-32b-instruct-d9f2de9f3f89a304",
+        "model_configuration": "Qwen2.5-Coder-32B-Instruct",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen2-5-coder-32b-instruct",
+        "model_family_id": "qwen-qwen2-5-coder-32b-instruct",
+        "model": "Qwen2.5-Coder-32B-Instruct",
+        "organization": "Qwen",
+        "score": 0.7985,
+        "input_score": 79.85,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "mattools-v1-pymatgen-doc-qa-metric-v1",
+        "protocol_id": "mattools-v1-pymatgen-doc-qa-source-export-v1",
+        "task_set_id": "mattools-v1-pymatgen-doc-qa-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "mattools-v1-pymatgen-doc-qa-canonical-score",
+        "evaluation_protocol": "MatTools v1 pymatgen_doc_qa 34,604-question track, no tools/RAG, exact-choice accuracy; code and tool-execution tracks excluded.",
+        "model_release_date": "2024-11-12",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-16",
+        "source_publication_date": "2025-05-16",
+        "observation_date": "2024-11-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-11-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-16",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-11-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-11-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-16",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f",
+          "resource-https-github-com-grenzlinie-mattools-9d1daa599d555372"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+        ],
+        "source": "https://arxiv.org/abs/2505.10852",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-mattools-qwen25coder32-78173e48071bb2e3"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "mattools-qwen25coder32"
+        ]
+      },
+      {
+        "observation_id": "obs-0-8276-ca78248a0f1eb498",
+        "benchmark_id": "mattools-v1-pymatgen-doc-qa",
+        "benchmark_version_id": "mattools-v1-pymatgen-doc-qa-canonical",
+        "model_id": "model-gemini-2-0-flash-c7f695767f575f5b",
+        "model_configuration": "Gemini-2.0-Flash",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-0-flash",
+        "model_family_id": "google-gemini-2-0-flash",
+        "model": "Gemini-2.0-Flash",
+        "organization": "Google",
+        "score": 0.8276,
+        "input_score": 82.76,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "mattools-v1-pymatgen-doc-qa-metric-v1",
+        "protocol_id": "mattools-v1-pymatgen-doc-qa-source-export-v1",
+        "task_set_id": "mattools-v1-pymatgen-doc-qa-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "mattools-v1-pymatgen-doc-qa-canonical-score",
+        "evaluation_protocol": "MatTools v1 pymatgen_doc_qa 34,604-question track, no tools/RAG, exact-choice accuracy; code and tool-execution tracks excluded.",
+        "model_release_date": "2025-02-05",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-16",
+        "source_publication_date": "2025-05-16",
+        "observation_date": "2025-02-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-16",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-02-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-16",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f",
+          "resource-https-github-com-grenzlinie-mattools-9d1daa599d555372"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+        ],
+        "source": "https://arxiv.org/abs/2505.10852",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-mattools-gemini20flash-1302db989b9278ca"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "mattools-gemini20flash"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-829-c5740e9ee07575eb",
+        "benchmark_id": "mattools-v1-pymatgen-doc-qa",
+        "benchmark_version_id": "mattools-v1-pymatgen-doc-qa-canonical",
+        "model_id": "model-gemini-1-5-pro-cbb82d54e094a69c",
+        "model_configuration": "Gemini-1.5-Pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-1-5-pro",
+        "model_family_id": "google-gemini-1-5-pro",
+        "model": "Gemini-1.5-Pro",
+        "organization": "Google",
+        "score": 0.8290000000000001,
+        "input_score": 82.9,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "mattools-v1-pymatgen-doc-qa-metric-v1",
+        "protocol_id": "mattools-v1-pymatgen-doc-qa-source-export-v1",
+        "task_set_id": "mattools-v1-pymatgen-doc-qa-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "mattools-v1-pymatgen-doc-qa-canonical-score",
+        "evaluation_protocol": "MatTools v1 pymatgen_doc_qa 34,604-question track, no tools/RAG, exact-choice accuracy; code and tool-execution tracks excluded.",
+        "model_release_date": "2024-02-15",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-16",
+        "source_publication_date": "2025-05-16",
+        "observation_date": "2024-02-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-02-15",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-16",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-05-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-02-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-16",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f",
+          "resource-https-github-com-grenzlinie-mattools-9d1daa599d555372"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+        ],
+        "source": "https://arxiv.org/abs/2505.10852",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-mattools-gemini15pro-9e949874a5747446"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "mattools-gemini15pro"
+        ],
+        "plot_date": "2025-05-16",
+        "frontier_observation_ids": [
+          "obs-0-7579-4c7fd64c1a2c0132",
+          "obs-0-7637-12223c6162d74e1a",
+          "obs-0-7985-2fa3f024f54c8ff3",
+          "obs-0-8201-9837b374b841136d",
+          "obs-0-8276-ca78248a0f1eb498",
+          "obs-0-829-c5740e9ee07575eb"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-829-c5740e9ee07575eb",
+        "benchmark_id": "mattools-v1-pymatgen-doc-qa",
+        "benchmark_version_id": "mattools-v1-pymatgen-doc-qa-canonical",
+        "model_id": "model-gemini-1-5-pro-cbb82d54e094a69c",
+        "model_configuration": "Gemini-1.5-Pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-1-5-pro",
+        "model_family_id": "google-gemini-1-5-pro",
+        "model": "Gemini-1.5-Pro",
+        "organization": "Google",
+        "score": 0.8290000000000001,
+        "input_score": 82.9,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "mattools-v1-pymatgen-doc-qa-metric-v1",
+        "protocol_id": "mattools-v1-pymatgen-doc-qa-source-export-v1",
+        "task_set_id": "mattools-v1-pymatgen-doc-qa-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "mattools-v1-pymatgen-doc-qa-canonical-score",
+        "evaluation_protocol": "MatTools v1 pymatgen_doc_qa 34,604-question track, no tools/RAG, exact-choice accuracy; code and tool-execution tracks excluded.",
+        "model_release_date": "2024-02-15",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-16",
+        "source_publication_date": "2025-05-16",
+        "observation_date": "2024-02-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-02-15",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-16",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-05-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-02-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-16",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f",
+          "resource-https-github-com-grenzlinie-mattools-9d1daa599d555372"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+        ],
+        "source": "https://arxiv.org/abs/2505.10852",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-mattools-gemini15pro-9e949874a5747446"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "mattools-gemini15pro"
+        ],
+        "plot_date": "2025-05-16",
+        "frontier_observation_ids": [
+          "obs-0-7579-4c7fd64c1a2c0132",
+          "obs-0-7637-12223c6162d74e1a",
+          "obs-0-7985-2fa3f024f54c8ff3",
+          "obs-0-8201-9837b374b841136d",
+          "obs-0-8276-ca78248a0f1eb498",
+          "obs-0-829-c5740e9ee07575eb"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-829-c5740e9ee07575eb",
+        "benchmark_id": "mattools-v1-pymatgen-doc-qa",
+        "benchmark_version_id": "mattools-v1-pymatgen-doc-qa-canonical",
+        "model_id": "model-gemini-1-5-pro-cbb82d54e094a69c",
+        "model_configuration": "Gemini-1.5-Pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-1-5-pro",
+        "model_family_id": "google-gemini-1-5-pro",
+        "model": "Gemini-1.5-Pro",
+        "organization": "Google",
+        "score": 0.8290000000000001,
+        "input_score": 82.9,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "mattools-v1-pymatgen-doc-qa-metric-v1",
+        "protocol_id": "mattools-v1-pymatgen-doc-qa-source-export-v1",
+        "task_set_id": "mattools-v1-pymatgen-doc-qa-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "mattools-v1-pymatgen-doc-qa-canonical-score",
+        "evaluation_protocol": "MatTools v1 pymatgen_doc_qa 34,604-question track, no tools/RAG, exact-choice accuracy; code and tool-execution tracks excluded.",
+        "model_release_date": "2024-02-15",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-16",
+        "source_publication_date": "2025-05-16",
+        "observation_date": "2024-02-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-02-15",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-16",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-05-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-02-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-16",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f",
+          "resource-https-github-com-grenzlinie-mattools-9d1daa599d555372"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+        ],
+        "source": "https://arxiv.org/abs/2505.10852",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-mattools-gemini15pro-9e949874a5747446"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "mattools-gemini15pro"
+        ],
+        "plot_date": "2025-05-16",
+        "frontier_observation_ids": [
+          "obs-0-7579-4c7fd64c1a2c0132",
+          "obs-0-7637-12223c6162d74e1a",
+          "obs-0-7985-2fa3f024f54c8ff3",
+          "obs-0-8201-9837b374b841136d",
+          "obs-0-8276-ca78248a0f1eb498",
+          "obs-0-829-c5740e9ee07575eb"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-829-c5740e9ee07575eb",
+        "benchmark_id": "mattools-v1-pymatgen-doc-qa",
+        "benchmark_version_id": "mattools-v1-pymatgen-doc-qa-canonical",
+        "model_id": "model-gemini-1-5-pro-cbb82d54e094a69c",
+        "model_configuration": "Gemini-1.5-Pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-1-5-pro",
+        "model_family_id": "google-gemini-1-5-pro",
+        "model": "Gemini-1.5-Pro",
+        "organization": "Google",
+        "score": 0.8290000000000001,
+        "input_score": 82.9,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "mattools-v1-pymatgen-doc-qa-metric-v1",
+        "protocol_id": "mattools-v1-pymatgen-doc-qa-source-export-v1",
+        "task_set_id": "mattools-v1-pymatgen-doc-qa-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "mattools-v1-pymatgen-doc-qa-canonical-score",
+        "evaluation_protocol": "MatTools v1 pymatgen_doc_qa 34,604-question track, no tools/RAG, exact-choice accuracy; code and tool-execution tracks excluded.",
+        "model_release_date": "2024-02-15",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-16",
+        "source_publication_date": "2025-05-16",
+        "observation_date": "2024-02-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-02-15",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-16",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-05-16",
+        "date_kind": "result first-public date",
+        "capability_date": "2024-02-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-16",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f",
+          "resource-https-github-com-grenzlinie-mattools-9d1daa599d555372"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+        ],
+        "source": "https://arxiv.org/abs/2505.10852",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-mattools-gemini15pro-9e949874a5747446"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "mattools-gemini15pro"
+        ],
+        "plot_date": "2025-05-16",
+        "frontier_observation_ids": [
+          "obs-0-7579-4c7fd64c1a2c0132",
+          "obs-0-7637-12223c6162d74e1a",
+          "obs-0-7985-2fa3f024f54c8ff3",
+          "obs-0-8201-9837b374b841136d",
+          "obs-0-8276-ca78248a0f1eb498",
+          "obs-0-829-c5740e9ee07575eb"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-829-c5740e9ee07575eb",
+        "benchmark_id": "mattools-v1-pymatgen-doc-qa",
+        "benchmark_version_id": "mattools-v1-pymatgen-doc-qa-canonical",
+        "model_id": "model-gemini-1-5-pro-cbb82d54e094a69c",
+        "model_configuration": "Gemini-1.5-Pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-1-5-pro",
+        "model_family_id": "google-gemini-1-5-pro",
+        "model": "Gemini-1.5-Pro",
+        "organization": "Google",
+        "score": 0.8290000000000001,
+        "input_score": 82.9,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "mattools-v1-pymatgen-doc-qa-metric-v1",
+        "protocol_id": "mattools-v1-pymatgen-doc-qa-source-export-v1",
+        "task_set_id": "mattools-v1-pymatgen-doc-qa-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "mattools-v1-pymatgen-doc-qa-canonical-score",
+        "evaluation_protocol": "MatTools v1 pymatgen_doc_qa 34,604-question track, no tools/RAG, exact-choice accuracy; code and tool-execution tracks excluded.",
+        "model_release_date": "2024-02-15",
+        "evaluation_date": null,
+        "result_public_date": "2025-05-16",
+        "source_publication_date": "2025-05-16",
+        "observation_date": "2024-02-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-02-15",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-05-16",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-05-16",
+        "date_kind": "result first-public date",
+        "capability_date": "2024-02-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-05-16",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f",
+          "resource-https-github-com-grenzlinie-mattools-9d1daa599d555372"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2505-10852-5125d17d8215af9f"
+        ],
+        "source": "https://arxiv.org/abs/2505.10852",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-mattools-gemini15pro-9e949874a5747446"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "mattools-gemini15pro"
+        ],
+        "plot_date": "2025-05-16",
+        "frontier_observation_ids": [
+          "obs-0-7579-4c7fd64c1a2c0132",
+          "obs-0-7637-12223c6162d74e1a",
+          "obs-0-7985-2fa3f024f54c8ff3",
+          "obs-0-8201-9837b374b841136d",
+          "obs-0-8276-ca78248a0f1eb498",
+          "obs-0-829-c5740e9ee07575eb"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.8290000000000001,
+    "capability_frontier_value": 0.8290000000000001,
+    "reported_frontier_value": 0.8290000000000001,
+    "current_frontier": 0.8290000000000001,
+    "normalized_progress": 0.7720000000000001,
+    "normalized_headroom": 0.22799999999999987,
+    "threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2025-05-16"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 478
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 478
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2025-05-16"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 478
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 478
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2025-05-16"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 478
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 478
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.2857142857142857,
+      "represented_organizations": [
+        "Google",
+        "Qwen"
+      ],
+      "panel_size": 7,
+      "status": "low"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-github-com-grenzlinie-mattools-9d1daa599d555372"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

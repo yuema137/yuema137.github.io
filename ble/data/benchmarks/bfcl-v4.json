@@ -1,0 +1,896 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "bfcl-v4",
+    "name": "BFCL V4",
+    "domain": "Tool use",
+    "release": "2025-07-17",
+    "source": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Agent",
+    "tags": [
+      "function calling",
+      "multi-turn",
+      "agentic"
+    ],
+    "metric": "Overall Accuracy",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "bfcl-v4-metric-v1",
+    "protocol_id": "bfcl-v4-source-export-v1",
+    "canonical_score": {
+      "series_id": "bfcl-v4-canonical-score",
+      "role": "canonical",
+      "metric_id": "bfcl-v4-metric-v1",
+      "metric_name": "Overall Accuracy",
+      "protocol_id": "bfcl-v4-source-export-v1",
+      "task_set_id": "bfcl-v4-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "bfcl-v4-canonical",
+    "summary": {
+      "en": "BFCL V4 evaluates accurate function and tool calling, including multi-turn and agentic scenarios with real-world functions.",
+      "zh": "BFCL V4 \u8bc4\u4f30\u6a21\u578b\u51c6\u786e\u8c03\u7528 function \u548c tool \u7684\u80fd\u529b\uff0c\u5305\u542b multi-turn \u53ca\u66f4 agentic \u7684\u771f\u5b9e\u573a\u666f\u3002"
+    },
+    "task_format": {
+      "en": "The model receives a user request and function definitions, then must emit valid calls and arguments; V4 adds multi-turn state, error recovery, and agentic formats.",
+      "zh": "\u6a21\u578b\u4f1a\u6536\u5230\u7528\u6237\u8bf7\u6c42\u548c function \u5b9a\u4e49\uff0c\u9700\u8981\u8f93\u51fa\u6709\u6548\u7684\u8c03\u7528\u53ca\u53c2\u6570\uff1bV4 \u589e\u52a0\u4e86 multi-turn state\u3001\u9519\u8bef\u6062\u590d\u548c agentic format\u3002"
+    },
+    "scoring": {
+      "metric_name": "Overall accuracy",
+      "explanation": {
+        "en": "Overall accuracy is the unweighted average of the BFCL V4 sub-category scores. Native function-calling and prompt-only modes are retained as distinct observations.",
+        "zh": "Overall accuracy \u662f BFCL V4 \u5404\u5b50\u7c7b\u522b\u5206\u6570\u7684\u975e\u52a0\u6743\u5e73\u5747\u3002\u539f\u751f function-calling \u548c prompt-only \u6a21\u5f0f\u4f5c\u4e3a\u4e0d\u540c observation \u4fdd\u7559\u3002"
+      }
+    },
+    "evaluation_target": "process_and_output",
+    "observation_count": 3,
+    "evidence_record_count": 3,
+    "observations": [
+      {
+        "observation_id": "obs-0-5045-17009abbdbfb05ff",
+        "benchmark_id": "bfcl-v4",
+        "benchmark_version_id": "bfcl-v4-canonical",
+        "model_id": "model-gpt-4-1-mini-71be08367ae2f0be",
+        "model_configuration": "gpt-4-1-mini",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4-1-mini-fc",
+        "model_family_id": "openai-gpt-4-1-mini",
+        "model": "GPT-4.1-mini (FC)",
+        "organization": "OpenAI",
+        "score": 0.5045,
+        "input_score": 0.5045,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "bfcl-v4-metric-v1",
+        "protocol_id": "bfcl-v4-source-export-v1",
+        "task_set_id": "bfcl-v4-canonical",
+        "metric": "Overall Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "bfcl-v4-canonical-score",
+        "evaluation_protocol": "BFCL V4 fixed evaluator checkpoint (commit f7cf735 / bfcl-eval 2025.12.17). Scores are not mixed with BFCL V1\u2013V3 or across FC and Prompt modes without preserving the mode in provenance.",
+        "model_release_date": "2025-04-14",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-04-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-04-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+        ],
+        "score_source_ids": [
+          "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+        ],
+        "source": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-model-version-gpt-4-1-mini-name-gpt-4-1-mini-fc--c4bf7e536e7397b1"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-7324-f5f729163326de48",
+        "benchmark_id": "bfcl-v4",
+        "benchmark_version_id": "bfcl-v4-canonical",
+        "model_id": "model-claude-sonnet-4-5-1375953e5a053324",
+        "model_configuration": "claude-sonnet-4-5",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-sonnet-4-5-fc",
+        "model_family_id": "anthropic-claude-sonnet-4-5",
+        "model": "Claude Sonnet 4.5 (FC)",
+        "organization": "Anthropic",
+        "score": 0.7324,
+        "input_score": 0.7324,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "bfcl-v4-metric-v1",
+        "protocol_id": "bfcl-v4-source-export-v1",
+        "task_set_id": "bfcl-v4-canonical",
+        "metric": "Overall Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "bfcl-v4-canonical-score",
+        "evaluation_protocol": "BFCL V4 fixed evaluator checkpoint (commit f7cf735 / bfcl-eval 2025.12.17). Scores are not mixed with BFCL V1\u2013V3 or across FC and Prompt modes without preserving the mode in provenance.",
+        "model_release_date": "2025-09-29",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-09-29",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-09-29",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-09-29",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-09-29",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+        ],
+        "score_source_ids": [
+          "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+        ],
+        "source": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-model-version-claude-sonnet-4-5-name-claude-sonn-830b697c6a0e9a55"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-7251-427343daced1aee6",
+        "benchmark_id": "bfcl-v4",
+        "benchmark_version_id": "bfcl-v4-canonical",
+        "model_id": "model-gemini-3-pro-ebaa316d834e71b0",
+        "model_configuration": "gemini-3-pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-pro-preview-prompt",
+        "model_family_id": "google-deepmind-gemini-3-pro-preview",
+        "model": "Gemini 3 Pro Preview (Prompt)",
+        "organization": "Google DeepMind",
+        "score": 0.7251,
+        "input_score": 0.7251,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "bfcl-v4-metric-v1",
+        "protocol_id": "bfcl-v4-source-export-v1",
+        "task_set_id": "bfcl-v4-canonical",
+        "metric": "Overall Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "bfcl-v4-canonical-score",
+        "evaluation_protocol": "BFCL V4 fixed evaluator checkpoint (commit f7cf735 / bfcl-eval 2025.12.17). Scores are not mixed with BFCL V1\u2013V3 or across FC and Prompt modes without preserving the mode in provenance.",
+        "model_release_date": "2025-11-18",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-11-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-11-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-11-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-11-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+        ],
+        "score_source_ids": [
+          "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+        ],
+        "source": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-model-version-gemini-3-pro-name-gemini-3-pro-pre-1a2e1ec006d718ca"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-5045-17009abbdbfb05ff",
+        "benchmark_id": "bfcl-v4",
+        "benchmark_version_id": "bfcl-v4-canonical",
+        "model_id": "model-gpt-4-1-mini-71be08367ae2f0be",
+        "model_configuration": "gpt-4-1-mini",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4-1-mini-fc",
+        "model_family_id": "openai-gpt-4-1-mini",
+        "model": "GPT-4.1-mini (FC)",
+        "organization": "OpenAI",
+        "score": 0.5045,
+        "input_score": 0.5045,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "bfcl-v4-metric-v1",
+        "protocol_id": "bfcl-v4-source-export-v1",
+        "task_set_id": "bfcl-v4-canonical",
+        "metric": "Overall Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "bfcl-v4-canonical-score",
+        "evaluation_protocol": "BFCL V4 fixed evaluator checkpoint (commit f7cf735 / bfcl-eval 2025.12.17). Scores are not mixed with BFCL V1\u2013V3 or across FC and Prompt modes without preserving the mode in provenance.",
+        "model_release_date": "2025-04-14",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-04-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-07-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+        ],
+        "score_source_ids": [
+          "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+        ],
+        "source": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-model-version-gpt-4-1-mini-name-gpt-4-1-mini-fc--c4bf7e536e7397b1"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-07-17",
+        "frontier_observation_ids": [
+          "obs-0-5045-17009abbdbfb05ff"
+        ]
+      },
+      {
+        "observation_id": "obs-0-7324-f5f729163326de48",
+        "benchmark_id": "bfcl-v4",
+        "benchmark_version_id": "bfcl-v4-canonical",
+        "model_id": "model-claude-sonnet-4-5-1375953e5a053324",
+        "model_configuration": "claude-sonnet-4-5",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-sonnet-4-5-fc",
+        "model_family_id": "anthropic-claude-sonnet-4-5",
+        "model": "Claude Sonnet 4.5 (FC)",
+        "organization": "Anthropic",
+        "score": 0.7324,
+        "input_score": 0.7324,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "bfcl-v4-metric-v1",
+        "protocol_id": "bfcl-v4-source-export-v1",
+        "task_set_id": "bfcl-v4-canonical",
+        "metric": "Overall Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "bfcl-v4-canonical-score",
+        "evaluation_protocol": "BFCL V4 fixed evaluator checkpoint (commit f7cf735 / bfcl-eval 2025.12.17). Scores are not mixed with BFCL V1\u2013V3 or across FC and Prompt modes without preserving the mode in provenance.",
+        "model_release_date": "2025-09-29",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-09-29",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-09-29",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-09-29",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-09-29",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+        ],
+        "score_source_ids": [
+          "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+        ],
+        "source": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-model-version-claude-sonnet-4-5-name-claude-sonn-830b697c6a0e9a55"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-09-29",
+        "frontier_observation_ids": [
+          "obs-0-7324-f5f729163326de48"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-5045-17009abbdbfb05ff",
+        "benchmark_id": "bfcl-v4",
+        "benchmark_version_id": "bfcl-v4-canonical",
+        "model_id": "model-gpt-4-1-mini-71be08367ae2f0be",
+        "model_configuration": "gpt-4-1-mini",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4-1-mini-fc",
+        "model_family_id": "openai-gpt-4-1-mini",
+        "model": "GPT-4.1-mini (FC)",
+        "organization": "OpenAI",
+        "score": 0.5045,
+        "input_score": 0.5045,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "bfcl-v4-metric-v1",
+        "protocol_id": "bfcl-v4-source-export-v1",
+        "task_set_id": "bfcl-v4-canonical",
+        "metric": "Overall Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "bfcl-v4-canonical-score",
+        "evaluation_protocol": "BFCL V4 fixed evaluator checkpoint (commit f7cf735 / bfcl-eval 2025.12.17). Scores are not mixed with BFCL V1\u2013V3 or across FC and Prompt modes without preserving the mode in provenance.",
+        "model_release_date": "2025-04-14",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-04-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-07-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+        ],
+        "score_source_ids": [
+          "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+        ],
+        "source": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-model-version-gpt-4-1-mini-name-gpt-4-1-mini-fc--c4bf7e536e7397b1"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-07-17",
+        "frontier_observation_ids": [
+          "obs-0-5045-17009abbdbfb05ff"
+        ]
+      },
+      {
+        "observation_id": "obs-0-7324-f5f729163326de48",
+        "benchmark_id": "bfcl-v4",
+        "benchmark_version_id": "bfcl-v4-canonical",
+        "model_id": "model-claude-sonnet-4-5-1375953e5a053324",
+        "model_configuration": "claude-sonnet-4-5",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-sonnet-4-5-fc",
+        "model_family_id": "anthropic-claude-sonnet-4-5",
+        "model": "Claude Sonnet 4.5 (FC)",
+        "organization": "Anthropic",
+        "score": 0.7324,
+        "input_score": 0.7324,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "bfcl-v4-metric-v1",
+        "protocol_id": "bfcl-v4-source-export-v1",
+        "task_set_id": "bfcl-v4-canonical",
+        "metric": "Overall Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "bfcl-v4-canonical-score",
+        "evaluation_protocol": "BFCL V4 fixed evaluator checkpoint (commit f7cf735 / bfcl-eval 2025.12.17). Scores are not mixed with BFCL V1\u2013V3 or across FC and Prompt modes without preserving the mode in provenance.",
+        "model_release_date": "2025-09-29",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-09-29",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-09-29",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-09-29",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-09-29",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+        ],
+        "score_source_ids": [
+          "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+        ],
+        "source": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-model-version-claude-sonnet-4-5-name-claude-sonn-830b697c6a0e9a55"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-09-29",
+        "frontier_observation_ids": [
+          "obs-0-7324-f5f729163326de48"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-5045-17009abbdbfb05ff",
+        "benchmark_id": "bfcl-v4",
+        "benchmark_version_id": "bfcl-v4-canonical",
+        "model_id": "model-gpt-4-1-mini-71be08367ae2f0be",
+        "model_configuration": "gpt-4-1-mini",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4-1-mini-fc",
+        "model_family_id": "openai-gpt-4-1-mini",
+        "model": "GPT-4.1-mini (FC)",
+        "organization": "OpenAI",
+        "score": 0.5045,
+        "input_score": 0.5045,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "bfcl-v4-metric-v1",
+        "protocol_id": "bfcl-v4-source-export-v1",
+        "task_set_id": "bfcl-v4-canonical",
+        "metric": "Overall Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "bfcl-v4-canonical-score",
+        "evaluation_protocol": "BFCL V4 fixed evaluator checkpoint (commit f7cf735 / bfcl-eval 2025.12.17). Scores are not mixed with BFCL V1\u2013V3 or across FC and Prompt modes without preserving the mode in provenance.",
+        "model_release_date": "2025-04-14",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-04-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-07-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+        ],
+        "score_source_ids": [
+          "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+        ],
+        "source": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-model-version-gpt-4-1-mini-name-gpt-4-1-mini-fc--c4bf7e536e7397b1"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-07-17",
+        "frontier_observation_ids": [
+          "obs-0-5045-17009abbdbfb05ff"
+        ]
+      },
+      {
+        "observation_id": "obs-0-7324-f5f729163326de48",
+        "benchmark_id": "bfcl-v4",
+        "benchmark_version_id": "bfcl-v4-canonical",
+        "model_id": "model-claude-sonnet-4-5-1375953e5a053324",
+        "model_configuration": "claude-sonnet-4-5",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-sonnet-4-5-fc",
+        "model_family_id": "anthropic-claude-sonnet-4-5",
+        "model": "Claude Sonnet 4.5 (FC)",
+        "organization": "Anthropic",
+        "score": 0.7324,
+        "input_score": 0.7324,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "bfcl-v4-metric-v1",
+        "protocol_id": "bfcl-v4-source-export-v1",
+        "task_set_id": "bfcl-v4-canonical",
+        "metric": "Overall Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "bfcl-v4-canonical-score",
+        "evaluation_protocol": "BFCL V4 fixed evaluator checkpoint (commit f7cf735 / bfcl-eval 2025.12.17). Scores are not mixed with BFCL V1\u2013V3 or across FC and Prompt modes without preserving the mode in provenance.",
+        "model_release_date": "2025-09-29",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-09-29",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-09-29",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-09-29",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-09-29",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+        ],
+        "score_source_ids": [
+          "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+        ],
+        "source": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-model-version-claude-sonnet-4-5-name-claude-sonn-830b697c6a0e9a55"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-09-29",
+        "frontier_observation_ids": [
+          "obs-0-7324-f5f729163326de48"
+        ]
+      }
+    ],
+    "reported_frontier": [],
+    "historical_frontier": [],
+    "retrospective_observations": [],
+    "observed_frontier": 0.7324,
+    "capability_frontier_value": 0.7324,
+    "reported_frontier_value": null,
+    "current_frontier": 0.7324,
+    "normalized_progress": 0.7324,
+    "normalized_headroom": 0.26759999999999995,
+    "threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2025-07-17"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 416
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 416
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2025-07-17"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 416
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 416
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T80": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T90": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.42857142857142855,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google"
+      ],
+      "panel_size": 7,
+      "status": "medium"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-gorilla-cs-berkeley-edu-leaderboard-html-c62226dacccbe98a"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "unknown_public_dates",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

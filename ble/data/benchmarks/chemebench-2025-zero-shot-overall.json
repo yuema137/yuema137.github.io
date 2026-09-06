@@ -1,0 +1,1238 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "chemebench-2025-zero-shot-overall",
+    "name": "ChemEBench 2025 \u2014 Zero-shot Overall",
+    "domain": "Chemistry",
+    "release": "2025-06-12",
+    "source": "https://www.cjcatal.com/CN/10.1016/S1872-2067(25)64725-5",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "percentage_points",
+    "evaluation_type": "Model",
+    "tags": [
+      "chemical engineering",
+      "process",
+      "rubric"
+    ],
+    "metric": "Overall",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "chemebench-2025-zero-shot-overall-metric-v1",
+    "protocol_id": "chemebench-2025-zero-shot-overall-source-export-v1",
+    "canonical_score": {
+      "series_id": "chemebench-2025-zero-shot-overall-canonical-score",
+      "role": "canonical",
+      "metric_id": "chemebench-2025-zero-shot-overall-metric-v1",
+      "metric_name": "Overall",
+      "protocol_id": "chemebench-2025-zero-shot-overall-source-export-v1",
+      "task_set_id": "chemebench-2025-zero-shot-overall-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "percentage_points",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "chemebench-2025-zero-shot-overall-canonical",
+    "summary": {
+      "en": "ChemEBench evaluates broad chemical-engineering competence from fundamentals through industrial processes.",
+      "zh": "ChemEBench \u7efc\u5408\u8bc4\u4f30\u4ece\u57fa\u7840\u77e5\u8bc6\u5230\u5de5\u4e1a\u8fc7\u7a0b\u7684\u5316\u5b66\u5de5\u7a0b\u80fd\u529b\u3002"
+    },
+    "task_format": {
+      "en": "Solve heterogeneous knowledge, molecular, equipment, reactor, separation, safety, simulation, and economics tasks.",
+      "zh": "\u5b8c\u6210\u77e5\u8bc6\u3001\u5206\u5b50\u3001\u8bbe\u5907\u3001\u53cd\u5e94\u5668\u3001\u5206\u79bb\u3001\u5b89\u5168\u3001\u6a21\u62df\u548c\u7ecf\u6d4e\u7b49\u591a\u7c7b\u4efb\u52a1\u3002"
+    },
+    "scoring": {
+      "metric_name": "Zero-shot overall score",
+      "explanation": {
+        "en": "Table 9 overall aggregates bounded objective and rubric-scored tasks under the zero-shot setting.",
+        "zh": "Table 9 overall \u5728 zero-shot \u8bbe\u7f6e\u4e0b\u6c47\u603b\u6709\u754c\u7684\u5ba2\u89c2\u9898\u548c rubric \u8bc4\u5206\u4efb\u52a1\u3002"
+      }
+    },
+    "evaluation_target": "process_and_output",
+    "observation_count": 7,
+    "evidence_record_count": 7,
+    "observations": [
+      {
+        "observation_id": "obs-0-5669-8ca8681b99ec028e",
+        "benchmark_id": "chemebench-2025-zero-shot-overall",
+        "benchmark_version_id": "chemebench-2025-zero-shot-overall-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.5669,
+        "input_score": 56.69,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chemebench-2025-zero-shot-overall-metric-v1",
+        "protocol_id": "chemebench-2025-zero-shot-overall-source-export-v1",
+        "task_set_id": "chemebench-2025-zero-shot-overall-canonical",
+        "metric": "Overall",
+        "score_role": "canonical",
+        "score_series_id": "chemebench-2025-zero-shot-overall-canonical-score",
+        "evaluation_protocol": "ChemEBench 2025 Table 9 zero-shot Overall only; three-shot rows and component metrics excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2025-06-12",
+        "source_publication_date": "2025-06-12",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-06-12",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-05-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-06-12",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "score_source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "source": "https://www.cjcatal.com/CN/10.1016/S1872-2067(25)64725-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cheme-gpt4o-56e1cba3b5a06986"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "cheme-gpt4o"
+        ]
+      },
+      {
+        "observation_id": "obs-0-4526-81f16909c9f6d75a",
+        "benchmark_id": "chemebench-2025-zero-shot-overall",
+        "benchmark_version_id": "chemebench-2025-zero-shot-overall-canonical",
+        "model_id": "model-llama-3-1-70b-4315765c60db80b9",
+        "model_configuration": "Llama-3.1-70B",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama-3-1-70b",
+        "model_family_id": "meta-llama-3-1-70b",
+        "model": "Llama-3.1-70B",
+        "organization": "Meta",
+        "score": 0.4526,
+        "input_score": 45.26,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chemebench-2025-zero-shot-overall-metric-v1",
+        "protocol_id": "chemebench-2025-zero-shot-overall-source-export-v1",
+        "task_set_id": "chemebench-2025-zero-shot-overall-canonical",
+        "metric": "Overall",
+        "score_role": "canonical",
+        "score_series_id": "chemebench-2025-zero-shot-overall-canonical-score",
+        "evaluation_protocol": "ChemEBench 2025 Table 9 zero-shot Overall only; three-shot rows and component metrics excluded.",
+        "model_release_date": "2024-07-23",
+        "evaluation_date": null,
+        "result_public_date": "2025-06-12",
+        "source_publication_date": "2025-06-12",
+        "observation_date": "2024-07-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-07-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-06-12",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-07-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-07-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-06-12",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "score_source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "source": "https://www.cjcatal.com/CN/10.1016/S1872-2067(25)64725-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cheme-llama31-855bb83d4c032bd5"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "cheme-llama31"
+        ]
+      },
+      {
+        "observation_id": "obs-0-6576-a0da0d81d5e05692",
+        "benchmark_id": "chemebench-2025-zero-shot-overall",
+        "benchmark_version_id": "chemebench-2025-zero-shot-overall-canonical",
+        "model_id": "model-o1-preview-04256b717524d6b8",
+        "model_configuration": "o1-preview",
+        "model_identity_organization": "openai",
+        "model_label_id": "o1-preview",
+        "model_family_id": "openai-o1-preview",
+        "model": "o1-preview",
+        "organization": "OpenAI",
+        "score": 0.6576000000000001,
+        "input_score": 65.76,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chemebench-2025-zero-shot-overall-metric-v1",
+        "protocol_id": "chemebench-2025-zero-shot-overall-source-export-v1",
+        "task_set_id": "chemebench-2025-zero-shot-overall-canonical",
+        "metric": "Overall",
+        "score_role": "canonical",
+        "score_series_id": "chemebench-2025-zero-shot-overall-canonical-score",
+        "evaluation_protocol": "ChemEBench 2025 Table 9 zero-shot Overall only; three-shot rows and component metrics excluded.",
+        "model_release_date": "2024-09-12",
+        "evaluation_date": null,
+        "result_public_date": "2025-06-12",
+        "source_publication_date": "2025-06-12",
+        "observation_date": "2024-09-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-09-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-06-12",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-09-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-09-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-06-12",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "score_source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "source": "https://www.cjcatal.com/CN/10.1016/S1872-2067(25)64725-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cheme-o1preview-9aa0e7d216735ed5"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "cheme-o1preview"
+        ]
+      },
+      {
+        "observation_id": "obs-0-6296-0df9f22e2bb9e751",
+        "benchmark_id": "chemebench-2025-zero-shot-overall",
+        "benchmark_version_id": "chemebench-2025-zero-shot-overall-canonical",
+        "model_id": "model-deepseek-v3-44b935d802b0efaa",
+        "model_configuration": "DeepSeek-V3",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-v3",
+        "model_family_id": "deepseek-deepseek-v3",
+        "model": "DeepSeek-V3",
+        "organization": "DeepSeek",
+        "score": 0.6296,
+        "input_score": 62.96,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chemebench-2025-zero-shot-overall-metric-v1",
+        "protocol_id": "chemebench-2025-zero-shot-overall-source-export-v1",
+        "task_set_id": "chemebench-2025-zero-shot-overall-canonical",
+        "metric": "Overall",
+        "score_role": "canonical",
+        "score_series_id": "chemebench-2025-zero-shot-overall-canonical-score",
+        "evaluation_protocol": "ChemEBench 2025 Table 9 zero-shot Overall only; three-shot rows and component metrics excluded.",
+        "model_release_date": "2024-12-26",
+        "evaluation_date": null,
+        "result_public_date": "2025-06-12",
+        "source_publication_date": "2025-06-12",
+        "observation_date": "2024-12-26",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-26",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-06-12",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-12-26",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-26",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-06-12",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "score_source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "source": "https://www.cjcatal.com/CN/10.1016/S1872-2067(25)64725-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cheme-deepseekv3-c3cd1cf262880baf"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "cheme-deepseekv3"
+        ]
+      },
+      {
+        "observation_id": "obs-0-7033-142616ec9924e616",
+        "benchmark_id": "chemebench-2025-zero-shot-overall",
+        "benchmark_version_id": "chemebench-2025-zero-shot-overall-canonical",
+        "model_id": "model-deepseek-r1-18eed2738c2c0e2c",
+        "model_configuration": "DeepSeek-R1",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-r1",
+        "model_family_id": "deepseek-deepseek-r1",
+        "model": "DeepSeek-R1",
+        "organization": "DeepSeek",
+        "score": 0.7033,
+        "input_score": 70.33,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chemebench-2025-zero-shot-overall-metric-v1",
+        "protocol_id": "chemebench-2025-zero-shot-overall-source-export-v1",
+        "task_set_id": "chemebench-2025-zero-shot-overall-canonical",
+        "metric": "Overall",
+        "score_role": "canonical",
+        "score_series_id": "chemebench-2025-zero-shot-overall-canonical-score",
+        "evaluation_protocol": "ChemEBench 2025 Table 9 zero-shot Overall only; three-shot rows and component metrics excluded.",
+        "model_release_date": "2025-01-20",
+        "evaluation_date": null,
+        "result_public_date": "2025-06-12",
+        "source_publication_date": "2025-06-12",
+        "observation_date": "2025-01-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-06-12",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-01-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-06-12",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "score_source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "source": "https://www.cjcatal.com/CN/10.1016/S1872-2067(25)64725-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cheme-deepseekr1-d36933af9a1e52b3"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "cheme-deepseekr1"
+        ]
+      },
+      {
+        "observation_id": "obs-0-5885-31b6ac46fc21094f",
+        "benchmark_id": "chemebench-2025-zero-shot-overall",
+        "benchmark_version_id": "chemebench-2025-zero-shot-overall-canonical",
+        "model_id": "model-o3-mini-c8cc52bda8f726c8",
+        "model_configuration": "o3-mini",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-mini",
+        "model_family_id": "openai-o3-mini",
+        "model": "o3-mini",
+        "organization": "OpenAI",
+        "score": 0.5885,
+        "input_score": 58.85,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chemebench-2025-zero-shot-overall-metric-v1",
+        "protocol_id": "chemebench-2025-zero-shot-overall-source-export-v1",
+        "task_set_id": "chemebench-2025-zero-shot-overall-canonical",
+        "metric": "Overall",
+        "score_role": "canonical",
+        "score_series_id": "chemebench-2025-zero-shot-overall-canonical-score",
+        "evaluation_protocol": "ChemEBench 2025 Table 9 zero-shot Overall only; three-shot rows and component metrics excluded.",
+        "model_release_date": "2025-01-31",
+        "evaluation_date": null,
+        "result_public_date": "2025-06-12",
+        "source_publication_date": "2025-06-12",
+        "observation_date": "2025-01-31",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-31",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-06-12",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-01-31",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-31",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-06-12",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "score_source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "source": "https://www.cjcatal.com/CN/10.1016/S1872-2067(25)64725-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cheme-o3mini-f7852c92745cb7f4"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "cheme-o3mini"
+        ]
+      },
+      {
+        "observation_id": "obs-0-6175-0a177eac47bac23d",
+        "benchmark_id": "chemebench-2025-zero-shot-overall",
+        "benchmark_version_id": "chemebench-2025-zero-shot-overall-canonical",
+        "model_id": "model-claude-3-7-sonnet-105c2d3675a935dc",
+        "model_configuration": "Claude-3.7-Sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-7-sonnet",
+        "model_family_id": "anthropic-claude-3-7-sonnet",
+        "model": "Claude-3.7-Sonnet",
+        "organization": "Anthropic",
+        "score": 0.6175,
+        "input_score": 61.75,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chemebench-2025-zero-shot-overall-metric-v1",
+        "protocol_id": "chemebench-2025-zero-shot-overall-source-export-v1",
+        "task_set_id": "chemebench-2025-zero-shot-overall-canonical",
+        "metric": "Overall",
+        "score_role": "canonical",
+        "score_series_id": "chemebench-2025-zero-shot-overall-canonical-score",
+        "evaluation_protocol": "ChemEBench 2025 Table 9 zero-shot Overall only; three-shot rows and component metrics excluded.",
+        "model_release_date": "2025-02-24",
+        "evaluation_date": null,
+        "result_public_date": "2025-06-12",
+        "source_publication_date": "2025-06-12",
+        "observation_date": "2025-02-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-06-12",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-02-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-06-12",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "score_source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "source": "https://www.cjcatal.com/CN/10.1016/S1872-2067(25)64725-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cheme-claude37-024e21bd57530628"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "cheme-claude37"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-7033-142616ec9924e616",
+        "benchmark_id": "chemebench-2025-zero-shot-overall",
+        "benchmark_version_id": "chemebench-2025-zero-shot-overall-canonical",
+        "model_id": "model-deepseek-r1-18eed2738c2c0e2c",
+        "model_configuration": "DeepSeek-R1",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-r1",
+        "model_family_id": "deepseek-deepseek-r1",
+        "model": "DeepSeek-R1",
+        "organization": "DeepSeek",
+        "score": 0.7033,
+        "input_score": 70.33,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chemebench-2025-zero-shot-overall-metric-v1",
+        "protocol_id": "chemebench-2025-zero-shot-overall-source-export-v1",
+        "task_set_id": "chemebench-2025-zero-shot-overall-canonical",
+        "metric": "Overall",
+        "score_role": "canonical",
+        "score_series_id": "chemebench-2025-zero-shot-overall-canonical-score",
+        "evaluation_protocol": "ChemEBench 2025 Table 9 zero-shot Overall only; three-shot rows and component metrics excluded.",
+        "model_release_date": "2025-01-20",
+        "evaluation_date": null,
+        "result_public_date": "2025-06-12",
+        "source_publication_date": "2025-06-12",
+        "observation_date": "2025-01-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-06-12",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-06-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-06-12",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "score_source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "source": "https://www.cjcatal.com/CN/10.1016/S1872-2067(25)64725-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cheme-deepseekr1-d36933af9a1e52b3"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "cheme-deepseekr1"
+        ],
+        "plot_date": "2025-06-12",
+        "frontier_observation_ids": [
+          "obs-0-4526-81f16909c9f6d75a",
+          "obs-0-5669-8ca8681b99ec028e",
+          "obs-0-5885-31b6ac46fc21094f",
+          "obs-0-6175-0a177eac47bac23d",
+          "obs-0-6296-0df9f22e2bb9e751",
+          "obs-0-6576-a0da0d81d5e05692",
+          "obs-0-7033-142616ec9924e616"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-7033-142616ec9924e616",
+        "benchmark_id": "chemebench-2025-zero-shot-overall",
+        "benchmark_version_id": "chemebench-2025-zero-shot-overall-canonical",
+        "model_id": "model-deepseek-r1-18eed2738c2c0e2c",
+        "model_configuration": "DeepSeek-R1",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-r1",
+        "model_family_id": "deepseek-deepseek-r1",
+        "model": "DeepSeek-R1",
+        "organization": "DeepSeek",
+        "score": 0.7033,
+        "input_score": 70.33,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chemebench-2025-zero-shot-overall-metric-v1",
+        "protocol_id": "chemebench-2025-zero-shot-overall-source-export-v1",
+        "task_set_id": "chemebench-2025-zero-shot-overall-canonical",
+        "metric": "Overall",
+        "score_role": "canonical",
+        "score_series_id": "chemebench-2025-zero-shot-overall-canonical-score",
+        "evaluation_protocol": "ChemEBench 2025 Table 9 zero-shot Overall only; three-shot rows and component metrics excluded.",
+        "model_release_date": "2025-01-20",
+        "evaluation_date": null,
+        "result_public_date": "2025-06-12",
+        "source_publication_date": "2025-06-12",
+        "observation_date": "2025-01-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-06-12",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-06-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-06-12",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "score_source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "source": "https://www.cjcatal.com/CN/10.1016/S1872-2067(25)64725-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cheme-deepseekr1-d36933af9a1e52b3"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "cheme-deepseekr1"
+        ],
+        "plot_date": "2025-06-12",
+        "frontier_observation_ids": [
+          "obs-0-4526-81f16909c9f6d75a",
+          "obs-0-5669-8ca8681b99ec028e",
+          "obs-0-5885-31b6ac46fc21094f",
+          "obs-0-6175-0a177eac47bac23d",
+          "obs-0-6296-0df9f22e2bb9e751",
+          "obs-0-6576-a0da0d81d5e05692",
+          "obs-0-7033-142616ec9924e616"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-7033-142616ec9924e616",
+        "benchmark_id": "chemebench-2025-zero-shot-overall",
+        "benchmark_version_id": "chemebench-2025-zero-shot-overall-canonical",
+        "model_id": "model-deepseek-r1-18eed2738c2c0e2c",
+        "model_configuration": "DeepSeek-R1",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-r1",
+        "model_family_id": "deepseek-deepseek-r1",
+        "model": "DeepSeek-R1",
+        "organization": "DeepSeek",
+        "score": 0.7033,
+        "input_score": 70.33,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chemebench-2025-zero-shot-overall-metric-v1",
+        "protocol_id": "chemebench-2025-zero-shot-overall-source-export-v1",
+        "task_set_id": "chemebench-2025-zero-shot-overall-canonical",
+        "metric": "Overall",
+        "score_role": "canonical",
+        "score_series_id": "chemebench-2025-zero-shot-overall-canonical-score",
+        "evaluation_protocol": "ChemEBench 2025 Table 9 zero-shot Overall only; three-shot rows and component metrics excluded.",
+        "model_release_date": "2025-01-20",
+        "evaluation_date": null,
+        "result_public_date": "2025-06-12",
+        "source_publication_date": "2025-06-12",
+        "observation_date": "2025-01-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-06-12",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-06-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-01-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-06-12",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "score_source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "source": "https://www.cjcatal.com/CN/10.1016/S1872-2067(25)64725-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cheme-deepseekr1-d36933af9a1e52b3"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "cheme-deepseekr1"
+        ],
+        "plot_date": "2025-06-12",
+        "frontier_observation_ids": [
+          "obs-0-4526-81f16909c9f6d75a",
+          "obs-0-5669-8ca8681b99ec028e",
+          "obs-0-5885-31b6ac46fc21094f",
+          "obs-0-6175-0a177eac47bac23d",
+          "obs-0-6296-0df9f22e2bb9e751",
+          "obs-0-6576-a0da0d81d5e05692",
+          "obs-0-7033-142616ec9924e616"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-7033-142616ec9924e616",
+        "benchmark_id": "chemebench-2025-zero-shot-overall",
+        "benchmark_version_id": "chemebench-2025-zero-shot-overall-canonical",
+        "model_id": "model-deepseek-r1-18eed2738c2c0e2c",
+        "model_configuration": "DeepSeek-R1",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-r1",
+        "model_family_id": "deepseek-deepseek-r1",
+        "model": "DeepSeek-R1",
+        "organization": "DeepSeek",
+        "score": 0.7033,
+        "input_score": 70.33,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chemebench-2025-zero-shot-overall-metric-v1",
+        "protocol_id": "chemebench-2025-zero-shot-overall-source-export-v1",
+        "task_set_id": "chemebench-2025-zero-shot-overall-canonical",
+        "metric": "Overall",
+        "score_role": "canonical",
+        "score_series_id": "chemebench-2025-zero-shot-overall-canonical-score",
+        "evaluation_protocol": "ChemEBench 2025 Table 9 zero-shot Overall only; three-shot rows and component metrics excluded.",
+        "model_release_date": "2025-01-20",
+        "evaluation_date": null,
+        "result_public_date": "2025-06-12",
+        "source_publication_date": "2025-06-12",
+        "observation_date": "2025-01-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-06-12",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-06-12",
+        "date_kind": "result first-public date",
+        "capability_date": "2025-01-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-06-12",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "score_source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "source": "https://www.cjcatal.com/CN/10.1016/S1872-2067(25)64725-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cheme-deepseekr1-d36933af9a1e52b3"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "cheme-deepseekr1"
+        ],
+        "plot_date": "2025-06-12",
+        "frontier_observation_ids": [
+          "obs-0-4526-81f16909c9f6d75a",
+          "obs-0-5669-8ca8681b99ec028e",
+          "obs-0-5885-31b6ac46fc21094f",
+          "obs-0-6175-0a177eac47bac23d",
+          "obs-0-6296-0df9f22e2bb9e751",
+          "obs-0-6576-a0da0d81d5e05692",
+          "obs-0-7033-142616ec9924e616"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-7033-142616ec9924e616",
+        "benchmark_id": "chemebench-2025-zero-shot-overall",
+        "benchmark_version_id": "chemebench-2025-zero-shot-overall-canonical",
+        "model_id": "model-deepseek-r1-18eed2738c2c0e2c",
+        "model_configuration": "DeepSeek-R1",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-r1",
+        "model_family_id": "deepseek-deepseek-r1",
+        "model": "DeepSeek-R1",
+        "organization": "DeepSeek",
+        "score": 0.7033,
+        "input_score": 70.33,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chemebench-2025-zero-shot-overall-metric-v1",
+        "protocol_id": "chemebench-2025-zero-shot-overall-source-export-v1",
+        "task_set_id": "chemebench-2025-zero-shot-overall-canonical",
+        "metric": "Overall",
+        "score_role": "canonical",
+        "score_series_id": "chemebench-2025-zero-shot-overall-canonical-score",
+        "evaluation_protocol": "ChemEBench 2025 Table 9 zero-shot Overall only; three-shot rows and component metrics excluded.",
+        "model_release_date": "2025-01-20",
+        "evaluation_date": null,
+        "result_public_date": "2025-06-12",
+        "source_publication_date": "2025-06-12",
+        "observation_date": "2025-01-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-01-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-06-12",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-06-12",
+        "date_kind": "result first-public date",
+        "capability_date": "2025-01-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-06-12",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "score_source_ids": [
+          "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+        ],
+        "source": "https://www.cjcatal.com/CN/10.1016/S1872-2067(25)64725-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-cheme-deepseekr1-d36933af9a1e52b3"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "cheme-deepseekr1"
+        ],
+        "plot_date": "2025-06-12",
+        "frontier_observation_ids": [
+          "obs-0-4526-81f16909c9f6d75a",
+          "obs-0-5669-8ca8681b99ec028e",
+          "obs-0-5885-31b6ac46fc21094f",
+          "obs-0-6175-0a177eac47bac23d",
+          "obs-0-6296-0df9f22e2bb9e751",
+          "obs-0-6576-a0da0d81d5e05692",
+          "obs-0-7033-142616ec9924e616"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.7033,
+    "capability_frontier_value": 0.7033,
+    "reported_frontier_value": 0.7033,
+    "current_frontier": 0.7033,
+    "normalized_progress": 0.7033,
+    "normalized_headroom": 0.29669999999999996,
+    "threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2025-06-12"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 451
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 451
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2025-06-12"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 451
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 451
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2025-06-12"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 451
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 451
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.5714285714285714,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "DeepSeek",
+        "Meta"
+      ],
+      "panel_size": 7,
+      "status": "medium"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-www-cjcatal-com-cn-10-1016-s1872-2067-25-6-58b9c06bc7f67feb"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

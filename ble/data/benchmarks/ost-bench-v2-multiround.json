@@ -1,0 +1,1161 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "ost-bench-v2-multiround",
+    "name": "OST-Bench v2 \u2014 Multi-round",
+    "domain": "Robotics",
+    "release": "2025-10-14",
+    "source": "https://github.com/InternRobotics/OST-Bench",
+    "floor": 0.3573,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.3573,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Model",
+    "tags": [
+      "spatial memory",
+      "egocentric",
+      "multi-round"
+    ],
+    "metric": "Overall score",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "ost-bench-v2-multiround-metric-v1",
+    "protocol_id": "ost-bench-v2-multiround-source-export-v1",
+    "canonical_score": {
+      "series_id": "ost-bench-v2-multiround-canonical-score",
+      "role": "canonical",
+      "metric_id": "ost-bench-v2-multiround-metric-v1",
+      "metric_name": "Overall score",
+      "protocol_id": "ost-bench-v2-multiround-source-export-v1",
+      "task_set_id": "ost-bench-v2-multiround-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.3573,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "ost-bench-v2-multiround-canonical",
+    "summary": {
+      "en": "OST-Bench tests whether a multimodal model can update online spatial memory as first-person observations arrive without seeing future frames.",
+      "zh": "OST-Bench \u6d4b\u8bd5\u591a\u6a21\u6001\u6a21\u578b\u80fd\u5426\u968f\u7740\u7b2c\u4e00\u4eba\u79f0\u89c2\u5bdf\u5230\u8fbe\u800c\u66f4\u65b0\u5728\u7ebf\u7a7a\u95f4\u8bb0\u5fc6\uff0c\u540c\u65f6\u4e0d\u80fd\u5077\u770b\u672a\u6765\u753b\u9762\u3002"
+    },
+    "task_format": {
+      "en": "Each dialogue round appends four or five chronological egocentric frames, and the model answers a question about the scene state at that time.",
+      "zh": "\u6bcf\u8f6e\u5bf9\u8bdd\u8ffd\u52a0\u56db\u5230\u4e94\u5f20\u6309\u65f6\u95f4\u6392\u5217\u7684\u7b2c\u4e00\u4eba\u79f0\u56fe\u50cf\uff0c\u6a21\u578b\u9700\u8981\u56de\u7b54\u8be5\u65f6\u523b\u573a\u666f\u72b6\u6001\u76f8\u5173\u7684\u95ee\u9898\u3002"
+    },
+    "scoring": {
+      "metric_name": "Multi-round overall score",
+      "explanation": {
+        "en": "Option accuracy, exact match, and mean relative accuracy are aggregated into the official 0-100 multi-round overall score.",
+        "zh": "option accuracy\u3001exact match \u548c mean relative accuracy \u6309\u5b98\u65b9\u89c4\u5219\u6c47\u603b\u4e3a 0\u2013100 \u7684 multi-round overall score\u3002"
+      }
+    },
+    "evaluation_target": "final_output",
+    "observation_count": 6,
+    "evidence_record_count": 6,
+    "observations": [
+      {
+        "observation_id": "obs-0-4686-a085d7f4a4cd2229",
+        "benchmark_id": "ost-bench-v2-multiround",
+        "benchmark_version_id": "ost-bench-v2-multiround-canonical",
+        "model_id": "model-qwenvl-2-5-32b-62774f387c89e881",
+        "model_configuration": "QwenVL-2.5-32B",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwenvl-2-5-32b",
+        "model_family_id": "qwen-qwenvl-2-5-32b",
+        "model": "QwenVL-2.5-32B",
+        "organization": "Qwen",
+        "score": 0.4686,
+        "input_score": 0.4686,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "ost-bench-v2-multiround-metric-v1",
+        "protocol_id": "ost-bench-v2-multiround-source-export-v1",
+        "task_set_id": "ost-bench-v2-multiround-canonical",
+        "metric": "Overall score",
+        "score_role": "canonical",
+        "score_series_id": "ost-bench-v2-multiround-canonical-score",
+        "evaluation_protocol": "OST-Bench v2 pinned multi-round zero-shot protocol and official leaderboard overall score. Interleaved and VLMEvalKit variants are excluded.",
+        "model_release_date": "2025-03-24",
+        "evaluation_date": null,
+        "result_public_date": "2025-10-14",
+        "source_publication_date": "2025-10-14",
+        "observation_date": "2025-03-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-03-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-10-14",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-03-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-03-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-10-14",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-39c7c6f46430ad3c",
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "source": "https://github.com/InternRobotics/OST-Bench/blob/main/README.md",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-ost-qwen25-e348cf0b21eacb0f"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "ost-qwen25"
+        ]
+      },
+      {
+        "observation_id": "obs-0-4777-48fe23874f09fa4d",
+        "benchmark_id": "ost-bench-v2-multiround",
+        "benchmark_version_id": "ost-bench-v2-multiround-canonical",
+        "model_id": "model-claude-3-5-sonnet-latest-941a143bb850efcc",
+        "model_configuration": "Claude-3.5-Sonnet-latest",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet-latest",
+        "model_family_id": "anthropic-claude-3-5-sonnet-latest",
+        "model": "Claude-3.5-Sonnet-latest",
+        "organization": "Anthropic",
+        "score": 0.4777,
+        "input_score": 0.4777,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "ost-bench-v2-multiround-metric-v1",
+        "protocol_id": "ost-bench-v2-multiround-source-export-v1",
+        "task_set_id": "ost-bench-v2-multiround-canonical",
+        "metric": "Overall score",
+        "score_role": "canonical",
+        "score_series_id": "ost-bench-v2-multiround-canonical-score",
+        "evaluation_protocol": "OST-Bench v2 pinned multi-round zero-shot protocol and official leaderboard overall score. Interleaved and VLMEvalKit variants are excluded.",
+        "model_release_date": "2024-06-20",
+        "evaluation_date": null,
+        "result_public_date": "2025-10-14",
+        "source_publication_date": "2025-10-14",
+        "observation_date": "2024-06-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-10-14",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-06-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-06-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-10-14",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-39c7c6f46430ad3c",
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "source": "https://github.com/InternRobotics/OST-Bench/blob/main/README.md",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-ost-claude35-266e7bda3b88852f"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "ost-claude35"
+        ]
+      },
+      {
+        "observation_id": "obs-0-4872-0474cb4e2135cfe3",
+        "benchmark_id": "ost-bench-v2-multiround",
+        "benchmark_version_id": "ost-bench-v2-multiround-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.4872,
+        "input_score": 0.4872,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "ost-bench-v2-multiround-metric-v1",
+        "protocol_id": "ost-bench-v2-multiround-source-export-v1",
+        "task_set_id": "ost-bench-v2-multiround-canonical",
+        "metric": "Overall score",
+        "score_role": "canonical",
+        "score_series_id": "ost-bench-v2-multiround-canonical-score",
+        "evaluation_protocol": "OST-Bench v2 pinned multi-round zero-shot protocol and official leaderboard overall score. Interleaved and VLMEvalKit variants are excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2025-10-14",
+        "source_publication_date": "2025-10-14",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-10-14",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-05-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-10-14",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-39c7c6f46430ad3c",
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "source": "https://github.com/InternRobotics/OST-Bench/blob/main/README.md",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-ost-gpt4o-db0fee0196869f96"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "ost-gpt4o"
+        ]
+      },
+      {
+        "observation_id": "obs-0-4954-f43a1850b9e2a45e",
+        "benchmark_id": "ost-bench-v2-multiround",
+        "benchmark_version_id": "ost-bench-v2-multiround-canonical",
+        "model_id": "model-gemini-2-0-flash-c7f695767f575f5b",
+        "model_configuration": "Gemini-2.0-Flash",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-0-flash",
+        "model_family_id": "google-gemini-2-0-flash",
+        "model": "Gemini-2.0-Flash",
+        "organization": "Google",
+        "score": 0.4954,
+        "input_score": 0.4954,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "ost-bench-v2-multiround-metric-v1",
+        "protocol_id": "ost-bench-v2-multiround-source-export-v1",
+        "task_set_id": "ost-bench-v2-multiround-canonical",
+        "metric": "Overall score",
+        "score_role": "canonical",
+        "score_series_id": "ost-bench-v2-multiround-canonical-score",
+        "evaluation_protocol": "OST-Bench v2 pinned multi-round zero-shot protocol and official leaderboard overall score. Interleaved and VLMEvalKit variants are excluded.",
+        "model_release_date": "2024-12-11",
+        "evaluation_date": null,
+        "result_public_date": "2025-10-14",
+        "source_publication_date": "2025-10-14",
+        "observation_date": "2024-12-11",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-11",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-10-14",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-12-11",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-11",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-10-14",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-39c7c6f46430ad3c",
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "source": "https://github.com/InternRobotics/OST-Bench/blob/main/README.md",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-ost-gemini20-5fa50a15f64e9718"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "ost-gemini20"
+        ]
+      },
+      {
+        "observation_id": "obs-0-534-3dbc73fa8df4d5d3",
+        "benchmark_id": "ost-bench-v2-multiround",
+        "benchmark_version_id": "ost-bench-v2-multiround-canonical",
+        "model_id": "model-gpt-4-1-2a78dbfa263e7293",
+        "model_configuration": "GPT-4.1",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4-1",
+        "model_family_id": "openai-gpt-4-1",
+        "model": "GPT-4.1",
+        "organization": "OpenAI",
+        "score": 0.534,
+        "input_score": 0.534,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "ost-bench-v2-multiround-metric-v1",
+        "protocol_id": "ost-bench-v2-multiround-source-export-v1",
+        "task_set_id": "ost-bench-v2-multiround-canonical",
+        "metric": "Overall score",
+        "score_role": "canonical",
+        "score_series_id": "ost-bench-v2-multiround-canonical-score",
+        "evaluation_protocol": "OST-Bench v2 pinned multi-round zero-shot protocol and official leaderboard overall score. Interleaved and VLMEvalKit variants are excluded.",
+        "model_release_date": "2025-04-14",
+        "evaluation_date": null,
+        "result_public_date": "2025-10-14",
+        "source_publication_date": "2025-10-14",
+        "observation_date": "2025-04-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-10-14",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-04-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-10-14",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-39c7c6f46430ad3c",
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "source": "https://github.com/InternRobotics/OST-Bench/blob/main/README.md",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-ost-gpt41-1ca2a72c79300ece"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "ost-gpt41"
+        ]
+      },
+      {
+        "observation_id": "obs-0-5425-05b58366ea934bb5",
+        "benchmark_id": "ost-bench-v2-multiround",
+        "benchmark_version_id": "ost-bench-v2-multiround-canonical",
+        "model_id": "model-gemini-2-0-flash-thinking-eecc0450529b690e",
+        "model_configuration": "Gemini-2.0-Flash-Thinking",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-0-flash-thinking",
+        "model_family_id": "google-gemini-2-0-flash-thinking",
+        "model": "Gemini-2.0-Flash-Thinking",
+        "organization": "Google",
+        "score": 0.5425,
+        "input_score": 0.5425,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "ost-bench-v2-multiround-metric-v1",
+        "protocol_id": "ost-bench-v2-multiround-source-export-v1",
+        "task_set_id": "ost-bench-v2-multiround-canonical",
+        "metric": "Overall score",
+        "score_role": "canonical",
+        "score_series_id": "ost-bench-v2-multiround-canonical-score",
+        "evaluation_protocol": "OST-Bench v2 pinned multi-round zero-shot protocol and official leaderboard overall score. Interleaved and VLMEvalKit variants are excluded.",
+        "model_release_date": "2024-12-19",
+        "evaluation_date": null,
+        "result_public_date": "2025-10-14",
+        "source_publication_date": "2025-10-14",
+        "observation_date": "2024-12-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-10-14",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-12-19",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-10-14",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-39c7c6f46430ad3c",
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "source": "https://github.com/InternRobotics/OST-Bench/blob/main/README.md",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-ost-gemini-thinking-ec9af269109d4612"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "ost-gemini-thinking"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-5425-05b58366ea934bb5",
+        "benchmark_id": "ost-bench-v2-multiround",
+        "benchmark_version_id": "ost-bench-v2-multiround-canonical",
+        "model_id": "model-gemini-2-0-flash-thinking-eecc0450529b690e",
+        "model_configuration": "Gemini-2.0-Flash-Thinking",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-0-flash-thinking",
+        "model_family_id": "google-gemini-2-0-flash-thinking",
+        "model": "Gemini-2.0-Flash-Thinking",
+        "organization": "Google",
+        "score": 0.5425,
+        "input_score": 0.5425,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "ost-bench-v2-multiround-metric-v1",
+        "protocol_id": "ost-bench-v2-multiround-source-export-v1",
+        "task_set_id": "ost-bench-v2-multiround-canonical",
+        "metric": "Overall score",
+        "score_role": "canonical",
+        "score_series_id": "ost-bench-v2-multiround-canonical-score",
+        "evaluation_protocol": "OST-Bench v2 pinned multi-round zero-shot protocol and official leaderboard overall score. Interleaved and VLMEvalKit variants are excluded.",
+        "model_release_date": "2024-12-19",
+        "evaluation_date": null,
+        "result_public_date": "2025-10-14",
+        "source_publication_date": "2025-10-14",
+        "observation_date": "2024-12-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-10-14",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-10-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-10-14",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-39c7c6f46430ad3c",
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "source": "https://github.com/InternRobotics/OST-Bench/blob/main/README.md",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-ost-gemini-thinking-ec9af269109d4612"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "ost-gemini-thinking"
+        ],
+        "plot_date": "2025-10-14",
+        "frontier_observation_ids": [
+          "obs-0-4686-a085d7f4a4cd2229",
+          "obs-0-4777-48fe23874f09fa4d",
+          "obs-0-4872-0474cb4e2135cfe3",
+          "obs-0-4954-f43a1850b9e2a45e",
+          "obs-0-534-3dbc73fa8df4d5d3",
+          "obs-0-5425-05b58366ea934bb5"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-5425-05b58366ea934bb5",
+        "benchmark_id": "ost-bench-v2-multiround",
+        "benchmark_version_id": "ost-bench-v2-multiround-canonical",
+        "model_id": "model-gemini-2-0-flash-thinking-eecc0450529b690e",
+        "model_configuration": "Gemini-2.0-Flash-Thinking",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-0-flash-thinking",
+        "model_family_id": "google-gemini-2-0-flash-thinking",
+        "model": "Gemini-2.0-Flash-Thinking",
+        "organization": "Google",
+        "score": 0.5425,
+        "input_score": 0.5425,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "ost-bench-v2-multiround-metric-v1",
+        "protocol_id": "ost-bench-v2-multiround-source-export-v1",
+        "task_set_id": "ost-bench-v2-multiround-canonical",
+        "metric": "Overall score",
+        "score_role": "canonical",
+        "score_series_id": "ost-bench-v2-multiround-canonical-score",
+        "evaluation_protocol": "OST-Bench v2 pinned multi-round zero-shot protocol and official leaderboard overall score. Interleaved and VLMEvalKit variants are excluded.",
+        "model_release_date": "2024-12-19",
+        "evaluation_date": null,
+        "result_public_date": "2025-10-14",
+        "source_publication_date": "2025-10-14",
+        "observation_date": "2024-12-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-10-14",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-10-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-10-14",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-39c7c6f46430ad3c",
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "source": "https://github.com/InternRobotics/OST-Bench/blob/main/README.md",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-ost-gemini-thinking-ec9af269109d4612"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "ost-gemini-thinking"
+        ],
+        "plot_date": "2025-10-14",
+        "frontier_observation_ids": [
+          "obs-0-4686-a085d7f4a4cd2229",
+          "obs-0-4777-48fe23874f09fa4d",
+          "obs-0-4872-0474cb4e2135cfe3",
+          "obs-0-4954-f43a1850b9e2a45e",
+          "obs-0-534-3dbc73fa8df4d5d3",
+          "obs-0-5425-05b58366ea934bb5"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-5425-05b58366ea934bb5",
+        "benchmark_id": "ost-bench-v2-multiround",
+        "benchmark_version_id": "ost-bench-v2-multiround-canonical",
+        "model_id": "model-gemini-2-0-flash-thinking-eecc0450529b690e",
+        "model_configuration": "Gemini-2.0-Flash-Thinking",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-0-flash-thinking",
+        "model_family_id": "google-gemini-2-0-flash-thinking",
+        "model": "Gemini-2.0-Flash-Thinking",
+        "organization": "Google",
+        "score": 0.5425,
+        "input_score": 0.5425,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "ost-bench-v2-multiround-metric-v1",
+        "protocol_id": "ost-bench-v2-multiround-source-export-v1",
+        "task_set_id": "ost-bench-v2-multiround-canonical",
+        "metric": "Overall score",
+        "score_role": "canonical",
+        "score_series_id": "ost-bench-v2-multiround-canonical-score",
+        "evaluation_protocol": "OST-Bench v2 pinned multi-round zero-shot protocol and official leaderboard overall score. Interleaved and VLMEvalKit variants are excluded.",
+        "model_release_date": "2024-12-19",
+        "evaluation_date": null,
+        "result_public_date": "2025-10-14",
+        "source_publication_date": "2025-10-14",
+        "observation_date": "2024-12-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-10-14",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-10-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-10-14",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-39c7c6f46430ad3c",
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "source": "https://github.com/InternRobotics/OST-Bench/blob/main/README.md",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-ost-gemini-thinking-ec9af269109d4612"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "ost-gemini-thinking"
+        ],
+        "plot_date": "2025-10-14",
+        "frontier_observation_ids": [
+          "obs-0-4686-a085d7f4a4cd2229",
+          "obs-0-4777-48fe23874f09fa4d",
+          "obs-0-4872-0474cb4e2135cfe3",
+          "obs-0-4954-f43a1850b9e2a45e",
+          "obs-0-534-3dbc73fa8df4d5d3",
+          "obs-0-5425-05b58366ea934bb5"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-5425-05b58366ea934bb5",
+        "benchmark_id": "ost-bench-v2-multiround",
+        "benchmark_version_id": "ost-bench-v2-multiround-canonical",
+        "model_id": "model-gemini-2-0-flash-thinking-eecc0450529b690e",
+        "model_configuration": "Gemini-2.0-Flash-Thinking",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-0-flash-thinking",
+        "model_family_id": "google-gemini-2-0-flash-thinking",
+        "model": "Gemini-2.0-Flash-Thinking",
+        "organization": "Google",
+        "score": 0.5425,
+        "input_score": 0.5425,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "ost-bench-v2-multiround-metric-v1",
+        "protocol_id": "ost-bench-v2-multiround-source-export-v1",
+        "task_set_id": "ost-bench-v2-multiround-canonical",
+        "metric": "Overall score",
+        "score_role": "canonical",
+        "score_series_id": "ost-bench-v2-multiround-canonical-score",
+        "evaluation_protocol": "OST-Bench v2 pinned multi-round zero-shot protocol and official leaderboard overall score. Interleaved and VLMEvalKit variants are excluded.",
+        "model_release_date": "2024-12-19",
+        "evaluation_date": null,
+        "result_public_date": "2025-10-14",
+        "source_publication_date": "2025-10-14",
+        "observation_date": "2024-12-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-10-14",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-10-14",
+        "date_kind": "result first-public date",
+        "capability_date": "2024-12-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-10-14",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-39c7c6f46430ad3c",
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "source": "https://github.com/InternRobotics/OST-Bench/blob/main/README.md",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-ost-gemini-thinking-ec9af269109d4612"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "ost-gemini-thinking"
+        ],
+        "plot_date": "2025-10-14",
+        "frontier_observation_ids": [
+          "obs-0-4686-a085d7f4a4cd2229",
+          "obs-0-4777-48fe23874f09fa4d",
+          "obs-0-4872-0474cb4e2135cfe3",
+          "obs-0-4954-f43a1850b9e2a45e",
+          "obs-0-534-3dbc73fa8df4d5d3",
+          "obs-0-5425-05b58366ea934bb5"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-5425-05b58366ea934bb5",
+        "benchmark_id": "ost-bench-v2-multiround",
+        "benchmark_version_id": "ost-bench-v2-multiround-canonical",
+        "model_id": "model-gemini-2-0-flash-thinking-eecc0450529b690e",
+        "model_configuration": "Gemini-2.0-Flash-Thinking",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-0-flash-thinking",
+        "model_family_id": "google-gemini-2-0-flash-thinking",
+        "model": "Gemini-2.0-Flash-Thinking",
+        "organization": "Google",
+        "score": 0.5425,
+        "input_score": 0.5425,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "ost-bench-v2-multiround-metric-v1",
+        "protocol_id": "ost-bench-v2-multiround-source-export-v1",
+        "task_set_id": "ost-bench-v2-multiround-canonical",
+        "metric": "Overall score",
+        "score_role": "canonical",
+        "score_series_id": "ost-bench-v2-multiround-canonical-score",
+        "evaluation_protocol": "OST-Bench v2 pinned multi-round zero-shot protocol and official leaderboard overall score. Interleaved and VLMEvalKit variants are excluded.",
+        "model_release_date": "2024-12-19",
+        "evaluation_date": null,
+        "result_public_date": "2025-10-14",
+        "source_publication_date": "2025-10-14",
+        "observation_date": "2024-12-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-10-14",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-10-14",
+        "date_kind": "result first-public date",
+        "capability_date": "2024-12-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-10-14",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-39c7c6f46430ad3c",
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
+        ],
+        "source": "https://github.com/InternRobotics/OST-Bench/blob/main/README.md",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-ost-gemini-thinking-ec9af269109d4612"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "ost-gemini-thinking"
+        ],
+        "plot_date": "2025-10-14",
+        "frontier_observation_ids": [
+          "obs-0-4686-a085d7f4a4cd2229",
+          "obs-0-4777-48fe23874f09fa4d",
+          "obs-0-4872-0474cb4e2135cfe3",
+          "obs-0-4954-f43a1850b9e2a45e",
+          "obs-0-534-3dbc73fa8df4d5d3",
+          "obs-0-5425-05b58366ea934bb5"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.5425,
+    "capability_frontier_value": 0.5425,
+    "reported_frontier_value": 0.5425,
+    "current_frontier": 0.5425,
+    "normalized_progress": 0.2881593278356931,
+    "normalized_headroom": 0.7118406721643069,
+    "threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 327
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 327
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 327
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 327
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 327
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 327
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 327
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 327
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 327
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.5714285714285714,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "Qwen"
+      ],
+      "panel_size": 7,
+      "status": "medium"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-github-com-internrobotics-ost-bench-39c7c6f46430ad3c"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": true,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

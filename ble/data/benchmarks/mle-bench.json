@@ -1,0 +1,751 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "mle-bench",
+    "name": "MLE-bench",
+    "domain": "Science / research",
+    "release": "2024-10-10",
+    "source": "https://openai.com/index/mle-bench/",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Agent",
+    "tags": [
+      "ML engineering",
+      "Kaggle",
+      "long-horizon"
+    ],
+    "metric": "All (%)",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "mle-bench-metric-v1",
+    "protocol_id": "mle-bench-source-export-v1",
+    "canonical_score": {
+      "series_id": "mle-bench-canonical-score",
+      "role": "canonical",
+      "metric_id": "mle-bench-metric-v1",
+      "metric_name": "All (%)",
+      "protocol_id": "mle-bench-source-export-v1",
+      "task_set_id": "mle-bench-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "mle-bench-canonical",
+    "summary": {
+      "en": "MLE-bench evaluates agents on real machine-learning engineering competitions derived from Kaggle tasks.",
+      "zh": "MLE-bench \u4f7f\u7528\u6765\u81ea Kaggle \u7684\u771f\u5b9e\u673a\u5668\u5b66\u4e60\u7ade\u8d5b\u4efb\u52a1\uff0c\u8bc4\u4f30 agent \u7684 machine-learning engineering \u80fd\u529b\u3002"
+    },
+    "task_format": {
+      "en": "The agent prepares data, trains models, runs experiments, and submits a solution for one of 75 curated ML competitions.",
+      "zh": "agent \u9700\u8981\u51c6\u5907\u6570\u636e\u3001\u8bad\u7ec3\u6a21\u578b\u3001\u8fd0\u884c\u5b9e\u9a8c\uff0c\u5e76\u4e3a 75 \u4e2a\u7cbe\u9009 ML \u7ade\u8d5b\u4e4b\u4e00\u63d0\u4ea4\u89e3\u51b3\u65b9\u6848\u3002"
+    },
+    "scoring": {
+      "metric_name": "Any-medal rate",
+      "explanation": {
+        "en": "The score is the share of competitions where the agent reaches at least a Kaggle bronze-medal threshold. Low, medium, high, and all-complexity slices are reported separately; this series uses All.",
+        "zh": "\u5206\u6570\u662f agent \u81f3\u5c11\u8fbe\u5230 Kaggle bronze medal \u95e8\u69db\u7684\u7ade\u8d5b\u5360\u6bd4\u3002low\u3001medium\u3001high \u548c all-complexity slice \u5206\u5f00\u62a5\u544a\uff1b\u672c\u5e8f\u5217\u4f7f\u7528 All\u3002"
+      }
+    },
+    "evaluation_target": "environment_outcome",
+    "observation_count": 4,
+    "evidence_record_count": 4,
+    "observations": [
+      {
+        "observation_id": "obs-0-03-b7191216f75099a8",
+        "benchmark_id": "mle-bench",
+        "benchmark_version_id": "mle-bench-canonical",
+        "model_id": "model-llama-3-1-405b-0c330cd6d5c6f367",
+        "model_configuration": "llama-3-1-405b",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama-3-1-405b",
+        "model_family_id": "meta-ai-llama-3-1-405b",
+        "model": "Llama 3.1 405B",
+        "organization": "Meta AI",
+        "score": 0.03,
+        "input_score": 0.03,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "mle-bench-metric-v1",
+        "protocol_id": "mle-bench-source-export-v1",
+        "task_set_id": "mle-bench-canonical",
+        "metric": "All (%)",
+        "score_role": "canonical",
+        "score_series_id": "mle-bench-canonical-score",
+        "evaluation_protocol": "Original MLE-bench AIDE baseline series across 75 fixed competitions. Pass@1/Pass@10 and complexity slices are not mixed into the All any-medal metric.",
+        "model_release_date": "2024-07-23",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-07-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-07-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-openai-mle-bench-a2fdd037b6b6065d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-openai-mle-bench-a2fdd037b6b6065d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-07-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-07-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-openai-mle-bench-a2fdd037b6b6065d",
+          "resource-https-openai-com-index-mle-bench-c3a08c57269d6a10"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-openai-mle-bench-a2fdd037b6b6065d"
+        ],
+        "source": "https://github.com/openai/mle-bench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-all-0-030-model-version-llama-3-1-405b-name-llam-be67e82c5c6e7a4b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-076-03b0ecc8c4747bb9",
+        "benchmark_id": "mle-bench",
+        "benchmark_version_id": "mle-bench-canonical",
+        "model_id": "model-claude-3-5-sonnet-ca0330ced73b499d",
+        "model_configuration": "claude-3-5-sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet",
+        "model_family_id": "anthropic-claude-3-5-sonnet",
+        "model": "Claude 3.5 Sonnet",
+        "organization": "Anthropic",
+        "score": 0.076,
+        "input_score": 0.076,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "mle-bench-metric-v1",
+        "protocol_id": "mle-bench-source-export-v1",
+        "task_set_id": "mle-bench-canonical",
+        "metric": "All (%)",
+        "score_role": "canonical",
+        "score_series_id": "mle-bench-canonical-score",
+        "evaluation_protocol": "Original MLE-bench AIDE baseline series across 75 fixed competitions. Pass@1/Pass@10 and complexity slices are not mixed into the All any-medal metric.",
+        "model_release_date": "2024-10-22",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-10-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-10-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-openai-mle-bench-a2fdd037b6b6065d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-openai-mle-bench-a2fdd037b6b6065d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-10-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-10-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-openai-mle-bench-a2fdd037b6b6065d",
+          "resource-https-openai-com-index-mle-bench-c3a08c57269d6a10"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-openai-mle-bench-a2fdd037b6b6065d"
+        ],
+        "source": "https://github.com/openai/mle-bench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-all-0-076-model-version-claude-3-5-sonnet-name-c-c7bdf6007439f009"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-087-b3d13fe25075f0d2",
+        "benchmark_id": "mle-bench",
+        "benchmark_version_id": "mle-bench-canonical",
+        "model_id": "model-gpt-4o-2024-08-06-1dd50f58d8c57cf8",
+        "model_configuration": "gpt-4o-2024-08-06",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.087,
+        "input_score": 0.087,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "mle-bench-metric-v1",
+        "protocol_id": "mle-bench-source-export-v1",
+        "task_set_id": "mle-bench-canonical",
+        "metric": "All (%)",
+        "score_role": "canonical",
+        "score_series_id": "mle-bench-canonical-score",
+        "evaluation_protocol": "Original MLE-bench AIDE baseline series across 75 fixed competitions. Pass@1/Pass@10 and complexity slices are not mixed into the All any-medal metric.",
+        "model_release_date": "2024-08-06",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-08-06",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-08-06",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-openai-mle-bench-a2fdd037b6b6065d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-openai-mle-bench-a2fdd037b6b6065d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-08-06",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-08-06",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-openai-mle-bench-a2fdd037b6b6065d",
+          "resource-https-openai-com-index-mle-bench-c3a08c57269d6a10"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-openai-mle-bench-a2fdd037b6b6065d"
+        ],
+        "source": "https://github.com/openai/mle-bench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-all-0-087-model-version-gpt-4o-2024-08-06-name-g-0d7aaa36a5761d00"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-169-824c3d14920580d0",
+        "benchmark_id": "mle-bench",
+        "benchmark_version_id": "mle-bench-canonical",
+        "model_id": "model-o1-preview-04256b717524d6b8",
+        "model_configuration": "o1-preview",
+        "model_identity_organization": "openai",
+        "model_label_id": "o1-preview",
+        "model_family_id": "openai-o1-preview",
+        "model": "o1-preview",
+        "organization": "OpenAI",
+        "score": 0.169,
+        "input_score": 0.169,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "mle-bench-metric-v1",
+        "protocol_id": "mle-bench-source-export-v1",
+        "task_set_id": "mle-bench-canonical",
+        "metric": "All (%)",
+        "score_role": "canonical",
+        "score_series_id": "mle-bench-canonical-score",
+        "evaluation_protocol": "Original MLE-bench AIDE baseline series across 75 fixed competitions. Pass@1/Pass@10 and complexity slices are not mixed into the All any-medal metric.",
+        "model_release_date": "2024-09-12",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-09-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-09-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-openai-mle-bench-a2fdd037b6b6065d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-openai-mle-bench-a2fdd037b6b6065d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-09-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-09-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-openai-mle-bench-a2fdd037b6b6065d",
+          "resource-https-openai-com-index-mle-bench-c3a08c57269d6a10"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-openai-mle-bench-a2fdd037b6b6065d"
+        ],
+        "source": "https://github.com/openai/mle-bench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-all-0-169-model-version-o1-preview-name-o1-previ-b2a2ebf1c4149381"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-169-824c3d14920580d0",
+        "benchmark_id": "mle-bench",
+        "benchmark_version_id": "mle-bench-canonical",
+        "model_id": "model-o1-preview-04256b717524d6b8",
+        "model_configuration": "o1-preview",
+        "model_identity_organization": "openai",
+        "model_label_id": "o1-preview",
+        "model_family_id": "openai-o1-preview",
+        "model": "o1-preview",
+        "organization": "OpenAI",
+        "score": 0.169,
+        "input_score": 0.169,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "mle-bench-metric-v1",
+        "protocol_id": "mle-bench-source-export-v1",
+        "task_set_id": "mle-bench-canonical",
+        "metric": "All (%)",
+        "score_role": "canonical",
+        "score_series_id": "mle-bench-canonical-score",
+        "evaluation_protocol": "Original MLE-bench AIDE baseline series across 75 fixed competitions. Pass@1/Pass@10 and complexity slices are not mixed into the All any-medal metric.",
+        "model_release_date": "2024-09-12",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-09-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-09-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-openai-mle-bench-a2fdd037b6b6065d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-openai-mle-bench-a2fdd037b6b6065d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-10-10",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-09-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-openai-mle-bench-a2fdd037b6b6065d",
+          "resource-https-openai-com-index-mle-bench-c3a08c57269d6a10"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-openai-mle-bench-a2fdd037b6b6065d"
+        ],
+        "source": "https://github.com/openai/mle-bench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-all-0-169-model-version-o1-preview-name-o1-previ-b2a2ebf1c4149381"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2024-10-10",
+        "frontier_observation_ids": [
+          "obs-0-03-b7191216f75099a8",
+          "obs-0-087-b3d13fe25075f0d2",
+          "obs-0-169-824c3d14920580d0"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-169-824c3d14920580d0",
+        "benchmark_id": "mle-bench",
+        "benchmark_version_id": "mle-bench-canonical",
+        "model_id": "model-o1-preview-04256b717524d6b8",
+        "model_configuration": "o1-preview",
+        "model_identity_organization": "openai",
+        "model_label_id": "o1-preview",
+        "model_family_id": "openai-o1-preview",
+        "model": "o1-preview",
+        "organization": "OpenAI",
+        "score": 0.169,
+        "input_score": 0.169,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "mle-bench-metric-v1",
+        "protocol_id": "mle-bench-source-export-v1",
+        "task_set_id": "mle-bench-canonical",
+        "metric": "All (%)",
+        "score_role": "canonical",
+        "score_series_id": "mle-bench-canonical-score",
+        "evaluation_protocol": "Original MLE-bench AIDE baseline series across 75 fixed competitions. Pass@1/Pass@10 and complexity slices are not mixed into the All any-medal metric.",
+        "model_release_date": "2024-09-12",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-09-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-09-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-openai-mle-bench-a2fdd037b6b6065d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-openai-mle-bench-a2fdd037b6b6065d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-10-10",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-09-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-openai-mle-bench-a2fdd037b6b6065d",
+          "resource-https-openai-com-index-mle-bench-c3a08c57269d6a10"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-openai-mle-bench-a2fdd037b6b6065d"
+        ],
+        "source": "https://github.com/openai/mle-bench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-all-0-169-model-version-o1-preview-name-o1-previ-b2a2ebf1c4149381"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2024-10-10",
+        "frontier_observation_ids": [
+          "obs-0-03-b7191216f75099a8",
+          "obs-0-087-b3d13fe25075f0d2",
+          "obs-0-169-824c3d14920580d0"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-169-824c3d14920580d0",
+        "benchmark_id": "mle-bench",
+        "benchmark_version_id": "mle-bench-canonical",
+        "model_id": "model-o1-preview-04256b717524d6b8",
+        "model_configuration": "o1-preview",
+        "model_identity_organization": "openai",
+        "model_label_id": "o1-preview",
+        "model_family_id": "openai-o1-preview",
+        "model": "o1-preview",
+        "organization": "OpenAI",
+        "score": 0.169,
+        "input_score": 0.169,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "mle-bench-metric-v1",
+        "protocol_id": "mle-bench-source-export-v1",
+        "task_set_id": "mle-bench-canonical",
+        "metric": "All (%)",
+        "score_role": "canonical",
+        "score_series_id": "mle-bench-canonical-score",
+        "evaluation_protocol": "Original MLE-bench AIDE baseline series across 75 fixed competitions. Pass@1/Pass@10 and complexity slices are not mixed into the All any-medal metric.",
+        "model_release_date": "2024-09-12",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-09-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-09-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-openai-mle-bench-a2fdd037b6b6065d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-openai-mle-bench-a2fdd037b6b6065d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-10-10",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-09-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-openai-mle-bench-a2fdd037b6b6065d",
+          "resource-https-openai-com-index-mle-bench-c3a08c57269d6a10"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-openai-mle-bench-a2fdd037b6b6065d"
+        ],
+        "source": "https://github.com/openai/mle-bench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-all-0-169-model-version-o1-preview-name-o1-previ-b2a2ebf1c4149381"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2024-10-10",
+        "frontier_observation_ids": [
+          "obs-0-03-b7191216f75099a8",
+          "obs-0-087-b3d13fe25075f0d2",
+          "obs-0-169-824c3d14920580d0"
+        ]
+      }
+    ],
+    "reported_frontier": [],
+    "historical_frontier": [],
+    "retrospective_observations": [],
+    "observed_frontier": 0.169,
+    "capability_frontier_value": 0.169,
+    "reported_frontier_value": null,
+    "current_frontier": 0.169,
+    "normalized_progress": 0.169,
+    "normalized_headroom": 0.831,
+    "threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 696
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 696
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 696
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 696
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 696
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 696
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T80": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T90": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.42857142857142855,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Meta"
+      ],
+      "panel_size": 7,
+      "status": "medium"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-openai-com-index-mle-bench-c3a08c57269d6a10"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "unknown_public_dates",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": true,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": true,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

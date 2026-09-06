@@ -1,0 +1,1379 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "terminal-bench-4-0",
+    "name": "Terminal-Bench 4.0",
+    "domain": "Terminal / OS",
+    "release": "2026-08-26",
+    "source": "https://github.com/harbor-framework/terminal-bench/releases/tag/v4.0.0",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Agent",
+    "tags": [
+      "container",
+      "command line",
+      "versioned"
+    ],
+    "metric": "Resolution rate",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "terminal-bench-4-0-metric-v1",
+    "protocol_id": "terminal-bench-4-0-source-export-v1",
+    "canonical_score": {
+      "series_id": "terminal-bench-4-0-canonical-score",
+      "role": "canonical",
+      "metric_id": "terminal-bench-4-0-metric-v1",
+      "metric_name": "Resolution rate",
+      "protocol_id": "terminal-bench-4-0-source-export-v1",
+      "task_set_id": "terminal-bench-4-0-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "terminal-bench-4-0-canonical",
+    "summary": {
+      "en": "Terminal-Bench 4.0 measures agents on hard command-line tasks in reproducible container environments.",
+      "zh": "Terminal-Bench 4.0 \u8bc4\u4f30 agent \u80fd\u4e0d\u80fd\u5728\u53ef\u590d\u73b0\u7684\u5bb9\u5668 terminal \u73af\u5883\u4e2d\u5b8c\u6210\u9ad8\u96be\u5ea6\u547d\u4ee4\u884c\u4efb\u52a1\u3002"
+    },
+    "task_format": {
+      "en": "The agent works inside a container, runs commands, and must leave the environment in a state accepted by task-specific verification tests.",
+      "zh": "agent \u4f1a\u5728\u5bb9\u5668\u91cc\u8fd0\u884c\u547d\u4ee4\uff0c\u6700\u540e\u5fc5\u987b\u8ba9\u73af\u5883\u8fbe\u5230 task \u4e13\u7528 verification tests \u63a5\u53d7\u7684\u72b6\u6001\u3002"
+    },
+    "scoring": {
+      "metric_name": "Resolution rate",
+      "explanation": {
+        "en": "The score is the fraction of benchmark trials whose final environment passes the task verifier. Version 4.0 has a separate task set and is not comparable with earlier versions by default.",
+        "zh": "\u5206\u6570\u662f\u6700\u7ec8\u73af\u5883\u901a\u8fc7 task verifier \u7684 benchmark trial \u5360\u6bd4\u30024.0 \u4f7f\u7528\u72ec\u7acb\u7684 task set\uff0c\u9ed8\u8ba4\u4e0d\u80fd\u548c\u65e9\u671f\u7248\u672c\u76f4\u63a5\u6bd4\u8f83\u3002"
+      }
+    },
+    "evaluation_target": "environment_outcome",
+    "observation_count": 9,
+    "evidence_record_count": 9,
+    "observations": [
+      {
+        "observation_id": "obs-0-5182-8f4af8ecb1571db7",
+        "benchmark_id": "terminal-bench-4-0",
+        "benchmark_version_id": "terminal-bench-4-0-canonical",
+        "model_id": "model-claude-opus-5-claude-code-c49fe73ec0a14691",
+        "model_configuration": "Claude Opus 5 + Claude Code",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-claude-code",
+        "model_family_id": "anthropic-claude-opus-5-claude-code",
+        "model": "Claude Opus 5 + Claude Code",
+        "organization": "Anthropic",
+        "score": 0.5182,
+        "input_score": 0.5182,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "terminal-bench-4-0-metric-v1",
+        "protocol_id": "terminal-bench-4-0-source-export-v1",
+        "task_set_id": "terminal-bench-4-0-canonical",
+        "metric": "Resolution rate",
+        "score_role": "canonical",
+        "score_series_id": "terminal-bench-4-0-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-24",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-07-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-harbor-framework-terminal-bench-aabde8704ab14964",
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "score_source_ids": [
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "source": "https://snorkel.ai/leaderboard/terminal-bench-4-0",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-claude-opus-5-claude-code-notes-66-task-v4--f85916c37a13d160"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-579-90bb03cbdf13871f",
+        "benchmark_id": "terminal-bench-4-0",
+        "benchmark_version_id": "terminal-bench-4-0-canonical",
+        "model_id": "model-gpt-6-astra-c94798ba994c2800",
+        "model_configuration": "GPT-6 Astra",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-astra",
+        "model_family_id": "openai-gpt-6-astra",
+        "model": "GPT-6 Astra",
+        "organization": "OpenAI",
+        "score": 0.579,
+        "input_score": 0.579,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "terminal-bench-4-0-metric-v1",
+        "protocol_id": "terminal-bench-4-0-source-export-v1",
+        "task_set_id": "terminal-bench-4-0-canonical",
+        "metric": "Resolution rate",
+        "score_role": "canonical",
+        "score_series_id": "terminal-bench-4-0-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-09-03",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-09-03",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-03",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+              "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-09-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-03",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-github-com-harbor-framework-terminal-bench-aabde8704ab14964",
+          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+        ],
+        "score_source_ids": [
+          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+        ],
+        "source": "https://openai.com/index/gpt-6-astra",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-gpt-6-astra-notes-public-result-terminal-be-e2ceb685c667ca49"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-4455-6537d9f1a0fece1e",
+        "benchmark_id": "terminal-bench-4-0",
+        "benchmark_version_id": "terminal-bench-4-0-canonical",
+        "model_id": "model-claude-fable-5-claude-code-24828e7c882d633d",
+        "model_configuration": "Claude Fable 5 + Claude Code",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-claude-code",
+        "model_family_id": "anthropic-claude-fable-5-claude-code",
+        "model": "Claude Fable 5 + Claude Code",
+        "organization": "Anthropic",
+        "score": 0.4455,
+        "input_score": 0.4455,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "terminal-bench-4-0-metric-v1",
+        "protocol_id": "terminal-bench-4-0-source-export-v1",
+        "task_set_id": "terminal-bench-4-0-canonical",
+        "metric": "Resolution rate",
+        "score_role": "canonical",
+        "score_series_id": "terminal-bench-4-0-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-06-09",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-06-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-06-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-06-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-06-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-harbor-framework-terminal-bench-aabde8704ab14964",
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "score_source_ids": [
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "source": "https://snorkel.ai/leaderboard/terminal-bench-4-0",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-claude-fable-5-claude-code-notes-66-task-v4-6c70b8ad67d0e8ad"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-4182-2bb7f688b22c94a7",
+        "benchmark_id": "terminal-bench-4-0",
+        "benchmark_version_id": "terminal-bench-4-0-canonical",
+        "model_id": "model-glm-5-3-claude-code-180ed609586bec78",
+        "model_configuration": "GLM-5.3 + Claude Code",
+        "model_identity_organization": "z-ai",
+        "model_label_id": "glm-5-3-claude-code",
+        "model_family_id": "z-ai-glm-5-3-claude-code",
+        "model": "GLM-5.3 + Claude Code",
+        "organization": "Z.ai",
+        "score": 0.4182,
+        "input_score": 0.4182,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "terminal-bench-4-0-metric-v1",
+        "protocol_id": "terminal-bench-4-0-source-export-v1",
+        "task_set_id": "terminal-bench-4-0-canonical",
+        "metric": "Resolution rate",
+        "score_role": "canonical",
+        "score_series_id": "terminal-bench-4-0-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-08-14",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-08-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-08-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-08-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-08-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-harbor-framework-terminal-bench-aabde8704ab14964",
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "score_source_ids": [
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "source": "https://snorkel.ai/leaderboard/terminal-bench-4-0",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-glm-5-3-claude-code-notes-66-task-v4-0-0-re-fbad013bd6d5c81d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-3727-4be5b1004eef32a3",
+        "benchmark_id": "terminal-bench-4-0",
+        "benchmark_version_id": "terminal-bench-4-0-canonical",
+        "model_id": "model-gpt-5-6-sol-codex-963229d6fd1e5bc4",
+        "model_configuration": "GPT-5.6 Sol + Codex",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol-codex",
+        "model_family_id": "openai-gpt-5-6-sol-codex",
+        "model": "GPT-5.6 Sol + Codex",
+        "organization": "OpenAI",
+        "score": 0.3727,
+        "input_score": 0.3727,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "terminal-bench-4-0-metric-v1",
+        "protocol_id": "terminal-bench-4-0-source-export-v1",
+        "task_set_id": "terminal-bench-4-0-canonical",
+        "metric": "Resolution rate",
+        "score_role": "canonical",
+        "score_series_id": "terminal-bench-4-0-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-harbor-framework-terminal-bench-aabde8704ab14964",
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "score_source_ids": [
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "source": "https://snorkel.ai/leaderboard/terminal-bench-4-0",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-gpt-5-6-sol-codex-notes-66-task-v4-0-0-rele-7e77cb8b3eb1bb8c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-2364-ff39e19151fa0883",
+        "benchmark_id": "terminal-bench-4-0",
+        "benchmark_version_id": "terminal-bench-4-0-canonical",
+        "model_id": "model-claude-opus-4-8-claude-code-7f3082160e0731f0",
+        "model_configuration": "Claude Opus 4.8 + Claude Code",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-8-claude-code",
+        "model_family_id": "anthropic-claude-opus-4-8-claude-code",
+        "model": "Claude Opus 4.8 + Claude Code",
+        "organization": "Anthropic",
+        "score": 0.2364,
+        "input_score": 0.2364,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "terminal-bench-4-0-metric-v1",
+        "protocol_id": "terminal-bench-4-0-source-export-v1",
+        "task_set_id": "terminal-bench-4-0-canonical",
+        "metric": "Resolution rate",
+        "score_role": "canonical",
+        "score_series_id": "terminal-bench-4-0-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-05-28",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-05-28",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-05-28",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-05-28",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-05-28",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-harbor-framework-terminal-bench-aabde8704ab14964",
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "score_source_ids": [
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "source": "https://snorkel.ai/leaderboard/terminal-bench-4-0",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-claude-opus-4-8-claude-code-notes-66-task-v-516f5d01f22ffffa"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-2152-2f920c4a730516c0",
+        "benchmark_id": "terminal-bench-4-0",
+        "benchmark_version_id": "terminal-bench-4-0-canonical",
+        "model_id": "model-gpt-5-6-terra-codex-a41402540a40392b",
+        "model_configuration": "GPT-5.6 Terra + Codex",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-terra-codex",
+        "model_family_id": "openai-gpt-5-6-terra-codex",
+        "model": "GPT-5.6 Terra + Codex",
+        "organization": "OpenAI",
+        "score": 0.2152,
+        "input_score": 0.2152,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "terminal-bench-4-0-metric-v1",
+        "protocol_id": "terminal-bench-4-0-source-export-v1",
+        "task_set_id": "terminal-bench-4-0-canonical",
+        "metric": "Resolution rate",
+        "score_role": "canonical",
+        "score_series_id": "terminal-bench-4-0-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-harbor-framework-terminal-bench-aabde8704ab14964",
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "score_source_ids": [
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "source": "https://snorkel.ai/leaderboard/terminal-bench-4-0",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-gpt-5-6-terra-codex-notes-66-task-v4-0-0-re-0e61d831b4d6f0c0"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-203-54ef48cde21f035c",
+        "benchmark_id": "terminal-bench-4-0",
+        "benchmark_version_id": "terminal-bench-4-0-canonical",
+        "model_id": "model-grok-4-6-grok-build-0e39cda2af67d12a",
+        "model_configuration": "Grok 4.6 + Grok Build",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-6-grok-build",
+        "model_family_id": "xai-grok-4-6-grok-build",
+        "model": "Grok 4.6 + Grok Build",
+        "organization": "xAI",
+        "score": 0.203,
+        "input_score": 0.203,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "terminal-bench-4-0-metric-v1",
+        "protocol_id": "terminal-bench-4-0-source-export-v1",
+        "task_set_id": "terminal-bench-4-0-canonical",
+        "metric": "Resolution rate",
+        "score_role": "canonical",
+        "score_series_id": "terminal-bench-4-0-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-08-12",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-08-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-08-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067",
+              "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3",
+          "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-08-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-08-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-harbor-framework-terminal-bench-aabde8704ab14964",
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3",
+          "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
+        ],
+        "score_source_ids": [
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "source": "https://snorkel.ai/leaderboard/terminal-bench-4-0",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-grok-4-6-grok-build-notes-66-task-v4-0-0-re-b00e7929dd749ba6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-173-08aa562f19b74c00",
+        "benchmark_id": "terminal-bench-4-0",
+        "benchmark_version_id": "terminal-bench-4-0-canonical",
+        "model_id": "model-gpt-5-6-luna-codex-310f17e05aa69775",
+        "model_configuration": "GPT-5.6 Luna + Codex",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-luna-codex",
+        "model_family_id": "openai-gpt-5-6-luna-codex",
+        "model": "GPT-5.6 Luna + Codex",
+        "organization": "OpenAI",
+        "score": 0.173,
+        "input_score": 0.173,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "terminal-bench-4-0-metric-v1",
+        "protocol_id": "terminal-bench-4-0-source-export-v1",
+        "task_set_id": "terminal-bench-4-0-canonical",
+        "metric": "Resolution rate",
+        "score_role": "canonical",
+        "score_series_id": "terminal-bench-4-0-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-harbor-framework-terminal-bench-aabde8704ab14964",
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "score_source_ids": [
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "source": "https://snorkel.ai/leaderboard/terminal-bench-4-0",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-gpt-5-6-luna-codex-notes-66-task-v4-0-0-rel-0f2742955086c4f7"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-5182-8f4af8ecb1571db7",
+        "benchmark_id": "terminal-bench-4-0",
+        "benchmark_version_id": "terminal-bench-4-0-canonical",
+        "model_id": "model-claude-opus-5-claude-code-c49fe73ec0a14691",
+        "model_configuration": "Claude Opus 5 + Claude Code",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-claude-code",
+        "model_family_id": "anthropic-claude-opus-5-claude-code",
+        "model": "Claude Opus 5 + Claude Code",
+        "organization": "Anthropic",
+        "score": 0.5182,
+        "input_score": 0.5182,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "terminal-bench-4-0-metric-v1",
+        "protocol_id": "terminal-bench-4-0-source-export-v1",
+        "task_set_id": "terminal-bench-4-0-canonical",
+        "metric": "Resolution rate",
+        "score_role": "canonical",
+        "score_series_id": "terminal-bench-4-0-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-24",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-08-26",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-harbor-framework-terminal-bench-aabde8704ab14964",
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "score_source_ids": [
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "source": "https://snorkel.ai/leaderboard/terminal-bench-4-0",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-claude-opus-5-claude-code-notes-66-task-v4--f85916c37a13d160"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2026-08-26",
+        "frontier_observation_ids": [
+          "obs-0-173-08aa562f19b74c00",
+          "obs-0-203-54ef48cde21f035c",
+          "obs-0-2152-2f920c4a730516c0",
+          "obs-0-2364-ff39e19151fa0883",
+          "obs-0-3727-4be5b1004eef32a3",
+          "obs-0-4182-2bb7f688b22c94a7",
+          "obs-0-4455-6537d9f1a0fece1e",
+          "obs-0-5182-8f4af8ecb1571db7"
+        ]
+      },
+      {
+        "observation_id": "obs-0-579-90bb03cbdf13871f",
+        "benchmark_id": "terminal-bench-4-0",
+        "benchmark_version_id": "terminal-bench-4-0-canonical",
+        "model_id": "model-gpt-6-astra-c94798ba994c2800",
+        "model_configuration": "GPT-6 Astra",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-astra",
+        "model_family_id": "openai-gpt-6-astra",
+        "model": "GPT-6 Astra",
+        "organization": "OpenAI",
+        "score": 0.579,
+        "input_score": 0.579,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "terminal-bench-4-0-metric-v1",
+        "protocol_id": "terminal-bench-4-0-source-export-v1",
+        "task_set_id": "terminal-bench-4-0-canonical",
+        "metric": "Resolution rate",
+        "score_role": "canonical",
+        "score_series_id": "terminal-bench-4-0-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-09-03",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-09-03",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-03",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+              "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-09-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-03",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-github-com-harbor-framework-terminal-bench-aabde8704ab14964",
+          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+        ],
+        "score_source_ids": [
+          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+        ],
+        "source": "https://openai.com/index/gpt-6-astra",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-gpt-6-astra-notes-public-result-terminal-be-e2ceb685c667ca49"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2026-09-03",
+        "frontier_observation_ids": [
+          "obs-0-579-90bb03cbdf13871f"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-5182-8f4af8ecb1571db7",
+        "benchmark_id": "terminal-bench-4-0",
+        "benchmark_version_id": "terminal-bench-4-0-canonical",
+        "model_id": "model-claude-opus-5-claude-code-c49fe73ec0a14691",
+        "model_configuration": "Claude Opus 5 + Claude Code",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-claude-code",
+        "model_family_id": "anthropic-claude-opus-5-claude-code",
+        "model": "Claude Opus 5 + Claude Code",
+        "organization": "Anthropic",
+        "score": 0.5182,
+        "input_score": 0.5182,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "terminal-bench-4-0-metric-v1",
+        "protocol_id": "terminal-bench-4-0-source-export-v1",
+        "task_set_id": "terminal-bench-4-0-canonical",
+        "metric": "Resolution rate",
+        "score_role": "canonical",
+        "score_series_id": "terminal-bench-4-0-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-24",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-08-26",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-harbor-framework-terminal-bench-aabde8704ab14964",
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "score_source_ids": [
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "source": "https://snorkel.ai/leaderboard/terminal-bench-4-0",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-claude-opus-5-claude-code-notes-66-task-v4--f85916c37a13d160"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2026-08-26",
+        "frontier_observation_ids": [
+          "obs-0-173-08aa562f19b74c00",
+          "obs-0-203-54ef48cde21f035c",
+          "obs-0-2152-2f920c4a730516c0",
+          "obs-0-2364-ff39e19151fa0883",
+          "obs-0-3727-4be5b1004eef32a3",
+          "obs-0-4182-2bb7f688b22c94a7",
+          "obs-0-4455-6537d9f1a0fece1e",
+          "obs-0-5182-8f4af8ecb1571db7"
+        ]
+      },
+      {
+        "observation_id": "obs-0-579-90bb03cbdf13871f",
+        "benchmark_id": "terminal-bench-4-0",
+        "benchmark_version_id": "terminal-bench-4-0-canonical",
+        "model_id": "model-gpt-6-astra-c94798ba994c2800",
+        "model_configuration": "GPT-6 Astra",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-astra",
+        "model_family_id": "openai-gpt-6-astra",
+        "model": "GPT-6 Astra",
+        "organization": "OpenAI",
+        "score": 0.579,
+        "input_score": 0.579,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "terminal-bench-4-0-metric-v1",
+        "protocol_id": "terminal-bench-4-0-source-export-v1",
+        "task_set_id": "terminal-bench-4-0-canonical",
+        "metric": "Resolution rate",
+        "score_role": "canonical",
+        "score_series_id": "terminal-bench-4-0-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-09-03",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-09-03",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-03",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+              "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-09-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-03",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-github-com-harbor-framework-terminal-bench-aabde8704ab14964",
+          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+        ],
+        "score_source_ids": [
+          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+        ],
+        "source": "https://openai.com/index/gpt-6-astra",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-gpt-6-astra-notes-public-result-terminal-be-e2ceb685c667ca49"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2026-09-03",
+        "frontier_observation_ids": [
+          "obs-0-579-90bb03cbdf13871f"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-5182-8f4af8ecb1571db7",
+        "benchmark_id": "terminal-bench-4-0",
+        "benchmark_version_id": "terminal-bench-4-0-canonical",
+        "model_id": "model-claude-opus-5-claude-code-c49fe73ec0a14691",
+        "model_configuration": "Claude Opus 5 + Claude Code",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-claude-code",
+        "model_family_id": "anthropic-claude-opus-5-claude-code",
+        "model": "Claude Opus 5 + Claude Code",
+        "organization": "Anthropic",
+        "score": 0.5182,
+        "input_score": 0.5182,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "terminal-bench-4-0-metric-v1",
+        "protocol_id": "terminal-bench-4-0-source-export-v1",
+        "task_set_id": "terminal-bench-4-0-canonical",
+        "metric": "Resolution rate",
+        "score_role": "canonical",
+        "score_series_id": "terminal-bench-4-0-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-24",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-07-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-08-26",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-harbor-framework-terminal-bench-aabde8704ab14964",
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "score_source_ids": [
+          "resource-https-snorkel-ai-leaderboard-terminal-bench-4-0-ab90abfa52b25ac3"
+        ],
+        "source": "https://snorkel.ai/leaderboard/terminal-bench-4-0",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-claude-opus-5-claude-code-notes-66-task-v4--f85916c37a13d160"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2026-08-26",
+        "frontier_observation_ids": [
+          "obs-0-173-08aa562f19b74c00",
+          "obs-0-203-54ef48cde21f035c",
+          "obs-0-2152-2f920c4a730516c0",
+          "obs-0-2364-ff39e19151fa0883",
+          "obs-0-3727-4be5b1004eef32a3",
+          "obs-0-4182-2bb7f688b22c94a7",
+          "obs-0-4455-6537d9f1a0fece1e",
+          "obs-0-5182-8f4af8ecb1571db7"
+        ]
+      },
+      {
+        "observation_id": "obs-0-579-90bb03cbdf13871f",
+        "benchmark_id": "terminal-bench-4-0",
+        "benchmark_version_id": "terminal-bench-4-0-canonical",
+        "model_id": "model-gpt-6-astra-c94798ba994c2800",
+        "model_configuration": "GPT-6 Astra",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-astra",
+        "model_family_id": "openai-gpt-6-astra",
+        "model": "GPT-6 Astra",
+        "organization": "OpenAI",
+        "score": 0.579,
+        "input_score": 0.579,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "terminal-bench-4-0-metric-v1",
+        "protocol_id": "terminal-bench-4-0-source-export-v1",
+        "task_set_id": "terminal-bench-4-0-canonical",
+        "metric": "Resolution rate",
+        "score_role": "canonical",
+        "score_series_id": "terminal-bench-4-0-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-09-03",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-09-03",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-03",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+              "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-09-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-03",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-github-com-harbor-framework-terminal-bench-aabde8704ab14964",
+          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+        ],
+        "score_source_ids": [
+          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+        ],
+        "source": "https://openai.com/index/gpt-6-astra",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-name-gpt-6-astra-notes-public-result-terminal-be-e2ceb685c667ca49"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2026-09-03",
+        "frontier_observation_ids": [
+          "obs-0-579-90bb03cbdf13871f"
+        ]
+      }
+    ],
+    "reported_frontier": [],
+    "historical_frontier": [],
+    "retrospective_observations": [],
+    "observed_frontier": 0.579,
+    "capability_frontier_value": 0.579,
+    "reported_frontier_value": null,
+    "current_frontier": 0.579,
+    "normalized_progress": 0.579,
+    "normalized_headroom": 0.42100000000000004,
+    "threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-08-26"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 11
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 11
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-08-26"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 11
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 11
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T80": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T90": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.42857142857142855,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "xAI"
+      ],
+      "panel_size": 7,
+      "status": "medium"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-github-com-harbor-framework-terminal-bench-aabde8704ab14964"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "unknown_public_dates",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

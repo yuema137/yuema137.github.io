@@ -1,0 +1,979 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "designqa-v2-functional-performance-rag",
+    "name": "DesignQA v2 \u2014 Functional Performance RAG",
+    "domain": "Mechanical & Aerospace Engineering",
+    "release": "2024-04-11",
+    "source": "https://arxiv.org/html/2404.07917",
+    "floor": 0.5,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.5,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Model",
+    "tags": [
+      "design",
+      "Formula SAE",
+      "RAG"
+    ],
+    "metric": "Accuracy",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "designqa-v2-functional-performance-rag-metric-v1",
+    "protocol_id": "designqa-v2-functional-performance-rag-source-export-v1",
+    "canonical_score": {
+      "series_id": "designqa-v2-functional-performance-rag-canonical-score",
+      "role": "canonical",
+      "metric_id": "designqa-v2-functional-performance-rag-metric-v1",
+      "metric_name": "Accuracy",
+      "protocol_id": "designqa-v2-functional-performance-rag-source-export-v1",
+      "task_set_id": "designqa-v2-functional-performance-rag-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.5,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "designqa-v2-functional-performance-rag-canonical",
+    "summary": {
+      "en": "DesignQA evaluates applying Formula SAE requirements to engineering-design evidence.",
+      "zh": "DesignQA \u8bc4\u4f30\u628a Formula SAE \u89c4\u8303\u5e94\u7528\u5230\u5de5\u7a0b\u8bbe\u8ba1\u8bc1\u636e\u7684\u80fd\u529b\u3002"
+    },
+    "task_format": {
+      "en": "Use retrieved rulebook context and visual evidence to make 16 binary functional-compliance decisions.",
+      "zh": "\u7ed3\u5408\u68c0\u7d22\u5230\u7684\u89c4\u5219\u6587\u672c\u548c\u89c6\u89c9\u8bc1\u636e\uff0c\u5b8c\u6210 16 \u9053\u4e8c\u5143\u529f\u80fd\u5408\u89c4\u5224\u65ad\u3002"
+    },
+    "scoring": {
+      "metric_name": "Functional Performance accuracy",
+      "explanation": {
+        "en": "Exact yes/no accuracy over the fixed 16-question subset under the simple-RAG setup.",
+        "zh": "\u5728 simple-RAG \u8bbe\u7f6e\u4e0b\u8ba1\u7b97\u56fa\u5b9a 16 \u9898 subset \u7684 yes/no \u51c6\u786e\u7387\u3002"
+      }
+    },
+    "evaluation_target": "final_output",
+    "observation_count": 4,
+    "evidence_record_count": 4,
+    "observations": [
+      {
+        "observation_id": "obs-0-563-c90c4d5c5b70b170",
+        "benchmark_id": "designqa-v2-functional-performance-rag",
+        "benchmark_version_id": "designqa-v2-functional-performance-rag-canonical",
+        "model_id": "model-gpt-4-vision-bfd6e5d7d2fd4bde",
+        "model_configuration": "GPT-4-Vision",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4-vision",
+        "model_family_id": "openai-gpt-4-vision",
+        "model": "GPT-4-Vision",
+        "organization": "OpenAI",
+        "score": 0.563,
+        "input_score": 0.563,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "designqa-v2-functional-performance-rag-metric-v1",
+        "protocol_id": "designqa-v2-functional-performance-rag-source-export-v1",
+        "task_set_id": "designqa-v2-functional-performance-rag-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "designqa-v2-functional-performance-rag-canonical-score",
+        "evaluation_protocol": "DesignQA v2 Functional Performance 16-question subset, simple LlamaIndex RAG, temperature 0.1; AllRules and GuaranteedRAG excluded.",
+        "model_release_date": "2023-11-06",
+        "evaluation_date": null,
+        "result_public_date": "2024-08-23",
+        "source_publication_date": "2024-08-23",
+        "observation_date": "2023-11-06",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-11-06",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-08-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2023-11-06",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-11-06",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-08-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+        ],
+        "source": "https://arxiv.org/abs/2404.07917",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-designqa-gpt4v-436d9c01ebac2d6e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "designqa-gpt4v"
+        ]
+      },
+      {
+        "observation_id": "obs-0-438-f44ddefd1b1e3509",
+        "benchmark_id": "designqa-v2-functional-performance-rag",
+        "benchmark_version_id": "designqa-v2-functional-performance-rag-canonical",
+        "model_id": "model-gemini-1-0-pro-vision-d62a45ee104e5f14",
+        "model_configuration": "Gemini-1.0-Pro-Vision",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-1-0-pro-vision",
+        "model_family_id": "google-gemini-1-0-pro-vision",
+        "model": "Gemini-1.0-Pro-Vision",
+        "organization": "Google",
+        "score": 0.438,
+        "input_score": 0.438,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "designqa-v2-functional-performance-rag-metric-v1",
+        "protocol_id": "designqa-v2-functional-performance-rag-source-export-v1",
+        "task_set_id": "designqa-v2-functional-performance-rag-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "designqa-v2-functional-performance-rag-canonical-score",
+        "evaluation_protocol": "DesignQA v2 Functional Performance 16-question subset, simple LlamaIndex RAG, temperature 0.1; AllRules and GuaranteedRAG excluded.",
+        "model_release_date": "2023-12-06",
+        "evaluation_date": null,
+        "result_public_date": "2024-08-23",
+        "source_publication_date": "2024-08-23",
+        "observation_date": "2023-12-06",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-12-06",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-08-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2023-12-06",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-12-06",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-08-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+        ],
+        "source": "https://arxiv.org/abs/2404.07917",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-designqa-gemini10-3c3968f0e8b37f5e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "designqa-gemini10"
+        ]
+      },
+      {
+        "observation_id": "obs-0-875-88cdb3e6a55ec160",
+        "benchmark_id": "designqa-v2-functional-performance-rag",
+        "benchmark_version_id": "designqa-v2-functional-performance-rag-canonical",
+        "model_id": "model-claude-3-opus-745c8473c8207c04",
+        "model_configuration": "Claude-3-Opus",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-opus",
+        "model_family_id": "anthropic-claude-3-opus",
+        "model": "Claude-3-Opus",
+        "organization": "Anthropic",
+        "score": 0.875,
+        "input_score": 0.875,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "designqa-v2-functional-performance-rag-metric-v1",
+        "protocol_id": "designqa-v2-functional-performance-rag-source-export-v1",
+        "task_set_id": "designqa-v2-functional-performance-rag-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "designqa-v2-functional-performance-rag-canonical-score",
+        "evaluation_protocol": "DesignQA v2 Functional Performance 16-question subset, simple LlamaIndex RAG, temperature 0.1; AllRules and GuaranteedRAG excluded.",
+        "model_release_date": "2024-03-04",
+        "evaluation_date": null,
+        "result_public_date": "2024-08-23",
+        "source_publication_date": "2024-08-23",
+        "observation_date": "2024-03-04",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-03-04",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-08-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-03-04",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-03-04",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-08-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+        ],
+        "source": "https://arxiv.org/abs/2404.07917",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-designqa-claude3opus-f692d1f43f8e9f1d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "designqa-claude3opus"
+        ]
+      },
+      {
+        "observation_id": "obs-0-75-71898f7aa61c069a",
+        "benchmark_id": "designqa-v2-functional-performance-rag",
+        "benchmark_version_id": "designqa-v2-functional-performance-rag-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.75,
+        "input_score": 0.75,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "designqa-v2-functional-performance-rag-metric-v1",
+        "protocol_id": "designqa-v2-functional-performance-rag-source-export-v1",
+        "task_set_id": "designqa-v2-functional-performance-rag-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "designqa-v2-functional-performance-rag-canonical-score",
+        "evaluation_protocol": "DesignQA v2 Functional Performance 16-question subset, simple LlamaIndex RAG, temperature 0.1; AllRules and GuaranteedRAG excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2024-08-23",
+        "source_publication_date": "2024-08-23",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-08-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-05-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-08-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+        ],
+        "source": "https://arxiv.org/abs/2404.07917",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-designqa-gpt4o-f50ae43d440bf9bd"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "designqa-gpt4o"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-875-88cdb3e6a55ec160",
+        "benchmark_id": "designqa-v2-functional-performance-rag",
+        "benchmark_version_id": "designqa-v2-functional-performance-rag-canonical",
+        "model_id": "model-claude-3-opus-745c8473c8207c04",
+        "model_configuration": "Claude-3-Opus",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-opus",
+        "model_family_id": "anthropic-claude-3-opus",
+        "model": "Claude-3-Opus",
+        "organization": "Anthropic",
+        "score": 0.875,
+        "input_score": 0.875,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "designqa-v2-functional-performance-rag-metric-v1",
+        "protocol_id": "designqa-v2-functional-performance-rag-source-export-v1",
+        "task_set_id": "designqa-v2-functional-performance-rag-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "designqa-v2-functional-performance-rag-canonical-score",
+        "evaluation_protocol": "DesignQA v2 Functional Performance 16-question subset, simple LlamaIndex RAG, temperature 0.1; AllRules and GuaranteedRAG excluded.",
+        "model_release_date": "2024-03-04",
+        "evaluation_date": null,
+        "result_public_date": "2024-08-23",
+        "source_publication_date": "2024-08-23",
+        "observation_date": "2024-03-04",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-03-04",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-08-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-04-11",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-03-04",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-08-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+        ],
+        "source": "https://arxiv.org/abs/2404.07917",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-designqa-claude3opus-f692d1f43f8e9f1d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "designqa-claude3opus"
+        ],
+        "plot_date": "2024-04-11",
+        "frontier_observation_ids": [
+          "obs-0-438-f44ddefd1b1e3509",
+          "obs-0-563-c90c4d5c5b70b170",
+          "obs-0-875-88cdb3e6a55ec160"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-875-88cdb3e6a55ec160",
+        "benchmark_id": "designqa-v2-functional-performance-rag",
+        "benchmark_version_id": "designqa-v2-functional-performance-rag-canonical",
+        "model_id": "model-claude-3-opus-745c8473c8207c04",
+        "model_configuration": "Claude-3-Opus",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-opus",
+        "model_family_id": "anthropic-claude-3-opus",
+        "model": "Claude-3-Opus",
+        "organization": "Anthropic",
+        "score": 0.875,
+        "input_score": 0.875,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "designqa-v2-functional-performance-rag-metric-v1",
+        "protocol_id": "designqa-v2-functional-performance-rag-source-export-v1",
+        "task_set_id": "designqa-v2-functional-performance-rag-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "designqa-v2-functional-performance-rag-canonical-score",
+        "evaluation_protocol": "DesignQA v2 Functional Performance 16-question subset, simple LlamaIndex RAG, temperature 0.1; AllRules and GuaranteedRAG excluded.",
+        "model_release_date": "2024-03-04",
+        "evaluation_date": null,
+        "result_public_date": "2024-08-23",
+        "source_publication_date": "2024-08-23",
+        "observation_date": "2024-03-04",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-03-04",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-08-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-04-11",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-03-04",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-08-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+        ],
+        "source": "https://arxiv.org/abs/2404.07917",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-designqa-claude3opus-f692d1f43f8e9f1d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "designqa-claude3opus"
+        ],
+        "plot_date": "2024-04-11",
+        "frontier_observation_ids": [
+          "obs-0-438-f44ddefd1b1e3509",
+          "obs-0-563-c90c4d5c5b70b170",
+          "obs-0-875-88cdb3e6a55ec160"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-875-88cdb3e6a55ec160",
+        "benchmark_id": "designqa-v2-functional-performance-rag",
+        "benchmark_version_id": "designqa-v2-functional-performance-rag-canonical",
+        "model_id": "model-claude-3-opus-745c8473c8207c04",
+        "model_configuration": "Claude-3-Opus",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-opus",
+        "model_family_id": "anthropic-claude-3-opus",
+        "model": "Claude-3-Opus",
+        "organization": "Anthropic",
+        "score": 0.875,
+        "input_score": 0.875,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "designqa-v2-functional-performance-rag-metric-v1",
+        "protocol_id": "designqa-v2-functional-performance-rag-source-export-v1",
+        "task_set_id": "designqa-v2-functional-performance-rag-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "designqa-v2-functional-performance-rag-canonical-score",
+        "evaluation_protocol": "DesignQA v2 Functional Performance 16-question subset, simple LlamaIndex RAG, temperature 0.1; AllRules and GuaranteedRAG excluded.",
+        "model_release_date": "2024-03-04",
+        "evaluation_date": null,
+        "result_public_date": "2024-08-23",
+        "source_publication_date": "2024-08-23",
+        "observation_date": "2024-03-04",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-03-04",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-08-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-04-11",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-03-04",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-08-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+        ],
+        "source": "https://arxiv.org/abs/2404.07917",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-designqa-claude3opus-f692d1f43f8e9f1d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "designqa-claude3opus"
+        ],
+        "plot_date": "2024-04-11",
+        "frontier_observation_ids": [
+          "obs-0-438-f44ddefd1b1e3509",
+          "obs-0-563-c90c4d5c5b70b170",
+          "obs-0-875-88cdb3e6a55ec160"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-875-88cdb3e6a55ec160",
+        "benchmark_id": "designqa-v2-functional-performance-rag",
+        "benchmark_version_id": "designqa-v2-functional-performance-rag-canonical",
+        "model_id": "model-claude-3-opus-745c8473c8207c04",
+        "model_configuration": "Claude-3-Opus",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-opus",
+        "model_family_id": "anthropic-claude-3-opus",
+        "model": "Claude-3-Opus",
+        "organization": "Anthropic",
+        "score": 0.875,
+        "input_score": 0.875,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "designqa-v2-functional-performance-rag-metric-v1",
+        "protocol_id": "designqa-v2-functional-performance-rag-source-export-v1",
+        "task_set_id": "designqa-v2-functional-performance-rag-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "designqa-v2-functional-performance-rag-canonical-score",
+        "evaluation_protocol": "DesignQA v2 Functional Performance 16-question subset, simple LlamaIndex RAG, temperature 0.1; AllRules and GuaranteedRAG excluded.",
+        "model_release_date": "2024-03-04",
+        "evaluation_date": null,
+        "result_public_date": "2024-08-23",
+        "source_publication_date": "2024-08-23",
+        "observation_date": "2024-03-04",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-03-04",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-08-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-08-23",
+        "date_kind": "result first-public date",
+        "capability_date": "2024-03-04",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-08-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+        ],
+        "source": "https://arxiv.org/abs/2404.07917",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-designqa-claude3opus-f692d1f43f8e9f1d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "designqa-claude3opus"
+        ],
+        "plot_date": "2024-08-23",
+        "frontier_observation_ids": [
+          "obs-0-438-f44ddefd1b1e3509",
+          "obs-0-563-c90c4d5c5b70b170",
+          "obs-0-75-71898f7aa61c069a",
+          "obs-0-875-88cdb3e6a55ec160"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-875-88cdb3e6a55ec160",
+        "benchmark_id": "designqa-v2-functional-performance-rag",
+        "benchmark_version_id": "designqa-v2-functional-performance-rag-canonical",
+        "model_id": "model-claude-3-opus-745c8473c8207c04",
+        "model_configuration": "Claude-3-Opus",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-opus",
+        "model_family_id": "anthropic-claude-3-opus",
+        "model": "Claude-3-Opus",
+        "organization": "Anthropic",
+        "score": 0.875,
+        "input_score": 0.875,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "designqa-v2-functional-performance-rag-metric-v1",
+        "protocol_id": "designqa-v2-functional-performance-rag-source-export-v1",
+        "task_set_id": "designqa-v2-functional-performance-rag-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "designqa-v2-functional-performance-rag-canonical-score",
+        "evaluation_protocol": "DesignQA v2 Functional Performance 16-question subset, simple LlamaIndex RAG, temperature 0.1; AllRules and GuaranteedRAG excluded.",
+        "model_release_date": "2024-03-04",
+        "evaluation_date": null,
+        "result_public_date": "2024-08-23",
+        "source_publication_date": "2024-08-23",
+        "observation_date": "2024-03-04",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-03-04",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-08-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-08-23",
+        "date_kind": "result first-public date",
+        "capability_date": "2024-03-04",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-08-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+        ],
+        "source": "https://arxiv.org/abs/2404.07917",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-designqa-claude3opus-f692d1f43f8e9f1d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "designqa-claude3opus"
+        ],
+        "plot_date": "2024-08-23",
+        "frontier_observation_ids": [
+          "obs-0-438-f44ddefd1b1e3509",
+          "obs-0-563-c90c4d5c5b70b170",
+          "obs-0-75-71898f7aa61c069a",
+          "obs-0-875-88cdb3e6a55ec160"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.875,
+    "capability_frontier_value": 0.875,
+    "reported_frontier_value": 0.875,
+    "current_frontier": 0.875,
+    "normalized_progress": 0.75,
+    "normalized_headroom": 0.25,
+    "threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2024-04-11"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 878
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 878
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2024-04-11"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 878
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 878
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "reached",
+        "days": 134,
+        "qualifying_observation_date": "2024-08-23"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 878
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 878
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.42857142857142855,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google"
+      ],
+      "panel_size": 7,
+      "status": "medium"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-arxiv-org-abs-2404-07917-27fbc24265dca5cf"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": true,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

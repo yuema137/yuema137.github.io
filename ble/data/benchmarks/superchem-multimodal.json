@@ -1,0 +1,797 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "superchem-multimodal",
+    "name": "SUPERChem (Multimodal)",
+    "domain": "Chemistry",
+    "release": "2025-12-01",
+    "source": "https://github.com/catalystforyou/SUPERChem_eval",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Model",
+    "tags": [
+      "multimodal",
+      "expert",
+      "reasoning"
+    ],
+    "metric": "Pass@1 accuracy",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "superchem-multimodal-metric-v1",
+    "protocol_id": "superchem-multimodal-source-export-v1",
+    "canonical_score": {
+      "series_id": "superchem-multimodal-canonical-score",
+      "role": "canonical",
+      "metric_id": "superchem-multimodal-metric-v1",
+      "metric_name": "Pass@1 accuracy",
+      "protocol_id": "superchem-multimodal-source-export-v1",
+      "task_set_id": "superchem-multimodal-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "superchem-multimodal-canonical",
+    "summary": {
+      "en": "SUPERChem tests deep chemical reasoning on 500 expert-curated multimodal problems with expert-authored solution paths.",
+      "zh": "SUPERChem \u4f7f\u7528 500 \u9053\u4e13\u5bb6\u7f16\u5199\u7684\u591a\u6a21\u6001\u95ee\u9898\u6d4b\u8bd5\u6df1\u5c42\u5316\u5b66\u63a8\u7406\uff0c\u5e76\u4e3a\u9898\u76ee\u63d0\u4f9b\u4e13\u5bb6 solution path\u3002"
+    },
+    "task_format": {
+      "en": "The model receives the multimodal version of an expert chemistry problem and produces a reasoned final answer.",
+      "zh": "\u6a21\u578b\u4f1a\u6536\u5230 expert chemistry problem \u7684 multimodal \u7248\u672c\uff0c\u5e76\u7ed9\u51fa\u5e26\u63a8\u7406\u7684\u6700\u7ec8\u7b54\u6848\u3002"
+    },
+    "scoring": {
+      "metric_name": "Pass@1 final-answer accuracy",
+      "explanation": {
+        "en": "A problem is correct when one response yields the accepted final answer. Reasoning Path Fidelity and text-only results are separate measurements and are excluded from this frontier.",
+        "zh": "\u4e00\u6b21 response \u5f97\u5230\u88ab\u63a5\u53d7\u7684\u6700\u7ec8\u7b54\u6848\u65f6\uff0c\u8be5\u9898\u624d\u7b97\u6b63\u786e\u3002Reasoning Path Fidelity \u548c text-only \u7ed3\u679c\u5c5e\u4e8e\u5176\u4ed6 measurement\uff0c\u4e0d\u7eb3\u5165\u672c frontier\u3002"
+      }
+    },
+    "evaluation_target": "process_and_output",
+    "observation_count": 2,
+    "evidence_record_count": 2,
+    "observations": [
+      {
+        "observation_id": "obs-0-379-c593dad04cc2c4b5",
+        "benchmark_id": "superchem-multimodal",
+        "benchmark_version_id": "superchem-multimodal-canonical",
+        "model_id": "model-gemini-2-5-pro-53e6252cbff1cfa8",
+        "model_configuration": "gemini-2-5-pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-5-pro",
+        "model_family_id": "google-gemini-2-5-pro",
+        "model": "Gemini 2.5 Pro",
+        "organization": "Google",
+        "score": 0.379,
+        "input_score": 0.379,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "superchem-multimodal-metric-v1",
+        "protocol_id": "superchem-multimodal-source-export-v1",
+        "task_set_id": "superchem-multimodal-canonical",
+        "metric": "Pass@1 accuracy",
+        "score_role": "canonical",
+        "score_series_id": "superchem-multimodal-canonical-score",
+        "evaluation_protocol": "SUPERChem-500 multimodal input, Pass@1 final-answer accuracy. Text-only results and Reasoning Path Fidelity are not merged.",
+        "model_release_date": "2025-06-17",
+        "evaluation_date": "2025-12-01",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-06-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-06-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-catalystforyou-superchem-eval-7e2ce5fca04d84fc"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-catalystforyou-superchem-eval-7e2ce5fca04d84fc"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-12-01",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-06-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-06-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-github-com-catalystforyou-superchem-eval-7e2ce5fca04d84fc"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-catalystforyou-superchem-eval-7e2ce5fca04d84fc"
+        ],
+        "source": "https://github.com/catalystforyou/SUPERChem_eval",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-superchem-gemini-2-5-pro-5db1a339f2a50cd3"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "superchem-gemini-2-5-pro"
+        ]
+      },
+      {
+        "observation_id": "obs-0-385-3948c92d710737b9",
+        "benchmark_id": "superchem-multimodal",
+        "benchmark_version_id": "superchem-multimodal-canonical",
+        "model_id": "model-gpt-5-high-c8e304712121a527",
+        "model_configuration": "gpt-5-high",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-high",
+        "model_family_id": "openai-gpt-5",
+        "model": "GPT-5 (High)",
+        "organization": "OpenAI",
+        "score": 0.385,
+        "input_score": 0.385,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "superchem-multimodal-metric-v1",
+        "protocol_id": "superchem-multimodal-source-export-v1",
+        "task_set_id": "superchem-multimodal-canonical",
+        "metric": "Pass@1 accuracy",
+        "score_role": "canonical",
+        "score_series_id": "superchem-multimodal-canonical-score",
+        "evaluation_protocol": "SUPERChem-500 multimodal input, Pass@1 final-answer accuracy. Text-only results and Reasoning Path Fidelity are not merged.",
+        "model_release_date": "2025-08-07",
+        "evaluation_date": "2025-12-01",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-08-07",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-08-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-catalystforyou-superchem-eval-7e2ce5fca04d84fc"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-catalystforyou-superchem-eval-7e2ce5fca04d84fc"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-12-01",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-08-07",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-08-07",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-github-com-catalystforyou-superchem-eval-7e2ce5fca04d84fc"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-catalystforyou-superchem-eval-7e2ce5fca04d84fc"
+        ],
+        "source": "https://github.com/catalystforyou/SUPERChem_eval",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-superchem-gpt-5-high-a7144ddd85a314dd"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "superchem-gpt-5-high"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-385-3948c92d710737b9",
+        "benchmark_id": "superchem-multimodal",
+        "benchmark_version_id": "superchem-multimodal-canonical",
+        "model_id": "model-gpt-5-high-c8e304712121a527",
+        "model_configuration": "gpt-5-high",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-high",
+        "model_family_id": "openai-gpt-5",
+        "model": "GPT-5 (High)",
+        "organization": "OpenAI",
+        "score": 0.385,
+        "input_score": 0.385,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "superchem-multimodal-metric-v1",
+        "protocol_id": "superchem-multimodal-source-export-v1",
+        "task_set_id": "superchem-multimodal-canonical",
+        "metric": "Pass@1 accuracy",
+        "score_role": "canonical",
+        "score_series_id": "superchem-multimodal-canonical-score",
+        "evaluation_protocol": "SUPERChem-500 multimodal input, Pass@1 final-answer accuracy. Text-only results and Reasoning Path Fidelity are not merged.",
+        "model_release_date": "2025-08-07",
+        "evaluation_date": "2025-12-01",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-08-07",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-08-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-catalystforyou-superchem-eval-7e2ce5fca04d84fc"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-catalystforyou-superchem-eval-7e2ce5fca04d84fc"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-12-01",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-12-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-08-07",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-github-com-catalystforyou-superchem-eval-7e2ce5fca04d84fc"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-catalystforyou-superchem-eval-7e2ce5fca04d84fc"
+        ],
+        "source": "https://github.com/catalystforyou/SUPERChem_eval",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-superchem-gpt-5-high-a7144ddd85a314dd"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "superchem-gpt-5-high"
+        ],
+        "plot_date": "2025-12-01",
+        "frontier_observation_ids": [
+          "obs-0-379-c593dad04cc2c4b5",
+          "obs-0-385-3948c92d710737b9"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-385-3948c92d710737b9",
+        "benchmark_id": "superchem-multimodal",
+        "benchmark_version_id": "superchem-multimodal-canonical",
+        "model_id": "model-gpt-5-high-c8e304712121a527",
+        "model_configuration": "gpt-5-high",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-high",
+        "model_family_id": "openai-gpt-5",
+        "model": "GPT-5 (High)",
+        "organization": "OpenAI",
+        "score": 0.385,
+        "input_score": 0.385,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "superchem-multimodal-metric-v1",
+        "protocol_id": "superchem-multimodal-source-export-v1",
+        "task_set_id": "superchem-multimodal-canonical",
+        "metric": "Pass@1 accuracy",
+        "score_role": "canonical",
+        "score_series_id": "superchem-multimodal-canonical-score",
+        "evaluation_protocol": "SUPERChem-500 multimodal input, Pass@1 final-answer accuracy. Text-only results and Reasoning Path Fidelity are not merged.",
+        "model_release_date": "2025-08-07",
+        "evaluation_date": "2025-12-01",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-08-07",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-08-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-catalystforyou-superchem-eval-7e2ce5fca04d84fc"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-catalystforyou-superchem-eval-7e2ce5fca04d84fc"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-12-01",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-12-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-08-07",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-github-com-catalystforyou-superchem-eval-7e2ce5fca04d84fc"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-catalystforyou-superchem-eval-7e2ce5fca04d84fc"
+        ],
+        "source": "https://github.com/catalystforyou/SUPERChem_eval",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-superchem-gpt-5-high-a7144ddd85a314dd"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "superchem-gpt-5-high"
+        ],
+        "plot_date": "2025-12-01",
+        "frontier_observation_ids": [
+          "obs-0-379-c593dad04cc2c4b5",
+          "obs-0-385-3948c92d710737b9"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-385-3948c92d710737b9",
+        "benchmark_id": "superchem-multimodal",
+        "benchmark_version_id": "superchem-multimodal-canonical",
+        "model_id": "model-gpt-5-high-c8e304712121a527",
+        "model_configuration": "gpt-5-high",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-high",
+        "model_family_id": "openai-gpt-5",
+        "model": "GPT-5 (High)",
+        "organization": "OpenAI",
+        "score": 0.385,
+        "input_score": 0.385,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "superchem-multimodal-metric-v1",
+        "protocol_id": "superchem-multimodal-source-export-v1",
+        "task_set_id": "superchem-multimodal-canonical",
+        "metric": "Pass@1 accuracy",
+        "score_role": "canonical",
+        "score_series_id": "superchem-multimodal-canonical-score",
+        "evaluation_protocol": "SUPERChem-500 multimodal input, Pass@1 final-answer accuracy. Text-only results and Reasoning Path Fidelity are not merged.",
+        "model_release_date": "2025-08-07",
+        "evaluation_date": "2025-12-01",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-08-07",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-08-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-catalystforyou-superchem-eval-7e2ce5fca04d84fc"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-catalystforyou-superchem-eval-7e2ce5fca04d84fc"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-12-01",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-12-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-08-07",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-github-com-catalystforyou-superchem-eval-7e2ce5fca04d84fc"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-catalystforyou-superchem-eval-7e2ce5fca04d84fc"
+        ],
+        "source": "https://github.com/catalystforyou/SUPERChem_eval",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-superchem-gpt-5-high-a7144ddd85a314dd"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "superchem-gpt-5-high"
+        ],
+        "plot_date": "2025-12-01",
+        "frontier_observation_ids": [
+          "obs-0-379-c593dad04cc2c4b5",
+          "obs-0-385-3948c92d710737b9"
+        ]
+      }
+    ],
+    "reported_frontier": [],
+    "historical_frontier": [],
+    "retrospective_observations": [
+      {
+        "observation_id": "obs-0-379-c593dad04cc2c4b5",
+        "benchmark_id": "superchem-multimodal",
+        "benchmark_version_id": "superchem-multimodal-canonical",
+        "model_id": "model-gemini-2-5-pro-53e6252cbff1cfa8",
+        "model_configuration": "gemini-2-5-pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-5-pro",
+        "model_family_id": "google-gemini-2-5-pro",
+        "model": "Gemini 2.5 Pro",
+        "organization": "Google",
+        "score": 0.379,
+        "input_score": 0.379,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "superchem-multimodal-metric-v1",
+        "protocol_id": "superchem-multimodal-source-export-v1",
+        "task_set_id": "superchem-multimodal-canonical",
+        "metric": "Pass@1 accuracy",
+        "score_role": "canonical",
+        "score_series_id": "superchem-multimodal-canonical-score",
+        "evaluation_protocol": "SUPERChem-500 multimodal input, Pass@1 final-answer accuracy. Text-only results and Reasoning Path Fidelity are not merged.",
+        "model_release_date": "2025-06-17",
+        "evaluation_date": "2025-12-01",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-06-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-06-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-catalystforyou-superchem-eval-7e2ce5fca04d84fc"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-catalystforyou-superchem-eval-7e2ce5fca04d84fc"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-12-01",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-06-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-06-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-github-com-catalystforyou-superchem-eval-7e2ce5fca04d84fc"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-catalystforyou-superchem-eval-7e2ce5fca04d84fc"
+        ],
+        "source": "https://github.com/catalystforyou/SUPERChem_eval",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-superchem-gemini-2-5-pro-5db1a339f2a50cd3"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "superchem-gemini-2-5-pro"
+        ]
+      },
+      {
+        "observation_id": "obs-0-385-3948c92d710737b9",
+        "benchmark_id": "superchem-multimodal",
+        "benchmark_version_id": "superchem-multimodal-canonical",
+        "model_id": "model-gpt-5-high-c8e304712121a527",
+        "model_configuration": "gpt-5-high",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-high",
+        "model_family_id": "openai-gpt-5",
+        "model": "GPT-5 (High)",
+        "organization": "OpenAI",
+        "score": 0.385,
+        "input_score": 0.385,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "superchem-multimodal-metric-v1",
+        "protocol_id": "superchem-multimodal-source-export-v1",
+        "task_set_id": "superchem-multimodal-canonical",
+        "metric": "Pass@1 accuracy",
+        "score_role": "canonical",
+        "score_series_id": "superchem-multimodal-canonical-score",
+        "evaluation_protocol": "SUPERChem-500 multimodal input, Pass@1 final-answer accuracy. Text-only results and Reasoning Path Fidelity are not merged.",
+        "model_release_date": "2025-08-07",
+        "evaluation_date": "2025-12-01",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-08-07",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-08-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-github-com-catalystforyou-superchem-eval-7e2ce5fca04d84fc"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-github-com-catalystforyou-superchem-eval-7e2ce5fca04d84fc"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-12-01",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-08-07",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-08-07",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-github-com-catalystforyou-superchem-eval-7e2ce5fca04d84fc"
+        ],
+        "score_source_ids": [
+          "resource-https-github-com-catalystforyou-superchem-eval-7e2ce5fca04d84fc"
+        ],
+        "source": "https://github.com/catalystforyou/SUPERChem_eval",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-superchem-gpt-5-high-a7144ddd85a314dd"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "superchem-gpt-5-high"
+        ]
+      }
+    ],
+    "observed_frontier": 0.385,
+    "capability_frontier_value": 0.385,
+    "reported_frontier_value": null,
+    "current_frontier": 0.385,
+    "normalized_progress": 0.385,
+    "normalized_headroom": 0.615,
+    "threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 279
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 279
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 279
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 279
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 279
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 279
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T80": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T90": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.2857142857142857,
+      "represented_organizations": [
+        "OpenAI",
+        "Google"
+      ],
+      "panel_size": 7,
+      "status": "low"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-github-com-catalystforyou-superchem-eval-7e2ce5fca04d84fc"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "unknown_public_dates",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

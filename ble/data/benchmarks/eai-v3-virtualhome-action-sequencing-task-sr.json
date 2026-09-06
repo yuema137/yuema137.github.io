@@ -1,0 +1,1766 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "eai-v3-virtualhome-action-sequencing-task-sr",
+    "name": "Embodied Agent Interface v3 \u2014 Action Sequencing",
+    "domain": "Robotics",
+    "release": "2024-10-09",
+    "source": "https://embodied-agent-interface.github.io/",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Model",
+    "tags": [
+      "embodied",
+      "planning",
+      "VirtualHome"
+    ],
+    "metric": "Task SR",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "eai-v3-virtualhome-action-sequencing-task-sr-metric-v1",
+    "protocol_id": "eai-v3-virtualhome-action-sequencing-task-sr-source-export-v1",
+    "canonical_score": {
+      "series_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical-score",
+      "role": "canonical",
+      "metric_id": "eai-v3-virtualhome-action-sequencing-task-sr-metric-v1",
+      "metric_name": "Task SR",
+      "protocol_id": "eai-v3-virtualhome-action-sequencing-task-sr-source-export-v1",
+      "task_set_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+    "summary": {
+      "en": "EAI tests one-shot household action sequencing in the VirtualHome environment.",
+      "zh": "EAI \u6d4b\u8bd5 VirtualHome \u73af\u5883\u4e2d\u7684\u4e00\u6b21\u6027\u5bb6\u52a1\u52a8\u4f5c\u5e8f\u5217\u751f\u6210\u3002"
+    },
+    "task_format": {
+      "en": "Given symbolic state, goal, actions, and rules, generate a complete action sequence for 338 instructions.",
+      "zh": "\u7ed9\u5b9a\u7b26\u53f7\u72b6\u6001\u3001\u76ee\u6807\u3001\u52a8\u4f5c\u548c\u89c4\u5219\uff0c\u4e3a 338 \u6761\u6307\u4ee4\u751f\u6210\u5b8c\u6574\u52a8\u4f5c\u5e8f\u5217\u3002"
+    },
+    "scoring": {
+      "metric_name": "Task success rate",
+      "explanation": {
+        "en": "A plan succeeds only when the revised MotionPlanner executes it and reaches the task goal.",
+        "zh": "\u53ea\u6709 revised MotionPlanner \u80fd\u6267\u884c\u8ba1\u5212\u5e76\u8fbe\u5230\u4efb\u52a1\u76ee\u6807\u65f6\u624d\u7b97\u6210\u529f\u3002"
+      }
+    },
+    "evaluation_target": "environment_outcome",
+    "observation_count": 13,
+    "evidence_record_count": 13,
+    "observations": [
+      {
+        "observation_id": "obs-0-249-8c4e85157f676aaf",
+        "benchmark_id": "eai-v3-virtualhome-action-sequencing-task-sr",
+        "benchmark_version_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "model_id": "model-gpt-3-5-turbo-130d6c1b27b8d572",
+        "model_configuration": "GPT-3.5-Turbo",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-3-5-turbo",
+        "model_family_id": "openai-gpt-3-5-turbo",
+        "model": "GPT-3.5-Turbo",
+        "organization": "OpenAI",
+        "score": 0.249,
+        "input_score": 0.249,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "eai-v3-virtualhome-action-sequencing-task-sr-metric-v1",
+        "protocol_id": "eai-v3-virtualhome-action-sequencing-task-sr-source-export-v1",
+        "task_set_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "metric": "Task SR",
+        "score_role": "canonical",
+        "score_series_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical-score",
+        "evaluation_protocol": "EAI arXiv-v3 VirtualHome Action Sequencing, revised MotionPlanner, temperature zero, one-shot full plan, Table 12 task SR; replanning excluded.",
+        "model_release_date": "2023-03-01",
+        "evaluation_date": null,
+        "result_public_date": "2025-01-19",
+        "source_publication_date": "2025-01-19",
+        "observation_date": "2023-03-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-03-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-01-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2023-03-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-03-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-01-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973",
+          "resource-https-embodied-agent-interface-github-io-01992b4934b8442c"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "source": "https://arxiv.org/abs/2410.07166v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eai-gpt35-27fd85d4326eb922"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eai-gpt35"
+        ]
+      },
+      {
+        "observation_id": "obs-0-6-fbbd5a1389b41039",
+        "benchmark_id": "eai-v3-virtualhome-action-sequencing-task-sr",
+        "benchmark_version_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "model_id": "model-gpt-4-turbo-f43116b910ec4f9a",
+        "model_configuration": "GPT-4-Turbo",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4-turbo",
+        "model_family_id": "openai-gpt-4-turbo",
+        "model": "GPT-4-Turbo",
+        "organization": "OpenAI",
+        "score": 0.6,
+        "input_score": 0.6,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "eai-v3-virtualhome-action-sequencing-task-sr-metric-v1",
+        "protocol_id": "eai-v3-virtualhome-action-sequencing-task-sr-source-export-v1",
+        "task_set_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "metric": "Task SR",
+        "score_role": "canonical",
+        "score_series_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical-score",
+        "evaluation_protocol": "EAI arXiv-v3 VirtualHome Action Sequencing, revised MotionPlanner, temperature zero, one-shot full plan, Table 12 task SR; replanning excluded.",
+        "model_release_date": "2023-11-06",
+        "evaluation_date": null,
+        "result_public_date": "2025-01-19",
+        "source_publication_date": "2025-01-19",
+        "observation_date": "2023-11-06",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-11-06",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-01-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2023-11-06",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-11-06",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-01-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973",
+          "resource-https-embodied-agent-interface-github-io-01992b4934b8442c"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "source": "https://arxiv.org/abs/2410.07166v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eai-gpt4turbo-33b9935ee19ee9c7"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eai-gpt4turbo"
+        ]
+      },
+      {
+        "observation_id": "obs-0-456-3b3aca46732366a7",
+        "benchmark_id": "eai-v3-virtualhome-action-sequencing-task-sr",
+        "benchmark_version_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "model_id": "model-gemini-1-0-pro-9a629a9d8c97d24b",
+        "model_configuration": "Gemini-1.0-Pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-1-0-pro",
+        "model_family_id": "google-gemini-1-0-pro",
+        "model": "Gemini-1.0-Pro",
+        "organization": "Google",
+        "score": 0.456,
+        "input_score": 0.456,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "eai-v3-virtualhome-action-sequencing-task-sr-metric-v1",
+        "protocol_id": "eai-v3-virtualhome-action-sequencing-task-sr-source-export-v1",
+        "task_set_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "metric": "Task SR",
+        "score_role": "canonical",
+        "score_series_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical-score",
+        "evaluation_protocol": "EAI arXiv-v3 VirtualHome Action Sequencing, revised MotionPlanner, temperature zero, one-shot full plan, Table 12 task SR; replanning excluded.",
+        "model_release_date": "2023-12-06",
+        "evaluation_date": null,
+        "result_public_date": "2025-01-19",
+        "source_publication_date": "2025-01-19",
+        "observation_date": "2023-12-06",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-12-06",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-01-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2023-12-06",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-12-06",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-01-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973",
+          "resource-https-embodied-agent-interface-github-io-01992b4934b8442c"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "source": "https://arxiv.org/abs/2410.07166v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eai-gemini10-37cb43f0da54daed"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eai-gemini10"
+        ]
+      },
+      {
+        "observation_id": "obs-0-649-7c394a9805828e88",
+        "benchmark_id": "eai-v3-virtualhome-action-sequencing-task-sr",
+        "benchmark_version_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "model_id": "model-claude-3-opus-745c8473c8207c04",
+        "model_configuration": "Claude-3-Opus",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-opus",
+        "model_family_id": "anthropic-claude-3-opus",
+        "model": "Claude-3-Opus",
+        "organization": "Anthropic",
+        "score": 0.649,
+        "input_score": 0.649,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "eai-v3-virtualhome-action-sequencing-task-sr-metric-v1",
+        "protocol_id": "eai-v3-virtualhome-action-sequencing-task-sr-source-export-v1",
+        "task_set_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "metric": "Task SR",
+        "score_role": "canonical",
+        "score_series_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical-score",
+        "evaluation_protocol": "EAI arXiv-v3 VirtualHome Action Sequencing, revised MotionPlanner, temperature zero, one-shot full plan, Table 12 task SR; replanning excluded.",
+        "model_release_date": "2024-03-04",
+        "evaluation_date": null,
+        "result_public_date": "2025-01-19",
+        "source_publication_date": "2025-01-19",
+        "observation_date": "2024-03-04",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-03-04",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-01-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-03-04",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-03-04",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-01-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973",
+          "resource-https-embodied-agent-interface-github-io-01992b4934b8442c"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "source": "https://arxiv.org/abs/2410.07166v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eai-claude3opus-8b07b0f6248baaa5"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eai-claude3opus"
+        ]
+      },
+      {
+        "observation_id": "obs-0-584-e180f354e0e8a7e6",
+        "benchmark_id": "eai-v3-virtualhome-action-sequencing-task-sr",
+        "benchmark_version_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "model_id": "model-claude-3-sonnet-39744496954d6689",
+        "model_configuration": "Claude-3-Sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-sonnet",
+        "model_family_id": "anthropic-claude-3-sonnet",
+        "model": "Claude-3-Sonnet",
+        "organization": "Anthropic",
+        "score": 0.584,
+        "input_score": 0.584,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "eai-v3-virtualhome-action-sequencing-task-sr-metric-v1",
+        "protocol_id": "eai-v3-virtualhome-action-sequencing-task-sr-source-export-v1",
+        "task_set_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "metric": "Task SR",
+        "score_role": "canonical",
+        "score_series_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical-score",
+        "evaluation_protocol": "EAI arXiv-v3 VirtualHome Action Sequencing, revised MotionPlanner, temperature zero, one-shot full plan, Table 12 task SR; replanning excluded.",
+        "model_release_date": "2024-03-04",
+        "evaluation_date": null,
+        "result_public_date": "2025-01-19",
+        "source_publication_date": "2025-01-19",
+        "observation_date": "2024-03-04",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-03-04",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-01-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-03-04",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-03-04",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-01-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973",
+          "resource-https-embodied-agent-interface-github-io-01992b4934b8442c"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "source": "https://arxiv.org/abs/2410.07166v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eai-claude3sonnet-04794b7be0b3f4fd"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eai-claude3sonnet"
+        ]
+      },
+      {
+        "observation_id": "obs-0-548-46ad14ffa4a7e436",
+        "benchmark_id": "eai-v3-virtualhome-action-sequencing-task-sr",
+        "benchmark_version_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "model_id": "model-claude-3-haiku-703c72ea86871d6c",
+        "model_configuration": "Claude-3-Haiku",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-haiku",
+        "model_family_id": "anthropic-claude-3-haiku",
+        "model": "Claude-3-Haiku",
+        "organization": "Anthropic",
+        "score": 0.548,
+        "input_score": 0.548,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "eai-v3-virtualhome-action-sequencing-task-sr-metric-v1",
+        "protocol_id": "eai-v3-virtualhome-action-sequencing-task-sr-source-export-v1",
+        "task_set_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "metric": "Task SR",
+        "score_role": "canonical",
+        "score_series_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical-score",
+        "evaluation_protocol": "EAI arXiv-v3 VirtualHome Action Sequencing, revised MotionPlanner, temperature zero, one-shot full plan, Table 12 task SR; replanning excluded.",
+        "model_release_date": "2024-03-13",
+        "evaluation_date": null,
+        "result_public_date": "2025-01-19",
+        "source_publication_date": "2025-01-19",
+        "observation_date": "2024-03-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-03-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-01-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-03-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-03-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-01-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973",
+          "resource-https-embodied-agent-interface-github-io-01992b4934b8442c"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "source": "https://arxiv.org/abs/2410.07166v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eai-claude3haiku-b3daa11234647a26"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eai-claude3haiku"
+        ]
+      },
+      {
+        "observation_id": "obs-0-213-7e09abe9eb57904c",
+        "benchmark_id": "eai-v3-virtualhome-action-sequencing-task-sr",
+        "benchmark_version_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "model_id": "model-llama-3-8b-ca8243e5ecfe931b",
+        "model_configuration": "Llama-3-8B",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama-3-8b",
+        "model_family_id": "meta-llama-3-8b",
+        "model": "Llama-3-8B",
+        "organization": "Meta",
+        "score": 0.213,
+        "input_score": 0.213,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "eai-v3-virtualhome-action-sequencing-task-sr-metric-v1",
+        "protocol_id": "eai-v3-virtualhome-action-sequencing-task-sr-source-export-v1",
+        "task_set_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "metric": "Task SR",
+        "score_role": "canonical",
+        "score_series_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical-score",
+        "evaluation_protocol": "EAI arXiv-v3 VirtualHome Action Sequencing, revised MotionPlanner, temperature zero, one-shot full plan, Table 12 task SR; replanning excluded.",
+        "model_release_date": "2024-04-18",
+        "evaluation_date": null,
+        "result_public_date": "2025-01-19",
+        "source_publication_date": "2025-01-19",
+        "observation_date": "2024-04-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-04-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-01-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-04-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-04-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-01-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973",
+          "resource-https-embodied-agent-interface-github-io-01992b4934b8442c"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "source": "https://arxiv.org/abs/2410.07166v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eai-llama38-f5850f0f736f42b3"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eai-llama38"
+        ]
+      },
+      {
+        "observation_id": "obs-0-59-d277a567714405b7",
+        "benchmark_id": "eai-v3-virtualhome-action-sequencing-task-sr",
+        "benchmark_version_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "model_id": "model-llama-3-70b-eb34eef2921a10b9",
+        "model_configuration": "Llama-3-70B",
+        "model_identity_organization": "meta",
+        "model_label_id": "llama-3-70b",
+        "model_family_id": "meta-llama-3-70b",
+        "model": "Llama-3-70B",
+        "organization": "Meta",
+        "score": 0.59,
+        "input_score": 0.59,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "eai-v3-virtualhome-action-sequencing-task-sr-metric-v1",
+        "protocol_id": "eai-v3-virtualhome-action-sequencing-task-sr-source-export-v1",
+        "task_set_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "metric": "Task SR",
+        "score_role": "canonical",
+        "score_series_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical-score",
+        "evaluation_protocol": "EAI arXiv-v3 VirtualHome Action Sequencing, revised MotionPlanner, temperature zero, one-shot full plan, Table 12 task SR; replanning excluded.",
+        "model_release_date": "2024-04-18",
+        "evaluation_date": null,
+        "result_public_date": "2025-01-19",
+        "source_publication_date": "2025-01-19",
+        "observation_date": "2024-04-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-04-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-01-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-04-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-04-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-01-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973",
+          "resource-https-embodied-agent-interface-github-io-01992b4934b8442c"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "source": "https://arxiv.org/abs/2410.07166v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eai-llama370-b4c4e0527d17efb2"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eai-llama370"
+        ]
+      },
+      {
+        "observation_id": "obs-0-695-543f303087c5857c",
+        "benchmark_id": "eai-v3-virtualhome-action-sequencing-task-sr",
+        "benchmark_version_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "model_id": "model-gemini-1-5-flash-f76acf839a19e6d6",
+        "model_configuration": "Gemini-1.5-Flash",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-1-5-flash",
+        "model_family_id": "google-gemini-1-5-flash",
+        "model": "Gemini-1.5-Flash",
+        "organization": "Google",
+        "score": 0.695,
+        "input_score": 0.695,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "eai-v3-virtualhome-action-sequencing-task-sr-metric-v1",
+        "protocol_id": "eai-v3-virtualhome-action-sequencing-task-sr-source-export-v1",
+        "task_set_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "metric": "Task SR",
+        "score_role": "canonical",
+        "score_series_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical-score",
+        "evaluation_protocol": "EAI arXiv-v3 VirtualHome Action Sequencing, revised MotionPlanner, temperature zero, one-shot full plan, Table 12 task SR; replanning excluded.",
+        "model_release_date": "2024-05-14",
+        "evaluation_date": null,
+        "result_public_date": "2025-01-19",
+        "source_publication_date": "2025-01-19",
+        "observation_date": "2024-05-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-01-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-05-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-01-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973",
+          "resource-https-embodied-agent-interface-github-io-01992b4934b8442c"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "source": "https://arxiv.org/abs/2410.07166v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eai-gemini15flash-c2460a0b3fea24a2"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eai-gemini15flash"
+        ]
+      },
+      {
+        "observation_id": "obs-0-767-acee9c9a6653a210",
+        "benchmark_id": "eai-v3-virtualhome-action-sequencing-task-sr",
+        "benchmark_version_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "model_id": "model-claude-3-5-sonnet-ca0330ced73b499d",
+        "model_configuration": "Claude-3.5-Sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet",
+        "model_family_id": "anthropic-claude-3-5-sonnet",
+        "model": "Claude-3.5-Sonnet",
+        "organization": "Anthropic",
+        "score": 0.767,
+        "input_score": 0.767,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "eai-v3-virtualhome-action-sequencing-task-sr-metric-v1",
+        "protocol_id": "eai-v3-virtualhome-action-sequencing-task-sr-source-export-v1",
+        "task_set_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "metric": "Task SR",
+        "score_role": "canonical",
+        "score_series_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical-score",
+        "evaluation_protocol": "EAI arXiv-v3 VirtualHome Action Sequencing, revised MotionPlanner, temperature zero, one-shot full plan, Table 12 task SR; replanning excluded.",
+        "model_release_date": "2024-06-20",
+        "evaluation_date": null,
+        "result_public_date": "2025-01-19",
+        "source_publication_date": "2025-01-19",
+        "observation_date": "2024-06-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-01-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-06-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-06-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-01-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973",
+          "resource-https-embodied-agent-interface-github-io-01992b4934b8442c"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "source": "https://arxiv.org/abs/2410.07166v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eai-claude35-15ef1e7d0ad30165"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eai-claude35"
+        ]
+      },
+      {
+        "observation_id": "obs-0-715-e32e9725705196cf",
+        "benchmark_id": "eai-v3-virtualhome-action-sequencing-task-sr",
+        "benchmark_version_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.715,
+        "input_score": 0.715,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "eai-v3-virtualhome-action-sequencing-task-sr-metric-v1",
+        "protocol_id": "eai-v3-virtualhome-action-sequencing-task-sr-source-export-v1",
+        "task_set_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "metric": "Task SR",
+        "score_role": "canonical",
+        "score_series_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical-score",
+        "evaluation_protocol": "EAI arXiv-v3 VirtualHome Action Sequencing, revised MotionPlanner, temperature zero, one-shot full plan, Table 12 task SR; replanning excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2025-01-19",
+        "source_publication_date": "2025-01-19",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-01-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-05-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-01-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973",
+          "resource-https-embodied-agent-interface-github-io-01992b4934b8442c"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "source": "https://arxiv.org/abs/2410.07166v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eai-gpt4o-8a18139b2289c05c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eai-gpt4o"
+        ]
+      },
+      {
+        "observation_id": "obs-0-715-8585e609b0b982a8",
+        "benchmark_id": "eai-v3-virtualhome-action-sequencing-task-sr",
+        "benchmark_version_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "model_id": "model-o1-mini-dcb55973dd7eebb4",
+        "model_configuration": "o1-mini",
+        "model_identity_organization": "openai",
+        "model_label_id": "o1-mini",
+        "model_family_id": "openai-o1-mini",
+        "model": "o1-mini",
+        "organization": "OpenAI",
+        "score": 0.715,
+        "input_score": 0.715,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "eai-v3-virtualhome-action-sequencing-task-sr-metric-v1",
+        "protocol_id": "eai-v3-virtualhome-action-sequencing-task-sr-source-export-v1",
+        "task_set_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "metric": "Task SR",
+        "score_role": "canonical",
+        "score_series_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical-score",
+        "evaluation_protocol": "EAI arXiv-v3 VirtualHome Action Sequencing, revised MotionPlanner, temperature zero, one-shot full plan, Table 12 task SR; replanning excluded.",
+        "model_release_date": "2024-09-12",
+        "evaluation_date": null,
+        "result_public_date": "2025-01-19",
+        "source_publication_date": "2025-01-19",
+        "observation_date": "2024-09-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-09-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-01-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-09-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-09-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-01-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973",
+          "resource-https-embodied-agent-interface-github-io-01992b4934b8442c"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "source": "https://arxiv.org/abs/2410.07166v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eai-o1mini-80d2977c41144b97"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eai-o1mini"
+        ]
+      },
+      {
+        "observation_id": "obs-0-652-4733027f79078ff2",
+        "benchmark_id": "eai-v3-virtualhome-action-sequencing-task-sr",
+        "benchmark_version_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "model_id": "model-o1-preview-04256b717524d6b8",
+        "model_configuration": "o1-preview",
+        "model_identity_organization": "openai",
+        "model_label_id": "o1-preview",
+        "model_family_id": "openai-o1-preview",
+        "model": "o1-preview",
+        "organization": "OpenAI",
+        "score": 0.652,
+        "input_score": 0.652,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "eai-v3-virtualhome-action-sequencing-task-sr-metric-v1",
+        "protocol_id": "eai-v3-virtualhome-action-sequencing-task-sr-source-export-v1",
+        "task_set_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "metric": "Task SR",
+        "score_role": "canonical",
+        "score_series_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical-score",
+        "evaluation_protocol": "EAI arXiv-v3 VirtualHome Action Sequencing, revised MotionPlanner, temperature zero, one-shot full plan, Table 12 task SR; replanning excluded.",
+        "model_release_date": "2024-09-12",
+        "evaluation_date": null,
+        "result_public_date": "2025-01-19",
+        "source_publication_date": "2025-01-19",
+        "observation_date": "2024-09-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-09-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-01-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-09-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-09-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-01-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973",
+          "resource-https-embodied-agent-interface-github-io-01992b4934b8442c"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "source": "https://arxiv.org/abs/2410.07166v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eai-o1preview-2ade213c91832192"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eai-o1preview"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-767-acee9c9a6653a210",
+        "benchmark_id": "eai-v3-virtualhome-action-sequencing-task-sr",
+        "benchmark_version_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "model_id": "model-claude-3-5-sonnet-ca0330ced73b499d",
+        "model_configuration": "Claude-3.5-Sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet",
+        "model_family_id": "anthropic-claude-3-5-sonnet",
+        "model": "Claude-3.5-Sonnet",
+        "organization": "Anthropic",
+        "score": 0.767,
+        "input_score": 0.767,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "eai-v3-virtualhome-action-sequencing-task-sr-metric-v1",
+        "protocol_id": "eai-v3-virtualhome-action-sequencing-task-sr-source-export-v1",
+        "task_set_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "metric": "Task SR",
+        "score_role": "canonical",
+        "score_series_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical-score",
+        "evaluation_protocol": "EAI arXiv-v3 VirtualHome Action Sequencing, revised MotionPlanner, temperature zero, one-shot full plan, Table 12 task SR; replanning excluded.",
+        "model_release_date": "2024-06-20",
+        "evaluation_date": null,
+        "result_public_date": "2025-01-19",
+        "source_publication_date": "2025-01-19",
+        "observation_date": "2024-06-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-01-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-10-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-06-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-01-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973",
+          "resource-https-embodied-agent-interface-github-io-01992b4934b8442c"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "source": "https://arxiv.org/abs/2410.07166v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eai-claude35-15ef1e7d0ad30165"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eai-claude35"
+        ],
+        "plot_date": "2024-10-09",
+        "frontier_observation_ids": [
+          "obs-0-213-7e09abe9eb57904c",
+          "obs-0-249-8c4e85157f676aaf",
+          "obs-0-456-3b3aca46732366a7",
+          "obs-0-548-46ad14ffa4a7e436",
+          "obs-0-584-e180f354e0e8a7e6",
+          "obs-0-59-d277a567714405b7",
+          "obs-0-6-fbbd5a1389b41039",
+          "obs-0-649-7c394a9805828e88",
+          "obs-0-652-4733027f79078ff2",
+          "obs-0-695-543f303087c5857c",
+          "obs-0-715-e32e9725705196cf",
+          "obs-0-715-8585e609b0b982a8",
+          "obs-0-767-acee9c9a6653a210"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-767-acee9c9a6653a210",
+        "benchmark_id": "eai-v3-virtualhome-action-sequencing-task-sr",
+        "benchmark_version_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "model_id": "model-claude-3-5-sonnet-ca0330ced73b499d",
+        "model_configuration": "Claude-3.5-Sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet",
+        "model_family_id": "anthropic-claude-3-5-sonnet",
+        "model": "Claude-3.5-Sonnet",
+        "organization": "Anthropic",
+        "score": 0.767,
+        "input_score": 0.767,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "eai-v3-virtualhome-action-sequencing-task-sr-metric-v1",
+        "protocol_id": "eai-v3-virtualhome-action-sequencing-task-sr-source-export-v1",
+        "task_set_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "metric": "Task SR",
+        "score_role": "canonical",
+        "score_series_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical-score",
+        "evaluation_protocol": "EAI arXiv-v3 VirtualHome Action Sequencing, revised MotionPlanner, temperature zero, one-shot full plan, Table 12 task SR; replanning excluded.",
+        "model_release_date": "2024-06-20",
+        "evaluation_date": null,
+        "result_public_date": "2025-01-19",
+        "source_publication_date": "2025-01-19",
+        "observation_date": "2024-06-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-01-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-10-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-06-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-01-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973",
+          "resource-https-embodied-agent-interface-github-io-01992b4934b8442c"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "source": "https://arxiv.org/abs/2410.07166v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eai-claude35-15ef1e7d0ad30165"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eai-claude35"
+        ],
+        "plot_date": "2024-10-09",
+        "frontier_observation_ids": [
+          "obs-0-213-7e09abe9eb57904c",
+          "obs-0-249-8c4e85157f676aaf",
+          "obs-0-456-3b3aca46732366a7",
+          "obs-0-548-46ad14ffa4a7e436",
+          "obs-0-584-e180f354e0e8a7e6",
+          "obs-0-59-d277a567714405b7",
+          "obs-0-6-fbbd5a1389b41039",
+          "obs-0-649-7c394a9805828e88",
+          "obs-0-652-4733027f79078ff2",
+          "obs-0-695-543f303087c5857c",
+          "obs-0-715-e32e9725705196cf",
+          "obs-0-715-8585e609b0b982a8",
+          "obs-0-767-acee9c9a6653a210"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-767-acee9c9a6653a210",
+        "benchmark_id": "eai-v3-virtualhome-action-sequencing-task-sr",
+        "benchmark_version_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "model_id": "model-claude-3-5-sonnet-ca0330ced73b499d",
+        "model_configuration": "Claude-3.5-Sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet",
+        "model_family_id": "anthropic-claude-3-5-sonnet",
+        "model": "Claude-3.5-Sonnet",
+        "organization": "Anthropic",
+        "score": 0.767,
+        "input_score": 0.767,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "eai-v3-virtualhome-action-sequencing-task-sr-metric-v1",
+        "protocol_id": "eai-v3-virtualhome-action-sequencing-task-sr-source-export-v1",
+        "task_set_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "metric": "Task SR",
+        "score_role": "canonical",
+        "score_series_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical-score",
+        "evaluation_protocol": "EAI arXiv-v3 VirtualHome Action Sequencing, revised MotionPlanner, temperature zero, one-shot full plan, Table 12 task SR; replanning excluded.",
+        "model_release_date": "2024-06-20",
+        "evaluation_date": null,
+        "result_public_date": "2025-01-19",
+        "source_publication_date": "2025-01-19",
+        "observation_date": "2024-06-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-01-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-10-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-06-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-01-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973",
+          "resource-https-embodied-agent-interface-github-io-01992b4934b8442c"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "source": "https://arxiv.org/abs/2410.07166v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eai-claude35-15ef1e7d0ad30165"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eai-claude35"
+        ],
+        "plot_date": "2024-10-09",
+        "frontier_observation_ids": [
+          "obs-0-213-7e09abe9eb57904c",
+          "obs-0-249-8c4e85157f676aaf",
+          "obs-0-456-3b3aca46732366a7",
+          "obs-0-548-46ad14ffa4a7e436",
+          "obs-0-584-e180f354e0e8a7e6",
+          "obs-0-59-d277a567714405b7",
+          "obs-0-6-fbbd5a1389b41039",
+          "obs-0-649-7c394a9805828e88",
+          "obs-0-652-4733027f79078ff2",
+          "obs-0-695-543f303087c5857c",
+          "obs-0-715-e32e9725705196cf",
+          "obs-0-715-8585e609b0b982a8",
+          "obs-0-767-acee9c9a6653a210"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-767-acee9c9a6653a210",
+        "benchmark_id": "eai-v3-virtualhome-action-sequencing-task-sr",
+        "benchmark_version_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "model_id": "model-claude-3-5-sonnet-ca0330ced73b499d",
+        "model_configuration": "Claude-3.5-Sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet",
+        "model_family_id": "anthropic-claude-3-5-sonnet",
+        "model": "Claude-3.5-Sonnet",
+        "organization": "Anthropic",
+        "score": 0.767,
+        "input_score": 0.767,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "eai-v3-virtualhome-action-sequencing-task-sr-metric-v1",
+        "protocol_id": "eai-v3-virtualhome-action-sequencing-task-sr-source-export-v1",
+        "task_set_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "metric": "Task SR",
+        "score_role": "canonical",
+        "score_series_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical-score",
+        "evaluation_protocol": "EAI arXiv-v3 VirtualHome Action Sequencing, revised MotionPlanner, temperature zero, one-shot full plan, Table 12 task SR; replanning excluded.",
+        "model_release_date": "2024-06-20",
+        "evaluation_date": null,
+        "result_public_date": "2025-01-19",
+        "source_publication_date": "2025-01-19",
+        "observation_date": "2024-06-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-01-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-01-19",
+        "date_kind": "result first-public date",
+        "capability_date": "2024-06-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-01-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973",
+          "resource-https-embodied-agent-interface-github-io-01992b4934b8442c"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "source": "https://arxiv.org/abs/2410.07166v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eai-claude35-15ef1e7d0ad30165"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eai-claude35"
+        ],
+        "plot_date": "2025-01-19",
+        "frontier_observation_ids": [
+          "obs-0-213-7e09abe9eb57904c",
+          "obs-0-249-8c4e85157f676aaf",
+          "obs-0-456-3b3aca46732366a7",
+          "obs-0-548-46ad14ffa4a7e436",
+          "obs-0-584-e180f354e0e8a7e6",
+          "obs-0-59-d277a567714405b7",
+          "obs-0-6-fbbd5a1389b41039",
+          "obs-0-649-7c394a9805828e88",
+          "obs-0-652-4733027f79078ff2",
+          "obs-0-695-543f303087c5857c",
+          "obs-0-715-e32e9725705196cf",
+          "obs-0-715-8585e609b0b982a8",
+          "obs-0-767-acee9c9a6653a210"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-767-acee9c9a6653a210",
+        "benchmark_id": "eai-v3-virtualhome-action-sequencing-task-sr",
+        "benchmark_version_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "model_id": "model-claude-3-5-sonnet-ca0330ced73b499d",
+        "model_configuration": "Claude-3.5-Sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-5-sonnet",
+        "model_family_id": "anthropic-claude-3-5-sonnet",
+        "model": "Claude-3.5-Sonnet",
+        "organization": "Anthropic",
+        "score": 0.767,
+        "input_score": 0.767,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "eai-v3-virtualhome-action-sequencing-task-sr-metric-v1",
+        "protocol_id": "eai-v3-virtualhome-action-sequencing-task-sr-source-export-v1",
+        "task_set_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical",
+        "metric": "Task SR",
+        "score_role": "canonical",
+        "score_series_id": "eai-v3-virtualhome-action-sequencing-task-sr-canonical-score",
+        "evaluation_protocol": "EAI arXiv-v3 VirtualHome Action Sequencing, revised MotionPlanner, temperature zero, one-shot full plan, Table 12 task SR; replanning excluded.",
+        "model_release_date": "2024-06-20",
+        "evaluation_date": null,
+        "result_public_date": "2025-01-19",
+        "source_publication_date": "2025-01-19",
+        "observation_date": "2024-06-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-06-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2025-01-19",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-01-19",
+        "date_kind": "result first-public date",
+        "capability_date": "2024-06-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2025-01-19",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973",
+          "resource-https-embodied-agent-interface-github-io-01992b4934b8442c"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2410-07166v3-fd83700cfb87a973"
+        ],
+        "source": "https://arxiv.org/abs/2410.07166v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eai-claude35-15ef1e7d0ad30165"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eai-claude35"
+        ],
+        "plot_date": "2025-01-19",
+        "frontier_observation_ids": [
+          "obs-0-213-7e09abe9eb57904c",
+          "obs-0-249-8c4e85157f676aaf",
+          "obs-0-456-3b3aca46732366a7",
+          "obs-0-548-46ad14ffa4a7e436",
+          "obs-0-584-e180f354e0e8a7e6",
+          "obs-0-59-d277a567714405b7",
+          "obs-0-6-fbbd5a1389b41039",
+          "obs-0-649-7c394a9805828e88",
+          "obs-0-652-4733027f79078ff2",
+          "obs-0-695-543f303087c5857c",
+          "obs-0-715-e32e9725705196cf",
+          "obs-0-715-8585e609b0b982a8",
+          "obs-0-767-acee9c9a6653a210"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.767,
+    "capability_frontier_value": 0.767,
+    "reported_frontier_value": 0.767,
+    "current_frontier": 0.767,
+    "normalized_progress": 0.767,
+    "normalized_headroom": 0.23299999999999998,
+    "threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2024-10-09"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 697
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 697
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2024-10-09"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 697
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 697
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "reached",
+        "days": 102,
+        "qualifying_observation_date": "2025-01-19"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 697
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 697
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.5714285714285714,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "Meta"
+      ],
+      "panel_size": 7,
+      "status": "medium"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-embodied-agent-interface-github-io-01992b4934b8442c"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

@@ -1,0 +1,1734 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "assistantbench",
+    "name": "AssistantBench",
+    "domain": "General agent tasks",
+    "release": "2024-07-23",
+    "source": "https://assistantbench.github.io/",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Agent",
+    "tags": [
+      "browsing",
+      "multi-step",
+      "web",
+      "research"
+    ],
+    "metric": "Accuracy",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "assistantbench-metric-v1",
+    "protocol_id": "assistantbench-source-export-v1",
+    "canonical_score": {
+      "series_id": "assistantbench-canonical-score",
+      "role": "canonical",
+      "metric_id": "assistantbench-metric-v1",
+      "metric_name": "Accuracy",
+      "protocol_id": "assistantbench-source-export-v1",
+      "task_set_id": "assistantbench-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "assistantbench-canonical",
+    "summary": {
+      "en": "AssistantBench evaluates web-capable assistants on realistic, time-consuming tasks that require multi-step research across the internet.",
+      "zh": "AssistantBench \u8bc4\u4f30\u5177\u5907\u7f51\u9875\u80fd\u529b\u7684 assistant \u5b8c\u6210\u771f\u5b9e\u3001\u8017\u65f6\u4e14\u9700\u8981\u591a\u6b65\u4e92\u8054\u7f51 research \u7684 task \u7684\u80fd\u529b\u3002"
+    },
+    "task_format": {
+      "en": "The agent receives a real-world question and must browse across websites, gather evidence, reason over it, and submit a final answer.",
+      "zh": "agent \u4f1a\u6536\u5230\u4e00\u4e2a\u771f\u5b9e\u4e16\u754c\u95ee\u9898\uff0c\u9700\u8981\u8de8\u7f51\u7ad9\u6d4f\u89c8\u3001\u6536\u96c6\u8bc1\u636e\u3001\u8fdb\u884c\u63a8\u7406\uff0c\u5e76\u63d0\u4ea4\u6700\u7ec8\u7b54\u6848\u3002"
+    },
+    "scoring": {
+      "metric_name": "Task accuracy",
+      "explanation": {
+        "en": "Accuracy is the fraction of the fixed 214 tasks answered correctly under the published Browser-Use evaluation export. Full-run costs shown by the source are not treated as per-task cost.",
+        "zh": "Accuracy \u662f\u5728\u516c\u5f00 Browser-Use evaluation export \u4e2d\u7b54\u5bf9\u56fa\u5b9a 214 \u4e2a task \u7684\u6bd4\u4f8b\u3002\u6765\u6e90\u5c55\u793a\u7684 full-run cost \u4e0d\u4f1a\u88ab\u5f53\u4f5c per-task cost\u3002"
+      }
+    },
+    "evaluation_target": "environment_outcome",
+    "observation_count": 8,
+    "evidence_record_count": 8,
+    "observations": [
+      {
+        "observation_id": "obs-0-3881-2d0644a57ec3fda8",
+        "benchmark_id": "assistantbench",
+        "benchmark_version_id": "assistantbench-canonical",
+        "model_id": "model-o3-medium-b0925616b588292e",
+        "model_configuration": "o3-medium",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-medium",
+        "model_family_id": "openai-o3-medium",
+        "model": "o3 Medium",
+        "organization": "OpenAI",
+        "score": 0.3881,
+        "input_score": 0.3881,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "assistantbench-metric-v1",
+        "protocol_id": "assistantbench-source-export-v1",
+        "task_set_id": "assistantbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "assistantbench-canonical-score",
+        "evaluation_protocol": "AssistantBench fixed 214-task release; this series uses one result per underlying model from the HAL Browser-Use verified export. Scaffold, model configuration, and full-run cost remain in observation notes; no configurations are silently merged.",
+        "model_release_date": "2025-04-16",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-04-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-assistantbench-github-io-2b48f0139bd52f65",
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "source": "https://hal.cs.princeton.edu/assistantbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-3881-model-version-o3-medium-name-o3--fd1972d32038dc0d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-3523-5ae78676ec0ca743",
+        "benchmark_id": "assistantbench",
+        "benchmark_version_id": "assistantbench-canonical",
+        "model_id": "model-gpt-5-medium-42055abb803677e4",
+        "model_configuration": "gpt-5-medium",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-medium",
+        "model_family_id": "openai-gpt-5-medium",
+        "model": "GPT-5 Medium",
+        "organization": "OpenAI",
+        "score": 0.3523,
+        "input_score": 0.3523,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "assistantbench-metric-v1",
+        "protocol_id": "assistantbench-source-export-v1",
+        "task_set_id": "assistantbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "assistantbench-canonical-score",
+        "evaluation_protocol": "AssistantBench fixed 214-task release; this series uses one result per underlying model from the HAL Browser-Use verified export. Scaffold, model configuration, and full-run cost remain in observation notes; no configurations are silently merged.",
+        "model_release_date": "2025-08-07",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-08-07",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-08-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-08-07",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-08-07",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-assistantbench-github-io-2b48f0139bd52f65",
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "source": "https://hal.cs.princeton.edu/assistantbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-3523-model-version-gpt-5-medium-name--eba45270696cce13"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-2805-445a72bb81c02a5b",
+        "benchmark_id": "assistantbench",
+        "benchmark_version_id": "assistantbench-canonical",
+        "model_id": "model-o4-mini-low-6a60803bf9cb761e",
+        "model_configuration": "o4-mini-low",
+        "model_identity_organization": "openai",
+        "model_label_id": "o4-mini-low",
+        "model_family_id": "openai-o4-mini-low",
+        "model": "o4-mini Low",
+        "organization": "OpenAI",
+        "score": 0.2805,
+        "input_score": 0.2805,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "assistantbench-metric-v1",
+        "protocol_id": "assistantbench-source-export-v1",
+        "task_set_id": "assistantbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "assistantbench-canonical-score",
+        "evaluation_protocol": "AssistantBench fixed 214-task release; this series uses one result per underlying model from the HAL Browser-Use verified export. Scaffold, model configuration, and full-run cost remain in observation notes; no configurations are silently merged.",
+        "model_release_date": "2025-04-16",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-04-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-assistantbench-github-io-2b48f0139bd52f65",
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "source": "https://hal.cs.princeton.edu/assistantbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-2805-model-version-o4-mini-low-name-o-2f95c9e3a629b9c5"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-1739-3547717cb356b7b8",
+        "benchmark_id": "assistantbench",
+        "benchmark_version_id": "assistantbench-canonical",
+        "model_id": "model-gpt-4-1-2a78dbfa263e7293",
+        "model_configuration": "gpt-4-1",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4-1",
+        "model_family_id": "openai-gpt-4-1",
+        "model": "GPT-4.1",
+        "organization": "OpenAI",
+        "score": 0.1739,
+        "input_score": 0.1739,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "assistantbench-metric-v1",
+        "protocol_id": "assistantbench-source-export-v1",
+        "task_set_id": "assistantbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "assistantbench-canonical-score",
+        "evaluation_protocol": "AssistantBench fixed 214-task release; this series uses one result per underlying model from the HAL Browser-Use verified export. Scaffold, model configuration, and full-run cost remain in observation notes; no configurations are silently merged.",
+        "model_release_date": "2025-04-14",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-04-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-04-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-assistantbench-github-io-2b48f0139bd52f65",
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "source": "https://hal.cs.princeton.edu/assistantbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-1739-model-version-gpt-4-1-name-gpt-4-d92485ac6fcbbdeb"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-1669-6dcc031d49cf62a0",
+        "benchmark_id": "assistantbench",
+        "benchmark_version_id": "assistantbench-canonical",
+        "model_id": "model-claude-3-7-sonnet-105c2d3675a935dc",
+        "model_configuration": "claude-3-7-sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-7-sonnet",
+        "model_family_id": "anthropic-claude-3-7-sonnet",
+        "model": "Claude 3.7 Sonnet",
+        "organization": "Anthropic",
+        "score": 0.1669,
+        "input_score": 0.1669,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "assistantbench-metric-v1",
+        "protocol_id": "assistantbench-source-export-v1",
+        "task_set_id": "assistantbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "assistantbench-canonical-score",
+        "evaluation_protocol": "AssistantBench fixed 214-task release; this series uses one result per underlying model from the HAL Browser-Use verified export. Scaffold, model configuration, and full-run cost remain in observation notes; no configurations are silently merged.",
+        "model_release_date": "2025-02-24",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-02-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-02-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-assistantbench-github-io-2b48f0139bd52f65",
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "source": "https://hal.cs.princeton.edu/assistantbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-1669-model-version-claude-3-7-sonnet--e43d102d079f3943"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-1375-146139f0c02ef34e",
+        "benchmark_id": "assistantbench",
+        "benchmark_version_id": "assistantbench-canonical",
+        "model_id": "model-claude-opus-4-1-6fed76395b63255e",
+        "model_configuration": "claude-opus-4-1",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-1",
+        "model_family_id": "anthropic-claude-opus-4-1",
+        "model": "Claude Opus 4.1",
+        "organization": "Anthropic",
+        "score": 0.1375,
+        "input_score": 0.1375,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "assistantbench-metric-v1",
+        "protocol_id": "assistantbench-source-export-v1",
+        "task_set_id": "assistantbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "assistantbench-canonical-score",
+        "evaluation_protocol": "AssistantBench fixed 214-task release; this series uses one result per underlying model from the HAL Browser-Use verified export. Scaffold, model configuration, and full-run cost remain in observation notes; no configurations are silently merged.",
+        "model_release_date": "2025-08-05",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-08-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-08-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-08-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-08-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-assistantbench-github-io-2b48f0139bd52f65",
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "source": "https://hal.cs.princeton.edu/assistantbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-1375-model-version-claude-opus-4-1-na-6feec436c2ccf2f0"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-118-687767f776913e5d",
+        "benchmark_id": "assistantbench",
+        "benchmark_version_id": "assistantbench-canonical",
+        "model_id": "model-claude-sonnet-4-5-1375953e5a053324",
+        "model_configuration": "claude-sonnet-4-5",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-sonnet-4-5",
+        "model_family_id": "anthropic-claude-sonnet-4-5",
+        "model": "Claude Sonnet 4.5",
+        "organization": "Anthropic",
+        "score": 0.118,
+        "input_score": 0.118,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "assistantbench-metric-v1",
+        "protocol_id": "assistantbench-source-export-v1",
+        "task_set_id": "assistantbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "assistantbench-canonical-score",
+        "evaluation_protocol": "AssistantBench fixed 214-task release; this series uses one result per underlying model from the HAL Browser-Use verified export. Scaffold, model configuration, and full-run cost remain in observation notes; no configurations are silently merged.",
+        "model_release_date": "2025-09-29",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-09-29",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-09-29",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-09-29",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-09-29",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-assistantbench-github-io-2b48f0139bd52f65",
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "source": "https://hal.cs.princeton.edu/assistantbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-1180-model-version-claude-sonnet-4-5--9a220226cc6183f8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-0262-dc6d1b323aa2f4a3",
+        "benchmark_id": "assistantbench",
+        "benchmark_version_id": "assistantbench-canonical",
+        "model_id": "model-gemini-2-0-flash-c7f695767f575f5b",
+        "model_configuration": "gemini-2-0-flash",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-0-flash",
+        "model_family_id": "google-gemini-2-0-flash",
+        "model": "Gemini 2.0 Flash",
+        "organization": "Google",
+        "score": 0.0262,
+        "input_score": 0.0262,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "assistantbench-metric-v1",
+        "protocol_id": "assistantbench-source-export-v1",
+        "task_set_id": "assistantbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "assistantbench-canonical-score",
+        "evaluation_protocol": "AssistantBench fixed 214-task release; this series uses one result per underlying model from the HAL Browser-Use verified export. Scaffold, model configuration, and full-run cost remain in observation notes; no configurations are silently merged.",
+        "model_release_date": "2024-12-11",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-12-11",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-11",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-12-11",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-11",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-assistantbench-github-io-2b48f0139bd52f65",
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "source": "https://hal.cs.princeton.edu/assistantbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-0262-model-version-gemini-2-0-flash-n-780ef4050c3a8f04"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": []
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-0262-dc6d1b323aa2f4a3",
+        "benchmark_id": "assistantbench",
+        "benchmark_version_id": "assistantbench-canonical",
+        "model_id": "model-gemini-2-0-flash-c7f695767f575f5b",
+        "model_configuration": "gemini-2-0-flash",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-0-flash",
+        "model_family_id": "google-gemini-2-0-flash",
+        "model": "Gemini 2.0 Flash",
+        "organization": "Google",
+        "score": 0.0262,
+        "input_score": 0.0262,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "assistantbench-metric-v1",
+        "protocol_id": "assistantbench-source-export-v1",
+        "task_set_id": "assistantbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "assistantbench-canonical-score",
+        "evaluation_protocol": "AssistantBench fixed 214-task release; this series uses one result per underlying model from the HAL Browser-Use verified export. Scaffold, model configuration, and full-run cost remain in observation notes; no configurations are silently merged.",
+        "model_release_date": "2024-12-11",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-12-11",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-11",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-12-11",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-11",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-assistantbench-github-io-2b48f0139bd52f65",
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "source": "https://hal.cs.princeton.edu/assistantbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-0262-model-version-gemini-2-0-flash-n-780ef4050c3a8f04"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2024-12-11",
+        "frontier_observation_ids": [
+          "obs-0-0262-dc6d1b323aa2f4a3"
+        ]
+      },
+      {
+        "observation_id": "obs-0-1669-6dcc031d49cf62a0",
+        "benchmark_id": "assistantbench",
+        "benchmark_version_id": "assistantbench-canonical",
+        "model_id": "model-claude-3-7-sonnet-105c2d3675a935dc",
+        "model_configuration": "claude-3-7-sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-7-sonnet",
+        "model_family_id": "anthropic-claude-3-7-sonnet",
+        "model": "Claude 3.7 Sonnet",
+        "organization": "Anthropic",
+        "score": 0.1669,
+        "input_score": 0.1669,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "assistantbench-metric-v1",
+        "protocol_id": "assistantbench-source-export-v1",
+        "task_set_id": "assistantbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "assistantbench-canonical-score",
+        "evaluation_protocol": "AssistantBench fixed 214-task release; this series uses one result per underlying model from the HAL Browser-Use verified export. Scaffold, model configuration, and full-run cost remain in observation notes; no configurations are silently merged.",
+        "model_release_date": "2025-02-24",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-02-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-02-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-assistantbench-github-io-2b48f0139bd52f65",
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "source": "https://hal.cs.princeton.edu/assistantbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-1669-model-version-claude-3-7-sonnet--e43d102d079f3943"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-02-24",
+        "frontier_observation_ids": [
+          "obs-0-1669-6dcc031d49cf62a0"
+        ]
+      },
+      {
+        "observation_id": "obs-0-1739-3547717cb356b7b8",
+        "benchmark_id": "assistantbench",
+        "benchmark_version_id": "assistantbench-canonical",
+        "model_id": "model-gpt-4-1-2a78dbfa263e7293",
+        "model_configuration": "gpt-4-1",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4-1",
+        "model_family_id": "openai-gpt-4-1",
+        "model": "GPT-4.1",
+        "organization": "OpenAI",
+        "score": 0.1739,
+        "input_score": 0.1739,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "assistantbench-metric-v1",
+        "protocol_id": "assistantbench-source-export-v1",
+        "task_set_id": "assistantbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "assistantbench-canonical-score",
+        "evaluation_protocol": "AssistantBench fixed 214-task release; this series uses one result per underlying model from the HAL Browser-Use verified export. Scaffold, model configuration, and full-run cost remain in observation notes; no configurations are silently merged.",
+        "model_release_date": "2025-04-14",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-04-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-04-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-assistantbench-github-io-2b48f0139bd52f65",
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "source": "https://hal.cs.princeton.edu/assistantbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-1739-model-version-gpt-4-1-name-gpt-4-d92485ac6fcbbdeb"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-04-14",
+        "frontier_observation_ids": [
+          "obs-0-1739-3547717cb356b7b8"
+        ]
+      },
+      {
+        "observation_id": "obs-0-3881-2d0644a57ec3fda8",
+        "benchmark_id": "assistantbench",
+        "benchmark_version_id": "assistantbench-canonical",
+        "model_id": "model-o3-medium-b0925616b588292e",
+        "model_configuration": "o3-medium",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-medium",
+        "model_family_id": "openai-o3-medium",
+        "model": "o3 Medium",
+        "organization": "OpenAI",
+        "score": 0.3881,
+        "input_score": 0.3881,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "assistantbench-metric-v1",
+        "protocol_id": "assistantbench-source-export-v1",
+        "task_set_id": "assistantbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "assistantbench-canonical-score",
+        "evaluation_protocol": "AssistantBench fixed 214-task release; this series uses one result per underlying model from the HAL Browser-Use verified export. Scaffold, model configuration, and full-run cost remain in observation notes; no configurations are silently merged.",
+        "model_release_date": "2025-04-16",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-04-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-assistantbench-github-io-2b48f0139bd52f65",
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "source": "https://hal.cs.princeton.edu/assistantbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-3881-model-version-o3-medium-name-o3--fd1972d32038dc0d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-04-16",
+        "frontier_observation_ids": [
+          "obs-0-2805-445a72bb81c02a5b",
+          "obs-0-3881-2d0644a57ec3fda8"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-0262-dc6d1b323aa2f4a3",
+        "benchmark_id": "assistantbench",
+        "benchmark_version_id": "assistantbench-canonical",
+        "model_id": "model-gemini-2-0-flash-c7f695767f575f5b",
+        "model_configuration": "gemini-2-0-flash",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-0-flash",
+        "model_family_id": "google-gemini-2-0-flash",
+        "model": "Gemini 2.0 Flash",
+        "organization": "Google",
+        "score": 0.0262,
+        "input_score": 0.0262,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "assistantbench-metric-v1",
+        "protocol_id": "assistantbench-source-export-v1",
+        "task_set_id": "assistantbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "assistantbench-canonical-score",
+        "evaluation_protocol": "AssistantBench fixed 214-task release; this series uses one result per underlying model from the HAL Browser-Use verified export. Scaffold, model configuration, and full-run cost remain in observation notes; no configurations are silently merged.",
+        "model_release_date": "2024-12-11",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-12-11",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-11",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-12-11",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-11",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-assistantbench-github-io-2b48f0139bd52f65",
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "source": "https://hal.cs.princeton.edu/assistantbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-0262-model-version-gemini-2-0-flash-n-780ef4050c3a8f04"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2024-12-11",
+        "frontier_observation_ids": [
+          "obs-0-0262-dc6d1b323aa2f4a3"
+        ]
+      },
+      {
+        "observation_id": "obs-0-1669-6dcc031d49cf62a0",
+        "benchmark_id": "assistantbench",
+        "benchmark_version_id": "assistantbench-canonical",
+        "model_id": "model-claude-3-7-sonnet-105c2d3675a935dc",
+        "model_configuration": "claude-3-7-sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-7-sonnet",
+        "model_family_id": "anthropic-claude-3-7-sonnet",
+        "model": "Claude 3.7 Sonnet",
+        "organization": "Anthropic",
+        "score": 0.1669,
+        "input_score": 0.1669,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "assistantbench-metric-v1",
+        "protocol_id": "assistantbench-source-export-v1",
+        "task_set_id": "assistantbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "assistantbench-canonical-score",
+        "evaluation_protocol": "AssistantBench fixed 214-task release; this series uses one result per underlying model from the HAL Browser-Use verified export. Scaffold, model configuration, and full-run cost remain in observation notes; no configurations are silently merged.",
+        "model_release_date": "2025-02-24",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-02-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-02-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-assistantbench-github-io-2b48f0139bd52f65",
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "source": "https://hal.cs.princeton.edu/assistantbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-1669-model-version-claude-3-7-sonnet--e43d102d079f3943"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-02-24",
+        "frontier_observation_ids": [
+          "obs-0-1669-6dcc031d49cf62a0"
+        ]
+      },
+      {
+        "observation_id": "obs-0-1739-3547717cb356b7b8",
+        "benchmark_id": "assistantbench",
+        "benchmark_version_id": "assistantbench-canonical",
+        "model_id": "model-gpt-4-1-2a78dbfa263e7293",
+        "model_configuration": "gpt-4-1",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4-1",
+        "model_family_id": "openai-gpt-4-1",
+        "model": "GPT-4.1",
+        "organization": "OpenAI",
+        "score": 0.1739,
+        "input_score": 0.1739,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "assistantbench-metric-v1",
+        "protocol_id": "assistantbench-source-export-v1",
+        "task_set_id": "assistantbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "assistantbench-canonical-score",
+        "evaluation_protocol": "AssistantBench fixed 214-task release; this series uses one result per underlying model from the HAL Browser-Use verified export. Scaffold, model configuration, and full-run cost remain in observation notes; no configurations are silently merged.",
+        "model_release_date": "2025-04-14",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-04-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-04-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-assistantbench-github-io-2b48f0139bd52f65",
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "source": "https://hal.cs.princeton.edu/assistantbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-1739-model-version-gpt-4-1-name-gpt-4-d92485ac6fcbbdeb"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-04-14",
+        "frontier_observation_ids": [
+          "obs-0-1739-3547717cb356b7b8"
+        ]
+      },
+      {
+        "observation_id": "obs-0-3881-2d0644a57ec3fda8",
+        "benchmark_id": "assistantbench",
+        "benchmark_version_id": "assistantbench-canonical",
+        "model_id": "model-o3-medium-b0925616b588292e",
+        "model_configuration": "o3-medium",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-medium",
+        "model_family_id": "openai-o3-medium",
+        "model": "o3 Medium",
+        "organization": "OpenAI",
+        "score": 0.3881,
+        "input_score": 0.3881,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "assistantbench-metric-v1",
+        "protocol_id": "assistantbench-source-export-v1",
+        "task_set_id": "assistantbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "assistantbench-canonical-score",
+        "evaluation_protocol": "AssistantBench fixed 214-task release; this series uses one result per underlying model from the HAL Browser-Use verified export. Scaffold, model configuration, and full-run cost remain in observation notes; no configurations are silently merged.",
+        "model_release_date": "2025-04-16",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-04-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-assistantbench-github-io-2b48f0139bd52f65",
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "source": "https://hal.cs.princeton.edu/assistantbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-3881-model-version-o3-medium-name-o3--fd1972d32038dc0d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-04-16",
+        "frontier_observation_ids": [
+          "obs-0-2805-445a72bb81c02a5b",
+          "obs-0-3881-2d0644a57ec3fda8"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-0262-dc6d1b323aa2f4a3",
+        "benchmark_id": "assistantbench",
+        "benchmark_version_id": "assistantbench-canonical",
+        "model_id": "model-gemini-2-0-flash-c7f695767f575f5b",
+        "model_configuration": "gemini-2-0-flash",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-0-flash",
+        "model_family_id": "google-gemini-2-0-flash",
+        "model": "Gemini 2.0 Flash",
+        "organization": "Google",
+        "score": 0.0262,
+        "input_score": 0.0262,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "assistantbench-metric-v1",
+        "protocol_id": "assistantbench-source-export-v1",
+        "task_set_id": "assistantbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "assistantbench-canonical-score",
+        "evaluation_protocol": "AssistantBench fixed 214-task release; this series uses one result per underlying model from the HAL Browser-Use verified export. Scaffold, model configuration, and full-run cost remain in observation notes; no configurations are silently merged.",
+        "model_release_date": "2024-12-11",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-12-11",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-12-11",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-12-11",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-12-11",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-assistantbench-github-io-2b48f0139bd52f65",
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "source": "https://hal.cs.princeton.edu/assistantbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-0262-model-version-gemini-2-0-flash-n-780ef4050c3a8f04"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2024-12-11",
+        "frontier_observation_ids": [
+          "obs-0-0262-dc6d1b323aa2f4a3"
+        ]
+      },
+      {
+        "observation_id": "obs-0-1669-6dcc031d49cf62a0",
+        "benchmark_id": "assistantbench",
+        "benchmark_version_id": "assistantbench-canonical",
+        "model_id": "model-claude-3-7-sonnet-105c2d3675a935dc",
+        "model_configuration": "claude-3-7-sonnet",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-3-7-sonnet",
+        "model_family_id": "anthropic-claude-3-7-sonnet",
+        "model": "Claude 3.7 Sonnet",
+        "organization": "Anthropic",
+        "score": 0.1669,
+        "input_score": 0.1669,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "assistantbench-metric-v1",
+        "protocol_id": "assistantbench-source-export-v1",
+        "task_set_id": "assistantbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "assistantbench-canonical-score",
+        "evaluation_protocol": "AssistantBench fixed 214-task release; this series uses one result per underlying model from the HAL Browser-Use verified export. Scaffold, model configuration, and full-run cost remain in observation notes; no configurations are silently merged.",
+        "model_release_date": "2025-02-24",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-02-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-02-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-02-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-02-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-assistantbench-github-io-2b48f0139bd52f65",
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "source": "https://hal.cs.princeton.edu/assistantbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-1669-model-version-claude-3-7-sonnet--e43d102d079f3943"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-02-24",
+        "frontier_observation_ids": [
+          "obs-0-1669-6dcc031d49cf62a0"
+        ]
+      },
+      {
+        "observation_id": "obs-0-1739-3547717cb356b7b8",
+        "benchmark_id": "assistantbench",
+        "benchmark_version_id": "assistantbench-canonical",
+        "model_id": "model-gpt-4-1-2a78dbfa263e7293",
+        "model_configuration": "gpt-4-1",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4-1",
+        "model_family_id": "openai-gpt-4-1",
+        "model": "GPT-4.1",
+        "organization": "OpenAI",
+        "score": 0.1739,
+        "input_score": 0.1739,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "assistantbench-metric-v1",
+        "protocol_id": "assistantbench-source-export-v1",
+        "task_set_id": "assistantbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "assistantbench-canonical-score",
+        "evaluation_protocol": "AssistantBench fixed 214-task release; this series uses one result per underlying model from the HAL Browser-Use verified export. Scaffold, model configuration, and full-run cost remain in observation notes; no configurations are silently merged.",
+        "model_release_date": "2025-04-14",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-04-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-04-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-assistantbench-github-io-2b48f0139bd52f65",
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "source": "https://hal.cs.princeton.edu/assistantbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-1739-model-version-gpt-4-1-name-gpt-4-d92485ac6fcbbdeb"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-04-14",
+        "frontier_observation_ids": [
+          "obs-0-1739-3547717cb356b7b8"
+        ]
+      },
+      {
+        "observation_id": "obs-0-3881-2d0644a57ec3fda8",
+        "benchmark_id": "assistantbench",
+        "benchmark_version_id": "assistantbench-canonical",
+        "model_id": "model-o3-medium-b0925616b588292e",
+        "model_configuration": "o3-medium",
+        "model_identity_organization": "openai",
+        "model_label_id": "o3-medium",
+        "model_family_id": "openai-o3-medium",
+        "model": "o3 Medium",
+        "organization": "OpenAI",
+        "score": 0.3881,
+        "input_score": 0.3881,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "assistantbench-metric-v1",
+        "protocol_id": "assistantbench-source-export-v1",
+        "task_set_id": "assistantbench-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "assistantbench-canonical-score",
+        "evaluation_protocol": "AssistantBench fixed 214-task release; this series uses one result per underlying model from the HAL Browser-Use verified export. Scaffold, model configuration, and full-run cost remain in observation notes; no configurations are silently merged.",
+        "model_release_date": "2025-04-16",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2025-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-04-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-assistantbench-github-io-2b48f0139bd52f65",
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "score_source_ids": [
+          "resource-https-hal-cs-princeton-edu-assistantbench-c3c1c89747c21ca1"
+        ],
+        "source": "https://hal.cs.princeton.edu/assistantbench",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-accuracy-0-3881-model-version-o3-medium-name-o3--fd1972d32038dc0d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [],
+        "plot_date": "2025-04-16",
+        "frontier_observation_ids": [
+          "obs-0-2805-445a72bb81c02a5b",
+          "obs-0-3881-2d0644a57ec3fda8"
+        ]
+      }
+    ],
+    "reported_frontier": [],
+    "historical_frontier": [],
+    "retrospective_observations": [],
+    "observed_frontier": 0.3881,
+    "capability_frontier_value": 0.3881,
+    "reported_frontier_value": null,
+    "current_frontier": 0.3881,
+    "normalized_progress": 0.3881,
+    "normalized_headroom": 0.6119,
+    "threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 775
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 775
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 775
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 775
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 775
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 775
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T80": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T90": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.42857142857142855,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google"
+      ],
+      "panel_size": 7,
+      "status": "medium"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-assistantbench-github-io-2b48f0139bd52f65"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "unknown_public_dates",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": true,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": true,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

@@ -1,0 +1,990 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "medcalc-bench-paper1047",
+    "name": "MedCalc-Bench Paper-1047",
+    "domain": "Biomedical Engineering",
+    "release": "2024-06-17",
+    "source": "https://github.com/ncbi-nlp/MedCalc-Bench",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Model",
+    "tags": [
+      "clinical calculation",
+      "numeric",
+      "decision support"
+    ],
+    "metric": "Accuracy",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "medcalc-bench-paper1047-metric-v1",
+    "protocol_id": "medcalc-bench-paper1047-source-export-v1",
+    "canonical_score": {
+      "series_id": "medcalc-bench-paper1047-canonical-score",
+      "role": "canonical",
+      "metric_id": "medcalc-bench-paper1047-metric-v1",
+      "metric_name": "Accuracy",
+      "protocol_id": "medcalc-bench-paper1047-source-export-v1",
+      "task_set_id": "medcalc-bench-paper1047-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "medcalc-bench-paper1047-canonical",
+    "summary": {
+      "en": "MedCalc-Bench tests calculation-grounded clinical decision support across 55 medical calculators.",
+      "zh": "MedCalc-Bench \u4f7f\u7528 55 \u7c7b\u533b\u5b66\u8ba1\u7b97\u5668\u6d4b\u8bd5\u4ee5\u8ba1\u7b97\u4e3a\u57fa\u7840\u7684\u4e34\u5e8a\u51b3\u7b56\u652f\u6301\u80fd\u529b\u3002"
+    },
+    "task_format": {
+      "en": "Given a patient note and request, the model extracts variables and returns a numeric, date, risk, severity, or diagnostic result.",
+      "zh": "\u6a21\u578b\u6839\u636e\u60a3\u8005\u8bb0\u5f55\u548c\u8bf7\u6c42\u62bd\u53d6\u53d8\u91cf\uff0c\u5e76\u8f93\u51fa\u6570\u503c\u3001\u65e5\u671f\u3001\u98ce\u9669\u3001\u4e25\u91cd\u5ea6\u6216\u8bca\u65ad\u7ed3\u679c\u3002"
+    },
+    "scoring": {
+      "metric_name": "Micro accuracy",
+      "explanation": {
+        "en": "The score is accuracy over the paper's 1,047 cases using exact or published 5%-tolerance checks.",
+        "zh": "\u5206\u6570\u662f\u5728\u8bba\u6587\u56fa\u5b9a 1,047 \u4e2a\u75c5\u4f8b\u4e0a\uff0c\u6309\u7cbe\u786e\u5339\u914d\u6216\u89c4\u5b9a\u7684 5% \u5bb9\u5dee\u8ba1\u7b97\u7684\u6b63\u786e\u7387\u3002"
+      }
+    },
+    "evaluation_target": "final_output",
+    "observation_count": 4,
+    "evidence_record_count": 4,
+    "observations": [
+      {
+        "observation_id": "obs-0-349-77e0339d1fc290bc",
+        "benchmark_id": "medcalc-bench-paper1047",
+        "benchmark_version_id": "medcalc-bench-paper1047-canonical",
+        "model_id": "model-gpt-3-5-turbo-130d6c1b27b8d572",
+        "model_configuration": "GPT-3.5-Turbo",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-3-5-turbo",
+        "model_family_id": "openai-gpt-3-5-turbo",
+        "model": "GPT-3.5-Turbo",
+        "organization": "OpenAI",
+        "score": 0.349,
+        "input_score": 0.349,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "medcalc-bench-paper1047-metric-v1",
+        "protocol_id": "medcalc-bench-paper1047-source-export-v1",
+        "task_set_id": "medcalc-bench-paper1047-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "medcalc-bench-paper1047-canonical-score",
+        "evaluation_protocol": "MedCalc-Bench paper 1,047-case set, one-shot chain-of-thought, one curated calculator-specific exemplar, final-answer scoring.",
+        "model_release_date": "2022-11-30",
+        "evaluation_date": null,
+        "result_public_date": "2024-06-17",
+        "source_publication_date": "2024-06-17",
+        "observation_date": "2022-11-30",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2022-11-30",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-06-17",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2022-11-30",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2022-11-30",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-06-17",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-ncbi-nlp-medcalc-bench-32ac4969f53b7bd5",
+          "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+        ],
+        "score_source_ids": [
+          "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+        ],
+        "source": "https://proceedings.neurips.cc/paper_files/paper/2024/file/99e81750f3fdfcaf9613db2dbf4bd623-Paper-Datasets_and_Benchmarks_Track.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-medcalc-gpt35-b9f4a5cf26aada75"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "medcalc-gpt35"
+        ]
+      },
+      {
+        "observation_id": "obs-0-509-2ba39680cc925064",
+        "benchmark_id": "medcalc-bench-paper1047",
+        "benchmark_version_id": "medcalc-bench-paper1047-canonical",
+        "model_id": "model-gpt-4-ebd564006b811472",
+        "model_configuration": "GPT-4",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4",
+        "model_family_id": "openai-gpt-4",
+        "model": "GPT-4",
+        "organization": "OpenAI",
+        "score": 0.509,
+        "input_score": 0.509,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "medcalc-bench-paper1047-metric-v1",
+        "protocol_id": "medcalc-bench-paper1047-source-export-v1",
+        "task_set_id": "medcalc-bench-paper1047-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "medcalc-bench-paper1047-canonical-score",
+        "evaluation_protocol": "MedCalc-Bench paper 1,047-case set, one-shot chain-of-thought, one curated calculator-specific exemplar, final-answer scoring.",
+        "model_release_date": "2023-03-14",
+        "evaluation_date": null,
+        "result_public_date": "2024-06-17",
+        "source_publication_date": "2024-06-17",
+        "observation_date": "2023-03-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-03-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-06-17",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2023-03-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-03-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-06-17",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-ncbi-nlp-medcalc-bench-32ac4969f53b7bd5",
+          "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+        ],
+        "score_source_ids": [
+          "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+        ],
+        "source": "https://proceedings.neurips.cc/paper_files/paper/2024/file/99e81750f3fdfcaf9613db2dbf4bd623-Paper-Datasets_and_Benchmarks_Track.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-medcalc-gpt4-6684acef9cabbd8a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "medcalc-gpt4"
+        ]
+      },
+      {
+        "observation_id": "obs-0-271-689dc51d869046a5",
+        "benchmark_id": "medcalc-bench-paper1047",
+        "benchmark_version_id": "medcalc-bench-paper1047-canonical",
+        "model_id": "model-meta-llama-3-8b-instruct-b62172ae37855bdd",
+        "model_configuration": "Meta-Llama-3-8B-Instruct",
+        "model_identity_organization": "meta",
+        "model_label_id": "meta-llama-3-8b-instruct",
+        "model_family_id": "meta-meta-llama-3-8b-instruct",
+        "model": "Meta-Llama-3-8B-Instruct",
+        "organization": "Meta",
+        "score": 0.271,
+        "input_score": 0.271,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "medcalc-bench-paper1047-metric-v1",
+        "protocol_id": "medcalc-bench-paper1047-source-export-v1",
+        "task_set_id": "medcalc-bench-paper1047-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "medcalc-bench-paper1047-canonical-score",
+        "evaluation_protocol": "MedCalc-Bench paper 1,047-case set, one-shot chain-of-thought, one curated calculator-specific exemplar, final-answer scoring.",
+        "model_release_date": "2024-04-18",
+        "evaluation_date": null,
+        "result_public_date": "2024-06-17",
+        "source_publication_date": "2024-06-17",
+        "observation_date": "2024-04-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-04-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-06-17",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-04-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-04-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-06-17",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-ncbi-nlp-medcalc-bench-32ac4969f53b7bd5",
+          "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+        ],
+        "score_source_ids": [
+          "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+        ],
+        "source": "https://proceedings.neurips.cc/paper_files/paper/2024/file/99e81750f3fdfcaf9613db2dbf4bd623-Paper-Datasets_and_Benchmarks_Track.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-medcalc-llama3-8b-1777b1b85cf74d94"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "medcalc-llama3-8b"
+        ]
+      },
+      {
+        "observation_id": "obs-0-395-d856a2d2e467a728",
+        "benchmark_id": "medcalc-bench-paper1047",
+        "benchmark_version_id": "medcalc-bench-paper1047-canonical",
+        "model_id": "model-meta-llama-3-70b-instruct-adb67a47049b509a",
+        "model_configuration": "Meta-Llama-3-70B-Instruct",
+        "model_identity_organization": "meta",
+        "model_label_id": "meta-llama-3-70b-instruct",
+        "model_family_id": "meta-meta-llama-3-70b-instruct",
+        "model": "Meta-Llama-3-70B-Instruct",
+        "organization": "Meta",
+        "score": 0.395,
+        "input_score": 0.395,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "medcalc-bench-paper1047-metric-v1",
+        "protocol_id": "medcalc-bench-paper1047-source-export-v1",
+        "task_set_id": "medcalc-bench-paper1047-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "medcalc-bench-paper1047-canonical-score",
+        "evaluation_protocol": "MedCalc-Bench paper 1,047-case set, one-shot chain-of-thought, one curated calculator-specific exemplar, final-answer scoring.",
+        "model_release_date": "2024-04-18",
+        "evaluation_date": null,
+        "result_public_date": "2024-06-17",
+        "source_publication_date": "2024-06-17",
+        "observation_date": "2024-04-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-04-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-06-17",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-04-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-04-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-06-17",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-ncbi-nlp-medcalc-bench-32ac4969f53b7bd5",
+          "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+        ],
+        "score_source_ids": [
+          "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+        ],
+        "source": "https://proceedings.neurips.cc/paper_files/paper/2024/file/99e81750f3fdfcaf9613db2dbf4bd623-Paper-Datasets_and_Benchmarks_Track.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-medcalc-llama3-70b-5abc2b388330b53b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "medcalc-llama3-70b"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-509-2ba39680cc925064",
+        "benchmark_id": "medcalc-bench-paper1047",
+        "benchmark_version_id": "medcalc-bench-paper1047-canonical",
+        "model_id": "model-gpt-4-ebd564006b811472",
+        "model_configuration": "GPT-4",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4",
+        "model_family_id": "openai-gpt-4",
+        "model": "GPT-4",
+        "organization": "OpenAI",
+        "score": 0.509,
+        "input_score": 0.509,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "medcalc-bench-paper1047-metric-v1",
+        "protocol_id": "medcalc-bench-paper1047-source-export-v1",
+        "task_set_id": "medcalc-bench-paper1047-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "medcalc-bench-paper1047-canonical-score",
+        "evaluation_protocol": "MedCalc-Bench paper 1,047-case set, one-shot chain-of-thought, one curated calculator-specific exemplar, final-answer scoring.",
+        "model_release_date": "2023-03-14",
+        "evaluation_date": null,
+        "result_public_date": "2024-06-17",
+        "source_publication_date": "2024-06-17",
+        "observation_date": "2023-03-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-03-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-06-17",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-06-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-03-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-06-17",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-ncbi-nlp-medcalc-bench-32ac4969f53b7bd5",
+          "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+        ],
+        "score_source_ids": [
+          "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+        ],
+        "source": "https://proceedings.neurips.cc/paper_files/paper/2024/file/99e81750f3fdfcaf9613db2dbf4bd623-Paper-Datasets_and_Benchmarks_Track.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-medcalc-gpt4-6684acef9cabbd8a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "medcalc-gpt4"
+        ],
+        "plot_date": "2024-06-17",
+        "frontier_observation_ids": [
+          "obs-0-271-689dc51d869046a5",
+          "obs-0-349-77e0339d1fc290bc",
+          "obs-0-395-d856a2d2e467a728",
+          "obs-0-509-2ba39680cc925064"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-509-2ba39680cc925064",
+        "benchmark_id": "medcalc-bench-paper1047",
+        "benchmark_version_id": "medcalc-bench-paper1047-canonical",
+        "model_id": "model-gpt-4-ebd564006b811472",
+        "model_configuration": "GPT-4",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4",
+        "model_family_id": "openai-gpt-4",
+        "model": "GPT-4",
+        "organization": "OpenAI",
+        "score": 0.509,
+        "input_score": 0.509,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "medcalc-bench-paper1047-metric-v1",
+        "protocol_id": "medcalc-bench-paper1047-source-export-v1",
+        "task_set_id": "medcalc-bench-paper1047-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "medcalc-bench-paper1047-canonical-score",
+        "evaluation_protocol": "MedCalc-Bench paper 1,047-case set, one-shot chain-of-thought, one curated calculator-specific exemplar, final-answer scoring.",
+        "model_release_date": "2023-03-14",
+        "evaluation_date": null,
+        "result_public_date": "2024-06-17",
+        "source_publication_date": "2024-06-17",
+        "observation_date": "2023-03-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-03-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-06-17",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-06-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-03-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-06-17",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-ncbi-nlp-medcalc-bench-32ac4969f53b7bd5",
+          "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+        ],
+        "score_source_ids": [
+          "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+        ],
+        "source": "https://proceedings.neurips.cc/paper_files/paper/2024/file/99e81750f3fdfcaf9613db2dbf4bd623-Paper-Datasets_and_Benchmarks_Track.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-medcalc-gpt4-6684acef9cabbd8a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "medcalc-gpt4"
+        ],
+        "plot_date": "2024-06-17",
+        "frontier_observation_ids": [
+          "obs-0-271-689dc51d869046a5",
+          "obs-0-349-77e0339d1fc290bc",
+          "obs-0-395-d856a2d2e467a728",
+          "obs-0-509-2ba39680cc925064"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-509-2ba39680cc925064",
+        "benchmark_id": "medcalc-bench-paper1047",
+        "benchmark_version_id": "medcalc-bench-paper1047-canonical",
+        "model_id": "model-gpt-4-ebd564006b811472",
+        "model_configuration": "GPT-4",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4",
+        "model_family_id": "openai-gpt-4",
+        "model": "GPT-4",
+        "organization": "OpenAI",
+        "score": 0.509,
+        "input_score": 0.509,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "medcalc-bench-paper1047-metric-v1",
+        "protocol_id": "medcalc-bench-paper1047-source-export-v1",
+        "task_set_id": "medcalc-bench-paper1047-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "medcalc-bench-paper1047-canonical-score",
+        "evaluation_protocol": "MedCalc-Bench paper 1,047-case set, one-shot chain-of-thought, one curated calculator-specific exemplar, final-answer scoring.",
+        "model_release_date": "2023-03-14",
+        "evaluation_date": null,
+        "result_public_date": "2024-06-17",
+        "source_publication_date": "2024-06-17",
+        "observation_date": "2023-03-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-03-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-06-17",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-06-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-03-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-06-17",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-ncbi-nlp-medcalc-bench-32ac4969f53b7bd5",
+          "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+        ],
+        "score_source_ids": [
+          "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+        ],
+        "source": "https://proceedings.neurips.cc/paper_files/paper/2024/file/99e81750f3fdfcaf9613db2dbf4bd623-Paper-Datasets_and_Benchmarks_Track.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-medcalc-gpt4-6684acef9cabbd8a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "medcalc-gpt4"
+        ],
+        "plot_date": "2024-06-17",
+        "frontier_observation_ids": [
+          "obs-0-271-689dc51d869046a5",
+          "obs-0-349-77e0339d1fc290bc",
+          "obs-0-395-d856a2d2e467a728",
+          "obs-0-509-2ba39680cc925064"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-509-2ba39680cc925064",
+        "benchmark_id": "medcalc-bench-paper1047",
+        "benchmark_version_id": "medcalc-bench-paper1047-canonical",
+        "model_id": "model-gpt-4-ebd564006b811472",
+        "model_configuration": "GPT-4",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4",
+        "model_family_id": "openai-gpt-4",
+        "model": "GPT-4",
+        "organization": "OpenAI",
+        "score": 0.509,
+        "input_score": 0.509,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "medcalc-bench-paper1047-metric-v1",
+        "protocol_id": "medcalc-bench-paper1047-source-export-v1",
+        "task_set_id": "medcalc-bench-paper1047-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "medcalc-bench-paper1047-canonical-score",
+        "evaluation_protocol": "MedCalc-Bench paper 1,047-case set, one-shot chain-of-thought, one curated calculator-specific exemplar, final-answer scoring.",
+        "model_release_date": "2023-03-14",
+        "evaluation_date": null,
+        "result_public_date": "2024-06-17",
+        "source_publication_date": "2024-06-17",
+        "observation_date": "2023-03-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-03-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-06-17",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-06-17",
+        "date_kind": "result first-public date",
+        "capability_date": "2023-03-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-06-17",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-ncbi-nlp-medcalc-bench-32ac4969f53b7bd5",
+          "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+        ],
+        "score_source_ids": [
+          "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+        ],
+        "source": "https://proceedings.neurips.cc/paper_files/paper/2024/file/99e81750f3fdfcaf9613db2dbf4bd623-Paper-Datasets_and_Benchmarks_Track.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-medcalc-gpt4-6684acef9cabbd8a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "medcalc-gpt4"
+        ],
+        "plot_date": "2024-06-17",
+        "frontier_observation_ids": [
+          "obs-0-271-689dc51d869046a5",
+          "obs-0-349-77e0339d1fc290bc",
+          "obs-0-395-d856a2d2e467a728",
+          "obs-0-509-2ba39680cc925064"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-509-2ba39680cc925064",
+        "benchmark_id": "medcalc-bench-paper1047",
+        "benchmark_version_id": "medcalc-bench-paper1047-canonical",
+        "model_id": "model-gpt-4-ebd564006b811472",
+        "model_configuration": "GPT-4",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4",
+        "model_family_id": "openai-gpt-4",
+        "model": "GPT-4",
+        "organization": "OpenAI",
+        "score": 0.509,
+        "input_score": 0.509,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "medcalc-bench-paper1047-metric-v1",
+        "protocol_id": "medcalc-bench-paper1047-source-export-v1",
+        "task_set_id": "medcalc-bench-paper1047-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "medcalc-bench-paper1047-canonical-score",
+        "evaluation_protocol": "MedCalc-Bench paper 1,047-case set, one-shot chain-of-thought, one curated calculator-specific exemplar, final-answer scoring.",
+        "model_release_date": "2023-03-14",
+        "evaluation_date": null,
+        "result_public_date": "2024-06-17",
+        "source_publication_date": "2024-06-17",
+        "observation_date": "2023-03-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-03-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-06-17",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-06-17",
+        "date_kind": "result first-public date",
+        "capability_date": "2023-03-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-06-17",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-ncbi-nlp-medcalc-bench-32ac4969f53b7bd5",
+          "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+        ],
+        "score_source_ids": [
+          "resource-https-proceedings-neurips-cc-paper-files-paper-2-81f5566b3b254680"
+        ],
+        "source": "https://proceedings.neurips.cc/paper_files/paper/2024/file/99e81750f3fdfcaf9613db2dbf4bd623-Paper-Datasets_and_Benchmarks_Track.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-medcalc-gpt4-6684acef9cabbd8a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "medcalc-gpt4"
+        ],
+        "plot_date": "2024-06-17",
+        "frontier_observation_ids": [
+          "obs-0-271-689dc51d869046a5",
+          "obs-0-349-77e0339d1fc290bc",
+          "obs-0-395-d856a2d2e467a728",
+          "obs-0-509-2ba39680cc925064"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.509,
+    "capability_frontier_value": 0.509,
+    "reported_frontier_value": 0.509,
+    "current_frontier": 0.509,
+    "normalized_progress": 0.509,
+    "normalized_headroom": 0.491,
+    "threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2024-06-17"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 811
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 811
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2024-06-17"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 811
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 811
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2024-06-17"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 811
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 811
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.2857142857142857,
+      "represented_organizations": [
+        "OpenAI",
+        "Meta"
+      ],
+      "panel_size": 7,
+      "status": "low"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-github-com-ncbi-nlp-medcalc-bench-32ac4969f53b7bd5"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": true,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

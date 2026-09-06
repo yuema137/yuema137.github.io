@@ -1,0 +1,1063 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "physbench-seq",
+    "name": "PhysBench \u2014 Seq",
+    "domain": "Physics",
+    "release": "2024-09-23",
+    "source": "https://physbench.github.io/",
+    "floor": 0.25,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.25,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Model",
+    "tags": [
+      "multimodal",
+      "video",
+      "physical world"
+    ],
+    "metric": "Accuracy",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "physbench-seq-metric-v1",
+    "protocol_id": "physbench-seq-source-export-v1",
+    "canonical_score": {
+      "series_id": "physbench-seq-canonical-score",
+      "role": "canonical",
+      "metric_id": "physbench-seq-metric-v1",
+      "metric_name": "Accuracy",
+      "protocol_id": "physbench-seq-source-export-v1",
+      "task_set_id": "physbench-seq-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.25,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "physbench-seq-canonical",
+    "summary": {
+      "en": "PhysBench tests physical properties, relationships, scenes, and dynamics using text with image or sequential video-frame inputs.",
+      "zh": "PhysBench \u4f7f\u7528\u6587\u672c\u3001\u56fe\u50cf\u548c\u6309\u987a\u5e8f\u8f93\u5165\u7684\u89c6\u9891\u5e27\uff0c\u6d4b\u8bd5\u7269\u7406\u5c5e\u6027\u3001\u5173\u7cfb\u3001\u573a\u666f\u548c\u52a8\u6001\u7406\u89e3\u80fd\u529b\u3002"
+    },
+    "task_format": {
+      "en": "The model receives text plus images or sequentially sampled video frames and selects one of four answers on the fixed full test set.",
+      "zh": "\u6a21\u578b\u4f1a\u6536\u5230\u6587\u672c\u4e0e\u56fe\u50cf\u6216\u6309\u987a\u5e8f\u91c7\u6837\u7684\u89c6\u9891\u5e27\uff0c\u5e76\u5728\u56fa\u5b9a full test set \u4e0a\u56de\u7b54\u56db\u9009\u4e00\u95ee\u9898\u3002"
+    },
+    "scoring": {
+      "metric_name": "Full-test exact accuracy",
+      "explanation": {
+        "en": "The score is exact-answer accuracy across all 10,002 PhysBench test items under the Seq input protocol.",
+        "zh": "\u5206\u6570\u662f\u5728 Seq input protocol \u4e0b\uff0c\u5168\u90e8 10,002 \u9053 PhysBench test item \u7684 exact-answer accuracy\u3002"
+      }
+    },
+    "evaluation_target": "final_output",
+    "observation_count": 5,
+    "evidence_record_count": 5,
+    "observations": [
+      {
+        "observation_id": "obs-0-4126-6f3fd8a8ccc573c4",
+        "benchmark_id": "physbench-seq",
+        "benchmark_version_id": "physbench-seq-canonical",
+        "model_id": "model-gpt-4v-1ec31e4d88cb5975",
+        "model_configuration": "GPT-4V",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4v",
+        "model_family_id": "openai-gpt-4v",
+        "model": "GPT-4V",
+        "organization": "OpenAI",
+        "score": 0.4126,
+        "input_score": 0.4126,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "physbench-seq-metric-v1",
+        "protocol_id": "physbench-seq-source-export-v1",
+        "task_set_id": "physbench-seq-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "physbench-seq-canonical-score",
+        "evaluation_protocol": "PhysBench fixed 10,002-item full test set, Seq input protocol, zero-shot exact-choice accuracy. Merge inputs, reduced subsets, and tool-assisted PhysAgent results are excluded.",
+        "model_release_date": "2023-09-25",
+        "evaluation_date": null,
+        "result_public_date": "2024-09-23",
+        "source_publication_date": "2024-09-23",
+        "observation_date": "2023-09-25",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2023-09-25",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-physbench-github-io-946861211ade6b4f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-physbench-github-io-946861211ade6b4f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-09-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2023-09-25",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2023-09-25",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-09-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-physbench-github-io-946861211ade6b4f"
+        ],
+        "score_source_ids": [
+          "resource-https-physbench-github-io-946861211ade6b4f"
+        ],
+        "source": "https://physbench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-physbench-gpt4v-866b1567de71d3ac"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "physbench-gpt4v"
+        ]
+      },
+      {
+        "observation_id": "obs-0-4315-8d99e1dc7bd1bfd1",
+        "benchmark_id": "physbench-seq",
+        "benchmark_version_id": "physbench-seq-canonical",
+        "model_id": "model-gpt-4o-mini-12f93bf5e5d60f51",
+        "model_configuration": "GPT-4o-mini",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o-mini",
+        "model_family_id": "openai-gpt-4o-mini",
+        "model": "GPT-4o-mini",
+        "organization": "OpenAI",
+        "score": 0.4315,
+        "input_score": 0.4315,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "physbench-seq-metric-v1",
+        "protocol_id": "physbench-seq-source-export-v1",
+        "task_set_id": "physbench-seq-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "physbench-seq-canonical-score",
+        "evaluation_protocol": "PhysBench fixed 10,002-item full test set, Seq input protocol, zero-shot exact-choice accuracy. Merge inputs, reduced subsets, and tool-assisted PhysAgent results are excluded.",
+        "model_release_date": "2024-07-18",
+        "evaluation_date": null,
+        "result_public_date": "2024-09-23",
+        "source_publication_date": "2024-09-23",
+        "observation_date": "2024-07-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-07-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-physbench-github-io-946861211ade6b4f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-physbench-github-io-946861211ade6b4f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-09-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-07-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-07-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-09-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-physbench-github-io-946861211ade6b4f"
+        ],
+        "score_source_ids": [
+          "resource-https-physbench-github-io-946861211ade6b4f"
+        ],
+        "source": "https://physbench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-physbench-gpt4o-mini-f2a70832c383fc21"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "physbench-gpt4o-mini"
+        ]
+      },
+      {
+        "observation_id": "obs-0-4607-7993a436ee8b59af",
+        "benchmark_id": "physbench-seq",
+        "benchmark_version_id": "physbench-seq-canonical",
+        "model_id": "model-gemini-1-5-flash-f76acf839a19e6d6",
+        "model_configuration": "Gemini-1.5-Flash",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-1-5-flash",
+        "model_family_id": "google-gemini-1-5-flash",
+        "model": "Gemini-1.5-Flash",
+        "organization": "Google",
+        "score": 0.4607,
+        "input_score": 0.4607,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "physbench-seq-metric-v1",
+        "protocol_id": "physbench-seq-source-export-v1",
+        "task_set_id": "physbench-seq-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "physbench-seq-canonical-score",
+        "evaluation_protocol": "PhysBench fixed 10,002-item full test set, Seq input protocol, zero-shot exact-choice accuracy. Merge inputs, reduced subsets, and tool-assisted PhysAgent results are excluded.",
+        "model_release_date": "2024-05-14",
+        "evaluation_date": null,
+        "result_public_date": "2024-09-23",
+        "source_publication_date": "2024-09-23",
+        "observation_date": "2024-05-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-physbench-github-io-946861211ade6b4f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-physbench-github-io-946861211ade6b4f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-09-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-05-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-09-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-physbench-github-io-946861211ade6b4f"
+        ],
+        "score_source_ids": [
+          "resource-https-physbench-github-io-946861211ade6b4f"
+        ],
+        "source": "https://physbench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-physbench-gemini15-flash-978073391c591fb6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "physbench-gemini15-flash"
+        ]
+      },
+      {
+        "observation_id": "obs-0-4911-4ffd4ff6d9472159",
+        "benchmark_id": "physbench-seq",
+        "benchmark_version_id": "physbench-seq-canonical",
+        "model_id": "model-gemini-1-5-pro-cbb82d54e094a69c",
+        "model_configuration": "Gemini-1.5-Pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-1-5-pro",
+        "model_family_id": "google-gemini-1-5-pro",
+        "model": "Gemini-1.5-Pro",
+        "organization": "Google",
+        "score": 0.4911,
+        "input_score": 0.4911,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "physbench-seq-metric-v1",
+        "protocol_id": "physbench-seq-source-export-v1",
+        "task_set_id": "physbench-seq-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "physbench-seq-canonical-score",
+        "evaluation_protocol": "PhysBench fixed 10,002-item full test set, Seq input protocol, zero-shot exact-choice accuracy. Merge inputs, reduced subsets, and tool-assisted PhysAgent results are excluded.",
+        "model_release_date": "2024-02-15",
+        "evaluation_date": null,
+        "result_public_date": "2024-09-23",
+        "source_publication_date": "2024-09-23",
+        "observation_date": "2024-02-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-02-15",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-physbench-github-io-946861211ade6b4f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-physbench-github-io-946861211ade6b4f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-09-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-02-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-02-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-09-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-physbench-github-io-946861211ade6b4f"
+        ],
+        "score_source_ids": [
+          "resource-https-physbench-github-io-946861211ade6b4f"
+        ],
+        "source": "https://physbench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-physbench-gemini15-pro-0d387393f9c86c9d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "physbench-gemini15-pro"
+        ]
+      },
+      {
+        "observation_id": "obs-0-4949-7a06bbe54a1b5f44",
+        "benchmark_id": "physbench-seq",
+        "benchmark_version_id": "physbench-seq-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.4949,
+        "input_score": 0.4949,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "physbench-seq-metric-v1",
+        "protocol_id": "physbench-seq-source-export-v1",
+        "task_set_id": "physbench-seq-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "physbench-seq-canonical-score",
+        "evaluation_protocol": "PhysBench fixed 10,002-item full test set, Seq input protocol, zero-shot exact-choice accuracy. Merge inputs, reduced subsets, and tool-assisted PhysAgent results are excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2024-09-23",
+        "source_publication_date": "2024-09-23",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-physbench-github-io-946861211ade6b4f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-physbench-github-io-946861211ade6b4f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-09-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-05-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-09-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-physbench-github-io-946861211ade6b4f"
+        ],
+        "score_source_ids": [
+          "resource-https-physbench-github-io-946861211ade6b4f"
+        ],
+        "source": "https://physbench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-physbench-gpt4o-a6f02843077b1f95"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "physbench-gpt4o"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-4949-7a06bbe54a1b5f44",
+        "benchmark_id": "physbench-seq",
+        "benchmark_version_id": "physbench-seq-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.4949,
+        "input_score": 0.4949,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "physbench-seq-metric-v1",
+        "protocol_id": "physbench-seq-source-export-v1",
+        "task_set_id": "physbench-seq-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "physbench-seq-canonical-score",
+        "evaluation_protocol": "PhysBench fixed 10,002-item full test set, Seq input protocol, zero-shot exact-choice accuracy. Merge inputs, reduced subsets, and tool-assisted PhysAgent results are excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2024-09-23",
+        "source_publication_date": "2024-09-23",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-physbench-github-io-946861211ade6b4f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-physbench-github-io-946861211ade6b4f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-09-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-09-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-09-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-physbench-github-io-946861211ade6b4f"
+        ],
+        "score_source_ids": [
+          "resource-https-physbench-github-io-946861211ade6b4f"
+        ],
+        "source": "https://physbench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-physbench-gpt4o-a6f02843077b1f95"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "physbench-gpt4o"
+        ],
+        "plot_date": "2024-09-23",
+        "frontier_observation_ids": [
+          "obs-0-4126-6f3fd8a8ccc573c4",
+          "obs-0-4315-8d99e1dc7bd1bfd1",
+          "obs-0-4607-7993a436ee8b59af",
+          "obs-0-4911-4ffd4ff6d9472159",
+          "obs-0-4949-7a06bbe54a1b5f44"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-4949-7a06bbe54a1b5f44",
+        "benchmark_id": "physbench-seq",
+        "benchmark_version_id": "physbench-seq-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.4949,
+        "input_score": 0.4949,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "physbench-seq-metric-v1",
+        "protocol_id": "physbench-seq-source-export-v1",
+        "task_set_id": "physbench-seq-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "physbench-seq-canonical-score",
+        "evaluation_protocol": "PhysBench fixed 10,002-item full test set, Seq input protocol, zero-shot exact-choice accuracy. Merge inputs, reduced subsets, and tool-assisted PhysAgent results are excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2024-09-23",
+        "source_publication_date": "2024-09-23",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-physbench-github-io-946861211ade6b4f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-physbench-github-io-946861211ade6b4f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-09-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-09-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-09-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-physbench-github-io-946861211ade6b4f"
+        ],
+        "score_source_ids": [
+          "resource-https-physbench-github-io-946861211ade6b4f"
+        ],
+        "source": "https://physbench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-physbench-gpt4o-a6f02843077b1f95"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "physbench-gpt4o"
+        ],
+        "plot_date": "2024-09-23",
+        "frontier_observation_ids": [
+          "obs-0-4126-6f3fd8a8ccc573c4",
+          "obs-0-4315-8d99e1dc7bd1bfd1",
+          "obs-0-4607-7993a436ee8b59af",
+          "obs-0-4911-4ffd4ff6d9472159",
+          "obs-0-4949-7a06bbe54a1b5f44"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-4949-7a06bbe54a1b5f44",
+        "benchmark_id": "physbench-seq",
+        "benchmark_version_id": "physbench-seq-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.4949,
+        "input_score": 0.4949,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "physbench-seq-metric-v1",
+        "protocol_id": "physbench-seq-source-export-v1",
+        "task_set_id": "physbench-seq-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "physbench-seq-canonical-score",
+        "evaluation_protocol": "PhysBench fixed 10,002-item full test set, Seq input protocol, zero-shot exact-choice accuracy. Merge inputs, reduced subsets, and tool-assisted PhysAgent results are excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2024-09-23",
+        "source_publication_date": "2024-09-23",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-physbench-github-io-946861211ade6b4f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-physbench-github-io-946861211ade6b4f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-09-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-09-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-09-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-physbench-github-io-946861211ade6b4f"
+        ],
+        "score_source_ids": [
+          "resource-https-physbench-github-io-946861211ade6b4f"
+        ],
+        "source": "https://physbench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-physbench-gpt4o-a6f02843077b1f95"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "physbench-gpt4o"
+        ],
+        "plot_date": "2024-09-23",
+        "frontier_observation_ids": [
+          "obs-0-4126-6f3fd8a8ccc573c4",
+          "obs-0-4315-8d99e1dc7bd1bfd1",
+          "obs-0-4607-7993a436ee8b59af",
+          "obs-0-4911-4ffd4ff6d9472159",
+          "obs-0-4949-7a06bbe54a1b5f44"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-4949-7a06bbe54a1b5f44",
+        "benchmark_id": "physbench-seq",
+        "benchmark_version_id": "physbench-seq-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.4949,
+        "input_score": 0.4949,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "physbench-seq-metric-v1",
+        "protocol_id": "physbench-seq-source-export-v1",
+        "task_set_id": "physbench-seq-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "physbench-seq-canonical-score",
+        "evaluation_protocol": "PhysBench fixed 10,002-item full test set, Seq input protocol, zero-shot exact-choice accuracy. Merge inputs, reduced subsets, and tool-assisted PhysAgent results are excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2024-09-23",
+        "source_publication_date": "2024-09-23",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-physbench-github-io-946861211ade6b4f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-physbench-github-io-946861211ade6b4f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-09-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-09-23",
+        "date_kind": "result first-public date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-09-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-physbench-github-io-946861211ade6b4f"
+        ],
+        "score_source_ids": [
+          "resource-https-physbench-github-io-946861211ade6b4f"
+        ],
+        "source": "https://physbench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-physbench-gpt4o-a6f02843077b1f95"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "physbench-gpt4o"
+        ],
+        "plot_date": "2024-09-23",
+        "frontier_observation_ids": [
+          "obs-0-4126-6f3fd8a8ccc573c4",
+          "obs-0-4315-8d99e1dc7bd1bfd1",
+          "obs-0-4607-7993a436ee8b59af",
+          "obs-0-4911-4ffd4ff6d9472159",
+          "obs-0-4949-7a06bbe54a1b5f44"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-4949-7a06bbe54a1b5f44",
+        "benchmark_id": "physbench-seq",
+        "benchmark_version_id": "physbench-seq-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "GPT-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.4949,
+        "input_score": 0.4949,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "physbench-seq-metric-v1",
+        "protocol_id": "physbench-seq-source-export-v1",
+        "task_set_id": "physbench-seq-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "physbench-seq-canonical-score",
+        "evaluation_protocol": "PhysBench fixed 10,002-item full test set, Seq input protocol, zero-shot exact-choice accuracy. Merge inputs, reduced subsets, and tool-assisted PhysAgent results are excluded.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": null,
+        "result_public_date": "2024-09-23",
+        "source_publication_date": "2024-09-23",
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-physbench-github-io-946861211ade6b4f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-physbench-github-io-946861211ade6b4f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2024-09-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2024-09-23",
+        "date_kind": "result first-public date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2024-09-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-physbench-github-io-946861211ade6b4f"
+        ],
+        "score_source_ids": [
+          "resource-https-physbench-github-io-946861211ade6b4f"
+        ],
+        "source": "https://physbench.github.io/",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-physbench-gpt4o-a6f02843077b1f95"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "physbench-gpt4o"
+        ],
+        "plot_date": "2024-09-23",
+        "frontier_observation_ids": [
+          "obs-0-4126-6f3fd8a8ccc573c4",
+          "obs-0-4315-8d99e1dc7bd1bfd1",
+          "obs-0-4607-7993a436ee8b59af",
+          "obs-0-4911-4ffd4ff6d9472159",
+          "obs-0-4949-7a06bbe54a1b5f44"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.4949,
+    "capability_frontier_value": 0.4949,
+    "reported_frontier_value": 0.4949,
+    "current_frontier": 0.4949,
+    "normalized_progress": 0.32653333333333334,
+    "normalized_headroom": 0.6734666666666667,
+    "threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 713
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 713
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 713
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 713
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 713
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 713
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 713
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 713
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 713
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.2857142857142857,
+      "represented_organizations": [
+        "OpenAI",
+        "Google"
+      ],
+      "panel_size": 7,
+      "status": "low"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-physbench-github-io-946861211ade6b4f"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": true,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

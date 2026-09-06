@@ -1,0 +1,1125 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-06",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "eee-bench-v2",
+    "name": "EEE-Bench v2",
+    "domain": "Engineering",
+    "release": "2025-02-27",
+    "source": "https://openaccess.thecvf.com/content/CVPR2025/papers/Li_EEE-Bench_A_Comprehensive_Multimodal_Electrical_And_Electronics_Engineering_Benchmark_CVPR_2025_paper.pdf",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Model",
+    "tags": [
+      "electrical engineering",
+      "multimodal",
+      "exact-answer"
+    ],
+    "metric": "Accuracy",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "eee-bench-v2-metric-v1",
+    "protocol_id": "eee-bench-v2-source-export-v1",
+    "canonical_score": {
+      "series_id": "eee-bench-v2-canonical-score",
+      "role": "canonical",
+      "metric_id": "eee-bench-v2-metric-v1",
+      "metric_name": "Accuracy",
+      "protocol_id": "eee-bench-v2-source-export-v1",
+      "task_set_id": "eee-bench-v2-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "eee-bench-v2-canonical",
+    "summary": {
+      "en": "EEE-Bench v2 evaluates multimodal electrical and electronics engineering across 2,860 problems.",
+      "zh": "EEE-Bench v2 \u4f7f\u7528 2,860 \u9053\u9898\u8bc4\u4f30\u591a\u6a21\u6001 electrical and electronics engineering \u80fd\u529b\u3002"
+    },
+    "task_format": {
+      "en": "The model receives an engineering question with text and, when needed, a technical diagram, then returns a concise final answer.",
+      "zh": "\u6a21\u578b\u4f1a\u6536\u5230\u5e26\u6587\u5b57\u5e76\u53ef\u80fd\u5305\u542b\u6280\u672f\u56fe\u8868\u7684\u5de5\u7a0b\u95ee\u9898\uff0c\u7136\u540e\u7ed9\u51fa\u7b80\u6d01\u7684\u6700\u7ec8\u7b54\u6848\u3002"
+    },
+    "scoring": {
+      "metric_name": "Overall exact-answer accuracy",
+      "explanation": {
+        "en": "The score is the overall fraction of v2 questions answered correctly, averaged across two zero-shot runs under the paper's extraction procedure.",
+        "zh": "\u5206\u6570\u662f v2 question \u7684 overall correct fraction\uff0c\u6309\u7167\u8bba\u6587\u7684 answer extraction procedure \u5bf9\u4e24\u6b21 zero-shot run \u53d6\u5e73\u5747\u3002"
+      }
+    },
+    "evaluation_target": "final_output",
+    "observation_count": 4,
+    "evidence_record_count": 4,
+    "observations": [
+      {
+        "observation_id": "obs-0-2231-9709a1df3fb057cd",
+        "benchmark_id": "eee-bench-v2",
+        "benchmark_version_id": "eee-bench-v2-canonical",
+        "model_id": "model-deepseek-vl-7b-bc9ff987ded5e185",
+        "model_configuration": "deepseek-vl-7b",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-vl-7b",
+        "model_family_id": "deepseek-deepseek-vl-7b",
+        "model": "DeepSeek-VL-7B",
+        "organization": "DeepSeek",
+        "score": 0.2231,
+        "input_score": 0.2231,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "eee-bench-v2-metric-v1",
+        "protocol_id": "eee-bench-v2-source-export-v1",
+        "task_set_id": "eee-bench-v2-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "eee-bench-v2-canonical-score",
+        "evaluation_protocol": "EEE-Bench v2 fixed 2,860-problem multimodal set, zero-shot, two-run mean overall exact-answer accuracy using the paper's GPT-4o-mini answer extractor.",
+        "model_release_date": "2024-03-11",
+        "evaluation_date": "2025-02-27",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-03-11",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-03-11",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-02-27",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-03-11",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-03-11",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "score_source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "source": "https://openaccess.thecvf.com/content/CVPR2025/papers/Li_EEE-Bench_A_Comprehensive_Multimodal_Electrical_And_Electronics_Engineering_Benchmark_CVPR_2025_paper.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eee-v2-deepseek-vl-7b-987fc1d1f0c11f00"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eee-v2-deepseek-vl-7b"
+        ]
+      },
+      {
+        "observation_id": "obs-0-2573-d516f9e88da1cb79",
+        "benchmark_id": "eee-bench-v2",
+        "benchmark_version_id": "eee-bench-v2-canonical",
+        "model_id": "model-qwen-vl-max-0b1475022f8e2f06",
+        "model_configuration": "qwen-vl-max",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen-vl-max",
+        "model_family_id": "qwen-qwen-vl-max",
+        "model": "Qwen-VL-Max",
+        "organization": "Qwen",
+        "score": 0.2573,
+        "input_score": 0.2573,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "eee-bench-v2-metric-v1",
+        "protocol_id": "eee-bench-v2-source-export-v1",
+        "task_set_id": "eee-bench-v2-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "eee-bench-v2-canonical-score",
+        "evaluation_protocol": "EEE-Bench v2 fixed 2,860-problem multimodal set, zero-shot, two-run mean overall exact-answer accuracy using the paper's GPT-4o-mini answer extractor.",
+        "model_release_date": "2024-01-18",
+        "evaluation_date": "2025-02-27",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-01-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-01-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-02-27",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-01-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-01-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "score_source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "source": "https://openaccess.thecvf.com/content/CVPR2025/papers/Li_EEE-Bench_A_Comprehensive_Multimodal_Electrical_And_Electronics_Engineering_Benchmark_CVPR_2025_paper.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eee-v2-qwen-vl-max-3647d0b46980aa13"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eee-v2-qwen-vl-max"
+        ]
+      },
+      {
+        "observation_id": "obs-0-4199-82d11deed87b397a",
+        "benchmark_id": "eee-bench-v2",
+        "benchmark_version_id": "eee-bench-v2-canonical",
+        "model_id": "model-gemini-1-5-pro-cbb82d54e094a69c",
+        "model_configuration": "gemini-1-5-pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-1-5-pro",
+        "model_family_id": "google-gemini-1-5-pro",
+        "model": "Gemini 1.5 Pro",
+        "organization": "Google",
+        "score": 0.4199,
+        "input_score": 0.4199,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "eee-bench-v2-metric-v1",
+        "protocol_id": "eee-bench-v2-source-export-v1",
+        "task_set_id": "eee-bench-v2-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "eee-bench-v2-canonical-score",
+        "evaluation_protocol": "EEE-Bench v2 fixed 2,860-problem multimodal set, zero-shot, two-run mean overall exact-answer accuracy using the paper's GPT-4o-mini answer extractor.",
+        "model_release_date": "2024-02-15",
+        "evaluation_date": "2025-02-27",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-02-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-02-15",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-02-27",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-02-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-02-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "score_source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "source": "https://openaccess.thecvf.com/content/CVPR2025/papers/Li_EEE-Bench_A_Comprehensive_Multimodal_Electrical_And_Electronics_Engineering_Benchmark_CVPR_2025_paper.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eee-v2-gemini-1-5-pro-6ddea12c0677d358"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eee-v2-gemini-1-5-pro"
+        ]
+      },
+      {
+        "observation_id": "obs-0-4678-5874249ea235e3bf",
+        "benchmark_id": "eee-bench-v2",
+        "benchmark_version_id": "eee-bench-v2-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "gpt-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.4678,
+        "input_score": 0.4678,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "eee-bench-v2-metric-v1",
+        "protocol_id": "eee-bench-v2-source-export-v1",
+        "task_set_id": "eee-bench-v2-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "eee-bench-v2-canonical-score",
+        "evaluation_protocol": "EEE-Bench v2 fixed 2,860-problem multimodal set, zero-shot, two-run mean overall exact-answer accuracy using the paper's GPT-4o-mini answer extractor.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": "2025-02-27",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-02-27",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-05-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "score_source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "source": "https://openaccess.thecvf.com/content/CVPR2025/papers/Li_EEE-Bench_A_Comprehensive_Multimodal_Electrical_And_Electronics_Engineering_Benchmark_CVPR_2025_paper.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eee-v2-gpt-4o-a1e34c770ccbc769"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eee-v2-gpt-4o"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-4678-5874249ea235e3bf",
+        "benchmark_id": "eee-bench-v2",
+        "benchmark_version_id": "eee-bench-v2-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "gpt-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.4678,
+        "input_score": 0.4678,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "eee-bench-v2-metric-v1",
+        "protocol_id": "eee-bench-v2-source-export-v1",
+        "task_set_id": "eee-bench-v2-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "eee-bench-v2-canonical-score",
+        "evaluation_protocol": "EEE-Bench v2 fixed 2,860-problem multimodal set, zero-shot, two-run mean overall exact-answer accuracy using the paper's GPT-4o-mini answer extractor.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": "2025-02-27",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-02-27",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-02-27",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "score_source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "source": "https://openaccess.thecvf.com/content/CVPR2025/papers/Li_EEE-Bench_A_Comprehensive_Multimodal_Electrical_And_Electronics_Engineering_Benchmark_CVPR_2025_paper.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eee-v2-gpt-4o-a1e34c770ccbc769"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eee-v2-gpt-4o"
+        ],
+        "plot_date": "2025-02-27",
+        "frontier_observation_ids": [
+          "obs-0-2231-9709a1df3fb057cd",
+          "obs-0-2573-d516f9e88da1cb79",
+          "obs-0-4199-82d11deed87b397a",
+          "obs-0-4678-5874249ea235e3bf"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-4678-5874249ea235e3bf",
+        "benchmark_id": "eee-bench-v2",
+        "benchmark_version_id": "eee-bench-v2-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "gpt-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.4678,
+        "input_score": 0.4678,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "eee-bench-v2-metric-v1",
+        "protocol_id": "eee-bench-v2-source-export-v1",
+        "task_set_id": "eee-bench-v2-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "eee-bench-v2-canonical-score",
+        "evaluation_protocol": "EEE-Bench v2 fixed 2,860-problem multimodal set, zero-shot, two-run mean overall exact-answer accuracy using the paper's GPT-4o-mini answer extractor.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": "2025-02-27",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-02-27",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-02-27",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "score_source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "source": "https://openaccess.thecvf.com/content/CVPR2025/papers/Li_EEE-Bench_A_Comprehensive_Multimodal_Electrical_And_Electronics_Engineering_Benchmark_CVPR_2025_paper.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eee-v2-gpt-4o-a1e34c770ccbc769"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eee-v2-gpt-4o"
+        ],
+        "plot_date": "2025-02-27",
+        "frontier_observation_ids": [
+          "obs-0-2231-9709a1df3fb057cd",
+          "obs-0-2573-d516f9e88da1cb79",
+          "obs-0-4199-82d11deed87b397a",
+          "obs-0-4678-5874249ea235e3bf"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-4678-5874249ea235e3bf",
+        "benchmark_id": "eee-bench-v2",
+        "benchmark_version_id": "eee-bench-v2-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "gpt-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.4678,
+        "input_score": 0.4678,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "eee-bench-v2-metric-v1",
+        "protocol_id": "eee-bench-v2-source-export-v1",
+        "task_set_id": "eee-bench-v2-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "eee-bench-v2-canonical-score",
+        "evaluation_protocol": "EEE-Bench v2 fixed 2,860-problem multimodal set, zero-shot, two-run mean overall exact-answer accuracy using the paper's GPT-4o-mini answer extractor.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": "2025-02-27",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-02-27",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2025-02-27",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "score_source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "source": "https://openaccess.thecvf.com/content/CVPR2025/papers/Li_EEE-Bench_A_Comprehensive_Multimodal_Electrical_And_Electronics_Engineering_Benchmark_CVPR_2025_paper.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eee-v2-gpt-4o-a1e34c770ccbc769"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eee-v2-gpt-4o"
+        ],
+        "plot_date": "2025-02-27",
+        "frontier_observation_ids": [
+          "obs-0-2231-9709a1df3fb057cd",
+          "obs-0-2573-d516f9e88da1cb79",
+          "obs-0-4199-82d11deed87b397a",
+          "obs-0-4678-5874249ea235e3bf"
+        ]
+      }
+    ],
+    "reported_frontier": [],
+    "historical_frontier": [],
+    "retrospective_observations": [
+      {
+        "observation_id": "obs-0-2231-9709a1df3fb057cd",
+        "benchmark_id": "eee-bench-v2",
+        "benchmark_version_id": "eee-bench-v2-canonical",
+        "model_id": "model-deepseek-vl-7b-bc9ff987ded5e185",
+        "model_configuration": "deepseek-vl-7b",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-vl-7b",
+        "model_family_id": "deepseek-deepseek-vl-7b",
+        "model": "DeepSeek-VL-7B",
+        "organization": "DeepSeek",
+        "score": 0.2231,
+        "input_score": 0.2231,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "eee-bench-v2-metric-v1",
+        "protocol_id": "eee-bench-v2-source-export-v1",
+        "task_set_id": "eee-bench-v2-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "eee-bench-v2-canonical-score",
+        "evaluation_protocol": "EEE-Bench v2 fixed 2,860-problem multimodal set, zero-shot, two-run mean overall exact-answer accuracy using the paper's GPT-4o-mini answer extractor.",
+        "model_release_date": "2024-03-11",
+        "evaluation_date": "2025-02-27",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-03-11",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-03-11",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-02-27",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-03-11",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-03-11",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "score_source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "source": "https://openaccess.thecvf.com/content/CVPR2025/papers/Li_EEE-Bench_A_Comprehensive_Multimodal_Electrical_And_Electronics_Engineering_Benchmark_CVPR_2025_paper.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eee-v2-deepseek-vl-7b-987fc1d1f0c11f00"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eee-v2-deepseek-vl-7b"
+        ]
+      },
+      {
+        "observation_id": "obs-0-2573-d516f9e88da1cb79",
+        "benchmark_id": "eee-bench-v2",
+        "benchmark_version_id": "eee-bench-v2-canonical",
+        "model_id": "model-qwen-vl-max-0b1475022f8e2f06",
+        "model_configuration": "qwen-vl-max",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen-vl-max",
+        "model_family_id": "qwen-qwen-vl-max",
+        "model": "Qwen-VL-Max",
+        "organization": "Qwen",
+        "score": 0.2573,
+        "input_score": 0.2573,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "eee-bench-v2-metric-v1",
+        "protocol_id": "eee-bench-v2-source-export-v1",
+        "task_set_id": "eee-bench-v2-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "eee-bench-v2-canonical-score",
+        "evaluation_protocol": "EEE-Bench v2 fixed 2,860-problem multimodal set, zero-shot, two-run mean overall exact-answer accuracy using the paper's GPT-4o-mini answer extractor.",
+        "model_release_date": "2024-01-18",
+        "evaluation_date": "2025-02-27",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-01-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-01-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-02-27",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-01-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-01-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "score_source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "source": "https://openaccess.thecvf.com/content/CVPR2025/papers/Li_EEE-Bench_A_Comprehensive_Multimodal_Electrical_And_Electronics_Engineering_Benchmark_CVPR_2025_paper.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eee-v2-qwen-vl-max-3647d0b46980aa13"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eee-v2-qwen-vl-max"
+        ]
+      },
+      {
+        "observation_id": "obs-0-4199-82d11deed87b397a",
+        "benchmark_id": "eee-bench-v2",
+        "benchmark_version_id": "eee-bench-v2-canonical",
+        "model_id": "model-gemini-1-5-pro-cbb82d54e094a69c",
+        "model_configuration": "gemini-1-5-pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-1-5-pro",
+        "model_family_id": "google-gemini-1-5-pro",
+        "model": "Gemini 1.5 Pro",
+        "organization": "Google",
+        "score": 0.4199,
+        "input_score": 0.4199,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "eee-bench-v2-metric-v1",
+        "protocol_id": "eee-bench-v2-source-export-v1",
+        "task_set_id": "eee-bench-v2-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "eee-bench-v2-canonical-score",
+        "evaluation_protocol": "EEE-Bench v2 fixed 2,860-problem multimodal set, zero-shot, two-run mean overall exact-answer accuracy using the paper's GPT-4o-mini answer extractor.",
+        "model_release_date": "2024-02-15",
+        "evaluation_date": "2025-02-27",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-02-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-02-15",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-02-27",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-02-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-02-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "score_source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "source": "https://openaccess.thecvf.com/content/CVPR2025/papers/Li_EEE-Bench_A_Comprehensive_Multimodal_Electrical_And_Electronics_Engineering_Benchmark_CVPR_2025_paper.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eee-v2-gemini-1-5-pro-6ddea12c0677d358"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eee-v2-gemini-1-5-pro"
+        ]
+      },
+      {
+        "observation_id": "obs-0-4678-5874249ea235e3bf",
+        "benchmark_id": "eee-bench-v2",
+        "benchmark_version_id": "eee-bench-v2-canonical",
+        "model_id": "model-gpt-4o-d491e46221c560b3",
+        "model_configuration": "gpt-4o",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4o",
+        "model_family_id": "openai-gpt-4o",
+        "model": "GPT-4o",
+        "organization": "OpenAI",
+        "score": 0.4678,
+        "input_score": 0.4678,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "eee-bench-v2-metric-v1",
+        "protocol_id": "eee-bench-v2-source-export-v1",
+        "task_set_id": "eee-bench-v2-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "eee-bench-v2-canonical-score",
+        "evaluation_protocol": "EEE-Bench v2 fixed 2,860-problem multimodal set, zero-shot, two-run mean overall exact-answer accuracy using the paper's GPT-4o-mini answer extractor.",
+        "model_release_date": "2024-05-13",
+        "evaluation_date": "2025-02-27",
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2024-05-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2024-05-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "evaluation_date_sources": [
+          {
+            "date": "2025-02-27",
+            "kind": "Evaluation date",
+            "precision": "day"
+          }
+        ],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-09-06",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2024-05-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2024-05-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "retrospective_evaluation",
+        "retrospective": true,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": false,
+        "source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "score_source_ids": [
+          "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+        ],
+        "source": "https://openaccess.thecvf.com/content/CVPR2025/papers/Li_EEE-Bench_A_Comprehensive_Multimodal_Electrical_And_Electronics_Engineering_Benchmark_CVPR_2025_paper.pdf",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-eee-v2-gpt-4o-a1e34c770ccbc769"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "eee-v2-gpt-4o"
+        ]
+      }
+    ],
+    "observed_frontier": 0.4678,
+    "capability_frontier_value": 0.4678,
+    "reported_frontier_value": null,
+    "current_frontier": 0.4678,
+    "normalized_progress": 0.4678,
+    "normalized_headroom": 0.5322,
+    "threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 556
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 556
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 556
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 556
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 556
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 556
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T80": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      },
+      "T90": {
+        "status": "unknown",
+        "reason": "No dated observations are available on this timeline."
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.5714285714285714,
+      "represented_organizations": [
+        "OpenAI",
+        "Google",
+        "DeepSeek",
+        "Qwen"
+      ],
+      "panel_size": 7,
+      "status": "medium"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-openaccess-thecvf-com-content-cvpr2025-pap-8e4711c7573bd7f0"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "unknown_public_dates",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": true,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": true,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}
