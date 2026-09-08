@@ -59,9 +59,15 @@
         <p class="measure muted">I came to machine learning from particle physics, where a
           single measurement takes years, the instrument is as much an engineering problem
           as a scientific one, and the expensive part is deciding what to measure next.
-          That shapes what I find interesting now. I care less about whether a system can
-          produce a correct answer than about what it spent getting there, and whether the
-          path it took would hold up if you ran it again.</p>
+          That experience shapes what I study now. Producing a correct answer is only the
+          first step. The next challenge is scaling that success, and scale is often limited
+          by resources. Resource use, in turn, depends on how a system represents and
+          organizes its actions. In autonomous driving, for example, choosing a route,
+          changing lanes, and controlling the steering wheel, accelerator, and brakes are
+          actions at different levels of abstraction. A policy—cautious, standard, or
+          aggressive—can shape decisions at any of those levels. I want to identify similarly
+          layered action representations for scientific and engineering systems, so that
+          policies can be defined and improved at the right level.</p>
       </section>
 
       <section class="section" aria-labelledby="h-tastes">
@@ -89,13 +95,21 @@
 
       <section class="section" aria-labelledby="h-dir">
         <div class="sh"><h2 id="h-dir">Where I think this goes</h2></div>
-        <p class="measure muted">If scientific trajectories can be captured well enough to
-          evaluate, they can eventually be learned from. I am more confident about the
-          first half of that sentence than the second, which is why my work currently sits
-          on the measurement side of it.</p>
+        <p class="measure muted">Once we can benchmark how action and policy representations
+          at different levels affect an agent's path and cost, we can improve the agent at
+          those same levels. The available levers include post-training the model, allocating
+          test-time compute, designing the scaffold, and structuring reusable skills.
+          Improving performance is therefore a systems optimization problem: the objective
+          is not success at any cost, but the best balance of capability, efficiency, cost,
+          and task coverage.</p>
+        <p class="measure muted mt-3">My current bet for STEM is a domain-specialized,
+          post-trained model paired with a lightweight scaffold and well-structured skills.
+          A single general agent and a collection of specialized agents may both automate
+          scientific work. The useful question is not simply which one succeeds, but which
+          reaches the required performance and coverage most cost-effectively.</p>
         <div class="callout measure mt-3">
-          <b>Measuring what a result cost is not bookkeeping. It is the difference between
-            a result and a method.</b>
+          <b>Better scientific agents will come from optimizing the whole system, not from
+            pushing one component as hard as possible.</b>
         </div>
         <p class="meta muted mt-3">What I actually build is on the
           <a class="link" href="/projects/">projects</a> page.</p>
