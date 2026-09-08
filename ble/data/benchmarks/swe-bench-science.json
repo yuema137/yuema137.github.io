@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-07",
+  "snapshot_id": "2026-09-08",
   "reference_organizations": [
     {
       "id": "openai",
@@ -79,6 +79,15 @@
       "repository",
       "pass@1",
       "test-based"
+    ],
+    "labels": [
+      "long-context-integration",
+      "planning",
+      "tool-use",
+      "environment-interaction",
+      "error-recovery",
+      "code-generation",
+      "code-execution-debugging"
     ],
     "metric": "Overall",
     "score_format": "ratio",
@@ -169,7 +178,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-07",
+        "ingested_at": "2026-09-08",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-24",
@@ -249,7 +258,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-07",
+        "ingested_at": "2026-09-08",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-04-24",
@@ -329,7 +338,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-07",
+        "ingested_at": "2026-09-08",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -409,7 +418,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-07",
+        "ingested_at": "2026-09-08",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-16",
@@ -489,7 +498,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-07",
+        "ingested_at": "2026-09-08",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-06-16",
@@ -569,7 +578,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-07",
+        "ingested_at": "2026-09-08",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-04-24",
@@ -651,7 +660,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-07",
+        "ingested_at": "2026-09-08",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-08-20",
@@ -742,7 +751,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-07",
+        "ingested_at": "2026-09-08",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-08-20",
@@ -833,7 +842,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-07",
+        "ingested_at": "2026-09-08",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-08-20",
@@ -926,7 +935,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-07",
+        "ingested_at": "2026-09-08",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-24",
@@ -1006,7 +1015,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-07",
+        "ingested_at": "2026-09-08",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-04-24",
@@ -1086,7 +1095,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-07",
+        "ingested_at": "2026-09-08",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -1166,7 +1175,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-07",
+        "ingested_at": "2026-09-08",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-16",
@@ -1246,7 +1255,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-07",
+        "ingested_at": "2026-09-08",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-06-16",
@@ -1326,7 +1335,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-07",
+        "ingested_at": "2026-09-08",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-04-24",
@@ -1367,29 +1376,29 @@
     "threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 18
+        "days": 19
       },
       "T80": {
         "status": "right_censored",
-        "days": 18
+        "days": 19
       },
       "T90": {
         "status": "right_censored",
-        "days": 18
+        "days": 19
       }
     },
     "capability_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 18
+        "days": 19
       },
       "T80": {
         "status": "right_censored",
-        "days": 18
+        "days": 19
       },
       "T90": {
         "status": "right_censored",
-        "days": 18
+        "days": 19
       }
     },
     "reported_threshold_days": {
