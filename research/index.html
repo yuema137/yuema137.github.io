@@ -60,9 +60,9 @@
           single measurement takes years, the instrument is as much an engineering problem
           as a scientific one, and the expensive part is deciding what to measure next.
           That experience shapes what I study now. Producing a correct answer is only the
-          first step. The next challenge is scaling that success, and scale is often limited
-          by resources. Resource use, in turn, depends on how a system represents and
-          organizes its actions. In autonomous driving, for example, choosing a route,
+          first step. The next challenge is <strong>scaling that success</strong>, and scale
+          is often limited by resources. Resource use, in turn, depends on <strong>how a
+          system represents and organizes its actions</strong>. In autonomous driving, for example, choosing a route,
           changing lanes, and controlling the steering wheel, accelerator, and brakes are
           actions at different levels of abstraction. A policy—cautious, standard, or
           aggressive—can shape decisions at any of those levels. I want to identify similarly
@@ -73,23 +73,25 @@
       <section class="section" aria-labelledby="h-tastes">
         <div class="sh"><h2 id="h-tastes">What I find interesting</h2></div>
         <div class="measure stack">
-          <div class="argument"><b>Cost is the binding constraint on automated science.</b>
-            <p>Ideas are cheap and getting cheaper. Experiments are not. Any account of
-              scientific progress that ignores what an experiment costs is describing a
-              different activity.</p></div>
-          <div class="argument"><b>Outcomes hide the interesting part.</b>
-            <p>Two systems can reach the same conclusion by completely different routes —
-              one reproducible, one lucky. The trajectory is where that difference lives,
-              and it is usually thrown away. How you choose to represent it decides what you
-              are able to compare afterwards.</p></div>
-          <div class="argument"><b>Evaluation is harder than modelling, and less glamorous.</b>
-            <p>Most of what I build is measurement infrastructure. I think this is where
-              the field is currently under-invested, and I would rather work on the part
-              that is under-invested.</p></div>
-          <div class="argument"><b>Physics taught me what a careful measurement costs.</b>
-            <p>In rare-event searches most of the work is understanding your own instrument
-              well enough to trust a handful of events. I have never stopped thinking that
-              way about machine-learning systems.</p></div>
+          <div class="argument"><b>Evaluation is a measurement problem, not a scoreboard.</b>
+            <p>A benchmark's scope, quality, methodology, difficulty, and lifecycle matter as
+              much as its headline score. A benchmark can look hard today and saturate quickly;
+              a narrow one can reward overfitting without measuring broad capability.</p></div>
+          <div class="argument"><b>A useful skill needs more than a set of instructions.</b>
+            <p>A Markdown file can suggest behavior. A durable capability needs a workflow,
+              explicit specifications, and hooks that connect those rules to execution. The
+              system must also remain modular enough for users to plug in their own standards.
+              <a class="link" href="/projects/#tools">Structured Coding</a> is one attempt
+              to put that idea into practice.</p></div>
+          <div class="argument"><b>Human-agent collaboration needs a clear division of labor.</b>
+            <p>Humans should own intent, judgment, and acceptance; agents should handle bounded
+              execution and produce evidence. The interface between them must be easy for people
+              to use and structured enough for agents to act on—the idea behind
+              <a class="link" href="/projects/#tools">PairTeX</a>.</p></div>
+          <div class="argument"><b>Resource efficiency determines what can scale.</b>
+            <p>Two systems may both succeed while taking different paths and consuming very
+              different resources. In science and engineering, that difference determines
+              whether a successful result can become a practical method.</p></div>
         </div>
       </section>
 
@@ -99,11 +101,11 @@
           at different levels affect an agent's path and cost, we can improve the agent at
           those same levels. The available levers include post-training the model, allocating
           test-time compute, designing the scaffold, and structuring reusable skills.
-          Improving performance is therefore a systems optimization problem: the objective
-          is not success at any cost, but the best balance of capability, efficiency, cost,
-          and task coverage.</p>
-        <p class="measure muted mt-3">My current bet for STEM is a domain-specialized,
-          post-trained model paired with a lightweight scaffold and well-structured skills.
+          Improving performance is therefore a <strong>systems optimization problem</strong>:
+          the objective is not success at any cost, but the best balance of capability,
+          efficiency, cost, and task coverage.</p>
+        <p class="measure muted mt-3">My current bet for STEM is <strong>a domain-specialized,
+          post-trained model paired with a lightweight scaffold and well-structured skills</strong>.
           A single general agent and a collection of specialized agents may both automate
           scientific work. The useful question is not simply which one succeeds, but which
           reaches the required performance and coverage most cost-effectively.</p>

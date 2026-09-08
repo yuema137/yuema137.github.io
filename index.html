@@ -70,6 +70,24 @@
              sizes="164px" width="360" height="360" alt="Yue Ma">
       </section>
 
+      <section class="section" aria-labelledby="h-principles">
+        <div class="sh"><h2 id="h-principles">Working principles</h2><a href="/research/">Research →</a></div>
+        <ul class="principles">
+          <li><strong>Evaluation before optimization.</strong>
+            <span>A score is useful only when its scope, methodology, difficulty, and
+              lifecycle are understood.</span></li>
+          <li><strong>Representation shapes policy.</strong>
+            <span>Actions exist at different levels. How they are represented determines
+              which policies can shape a trajectory—and what that trajectory costs.</span></li>
+          <li><strong>Workflows over prompt piles.</strong>
+            <span>Reusable capability needs workflows, specifications, and hooks, with room
+              for users to plug in their own standards.</span></li>
+          <li><strong>Make the division of labor explicit.</strong>
+            <span>Humans own intent, judgment, and acceptance. Agents handle bounded execution
+              and produce evidence both sides can use.</span></li>
+        </ul>
+      </section>
+
       <section class="section" aria-labelledby="h-work">
         <div class="sh"><h2 id="h-work">What I work on</h2><a href="/research/">Research →</a></div>
         <ul class="int">
@@ -80,29 +98,72 @@
         </ul>
       </section>
 
-      <!-- Mirrors /projects/ — keep the top three in sync by hand. -->
+      <!-- Mirrors the three project categories on /projects/. -->
       <section class="section" aria-labelledby="h-build">
         <div class="sh"><h2 id="h-build">What I build</h2><a href="/projects/">Projects →</a></div>
-        <ul class="grid">
-          <li class="card">
-            <p class="eyebrow">01 · Agentic system</p>
-            <h3>SIDERIUS</h3>
-            <p>A closed-loop agentic system for autonomous research under real compute budgets.</p>
-            <ul class="foot"><li>Sole architect</li><li>Feb 2026 –</li></ul>
-          </li>
-          <li class="card">
-            <p class="eyebrow">02 · Methodology</p>
-            <h3>SciTra</h3>
-            <p>How an agent&rsquo;s decision trajectory and action space are represented, so that runs are comparable across agents, tasks, and fields. Approximately 100 scientists across 20+ institutions, with BenchFlow.</p>
-            <ul class="foot"><li><a href="https://scitra.org">scitra.org ↗</a></li><li>Founder &amp; lead</li></ul>
-          </li>
-          <li class="card">
-            <p class="eyebrow">03 · Domain benchmark</p>
-            <h3>FrontierPhysics</h3>
-            <p>One field, concretely: how AI agents carry out frontier physics research iteratively. With the BenchFlow team.</p>
-            <ul class="foot"><li><a href="https://www.benchflow.ai/frontierphysics">benchflow.ai ↗</a></li><li>Core team</li></ul>
-          </li>
-        </ul>
+        <div class="build-group">
+          <h3 class="build-group__title">Major projects</h3>
+          <ul class="grid">
+            <li class="card">
+              <p class="eyebrow">01 · Agentic system</p>
+              <h3>SIDERIUS</h3>
+              <p>A closed-loop agentic system for autonomous research under real compute budgets.</p>
+              <ul class="foot"><li>Sole architect</li><li>Feb 2026 –</li></ul>
+            </li>
+            <li class="card">
+              <p class="eyebrow">02 · Methodology</p>
+              <h3>SciTra</h3>
+              <p>Representing agent trajectories and action spaces so runs can be compared
+                across systems, tasks, and fields.</p>
+              <ul class="foot"><li><a href="https://scitra.org">scitra.org ↗</a></li><li>Founder &amp; lead</li></ul>
+            </li>
+            <li class="card">
+              <p class="eyebrow">03 · Domain benchmark</p>
+              <h3>FrontierPhysics</h3>
+              <p>How AI agents carry out frontier physics research iteratively, from plans
+                through implementation.</p>
+              <ul class="foot"><li><a href="https://www.benchflow.ai/frontierphysics">benchflow.ai ↗</a></li><li>Core team</li></ul>
+            </li>
+          </ul>
+        </div>
+        <div class="build-group">
+          <h3 class="build-group__title">Websites</h3>
+          <ul class="grid grid--2">
+            <li class="card">
+              <p class="eyebrow">Benchmark observatory</p>
+              <h3>Leaderboard of Benchmarks</h3>
+              <p>A benchmark of benchmarks: compare what evaluations measure, how their
+                capability frontiers evolve, and how quickly they saturate.</p>
+              <ul class="foot"><li><a href="/ble/">Explore BLE ↗</a></li></ul>
+            </li>
+            <li class="card">
+              <p class="eyebrow">Living knowledge base</p>
+              <h3>Scientific Evaluation Environments</h3>
+              <p>A bilingual map of scientific and engineering agent benchmarks, their
+                findings, and the improvements those findings suggest.</p>
+              <ul class="foot"><li><a href="/scieval/">Explore SciEval ↗</a></li></ul>
+            </li>
+          </ul>
+        </div>
+        <div class="build-group">
+          <h3 class="build-group__title">Small tools</h3>
+          <ul class="grid grid--2">
+            <li class="card">
+              <p class="eyebrow">Human-agent writing</p>
+              <h3>PairTeX</h3>
+              <p>A local review layer that turns comments and edits on a rendered paper into
+                structured feedback for coding agents.</p>
+              <ul class="foot"><li><a href="https://github.com/yuema137/PairTeX">GitHub ↗</a></li></ul>
+            </li>
+            <li class="card">
+              <p class="eyebrow">Agent workflow toolkit</p>
+              <h3>Structured Coding</h3>
+              <p>A reusable workflow connecting design agreements, specifications, hooks,
+                validation evidence, and reviewable PRs.</p>
+              <ul class="foot"><li><a href="https://github.com/yuema137/structured-coding">GitHub ↗</a></li></ul>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <!-- Mirrors a compact selection from /publications/. -->
