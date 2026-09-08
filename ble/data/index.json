@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_index",
-  "snapshot_id": "2026-09-07",
+  "snapshot_id": "2026-09-08",
   "source": "Curated benchmark exports; see resource registry for source lineage",
   "reference_organizations": [
     {
@@ -61,6 +61,228 @@
       ]
     }
   ],
+  "capability_labels": [
+    {
+      "id": "knowledge-recall",
+      "name": {
+        "en": "Knowledge recall",
+        "zh": "\u77e5\u8bc6\u8c03\u7528"
+      },
+      "description": {
+        "en": "Retrieving learned facts, concepts, or domain knowledge without external search.",
+        "zh": "\u5728\u4e0d\u8fdb\u884c\u5916\u90e8\u641c\u7d22\u7684\u60c5\u51b5\u4e0b\u8c03\u7528\u5df2\u5b66\u4e60\u7684\u4e8b\u5b9e\u3001\u6982\u5ff5\u6216\u9886\u57df\u77e5\u8bc6\u3002"
+      }
+    },
+    {
+      "id": "information-retrieval",
+      "name": {
+        "en": "Information retrieval",
+        "zh": "\u4fe1\u606f\u68c0\u7d22"
+      },
+      "description": {
+        "en": "Finding and selecting relevant evidence from documents, databases, or the web.",
+        "zh": "\u4ece\u6587\u6863\u3001\u6570\u636e\u5e93\u6216\u7f51\u9875\u4e2d\u67e5\u627e\u5e76\u9009\u62e9\u76f8\u5173\u8bc1\u636e\u3002"
+      }
+    },
+    {
+      "id": "formal-deductive-reasoning",
+      "name": {
+        "en": "Formal & deductive reasoning",
+        "zh": "\u5f62\u5f0f\u4e0e\u6f14\u7ece\u63a8\u7406"
+      },
+      "description": {
+        "en": "Deriving necessary conclusions from explicit premises, rules, constraints, or a formal system.",
+        "zh": "\u6839\u636e\u660e\u786e\u524d\u63d0\u3001\u89c4\u5219\u3001\u7ea6\u675f\u6216\u5f62\u5f0f\u7cfb\u7edf\u63a8\u51fa\u5fc5\u7136\u7ed3\u8bba\u3002"
+      }
+    },
+    {
+      "id": "rule-induction-abstraction",
+      "name": {
+        "en": "Rule induction & abstraction",
+        "zh": "\u89c4\u5219\u5f52\u7eb3\u4e0e\u62bd\u8c61"
+      },
+      "description": {
+        "en": "Inferring latent rules or representations from examples and applying them to new cases.",
+        "zh": "\u4ece\u793a\u4f8b\u4e2d\u5f52\u7eb3\u9690\u85cf\u89c4\u5219\u6216\u8868\u793a\uff0c\u5e76\u5c06\u5176\u5e94\u7528\u5230\u65b0\u6848\u4f8b\u3002"
+      }
+    },
+    {
+      "id": "commonsense-inference",
+      "name": {
+        "en": "Commonsense inference",
+        "zh": "\u5e38\u8bc6\u63a8\u65ad"
+      },
+      "description": {
+        "en": "Inferring plausible causes, outcomes, or actions from implicit everyday and physical-world knowledge.",
+        "zh": "\u5229\u7528\u9690\u542b\u7684\u65e5\u5e38\u4e0e\u7269\u7406\u4e16\u754c\u77e5\u8bc6\u63a8\u65ad\u5408\u7406\u7684\u539f\u56e0\u3001\u7ed3\u679c\u6216\u884c\u52a8\u3002"
+      }
+    },
+    {
+      "id": "mechanistic-reasoning",
+      "name": {
+        "en": "Mechanistic reasoning",
+        "zh": "\u673a\u7406\u63a8\u7406"
+      },
+      "description": {
+        "en": "Explaining or predicting a system by applying causal structure, scientific principles, or an operational model.",
+        "zh": "\u8fd0\u7528\u56e0\u679c\u7ed3\u6784\u3001\u79d1\u5b66\u539f\u7406\u6216\u8fd0\u884c\u6a21\u578b\u89e3\u91ca\u548c\u9884\u6d4b\u7cfb\u7edf\u884c\u4e3a\u3002"
+      }
+    },
+    {
+      "id": "quantitative-reasoning",
+      "name": {
+        "en": "Quantitative reasoning",
+        "zh": "\u5b9a\u91cf\u63a8\u7406"
+      },
+      "description": {
+        "en": "Using mathematics, numerical relationships, or formal quantitative models.",
+        "zh": "\u4f7f\u7528\u6570\u5b66\u3001\u6570\u503c\u5173\u7cfb\u6216\u5f62\u5f0f\u5316\u5b9a\u91cf\u6a21\u578b\u89e3\u51b3\u95ee\u9898\u3002"
+      }
+    },
+    {
+      "id": "spatial-reasoning",
+      "name": {
+        "en": "Spatial reasoning",
+        "zh": "\u7a7a\u95f4\u63a8\u7406"
+      },
+      "description": {
+        "en": "Reasoning about geometry, layout, physical structure, or spatial transformations.",
+        "zh": "\u5bf9\u51e0\u4f55\u3001\u5e03\u5c40\u3001\u7269\u7406\u7ed3\u6784\u6216\u7a7a\u95f4\u53d8\u6362\u8fdb\u884c\u63a8\u7406\u3002"
+      }
+    },
+    {
+      "id": "multimodal-perception",
+      "name": {
+        "en": "Multimodal perception",
+        "zh": "\u591a\u6a21\u6001\u611f\u77e5"
+      },
+      "description": {
+        "en": "Extracting task-relevant information from images, video, diagrams, or other non-text inputs.",
+        "zh": "\u4ece\u56fe\u50cf\u3001\u89c6\u9891\u3001\u56fe\u8868\u6216\u5176\u4ed6\u975e\u6587\u672c\u8f93\u5165\u4e2d\u63d0\u53d6\u4efb\u52a1\u76f8\u5173\u4fe1\u606f\u3002"
+      }
+    },
+    {
+      "id": "long-context-integration",
+      "name": {
+        "en": "Long-context integration",
+        "zh": "\u957f\u4e0a\u4e0b\u6587\u6574\u5408"
+      },
+      "description": {
+        "en": "Maintaining and combining evidence distributed across long documents, codebases, or trajectories.",
+        "zh": "\u6574\u5408\u5206\u5e03\u5728\u957f\u6587\u6863\u3001\u4ee3\u7801\u5e93\u6216\u957f\u8f68\u8ff9\u4e2d\u7684\u4fe1\u606f\u3002"
+      }
+    },
+    {
+      "id": "instruction-following",
+      "name": {
+        "en": "Instruction following",
+        "zh": "\u6307\u4ee4\u9075\u5faa"
+      },
+      "description": {
+        "en": "Satisfying explicit constraints, formats, policies, or interface contracts.",
+        "zh": "\u6ee1\u8db3\u660e\u786e\u7684\u7ea6\u675f\u3001\u683c\u5f0f\u3001\u653f\u7b56\u6216\u63a5\u53e3\u5951\u7ea6\u3002"
+      }
+    },
+    {
+      "id": "planning",
+      "name": {
+        "en": "Planning",
+        "zh": "\u89c4\u5212"
+      },
+      "description": {
+        "en": "Choosing and sequencing multiple actions toward a delayed objective.",
+        "zh": "\u4e3a\u5b9e\u73b0\u5ef6\u8fdf\u76ee\u6807\u9009\u62e9\u5e76\u5b89\u6392\u591a\u6b65\u884c\u52a8\u3002"
+      }
+    },
+    {
+      "id": "tool-use",
+      "name": {
+        "en": "Tool use",
+        "zh": "\u5de5\u5177\u4f7f\u7528"
+      },
+      "description": {
+        "en": "Selecting and invoking APIs, software, browsers, terminals, or specialized tools.",
+        "zh": "\u9009\u62e9\u5e76\u8c03\u7528 API\u3001\u8f6f\u4ef6\u3001\u6d4f\u89c8\u5668\u3001\u7ec8\u7aef\u6216\u4e13\u4e1a\u5de5\u5177\u3002"
+      }
+    },
+    {
+      "id": "environment-interaction",
+      "name": {
+        "en": "Environment interaction",
+        "zh": "\u73af\u5883\u4ea4\u4e92"
+      },
+      "description": {
+        "en": "Acting in an external environment and using its observed state or outcomes.",
+        "zh": "\u5728\u5916\u90e8\u73af\u5883\u4e2d\u884c\u52a8\uff0c\u5e76\u5229\u7528\u89c2\u5bdf\u5230\u7684\u72b6\u6001\u6216\u7ed3\u679c\u7ee7\u7eed\u4efb\u52a1\u3002"
+      }
+    },
+    {
+      "id": "state-tracking",
+      "name": {
+        "en": "State tracking",
+        "zh": "\u72b6\u6001\u8ffd\u8e2a"
+      },
+      "description": {
+        "en": "Maintaining relevant task and environment state across turns or actions.",
+        "zh": "\u5728\u591a\u8f6e\u4ea4\u4e92\u6216\u591a\u6b65\u884c\u52a8\u4e2d\u6301\u7eed\u7ef4\u62a4\u4efb\u52a1\u4e0e\u73af\u5883\u72b6\u6001\u3002"
+      }
+    },
+    {
+      "id": "error-recovery",
+      "name": {
+        "en": "Error recovery",
+        "zh": "\u9519\u8bef\u6062\u590d"
+      },
+      "description": {
+        "en": "Diagnosing failed attempts and adapting subsequent actions or outputs.",
+        "zh": "\u8bca\u65ad\u5931\u8d25\u5c1d\u8bd5\uff0c\u5e76\u8c03\u6574\u540e\u7eed\u884c\u52a8\u6216\u8f93\u51fa\u3002"
+      }
+    },
+    {
+      "id": "code-generation",
+      "name": {
+        "en": "Code generation",
+        "zh": "\u4ee3\u7801\u751f\u6210"
+      },
+      "description": {
+        "en": "Producing executable programs, patches, formal code, or hardware descriptions.",
+        "zh": "\u751f\u6210\u53ef\u6267\u884c\u7a0b\u5e8f\u3001\u4ee3\u7801\u8865\u4e01\u3001\u5f62\u5f0f\u5316\u4ee3\u7801\u6216\u786c\u4ef6\u63cf\u8ff0\u3002"
+      }
+    },
+    {
+      "id": "code-execution-debugging",
+      "name": {
+        "en": "Code execution & debugging",
+        "zh": "\u4ee3\u7801\u6267\u884c\u4e0e\u8c03\u8bd5"
+      },
+      "description": {
+        "en": "Running, testing, diagnosing, and repairing code or computational workflows.",
+        "zh": "\u8fd0\u884c\u3001\u6d4b\u8bd5\u3001\u8bca\u65ad\u5e76\u4fee\u590d\u4ee3\u7801\u6216\u8ba1\u7b97\u5de5\u4f5c\u6d41\u3002"
+      }
+    },
+    {
+      "id": "experimental-design",
+      "name": {
+        "en": "Experimental design",
+        "zh": "\u5b9e\u9a8c\u8bbe\u8ba1"
+      },
+      "description": {
+        "en": "Designing experiments or interventions that distinguish hypotheses or produce evidence.",
+        "zh": "\u8bbe\u8ba1\u80fd\u591f\u533a\u5206\u5047\u8bbe\u6216\u4ea7\u751f\u8bc1\u636e\u7684\u5b9e\u9a8c\u4e0e\u5e72\u9884\u3002"
+      }
+    },
+    {
+      "id": "design-optimization",
+      "name": {
+        "en": "Design & optimization",
+        "zh": "\u8bbe\u8ba1\u4e0e\u4f18\u5316"
+      },
+      "description": {
+        "en": "Constructing or improving an artifact under functional objectives and constraints.",
+        "zh": "\u5728\u529f\u80fd\u76ee\u6807\u548c\u7ea6\u675f\u4e0b\u6784\u9020\u6216\u6539\u8fdb\u5de5\u4ef6\u3001\u7cfb\u7edf\u6216\u65b9\u6848\u3002"
+      }
+    }
+  ],
   "benchmarks": [
     {
       "id": "mmlu",
@@ -71,6 +293,9 @@
       "tags": [
         "multiple-choice",
         "academic"
+      ],
+      "labels": [
+        "knowledge-recall"
       ],
       "score_format": "ratio",
       "score_decimals": null,
@@ -90,7 +315,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 2191
+          "days": 2192
         }
       },
       "velocity_180d": 0.000838703403565641,
@@ -137,6 +362,10 @@
       "tags": [
         "multi-step",
         "word problems"
+      ],
+      "labels": [
+        "formal-deductive-reasoning",
+        "quantitative-reasoning"
       ],
       "score_format": "ratio",
       "score_decimals": null,
@@ -203,6 +432,10 @@
       "evaluation_type": "Model",
       "tags": [
         "competition math"
+      ],
+      "labels": [
+        "formal-deductive-reasoning",
+        "quantitative-reasoning"
       ],
       "score_format": "ratio",
       "score_decimals": null,
@@ -273,6 +506,10 @@
         "multiple-choice",
         "reasoning"
       ],
+      "labels": [
+        "knowledge-recall",
+        "mechanistic-reasoning"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.96,
@@ -341,6 +578,14 @@
         "repository",
         "test-based"
       ],
+      "labels": [
+        "long-context-integration",
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "code-generation",
+        "code-execution-debugging"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.8347107438016529,
@@ -359,7 +604,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 755
+          "days": 756
         }
       },
       "velocity_180d": 0.011979535615899253,
@@ -407,6 +652,9 @@
         "constraints",
         "format"
       ],
+      "labels": [
+        "instruction-following"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.882,
@@ -425,7 +673,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 1028
+          "days": 1029
         }
       },
       "velocity_180d": 0.012940676328502411,
@@ -472,6 +720,10 @@
         "physician rubric",
         "safety"
       ],
+      "labels": [
+        "knowledge-recall",
+        "state-tracking"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.6,
@@ -485,11 +737,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 483
+          "days": 484
         },
         "T90": {
           "status": "right_censored",
-          "days": 483
+          "days": 484
         }
       },
       "velocity_180d": null,
@@ -533,6 +785,12 @@
         "research",
         "multi-hop"
       ],
+      "labels": [
+        "information-retrieval",
+        "planning",
+        "tool-use",
+        "environment-interaction"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.515,
@@ -546,11 +804,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 515
+          "days": 516
         },
         "T90": {
           "status": "right_censored",
-          "days": 515
+          "days": 516
         }
       },
       "velocity_180d": null,
@@ -594,6 +852,10 @@
         "multiple-choice",
         "reasoning"
       ],
+      "labels": [
+        "knowledge-recall",
+        "long-context-integration"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.633,
@@ -607,11 +869,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 620
+          "days": 621
         },
         "T90": {
           "status": "right_censored",
-          "days": 620
+          "days": 621
         }
       },
       "velocity_180d": null,
@@ -659,6 +921,10 @@
         "temporal reasoning",
         "no subtitles"
       ],
+      "labels": [
+        "multimodal-perception",
+        "state-tracking"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.797,
@@ -672,11 +938,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 826
+          "days": 827
         },
         "T90": {
           "status": "right_censored",
-          "days": 826
+          "days": 827
         }
       },
       "velocity_180d": 0.0037649473684210565,
@@ -723,6 +989,11 @@
         "charts",
         "diagrams"
       ],
+      "labels": [
+        "formal-deductive-reasoning",
+        "spatial-reasoning",
+        "multimodal-perception"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.739,
@@ -736,11 +1007,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 1070
+          "days": 1071
         },
         "T90": {
           "status": "right_censored",
-          "days": 1070
+          "days": 1071
         }
       },
       "velocity_180d": 0.025565266903914592,
@@ -787,6 +1058,9 @@
         "reasoning",
         "ten-choice"
       ],
+      "labels": [
+        "knowledge-recall"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.7612,
@@ -800,11 +1074,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 826
+          "days": 827
         },
         "T90": {
           "status": "right_censored",
-          "days": 826
+          "days": 827
         }
       },
       "velocity_180d": null,
@@ -850,6 +1124,9 @@
         "short-answer",
         "grader"
       ],
+      "labels": [
+        "knowledge-recall"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.756,
@@ -863,11 +1140,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 363
+          "days": 364
         },
         "T90": {
           "status": "right_censored",
-          "days": 363
+          "days": 364
         }
       },
       "velocity_180d": 0.003329375000000003,
@@ -915,6 +1192,10 @@
       "tags": [
         "expert",
         "verifiable"
+      ],
+      "labels": [
+        "formal-deductive-reasoning",
+        "quantitative-reasoning"
       ],
       "score_format": "ratio",
       "score_decimals": null,
@@ -982,6 +1263,10 @@
       "tags": [
         "visual",
         "novel reasoning"
+      ],
+      "labels": [
+        "rule-induction-abstraction",
+        "multimodal-perception"
       ],
       "score_format": "ratio",
       "score_decimals": null,
@@ -1051,6 +1336,11 @@
         "code editing",
         "multi-language"
       ],
+      "labels": [
+        "long-context-integration",
+        "code-generation",
+        "design-optimization"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.88,
@@ -1069,7 +1359,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 625
+          "days": 626
         }
       },
       "velocity_180d": 0.03495947598253275,
@@ -1130,6 +1420,12 @@
         "web",
         "environment"
       ],
+      "labels": [
+        "information-retrieval",
+        "planning",
+        "tool-use",
+        "environment-interaction"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.726,
@@ -1143,11 +1439,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 73
+          "days": 74
         },
         "T90": {
           "status": "right_censored",
-          "days": 73
+          "days": 74
         }
       },
       "velocity_180d": null,
@@ -1192,6 +1488,13 @@
         "terminal",
         "container"
       ],
+      "labels": [
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "state-tracking",
+        "code-execution-debugging"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.8470000000000001,
@@ -1210,7 +1513,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 304
+          "days": 305
         }
       },
       "velocity_180d": null,
@@ -1259,6 +1562,10 @@
         "multi-task",
         "few-shot"
       ],
+      "labels": [
+        "knowledge-recall",
+        "formal-deductive-reasoning"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.892,
@@ -1277,7 +1584,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 1421
+          "days": 1422
         }
       },
       "velocity_180d": 0.012755809523809527,
@@ -1324,6 +1631,11 @@
         "multimodal",
         "multiple-choice",
         "explanation"
+      ],
+      "labels": [
+        "knowledge-recall",
+        "mechanistic-reasoning",
+        "multimodal-perception"
       ],
       "score_format": "ratio",
       "score_decimals": null,
@@ -1389,6 +1701,10 @@
       "tags": [
         "commonsense",
         "multiple-choice"
+      ],
+      "labels": [
+        "knowledge-recall",
+        "commonsense-inference"
       ],
       "score_format": "ratio",
       "score_decimals": null,
@@ -1456,6 +1772,10 @@
         "physical commonsense",
         "multiple-choice"
       ],
+      "labels": [
+        "knowledge-recall",
+        "commonsense-inference"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.887,
@@ -1469,11 +1789,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 2477
+          "days": 2478
         },
         "T90": {
           "status": "right_censored",
-          "days": 2477
+          "days": 2478
         }
       },
       "velocity_180d": 0.0036605063291139275,
@@ -1520,6 +1840,10 @@
         "open-domain QA",
         "evidence"
       ],
+      "labels": [
+        "knowledge-recall",
+        "information-retrieval"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.876,
@@ -1538,7 +1862,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 3408
+          "days": 3409
         }
       },
       "velocity_180d": 0.0040154893617021315,
@@ -1586,6 +1910,11 @@
         "language understanding",
         "multi-task"
       ],
+      "labels": [
+        "knowledge-recall",
+        "formal-deductive-reasoning",
+        "commonsense-inference"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.718,
@@ -1599,11 +1928,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 2686
+          "days": 2687
         },
         "T90": {
           "status": "right_censored",
-          "days": 2686
+          "days": 2687
         }
       },
       "velocity_180d": null,
@@ -1649,6 +1978,10 @@
         "verifiable",
         "multi-step"
       ],
+      "labels": [
+        "mechanistic-reasoning",
+        "quantitative-reasoning"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.323,
@@ -1657,15 +1990,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 290
+          "days": 291
         },
         "T80": {
           "status": "right_censored",
-          "days": 290
+          "days": 291
         },
         "T90": {
           "status": "right_censored",
-          "days": 290
+          "days": 291
         }
       },
       "velocity_180d": 0.02607252173913044,
@@ -1716,6 +2049,17 @@
         "long-horizon",
         "open-answer"
       ],
+      "labels": [
+        "information-retrieval",
+        "mechanistic-reasoning",
+        "long-context-integration",
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "state-tracking",
+        "code-generation",
+        "code-execution-debugging"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.17,
@@ -1724,15 +2068,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 555
+          "days": 556
         },
         "T80": {
           "status": "right_censored",
-          "days": 555
+          "days": 556
         },
         "T90": {
           "status": "right_censored",
-          "days": 555
+          "days": 556
         }
       },
       "velocity_180d": null,
@@ -1777,6 +2121,10 @@
         "multi-topic",
         "accuracy"
       ],
+      "labels": [
+        "knowledge-recall",
+        "mechanistic-reasoning"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.6583,
@@ -1790,11 +2138,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 889
+          "days": 890
         },
         "T90": {
           "status": "right_censored",
-          "days": 889
+          "days": 890
         }
       },
       "velocity_180d": 0.0035305409836065564,
@@ -1839,6 +2187,10 @@
         "graduate-level",
         "reasoning"
       ],
+      "labels": [
+        "knowledge-recall",
+        "mechanistic-reasoning"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.825,
@@ -1857,7 +2209,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 466
+          "days": 467
         }
       },
       "velocity_180d": null,
@@ -1905,6 +2257,12 @@
         "terminal",
         "environment"
       ],
+      "labels": [
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "code-execution-debugging"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.225,
@@ -1913,15 +2271,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 767
+          "days": 768
         },
         "T80": {
           "status": "right_censored",
-          "days": 767
+          "days": 768
         },
         "T90": {
           "status": "right_censored",
-          "days": 767
+          "days": 768
         }
       },
       "velocity_180d": 0.008316939890710386,
@@ -1969,6 +2327,12 @@
         "browsing",
         "citation"
       ],
+      "labels": [
+        "information-retrieval",
+        "planning",
+        "tool-use",
+        "environment-interaction"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.5529999999999999,
@@ -1982,11 +2346,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 451
+          "days": 452
         },
         "T90": {
           "status": "right_censored",
-          "days": 451
+          "days": 452
         }
       },
       "velocity_180d": 0.009533406593406575,
@@ -2034,6 +2398,14 @@
         "execution",
         "research"
       ],
+      "labels": [
+        "information-retrieval",
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "code-generation",
+        "code-execution-debugging"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.62037037037037,
@@ -2047,11 +2419,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 781
+          "days": 782
         },
         "T90": {
           "status": "right_censored",
-          "days": 781
+          "days": 782
         }
       },
       "velocity_180d": 0.004903350515463918,
@@ -2101,6 +2473,10 @@
         "visual",
         "geometry"
       ],
+      "labels": [
+        "spatial-reasoning",
+        "multimodal-perception"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.4466,
@@ -2109,15 +2485,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 718
+          "days": 719
         },
         "T80": {
           "status": "right_censored",
-          "days": 718
+          "days": 719
         },
         "T90": {
           "status": "right_censored",
-          "days": 718
+          "days": 719
         }
       },
       "velocity_180d": 0.005519340659340655,
@@ -2164,6 +2540,11 @@
         "simulation",
         "long-horizon",
         "business"
+      ],
+      "labels": [
+        "planning",
+        "environment-interaction",
+        "state-tracking"
       ],
       "score_format": "number",
       "score_decimals": null,
@@ -2232,6 +2613,13 @@
         "simulation",
         "tool use"
       ],
+      "labels": [
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "code-generation",
+        "design-optimization"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.616,
@@ -2245,11 +2633,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 37
+          "days": 38
         },
         "T90": {
           "status": "right_censored",
-          "days": 37
+          "days": 38
         }
       },
       "velocity_180d": null,
@@ -2307,6 +2695,10 @@
         "multiple-choice",
         "pass@1",
         "ScienceEval"
+      ],
+      "labels": [
+        "knowledge-recall",
+        "mechanistic-reasoning"
       ],
       "score_format": "ratio",
       "score_decimals": null,
@@ -2376,6 +2768,10 @@
         "verifiable",
         "accuracy"
       ],
+      "labels": [
+        "mechanistic-reasoning",
+        "quantitative-reasoning"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.6139,
@@ -2389,11 +2785,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 503
+          "days": 504
         },
         "T90": {
           "status": "right_censored",
-          "days": 503
+          "days": 504
         }
       },
       "velocity_180d": 0.0354988380952381,
@@ -2439,6 +2835,9 @@
         "university",
         "automatic verification"
       ],
+      "labels": [
+        "quantitative-reasoning"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.7114,
@@ -2452,11 +2851,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 530
+          "days": 531
         },
         "T90": {
           "status": "right_censored",
-          "days": 530
+          "days": 531
         }
       },
       "velocity_180d": null,
@@ -2505,6 +2904,14 @@
         "code execution",
         "long-horizon"
       ],
+      "labels": [
+        "mechanistic-reasoning",
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "state-tracking",
+        "code-execution-debugging"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.83,
@@ -2523,7 +2930,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 151
+          "days": 152
         }
       },
       "velocity_180d": null,
@@ -2570,6 +2977,11 @@
         "rubric",
         "multi-domain"
       ],
+      "labels": [
+        "planning",
+        "environment-interaction",
+        "design-optimization"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.5402,
@@ -2583,11 +2995,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 433
+          "days": 434
         },
         "T90": {
           "status": "right_censored",
-          "days": 433
+          "days": 434
         }
       },
       "velocity_180d": null,
@@ -2635,6 +3047,15 @@
         "pass@1",
         "test-based"
       ],
+      "labels": [
+        "long-context-integration",
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "error-recovery",
+        "code-generation",
+        "code-execution-debugging"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.479,
@@ -2643,15 +3064,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 18
+          "days": 19
         },
         "T80": {
           "status": "right_censored",
-          "days": 18
+          "days": 19
         },
         "T90": {
           "status": "right_censored",
-          "days": 18
+          "days": 19
         }
       },
       "velocity_180d": null,
@@ -2698,6 +3119,11 @@
         "multimodal",
         "perception"
       ],
+      "labels": [
+        "spatial-reasoning",
+        "multimodal-perception",
+        "planning"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.6732,
@@ -2711,11 +3137,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 319
+          "days": 320
         },
         "T90": {
           "status": "right_censored",
-          "days": 319
+          "days": 320
         }
       },
       "velocity_180d": null,
@@ -2760,6 +3186,14 @@
         "code quality",
         "regression safety"
       ],
+      "labels": [
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "error-recovery",
+        "code-generation",
+        "code-execution-debugging"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.5348,
@@ -2773,11 +3207,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 214
+          "days": 215
         },
         "T90": {
           "status": "right_censored",
-          "days": 214
+          "days": 215
         }
       },
       "velocity_180d": null,
@@ -2825,6 +3259,10 @@
         "research-level",
         "expert",
         "verifiable"
+      ],
+      "labels": [
+        "formal-deductive-reasoning",
+        "quantitative-reasoning"
       ],
       "score_format": "ratio",
       "score_decimals": null,
@@ -2894,6 +3332,13 @@
         "novel reasoning",
         "adaptation"
       ],
+      "labels": [
+        "rule-induction-abstraction",
+        "planning",
+        "environment-interaction",
+        "state-tracking",
+        "error-recovery"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.999,
@@ -2957,6 +3402,12 @@
         "professional work",
         "verifiable"
       ],
+      "labels": [
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "state-tracking"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.593,
@@ -2970,11 +3421,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 96
+          "days": 97
         },
         "T90": {
           "status": "right_censored",
-          "days": 96
+          "days": 97
         }
       },
       "velocity_180d": null,
@@ -3021,6 +3472,16 @@
         "terminal",
         "continuous benchmark"
       ],
+      "labels": [
+        "information-retrieval",
+        "mechanistic-reasoning",
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "state-tracking",
+        "code-execution-debugging",
+        "design-optimization"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.646,
@@ -3034,11 +3495,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 110
+          "days": 111
         },
         "T90": {
           "status": "right_censored",
-          "days": 110
+          "days": 111
         }
       },
       "velocity_180d": null,
@@ -3084,6 +3545,13 @@
         "verified subset",
         "terminal"
       ],
+      "labels": [
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "state-tracking",
+        "code-execution-debugging"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.625,
@@ -3097,11 +3565,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 109
+          "days": 110
         },
         "T90": {
           "status": "right_censored",
-          "days": 109
+          "days": 110
         }
       },
       "velocity_180d": null,
@@ -3149,6 +3617,13 @@
         "reproducible",
         "revision"
       ],
+      "labels": [
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "state-tracking",
+        "code-execution-debugging"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.791,
@@ -3162,11 +3637,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 124
+          "days": 125
         },
         "T90": {
           "status": "right_censored",
-          "days": 124
+          "days": 125
         }
       },
       "velocity_180d": null,
@@ -3212,6 +3687,13 @@
         "command line",
         "versioned"
       ],
+      "labels": [
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "state-tracking",
+        "code-execution-debugging"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.579,
@@ -3225,11 +3707,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 12
+          "days": 13
         },
         "T90": {
           "status": "right_censored",
-          "days": 12
+          "days": 13
         }
       },
       "velocity_180d": null,
@@ -3275,6 +3757,10 @@
         "multimodal",
         "expert"
       ],
+      "labels": [
+        "knowledge-recall",
+        "multimodal-perception"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.572,
@@ -3288,11 +3774,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 522
+          "days": 523
         },
         "T90": {
           "status": "right_censored",
-          "days": 522
+          "days": 523
         }
       },
       "velocity_180d": 0.016710938775510203,
@@ -3339,6 +3825,14 @@
         "coding",
         "tool use"
       ],
+      "labels": [
+        "long-context-integration",
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "code-generation",
+        "design-optimization"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.734,
@@ -3352,11 +3846,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 61
+          "days": 62
         },
         "T90": {
           "status": "right_censored",
-          "days": 61
+          "days": 62
         }
       },
       "velocity_180d": null,
@@ -3414,6 +3908,11 @@
         "professional work",
         "Elo",
         "agentic"
+      ],
+      "labels": [
+        "information-retrieval",
+        "planning",
+        "environment-interaction"
       ],
       "score_format": "number",
       "score_decimals": null,
@@ -3477,6 +3976,13 @@
         "API",
         "end-state grading"
       ],
+      "labels": [
+        "instruction-following",
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "state-tracking"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.414,
@@ -3485,15 +3991,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 140
+          "days": 141
         },
         "T80": {
           "status": "right_censored",
-          "days": 140
+          "days": 141
         },
         "T90": {
           "status": "right_censored",
-          "days": 140
+          "days": 141
         }
       },
       "velocity_180d": null,
@@ -3538,6 +4044,12 @@
         "GUI grounding",
         "high resolution",
         "static screenshot"
+      ],
+      "labels": [
+        "spatial-reasoning",
+        "multimodal-perception",
+        "instruction-following",
+        "state-tracking"
       ],
       "score_format": "ratio",
       "score_decimals": null,
@@ -3603,6 +4115,13 @@
         "vision-to-code",
         "execution-grounded"
       ],
+      "labels": [
+        "spatial-reasoning",
+        "multimodal-perception",
+        "code-generation",
+        "code-execution-debugging",
+        "design-optimization"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.444,
@@ -3611,15 +4130,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 119
+          "days": 120
         },
         "T80": {
           "status": "right_censored",
-          "days": 119
+          "days": 120
         },
         "T90": {
           "status": "right_censored",
-          "days": 119
+          "days": 120
         }
       },
       "velocity_180d": null,
@@ -3667,6 +4186,14 @@
         "tool use",
         "long-horizon"
       ],
+      "labels": [
+        "information-retrieval",
+        "multimodal-perception",
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "state-tracking"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.7475,
@@ -3680,11 +4207,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 1021
+          "days": 1022
         },
         "T90": {
           "status": "right_censored",
-          "days": 1021
+          "days": 1022
         }
       },
       "velocity_180d": 0.0475253082706767,
@@ -3727,6 +4254,11 @@
         "real tools",
         "claim grading"
       ],
+      "labels": [
+        "planning",
+        "tool-use",
+        "environment-interaction"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.791,
@@ -3740,11 +4272,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 341
+          "days": 342
         },
         "T90": {
           "status": "right_censored",
-          "days": 341
+          "days": 342
         }
       },
       "velocity_180d": null,
@@ -3791,6 +4323,14 @@
         "Pass@1",
         "tool calls"
       ],
+      "labels": [
+        "instruction-following",
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "state-tracking",
+        "code-execution-debugging"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.765,
@@ -3804,11 +4344,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 69
+          "days": 70
         },
         "T90": {
           "status": "right_censored",
-          "days": 69
+          "days": 70
         }
       },
       "velocity_180d": null,
@@ -3855,6 +4395,14 @@
         "browser",
         "coding"
       ],
+      "labels": [
+        "information-retrieval",
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "state-tracking",
+        "code-generation"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.429,
@@ -3863,15 +4411,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 706
+          "days": 707
         },
         "T80": {
           "status": "right_censored",
-          "days": 706
+          "days": 707
         },
         "T90": {
           "status": "right_censored",
-          "days": 706
+          "days": 707
         }
       },
       "velocity_180d": 0.016833179723502303,
@@ -3920,6 +4468,15 @@
         "long-horizon",
         "cost"
       ],
+      "labels": [
+        "long-context-integration",
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "state-tracking",
+        "code-generation",
+        "code-execution-debugging"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.738255033557047,
@@ -3933,11 +4490,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 159
+          "days": 160
         },
         "T90": {
           "status": "right_censored",
-          "days": 159
+          "days": 160
         }
       },
       "velocity_180d": null,
@@ -3998,6 +4555,15 @@
         "quality",
         "multi-run"
       ],
+      "labels": [
+        "information-retrieval",
+        "long-context-integration",
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "code-generation",
+        "code-execution-debugging"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.5629079,
@@ -4011,11 +4577,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 68
+          "days": 69
         },
         "T90": {
           "status": "right_censored",
-          "days": 68
+          "days": 69
         }
       },
       "velocity_180d": null,
@@ -4076,6 +4642,13 @@
         "Python",
         "verified"
       ],
+      "labels": [
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "code-generation",
+        "experimental-design"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.3333,
@@ -4084,15 +4657,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 700
+          "days": 701
         },
         "T80": {
           "status": "right_censored",
-          "days": 700
+          "days": 701
         },
         "T90": {
           "status": "right_censored",
-          "days": 700
+          "days": 701
         }
       },
       "velocity_180d": null,
@@ -4139,6 +4712,14 @@
         "Kaggle",
         "long-horizon"
       ],
+      "labels": [
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "state-tracking",
+        "code-execution-debugging",
+        "experimental-design"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.169,
@@ -4147,15 +4728,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 697
+          "days": 698
         },
         "T80": {
           "status": "right_censored",
-          "days": 697
+          "days": 698
         },
         "T90": {
           "status": "right_censored",
-          "days": 697
+          "days": 698
         }
       },
       "velocity_180d": null,
@@ -4201,6 +4782,14 @@
         "experiments",
         "rubric"
       ],
+      "labels": [
+        "information-retrieval",
+        "long-context-integration",
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "experimental-design"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.21,
@@ -4209,15 +4798,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 523
+          "days": 524
         },
         "T80": {
           "status": "right_censored",
-          "days": 523
+          "days": 524
         },
         "T90": {
           "status": "right_censored",
-          "days": 523
+          "days": 524
         }
       },
       "velocity_180d": null,
@@ -4264,6 +4853,11 @@
         "academic",
         "multi-discipline"
       ],
+      "labels": [
+        "knowledge-recall",
+        "spatial-reasoning",
+        "multimodal-perception"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.691,
@@ -4277,11 +4871,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 1008
+          "days": 1009
         },
         "T90": {
           "status": "right_censored",
-          "days": 1008
+          "days": 1009
         }
       },
       "velocity_180d": null,
@@ -4327,6 +4921,10 @@
         "ten-choice",
         "academic"
       ],
+      "labels": [
+        "knowledge-recall",
+        "multimodal-perception"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.519,
@@ -4340,11 +4938,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 732
+          "days": 733
         },
         "T90": {
           "status": "right_censored",
-          "days": 732
+          "days": 733
         }
       },
       "velocity_180d": null,
@@ -4390,6 +4988,14 @@
         "multi-turn",
         "agentic"
       ],
+      "labels": [
+        "instruction-following",
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "state-tracking",
+        "error-recovery"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.7324,
@@ -4403,11 +5009,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 417
+          "days": 418
         },
         "T90": {
           "status": "right_censored",
-          "days": 417
+          "days": 418
         }
       },
       "velocity_180d": null,
@@ -4452,6 +5058,11 @@
         "Python",
         "function-level",
         "unit tests"
+      ],
+      "labels": [
+        "code-generation",
+        "code-execution-debugging",
+        "design-optimization"
       ],
       "score_format": "ratio",
       "score_decimals": null,
@@ -4517,6 +5128,11 @@
         "function calls",
         "calibrated Pass@1"
       ],
+      "labels": [
+        "instruction-following",
+        "code-generation",
+        "design-optimization"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.611,
@@ -4530,11 +5146,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 811
+          "days": 812
         },
         "T90": {
           "status": "right_censored",
-          "days": 811
+          "days": 812
         }
       },
       "velocity_180d": null,
@@ -4581,6 +5197,12 @@
         "web",
         "research"
       ],
+      "labels": [
+        "information-retrieval",
+        "planning",
+        "tool-use",
+        "environment-interaction"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.3881,
@@ -4589,15 +5211,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 776
+          "days": 777
         },
         "T80": {
           "status": "right_censored",
-          "days": 776
+          "days": 777
         },
         "T90": {
           "status": "right_censored",
-          "days": 776
+          "days": 777
         }
       },
       "velocity_180d": null,
@@ -4644,6 +5266,12 @@
         "long-horizon",
         "vision"
       ],
+      "labels": [
+        "multimodal-perception",
+        "planning",
+        "environment-interaction",
+        "state-tracking"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.5810000000000001,
@@ -4657,11 +5285,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 656
+          "days": 657
         },
         "T90": {
           "status": "right_censored",
-          "days": 656
+          "days": 657
         }
       },
       "velocity_180d": 0.01892907563025211,
@@ -4712,6 +5340,15 @@
         "performance",
         "test-based"
       ],
+      "labels": [
+        "long-context-integration",
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "code-generation",
+        "code-execution-debugging",
+        "design-optimization"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.4706,
@@ -4720,15 +5357,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 466
+          "days": 467
         },
         "T80": {
           "status": "right_censored",
-          "days": 466
+          "days": 467
         },
         "T90": {
           "status": "right_censored",
-          "days": 466
+          "days": 467
         }
       },
       "velocity_180d": 0.03382953513513514,
@@ -4775,6 +5412,13 @@
         "software",
         "research",
         "time horizon"
+      ],
+      "labels": [
+        "information-retrieval",
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "state-tracking"
       ],
       "score_format": "number",
       "score_decimals": null,
@@ -4842,6 +5486,12 @@
         "environment",
         "capability ladder"
       ],
+      "labels": [
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "code-execution-debugging"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.706,
@@ -4855,11 +5505,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 112
+          "days": 113
         },
         "T90": {
           "status": "right_censored",
-          "days": 112
+          "days": 113
         }
       },
       "velocity_180d": null,
@@ -4905,6 +5555,10 @@
         "Lean 4",
         "theorem proving",
         "verified"
+      ],
+      "labels": [
+        "formal-deductive-reasoning",
+        "quantitative-reasoning"
       ],
       "score_format": "ratio",
       "score_decimals": null,
@@ -4971,6 +5625,10 @@
         "decision theory",
         "multiple-choice",
         "conceptual reasoning"
+      ],
+      "labels": [
+        "knowledge-recall",
+        "formal-deductive-reasoning"
       ],
       "score_format": "ratio",
       "score_decimals": null,
@@ -5042,6 +5700,12 @@
         "long-horizon",
         "Pass@1"
       ],
+      "labels": [
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "state-tracking"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.474,
@@ -5050,15 +5714,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 230
+          "days": 231
         },
         "T80": {
           "status": "right_censored",
-          "days": 230
+          "days": 231
         },
         "T90": {
           "status": "right_censored",
-          "days": 230
+          "days": 231
         }
       },
       "velocity_180d": 0.019278666666666666,
@@ -5108,6 +5772,10 @@
         "multiple-choice",
         "commonsense"
       ],
+      "labels": [
+        "knowledge-recall",
+        "commonsense-inference"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.88,
@@ -5126,7 +5794,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 2922
+          "days": 2923
         }
       },
       "velocity_180d": 0.011942966507177029,
@@ -5172,6 +5840,9 @@
         "binary",
         "passage"
       ],
+      "labels": [
+        "knowledge-recall"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.909,
@@ -5190,7 +5861,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 2663
+          "days": 2664
         }
       },
       "velocity_180d": 0.0016413725490196094,
@@ -5238,6 +5909,12 @@
         "reasoning",
         "PSAS"
       ],
+      "labels": [
+        "knowledge-recall",
+        "mechanistic-reasoning",
+        "quantitative-reasoning",
+        "multimodal-perception"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.5675,
@@ -5251,11 +5928,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 567
+          "days": 568
         },
         "T90": {
           "status": "right_censored",
-          "days": 567
+          "days": 568
         }
       },
       "velocity_180d": null,
@@ -5303,6 +5980,12 @@
         "multimodal",
         "bilingual"
       ],
+      "labels": [
+        "knowledge-recall",
+        "mechanistic-reasoning",
+        "quantitative-reasoning",
+        "multimodal-perception"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.131,
@@ -5311,15 +5994,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 934
+          "days": 935
         },
         "T80": {
           "status": "right_censored",
-          "days": 934
+          "days": 935
         },
         "T90": {
           "status": "right_censored",
-          "days": 934
+          "days": 935
         }
       },
       "velocity_180d": null,
@@ -5366,6 +6049,10 @@
         "spectroscopy",
         "nomenclature"
       ],
+      "labels": [
+        "knowledge-recall",
+        "mechanistic-reasoning"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.567,
@@ -5379,11 +6066,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 483
+          "days": 484
         },
         "T90": {
           "status": "right_censored",
-          "days": 483
+          "days": 484
         }
       },
       "velocity_180d": null,
@@ -5429,6 +6116,11 @@
         "expert",
         "reasoning"
       ],
+      "labels": [
+        "knowledge-recall",
+        "mechanistic-reasoning",
+        "multimodal-perception"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.385,
@@ -5437,15 +6129,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 280
+          "days": 281
         },
         "T80": {
           "status": "right_censored",
-          "days": 280
+          "days": 281
         },
         "T90": {
           "status": "right_censored",
-          "days": 280
+          "days": 281
         }
       },
       "velocity_180d": null,
@@ -5490,6 +6182,10 @@
         "reasoning",
         "text-only"
       ],
+      "labels": [
+        "knowledge-recall",
+        "mechanistic-reasoning"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.7522,
@@ -5503,11 +6199,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 91
+          "days": 92
         },
         "T90": {
           "status": "right_censored",
-          "days": 91
+          "days": 92
         }
       },
       "velocity_180d": null,
@@ -5556,6 +6252,11 @@
         "spatial reasoning",
         "CIF"
       ],
+      "labels": [
+        "knowledge-recall",
+        "spatial-reasoning",
+        "design-optimization"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.8192,
@@ -5574,7 +6275,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 102
+          "days": 103
         }
       },
       "velocity_180d": null,
@@ -5620,6 +6321,10 @@
         "open-ended",
         "rubric"
       ],
+      "labels": [
+        "mechanistic-reasoning",
+        "design-optimization"
+      ],
       "score_format": "number",
       "score_decimals": 2,
       "capability_frontier_value": 7.0,
@@ -5633,11 +6338,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 128
+          "days": 129
         },
         "T90": {
           "status": "right_censored",
-          "days": 128
+          "days": 129
         }
       },
       "velocity_180d": null,
@@ -5686,6 +6391,10 @@
         "multimodal",
         "exact-answer"
       ],
+      "labels": [
+        "mechanistic-reasoning",
+        "multimodal-perception"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.4678,
@@ -5694,15 +6403,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 557
+          "days": 558
         },
         "T80": {
           "status": "right_censored",
-          "days": 557
+          "days": 558
         },
         "T90": {
           "status": "right_censored",
-          "days": 557
+          "days": 558
         }
       },
       "velocity_180d": null,
@@ -5750,6 +6459,14 @@
         "tools",
         "research"
       ],
+      "labels": [
+        "information-retrieval",
+        "long-context-integration",
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "code-execution-debugging"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.88,
@@ -5768,7 +6485,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 215
+          "days": 216
         }
       },
       "velocity_180d": null,
@@ -5815,6 +6532,9 @@
         "fitness",
         "Spearman"
       ],
+      "labels": [
+        "knowledge-recall"
+      ],
       "score_format": "number",
       "score_decimals": 3,
       "capability_frontier_value": 0.406,
@@ -5823,15 +6543,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 42
+          "days": 43
         },
         "T80": {
           "status": "right_censored",
-          "days": 42
+          "days": 43
         },
         "T90": {
           "status": "right_censored",
-          "days": 42
+          "days": 43
         }
       },
       "velocity_180d": null,
@@ -5877,6 +6597,10 @@
         "clinical reasoning",
         "ten-choice"
       ],
+      "labels": [
+        "knowledge-recall",
+        "mechanistic-reasoning"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.3776,
@@ -5885,15 +6609,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 458
+          "days": 459
         },
         "T80": {
           "status": "right_censored",
-          "days": 458
+          "days": 459
         },
         "T90": {
           "status": "right_censored",
-          "days": 458
+          "days": 459
         }
       },
       "velocity_180d": null,
@@ -5942,6 +6666,10 @@
         "multimodal",
         "VQA"
       ],
+      "labels": [
+        "knowledge-recall",
+        "multimodal-perception"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.5396,
@@ -5950,15 +6678,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 686
+          "days": 687
         },
         "T80": {
           "status": "right_censored",
-          "days": 686
+          "days": 687
         },
         "T90": {
           "status": "right_censored",
-          "days": 686
+          "days": 687
         }
       },
       "velocity_180d": null,
@@ -6006,6 +6734,10 @@
         "protocol",
         "troubleshooting"
       ],
+      "labels": [
+        "knowledge-recall",
+        "mechanistic-reasoning"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.53,
@@ -6014,15 +6746,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 782
+          "days": 783
         },
         "T80": {
           "status": "right_censored",
-          "days": 782
+          "days": 783
         },
         "T90": {
           "status": "right_censored",
-          "days": 782
+          "days": 783
         }
       },
       "velocity_180d": null,
@@ -6069,6 +6801,10 @@
         "spaceflight",
         "open-answer"
       ],
+      "labels": [
+        "mechanistic-reasoning",
+        "quantitative-reasoning"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.666,
@@ -6082,11 +6818,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 549
+          "days": 550
         },
         "T90": {
           "status": "right_censored",
-          "days": 549
+          "days": 550
         }
       },
       "velocity_180d": null,
@@ -6132,6 +6868,12 @@
         "open-ended",
         "expert graded"
       ],
+      "labels": [
+        "mechanistic-reasoning",
+        "quantitative-reasoning",
+        "multimodal-perception",
+        "design-optimization"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.585,
@@ -6145,11 +6887,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 886
+          "days": 887
         },
         "T90": {
           "status": "right_censored",
-          "days": 886
+          "days": 887
         }
       },
       "velocity_180d": null,
@@ -6195,6 +6937,13 @@
         "multimodal",
         "debugging"
       ],
+      "labels": [
+        "quantitative-reasoning",
+        "spatial-reasoning",
+        "multimodal-perception",
+        "code-execution-debugging",
+        "design-optimization"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.5124,
@@ -6208,11 +6957,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 467
+          "days": 468
         },
         "T90": {
           "status": "right_censored",
-          "days": 467
+          "days": 468
         }
       },
       "velocity_180d": null,
@@ -6259,6 +7008,11 @@
         "spatial memory",
         "multimodal"
       ],
+      "labels": [
+        "spatial-reasoning",
+        "multimodal-perception",
+        "state-tracking"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.553,
@@ -6272,11 +7026,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 879
+          "days": 880
         },
         "T90": {
           "status": "right_censored",
-          "days": 879
+          "days": 880
         }
       },
       "velocity_180d": null,
@@ -6322,6 +7076,13 @@
         "simulation",
         "closed loop"
       ],
+      "labels": [
+        "spatial-reasoning",
+        "multimodal-perception",
+        "planning",
+        "environment-interaction",
+        "error-recovery"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.289,
@@ -6330,15 +7091,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 459
+          "days": 460
         },
         "T80": {
           "status": "right_censored",
-          "days": 459
+          "days": 460
         },
         "T90": {
           "status": "right_censored",
-          "days": 459
+          "days": 460
         }
       },
       "velocity_180d": null,
@@ -6386,6 +7147,11 @@
         "egocentric",
         "multi-round"
       ],
+      "labels": [
+        "spatial-reasoning",
+        "multimodal-perception",
+        "state-tracking"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.5425,
@@ -6394,15 +7160,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 328
+          "days": 329
         },
         "T80": {
           "status": "right_censored",
-          "days": 328
+          "days": 329
         },
         "T90": {
           "status": "right_censored",
-          "days": 328
+          "days": 329
         }
       },
       "velocity_180d": null,
@@ -6449,6 +7215,12 @@
         "scientific workflow",
         "plots"
       ],
+      "labels": [
+        "knowledge-recall",
+        "quantitative-reasoning",
+        "multimodal-perception",
+        "state-tracking"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.67,
@@ -6462,11 +7234,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 556
+          "days": 557
         },
         "T90": {
           "status": "right_censored",
-          "days": 556
+          "days": 557
         }
       },
       "velocity_180d": null,
@@ -6513,6 +7285,10 @@
         "process systems",
         "rubric"
       ],
+      "labels": [
+        "knowledge-recall",
+        "design-optimization"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.519,
@@ -6526,11 +7302,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 196
+          "days": 197
         },
         "T90": {
           "status": "right_censored",
-          "days": 196
+          "days": 197
         }
       },
       "velocity_180d": null,
@@ -6578,6 +7354,11 @@
         "molecular structure",
         "multimodal"
       ],
+      "labels": [
+        "knowledge-recall",
+        "spatial-reasoning",
+        "multimodal-perception"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.0795,
@@ -6586,15 +7367,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 54
+          "days": 55
         },
         "T80": {
           "status": "right_censored",
-          "days": 54
+          "days": 55
         },
         "T90": {
           "status": "right_censored",
-          "days": 54
+          "days": 55
         }
       },
       "velocity_180d": null,
@@ -6642,6 +7423,10 @@
         "video",
         "physical world"
       ],
+      "labels": [
+        "quantitative-reasoning",
+        "multimodal-perception"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.4949,
@@ -6650,15 +7435,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 714
+          "days": 715
         },
         "T80": {
           "status": "right_censored",
-          "days": 714
+          "days": 715
         },
         "T90": {
           "status": "right_censored",
-          "days": 714
+          "days": 715
         }
       },
       "velocity_180d": null,
@@ -6703,6 +7488,12 @@
         "bilingual",
         "multimodal"
       ],
+      "labels": [
+        "knowledge-recall",
+        "mechanistic-reasoning",
+        "quantitative-reasoning",
+        "multimodal-perception"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.3116,
@@ -6711,15 +7502,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 811
+          "days": 812
         },
         "T80": {
           "status": "right_censored",
-          "days": 811
+          "days": 812
         },
         "T90": {
           "status": "right_censored",
-          "days": 811
+          "days": 812
         }
       },
       "velocity_180d": null,
@@ -6766,6 +7557,11 @@
         "partial credit",
         "quantitative"
       ],
+      "labels": [
+        "knowledge-recall",
+        "mechanistic-reasoning",
+        "quantitative-reasoning"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.352,
@@ -6774,15 +7570,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 1202
+          "days": 1203
         },
         "T80": {
           "status": "right_censored",
-          "days": 1202
+          "days": 1203
         },
         "T90": {
           "status": "right_censored",
-          "days": 1202
+          "days": 1203
         }
       },
       "velocity_180d": null,
@@ -6827,6 +7623,13 @@
         "symbolic",
         "multimodal"
       ],
+      "labels": [
+        "formal-deductive-reasoning",
+        "mechanistic-reasoning",
+        "quantitative-reasoning",
+        "spatial-reasoning",
+        "multimodal-perception"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.1906,
@@ -6835,15 +7638,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 191
+          "days": 192
         },
         "T80": {
           "status": "right_censored",
-          "days": 191
+          "days": 192
         },
         "T90": {
           "status": "right_censored",
-          "days": 191
+          "days": 192
         }
       },
       "velocity_180d": null,
@@ -6890,6 +7693,10 @@
         "breadboard",
         "simulation"
       ],
+      "labels": [
+        "quantitative-reasoning",
+        "spatial-reasoning"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.452,
@@ -6898,15 +7705,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 250
+          "days": 251
         },
         "T80": {
           "status": "right_censored",
-          "days": 250
+          "days": 251
         },
         "T90": {
           "status": "right_censored",
-          "days": 250
+          "days": 251
         }
       },
       "velocity_180d": null,
@@ -6954,6 +7761,10 @@
         "SystemVerilog",
         "simulation"
       ],
+      "labels": [
+        "quantitative-reasoning",
+        "code-generation"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.625,
@@ -6967,11 +7778,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 581
+          "days": 582
         },
         "T90": {
           "status": "right_censored",
-          "days": 581
+          "days": 582
         }
       },
       "velocity_180d": null,
@@ -7017,6 +7828,10 @@
         "XRD",
         "crystallography",
         "closed book"
+      ],
+      "labels": [
+        "knowledge-recall",
+        "multimodal-perception"
       ],
       "score_format": "ratio",
       "score_decimals": null,
@@ -7087,6 +7902,12 @@
         "multimodal",
         "zero-shot"
       ],
+      "labels": [
+        "knowledge-recall",
+        "mechanistic-reasoning",
+        "spatial-reasoning",
+        "multimodal-perception"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.5907,
@@ -7095,15 +7916,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 361
+          "days": 362
         },
         "T80": {
           "status": "right_censored",
-          "days": 361
+          "days": 362
         },
         "T90": {
           "status": "right_censored",
-          "days": 361
+          "days": 362
         }
       },
       "velocity_180d": null,
@@ -7151,6 +7972,12 @@
         "multimodal",
         "open QA"
       ],
+      "labels": [
+        "knowledge-recall",
+        "mechanistic-reasoning",
+        "quantitative-reasoning",
+        "multimodal-perception"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.372,
@@ -7159,15 +7986,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 101
+          "days": 102
         },
         "T80": {
           "status": "right_censored",
-          "days": 101
+          "days": 102
         },
         "T90": {
           "status": "right_censored",
-          "days": 101
+          "days": 102
         }
       },
       "velocity_180d": null,
@@ -7215,6 +8042,10 @@
         "petroleum",
         "subsurface",
         "geoscience"
+      ],
+      "labels": [
+        "knowledge-recall",
+        "quantitative-reasoning"
       ],
       "score_format": "ratio",
       "score_decimals": null,
@@ -7285,6 +8116,11 @@
         "regulation",
         "net zero"
       ],
+      "labels": [
+        "mechanistic-reasoning",
+        "quantitative-reasoning",
+        "planning"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.888,
@@ -7303,7 +8139,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 25
+          "days": 26
         }
       },
       "velocity_180d": null,
@@ -7351,6 +8187,10 @@
         "Chinese",
         "course balanced"
       ],
+      "labels": [
+        "knowledge-recall",
+        "quantitative-reasoning"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.8047,
@@ -7369,7 +8209,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 842
+          "days": 843
         }
       },
       "velocity_180d": null,
@@ -7416,6 +8256,10 @@
         "multiple-choice",
         "expert reviewed"
       ],
+      "labels": [
+        "knowledge-recall",
+        "mechanistic-reasoning"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.624,
@@ -7424,15 +8268,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 465
+          "days": 466
         },
         "T80": {
           "status": "right_censored",
-          "days": 465
+          "days": 466
         },
         "T90": {
           "status": "right_censored",
-          "days": 465
+          "days": 466
         }
       },
       "velocity_180d": null,
@@ -7482,6 +8326,11 @@
         "tools",
         "environment"
       ],
+      "labels": [
+        "planning",
+        "tool-use",
+        "environment-interaction"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.608,
@@ -7495,11 +8344,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 88
+          "days": 89
         },
         "T90": {
           "status": "right_censored",
-          "days": 88
+          "days": 89
         }
       },
       "velocity_180d": null,
@@ -7548,6 +8397,11 @@
         "numerical",
         "conceptual"
       ],
+      "labels": [
+        "knowledge-recall",
+        "mechanistic-reasoning",
+        "quantitative-reasoning"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.7923,
@@ -7561,11 +8415,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 74
+          "days": 75
         },
         "T90": {
           "status": "right_censored",
-          "days": 74
+          "days": 75
         }
       },
       "velocity_180d": null,
@@ -7609,6 +8463,11 @@
         "thermodynamics",
         "power cycles",
         "open answer"
+      ],
+      "labels": [
+        "knowledge-recall",
+        "mechanistic-reasoning",
+        "quantitative-reasoning"
       ],
       "score_format": "ratio",
       "score_decimals": null,
@@ -7677,6 +8536,13 @@
         "EHR",
         "clinical workflow"
       ],
+      "labels": [
+        "information-retrieval",
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "state-tracking"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.6967,
@@ -7690,11 +8556,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 591
+          "days": 592
         },
         "T90": {
           "status": "right_censored",
-          "days": 591
+          "days": 592
         }
       },
       "velocity_180d": null,
@@ -7743,6 +8609,11 @@
         "numeric",
         "decision support"
       ],
+      "labels": [
+        "knowledge-recall",
+        "formal-deductive-reasoning",
+        "quantitative-reasoning"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.509,
@@ -7756,11 +8627,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 812
+          "days": 813
         },
         "T90": {
           "status": "right_censored",
-          "days": 812
+          "days": 813
         }
       },
       "velocity_180d": null,
@@ -7805,6 +8676,10 @@
         "multimodal",
         "reliability"
       ],
+      "labels": [
+        "knowledge-recall",
+        "multimodal-perception"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.2955,
@@ -7813,15 +8688,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 714
+          "days": 715
         },
         "T80": {
           "status": "right_censored",
-          "days": 714
+          "days": 715
         },
         "T90": {
           "status": "right_censored",
-          "days": 714
+          "days": 715
         }
       },
       "velocity_180d": null,
@@ -7869,6 +8744,9 @@
         "G-code",
         "diagnosis"
       ],
+      "labels": [
+        "mechanistic-reasoning"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.62,
@@ -7877,15 +8755,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 633
+          "days": 634
         },
         "T80": {
           "status": "right_censored",
-          "days": 633
+          "days": 634
         },
         "T90": {
           "status": "right_censored",
-          "days": 633
+          "days": 634
         }
       },
       "velocity_180d": null,
@@ -7931,6 +8809,9 @@
         "video",
         "action recognition"
       ],
+      "labels": [
+        "multimodal-perception"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.4025,
@@ -7939,15 +8820,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 402
+          "days": 403
         },
         "T80": {
           "status": "right_censored",
-          "days": 402
+          "days": 403
         },
         "T90": {
           "status": "right_censored",
-          "days": 402
+          "days": 403
         }
       },
       "velocity_180d": null,
@@ -7992,6 +8873,14 @@
         "planning",
         "logistics"
       ],
+      "labels": [
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "state-tracking",
+        "code-generation",
+        "design-optimization"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.219,
@@ -8000,15 +8889,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 550
+          "days": 551
         },
         "T80": {
           "status": "right_censored",
-          "days": 550
+          "days": 551
         },
         "T90": {
           "status": "right_censored",
-          "days": 550
+          "days": 551
         }
       },
       "velocity_180d": null,
@@ -8056,6 +8945,11 @@
         "COMSOL",
         "code generation"
       ],
+      "labels": [
+        "quantitative-reasoning",
+        "code-generation",
+        "design-optimization"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.79,
@@ -8069,11 +8963,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 517
+          "days": 518
         },
         "T90": {
           "status": "right_censored",
-          "days": 517
+          "days": 518
         }
       },
       "velocity_180d": null,
@@ -8119,6 +9013,11 @@
         "PDE",
         "solver generation"
       ],
+      "labels": [
+        "quantitative-reasoning",
+        "code-generation",
+        "design-optimization"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.14,
@@ -8127,15 +9026,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 353
+          "days": 354
         },
         "T80": {
           "status": "right_censored",
-          "days": 353
+          "days": 354
         },
         "T90": {
           "status": "right_censored",
-          "days": 353
+          "days": 354
         }
       },
       "velocity_180d": null,
@@ -8181,6 +9080,11 @@
         "structural mechanics",
         "Python"
       ],
+      "labels": [
+        "mechanistic-reasoning",
+        "quantitative-reasoning",
+        "code-generation"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.879,
@@ -8199,7 +9103,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 258
+          "days": 259
         }
       },
       "velocity_180d": null,
@@ -8247,6 +9151,10 @@
         "Gauss-Seidel",
         "numerical reasoning"
       ],
+      "labels": [
+        "mechanistic-reasoning",
+        "quantitative-reasoning"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.53,
@@ -8260,11 +9168,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 112
+          "days": 113
         },
         "T90": {
           "status": "right_censored",
-          "days": 112
+          "days": 113
         }
       },
       "velocity_180d": null,
@@ -8310,6 +9218,10 @@
         "multiple-choice",
         "graduate-level"
       ],
+      "labels": [
+        "knowledge-recall",
+        "mechanistic-reasoning"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.8571,
@@ -8328,7 +9240,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 685
+          "days": 686
         }
       },
       "velocity_180d": null,
@@ -8374,6 +9286,9 @@
         "thermal protection",
         "numerical"
       ],
+      "labels": [
+        "quantitative-reasoning"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.519,
@@ -8387,11 +9302,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 140
+          "days": 141
         },
         "T90": {
           "status": "right_censored",
-          "days": 140
+          "days": 141
         }
       },
       "velocity_180d": null,
@@ -8438,6 +9353,11 @@
         "hardware",
         "simulation"
       ],
+      "labels": [
+        "quantitative-reasoning",
+        "code-generation",
+        "design-optimization"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.3074,
@@ -8446,15 +9366,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 221
+          "days": 222
         },
         "T80": {
           "status": "right_censored",
-          "days": 221
+          "days": 222
         },
         "T90": {
           "status": "right_censored",
-          "days": 221
+          "days": 222
         }
       },
       "velocity_180d": null,
@@ -8502,6 +9422,13 @@
         "numerical",
         "multimodal"
       ],
+      "labels": [
+        "formal-deductive-reasoning",
+        "mechanistic-reasoning",
+        "quantitative-reasoning",
+        "spatial-reasoning",
+        "multimodal-perception"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.467,
@@ -8510,15 +9437,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 573
+          "days": 574
         },
         "T80": {
           "status": "right_censored",
-          "days": 573
+          "days": 574
         },
         "T90": {
           "status": "right_censored",
-          "days": 573
+          "days": 574
         }
       },
       "velocity_180d": null,
@@ -8563,6 +9490,11 @@
         "netlist",
         "simulation"
       ],
+      "labels": [
+        "quantitative-reasoning",
+        "spatial-reasoning",
+        "design-optimization"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.0833,
@@ -8571,15 +9503,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 579
+          "days": 580
         },
         "T80": {
           "status": "right_censored",
-          "days": 579
+          "days": 580
         },
         "T90": {
           "status": "right_censored",
-          "days": 579
+          "days": 580
         }
       },
       "velocity_180d": null,
@@ -8625,6 +9557,10 @@
         "multiple-choice",
         "evidence"
       ],
+      "labels": [
+        "knowledge-recall",
+        "information-retrieval"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.791,
@@ -8638,11 +9574,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 2551
+          "days": 2552
         },
         "T90": {
           "status": "right_censored",
-          "days": 2551
+          "days": 2552
         }
       },
       "velocity_180d": null,
@@ -8691,6 +9627,9 @@
         "multiple-choice",
         "knowledge"
       ],
+      "labels": [
+        "knowledge-recall"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.86,
@@ -8709,7 +9648,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 916
+          "days": 917
         }
       },
       "velocity_180d": null,
@@ -8758,6 +9697,10 @@
         "multiple-response",
         "laboratory"
       ],
+      "labels": [
+        "knowledge-recall",
+        "mechanistic-reasoning"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.461,
@@ -8766,15 +9709,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 504
+          "days": 505
         },
         "T80": {
           "status": "right_censored",
-          "days": 504
+          "days": 505
         },
         "T90": {
           "status": "right_censored",
-          "days": 504
+          "days": 505
         }
       },
       "velocity_180d": null,
@@ -8823,6 +9766,10 @@
         "editing",
         "optimization"
       ],
+      "labels": [
+        "knowledge-recall",
+        "design-optimization"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.3592,
@@ -8831,15 +9778,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 627
+          "days": 628
         },
         "T80": {
           "status": "right_censored",
-          "days": 627
+          "days": 628
         },
         "T90": {
           "status": "right_censored",
-          "days": 627
+          "days": 628
         }
       },
       "velocity_180d": null,
@@ -8887,6 +9834,11 @@
         "molecule generation",
         "exact structure"
       ],
+      "labels": [
+        "knowledge-recall",
+        "spatial-reasoning",
+        "design-optimization"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.29,
@@ -8895,15 +9847,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 474
+          "days": 475
         },
         "T80": {
           "status": "right_censored",
-          "days": 474
+          "days": 475
         },
         "T90": {
           "status": "right_censored",
-          "days": 474
+          "days": 475
         }
       },
       "velocity_180d": null,
@@ -8948,6 +9900,9 @@
         "process",
         "rubric"
       ],
+      "labels": [
+        "knowledge-recall"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.7033,
@@ -8961,11 +9916,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 452
+          "days": 453
         },
         "T90": {
           "status": "right_censored",
-          "days": 452
+          "days": 453
         }
       },
       "velocity_180d": null,
@@ -9012,6 +9967,12 @@
         "Formula SAE",
         "RAG"
       ],
+      "labels": [
+        "information-retrieval",
+        "quantitative-reasoning",
+        "multimodal-perception",
+        "design-optimization"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.875,
@@ -9025,11 +9986,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 879
+          "days": 880
         },
         "T90": {
           "status": "right_censored",
-          "days": 879
+          "days": 880
         }
       },
       "velocity_180d": null,
@@ -9075,6 +10036,12 @@
         "Blender",
         "code generation"
       ],
+      "labels": [
+        "quantitative-reasoning",
+        "spatial-reasoning",
+        "code-generation",
+        "design-optimization"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.583,
@@ -9088,11 +10055,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 630
+          "days": 631
         },
         "T90": {
           "status": "right_censored",
-          "days": 630
+          "days": 631
         }
       },
       "velocity_180d": null,
@@ -9141,6 +10108,13 @@
         "cockpit",
         "safety"
       ],
+      "labels": [
+        "quantitative-reasoning",
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "state-tracking"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.726,
@@ -9154,11 +10128,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 21
+          "days": 22
         },
         "T90": {
           "status": "right_censored",
-          "days": 21
+          "days": 22
         }
       },
       "velocity_180d": null,
@@ -9204,6 +10178,10 @@
         "robotics",
         "vision"
       ],
+      "labels": [
+        "spatial-reasoning",
+        "multimodal-perception"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.5641,
@@ -9212,15 +10190,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 320
+          "days": 321
         },
         "T80": {
           "status": "right_censored",
-          "days": 320
+          "days": 321
         },
         "T90": {
           "status": "right_censored",
-          "days": 320
+          "days": 321
         }
       },
       "velocity_180d": null,
@@ -9268,6 +10246,10 @@
         "3D",
         "vision"
       ],
+      "labels": [
+        "spatial-reasoning",
+        "multimodal-perception"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.3936,
@@ -9276,15 +10258,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 572
+          "days": 573
         },
         "T80": {
           "status": "right_censored",
-          "days": 572
+          "days": 573
         },
         "T90": {
           "status": "right_censored",
-          "days": 572
+          "days": 573
         }
       },
       "velocity_180d": null,
@@ -9331,6 +10313,12 @@
         "planning",
         "VirtualHome"
       ],
+      "labels": [
+        "formal-deductive-reasoning",
+        "spatial-reasoning",
+        "planning",
+        "state-tracking"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.767,
@@ -9344,11 +10332,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 698
+          "days": 699
         },
         "T90": {
           "status": "right_censored",
-          "days": 698
+          "days": 699
         }
       },
       "velocity_180d": null,
@@ -9395,6 +10383,10 @@
         "physical estimation",
         "numerical"
       ],
+      "labels": [
+        "quantitative-reasoning",
+        "multimodal-perception"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.531,
@@ -9408,11 +10400,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 259
+          "days": 260
         },
         "T90": {
           "status": "right_censored",
-          "days": 259
+          "days": 260
         }
       },
       "velocity_180d": null,
@@ -9459,6 +10451,11 @@
         "vision",
         "problem solving"
       ],
+      "labels": [
+        "mechanistic-reasoning",
+        "quantitative-reasoning",
+        "multimodal-perception"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.53,
@@ -9472,11 +10469,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 117
+          "days": 118
         },
         "T90": {
           "status": "right_censored",
-          "days": 117
+          "days": 118
         }
       },
       "velocity_180d": null,
@@ -9523,6 +10520,11 @@
         "charts",
         "calibration"
       ],
+      "labels": [
+        "mechanistic-reasoning",
+        "quantitative-reasoning",
+        "multimodal-perception"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.723,
@@ -9536,11 +10538,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 132
+          "days": 133
         },
         "T90": {
           "status": "right_censored",
-          "days": 132
+          "days": 133
         }
       },
       "velocity_180d": null,
@@ -9587,6 +10589,11 @@
         "knowledge",
         "reasoning"
       ],
+      "labels": [
+        "knowledge-recall",
+        "mechanistic-reasoning",
+        "quantitative-reasoning"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.8390000000000001,
@@ -9605,7 +10612,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 1117
+          "days": 1118
         }
       },
       "velocity_180d": 0.010057268722466971,
@@ -9651,6 +10658,10 @@
         "multimodal",
         "multiple-choice"
       ],
+      "labels": [
+        "knowledge-recall",
+        "multimodal-perception"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.898,
@@ -9669,7 +10680,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 358
+          "days": 359
         }
       },
       "velocity_180d": null,
@@ -9715,6 +10726,11 @@
         "documentation",
         "multiple-choice"
       ],
+      "labels": [
+        "knowledge-recall",
+        "information-retrieval",
+        "instruction-following"
+      ],
       "score_format": "ratio",
       "score_decimals": null,
       "capability_frontier_value": 0.8290000000000001,
@@ -9728,11 +10744,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 479
+          "days": 480
         },
         "T90": {
           "status": "right_censored",
-          "days": 479
+          "days": 480
         }
       },
       "velocity_180d": null,
