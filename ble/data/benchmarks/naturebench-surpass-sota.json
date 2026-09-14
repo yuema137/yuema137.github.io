@@ -1,0 +1,1680 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-14",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "naturebench-surpass-sota",
+    "name": "NatureBench",
+    "domain": "Science / research",
+    "release": "2026-06-23",
+    "source": "https://arxiv.org/abs/2606.24530",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "percentage_points",
+    "evaluation_type": "Agent",
+    "tags": [
+      "research replication",
+      "gpu tasks",
+      "versioned"
+    ],
+    "labels": [
+      "code-generation",
+      "code-execution-debugging",
+      "experimental-design",
+      "design-optimization"
+    ],
+    "metric": "Surpass-SOTA rate",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "naturebench-surpass-sota-metric-v1",
+    "protocol_id": "naturebench-surpass-sota-source-export-v1",
+    "canonical_score": {
+      "series_id": "naturebench-surpass-sota-canonical-score",
+      "role": "canonical",
+      "metric_id": "naturebench-surpass-sota-metric-v1",
+      "metric_name": "Surpass-SOTA rate",
+      "protocol_id": "naturebench-surpass-sota-source-export-v1",
+      "task_set_id": "naturebench-surpass-sota-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "percentage_points",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "naturebench-surpass-sota-canonical",
+    "summary": {
+      "en": "NatureBench tests research agents on containerized tasks drawn from Nature-family papers, requiring a method that surpasses the published state of the art.",
+      "zh": "NatureBench \u7528\u53d6\u81ea Nature \u7cfb\u5217\u8bba\u6587\u7684\u5bb9\u5668\u5316\u4efb\u52a1\u8bc4\u4f30 research agent\uff0c\u8981\u6c42\u7ed9\u51fa\u8d85\u8fc7\u5df2\u53d1\u8868 SOTA \u7684\u65b9\u6cd5\u3002"
+    },
+    "task_format": {
+      "en": "With web search disabled and a matched GPU, the agent develops and runs a method for one of 90 tasks and is scored on whether it exceeds the published state of the art.",
+      "zh": "\u5728\u5173\u95ed\u8054\u7f51\u641c\u7d22\u3001\u914d\u5907\u5339\u914d GPU \u7684\u6761\u4ef6\u4e0b\uff0cagent \u4e3a 90 \u4e2a\u4efb\u52a1\u4e4b\u4e00\u5f00\u53d1\u5e76\u8fd0\u884c\u65b9\u6cd5\uff0c\u6309\u662f\u5426\u8d85\u8fc7\u5df2\u53d1\u8868 SOTA \u8bc4\u5206\u3002"
+    },
+    "scoring": {
+      "metric_name": "Surpass-SOTA rate",
+      "explanation": {
+        "en": "The score is the percentage of the 90 tasks on which the agent's method beats the published state of the art by a normalized margin above 0.1.",
+        "zh": "\u5206\u6570\u662f agent \u7684\u65b9\u6cd5\u5728\u5f52\u4e00\u5316\u5dee\u8ddd\u5927\u4e8e 0.1 \u7684\u610f\u4e49\u4e0a\u8d85\u8fc7\u8bba\u6587\u5df2\u53d1\u8868 SOTA \u7684\u4efb\u52a1\u5360 90 \u4e2a\u4efb\u52a1\u7684\u767e\u5206\u6bd4\u3002"
+      }
+    },
+    "evaluation_target": "environment_outcome",
+    "observation_count": 12,
+    "evidence_record_count": 12,
+    "observations": [
+      {
+        "observation_id": "obs-0-178-332882b02ac1120e",
+        "benchmark_id": "naturebench-surpass-sota",
+        "benchmark_version_id": "naturebench-surpass-sota-canonical",
+        "model_id": "model-claude-opus-4-7-claude-code-1310066d20cedc10",
+        "model_configuration": "Claude Opus 4.7 (Claude Code)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-7-claude-code",
+        "model_family_id": "anthropic-claude-opus-4-7",
+        "model": "Claude Opus 4.7 (Claude Code)",
+        "organization": "Anthropic",
+        "score": 0.17800000000000002,
+        "input_score": 17.8,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "naturebench-surpass-sota-metric-v1",
+        "protocol_id": "naturebench-surpass-sota-source-export-v1",
+        "task_set_id": "naturebench-surpass-sota-canonical",
+        "metric": "Surpass-SOTA rate",
+        "score_role": "canonical",
+        "score_series_id": "naturebench-surpass-sota-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-16",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-23",
+        "source_publication_date": "2026-06-23",
+        "observation_date": "2026-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530-05925b81d4da2ef8",
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "source": "https://arxiv.org/abs/2606.24530v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-naturebench-surpass-sota-00-e6919f58b078aab8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "naturebench-surpass-sota-00"
+        ]
+      },
+      {
+        "observation_id": "obs-0-156-83bb755a286d8f20",
+        "benchmark_id": "naturebench-surpass-sota",
+        "benchmark_version_id": "naturebench-surpass-sota-canonical",
+        "model_id": "model-glm-5-2-claude-code-79ea9d1e8cd3cf46",
+        "model_configuration": "GLM-5.2 (Claude Code)",
+        "model_identity_organization": "z-ai",
+        "model_label_id": "glm-5-2-claude-code",
+        "model_family_id": "z-ai-glm-5-2",
+        "model": "GLM-5.2 (Claude Code)",
+        "organization": "Z.ai",
+        "score": 0.156,
+        "input_score": 15.6,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "naturebench-surpass-sota-metric-v1",
+        "protocol_id": "naturebench-surpass-sota-source-export-v1",
+        "task_set_id": "naturebench-surpass-sota-canonical",
+        "metric": "Surpass-SOTA rate",
+        "score_role": "canonical",
+        "score_series_id": "naturebench-surpass-sota-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-06-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-06",
+        "source_publication_date": "2026-07-06",
+        "observation_date": "2026-06-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-06-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-06",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-06-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-06-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-06",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530-05925b81d4da2ef8",
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "source": "https://arxiv.org/abs/2606.24530v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-naturebench-surpass-sota-01-a5f37b34d124fb4f"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "naturebench-surpass-sota-01"
+        ]
+      },
+      {
+        "observation_id": "obs-0-156-87d5d3c0defd3297",
+        "benchmark_id": "naturebench-surpass-sota",
+        "benchmark_version_id": "naturebench-surpass-sota-canonical",
+        "model_id": "model-gemini-3-5-flash-gemini-cli-9f931f60a21b1575",
+        "model_configuration": "Gemini 3.5 Flash (Gemini CLI)",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-5-flash-gemini-cli",
+        "model_family_id": "google-deepmind-gemini-3-5-flash",
+        "model": "Gemini 3.5 Flash (Gemini CLI)",
+        "organization": "Google DeepMind",
+        "score": 0.156,
+        "input_score": 15.6,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "naturebench-surpass-sota-metric-v1",
+        "protocol_id": "naturebench-surpass-sota-source-export-v1",
+        "task_set_id": "naturebench-surpass-sota-canonical",
+        "metric": "Surpass-SOTA rate",
+        "score_role": "canonical",
+        "score_series_id": "naturebench-surpass-sota-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-05-19",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-23",
+        "source_publication_date": "2026-06-23",
+        "observation_date": "2026-05-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-05-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-05-19",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-05-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530-05925b81d4da2ef8",
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "source": "https://arxiv.org/abs/2606.24530v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-naturebench-surpass-sota-02-b89fd4d127d10ea6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "naturebench-surpass-sota-02"
+        ]
+      },
+      {
+        "observation_id": "obs-0-144-0b75491150b792d7",
+        "benchmark_id": "naturebench-surpass-sota",
+        "benchmark_version_id": "naturebench-surpass-sota-canonical",
+        "model_id": "model-gpt-5-5-codex-cli-c57b5c859abc46ff",
+        "model_configuration": "GPT-5.5 (Codex CLI)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-5-codex-cli",
+        "model_family_id": "openai-gpt-5-5",
+        "model": "GPT-5.5 (Codex CLI)",
+        "organization": "OpenAI",
+        "score": 0.14400000000000002,
+        "input_score": 14.4,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "naturebench-surpass-sota-metric-v1",
+        "protocol_id": "naturebench-surpass-sota-source-export-v1",
+        "task_set_id": "naturebench-surpass-sota-canonical",
+        "metric": "Surpass-SOTA rate",
+        "score_role": "canonical",
+        "score_series_id": "naturebench-surpass-sota-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-23",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-23",
+        "source_publication_date": "2026-06-23",
+        "observation_date": "2026-04-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530-05925b81d4da2ef8",
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "source": "https://arxiv.org/abs/2606.24530v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-naturebench-surpass-sota-03-c3392aa72a1633b9"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "naturebench-surpass-sota-03"
+        ]
+      },
+      {
+        "observation_id": "obs-0-122-cb21f34fc9ca80c0",
+        "benchmark_id": "naturebench-surpass-sota",
+        "benchmark_version_id": "naturebench-surpass-sota-canonical",
+        "model_id": "model-claude-opus-4-6-claude-code-63b6f2efd7abb550",
+        "model_configuration": "Claude Opus 4.6 (Claude Code)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-6-claude-code",
+        "model_family_id": "anthropic-claude-opus-4-6",
+        "model": "Claude Opus 4.6 (Claude Code)",
+        "organization": "Anthropic",
+        "score": 0.122,
+        "input_score": 12.2,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "naturebench-surpass-sota-metric-v1",
+        "protocol_id": "naturebench-surpass-sota-source-export-v1",
+        "task_set_id": "naturebench-surpass-sota-canonical",
+        "metric": "Surpass-SOTA rate",
+        "score_role": "canonical",
+        "score_series_id": "naturebench-surpass-sota-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-02-05",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-23",
+        "source_publication_date": "2026-06-23",
+        "observation_date": "2026-02-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-02-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-02-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-02-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530-05925b81d4da2ef8",
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "source": "https://arxiv.org/abs/2606.24530v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-naturebench-surpass-sota-04-c3456372cc3f20ed"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "naturebench-surpass-sota-04"
+        ]
+      },
+      {
+        "observation_id": "obs-0-111-9b114facb8a3577e",
+        "benchmark_id": "naturebench-surpass-sota",
+        "benchmark_version_id": "naturebench-surpass-sota-canonical",
+        "model_id": "model-minimax-m3-claude-code-5a8c08113d62b09e",
+        "model_configuration": "MiniMax-M3 (Claude Code)",
+        "model_identity_organization": "minimax",
+        "model_label_id": "minimax-m3-claude-code",
+        "model_family_id": "minimax-minimax-m3",
+        "model": "MiniMax-M3 (Claude Code)",
+        "organization": "MiniMax",
+        "score": 0.111,
+        "input_score": 11.1,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "naturebench-surpass-sota-metric-v1",
+        "protocol_id": "naturebench-surpass-sota-source-export-v1",
+        "task_set_id": "naturebench-surpass-sota-canonical",
+        "metric": "Surpass-SOTA rate",
+        "score_role": "canonical",
+        "score_series_id": "naturebench-surpass-sota-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-06-01",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-06",
+        "source_publication_date": "2026-07-06",
+        "observation_date": "2026-06-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-06-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-06",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-06-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-06-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-06",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530-05925b81d4da2ef8",
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "source": "https://arxiv.org/abs/2606.24530v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-naturebench-surpass-sota-05-f43551b9d2f7f86c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "naturebench-surpass-sota-05"
+        ]
+      },
+      {
+        "observation_id": "obs-0-1-a7b1e49118f33ed9",
+        "benchmark_id": "naturebench-surpass-sota",
+        "benchmark_version_id": "naturebench-surpass-sota-canonical",
+        "model_id": "model-qwen-3-7-max-claude-code-af15b97f0a446071",
+        "model_configuration": "Qwen 3.7 Max (Claude Code)",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen-3-7-max-claude-code",
+        "model_family_id": "alibaba-qwen-3-7-max",
+        "model": "Qwen 3.7 Max (Claude Code)",
+        "organization": "Alibaba",
+        "score": 0.1,
+        "input_score": 10.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "naturebench-surpass-sota-metric-v1",
+        "protocol_id": "naturebench-surpass-sota-source-export-v1",
+        "task_set_id": "naturebench-surpass-sota-canonical",
+        "metric": "Surpass-SOTA rate",
+        "score_role": "canonical",
+        "score_series_id": "naturebench-surpass-sota-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-05-19",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-23",
+        "source_publication_date": "2026-06-23",
+        "observation_date": "2026-05-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-05-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-05-19",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-05-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530-05925b81d4da2ef8",
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "source": "https://arxiv.org/abs/2606.24530v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-naturebench-surpass-sota-06-1bcc261de7804d09"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "naturebench-surpass-sota-06"
+        ]
+      },
+      {
+        "observation_id": "obs-0-089-d79e7fe772193259",
+        "benchmark_id": "naturebench-surpass-sota",
+        "benchmark_version_id": "naturebench-surpass-sota-canonical",
+        "model_id": "model-kimi-k2-6-claude-code-804bb11a2f15dca5",
+        "model_configuration": "Kimi K2.6 (Claude Code)",
+        "model_identity_organization": "moonshot",
+        "model_label_id": "kimi-k2-6-claude-code",
+        "model_family_id": "moonshot-kimi-k2-6",
+        "model": "Kimi K2.6 (Claude Code)",
+        "organization": "Moonshot",
+        "score": 0.08900000000000001,
+        "input_score": 8.9,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "naturebench-surpass-sota-metric-v1",
+        "protocol_id": "naturebench-surpass-sota-source-export-v1",
+        "task_set_id": "naturebench-surpass-sota-canonical",
+        "metric": "Surpass-SOTA rate",
+        "score_role": "canonical",
+        "score_series_id": "naturebench-surpass-sota-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-20",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-23",
+        "source_publication_date": "2026-06-23",
+        "observation_date": "2026-04-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530-05925b81d4da2ef8",
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "source": "https://arxiv.org/abs/2606.24530v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-naturebench-surpass-sota-07-811db0ea128953e7"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "naturebench-surpass-sota-07"
+        ]
+      },
+      {
+        "observation_id": "obs-0-089-5c10243661e87f85",
+        "benchmark_id": "naturebench-surpass-sota",
+        "benchmark_version_id": "naturebench-surpass-sota-canonical",
+        "model_id": "model-gpt-5-4-codex-cli-764cef1ed1bfbdc1",
+        "model_configuration": "GPT-5.4 (Codex CLI)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-4-codex-cli",
+        "model_family_id": "openai-gpt-5-4",
+        "model": "GPT-5.4 (Codex CLI)",
+        "organization": "OpenAI",
+        "score": 0.08900000000000001,
+        "input_score": 8.9,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "naturebench-surpass-sota-metric-v1",
+        "protocol_id": "naturebench-surpass-sota-source-export-v1",
+        "task_set_id": "naturebench-surpass-sota-canonical",
+        "metric": "Surpass-SOTA rate",
+        "score_role": "canonical",
+        "score_series_id": "naturebench-surpass-sota-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-03-05",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-23",
+        "source_publication_date": "2026-06-23",
+        "observation_date": "2026-03-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-03-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-03-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-03-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530-05925b81d4da2ef8",
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "source": "https://arxiv.org/abs/2606.24530v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-naturebench-surpass-sota-08-213999a7f6e80769"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "naturebench-surpass-sota-08"
+        ]
+      },
+      {
+        "observation_id": "obs-0-078-5eb180701bcaa0a2",
+        "benchmark_id": "naturebench-surpass-sota",
+        "benchmark_version_id": "naturebench-surpass-sota-canonical",
+        "model_id": "model-glm-5-1-claude-code-f9913c2c5eccdafd",
+        "model_configuration": "GLM-5.1 (Claude Code)",
+        "model_identity_organization": "z-ai",
+        "model_label_id": "glm-5-1-claude-code",
+        "model_family_id": "z-ai-glm-5-1",
+        "model": "GLM-5.1 (Claude Code)",
+        "organization": "Z.ai",
+        "score": 0.078,
+        "input_score": 7.8,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "naturebench-surpass-sota-metric-v1",
+        "protocol_id": "naturebench-surpass-sota-source-export-v1",
+        "task_set_id": "naturebench-surpass-sota-canonical",
+        "metric": "Surpass-SOTA rate",
+        "score_role": "canonical",
+        "score_series_id": "naturebench-surpass-sota-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-07",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-23",
+        "source_publication_date": "2026-06-23",
+        "observation_date": "2026-04-07",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-07",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-07",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530-05925b81d4da2ef8",
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "source": "https://arxiv.org/abs/2606.24530v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-naturebench-surpass-sota-09-340119601ca69273"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "naturebench-surpass-sota-09"
+        ]
+      },
+      {
+        "observation_id": "obs-0-044-29ccfa2080b025cf",
+        "benchmark_id": "naturebench-surpass-sota",
+        "benchmark_version_id": "naturebench-surpass-sota-canonical",
+        "model_id": "model-deepseek-v4-pro-claude-code-48f9d2f32839eb9b",
+        "model_configuration": "DeepSeek-V4-Pro (Claude Code)",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-v4-pro-claude-code",
+        "model_family_id": "deepseek-deepseek-v4-pro",
+        "model": "DeepSeek-V4-Pro (Claude Code)",
+        "organization": "DeepSeek",
+        "score": 0.044000000000000004,
+        "input_score": 4.4,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "naturebench-surpass-sota-metric-v1",
+        "protocol_id": "naturebench-surpass-sota-source-export-v1",
+        "task_set_id": "naturebench-surpass-sota-canonical",
+        "metric": "Surpass-SOTA rate",
+        "score_role": "canonical",
+        "score_series_id": "naturebench-surpass-sota-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-24",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-23",
+        "source_publication_date": "2026-06-23",
+        "observation_date": "2026-04-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530-05925b81d4da2ef8",
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "source": "https://arxiv.org/abs/2606.24530v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-naturebench-surpass-sota-10-7a6d97047726c91e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "naturebench-surpass-sota-10"
+        ]
+      },
+      {
+        "observation_id": "obs-0-011-2e136f0c5c997432",
+        "benchmark_id": "naturebench-surpass-sota",
+        "benchmark_version_id": "naturebench-surpass-sota-canonical",
+        "model_id": "model-minimax-m2-7-claude-code-ccff31e5566a4609",
+        "model_configuration": "MiniMax-M2.7 (Claude Code)",
+        "model_identity_organization": "minimax",
+        "model_label_id": "minimax-m2-7-claude-code",
+        "model_family_id": "minimax-minimax-m2-7",
+        "model": "MiniMax-M2.7 (Claude Code)",
+        "organization": "MiniMax",
+        "score": 0.011000000000000001,
+        "input_score": 1.1,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "naturebench-surpass-sota-metric-v1",
+        "protocol_id": "naturebench-surpass-sota-source-export-v1",
+        "task_set_id": "naturebench-surpass-sota-canonical",
+        "metric": "Surpass-SOTA rate",
+        "score_role": "canonical",
+        "score_series_id": "naturebench-surpass-sota-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-03-18",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-23",
+        "source_publication_date": "2026-06-23",
+        "observation_date": "2026-03-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-03-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-03-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-03-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530-05925b81d4da2ef8",
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "source": "https://arxiv.org/abs/2606.24530v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-naturebench-surpass-sota-11-982a12f3fc2063e2"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "naturebench-surpass-sota-11"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-178-332882b02ac1120e",
+        "benchmark_id": "naturebench-surpass-sota",
+        "benchmark_version_id": "naturebench-surpass-sota-canonical",
+        "model_id": "model-claude-opus-4-7-claude-code-1310066d20cedc10",
+        "model_configuration": "Claude Opus 4.7 (Claude Code)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-7-claude-code",
+        "model_family_id": "anthropic-claude-opus-4-7",
+        "model": "Claude Opus 4.7 (Claude Code)",
+        "organization": "Anthropic",
+        "score": 0.17800000000000002,
+        "input_score": 17.8,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "naturebench-surpass-sota-metric-v1",
+        "protocol_id": "naturebench-surpass-sota-source-export-v1",
+        "task_set_id": "naturebench-surpass-sota-canonical",
+        "metric": "Surpass-SOTA rate",
+        "score_role": "canonical",
+        "score_series_id": "naturebench-surpass-sota-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-16",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-23",
+        "source_publication_date": "2026-06-23",
+        "observation_date": "2026-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-06-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530-05925b81d4da2ef8",
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "source": "https://arxiv.org/abs/2606.24530v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-naturebench-surpass-sota-00-e6919f58b078aab8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "naturebench-surpass-sota-00"
+        ],
+        "plot_date": "2026-06-23",
+        "frontier_observation_ids": [
+          "obs-0-011-2e136f0c5c997432",
+          "obs-0-044-29ccfa2080b025cf",
+          "obs-0-078-5eb180701bcaa0a2",
+          "obs-0-089-5c10243661e87f85",
+          "obs-0-089-d79e7fe772193259",
+          "obs-0-1-a7b1e49118f33ed9",
+          "obs-0-111-9b114facb8a3577e",
+          "obs-0-122-cb21f34fc9ca80c0",
+          "obs-0-144-0b75491150b792d7",
+          "obs-0-156-87d5d3c0defd3297",
+          "obs-0-156-83bb755a286d8f20",
+          "obs-0-178-332882b02ac1120e"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-178-332882b02ac1120e",
+        "benchmark_id": "naturebench-surpass-sota",
+        "benchmark_version_id": "naturebench-surpass-sota-canonical",
+        "model_id": "model-claude-opus-4-7-claude-code-1310066d20cedc10",
+        "model_configuration": "Claude Opus 4.7 (Claude Code)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-7-claude-code",
+        "model_family_id": "anthropic-claude-opus-4-7",
+        "model": "Claude Opus 4.7 (Claude Code)",
+        "organization": "Anthropic",
+        "score": 0.17800000000000002,
+        "input_score": 17.8,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "naturebench-surpass-sota-metric-v1",
+        "protocol_id": "naturebench-surpass-sota-source-export-v1",
+        "task_set_id": "naturebench-surpass-sota-canonical",
+        "metric": "Surpass-SOTA rate",
+        "score_role": "canonical",
+        "score_series_id": "naturebench-surpass-sota-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-16",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-23",
+        "source_publication_date": "2026-06-23",
+        "observation_date": "2026-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-06-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530-05925b81d4da2ef8",
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "source": "https://arxiv.org/abs/2606.24530v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-naturebench-surpass-sota-00-e6919f58b078aab8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "naturebench-surpass-sota-00"
+        ],
+        "plot_date": "2026-06-23",
+        "frontier_observation_ids": [
+          "obs-0-011-2e136f0c5c997432",
+          "obs-0-044-29ccfa2080b025cf",
+          "obs-0-078-5eb180701bcaa0a2",
+          "obs-0-089-5c10243661e87f85",
+          "obs-0-089-d79e7fe772193259",
+          "obs-0-1-a7b1e49118f33ed9",
+          "obs-0-111-9b114facb8a3577e",
+          "obs-0-122-cb21f34fc9ca80c0",
+          "obs-0-144-0b75491150b792d7",
+          "obs-0-156-87d5d3c0defd3297",
+          "obs-0-156-83bb755a286d8f20",
+          "obs-0-178-332882b02ac1120e"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-178-332882b02ac1120e",
+        "benchmark_id": "naturebench-surpass-sota",
+        "benchmark_version_id": "naturebench-surpass-sota-canonical",
+        "model_id": "model-claude-opus-4-7-claude-code-1310066d20cedc10",
+        "model_configuration": "Claude Opus 4.7 (Claude Code)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-7-claude-code",
+        "model_family_id": "anthropic-claude-opus-4-7",
+        "model": "Claude Opus 4.7 (Claude Code)",
+        "organization": "Anthropic",
+        "score": 0.17800000000000002,
+        "input_score": 17.8,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "naturebench-surpass-sota-metric-v1",
+        "protocol_id": "naturebench-surpass-sota-source-export-v1",
+        "task_set_id": "naturebench-surpass-sota-canonical",
+        "metric": "Surpass-SOTA rate",
+        "score_role": "canonical",
+        "score_series_id": "naturebench-surpass-sota-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-16",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-23",
+        "source_publication_date": "2026-06-23",
+        "observation_date": "2026-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-06-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530-05925b81d4da2ef8",
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "source": "https://arxiv.org/abs/2606.24530v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-naturebench-surpass-sota-00-e6919f58b078aab8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "naturebench-surpass-sota-00"
+        ],
+        "plot_date": "2026-06-23",
+        "frontier_observation_ids": [
+          "obs-0-011-2e136f0c5c997432",
+          "obs-0-044-29ccfa2080b025cf",
+          "obs-0-078-5eb180701bcaa0a2",
+          "obs-0-089-5c10243661e87f85",
+          "obs-0-089-d79e7fe772193259",
+          "obs-0-1-a7b1e49118f33ed9",
+          "obs-0-111-9b114facb8a3577e",
+          "obs-0-122-cb21f34fc9ca80c0",
+          "obs-0-144-0b75491150b792d7",
+          "obs-0-156-87d5d3c0defd3297",
+          "obs-0-156-83bb755a286d8f20",
+          "obs-0-178-332882b02ac1120e"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-178-332882b02ac1120e",
+        "benchmark_id": "naturebench-surpass-sota",
+        "benchmark_version_id": "naturebench-surpass-sota-canonical",
+        "model_id": "model-claude-opus-4-7-claude-code-1310066d20cedc10",
+        "model_configuration": "Claude Opus 4.7 (Claude Code)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-7-claude-code",
+        "model_family_id": "anthropic-claude-opus-4-7",
+        "model": "Claude Opus 4.7 (Claude Code)",
+        "organization": "Anthropic",
+        "score": 0.17800000000000002,
+        "input_score": 17.8,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "naturebench-surpass-sota-metric-v1",
+        "protocol_id": "naturebench-surpass-sota-source-export-v1",
+        "task_set_id": "naturebench-surpass-sota-canonical",
+        "metric": "Surpass-SOTA rate",
+        "score_role": "canonical",
+        "score_series_id": "naturebench-surpass-sota-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-16",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-23",
+        "source_publication_date": "2026-06-23",
+        "observation_date": "2026-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-06-23",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530-05925b81d4da2ef8",
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "source": "https://arxiv.org/abs/2606.24530v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-naturebench-surpass-sota-00-e6919f58b078aab8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "naturebench-surpass-sota-00"
+        ],
+        "plot_date": "2026-06-23",
+        "frontier_observation_ids": [
+          "obs-0-011-2e136f0c5c997432",
+          "obs-0-044-29ccfa2080b025cf",
+          "obs-0-078-5eb180701bcaa0a2",
+          "obs-0-089-5c10243661e87f85",
+          "obs-0-089-d79e7fe772193259",
+          "obs-0-1-a7b1e49118f33ed9",
+          "obs-0-122-cb21f34fc9ca80c0",
+          "obs-0-144-0b75491150b792d7",
+          "obs-0-156-87d5d3c0defd3297",
+          "obs-0-178-332882b02ac1120e"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-178-332882b02ac1120e",
+        "benchmark_id": "naturebench-surpass-sota",
+        "benchmark_version_id": "naturebench-surpass-sota-canonical",
+        "model_id": "model-claude-opus-4-7-claude-code-1310066d20cedc10",
+        "model_configuration": "Claude Opus 4.7 (Claude Code)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-7-claude-code",
+        "model_family_id": "anthropic-claude-opus-4-7",
+        "model": "Claude Opus 4.7 (Claude Code)",
+        "organization": "Anthropic",
+        "score": 0.17800000000000002,
+        "input_score": 17.8,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "naturebench-surpass-sota-metric-v1",
+        "protocol_id": "naturebench-surpass-sota-source-export-v1",
+        "task_set_id": "naturebench-surpass-sota-canonical",
+        "metric": "Surpass-SOTA rate",
+        "score_role": "canonical",
+        "score_series_id": "naturebench-surpass-sota-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-16",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-23",
+        "source_publication_date": "2026-06-23",
+        "observation_date": "2026-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-06-23",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530-05925b81d4da2ef8",
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2606-24530v2-0d2139f4dda76312"
+        ],
+        "source": "https://arxiv.org/abs/2606.24530v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-naturebench-surpass-sota-00-e6919f58b078aab8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "naturebench-surpass-sota-00"
+        ],
+        "plot_date": "2026-06-23",
+        "frontier_observation_ids": [
+          "obs-0-011-2e136f0c5c997432",
+          "obs-0-044-29ccfa2080b025cf",
+          "obs-0-078-5eb180701bcaa0a2",
+          "obs-0-089-5c10243661e87f85",
+          "obs-0-089-d79e7fe772193259",
+          "obs-0-1-a7b1e49118f33ed9",
+          "obs-0-122-cb21f34fc9ca80c0",
+          "obs-0-144-0b75491150b792d7",
+          "obs-0-156-87d5d3c0defd3297",
+          "obs-0-178-332882b02ac1120e"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.17800000000000002,
+    "capability_frontier_value": 0.17800000000000002,
+    "reported_frontier_value": 0.17800000000000002,
+    "current_frontier": 0.17800000000000002,
+    "normalized_progress": 0.17800000000000002,
+    "normalized_headroom": 0.822,
+    "threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 83
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 83
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 83
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 83
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 83
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 83
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 83
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 83
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 83
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.7142857142857143,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "DeepSeek",
+        "Qwen"
+      ],
+      "panel_size": 7,
+      "status": "high"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-arxiv-org-abs-2606-24530-05925b81d4da2ef8"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": true,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

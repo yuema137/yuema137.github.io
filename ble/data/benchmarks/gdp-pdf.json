@@ -1,0 +1,3099 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-14",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "gdp-pdf",
+    "name": "GDP.pdf",
+    "domain": "Multimodal",
+    "release": "2026-04-14",
+    "source": "https://arxiv.org/abs/2607.11192",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "percentage_points",
+    "evaluation_type": "Model",
+    "tags": [
+      "document understanding",
+      "professional pdf",
+      "rubric"
+    ],
+    "labels": [
+      "multimodal-perception",
+      "long-context-integration",
+      "information-retrieval"
+    ],
+    "metric": "Strict pass rate",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "gdp-pdf-metric-v1",
+    "protocol_id": "gdp-pdf-source-export-v1",
+    "canonical_score": {
+      "series_id": "gdp-pdf-canonical-score",
+      "role": "canonical",
+      "metric_id": "gdp-pdf-metric-v1",
+      "metric_name": "Strict pass rate",
+      "protocol_id": "gdp-pdf-source-export-v1",
+      "task_set_id": "gdp-pdf-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "percentage_points",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "gdp-pdf-canonical",
+    "summary": {
+      "en": "GDP.pdf tests models on expert questions about real professional PDF documents, supplied as images, with strict rubric grading.",
+      "zh": "GDP.pdf \u7528\u771f\u5b9e\u4e13\u4e1a PDF \u6587\u6863\uff08\u4ee5\u56fe\u50cf\u63d0\u4f9b\uff09\u4e0a\u7684\u4e13\u5bb6\u95ee\u9898\u8bc4\u4f30\u6a21\u578b\uff0c\u91c7\u7528\u4e25\u683c rubric \u8bc4\u5206\u3002"
+    },
+    "task_format": {
+      "en": "The model reads one real professional PDF supplied as base64 images and answers an expert question that is graded against a full set of atomic rubric criteria.",
+      "zh": "\u6a21\u578b\u9605\u8bfb\u4e00\u4efd\u4ee5 base64 \u56fe\u50cf\u63d0\u4f9b\u7684\u771f\u5b9e\u4e13\u4e1a PDF\uff0c\u56de\u7b54\u4e00\u4e2a\u4e13\u5bb6\u95ee\u9898\uff0c\u5e76\u6309\u4e00\u6574\u5957\u539f\u5b50 rubric \u6807\u51c6\u8bc4\u5206\u3002"
+    },
+    "scoring": {
+      "metric_name": "Strict pass rate",
+      "explanation": {
+        "en": "A question passes only when every rubric criterion is met; the score is the mean over five runs, judged by Gemini 3.5 Flash, on the 100-item set.",
+        "zh": "\u53ea\u6709\u6ee1\u8db3\u5168\u90e8 rubric \u6807\u51c6\u65f6\u8be5\u9898\u624d\u7b97\u901a\u8fc7\uff1b\u5206\u6570\u662f\u5728 100 \u9898\u4e0a\u3001\u7531 Gemini 3.5 Flash \u8bc4\u5206\u3001\u4e94\u6b21\u8fd0\u884c\u7684\u5e73\u5747\u3002"
+      }
+    },
+    "evaluation_target": "final_output",
+    "observation_count": 17,
+    "evidence_record_count": 17,
+    "observations": [
+      {
+        "observation_id": "obs-0-307-49db056e134724f5",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-gpt-5-6-sol-5f1ffa469585aab8",
+        "model_configuration": "GPT-5.6 Sol",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "GPT-5.6 Sol",
+        "organization": "OpenAI",
+        "score": 0.307,
+        "input_score": 30.7,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-00-4d0ccbbd9b35a306"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-00"
+        ]
+      },
+      {
+        "observation_id": "obs-0-298-42114be226bed7d4",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-claude-fable-5-adaptive-max-bb5b45055d31a98d",
+        "model_configuration": "Claude Fable 5 (Adaptive Max)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-adaptive-max",
+        "model_family_id": "anthropic-claude-fable-5",
+        "model": "Claude Fable 5 (Adaptive Max)",
+        "organization": "Anthropic",
+        "score": 0.298,
+        "input_score": 29.8,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-06-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-06-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-06-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-06-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-06-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-01-837a74e9a04b29d5"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-01"
+        ]
+      },
+      {
+        "observation_id": "obs-0-26-fd76e854433d0486",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-gpt-5-5-xhigh-reasoning-36eb4239771b6d13",
+        "model_configuration": "GPT-5.5 (xHigh reasoning)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-5-xhigh-reasoning",
+        "model_family_id": "openai-gpt-5-5",
+        "model": "GPT-5.5 (xHigh reasoning)",
+        "organization": "OpenAI",
+        "score": 0.26,
+        "input_score": 26.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-23",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-04-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-02-d03d0f259810ad9e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-02"
+        ]
+      },
+      {
+        "observation_id": "obs-0-247-5f16077e26ecd28a",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-gpt-5-6-terra-02159a9fdca39381",
+        "model_configuration": "GPT-5.6 Terra",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-terra",
+        "model_family_id": "openai-gpt-5-6-terra",
+        "model": "GPT-5.6 Terra",
+        "organization": "OpenAI",
+        "score": 0.247,
+        "input_score": 24.7,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-03-fbf19752f6fd8608"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-03"
+        ]
+      },
+      {
+        "observation_id": "obs-0-24-a300b271538c3cb5",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-claude-opus-4-8-adaptive-max-0765e1e7f8e034c2",
+        "model_configuration": "Claude Opus 4.8 (Adaptive Max)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-8-adaptive-max",
+        "model_family_id": "anthropic-claude-opus-4-8",
+        "model": "Claude Opus 4.8 (Adaptive Max)",
+        "organization": "Anthropic",
+        "score": 0.24,
+        "input_score": 24.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-05-28",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-05-28",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-05-28",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-05-28",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-05-28",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-04-105d68f7afe46eb7"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-04"
+        ]
+      },
+      {
+        "observation_id": "obs-0-227-33194256b6360fe1",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-gpt-5-6-luna-ed419d9cd859f2ad",
+        "model_configuration": "GPT-5.6 Luna",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-luna",
+        "model_family_id": "openai-gpt-5-6-luna",
+        "model": "GPT-5.6 Luna",
+        "organization": "OpenAI",
+        "score": 0.22699999999999998,
+        "input_score": 22.7,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-05-338f39d876af1bed"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-05"
+        ]
+      },
+      {
+        "observation_id": "obs-0-21-90899e0a699b4542",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-claude-opus-4-7-adaptive-max-371353dd9043af11",
+        "model_configuration": "Claude Opus 4.7 (Adaptive Max)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-7-adaptive-max",
+        "model_family_id": "anthropic-claude-opus-4-7",
+        "model": "Claude Opus 4.7 (Adaptive Max)",
+        "organization": "Anthropic",
+        "score": 0.21,
+        "input_score": 21.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-16",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-06-f2410218eab471fb"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-06"
+        ]
+      },
+      {
+        "observation_id": "obs-0-18-6828cb1b2748cdab",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-claude-sonnet-4-6-adaptive-max-8dcda5c5189ec2f2",
+        "model_configuration": "Claude Sonnet 4.6 (Adaptive Max)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-sonnet-4-6-adaptive-max",
+        "model_family_id": "anthropic-claude-sonnet-4-6",
+        "model": "Claude Sonnet 4.6 (Adaptive Max)",
+        "organization": "Anthropic",
+        "score": 0.18,
+        "input_score": 18.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-02-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-02-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-02-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-02-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-02-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-07-9ae9142af58207a2"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-07"
+        ]
+      },
+      {
+        "observation_id": "obs-0-17-92161933ebd349cb",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-gemini-3-1-pro-4768a082b6c248b2",
+        "model_configuration": "Gemini 3.1 Pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-1-pro",
+        "model_family_id": "google-deepmind-gemini-3-1-pro",
+        "model": "Gemini 3.1 Pro",
+        "organization": "Google DeepMind",
+        "score": 0.17,
+        "input_score": 17.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-02-19",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-02-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-02-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-02-19",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-02-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-08-fd5347aa4db84ce4"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-08"
+        ]
+      },
+      {
+        "observation_id": "obs-0-14-625aec5eed8c7e3d",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-gemini-3-5-flash-cab40f246147caf6",
+        "model_configuration": "Gemini 3.5 Flash",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-5-flash",
+        "model_family_id": "google-deepmind-gemini-3-5-flash",
+        "model": "Gemini 3.5 Flash",
+        "organization": "Google DeepMind",
+        "score": 0.14,
+        "input_score": 14.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-05-19",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-05-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-05-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-05-19",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-05-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-09-d71f3f10a40f8223"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-09"
+        ]
+      },
+      {
+        "observation_id": "obs-0-14-7c95d42316daab9a",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-grok-4-5-high-reasoning-cfd2e7af88028afc",
+        "model_configuration": "Grok 4.5 (High reasoning)",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-5-high-reasoning",
+        "model_family_id": "xai-grok-4-5",
+        "model": "Grok 4.5 (High reasoning)",
+        "organization": "xAI",
+        "score": 0.14,
+        "input_score": 14.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-08",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-07-08",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-08",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-08",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-08",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-10-5ab8e32a43ab86b2"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-10"
+        ]
+      },
+      {
+        "observation_id": "obs-0-12-0b4d615f520bc511",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-kimi-k2-6-86d1138857b1b5dd",
+        "model_configuration": "Kimi K2.6",
+        "model_identity_organization": "moonshot",
+        "model_label_id": "kimi-k2-6",
+        "model_family_id": "moonshot-kimi-k2-6",
+        "model": "Kimi K2.6",
+        "organization": "Moonshot",
+        "score": 0.12,
+        "input_score": 12.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-20",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-04-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-11-48542191f813cf7a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-11"
+        ]
+      },
+      {
+        "observation_id": "obs-0-1-f6e124ec167a4e7d",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-gemini-3-flash-1b8511e8298853b3",
+        "model_configuration": "Gemini 3 Flash",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-flash",
+        "model_family_id": "google-deepmind-gemini-3-flash",
+        "model": "Gemini 3 Flash",
+        "organization": "Google DeepMind",
+        "score": 0.1,
+        "input_score": 10.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2025-12-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2025-12-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-12-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-12-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-12-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-12-5cd7ddb9c368938d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-12"
+        ]
+      },
+      {
+        "observation_id": "obs-0-08-053f6935dfe540d1",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-grok-4-3-high-reasoning-86d6bbb71d608c95",
+        "model_configuration": "Grok 4.3 (High reasoning)",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-3-high-reasoning",
+        "model_family_id": "xai-grok-4-3",
+        "model": "Grok 4.3 (High reasoning)",
+        "organization": "xAI",
+        "score": 0.08,
+        "input_score": 8.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-04-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-13-8d365fa1c29ebeab"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-13"
+        ]
+      },
+      {
+        "observation_id": "obs-0-02-3db169ae3678198e",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-mistral-large-3-200098d872e1b4b9",
+        "model_configuration": "Mistral Large 3",
+        "model_identity_organization": "mistral-ai",
+        "model_label_id": "mistral-large-3",
+        "model_family_id": "mistral-ai-mistral-large-3",
+        "model": "Mistral Large 3",
+        "organization": "Mistral AI",
+        "score": 0.02,
+        "input_score": 2.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2025-12-02",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2025-12-02",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-12-02",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-12-02",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-12-02",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-14-4f8c6a32a29e5218"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-14"
+        ]
+      },
+      {
+        "observation_id": "obs-0-02-26f9b09c51604f01",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-nova-2-pro-cbbf1e40648bc16b",
+        "model_configuration": "Nova 2 Pro",
+        "model_identity_organization": "amazon",
+        "model_label_id": "nova-2-pro",
+        "model_family_id": "amazon-nova-2-pro",
+        "model": "Nova 2 Pro",
+        "organization": "Amazon",
+        "score": 0.02,
+        "input_score": 2.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-07-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-15-1b1afbe818eacec9"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-15"
+        ]
+      },
+      {
+        "observation_id": "obs-0-02-8e47a9b2b06d62e3",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-nemotron-3-nano-omni-cad2f45dc1e77b53",
+        "model_configuration": "Nemotron 3 Nano Omni",
+        "model_identity_organization": "nvidia",
+        "model_label_id": "nemotron-3-nano-omni",
+        "model_family_id": "nvidia-nemotron-3-nano-omni",
+        "model": "Nemotron 3 Nano Omni",
+        "organization": "NVIDIA",
+        "score": 0.02,
+        "input_score": 2.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-07-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-16-5f06e811ba52888c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-16"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-18-6828cb1b2748cdab",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-claude-sonnet-4-6-adaptive-max-8dcda5c5189ec2f2",
+        "model_configuration": "Claude Sonnet 4.6 (Adaptive Max)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-sonnet-4-6-adaptive-max",
+        "model_family_id": "anthropic-claude-sonnet-4-6",
+        "model": "Claude Sonnet 4.6 (Adaptive Max)",
+        "organization": "Anthropic",
+        "score": 0.18,
+        "input_score": 18.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-02-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-02-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-02-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-02-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-07-9ae9142af58207a2"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-07"
+        ],
+        "plot_date": "2026-04-14",
+        "frontier_observation_ids": [
+          "obs-0-02-3db169ae3678198e",
+          "obs-0-1-f6e124ec167a4e7d",
+          "obs-0-17-92161933ebd349cb",
+          "obs-0-18-6828cb1b2748cdab"
+        ]
+      },
+      {
+        "observation_id": "obs-0-21-90899e0a699b4542",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-claude-opus-4-7-adaptive-max-371353dd9043af11",
+        "model_configuration": "Claude Opus 4.7 (Adaptive Max)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-7-adaptive-max",
+        "model_family_id": "anthropic-claude-opus-4-7",
+        "model": "Claude Opus 4.7 (Adaptive Max)",
+        "organization": "Anthropic",
+        "score": 0.21,
+        "input_score": 21.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-16",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-06-f2410218eab471fb"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-06"
+        ],
+        "plot_date": "2026-04-16",
+        "frontier_observation_ids": [
+          "obs-0-21-90899e0a699b4542"
+        ]
+      },
+      {
+        "observation_id": "obs-0-26-fd76e854433d0486",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-gpt-5-5-xhigh-reasoning-36eb4239771b6d13",
+        "model_configuration": "GPT-5.5 (xHigh reasoning)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-5-xhigh-reasoning",
+        "model_family_id": "openai-gpt-5-5",
+        "model": "GPT-5.5 (xHigh reasoning)",
+        "organization": "OpenAI",
+        "score": 0.26,
+        "input_score": 26.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-23",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-04-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-02-d03d0f259810ad9e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-02"
+        ],
+        "plot_date": "2026-04-23",
+        "frontier_observation_ids": [
+          "obs-0-26-fd76e854433d0486"
+        ]
+      },
+      {
+        "observation_id": "obs-0-298-42114be226bed7d4",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-claude-fable-5-adaptive-max-bb5b45055d31a98d",
+        "model_configuration": "Claude Fable 5 (Adaptive Max)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-adaptive-max",
+        "model_family_id": "anthropic-claude-fable-5",
+        "model": "Claude Fable 5 (Adaptive Max)",
+        "organization": "Anthropic",
+        "score": 0.298,
+        "input_score": 29.8,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-06-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-06-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-06-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-06-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-06-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-01-837a74e9a04b29d5"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-01"
+        ],
+        "plot_date": "2026-06-09",
+        "frontier_observation_ids": [
+          "obs-0-298-42114be226bed7d4"
+        ]
+      },
+      {
+        "observation_id": "obs-0-307-49db056e134724f5",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-gpt-5-6-sol-5f1ffa469585aab8",
+        "model_configuration": "GPT-5.6 Sol",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "GPT-5.6 Sol",
+        "organization": "OpenAI",
+        "score": 0.307,
+        "input_score": 30.7,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-00-4d0ccbbd9b35a306"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-00"
+        ],
+        "plot_date": "2026-07-09",
+        "frontier_observation_ids": [
+          "obs-0-227-33194256b6360fe1",
+          "obs-0-247-5f16077e26ecd28a",
+          "obs-0-307-49db056e134724f5"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-18-6828cb1b2748cdab",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-claude-sonnet-4-6-adaptive-max-8dcda5c5189ec2f2",
+        "model_configuration": "Claude Sonnet 4.6 (Adaptive Max)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-sonnet-4-6-adaptive-max",
+        "model_family_id": "anthropic-claude-sonnet-4-6",
+        "model": "Claude Sonnet 4.6 (Adaptive Max)",
+        "organization": "Anthropic",
+        "score": 0.18,
+        "input_score": 18.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-02-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-02-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-02-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-02-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-07-9ae9142af58207a2"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-07"
+        ],
+        "plot_date": "2026-04-14",
+        "frontier_observation_ids": [
+          "obs-0-02-3db169ae3678198e",
+          "obs-0-1-f6e124ec167a4e7d",
+          "obs-0-17-92161933ebd349cb",
+          "obs-0-18-6828cb1b2748cdab"
+        ]
+      },
+      {
+        "observation_id": "obs-0-21-90899e0a699b4542",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-claude-opus-4-7-adaptive-max-371353dd9043af11",
+        "model_configuration": "Claude Opus 4.7 (Adaptive Max)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-7-adaptive-max",
+        "model_family_id": "anthropic-claude-opus-4-7",
+        "model": "Claude Opus 4.7 (Adaptive Max)",
+        "organization": "Anthropic",
+        "score": 0.21,
+        "input_score": 21.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-16",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-06-f2410218eab471fb"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-06"
+        ],
+        "plot_date": "2026-04-16",
+        "frontier_observation_ids": [
+          "obs-0-21-90899e0a699b4542"
+        ]
+      },
+      {
+        "observation_id": "obs-0-26-fd76e854433d0486",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-gpt-5-5-xhigh-reasoning-36eb4239771b6d13",
+        "model_configuration": "GPT-5.5 (xHigh reasoning)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-5-xhigh-reasoning",
+        "model_family_id": "openai-gpt-5-5",
+        "model": "GPT-5.5 (xHigh reasoning)",
+        "organization": "OpenAI",
+        "score": 0.26,
+        "input_score": 26.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-23",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-04-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-02-d03d0f259810ad9e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-02"
+        ],
+        "plot_date": "2026-04-23",
+        "frontier_observation_ids": [
+          "obs-0-26-fd76e854433d0486"
+        ]
+      },
+      {
+        "observation_id": "obs-0-298-42114be226bed7d4",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-claude-fable-5-adaptive-max-bb5b45055d31a98d",
+        "model_configuration": "Claude Fable 5 (Adaptive Max)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-adaptive-max",
+        "model_family_id": "anthropic-claude-fable-5",
+        "model": "Claude Fable 5 (Adaptive Max)",
+        "organization": "Anthropic",
+        "score": 0.298,
+        "input_score": 29.8,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-06-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-06-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-06-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-06-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-06-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-01-837a74e9a04b29d5"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-01"
+        ],
+        "plot_date": "2026-06-09",
+        "frontier_observation_ids": [
+          "obs-0-298-42114be226bed7d4"
+        ]
+      },
+      {
+        "observation_id": "obs-0-307-49db056e134724f5",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-gpt-5-6-sol-5f1ffa469585aab8",
+        "model_configuration": "GPT-5.6 Sol",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "GPT-5.6 Sol",
+        "organization": "OpenAI",
+        "score": 0.307,
+        "input_score": 30.7,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-00-4d0ccbbd9b35a306"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-00"
+        ],
+        "plot_date": "2026-07-09",
+        "frontier_observation_ids": [
+          "obs-0-227-33194256b6360fe1",
+          "obs-0-247-5f16077e26ecd28a",
+          "obs-0-307-49db056e134724f5"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-18-6828cb1b2748cdab",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-claude-sonnet-4-6-adaptive-max-8dcda5c5189ec2f2",
+        "model_configuration": "Claude Sonnet 4.6 (Adaptive Max)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-sonnet-4-6-adaptive-max",
+        "model_family_id": "anthropic-claude-sonnet-4-6",
+        "model": "Claude Sonnet 4.6 (Adaptive Max)",
+        "organization": "Anthropic",
+        "score": 0.18,
+        "input_score": 18.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-02-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-02-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-02-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-02-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-07-9ae9142af58207a2"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-07"
+        ],
+        "plot_date": "2026-04-14",
+        "frontier_observation_ids": [
+          "obs-0-02-3db169ae3678198e",
+          "obs-0-1-f6e124ec167a4e7d",
+          "obs-0-17-92161933ebd349cb",
+          "obs-0-18-6828cb1b2748cdab"
+        ]
+      },
+      {
+        "observation_id": "obs-0-21-90899e0a699b4542",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-claude-opus-4-7-adaptive-max-371353dd9043af11",
+        "model_configuration": "Claude Opus 4.7 (Adaptive Max)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-7-adaptive-max",
+        "model_family_id": "anthropic-claude-opus-4-7",
+        "model": "Claude Opus 4.7 (Adaptive Max)",
+        "organization": "Anthropic",
+        "score": 0.21,
+        "input_score": 21.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-16",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-06-f2410218eab471fb"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-06"
+        ],
+        "plot_date": "2026-04-16",
+        "frontier_observation_ids": [
+          "obs-0-21-90899e0a699b4542"
+        ]
+      },
+      {
+        "observation_id": "obs-0-26-fd76e854433d0486",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-gpt-5-5-xhigh-reasoning-36eb4239771b6d13",
+        "model_configuration": "GPT-5.5 (xHigh reasoning)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-5-xhigh-reasoning",
+        "model_family_id": "openai-gpt-5-5",
+        "model": "GPT-5.5 (xHigh reasoning)",
+        "organization": "OpenAI",
+        "score": 0.26,
+        "input_score": 26.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-23",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-04-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-02-d03d0f259810ad9e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-02"
+        ],
+        "plot_date": "2026-04-23",
+        "frontier_observation_ids": [
+          "obs-0-26-fd76e854433d0486"
+        ]
+      },
+      {
+        "observation_id": "obs-0-298-42114be226bed7d4",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-claude-fable-5-adaptive-max-bb5b45055d31a98d",
+        "model_configuration": "Claude Fable 5 (Adaptive Max)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-adaptive-max",
+        "model_family_id": "anthropic-claude-fable-5",
+        "model": "Claude Fable 5 (Adaptive Max)",
+        "organization": "Anthropic",
+        "score": 0.298,
+        "input_score": 29.8,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-06-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-06-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-06-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-06-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-06-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-01-837a74e9a04b29d5"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-01"
+        ],
+        "plot_date": "2026-06-09",
+        "frontier_observation_ids": [
+          "obs-0-298-42114be226bed7d4"
+        ]
+      },
+      {
+        "observation_id": "obs-0-307-49db056e134724f5",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-gpt-5-6-sol-5f1ffa469585aab8",
+        "model_configuration": "GPT-5.6 Sol",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "GPT-5.6 Sol",
+        "organization": "OpenAI",
+        "score": 0.307,
+        "input_score": 30.7,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-00-4d0ccbbd9b35a306"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-00"
+        ],
+        "plot_date": "2026-07-09",
+        "frontier_observation_ids": [
+          "obs-0-227-33194256b6360fe1",
+          "obs-0-247-5f16077e26ecd28a",
+          "obs-0-307-49db056e134724f5"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-307-49db056e134724f5",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-gpt-5-6-sol-5f1ffa469585aab8",
+        "model_configuration": "GPT-5.6 Sol",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "GPT-5.6 Sol",
+        "organization": "OpenAI",
+        "score": 0.307,
+        "input_score": 30.7,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-15",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-00-4d0ccbbd9b35a306"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-00"
+        ],
+        "plot_date": "2026-07-15",
+        "frontier_observation_ids": [
+          "obs-0-02-3db169ae3678198e",
+          "obs-0-02-8e47a9b2b06d62e3",
+          "obs-0-02-26f9b09c51604f01",
+          "obs-0-08-053f6935dfe540d1",
+          "obs-0-1-f6e124ec167a4e7d",
+          "obs-0-12-0b4d615f520bc511",
+          "obs-0-14-625aec5eed8c7e3d",
+          "obs-0-14-7c95d42316daab9a",
+          "obs-0-17-92161933ebd349cb",
+          "obs-0-18-6828cb1b2748cdab",
+          "obs-0-21-90899e0a699b4542",
+          "obs-0-227-33194256b6360fe1",
+          "obs-0-24-a300b271538c3cb5",
+          "obs-0-247-5f16077e26ecd28a",
+          "obs-0-26-fd76e854433d0486",
+          "obs-0-298-42114be226bed7d4",
+          "obs-0-307-49db056e134724f5"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-307-49db056e134724f5",
+        "benchmark_id": "gdp-pdf",
+        "benchmark_version_id": "gdp-pdf-canonical",
+        "model_id": "model-gpt-5-6-sol-5f1ffa469585aab8",
+        "model_configuration": "GPT-5.6 Sol",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "GPT-5.6 Sol",
+        "organization": "OpenAI",
+        "score": 0.307,
+        "input_score": 30.7,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "gdp-pdf-metric-v1",
+        "protocol_id": "gdp-pdf-source-export-v1",
+        "task_set_id": "gdp-pdf-canonical",
+        "metric": "Strict pass rate",
+        "score_role": "canonical",
+        "score_series_id": "gdp-pdf-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-07-15",
+        "source_publication_date": "2026-07-15",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-07-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-15",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-07-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c",
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2607-11192v3-5faf12c463aa250a"
+        ],
+        "source": "https://arxiv.org/abs/2607.11192v3",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-gdp-pdf-00-4d0ccbbd9b35a306"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "gdp-pdf-00"
+        ],
+        "plot_date": "2026-07-15",
+        "frontier_observation_ids": [
+          "obs-0-02-3db169ae3678198e",
+          "obs-0-02-8e47a9b2b06d62e3",
+          "obs-0-02-26f9b09c51604f01",
+          "obs-0-08-053f6935dfe540d1",
+          "obs-0-1-f6e124ec167a4e7d",
+          "obs-0-12-0b4d615f520bc511",
+          "obs-0-14-625aec5eed8c7e3d",
+          "obs-0-14-7c95d42316daab9a",
+          "obs-0-17-92161933ebd349cb",
+          "obs-0-18-6828cb1b2748cdab",
+          "obs-0-21-90899e0a699b4542",
+          "obs-0-227-33194256b6360fe1",
+          "obs-0-24-a300b271538c3cb5",
+          "obs-0-247-5f16077e26ecd28a",
+          "obs-0-26-fd76e854433d0486",
+          "obs-0-298-42114be226bed7d4",
+          "obs-0-307-49db056e134724f5"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.307,
+    "capability_frontier_value": 0.307,
+    "reported_frontier_value": 0.307,
+    "current_frontier": 0.307,
+    "normalized_progress": 0.307,
+    "normalized_headroom": 0.6930000000000001,
+    "threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 153
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 153
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 153
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 153
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 153
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 153
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 153
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 153
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 153
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.5714285714285714,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "xAI"
+      ],
+      "panel_size": 7,
+      "status": "medium"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-arxiv-org-abs-2607-11192-c04b7dca9656f41c"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": true,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

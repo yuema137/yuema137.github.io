@@ -1,0 +1,1855 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-14",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "madqa",
+    "name": "MADQA",
+    "domain": "Tool use",
+    "release": "2026-03-12",
+    "source": "https://arxiv.org/abs/2603.12180",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "percentage_points",
+    "evaluation_type": "Agent",
+    "tags": [
+      "document qa",
+      "retrieval",
+      "leaderboard"
+    ],
+    "labels": [
+      "information-retrieval",
+      "multimodal-perception",
+      "tool-use",
+      "planning"
+    ],
+    "metric": "Accuracy",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "madqa-metric-v1",
+    "protocol_id": "madqa-source-export-v1",
+    "canonical_score": {
+      "series_id": "madqa-canonical-score",
+      "role": "canonical",
+      "metric_id": "madqa-metric-v1",
+      "metric_name": "Accuracy",
+      "protocol_id": "madqa-source-export-v1",
+      "task_set_id": "madqa-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "percentage_points",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "madqa-canonical",
+    "summary": {
+      "en": "MADQA tests agents on answering expert questions over large collections of real PDF documents by retrieving and citing the supporting pages.",
+      "zh": "MADQA \u8bc4\u4f30 agent \u5728\u5927\u91cf\u771f\u5b9e PDF \u6587\u6863\u4e0a\u68c0\u7d22\u5e76\u5f15\u7528\u76f8\u5173\u9875\u9762\u3001\u56de\u7b54\u4e13\u5bb6\u95ee\u9898\u7684\u80fd\u529b\u3002"
+    },
+    "task_format": {
+      "en": "With a BM25 search tool over a collection of 800 PDFs, the agent finds evidence and returns an extractive answer with the pages it cites.",
+      "zh": "agent \u5728 800 \u4efd PDF \u7ec4\u6210\u7684\u6587\u6863\u96c6\u4e0a\u4f7f\u7528 BM25 \u68c0\u7d22\u5de5\u5177\uff0c\u627e\u51fa\u8bc1\u636e\u5e76\u7ed9\u51fa\u5e26\u5f15\u7528\u9875\u7801\u7684\u62bd\u53d6\u5f0f\u7b54\u6848\u3002"
+    },
+    "scoring": {
+      "metric_name": "BM25 Agent accuracy",
+      "explanation": {
+        "en": "Using the fixed BM25 search-agent harness, the model answers questions over a collection of PDFs; an LLM judge (Cohen's kappa 0.88 vs humans) scores accuracy on the 500-question test set.",
+        "zh": "\u5728\u56fa\u5b9a\u7684 BM25 \u68c0\u7d22 agent harness \u4e0b\uff0c\u6a21\u578b\u56de\u7b54\u4e00\u6279 PDF \u6587\u6863\u4e0a\u7684\u95ee\u9898\uff1b\u7531 LLM judge\uff08\u4e0e\u4eba\u7c7b\u7684 Cohen kappa \u4e3a 0.88\uff09\u5728 500 \u9898\u6d4b\u8bd5\u96c6\u4e0a\u8bc4\u5206\u3002"
+      }
+    },
+    "evaluation_target": "final_output",
+    "observation_count": 14,
+    "evidence_record_count": 14,
+    "observations": [
+      {
+        "observation_id": "obs-0-822-1ba3fb6759d6f5bf",
+        "benchmark_id": "madqa",
+        "benchmark_version_id": "madqa-canonical",
+        "model_id": "model-gemini-3-pro-ebaa316d834e71b0",
+        "model_configuration": "Gemini 3 Pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-pro",
+        "model_family_id": "google-deepmind-gemini-3-pro",
+        "model": "Gemini 3 Pro",
+        "organization": "Google DeepMind",
+        "score": 0.8220000000000001,
+        "input_score": 82.2,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "madqa-metric-v1",
+        "protocol_id": "madqa-source-export-v1",
+        "task_set_id": "madqa-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "madqa-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2025-11-18",
+        "evaluation_date": null,
+        "result_public_date": "2026-03-20",
+        "source_publication_date": "2026-03-20",
+        "observation_date": "2025-11-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-11-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-03-20",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-11-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-11-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-03-20",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180-229f293cd47faa38",
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "source": "https://arxiv.org/abs/2603.12180v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-madqa-00-8198edee20cf68e6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "madqa-00"
+        ]
+      },
+      {
+        "observation_id": "obs-0-806-b2dd5129eed6aa6b",
+        "benchmark_id": "madqa",
+        "benchmark_version_id": "madqa-canonical",
+        "model_id": "model-claude-sonnet-4-5-2025-09-a6e55d5db1b8dbff",
+        "model_configuration": "Claude Sonnet 4.5 (2025-09)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-sonnet-4-5-2025-09",
+        "model_family_id": "anthropic-claude-sonnet-4-5",
+        "model": "Claude Sonnet 4.5 (2025-09)",
+        "organization": "Anthropic",
+        "score": 0.8059999999999999,
+        "input_score": 80.6,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "madqa-metric-v1",
+        "protocol_id": "madqa-source-export-v1",
+        "task_set_id": "madqa-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "madqa-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2025-09-29",
+        "evaluation_date": null,
+        "result_public_date": "2026-03-20",
+        "source_publication_date": "2026-03-20",
+        "observation_date": "2025-09-29",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-09-29",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-03-20",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-09-29",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-09-29",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-03-20",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180-229f293cd47faa38",
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "source": "https://arxiv.org/abs/2603.12180v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-madqa-01-a76441bfed313be9"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "madqa-01"
+        ]
+      },
+      {
+        "observation_id": "obs-0-777-d51ad3aabe0cd005",
+        "benchmark_id": "madqa",
+        "benchmark_version_id": "madqa-canonical",
+        "model_id": "model-gpt-5-2025-08-49803e7e16fb75c8",
+        "model_configuration": "GPT-5 (2025-08)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-2025-08",
+        "model_family_id": "openai-gpt-5",
+        "model": "GPT-5 (2025-08)",
+        "organization": "OpenAI",
+        "score": 0.777,
+        "input_score": 77.7,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "madqa-metric-v1",
+        "protocol_id": "madqa-source-export-v1",
+        "task_set_id": "madqa-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "madqa-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2025-08-07",
+        "evaluation_date": null,
+        "result_public_date": "2026-03-20",
+        "source_publication_date": "2026-03-20",
+        "observation_date": "2025-08-07",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-08-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-03-20",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-08-07",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-08-07",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-03-20",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180-229f293cd47faa38",
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "source": "https://arxiv.org/abs/2603.12180v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-madqa-02-e0234903eaae6bd2"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "madqa-02"
+        ]
+      },
+      {
+        "observation_id": "obs-0-682-c5ce6922c97a4fea",
+        "benchmark_id": "madqa",
+        "benchmark_version_id": "madqa-canonical",
+        "model_id": "model-claude-haiku-4-5-2025-10-6a090f2b31b88649",
+        "model_configuration": "Claude Haiku 4.5 (2025-10)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-haiku-4-5-2025-10",
+        "model_family_id": "anthropic-claude-haiku-4-5",
+        "model": "Claude Haiku 4.5 (2025-10)",
+        "organization": "Anthropic",
+        "score": 0.682,
+        "input_score": 68.2,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "madqa-metric-v1",
+        "protocol_id": "madqa-source-export-v1",
+        "task_set_id": "madqa-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "madqa-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2025-10-15",
+        "evaluation_date": null,
+        "result_public_date": "2026-03-20",
+        "source_publication_date": "2026-03-20",
+        "observation_date": "2025-10-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-10-15",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-03-20",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-10-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-10-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-03-20",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180-229f293cd47faa38",
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "source": "https://arxiv.org/abs/2603.12180v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-madqa-03-c6e1a49f8352c78d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "madqa-03"
+        ]
+      },
+      {
+        "observation_id": "obs-0-678-ad83173142e6c27a",
+        "benchmark_id": "madqa",
+        "benchmark_version_id": "madqa-canonical",
+        "model_id": "model-gpt-5-2-2025-12-ba8c36c22ebc0089",
+        "model_configuration": "GPT-5.2 (2025-12)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-2-2025-12",
+        "model_family_id": "openai-gpt-5-2",
+        "model": "GPT-5.2 (2025-12)",
+        "organization": "OpenAI",
+        "score": 0.6779999999999999,
+        "input_score": 67.8,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "madqa-metric-v1",
+        "protocol_id": "madqa-source-export-v1",
+        "task_set_id": "madqa-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "madqa-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2025-12-11",
+        "evaluation_date": null,
+        "result_public_date": "2026-03-20",
+        "source_publication_date": "2026-03-20",
+        "observation_date": "2025-12-11",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-12-11",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-03-20",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-12-11",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-12-11",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-03-20",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180-229f293cd47faa38",
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "source": "https://arxiv.org/abs/2603.12180v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-madqa-04-0d14a4ea27b26659"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "madqa-04"
+        ]
+      },
+      {
+        "observation_id": "obs-0-669-e5b55a69cd3a5358",
+        "benchmark_id": "madqa",
+        "benchmark_version_id": "madqa-canonical",
+        "model_id": "model-gpt-5-mini-2025-08-7db09d773958d7e8",
+        "model_configuration": "GPT-5 Mini (2025-08)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-mini-2025-08",
+        "model_family_id": "openai-gpt-5-mini",
+        "model": "GPT-5 Mini (2025-08)",
+        "organization": "OpenAI",
+        "score": 0.669,
+        "input_score": 66.9,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "madqa-metric-v1",
+        "protocol_id": "madqa-source-export-v1",
+        "task_set_id": "madqa-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "madqa-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2025-08-07",
+        "evaluation_date": null,
+        "result_public_date": "2026-03-20",
+        "source_publication_date": "2026-03-20",
+        "observation_date": "2025-08-07",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-08-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-03-20",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-08-07",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-08-07",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-03-20",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180-229f293cd47faa38",
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "source": "https://arxiv.org/abs/2603.12180v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-madqa-05-a11b98449c281087"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "madqa-05"
+        ]
+      },
+      {
+        "observation_id": "obs-0-661-edf88b90f2336b15",
+        "benchmark_id": "madqa",
+        "benchmark_version_id": "madqa-canonical",
+        "model_id": "model-glm-4-6v-15fdaa4dbad2e9dc",
+        "model_configuration": "GLM-4.6V",
+        "model_identity_organization": "z-ai",
+        "model_label_id": "glm-4-6v",
+        "model_family_id": "z-ai-glm-4-6v",
+        "model": "GLM-4.6V",
+        "organization": "Z.ai",
+        "score": 0.6609999999999999,
+        "input_score": 66.1,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "madqa-metric-v1",
+        "protocol_id": "madqa-source-export-v1",
+        "task_set_id": "madqa-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "madqa-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-03-20",
+        "source_publication_date": "2026-03-20",
+        "observation_date": "2026-03-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-03-20",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-03-20",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-03-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-03-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-03-20",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180-229f293cd47faa38",
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "source": "https://arxiv.org/abs/2603.12180v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-madqa-06-d31b6095ad37d0ec"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "madqa-06"
+        ]
+      },
+      {
+        "observation_id": "obs-0-603-62f128622af30674",
+        "benchmark_id": "madqa",
+        "benchmark_version_id": "madqa-canonical",
+        "model_id": "model-qwen3-vl-235b-a22b-thinking-7a5f9bb9198bfd51",
+        "model_configuration": "Qwen3-VL (235B-A22B-Thinking)",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen3-vl-235b-a22b-thinking",
+        "model_family_id": "alibaba-qwen3-vl",
+        "model": "Qwen3-VL (235B-A22B-Thinking)",
+        "organization": "Alibaba",
+        "score": 0.603,
+        "input_score": 60.3,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "madqa-metric-v1",
+        "protocol_id": "madqa-source-export-v1",
+        "task_set_id": "madqa-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "madqa-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2025-09-23",
+        "evaluation_date": null,
+        "result_public_date": "2026-03-20",
+        "source_publication_date": "2026-03-20",
+        "observation_date": "2025-09-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-09-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-03-20",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-09-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-09-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-03-20",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180-229f293cd47faa38",
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "source": "https://arxiv.org/abs/2603.12180v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-madqa-07-6b506f02706e9ea4"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "madqa-07"
+        ]
+      },
+      {
+        "observation_id": "obs-0-6-44a91b9b20c12824",
+        "benchmark_id": "madqa",
+        "benchmark_version_id": "madqa-canonical",
+        "model_id": "model-gpt-4-1-2025-04-7f3fab44f0f552f5",
+        "model_configuration": "GPT-4.1 (2025-04)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4-1-2025-04",
+        "model_family_id": "openai-gpt-4-1",
+        "model": "GPT-4.1 (2025-04)",
+        "organization": "OpenAI",
+        "score": 0.6,
+        "input_score": 60.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "madqa-metric-v1",
+        "protocol_id": "madqa-source-export-v1",
+        "task_set_id": "madqa-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "madqa-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2025-04-14",
+        "evaluation_date": null,
+        "result_public_date": "2026-03-20",
+        "source_publication_date": "2026-03-20",
+        "observation_date": "2025-04-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-03-20",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-04-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-03-20",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180-229f293cd47faa38",
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "source": "https://arxiv.org/abs/2603.12180v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-madqa-08-d903c628826a1986"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "madqa-08"
+        ]
+      },
+      {
+        "observation_id": "obs-0-585-2dddba6c68c6f661",
+        "benchmark_id": "madqa",
+        "benchmark_version_id": "madqa-canonical",
+        "model_id": "model-gemini-2-5-flash-b0628e9ec15ee1ca",
+        "model_configuration": "Gemini 2.5 Flash",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-2-5-flash",
+        "model_family_id": "google-deepmind-gemini-2-5-flash",
+        "model": "Gemini 2.5 Flash",
+        "organization": "Google DeepMind",
+        "score": 0.585,
+        "input_score": 58.5,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "madqa-metric-v1",
+        "protocol_id": "madqa-source-export-v1",
+        "task_set_id": "madqa-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "madqa-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2025-04-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-03-20",
+        "source_publication_date": "2026-03-20",
+        "observation_date": "2025-04-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-03-20",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-04-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-03-20",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180-229f293cd47faa38",
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "source": "https://arxiv.org/abs/2603.12180v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-madqa-09-1b53a797014ce156"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "madqa-09"
+        ]
+      },
+      {
+        "observation_id": "obs-0-582-f098688d937f7f6f",
+        "benchmark_id": "madqa",
+        "benchmark_version_id": "madqa-canonical",
+        "model_id": "model-gpt-5-nano-2025-08-ce86547c0b70f4f8",
+        "model_configuration": "GPT-5 Nano (2025-08)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-nano-2025-08",
+        "model_family_id": "openai-gpt-5-nano",
+        "model": "GPT-5 Nano (2025-08)",
+        "organization": "OpenAI",
+        "score": 0.5820000000000001,
+        "input_score": 58.2,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "madqa-metric-v1",
+        "protocol_id": "madqa-source-export-v1",
+        "task_set_id": "madqa-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "madqa-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2025-08-07",
+        "evaluation_date": null,
+        "result_public_date": "2026-03-20",
+        "source_publication_date": "2026-03-20",
+        "observation_date": "2025-08-07",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-08-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-03-20",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-08-07",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-08-07",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-03-20",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180-229f293cd47faa38",
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "source": "https://arxiv.org/abs/2603.12180v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-madqa-10-02f9ed503c3ce327"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "madqa-10"
+        ]
+      },
+      {
+        "observation_id": "obs-0-473-938de50c71ea9cd6",
+        "benchmark_id": "madqa",
+        "benchmark_version_id": "madqa-canonical",
+        "model_id": "model-qwen3-vl-8b-thinking-214585722335cf15",
+        "model_configuration": "Qwen3-VL (8B-Thinking)",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen3-vl-8b-thinking",
+        "model_family_id": "alibaba-qwen3-vl",
+        "model": "Qwen3-VL (8B-Thinking)",
+        "organization": "Alibaba",
+        "score": 0.473,
+        "input_score": 47.3,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "madqa-metric-v1",
+        "protocol_id": "madqa-source-export-v1",
+        "task_set_id": "madqa-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "madqa-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2025-10-15",
+        "evaluation_date": null,
+        "result_public_date": "2026-03-20",
+        "source_publication_date": "2026-03-20",
+        "observation_date": "2025-10-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-10-15",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-03-20",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-10-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-10-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-03-20",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180-229f293cd47faa38",
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "source": "https://arxiv.org/abs/2603.12180v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-madqa-11-ff489172e8956152"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "madqa-11"
+        ]
+      },
+      {
+        "observation_id": "obs-0-46-d4ae4a082d191b90",
+        "benchmark_id": "madqa",
+        "benchmark_version_id": "madqa-canonical",
+        "model_id": "model-glm-4-6v-flash-5f73a982cde77725",
+        "model_configuration": "GLM-4.6V Flash",
+        "model_identity_organization": "z-ai",
+        "model_label_id": "glm-4-6v-flash",
+        "model_family_id": "z-ai-glm-4-6v-flash",
+        "model": "GLM-4.6V Flash",
+        "organization": "Z.ai",
+        "score": 0.46,
+        "input_score": 46.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "madqa-metric-v1",
+        "protocol_id": "madqa-source-export-v1",
+        "task_set_id": "madqa-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "madqa-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-03-20",
+        "source_publication_date": "2026-03-20",
+        "observation_date": "2026-03-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-03-20",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-03-20",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-03-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-03-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-03-20",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180-229f293cd47faa38",
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "source": "https://arxiv.org/abs/2603.12180v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-madqa-12-d0f509fe102cfb11"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "madqa-12"
+        ]
+      },
+      {
+        "observation_id": "obs-0-195-f348671fe1307e70",
+        "benchmark_id": "madqa",
+        "benchmark_version_id": "madqa-canonical",
+        "model_id": "model-gpt-4-1-nano-2025-04-9fb99700ce6da320",
+        "model_configuration": "GPT-4.1 Nano (2025-04)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-4-1-nano-2025-04",
+        "model_family_id": "openai-gpt-4-1-nano",
+        "model": "GPT-4.1 Nano (2025-04)",
+        "organization": "OpenAI",
+        "score": 0.195,
+        "input_score": 19.5,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "madqa-metric-v1",
+        "protocol_id": "madqa-source-export-v1",
+        "task_set_id": "madqa-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "madqa-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2025-04-14",
+        "evaluation_date": null,
+        "result_public_date": "2026-03-20",
+        "source_publication_date": "2026-03-20",
+        "observation_date": "2025-04-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-04-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-03-20",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-04-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-04-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-03-20",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180-229f293cd47faa38",
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "source": "https://arxiv.org/abs/2603.12180v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-madqa-13-ba120018a8f85ed1"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "madqa-13"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-822-1ba3fb6759d6f5bf",
+        "benchmark_id": "madqa",
+        "benchmark_version_id": "madqa-canonical",
+        "model_id": "model-gemini-3-pro-ebaa316d834e71b0",
+        "model_configuration": "Gemini 3 Pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-pro",
+        "model_family_id": "google-deepmind-gemini-3-pro",
+        "model": "Gemini 3 Pro",
+        "organization": "Google DeepMind",
+        "score": 0.8220000000000001,
+        "input_score": 82.2,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "madqa-metric-v1",
+        "protocol_id": "madqa-source-export-v1",
+        "task_set_id": "madqa-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "madqa-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2025-11-18",
+        "evaluation_date": null,
+        "result_public_date": "2026-03-20",
+        "source_publication_date": "2026-03-20",
+        "observation_date": "2025-11-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-11-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-03-20",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-03-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-11-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-03-20",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180-229f293cd47faa38",
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "source": "https://arxiv.org/abs/2603.12180v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-madqa-00-8198edee20cf68e6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "madqa-00"
+        ],
+        "plot_date": "2026-03-12",
+        "frontier_observation_ids": [
+          "obs-0-195-f348671fe1307e70",
+          "obs-0-473-938de50c71ea9cd6",
+          "obs-0-582-f098688d937f7f6f",
+          "obs-0-585-2dddba6c68c6f661",
+          "obs-0-6-44a91b9b20c12824",
+          "obs-0-603-62f128622af30674",
+          "obs-0-669-e5b55a69cd3a5358",
+          "obs-0-678-ad83173142e6c27a",
+          "obs-0-682-c5ce6922c97a4fea",
+          "obs-0-777-d51ad3aabe0cd005",
+          "obs-0-806-b2dd5129eed6aa6b",
+          "obs-0-822-1ba3fb6759d6f5bf"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-822-1ba3fb6759d6f5bf",
+        "benchmark_id": "madqa",
+        "benchmark_version_id": "madqa-canonical",
+        "model_id": "model-gemini-3-pro-ebaa316d834e71b0",
+        "model_configuration": "Gemini 3 Pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-pro",
+        "model_family_id": "google-deepmind-gemini-3-pro",
+        "model": "Gemini 3 Pro",
+        "organization": "Google DeepMind",
+        "score": 0.8220000000000001,
+        "input_score": 82.2,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "madqa-metric-v1",
+        "protocol_id": "madqa-source-export-v1",
+        "task_set_id": "madqa-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "madqa-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2025-11-18",
+        "evaluation_date": null,
+        "result_public_date": "2026-03-20",
+        "source_publication_date": "2026-03-20",
+        "observation_date": "2025-11-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-11-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-03-20",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-03-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-11-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-03-20",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180-229f293cd47faa38",
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "source": "https://arxiv.org/abs/2603.12180v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-madqa-00-8198edee20cf68e6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "madqa-00"
+        ],
+        "plot_date": "2026-03-12",
+        "frontier_observation_ids": [
+          "obs-0-195-f348671fe1307e70",
+          "obs-0-473-938de50c71ea9cd6",
+          "obs-0-582-f098688d937f7f6f",
+          "obs-0-585-2dddba6c68c6f661",
+          "obs-0-6-44a91b9b20c12824",
+          "obs-0-603-62f128622af30674",
+          "obs-0-669-e5b55a69cd3a5358",
+          "obs-0-678-ad83173142e6c27a",
+          "obs-0-682-c5ce6922c97a4fea",
+          "obs-0-777-d51ad3aabe0cd005",
+          "obs-0-806-b2dd5129eed6aa6b",
+          "obs-0-822-1ba3fb6759d6f5bf"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-822-1ba3fb6759d6f5bf",
+        "benchmark_id": "madqa",
+        "benchmark_version_id": "madqa-canonical",
+        "model_id": "model-gemini-3-pro-ebaa316d834e71b0",
+        "model_configuration": "Gemini 3 Pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-pro",
+        "model_family_id": "google-deepmind-gemini-3-pro",
+        "model": "Gemini 3 Pro",
+        "organization": "Google DeepMind",
+        "score": 0.8220000000000001,
+        "input_score": 82.2,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "madqa-metric-v1",
+        "protocol_id": "madqa-source-export-v1",
+        "task_set_id": "madqa-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "madqa-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2025-11-18",
+        "evaluation_date": null,
+        "result_public_date": "2026-03-20",
+        "source_publication_date": "2026-03-20",
+        "observation_date": "2025-11-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-11-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-03-20",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-03-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-11-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-03-20",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180-229f293cd47faa38",
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "source": "https://arxiv.org/abs/2603.12180v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-madqa-00-8198edee20cf68e6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "madqa-00"
+        ],
+        "plot_date": "2026-03-12",
+        "frontier_observation_ids": [
+          "obs-0-195-f348671fe1307e70",
+          "obs-0-473-938de50c71ea9cd6",
+          "obs-0-582-f098688d937f7f6f",
+          "obs-0-585-2dddba6c68c6f661",
+          "obs-0-6-44a91b9b20c12824",
+          "obs-0-603-62f128622af30674",
+          "obs-0-669-e5b55a69cd3a5358",
+          "obs-0-678-ad83173142e6c27a",
+          "obs-0-682-c5ce6922c97a4fea",
+          "obs-0-777-d51ad3aabe0cd005",
+          "obs-0-806-b2dd5129eed6aa6b",
+          "obs-0-822-1ba3fb6759d6f5bf"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-822-1ba3fb6759d6f5bf",
+        "benchmark_id": "madqa",
+        "benchmark_version_id": "madqa-canonical",
+        "model_id": "model-gemini-3-pro-ebaa316d834e71b0",
+        "model_configuration": "Gemini 3 Pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-pro",
+        "model_family_id": "google-deepmind-gemini-3-pro",
+        "model": "Gemini 3 Pro",
+        "organization": "Google DeepMind",
+        "score": 0.8220000000000001,
+        "input_score": 82.2,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "madqa-metric-v1",
+        "protocol_id": "madqa-source-export-v1",
+        "task_set_id": "madqa-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "madqa-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2025-11-18",
+        "evaluation_date": null,
+        "result_public_date": "2026-03-20",
+        "source_publication_date": "2026-03-20",
+        "observation_date": "2025-11-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-11-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-03-20",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-03-20",
+        "date_kind": "result first-public date",
+        "capability_date": "2025-11-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-03-20",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180-229f293cd47faa38",
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "source": "https://arxiv.org/abs/2603.12180v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-madqa-00-8198edee20cf68e6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "madqa-00"
+        ],
+        "plot_date": "2026-03-20",
+        "frontier_observation_ids": [
+          "obs-0-195-f348671fe1307e70",
+          "obs-0-46-d4ae4a082d191b90",
+          "obs-0-473-938de50c71ea9cd6",
+          "obs-0-582-f098688d937f7f6f",
+          "obs-0-585-2dddba6c68c6f661",
+          "obs-0-6-44a91b9b20c12824",
+          "obs-0-603-62f128622af30674",
+          "obs-0-661-edf88b90f2336b15",
+          "obs-0-669-e5b55a69cd3a5358",
+          "obs-0-678-ad83173142e6c27a",
+          "obs-0-682-c5ce6922c97a4fea",
+          "obs-0-777-d51ad3aabe0cd005",
+          "obs-0-806-b2dd5129eed6aa6b",
+          "obs-0-822-1ba3fb6759d6f5bf"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-822-1ba3fb6759d6f5bf",
+        "benchmark_id": "madqa",
+        "benchmark_version_id": "madqa-canonical",
+        "model_id": "model-gemini-3-pro-ebaa316d834e71b0",
+        "model_configuration": "Gemini 3 Pro",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-pro",
+        "model_family_id": "google-deepmind-gemini-3-pro",
+        "model": "Gemini 3 Pro",
+        "organization": "Google DeepMind",
+        "score": 0.8220000000000001,
+        "input_score": 82.2,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "madqa-metric-v1",
+        "protocol_id": "madqa-source-export-v1",
+        "task_set_id": "madqa-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "madqa-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2025-11-18",
+        "evaluation_date": null,
+        "result_public_date": "2026-03-20",
+        "source_publication_date": "2026-03-20",
+        "observation_date": "2025-11-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-11-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-03-20",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-03-20",
+        "date_kind": "result first-public date",
+        "capability_date": "2025-11-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-03-20",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180-229f293cd47faa38",
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2603-12180v2-4a9edacc4ccad010"
+        ],
+        "source": "https://arxiv.org/abs/2603.12180v2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-madqa-00-8198edee20cf68e6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "madqa-00"
+        ],
+        "plot_date": "2026-03-20",
+        "frontier_observation_ids": [
+          "obs-0-195-f348671fe1307e70",
+          "obs-0-46-d4ae4a082d191b90",
+          "obs-0-473-938de50c71ea9cd6",
+          "obs-0-582-f098688d937f7f6f",
+          "obs-0-585-2dddba6c68c6f661",
+          "obs-0-6-44a91b9b20c12824",
+          "obs-0-603-62f128622af30674",
+          "obs-0-661-edf88b90f2336b15",
+          "obs-0-669-e5b55a69cd3a5358",
+          "obs-0-678-ad83173142e6c27a",
+          "obs-0-682-c5ce6922c97a4fea",
+          "obs-0-777-d51ad3aabe0cd005",
+          "obs-0-806-b2dd5129eed6aa6b",
+          "obs-0-822-1ba3fb6759d6f5bf"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.8220000000000001,
+    "capability_frontier_value": 0.8220000000000001,
+    "reported_frontier_value": 0.8220000000000001,
+    "current_frontier": 0.8220000000000001,
+    "normalized_progress": 0.8220000000000001,
+    "normalized_headroom": 0.17799999999999994,
+    "threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-03-12"
+      },
+      "T80": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-03-12"
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 186
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-03-12"
+      },
+      "T80": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-03-12"
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 186
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "reached",
+        "days": 8,
+        "qualifying_observation_date": "2026-03-20"
+      },
+      "T80": {
+        "status": "reached",
+        "days": 8,
+        "qualifying_observation_date": "2026-03-20"
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 186
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.5714285714285714,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "Qwen"
+      ],
+      "panel_size": 7,
+      "status": "medium"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-arxiv-org-abs-2603-12180-229f293cd47faa38"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}
