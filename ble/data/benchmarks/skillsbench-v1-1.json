@@ -1,0 +1,2204 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-14",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "skillsbench-v1-1",
+    "name": "SkillsBench v1.1",
+    "domain": "General agent tasks",
+    "release": "2026-06-14",
+    "source": "https://arxiv.org/abs/2602.12670",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Agent",
+    "tags": [
+      "agent skills",
+      "container",
+      "versioned"
+    ],
+    "labels": [
+      "tool-use",
+      "environment-interaction",
+      "code-generation",
+      "code-execution-debugging",
+      "instruction-following"
+    ],
+    "metric": "Curated-Skills pass rate",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "skillsbench-v1-1-metric-v1",
+    "protocol_id": "skillsbench-v1-1-source-export-v1",
+    "canonical_score": {
+      "series_id": "skillsbench-v1-1-canonical-score",
+      "role": "canonical",
+      "metric_id": "skillsbench-v1-1-metric-v1",
+      "metric_name": "Curated-Skills pass rate",
+      "protocol_id": "skillsbench-v1-1-source-export-v1",
+      "task_set_id": "skillsbench-v1-1-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "skillsbench-v1-1-canonical",
+    "summary": {
+      "en": "SkillsBench measures how well agents complete expert workflows in containers when given curated Agent Skills.",
+      "zh": "SkillsBench \u8bc4\u4f30 agent \u5728\u5bb9\u5668\u4e2d\u501f\u52a9\u7cbe\u9009 Agent Skills \u5b8c\u6210\u4e13\u4e1a\u5de5\u4f5c\u6d41\u7684\u80fd\u529b\u3002"
+    },
+    "task_format": {
+      "en": "In a Docker container with a skills folder, the agent completes one of 87 tasks across 8 domains and leaves outputs for a deterministic pytest verifier.",
+      "zh": "agent \u5728\u5e26\u6709 skills \u76ee\u5f55\u7684 Docker \u5bb9\u5668\u4e2d\u5b8c\u6210 8 \u4e2a\u9886\u57df\u5171 87 \u4e2a\u4efb\u52a1\u4e4b\u4e00\uff0c\u5e76\u7559\u4e0b\u4f9b\u786e\u5b9a\u6027 pytest verifier \u68c0\u67e5\u7684\u8f93\u51fa\u3002"
+    },
+    "scoring": {
+      "metric_name": "Curated-Skills pass rate",
+      "explanation": {
+        "en": "A trial passes only if every deterministic pytest assertion succeeds; with curated Agent Skills provided, results are averaged over three trials per task, then across the 87 v1.1 tasks.",
+        "zh": "\u53ea\u6709 verifier \u7684\u5168\u90e8\u786e\u5b9a\u6027 pytest \u65ad\u8a00\u90fd\u901a\u8fc7\uff0ctrial \u624d\u7b97\u901a\u8fc7\uff1b\u5728\u63d0\u4f9b\u7cbe\u9009 Agent Skills \u7684\u6761\u4ef6\u4e0b\uff0c\u5148\u5bf9\u6bcf\u9898 3 \u6b21 trial \u53d6\u5e73\u5747\uff0c\u518d\u5bf9 v1.1 \u7684 87 \u9898\u53d6\u5e73\u5747\u3002"
+      }
+    },
+    "evaluation_target": "environment_outcome",
+    "observation_count": 18,
+    "evidence_record_count": 18,
+    "observations": [
+      {
+        "observation_id": "obs-0-673-fae4240ac76c3bf4",
+        "benchmark_id": "skillsbench-v1-1",
+        "benchmark_version_id": "skillsbench-v1-1-canonical",
+        "model_id": "model-gpt-5-5-openhands-0de750d921b83910",
+        "model_configuration": "GPT-5.5 + OpenHands",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-5-openhands",
+        "model_family_id": "openai-gpt-5-5-openhands",
+        "model": "GPT-5.5 + OpenHands",
+        "organization": "OpenAI",
+        "score": 0.673,
+        "input_score": 0.673,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "skillsbench-v1-1-metric-v1",
+        "protocol_id": "skillsbench-v1-1-source-export-v1",
+        "task_set_id": "skillsbench-v1-1-canonical",
+        "metric": "Curated-Skills pass rate",
+        "score_role": "canonical",
+        "score_series_id": "skillsbench-v1-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-23",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-11",
+        "source_publication_date": "2026-06-11",
+        "observation_date": "2026-04-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670-1743f5a55252375a",
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "source": "https://arxiv.org/abs/2602.12670v4",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-skillsbench-v1-1-00-7843b6b34cc8de89"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "skillsbench-v1-1-00"
+        ]
+      },
+      {
+        "observation_id": "obs-0-665-15336e301e06ed3d",
+        "benchmark_id": "skillsbench-v1-1",
+        "benchmark_version_id": "skillsbench-v1-1-canonical",
+        "model_id": "model-gpt-5-5-codex-cli-c57b5c859abc46ff",
+        "model_configuration": "GPT-5.5 + Codex CLI",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-5-codex-cli",
+        "model_family_id": "openai-gpt-5-5-codex-cli",
+        "model": "GPT-5.5 + Codex CLI",
+        "organization": "OpenAI",
+        "score": 0.665,
+        "input_score": 0.665,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "skillsbench-v1-1-metric-v1",
+        "protocol_id": "skillsbench-v1-1-source-export-v1",
+        "task_set_id": "skillsbench-v1-1-canonical",
+        "metric": "Curated-Skills pass rate",
+        "score_role": "canonical",
+        "score_series_id": "skillsbench-v1-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-23",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-11",
+        "source_publication_date": "2026-06-11",
+        "observation_date": "2026-04-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670-1743f5a55252375a",
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "source": "https://arxiv.org/abs/2602.12670v4",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-skillsbench-v1-1-01-1a0d832bab0e1fcf"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "skillsbench-v1-1-01"
+        ]
+      },
+      {
+        "observation_id": "obs-0-612-ef71b08bc22c8d71",
+        "benchmark_id": "skillsbench-v1-1",
+        "benchmark_version_id": "skillsbench-v1-1-canonical",
+        "model_id": "model-claude-opus-4-7-claude-code-1310066d20cedc10",
+        "model_configuration": "Claude Opus 4.7 + Claude Code",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-7-claude-code",
+        "model_family_id": "anthropic-claude-opus-4-7-claude-code",
+        "model": "Claude Opus 4.7 + Claude Code",
+        "organization": "Anthropic",
+        "score": 0.612,
+        "input_score": 0.612,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "skillsbench-v1-1-metric-v1",
+        "protocol_id": "skillsbench-v1-1-source-export-v1",
+        "task_set_id": "skillsbench-v1-1-canonical",
+        "metric": "Curated-Skills pass rate",
+        "score_role": "canonical",
+        "score_series_id": "skillsbench-v1-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-16",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-11",
+        "source_publication_date": "2026-06-11",
+        "observation_date": "2026-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670-1743f5a55252375a",
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "source": "https://arxiv.org/abs/2602.12670v4",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-skillsbench-v1-1-02-9b7c4c5bd2d26074"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "skillsbench-v1-1-02"
+        ]
+      },
+      {
+        "observation_id": "obs-0-608-adfd67005b169060",
+        "benchmark_id": "skillsbench-v1-1",
+        "benchmark_version_id": "skillsbench-v1-1-canonical",
+        "model_id": "model-gemini-3-1-pro-gemini-cli-06f467b03848c364",
+        "model_configuration": "Gemini 3.1 Pro + Gemini CLI",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-1-pro-gemini-cli",
+        "model_family_id": "google-deepmind-gemini-3-1-pro-gemini-cli",
+        "model": "Gemini 3.1 Pro + Gemini CLI",
+        "organization": "Google DeepMind",
+        "score": 0.608,
+        "input_score": 0.608,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "skillsbench-v1-1-metric-v1",
+        "protocol_id": "skillsbench-v1-1-source-export-v1",
+        "task_set_id": "skillsbench-v1-1-canonical",
+        "metric": "Curated-Skills pass rate",
+        "score_role": "canonical",
+        "score_series_id": "skillsbench-v1-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-02-19",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-11",
+        "source_publication_date": "2026-06-11",
+        "observation_date": "2026-02-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-02-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-02-19",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-02-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670-1743f5a55252375a",
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "source": "https://arxiv.org/abs/2602.12670v4",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-skillsbench-v1-1-03-62f21b1973ee0163"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "skillsbench-v1-1-03"
+        ]
+      },
+      {
+        "observation_id": "obs-0-584-b5511dc6823c4ca2",
+        "benchmark_id": "skillsbench-v1-1",
+        "benchmark_version_id": "skillsbench-v1-1-canonical",
+        "model_id": "model-glm-5-1-openhands-157497612a531af1",
+        "model_configuration": "GLM 5.1 + OpenHands",
+        "model_identity_organization": "z-ai",
+        "model_label_id": "glm-5-1-openhands",
+        "model_family_id": "z-ai-glm-5-1-openhands",
+        "model": "GLM 5.1 + OpenHands",
+        "organization": "Z.ai",
+        "score": 0.584,
+        "input_score": 0.584,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "skillsbench-v1-1-metric-v1",
+        "protocol_id": "skillsbench-v1-1-source-export-v1",
+        "task_set_id": "skillsbench-v1-1-canonical",
+        "metric": "Curated-Skills pass rate",
+        "score_role": "canonical",
+        "score_series_id": "skillsbench-v1-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-07",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-11",
+        "source_publication_date": "2026-06-11",
+        "observation_date": "2026-04-07",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-07",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-07",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670-1743f5a55252375a",
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "source": "https://arxiv.org/abs/2602.12670v4",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-skillsbench-v1-1-04-901eb7d54aca7b32"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "skillsbench-v1-1-04"
+        ]
+      },
+      {
+        "observation_id": "obs-0-541-8dbdb8d29f1a74d3",
+        "benchmark_id": "skillsbench-v1-1",
+        "benchmark_version_id": "skillsbench-v1-1-canonical",
+        "model_id": "model-claude-opus-4-8-openhands-2bf206ab3d926b3c",
+        "model_configuration": "Claude Opus 4.8 + OpenHands",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-8-openhands",
+        "model_family_id": "anthropic-claude-opus-4-8-openhands",
+        "model": "Claude Opus 4.8 + OpenHands",
+        "organization": "Anthropic",
+        "score": 0.541,
+        "input_score": 0.541,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "skillsbench-v1-1-metric-v1",
+        "protocol_id": "skillsbench-v1-1-source-export-v1",
+        "task_set_id": "skillsbench-v1-1-canonical",
+        "metric": "Curated-Skills pass rate",
+        "score_role": "canonical",
+        "score_series_id": "skillsbench-v1-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-05-28",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-11",
+        "source_publication_date": "2026-06-11",
+        "observation_date": "2026-05-28",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-05-28",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-05-28",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-05-28",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670-1743f5a55252375a",
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "source": "https://arxiv.org/abs/2602.12670v4",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-skillsbench-v1-1-05-2135b0c445bdbee3"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "skillsbench-v1-1-05"
+        ]
+      },
+      {
+        "observation_id": "obs-0-54-a6158fb28f8536f4",
+        "benchmark_id": "skillsbench-v1-1",
+        "benchmark_version_id": "skillsbench-v1-1-canonical",
+        "model_id": "model-kimi-k2-6-openhands-8b2a76d84288ff25",
+        "model_configuration": "Kimi K2.6 + OpenHands",
+        "model_identity_organization": "moonshot",
+        "model_label_id": "kimi-k2-6-openhands",
+        "model_family_id": "moonshot-kimi-k2-6-openhands",
+        "model": "Kimi K2.6 + OpenHands",
+        "organization": "Moonshot",
+        "score": 0.54,
+        "input_score": 0.54,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "skillsbench-v1-1-metric-v1",
+        "protocol_id": "skillsbench-v1-1-source-export-v1",
+        "task_set_id": "skillsbench-v1-1-canonical",
+        "metric": "Curated-Skills pass rate",
+        "score_role": "canonical",
+        "score_series_id": "skillsbench-v1-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-20",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-11",
+        "source_publication_date": "2026-06-11",
+        "observation_date": "2026-04-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670-1743f5a55252375a",
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "source": "https://arxiv.org/abs/2602.12670v4",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-skillsbench-v1-1-06-402b4b42c0978fdb"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "skillsbench-v1-1-06"
+        ]
+      },
+      {
+        "observation_id": "obs-0-531-06aa86333bff3d95",
+        "benchmark_id": "skillsbench-v1-1",
+        "benchmark_version_id": "skillsbench-v1-1-canonical",
+        "model_id": "model-claude-opus-4-7-openhands-ed10bb93549b80c7",
+        "model_configuration": "Claude Opus 4.7 + OpenHands",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-7-openhands",
+        "model_family_id": "anthropic-claude-opus-4-7-openhands",
+        "model": "Claude Opus 4.7 + OpenHands",
+        "organization": "Anthropic",
+        "score": 0.531,
+        "input_score": 0.531,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "skillsbench-v1-1-metric-v1",
+        "protocol_id": "skillsbench-v1-1-source-export-v1",
+        "task_set_id": "skillsbench-v1-1-canonical",
+        "metric": "Curated-Skills pass rate",
+        "score_role": "canonical",
+        "score_series_id": "skillsbench-v1-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-16",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-11",
+        "source_publication_date": "2026-06-11",
+        "observation_date": "2026-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670-1743f5a55252375a",
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "source": "https://arxiv.org/abs/2602.12670v4",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-skillsbench-v1-1-07-9bf144e8172eac7b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "skillsbench-v1-1-07"
+        ]
+      },
+      {
+        "observation_id": "obs-0-53-2282161c986445ad",
+        "benchmark_id": "skillsbench-v1-1",
+        "benchmark_version_id": "skillsbench-v1-1-canonical",
+        "model_id": "model-minimax-m3-openhands-552450de6e43f167",
+        "model_configuration": "MiniMax M3 + OpenHands",
+        "model_identity_organization": "minimax",
+        "model_label_id": "minimax-m3-openhands",
+        "model_family_id": "minimax-minimax-m3-openhands",
+        "model": "MiniMax M3 + OpenHands",
+        "organization": "MiniMax",
+        "score": 0.53,
+        "input_score": 0.53,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "skillsbench-v1-1-metric-v1",
+        "protocol_id": "skillsbench-v1-1-source-export-v1",
+        "task_set_id": "skillsbench-v1-1-canonical",
+        "metric": "Curated-Skills pass rate",
+        "score_role": "canonical",
+        "score_series_id": "skillsbench-v1-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-06-01",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-11",
+        "source_publication_date": "2026-06-11",
+        "observation_date": "2026-06-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-06-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-06-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-06-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670-1743f5a55252375a",
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "source": "https://arxiv.org/abs/2602.12670v4",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-skillsbench-v1-1-08-14fcc18e8d191b63"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "skillsbench-v1-1-08"
+        ]
+      },
+      {
+        "observation_id": "obs-0-528-e5c414f1d573b77b",
+        "benchmark_id": "skillsbench-v1-1",
+        "benchmark_version_id": "skillsbench-v1-1-canonical",
+        "model_id": "model-gemini-3-1-pro-openhands-52da408bcb9ae0b5",
+        "model_configuration": "Gemini 3.1 Pro + OpenHands",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-1-pro-openhands",
+        "model_family_id": "google-deepmind-gemini-3-1-pro-openhands",
+        "model": "Gemini 3.1 Pro + OpenHands",
+        "organization": "Google DeepMind",
+        "score": 0.528,
+        "input_score": 0.528,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "skillsbench-v1-1-metric-v1",
+        "protocol_id": "skillsbench-v1-1-source-export-v1",
+        "task_set_id": "skillsbench-v1-1-canonical",
+        "metric": "Curated-Skills pass rate",
+        "score_role": "canonical",
+        "score_series_id": "skillsbench-v1-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-02-19",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-11",
+        "source_publication_date": "2026-06-11",
+        "observation_date": "2026-02-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-02-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-02-19",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-02-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670-1743f5a55252375a",
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "source": "https://arxiv.org/abs/2602.12670v4",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-skillsbench-v1-1-09-1a47c57b2a2de8db"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "skillsbench-v1-1-09"
+        ]
+      },
+      {
+        "observation_id": "obs-0-501-2a606d1438efe29d",
+        "benchmark_id": "skillsbench-v1-1",
+        "benchmark_version_id": "skillsbench-v1-1-canonical",
+        "model_id": "model-deepseek-v4-pro-openhands-0f074375187df56e",
+        "model_configuration": "DeepSeek V4 Pro + OpenHands",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-v4-pro-openhands",
+        "model_family_id": "deepseek-deepseek-v4-pro-openhands",
+        "model": "DeepSeek V4 Pro + OpenHands",
+        "organization": "DeepSeek",
+        "score": 0.501,
+        "input_score": 0.501,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "skillsbench-v1-1-metric-v1",
+        "protocol_id": "skillsbench-v1-1-source-export-v1",
+        "task_set_id": "skillsbench-v1-1-canonical",
+        "metric": "Curated-Skills pass rate",
+        "score_role": "canonical",
+        "score_series_id": "skillsbench-v1-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-24",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-11",
+        "source_publication_date": "2026-06-11",
+        "observation_date": "2026-04-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670-1743f5a55252375a",
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "source": "https://arxiv.org/abs/2602.12670v4",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-skillsbench-v1-1-10-e9a953581d34b7bb"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "skillsbench-v1-1-10"
+        ]
+      },
+      {
+        "observation_id": "obs-0-482-a1c766cca11569d0",
+        "benchmark_id": "skillsbench-v1-1",
+        "benchmark_version_id": "skillsbench-v1-1-canonical",
+        "model_id": "model-gemini-3-5-flash-openhands-c0d48bc83916df37",
+        "model_configuration": "Gemini 3.5 Flash + OpenHands",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-5-flash-openhands",
+        "model_family_id": "google-deepmind-gemini-3-5-flash-openhands",
+        "model": "Gemini 3.5 Flash + OpenHands",
+        "organization": "Google DeepMind",
+        "score": 0.482,
+        "input_score": 0.482,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "skillsbench-v1-1-metric-v1",
+        "protocol_id": "skillsbench-v1-1-source-export-v1",
+        "task_set_id": "skillsbench-v1-1-canonical",
+        "metric": "Curated-Skills pass rate",
+        "score_role": "canonical",
+        "score_series_id": "skillsbench-v1-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-05-19",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-11",
+        "source_publication_date": "2026-06-11",
+        "observation_date": "2026-05-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-05-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-05-19",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-05-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670-1743f5a55252375a",
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "source": "https://arxiv.org/abs/2602.12670v4",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-skillsbench-v1-1-11-d2a881b0ccff8e4a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "skillsbench-v1-1-11"
+        ]
+      },
+      {
+        "observation_id": "obs-0-472-1941760734bb0720",
+        "benchmark_id": "skillsbench-v1-1",
+        "benchmark_version_id": "skillsbench-v1-1-canonical",
+        "model_id": "model-claude-sonnet-4-6-openhands-1aa4f6689f393710",
+        "model_configuration": "Claude Sonnet 4.6 + OpenHands",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-sonnet-4-6-openhands",
+        "model_family_id": "anthropic-claude-sonnet-4-6-openhands",
+        "model": "Claude Sonnet 4.6 + OpenHands",
+        "organization": "Anthropic",
+        "score": 0.472,
+        "input_score": 0.472,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "skillsbench-v1-1-metric-v1",
+        "protocol_id": "skillsbench-v1-1-source-export-v1",
+        "task_set_id": "skillsbench-v1-1-canonical",
+        "metric": "Curated-Skills pass rate",
+        "score_role": "canonical",
+        "score_series_id": "skillsbench-v1-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-02-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-11",
+        "source_publication_date": "2026-06-11",
+        "observation_date": "2026-02-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-02-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-02-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-02-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670-1743f5a55252375a",
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "source": "https://arxiv.org/abs/2602.12670v4",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-skillsbench-v1-1-12-14e8f1bb09e33ad2"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "skillsbench-v1-1-12"
+        ]
+      },
+      {
+        "observation_id": "obs-0-447-ba3b45269fc66097",
+        "benchmark_id": "skillsbench-v1-1",
+        "benchmark_version_id": "skillsbench-v1-1-canonical",
+        "model_id": "model-deepseek-v4-flash-openhands-abf75d2689ff9111",
+        "model_configuration": "DeepSeek V4 Flash + OpenHands",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-v4-flash-openhands",
+        "model_family_id": "deepseek-deepseek-v4-flash-openhands",
+        "model": "DeepSeek V4 Flash + OpenHands",
+        "organization": "DeepSeek",
+        "score": 0.447,
+        "input_score": 0.447,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "skillsbench-v1-1-metric-v1",
+        "protocol_id": "skillsbench-v1-1-source-export-v1",
+        "task_set_id": "skillsbench-v1-1-canonical",
+        "metric": "Curated-Skills pass rate",
+        "score_role": "canonical",
+        "score_series_id": "skillsbench-v1-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-24",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-11",
+        "source_publication_date": "2026-06-11",
+        "observation_date": "2026-04-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670-1743f5a55252375a",
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "source": "https://arxiv.org/abs/2602.12670v4",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-skillsbench-v1-1-13-5655b1341543046a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "skillsbench-v1-1-13"
+        ]
+      },
+      {
+        "observation_id": "obs-0-417-d6f74e4824208e8d",
+        "benchmark_id": "skillsbench-v1-1",
+        "benchmark_version_id": "skillsbench-v1-1-canonical",
+        "model_id": "model-grok-4-3-openhands-fe5b1c1c6802f638",
+        "model_configuration": "Grok 4.3 + OpenHands",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-3-openhands",
+        "model_family_id": "xai-grok-4-3-openhands",
+        "model": "Grok 4.3 + OpenHands",
+        "organization": "xAI",
+        "score": 0.417,
+        "input_score": 0.417,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "skillsbench-v1-1-metric-v1",
+        "protocol_id": "skillsbench-v1-1-source-export-v1",
+        "task_set_id": "skillsbench-v1-1-canonical",
+        "metric": "Curated-Skills pass rate",
+        "score_role": "canonical",
+        "score_series_id": "skillsbench-v1-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-11",
+        "source_publication_date": "2026-06-11",
+        "observation_date": "2026-04-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670-1743f5a55252375a",
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "source": "https://arxiv.org/abs/2602.12670v4",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-skillsbench-v1-1-14-64fd83461910c60e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "skillsbench-v1-1-14"
+        ]
+      },
+      {
+        "observation_id": "obs-0-414-b67b11b4d91cb01a",
+        "benchmark_id": "skillsbench-v1-1",
+        "benchmark_version_id": "skillsbench-v1-1-canonical",
+        "model_id": "model-gpt-5-4-mini-openhands-8c00c7a7ce543ea1",
+        "model_configuration": "GPT-5.4 Mini + OpenHands",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-4-mini-openhands",
+        "model_family_id": "openai-gpt-5-4-mini-openhands",
+        "model": "GPT-5.4 Mini + OpenHands",
+        "organization": "OpenAI",
+        "score": 0.414,
+        "input_score": 0.414,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "skillsbench-v1-1-metric-v1",
+        "protocol_id": "skillsbench-v1-1-source-export-v1",
+        "task_set_id": "skillsbench-v1-1-canonical",
+        "metric": "Curated-Skills pass rate",
+        "score_role": "canonical",
+        "score_series_id": "skillsbench-v1-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-03-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-11",
+        "source_publication_date": "2026-06-11",
+        "observation_date": "2026-03-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-03-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-03-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-03-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670-1743f5a55252375a",
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "source": "https://arxiv.org/abs/2602.12670v4",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-skillsbench-v1-1-15-54030965d0b420da"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "skillsbench-v1-1-15"
+        ]
+      },
+      {
+        "observation_id": "obs-0-349-52bec192760806bb",
+        "benchmark_id": "skillsbench-v1-1",
+        "benchmark_version_id": "skillsbench-v1-1-canonical",
+        "model_id": "model-minimax-m2-7-openhands-90df79e1bff8991c",
+        "model_configuration": "MiniMax M2.7 + OpenHands",
+        "model_identity_organization": "minimax",
+        "model_label_id": "minimax-m2-7-openhands",
+        "model_family_id": "minimax-minimax-m2-7-openhands",
+        "model": "MiniMax M2.7 + OpenHands",
+        "organization": "MiniMax",
+        "score": 0.349,
+        "input_score": 0.349,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "skillsbench-v1-1-metric-v1",
+        "protocol_id": "skillsbench-v1-1-source-export-v1",
+        "task_set_id": "skillsbench-v1-1-canonical",
+        "metric": "Curated-Skills pass rate",
+        "score_role": "canonical",
+        "score_series_id": "skillsbench-v1-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-03-18",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-11",
+        "source_publication_date": "2026-06-11",
+        "observation_date": "2026-03-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-03-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-03-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-03-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670-1743f5a55252375a",
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "source": "https://arxiv.org/abs/2602.12670v4",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-skillsbench-v1-1-16-144ebca265adea7d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "skillsbench-v1-1-16"
+        ]
+      },
+      {
+        "observation_id": "obs-0-201-366c033210e44e0e",
+        "benchmark_id": "skillsbench-v1-1",
+        "benchmark_version_id": "skillsbench-v1-1-canonical",
+        "model_id": "model-gemini-3-1-flash-lite-openhands-7438a27027d55d66",
+        "model_configuration": "Gemini 3.1 Flash Lite + OpenHands",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-1-flash-lite-openhands",
+        "model_family_id": "google-deepmind-gemini-3-1-flash-lite-openhands",
+        "model": "Gemini 3.1 Flash Lite + OpenHands",
+        "organization": "Google DeepMind",
+        "score": 0.201,
+        "input_score": 0.201,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "skillsbench-v1-1-metric-v1",
+        "protocol_id": "skillsbench-v1-1-source-export-v1",
+        "task_set_id": "skillsbench-v1-1-canonical",
+        "metric": "Curated-Skills pass rate",
+        "score_role": "canonical",
+        "score_series_id": "skillsbench-v1-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-03-03",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-11",
+        "source_publication_date": "2026-06-11",
+        "observation_date": "2026-03-03",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-03-03",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-03-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-03-03",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670-1743f5a55252375a",
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "source": "https://arxiv.org/abs/2602.12670v4",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-skillsbench-v1-1-17-36a296d08d071c5e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "skillsbench-v1-1-17"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-673-fae4240ac76c3bf4",
+        "benchmark_id": "skillsbench-v1-1",
+        "benchmark_version_id": "skillsbench-v1-1-canonical",
+        "model_id": "model-gpt-5-5-openhands-0de750d921b83910",
+        "model_configuration": "GPT-5.5 + OpenHands",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-5-openhands",
+        "model_family_id": "openai-gpt-5-5-openhands",
+        "model": "GPT-5.5 + OpenHands",
+        "organization": "OpenAI",
+        "score": 0.673,
+        "input_score": 0.673,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "skillsbench-v1-1-metric-v1",
+        "protocol_id": "skillsbench-v1-1-source-export-v1",
+        "task_set_id": "skillsbench-v1-1-canonical",
+        "metric": "Curated-Skills pass rate",
+        "score_role": "canonical",
+        "score_series_id": "skillsbench-v1-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-23",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-11",
+        "source_publication_date": "2026-06-11",
+        "observation_date": "2026-04-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-06-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670-1743f5a55252375a",
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "source": "https://arxiv.org/abs/2602.12670v4",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-skillsbench-v1-1-00-7843b6b34cc8de89"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "skillsbench-v1-1-00"
+        ],
+        "plot_date": "2026-06-14",
+        "frontier_observation_ids": [
+          "obs-0-201-366c033210e44e0e",
+          "obs-0-349-52bec192760806bb",
+          "obs-0-414-b67b11b4d91cb01a",
+          "obs-0-417-d6f74e4824208e8d",
+          "obs-0-447-ba3b45269fc66097",
+          "obs-0-472-1941760734bb0720",
+          "obs-0-482-a1c766cca11569d0",
+          "obs-0-501-2a606d1438efe29d",
+          "obs-0-528-e5c414f1d573b77b",
+          "obs-0-53-2282161c986445ad",
+          "obs-0-531-06aa86333bff3d95",
+          "obs-0-54-a6158fb28f8536f4",
+          "obs-0-541-8dbdb8d29f1a74d3",
+          "obs-0-584-b5511dc6823c4ca2",
+          "obs-0-608-adfd67005b169060",
+          "obs-0-612-ef71b08bc22c8d71",
+          "obs-0-665-15336e301e06ed3d",
+          "obs-0-673-fae4240ac76c3bf4"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-673-fae4240ac76c3bf4",
+        "benchmark_id": "skillsbench-v1-1",
+        "benchmark_version_id": "skillsbench-v1-1-canonical",
+        "model_id": "model-gpt-5-5-openhands-0de750d921b83910",
+        "model_configuration": "GPT-5.5 + OpenHands",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-5-openhands",
+        "model_family_id": "openai-gpt-5-5-openhands",
+        "model": "GPT-5.5 + OpenHands",
+        "organization": "OpenAI",
+        "score": 0.673,
+        "input_score": 0.673,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "skillsbench-v1-1-metric-v1",
+        "protocol_id": "skillsbench-v1-1-source-export-v1",
+        "task_set_id": "skillsbench-v1-1-canonical",
+        "metric": "Curated-Skills pass rate",
+        "score_role": "canonical",
+        "score_series_id": "skillsbench-v1-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-23",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-11",
+        "source_publication_date": "2026-06-11",
+        "observation_date": "2026-04-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-06-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670-1743f5a55252375a",
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "source": "https://arxiv.org/abs/2602.12670v4",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-skillsbench-v1-1-00-7843b6b34cc8de89"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "skillsbench-v1-1-00"
+        ],
+        "plot_date": "2026-06-14",
+        "frontier_observation_ids": [
+          "obs-0-201-366c033210e44e0e",
+          "obs-0-349-52bec192760806bb",
+          "obs-0-414-b67b11b4d91cb01a",
+          "obs-0-417-d6f74e4824208e8d",
+          "obs-0-447-ba3b45269fc66097",
+          "obs-0-472-1941760734bb0720",
+          "obs-0-482-a1c766cca11569d0",
+          "obs-0-501-2a606d1438efe29d",
+          "obs-0-528-e5c414f1d573b77b",
+          "obs-0-53-2282161c986445ad",
+          "obs-0-531-06aa86333bff3d95",
+          "obs-0-54-a6158fb28f8536f4",
+          "obs-0-541-8dbdb8d29f1a74d3",
+          "obs-0-584-b5511dc6823c4ca2",
+          "obs-0-608-adfd67005b169060",
+          "obs-0-612-ef71b08bc22c8d71",
+          "obs-0-665-15336e301e06ed3d",
+          "obs-0-673-fae4240ac76c3bf4"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-673-fae4240ac76c3bf4",
+        "benchmark_id": "skillsbench-v1-1",
+        "benchmark_version_id": "skillsbench-v1-1-canonical",
+        "model_id": "model-gpt-5-5-openhands-0de750d921b83910",
+        "model_configuration": "GPT-5.5 + OpenHands",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-5-openhands",
+        "model_family_id": "openai-gpt-5-5-openhands",
+        "model": "GPT-5.5 + OpenHands",
+        "organization": "OpenAI",
+        "score": 0.673,
+        "input_score": 0.673,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "skillsbench-v1-1-metric-v1",
+        "protocol_id": "skillsbench-v1-1-source-export-v1",
+        "task_set_id": "skillsbench-v1-1-canonical",
+        "metric": "Curated-Skills pass rate",
+        "score_role": "canonical",
+        "score_series_id": "skillsbench-v1-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-23",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-11",
+        "source_publication_date": "2026-06-11",
+        "observation_date": "2026-04-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-06-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670-1743f5a55252375a",
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "source": "https://arxiv.org/abs/2602.12670v4",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-skillsbench-v1-1-00-7843b6b34cc8de89"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "skillsbench-v1-1-00"
+        ],
+        "plot_date": "2026-06-14",
+        "frontier_observation_ids": [
+          "obs-0-201-366c033210e44e0e",
+          "obs-0-349-52bec192760806bb",
+          "obs-0-414-b67b11b4d91cb01a",
+          "obs-0-417-d6f74e4824208e8d",
+          "obs-0-447-ba3b45269fc66097",
+          "obs-0-472-1941760734bb0720",
+          "obs-0-482-a1c766cca11569d0",
+          "obs-0-501-2a606d1438efe29d",
+          "obs-0-528-e5c414f1d573b77b",
+          "obs-0-53-2282161c986445ad",
+          "obs-0-531-06aa86333bff3d95",
+          "obs-0-54-a6158fb28f8536f4",
+          "obs-0-541-8dbdb8d29f1a74d3",
+          "obs-0-584-b5511dc6823c4ca2",
+          "obs-0-608-adfd67005b169060",
+          "obs-0-612-ef71b08bc22c8d71",
+          "obs-0-665-15336e301e06ed3d",
+          "obs-0-673-fae4240ac76c3bf4"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-673-fae4240ac76c3bf4",
+        "benchmark_id": "skillsbench-v1-1",
+        "benchmark_version_id": "skillsbench-v1-1-canonical",
+        "model_id": "model-gpt-5-5-openhands-0de750d921b83910",
+        "model_configuration": "GPT-5.5 + OpenHands",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-5-openhands",
+        "model_family_id": "openai-gpt-5-5-openhands",
+        "model": "GPT-5.5 + OpenHands",
+        "organization": "OpenAI",
+        "score": 0.673,
+        "input_score": 0.673,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "skillsbench-v1-1-metric-v1",
+        "protocol_id": "skillsbench-v1-1-source-export-v1",
+        "task_set_id": "skillsbench-v1-1-canonical",
+        "metric": "Curated-Skills pass rate",
+        "score_role": "canonical",
+        "score_series_id": "skillsbench-v1-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-23",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-11",
+        "source_publication_date": "2026-06-11",
+        "observation_date": "2026-04-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-06-11",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-04-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670-1743f5a55252375a",
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "source": "https://arxiv.org/abs/2602.12670v4",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-skillsbench-v1-1-00-7843b6b34cc8de89"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "skillsbench-v1-1-00"
+        ],
+        "plot_date": "2026-06-11",
+        "frontier_observation_ids": [
+          "obs-0-201-366c033210e44e0e",
+          "obs-0-349-52bec192760806bb",
+          "obs-0-414-b67b11b4d91cb01a",
+          "obs-0-417-d6f74e4824208e8d",
+          "obs-0-447-ba3b45269fc66097",
+          "obs-0-472-1941760734bb0720",
+          "obs-0-482-a1c766cca11569d0",
+          "obs-0-501-2a606d1438efe29d",
+          "obs-0-528-e5c414f1d573b77b",
+          "obs-0-53-2282161c986445ad",
+          "obs-0-531-06aa86333bff3d95",
+          "obs-0-54-a6158fb28f8536f4",
+          "obs-0-541-8dbdb8d29f1a74d3",
+          "obs-0-584-b5511dc6823c4ca2",
+          "obs-0-608-adfd67005b169060",
+          "obs-0-612-ef71b08bc22c8d71",
+          "obs-0-665-15336e301e06ed3d",
+          "obs-0-673-fae4240ac76c3bf4"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-673-fae4240ac76c3bf4",
+        "benchmark_id": "skillsbench-v1-1",
+        "benchmark_version_id": "skillsbench-v1-1-canonical",
+        "model_id": "model-gpt-5-5-openhands-0de750d921b83910",
+        "model_configuration": "GPT-5.5 + OpenHands",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-5-openhands",
+        "model_family_id": "openai-gpt-5-5-openhands",
+        "model": "GPT-5.5 + OpenHands",
+        "organization": "OpenAI",
+        "score": 0.673,
+        "input_score": 0.673,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "skillsbench-v1-1-metric-v1",
+        "protocol_id": "skillsbench-v1-1-source-export-v1",
+        "task_set_id": "skillsbench-v1-1-canonical",
+        "metric": "Curated-Skills pass rate",
+        "score_role": "canonical",
+        "score_series_id": "skillsbench-v1-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-23",
+        "evaluation_date": null,
+        "result_public_date": "2026-06-11",
+        "source_publication_date": "2026-06-11",
+        "observation_date": "2026-04-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-06-11",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-06-11",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-04-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-06-11",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670-1743f5a55252375a",
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2602-12670v4-5e2cff25114ace9d"
+        ],
+        "source": "https://arxiv.org/abs/2602.12670v4",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-skillsbench-v1-1-00-7843b6b34cc8de89"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "skillsbench-v1-1-00"
+        ],
+        "plot_date": "2026-06-11",
+        "frontier_observation_ids": [
+          "obs-0-201-366c033210e44e0e",
+          "obs-0-349-52bec192760806bb",
+          "obs-0-414-b67b11b4d91cb01a",
+          "obs-0-417-d6f74e4824208e8d",
+          "obs-0-447-ba3b45269fc66097",
+          "obs-0-472-1941760734bb0720",
+          "obs-0-482-a1c766cca11569d0",
+          "obs-0-501-2a606d1438efe29d",
+          "obs-0-528-e5c414f1d573b77b",
+          "obs-0-53-2282161c986445ad",
+          "obs-0-531-06aa86333bff3d95",
+          "obs-0-54-a6158fb28f8536f4",
+          "obs-0-541-8dbdb8d29f1a74d3",
+          "obs-0-584-b5511dc6823c4ca2",
+          "obs-0-608-adfd67005b169060",
+          "obs-0-612-ef71b08bc22c8d71",
+          "obs-0-665-15336e301e06ed3d",
+          "obs-0-673-fae4240ac76c3bf4"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.673,
+    "capability_frontier_value": 0.673,
+    "reported_frontier_value": 0.673,
+    "current_frontier": 0.673,
+    "normalized_progress": 0.673,
+    "normalized_headroom": 0.32699999999999996,
+    "threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-06-14"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 92
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 92
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-06-14"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 92
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 92
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-06-11"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 92
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 92
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.7142857142857143,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "DeepSeek",
+        "xAI"
+      ],
+      "panel_size": 7,
+      "status": "high"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-arxiv-org-abs-2602-12670-1743f5a55252375a"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

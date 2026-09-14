@@ -1,0 +1,3233 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-14",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "chi-bench",
+    "name": "CHI-Bench",
+    "domain": "Health",
+    "release": "2026-05-15",
+    "source": "https://arxiv.org/abs/2605.16679",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "percentage_points",
+    "evaluation_type": "Agent",
+    "tags": [
+      "healthcare",
+      "policy workflow",
+      "versioned"
+    ],
+    "labels": [
+      "tool-use",
+      "instruction-following",
+      "planning",
+      "state-tracking"
+    ],
+    "metric": "Overall pass@1",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "chi-bench-metric-v1",
+    "protocol_id": "chi-bench-source-export-v1",
+    "canonical_score": {
+      "series_id": "chi-bench-canonical-score",
+      "role": "canonical",
+      "metric_id": "chi-bench-metric-v1",
+      "metric_name": "Overall pass@1",
+      "protocol_id": "chi-bench-source-export-v1",
+      "task_set_id": "chi-bench-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "percentage_points",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "chi-bench-canonical",
+    "summary": {
+      "en": "CHI-Bench tests agents on long-horizon, policy-driven healthcare workflows such as prior authorization and utilization management in a simulated environment.",
+      "zh": "CHI-Bench \u5728\u6a21\u62df\u73af\u5883\u4e2d\u8bc4\u4f30 agent \u5b8c\u6210\u4e8b\u524d\u6388\u6743\u3001\u4f7f\u7528\u7ba1\u7406\u7b49\u957f\u6d41\u7a0b\u3001\u653f\u7b56\u9a71\u52a8\u7684\u533b\u7597\u5de5\u4f5c\u6d41\u7684\u80fd\u529b\u3002"
+    },
+    "task_format": {
+      "en": "Inside a simulated healthcare environment, the agent carries case state through a multi-step, policy-constrained workflow and is judged against a rubric.",
+      "zh": "\u5728\u6a21\u62df\u533b\u7597\u73af\u5883\u4e2d\uff0cagent \u5728\u591a\u6b65\u3001\u53d7\u653f\u7b56\u7ea6\u675f\u7684\u5de5\u4f5c\u6d41\u4e2d\u7ef4\u62a4\u75c5\u4f8b\u72b6\u6001\uff0c\u5e76\u6309 rubric \u8bc4\u5224\u3002"
+    },
+    "scoring": {
+      "metric_name": "Overall pass@1",
+      "explanation": {
+        "en": "Each of 75 policy-heavy healthcare tasks is run 3 times; a rubric judged by Claude Opus 4.7 (majority of 3 votes) decides pass or fail, and the score is the overall pass@1 across the 225 trials.",
+        "zh": "75 \u4e2a\u653f\u7b56\u5bc6\u96c6\u7684\u533b\u7597\u4efb\u52a1\u5404\u8dd1 3 \u6b21\uff1b\u7531 Claude Opus 4.7 \u8bc4\u5224\u7684 rubric\uff083 \u7968\u591a\u6570\uff09\u5224\u5b9a\u901a\u8fc7\u4e0e\u5426\uff0c\u5206\u6570\u662f 225 \u6b21 trial \u7684\u6574\u4f53 pass@1\u3002"
+      }
+    },
+    "evaluation_target": "process_and_output",
+    "observation_count": 30,
+    "evidence_record_count": 30,
+    "observations": [
+      {
+        "observation_id": "obs-0-209-03c11f641d24ce25",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-gpt-5-5-codex-9386616f419ca41d",
+        "model_configuration": "GPT-5.5 (Codex)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-5-codex",
+        "model_family_id": "openai-gpt-5-5",
+        "model": "GPT-5.5 (Codex)",
+        "organization": "OpenAI",
+        "score": 0.209,
+        "input_score": 20.9,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-23",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-04-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-00-34b0a1eb10f6fc6a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-00"
+        ]
+      },
+      {
+        "observation_id": "obs-0-16-fb2fbb4372d58f34",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-gpt-5-4-codex-e922e3b4605bee44",
+        "model_configuration": "GPT-5.4 (Codex)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-4-codex",
+        "model_family_id": "openai-gpt-5-4",
+        "model": "GPT-5.4 (Codex)",
+        "organization": "OpenAI",
+        "score": 0.16,
+        "input_score": 16.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-03-05",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-03-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-03-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-03-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-03-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-01-b412f73085ae1845"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-01"
+        ]
+      },
+      {
+        "observation_id": "obs-0-084-5a24b562230d7f78",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-gpt-5-4-mini-codex-4ed88eb2334d2380",
+        "model_configuration": "GPT-5.4 Mini (Codex)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-4-mini-codex",
+        "model_family_id": "openai-gpt-5-4-mini",
+        "model": "GPT-5.4 Mini (Codex)",
+        "organization": "OpenAI",
+        "score": 0.084,
+        "input_score": 8.4,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-03-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-03-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-03-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-03-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-03-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-02-462ed71d2f88de7d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-02"
+        ]
+      },
+      {
+        "observation_id": "obs-0-244-e5622b635bc00dab",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-claude-opus-4-7-claude-code-1310066d20cedc10",
+        "model_configuration": "Claude Opus 4.7 (Claude Code)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-7-claude-code",
+        "model_family_id": "anthropic-claude-opus-4-7",
+        "model": "Claude Opus 4.7 (Claude Code)",
+        "organization": "Anthropic",
+        "score": 0.244,
+        "input_score": 24.4,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-16",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-03-8b3f6ac935982b4e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-03"
+        ]
+      },
+      {
+        "observation_id": "obs-0-28-e041a0ead2691275",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-claude-opus-4-6-claude-code-63b6f2efd7abb550",
+        "model_configuration": "Claude Opus 4.6 (Claude Code)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-6-claude-code",
+        "model_family_id": "anthropic-claude-opus-4-6",
+        "model": "Claude Opus 4.6 (Claude Code)",
+        "organization": "Anthropic",
+        "score": 0.28,
+        "input_score": 28.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-02-05",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-02-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-02-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-02-05",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-02-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-04-d54b898cd1518ee4"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-04"
+        ]
+      },
+      {
+        "observation_id": "obs-0-262-41003b1b595a8c60",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-claude-sonnet-4-6-claude-code-183c2351d75fb8b9",
+        "model_configuration": "Claude Sonnet 4.6 (Claude Code)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-sonnet-4-6-claude-code",
+        "model_family_id": "anthropic-claude-sonnet-4-6",
+        "model": "Claude Sonnet 4.6 (Claude Code)",
+        "organization": "Anthropic",
+        "score": 0.262,
+        "input_score": 26.2,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-02-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-02-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-02-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-02-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-02-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-05-08e20fe8470ffe1d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-05"
+        ]
+      },
+      {
+        "observation_id": "obs-0-062-9f96c25f3baddd3b",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-claude-haiku-4-5-claude-code-1701138b46076652",
+        "model_configuration": "Claude Haiku 4.5 (Claude Code)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-haiku-4-5-claude-code",
+        "model_family_id": "anthropic-claude-haiku-4-5",
+        "model": "Claude Haiku 4.5 (Claude Code)",
+        "organization": "Anthropic",
+        "score": 0.062,
+        "input_score": 6.2,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2025-10-15",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2025-10-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-10-15",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-10-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-10-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-06-8a1b2e79011328cc"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-06"
+        ]
+      },
+      {
+        "observation_id": "obs-0-071-d13d15d2b22747e5",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-gemini-3-1-pro-gemini-cli-06f467b03848c364",
+        "model_configuration": "Gemini 3.1 Pro (Gemini CLI)",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-1-pro-gemini-cli",
+        "model_family_id": "google-deepmind-gemini-3-1-pro",
+        "model": "Gemini 3.1 Pro (Gemini CLI)",
+        "organization": "Google DeepMind",
+        "score": 0.071,
+        "input_score": 7.1,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-02-19",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-02-19",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-02-19",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-02-19",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-02-19",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-07-12ac412ddbb996ea"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-07"
+        ]
+      },
+      {
+        "observation_id": "obs-0-124-ee1834e19f7a4c49",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-gemini-3-flash-gemini-cli-be543d063b5f38a6",
+        "model_configuration": "Gemini 3 Flash (Gemini CLI)",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-flash-gemini-cli",
+        "model_family_id": "google-deepmind-gemini-3-flash",
+        "model": "Gemini 3 Flash (Gemini CLI)",
+        "organization": "Google DeepMind",
+        "score": 0.124,
+        "input_score": 12.4,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2025-12-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2025-12-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2025-12-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2025-12-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2025-12-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-08-fea439db3868837b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-08"
+        ]
+      },
+      {
+        "observation_id": "obs-0-173-e975b7e9eec537d5",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-claude-opus-4-7-openclaw-b1923696fd31f17e",
+        "model_configuration": "Claude Opus 4.7 (OpenClaw)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-7-openclaw",
+        "model_family_id": "anthropic-claude-opus-4-7",
+        "model": "Claude Opus 4.7 (OpenClaw)",
+        "organization": "Anthropic",
+        "score": 0.17300000000000001,
+        "input_score": 17.3,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-16",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-04-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-09-56fe7994c0eac296"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-09"
+        ]
+      },
+      {
+        "observation_id": "obs-0-111-6fda6558c8cb3597",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-deepseek-v4-pro-openclaw-d78bb3296f5f4b0b",
+        "model_configuration": "DeepSeek V4 Pro (OpenClaw)",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-v4-pro-openclaw",
+        "model_family_id": "deepseek-deepseek-v4-pro",
+        "model": "DeepSeek V4 Pro (OpenClaw)",
+        "organization": "DeepSeek",
+        "score": 0.111,
+        "input_score": 11.1,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-24",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-04-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-10-6ed798df9e01553f"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-10"
+        ]
+      },
+      {
+        "observation_id": "obs-0-142-e10eee025aee8575",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-deepseek-v4-pro-oai-agents-641d74ed603f3cf8",
+        "model_configuration": "DeepSeek V4 Pro (OAI Agents)",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-v4-pro-oai-agents",
+        "model_family_id": "deepseek-deepseek-v4-pro",
+        "model": "DeepSeek V4 Pro (OAI Agents)",
+        "organization": "DeepSeek",
+        "score": 0.142,
+        "input_score": 14.2,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-24",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-04-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-11-7c32f7e7d20260ee"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-11"
+        ]
+      },
+      {
+        "observation_id": "obs-0-138-287b183c696db8e5",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-deepseek-v4-pro-hermes-850f92834f41948e",
+        "model_configuration": "DeepSeek V4 Pro (Hermes)",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-v4-pro-hermes",
+        "model_family_id": "deepseek-deepseek-v4-pro",
+        "model": "DeepSeek V4 Pro (Hermes)",
+        "organization": "DeepSeek",
+        "score": 0.138,
+        "input_score": 13.8,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-24",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-04-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-12-be617271868df3c6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-12"
+        ]
+      },
+      {
+        "observation_id": "obs-0-107-f0eed61fa7bc9e93",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-deepseek-v4-pro-deepagents-090f46f770bb5ac7",
+        "model_configuration": "DeepSeek V4 Pro (DeepAgents)",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-v4-pro-deepagents",
+        "model_family_id": "deepseek-deepseek-v4-pro",
+        "model": "DeepSeek V4 Pro (DeepAgents)",
+        "organization": "DeepSeek",
+        "score": 0.107,
+        "input_score": 10.7,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-24",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-04-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-13-f7bd6f592ac0469d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-13"
+        ]
+      },
+      {
+        "observation_id": "obs-0-049-27ee143613d544d7",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-qwen-3-6-max-openclaw-9ca0db95f5f6f777",
+        "model_configuration": "Qwen 3.6 Max (OpenClaw)",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen-3-6-max-openclaw",
+        "model_family_id": "alibaba-qwen-3-6-max",
+        "model": "Qwen 3.6 Max (OpenClaw)",
+        "organization": "Alibaba",
+        "score": 0.049,
+        "input_score": 4.9,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-20",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-04-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-14-2c559c04493e6a3a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-14"
+        ]
+      },
+      {
+        "observation_id": "obs-0-156-7d3df36df0a05b28",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-qwen-3-6-max-oai-agents-ead51d7efe7de320",
+        "model_configuration": "Qwen 3.6 Max (OAI Agents)",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen-3-6-max-oai-agents",
+        "model_family_id": "alibaba-qwen-3-6-max",
+        "model": "Qwen 3.6 Max (OAI Agents)",
+        "organization": "Alibaba",
+        "score": 0.156,
+        "input_score": 15.6,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-20",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-04-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-15-550fc0a51aecdd44"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-15"
+        ]
+      },
+      {
+        "observation_id": "obs-0-164-81ab96c6610ab4d1",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-qwen-3-6-max-hermes-e154ae7a0c412af0",
+        "model_configuration": "Qwen 3.6 Max (Hermes)",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen-3-6-max-hermes",
+        "model_family_id": "alibaba-qwen-3-6-max",
+        "model": "Qwen 3.6 Max (Hermes)",
+        "organization": "Alibaba",
+        "score": 0.16399999999999998,
+        "input_score": 16.4,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-20",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-04-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-16-7d20871ea627babc"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-16"
+        ]
+      },
+      {
+        "observation_id": "obs-0-093-4c5cc96952f7287e",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-qwen-3-6-max-deepagents-c5fde1a9f3812cfc",
+        "model_configuration": "Qwen 3.6 Max (DeepAgents)",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen-3-6-max-deepagents",
+        "model_family_id": "alibaba-qwen-3-6-max",
+        "model": "Qwen 3.6 Max (DeepAgents)",
+        "organization": "Alibaba",
+        "score": 0.09300000000000001,
+        "input_score": 9.3,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-20",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-04-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-17-be897aee51535d34"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-17"
+        ]
+      },
+      {
+        "observation_id": "obs-0-004-bfc27cee983e22f0",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-grok-4-3-openclaw-ef15c51d36e2bc11",
+        "model_configuration": "Grok 4.3 (OpenClaw)",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-3-openclaw",
+        "model_family_id": "xai-grok-4-3",
+        "model": "Grok 4.3 (OpenClaw)",
+        "organization": "xAI",
+        "score": 0.004,
+        "input_score": 0.4,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-04-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-18-45b5e4669bf4406b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-18"
+        ]
+      },
+      {
+        "observation_id": "obs-0-058-efd33f9bcef3db00",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-grok-4-3-oai-agents-2c326b6740ee702d",
+        "model_configuration": "Grok 4.3 (OAI Agents)",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-3-oai-agents",
+        "model_family_id": "xai-grok-4-3",
+        "model": "Grok 4.3 (OAI Agents)",
+        "organization": "xAI",
+        "score": 0.057999999999999996,
+        "input_score": 5.8,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-04-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-19-e0157b4431a48735"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-19"
+        ]
+      },
+      {
+        "observation_id": "obs-0-044-63adc61dc7f9598b",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-grok-4-3-hermes-22bf58c5d715b091",
+        "model_configuration": "Grok 4.3 (Hermes)",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-3-hermes",
+        "model_family_id": "xai-grok-4-3",
+        "model": "Grok 4.3 (Hermes)",
+        "organization": "xAI",
+        "score": 0.044000000000000004,
+        "input_score": 4.4,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-04-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-20-ad741224e80741e9"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-20"
+        ]
+      },
+      {
+        "observation_id": "obs-0-022-9eaba21f01a45283",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-grok-4-3-deepagents-335c8991ccd9403d",
+        "model_configuration": "Grok 4.3 (DeepAgents)",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-3-deepagents",
+        "model_family_id": "xai-grok-4-3",
+        "model": "Grok 4.3 (DeepAgents)",
+        "organization": "xAI",
+        "score": 0.022000000000000002,
+        "input_score": 2.2,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-04-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-21-14ccfa88fcdd36e5"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-21"
+        ]
+      },
+      {
+        "observation_id": "obs-0-102-7f7608062e94a1e4",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-kimi-k2-6-openclaw-eb7cb33fc29d6370",
+        "model_configuration": "Kimi K2.6 (OpenClaw)",
+        "model_identity_organization": "moonshot",
+        "model_label_id": "kimi-k2-6-openclaw",
+        "model_family_id": "moonshot-kimi-k2-6",
+        "model": "Kimi K2.6 (OpenClaw)",
+        "organization": "Moonshot",
+        "score": 0.102,
+        "input_score": 10.2,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-20",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-04-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-22-55177e602667b86a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-22"
+        ]
+      },
+      {
+        "observation_id": "obs-0-151-19f4987be0caca13",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-kimi-k2-6-oai-agents-6b4c9f06f75e3a3c",
+        "model_configuration": "Kimi K2.6 (OAI Agents)",
+        "model_identity_organization": "moonshot",
+        "model_label_id": "kimi-k2-6-oai-agents",
+        "model_family_id": "moonshot-kimi-k2-6",
+        "model": "Kimi K2.6 (OAI Agents)",
+        "organization": "Moonshot",
+        "score": 0.151,
+        "input_score": 15.1,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-20",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-04-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-23-68b520c77d669fbe"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-23"
+        ]
+      },
+      {
+        "observation_id": "obs-0-156-b80e93cd67fd8cbf",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-kimi-k2-6-hermes-89f2f41f4af3c4c8",
+        "model_configuration": "Kimi K2.6 (Hermes)",
+        "model_identity_organization": "moonshot",
+        "model_label_id": "kimi-k2-6-hermes",
+        "model_family_id": "moonshot-kimi-k2-6",
+        "model": "Kimi K2.6 (Hermes)",
+        "organization": "Moonshot",
+        "score": 0.156,
+        "input_score": 15.6,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-20",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-04-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-24-d5af98e14860aa79"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-24"
+        ]
+      },
+      {
+        "observation_id": "obs-0-031-f93f8ce3064abb44",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-kimi-k2-6-deepagents-110199edaa9e562e",
+        "model_configuration": "Kimi K2.6 (DeepAgents)",
+        "model_identity_organization": "moonshot",
+        "model_label_id": "kimi-k2-6-deepagents",
+        "model_family_id": "moonshot-kimi-k2-6",
+        "model": "Kimi K2.6 (DeepAgents)",
+        "organization": "Moonshot",
+        "score": 0.031,
+        "input_score": 3.1,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-20",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-04-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-25-c53178fa372c7697"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-25"
+        ]
+      },
+      {
+        "observation_id": "obs-0-169-6ef9b1dc2e934171",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-glm-5-1-openclaw-371c46e4ab0c84f3",
+        "model_configuration": "GLM-5.1 (OpenClaw)",
+        "model_identity_organization": "z-ai",
+        "model_label_id": "glm-5-1-openclaw",
+        "model_family_id": "z-ai-glm-5-1",
+        "model": "GLM-5.1 (OpenClaw)",
+        "organization": "Z.ai",
+        "score": 0.16899999999999998,
+        "input_score": 16.9,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-07",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-04-07",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-07",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-07",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-26-90c3750c36fb2f7b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-26"
+        ]
+      },
+      {
+        "observation_id": "obs-0-187-eeeeb416b8bcfe67",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-glm-5-1-oai-agents-8038801ee6dfe089",
+        "model_configuration": "GLM-5.1 (OAI Agents)",
+        "model_identity_organization": "z-ai",
+        "model_label_id": "glm-5-1-oai-agents",
+        "model_family_id": "z-ai-glm-5-1",
+        "model": "GLM-5.1 (OAI Agents)",
+        "organization": "Z.ai",
+        "score": 0.187,
+        "input_score": 18.7,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-07",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-04-07",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-07",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-07",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-27-51c6ef1e1bea99ce"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-27"
+        ]
+      },
+      {
+        "observation_id": "obs-0-187-455b0e2f00ff2c77",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-glm-5-1-hermes-86c6623b079f967d",
+        "model_configuration": "GLM-5.1 (Hermes)",
+        "model_identity_organization": "z-ai",
+        "model_label_id": "glm-5-1-hermes",
+        "model_family_id": "z-ai-glm-5-1",
+        "model": "GLM-5.1 (Hermes)",
+        "organization": "Z.ai",
+        "score": 0.187,
+        "input_score": 18.7,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-07",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-04-07",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-07",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-07",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-28-8a66e49849e987e8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-28"
+        ]
+      },
+      {
+        "observation_id": "obs-0-111-5bb2ef22ee142ad9",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-glm-5-1-deepagents-b3fc23a124644056",
+        "model_configuration": "GLM-5.1 (DeepAgents)",
+        "model_identity_organization": "z-ai",
+        "model_label_id": "glm-5-1-deepagents",
+        "model_family_id": "z-ai-glm-5-1",
+        "model": "GLM-5.1 (DeepAgents)",
+        "organization": "Z.ai",
+        "score": 0.111,
+        "input_score": 11.1,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-04-07",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-04-07",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-04-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-04-07",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-04-07",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-29-5712839bfc71bebb"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-29"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-28-e041a0ead2691275",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-claude-opus-4-6-claude-code-63b6f2efd7abb550",
+        "model_configuration": "Claude Opus 4.6 (Claude Code)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-6-claude-code",
+        "model_family_id": "anthropic-claude-opus-4-6",
+        "model": "Claude Opus 4.6 (Claude Code)",
+        "organization": "Anthropic",
+        "score": 0.28,
+        "input_score": 28.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-02-05",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-02-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-02-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-05-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-02-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-04-d54b898cd1518ee4"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-04"
+        ],
+        "plot_date": "2026-05-15",
+        "frontier_observation_ids": [
+          "obs-0-004-bfc27cee983e22f0",
+          "obs-0-022-9eaba21f01a45283",
+          "obs-0-031-f93f8ce3064abb44",
+          "obs-0-044-63adc61dc7f9598b",
+          "obs-0-049-27ee143613d544d7",
+          "obs-0-058-efd33f9bcef3db00",
+          "obs-0-062-9f96c25f3baddd3b",
+          "obs-0-071-d13d15d2b22747e5",
+          "obs-0-084-5a24b562230d7f78",
+          "obs-0-093-4c5cc96952f7287e",
+          "obs-0-102-7f7608062e94a1e4",
+          "obs-0-107-f0eed61fa7bc9e93",
+          "obs-0-111-6fda6558c8cb3597",
+          "obs-0-111-5bb2ef22ee142ad9",
+          "obs-0-124-ee1834e19f7a4c49",
+          "obs-0-138-287b183c696db8e5",
+          "obs-0-142-e10eee025aee8575",
+          "obs-0-151-19f4987be0caca13",
+          "obs-0-156-b80e93cd67fd8cbf",
+          "obs-0-156-7d3df36df0a05b28",
+          "obs-0-16-fb2fbb4372d58f34",
+          "obs-0-164-81ab96c6610ab4d1",
+          "obs-0-169-6ef9b1dc2e934171",
+          "obs-0-173-e975b7e9eec537d5",
+          "obs-0-187-455b0e2f00ff2c77",
+          "obs-0-187-eeeeb416b8bcfe67",
+          "obs-0-209-03c11f641d24ce25",
+          "obs-0-244-e5622b635bc00dab",
+          "obs-0-262-41003b1b595a8c60",
+          "obs-0-28-e041a0ead2691275"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-28-e041a0ead2691275",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-claude-opus-4-6-claude-code-63b6f2efd7abb550",
+        "model_configuration": "Claude Opus 4.6 (Claude Code)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-6-claude-code",
+        "model_family_id": "anthropic-claude-opus-4-6",
+        "model": "Claude Opus 4.6 (Claude Code)",
+        "organization": "Anthropic",
+        "score": 0.28,
+        "input_score": 28.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-02-05",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-02-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-02-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-05-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-02-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-04-d54b898cd1518ee4"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-04"
+        ],
+        "plot_date": "2026-05-15",
+        "frontier_observation_ids": [
+          "obs-0-004-bfc27cee983e22f0",
+          "obs-0-022-9eaba21f01a45283",
+          "obs-0-031-f93f8ce3064abb44",
+          "obs-0-044-63adc61dc7f9598b",
+          "obs-0-049-27ee143613d544d7",
+          "obs-0-058-efd33f9bcef3db00",
+          "obs-0-062-9f96c25f3baddd3b",
+          "obs-0-071-d13d15d2b22747e5",
+          "obs-0-084-5a24b562230d7f78",
+          "obs-0-093-4c5cc96952f7287e",
+          "obs-0-102-7f7608062e94a1e4",
+          "obs-0-107-f0eed61fa7bc9e93",
+          "obs-0-111-6fda6558c8cb3597",
+          "obs-0-111-5bb2ef22ee142ad9",
+          "obs-0-124-ee1834e19f7a4c49",
+          "obs-0-138-287b183c696db8e5",
+          "obs-0-142-e10eee025aee8575",
+          "obs-0-151-19f4987be0caca13",
+          "obs-0-156-b80e93cd67fd8cbf",
+          "obs-0-156-7d3df36df0a05b28",
+          "obs-0-16-fb2fbb4372d58f34",
+          "obs-0-164-81ab96c6610ab4d1",
+          "obs-0-169-6ef9b1dc2e934171",
+          "obs-0-173-e975b7e9eec537d5",
+          "obs-0-187-455b0e2f00ff2c77",
+          "obs-0-187-eeeeb416b8bcfe67",
+          "obs-0-209-03c11f641d24ce25",
+          "obs-0-244-e5622b635bc00dab",
+          "obs-0-262-41003b1b595a8c60",
+          "obs-0-28-e041a0ead2691275"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-28-e041a0ead2691275",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-claude-opus-4-6-claude-code-63b6f2efd7abb550",
+        "model_configuration": "Claude Opus 4.6 (Claude Code)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-6-claude-code",
+        "model_family_id": "anthropic-claude-opus-4-6",
+        "model": "Claude Opus 4.6 (Claude Code)",
+        "organization": "Anthropic",
+        "score": 0.28,
+        "input_score": 28.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-02-05",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-02-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-02-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-05-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-02-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-04-d54b898cd1518ee4"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-04"
+        ],
+        "plot_date": "2026-05-15",
+        "frontier_observation_ids": [
+          "obs-0-004-bfc27cee983e22f0",
+          "obs-0-022-9eaba21f01a45283",
+          "obs-0-031-f93f8ce3064abb44",
+          "obs-0-044-63adc61dc7f9598b",
+          "obs-0-049-27ee143613d544d7",
+          "obs-0-058-efd33f9bcef3db00",
+          "obs-0-062-9f96c25f3baddd3b",
+          "obs-0-071-d13d15d2b22747e5",
+          "obs-0-084-5a24b562230d7f78",
+          "obs-0-093-4c5cc96952f7287e",
+          "obs-0-102-7f7608062e94a1e4",
+          "obs-0-107-f0eed61fa7bc9e93",
+          "obs-0-111-6fda6558c8cb3597",
+          "obs-0-111-5bb2ef22ee142ad9",
+          "obs-0-124-ee1834e19f7a4c49",
+          "obs-0-138-287b183c696db8e5",
+          "obs-0-142-e10eee025aee8575",
+          "obs-0-151-19f4987be0caca13",
+          "obs-0-156-b80e93cd67fd8cbf",
+          "obs-0-156-7d3df36df0a05b28",
+          "obs-0-16-fb2fbb4372d58f34",
+          "obs-0-164-81ab96c6610ab4d1",
+          "obs-0-169-6ef9b1dc2e934171",
+          "obs-0-173-e975b7e9eec537d5",
+          "obs-0-187-455b0e2f00ff2c77",
+          "obs-0-187-eeeeb416b8bcfe67",
+          "obs-0-209-03c11f641d24ce25",
+          "obs-0-244-e5622b635bc00dab",
+          "obs-0-262-41003b1b595a8c60",
+          "obs-0-28-e041a0ead2691275"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-28-e041a0ead2691275",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-claude-opus-4-6-claude-code-63b6f2efd7abb550",
+        "model_configuration": "Claude Opus 4.6 (Claude Code)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-6-claude-code",
+        "model_family_id": "anthropic-claude-opus-4-6",
+        "model": "Claude Opus 4.6 (Claude Code)",
+        "organization": "Anthropic",
+        "score": 0.28,
+        "input_score": 28.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-02-05",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-02-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-02-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-05-15",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-02-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-04-d54b898cd1518ee4"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-04"
+        ],
+        "plot_date": "2026-05-15",
+        "frontier_observation_ids": [
+          "obs-0-004-bfc27cee983e22f0",
+          "obs-0-022-9eaba21f01a45283",
+          "obs-0-031-f93f8ce3064abb44",
+          "obs-0-044-63adc61dc7f9598b",
+          "obs-0-049-27ee143613d544d7",
+          "obs-0-058-efd33f9bcef3db00",
+          "obs-0-062-9f96c25f3baddd3b",
+          "obs-0-071-d13d15d2b22747e5",
+          "obs-0-084-5a24b562230d7f78",
+          "obs-0-093-4c5cc96952f7287e",
+          "obs-0-102-7f7608062e94a1e4",
+          "obs-0-107-f0eed61fa7bc9e93",
+          "obs-0-111-6fda6558c8cb3597",
+          "obs-0-111-5bb2ef22ee142ad9",
+          "obs-0-124-ee1834e19f7a4c49",
+          "obs-0-138-287b183c696db8e5",
+          "obs-0-142-e10eee025aee8575",
+          "obs-0-151-19f4987be0caca13",
+          "obs-0-156-b80e93cd67fd8cbf",
+          "obs-0-156-7d3df36df0a05b28",
+          "obs-0-16-fb2fbb4372d58f34",
+          "obs-0-164-81ab96c6610ab4d1",
+          "obs-0-169-6ef9b1dc2e934171",
+          "obs-0-173-e975b7e9eec537d5",
+          "obs-0-187-455b0e2f00ff2c77",
+          "obs-0-187-eeeeb416b8bcfe67",
+          "obs-0-209-03c11f641d24ce25",
+          "obs-0-244-e5622b635bc00dab",
+          "obs-0-262-41003b1b595a8c60",
+          "obs-0-28-e041a0ead2691275"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-28-e041a0ead2691275",
+        "benchmark_id": "chi-bench",
+        "benchmark_version_id": "chi-bench-canonical",
+        "model_id": "model-claude-opus-4-6-claude-code-63b6f2efd7abb550",
+        "model_configuration": "Claude Opus 4.6 (Claude Code)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-6-claude-code",
+        "model_family_id": "anthropic-claude-opus-4-6",
+        "model": "Claude Opus 4.6 (Claude Code)",
+        "organization": "Anthropic",
+        "score": 0.28,
+        "input_score": 28.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "chi-bench-metric-v1",
+        "protocol_id": "chi-bench-source-export-v1",
+        "task_set_id": "chi-bench-canonical",
+        "metric": "Overall pass@1",
+        "score_role": "canonical",
+        "score_series_id": "chi-bench-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-02-05",
+        "evaluation_date": null,
+        "result_public_date": "2026-05-15",
+        "source_publication_date": "2026-05-15",
+        "observation_date": "2026-02-05",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-02-05",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-05-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-05-15",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-02-05",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-05-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed",
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2605-16679v1-a1977b5dde282c6f"
+        ],
+        "source": "https://arxiv.org/abs/2605.16679v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-chi-bench-04-d54b898cd1518ee4"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "chi-bench-04"
+        ],
+        "plot_date": "2026-05-15",
+        "frontier_observation_ids": [
+          "obs-0-004-bfc27cee983e22f0",
+          "obs-0-022-9eaba21f01a45283",
+          "obs-0-031-f93f8ce3064abb44",
+          "obs-0-044-63adc61dc7f9598b",
+          "obs-0-049-27ee143613d544d7",
+          "obs-0-058-efd33f9bcef3db00",
+          "obs-0-062-9f96c25f3baddd3b",
+          "obs-0-071-d13d15d2b22747e5",
+          "obs-0-084-5a24b562230d7f78",
+          "obs-0-093-4c5cc96952f7287e",
+          "obs-0-102-7f7608062e94a1e4",
+          "obs-0-107-f0eed61fa7bc9e93",
+          "obs-0-111-6fda6558c8cb3597",
+          "obs-0-111-5bb2ef22ee142ad9",
+          "obs-0-124-ee1834e19f7a4c49",
+          "obs-0-138-287b183c696db8e5",
+          "obs-0-142-e10eee025aee8575",
+          "obs-0-151-19f4987be0caca13",
+          "obs-0-156-b80e93cd67fd8cbf",
+          "obs-0-156-7d3df36df0a05b28",
+          "obs-0-16-fb2fbb4372d58f34",
+          "obs-0-164-81ab96c6610ab4d1",
+          "obs-0-169-6ef9b1dc2e934171",
+          "obs-0-173-e975b7e9eec537d5",
+          "obs-0-187-455b0e2f00ff2c77",
+          "obs-0-187-eeeeb416b8bcfe67",
+          "obs-0-209-03c11f641d24ce25",
+          "obs-0-244-e5622b635bc00dab",
+          "obs-0-262-41003b1b595a8c60",
+          "obs-0-28-e041a0ead2691275"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.28,
+    "capability_frontier_value": 0.28,
+    "reported_frontier_value": 0.28,
+    "current_frontier": 0.28,
+    "normalized_progress": 0.28,
+    "normalized_headroom": 0.72,
+    "threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 122
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 122
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 122
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 122
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 122
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 122
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 122
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 122
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 122
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.8571428571428571,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "DeepSeek",
+        "Qwen",
+        "xAI"
+      ],
+      "panel_size": 7,
+      "status": "high"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-arxiv-org-abs-2605-16679-237cc96219748eed"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": true,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

@@ -1,0 +1,1621 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-14",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "frontierchallenge-97",
+    "name": "FrontierChallenge",
+    "domain": "Science / research",
+    "release": "2026-08-25",
+    "source": "https://arxiv.org/abs/2608.24979",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "percentage_points",
+    "evaluation_type": "Agent",
+    "tags": [
+      "scientific computing",
+      "released-97",
+      "versioned"
+    ],
+    "labels": [
+      "tool-use",
+      "code-generation",
+      "code-execution-debugging",
+      "environment-interaction",
+      "quantitative-reasoning"
+    ],
+    "metric": "Pass Rate",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "frontierchallenge-97-metric-v1",
+    "protocol_id": "frontierchallenge-97-source-export-v1",
+    "canonical_score": {
+      "series_id": "frontierchallenge-97-canonical-score",
+      "role": "canonical",
+      "metric_id": "frontierchallenge-97-metric-v1",
+      "metric_name": "Pass Rate",
+      "protocol_id": "frontierchallenge-97-source-export-v1",
+      "task_set_id": "frontierchallenge-97-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "percentage_points",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "frontierchallenge-97-canonical",
+    "summary": {
+      "en": "FrontierChallenge tests agents on end-to-end scientific-computing workflows that must deliver a complete, contract-checked artifact bundle.",
+      "zh": "FrontierChallenge \u8bc4\u4f30 agent \u5b8c\u6210\u7aef\u5230\u7aef\u79d1\u5b66\u8ba1\u7b97\u5de5\u4f5c\u6d41\u7684\u80fd\u529b\uff0c\u8981\u6c42\u4ea4\u4ed8\u4e00\u5957\u901a\u8fc7\u4efb\u52a1\u5951\u7ea6\u68c0\u67e5\u7684\u5b8c\u6574\u4ea7\u7269\u3002"
+    },
+    "task_format": {
+      "en": "The agent drives domain software such as ORCA, CP2K, LAMMPS or AmberTools to complete one of 97 released scientific tasks and deliver the required artifacts.",
+      "zh": "agent \u8c03\u7528 ORCA\u3001CP2K\u3001LAMMPS\u3001AmberTools \u7b49\u9886\u57df\u8f6f\u4ef6\uff0c\u5b8c\u6210 97 \u4e2a\u516c\u5f00\u79d1\u5b66\u4efb\u52a1\u4e4b\u4e00\uff0c\u5e76\u4ea4\u4ed8\u8981\u6c42\u7684\u4ea7\u7269\u3002"
+    },
+    "scoring": {
+      "metric_name": "Task pass rate",
+      "explanation": {
+        "en": "A task passes only when its grader score reaches 99.9, i.e. the full task contract is met; the score is the fraction of the 97 released tasks passed.",
+        "zh": "\u53ea\u6709\u5f53\u4efb\u52a1\u7684 grader \u5206\u6570\u8fbe\u5230 99.9\u3001\u5373\u5b8c\u5168\u6ee1\u8db3\u4efb\u52a1\u5951\u7ea6\u65f6\u624d\u7b97\u901a\u8fc7\uff1b\u5206\u6570\u662f\u901a\u8fc7\u7684\u4efb\u52a1\u5360 97 \u4e2a\u516c\u5f00\u4efb\u52a1\u7684\u6bd4\u4f8b\u3002"
+      }
+    },
+    "evaluation_target": "environment_outcome",
+    "observation_count": 11,
+    "evidence_record_count": 11,
+    "observations": [
+      {
+        "observation_id": "obs-0-206-2f98eebfd180e22b",
+        "benchmark_id": "frontierchallenge-97",
+        "benchmark_version_id": "frontierchallenge-97-canonical",
+        "model_id": "model-gpt-5-6-sol-codex-963229d6fd1e5bc4",
+        "model_configuration": "GPT-5.6 Sol (Codex)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol-codex",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "GPT-5.6 Sol (Codex)",
+        "organization": "OpenAI",
+        "score": 0.20600000000000002,
+        "input_score": 20.6,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "frontierchallenge-97-metric-v1",
+        "protocol_id": "frontierchallenge-97-source-export-v1",
+        "task_set_id": "frontierchallenge-97-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "frontierchallenge-97-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-25",
+        "source_publication_date": "2026-08-25",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-25",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-25",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979-b96afb470941cdd0",
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "source": "https://arxiv.org/abs/2608.24979v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-frontierchallenge-97-00-540b3e95cb72fc08"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "frontierchallenge-97-00"
+        ]
+      },
+      {
+        "observation_id": "obs-0-206-f0f7e11c1919319b",
+        "benchmark_id": "frontierchallenge-97",
+        "benchmark_version_id": "frontierchallenge-97-canonical",
+        "model_id": "model-grok-4-6-claude-code-81d4057aceaab0f8",
+        "model_configuration": "Grok 4.6 (Claude Code)",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-6-claude-code",
+        "model_family_id": "xai-grok-4-6",
+        "model": "Grok 4.6 (Claude Code)",
+        "organization": "xAI",
+        "score": 0.20600000000000002,
+        "input_score": 20.6,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "frontierchallenge-97-metric-v1",
+        "protocol_id": "frontierchallenge-97-source-export-v1",
+        "task_set_id": "frontierchallenge-97-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "frontierchallenge-97-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-08-12",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-25",
+        "source_publication_date": "2026-08-25",
+        "observation_date": "2026-08-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-08-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067",
+              "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3",
+          "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-25",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-08-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-08-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-25",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979-b96afb470941cdd0",
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3",
+          "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "source": "https://arxiv.org/abs/2608.24979v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-frontierchallenge-97-01-a606d988efe53783"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "frontierchallenge-97-01"
+        ]
+      },
+      {
+        "observation_id": "obs-0-175-eb439ff93a0bdc9e",
+        "benchmark_id": "frontierchallenge-97",
+        "benchmark_version_id": "frontierchallenge-97-canonical",
+        "model_id": "model-kimi-k3-claude-code-e54b169d31dcbe07",
+        "model_configuration": "Kimi K3 (Claude Code)",
+        "model_identity_organization": "moonshot",
+        "model_label_id": "kimi-k3-claude-code",
+        "model_family_id": "moonshot-kimi-k3",
+        "model": "Kimi K3 (Claude Code)",
+        "organization": "Moonshot",
+        "score": 0.175,
+        "input_score": 17.5,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "frontierchallenge-97-metric-v1",
+        "protocol_id": "frontierchallenge-97-source-export-v1",
+        "task_set_id": "frontierchallenge-97-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "frontierchallenge-97-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-16",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-25",
+        "source_publication_date": "2026-08-25",
+        "observation_date": "2026-07-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-25",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-25",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979-b96afb470941cdd0",
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "source": "https://arxiv.org/abs/2608.24979v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-frontierchallenge-97-02-5bf50bec5162299c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "frontierchallenge-97-02"
+        ]
+      },
+      {
+        "observation_id": "obs-0-175-c0d59d39abe597cb",
+        "benchmark_id": "frontierchallenge-97",
+        "benchmark_version_id": "frontierchallenge-97-canonical",
+        "model_id": "model-claude-opus-5-claude-code-c49fe73ec0a14691",
+        "model_configuration": "Claude Opus 5 (Claude Code)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-claude-code",
+        "model_family_id": "anthropic-claude-opus-5",
+        "model": "Claude Opus 5 (Claude Code)",
+        "organization": "Anthropic",
+        "score": 0.175,
+        "input_score": 17.5,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "frontierchallenge-97-metric-v1",
+        "protocol_id": "frontierchallenge-97-source-export-v1",
+        "task_set_id": "frontierchallenge-97-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "frontierchallenge-97-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-24",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-25",
+        "source_publication_date": "2026-08-25",
+        "observation_date": "2026-07-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-25",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-25",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979-b96afb470941cdd0",
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "source": "https://arxiv.org/abs/2608.24979v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-frontierchallenge-97-03-91ce3eec8ed69175"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "frontierchallenge-97-03"
+        ]
+      },
+      {
+        "observation_id": "obs-0-155-c72b968aa84fecc0",
+        "benchmark_id": "frontierchallenge-97",
+        "benchmark_version_id": "frontierchallenge-97-canonical",
+        "model_id": "model-gpt-5-6-terra-max-codex-611fc99b6b7e29da",
+        "model_configuration": "GPT-5.6 Terra (max) (Codex)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-terra-max-codex",
+        "model_family_id": "openai-gpt-5-6-terra",
+        "model": "GPT-5.6 Terra (max) (Codex)",
+        "organization": "OpenAI",
+        "score": 0.155,
+        "input_score": 15.5,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "frontierchallenge-97-metric-v1",
+        "protocol_id": "frontierchallenge-97-source-export-v1",
+        "task_set_id": "frontierchallenge-97-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "frontierchallenge-97-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-25",
+        "source_publication_date": "2026-08-25",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-25",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-25",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979-b96afb470941cdd0",
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "source": "https://arxiv.org/abs/2608.24979v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-frontierchallenge-97-04-d4e7ba032433aed1"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "frontierchallenge-97-04"
+        ]
+      },
+      {
+        "observation_id": "obs-0-155-d86e1d794abf0f42",
+        "benchmark_id": "frontierchallenge-97",
+        "benchmark_version_id": "frontierchallenge-97-canonical",
+        "model_id": "model-qwen-3-8-max-claude-code-73eb304d7fb4446b",
+        "model_configuration": "Qwen 3.8 Max (Claude Code)",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen-3-8-max-claude-code",
+        "model_family_id": "alibaba-qwen-3-8-max",
+        "model": "Qwen 3.8 Max (Claude Code)",
+        "organization": "Alibaba",
+        "score": 0.155,
+        "input_score": 15.5,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "frontierchallenge-97-metric-v1",
+        "protocol_id": "frontierchallenge-97-source-export-v1",
+        "task_set_id": "frontierchallenge-97-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "frontierchallenge-97-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-08-03",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-25",
+        "source_publication_date": "2026-08-25",
+        "observation_date": "2026-08-03",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-08-03",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-25",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-08-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-08-03",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-25",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979-b96afb470941cdd0",
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "source": "https://arxiv.org/abs/2608.24979v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-frontierchallenge-97-05-ead4658b671e89b6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "frontierchallenge-97-05"
+        ]
+      },
+      {
+        "observation_id": "obs-0-134-0b65f4a997b9c176",
+        "benchmark_id": "frontierchallenge-97",
+        "benchmark_version_id": "frontierchallenge-97-canonical",
+        "model_id": "model-deepseek-v4-pro-0813-claude-code-ea4623e3487d4d42",
+        "model_configuration": "DeepSeek V4 Pro-0813 (Claude Code)",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-v4-pro-0813-claude-code",
+        "model_family_id": "deepseek-deepseek-v4-pro-0813",
+        "model": "DeepSeek V4 Pro-0813 (Claude Code)",
+        "organization": "DeepSeek",
+        "score": 0.134,
+        "input_score": 13.4,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "frontierchallenge-97-metric-v1",
+        "protocol_id": "frontierchallenge-97-source-export-v1",
+        "task_set_id": "frontierchallenge-97-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "frontierchallenge-97-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-08-13",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-25",
+        "source_publication_date": "2026-08-25",
+        "observation_date": "2026-08-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-08-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-api-docs-deepseek-com-news-news260813-fe54be560bf95e2c",
+              "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-api-docs-deepseek-com-news-news260813-fe54be560bf95e2c",
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-25",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-08-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-08-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-25",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-api-docs-deepseek-com-news-news260813-fe54be560bf95e2c",
+          "resource-https-arxiv-org-abs-2608-24979-b96afb470941cdd0",
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "source": "https://arxiv.org/abs/2608.24979v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-frontierchallenge-97-06-82f9260c5b16ed15"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "frontierchallenge-97-06"
+        ]
+      },
+      {
+        "observation_id": "obs-0-124-1239213f239ebccf",
+        "benchmark_id": "frontierchallenge-97",
+        "benchmark_version_id": "frontierchallenge-97-canonical",
+        "model_id": "model-deepseek-v4-flash-0731-claude-code-664859616000fbe4",
+        "model_configuration": "DeepSeek V4 Flash-0731 (Claude Code)",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-v4-flash-0731-claude-code",
+        "model_family_id": "deepseek-deepseek-v4-flash-0731",
+        "model": "DeepSeek V4 Flash-0731 (Claude Code)",
+        "organization": "DeepSeek",
+        "score": 0.124,
+        "input_score": 12.4,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "frontierchallenge-97-metric-v1",
+        "protocol_id": "frontierchallenge-97-source-export-v1",
+        "task_set_id": "frontierchallenge-97-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "frontierchallenge-97-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-07-31",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-25",
+        "source_publication_date": "2026-08-25",
+        "observation_date": "2026-07-31",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-31",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-25",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-31",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-31",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-25",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979-b96afb470941cdd0",
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "source": "https://arxiv.org/abs/2608.24979v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-frontierchallenge-97-07-9752766c1f880050"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "frontierchallenge-97-07"
+        ]
+      },
+      {
+        "observation_id": "obs-0-103-e23f694f36c2d185",
+        "benchmark_id": "frontierchallenge-97",
+        "benchmark_version_id": "frontierchallenge-97-canonical",
+        "model_id": "model-gemini-3-7-flash-claude-code-0250c4c49a60c71d",
+        "model_configuration": "Gemini 3.7 Flash (Claude Code)",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-7-flash-claude-code",
+        "model_family_id": "google-deepmind-gemini-3-7-flash",
+        "model": "Gemini 3.7 Flash (Claude Code)",
+        "organization": "Google DeepMind",
+        "score": 0.10300000000000001,
+        "input_score": 10.3,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "frontierchallenge-97-metric-v1",
+        "protocol_id": "frontierchallenge-97-source-export-v1",
+        "task_set_id": "frontierchallenge-97-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "frontierchallenge-97-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-08-13",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-25",
+        "source_publication_date": "2026-08-25",
+        "observation_date": "2026-08-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-08-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-25",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-08-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-08-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-25",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979-b96afb470941cdd0",
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "source": "https://arxiv.org/abs/2608.24979v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-frontierchallenge-97-08-69a5364b1ca4c8b9"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "frontierchallenge-97-08"
+        ]
+      },
+      {
+        "observation_id": "obs-0-041-878a924755d7a64c",
+        "benchmark_id": "frontierchallenge-97",
+        "benchmark_version_id": "frontierchallenge-97-canonical",
+        "model_id": "model-qwen3-5-397b-a17b-claude-code-098f67c2b319f081",
+        "model_configuration": "Qwen3.5-397B-A17B (Claude Code)",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen3-5-397b-a17b-claude-code",
+        "model_family_id": "alibaba-qwen3-5-397b-a17b",
+        "model": "Qwen3.5-397B-A17B (Claude Code)",
+        "organization": "Alibaba",
+        "score": 0.040999999999999995,
+        "input_score": 4.1,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "frontierchallenge-97-metric-v1",
+        "protocol_id": "frontierchallenge-97-source-export-v1",
+        "task_set_id": "frontierchallenge-97-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "frontierchallenge-97-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-02-13",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-25",
+        "source_publication_date": "2026-08-25",
+        "observation_date": "2026-02-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-02-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-25",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-02-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-02-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-25",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979-b96afb470941cdd0",
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "source": "https://arxiv.org/abs/2608.24979v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-frontierchallenge-97-09-022456f7111e4710"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "frontierchallenge-97-09"
+        ]
+      },
+      {
+        "observation_id": "obs-0-031-23abb0d3db6289ba",
+        "benchmark_id": "frontierchallenge-97",
+        "benchmark_version_id": "frontierchallenge-97-canonical",
+        "model_id": "model-glm-5-2-claude-code-79ea9d1e8cd3cf46",
+        "model_configuration": "GLM-5.2 (Claude Code)",
+        "model_identity_organization": "z-ai",
+        "model_label_id": "glm-5-2-claude-code",
+        "model_family_id": "z-ai-glm-5-2",
+        "model": "GLM-5.2 (Claude Code)",
+        "organization": "Z.ai",
+        "score": 0.031,
+        "input_score": 3.1,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "frontierchallenge-97-metric-v1",
+        "protocol_id": "frontierchallenge-97-source-export-v1",
+        "task_set_id": "frontierchallenge-97-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "frontierchallenge-97-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-06-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-25",
+        "source_publication_date": "2026-08-25",
+        "observation_date": "2026-06-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-06-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-25",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-06-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-06-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-25",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979-b96afb470941cdd0",
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "source": "https://arxiv.org/abs/2608.24979v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-frontierchallenge-97-10-9ced70b191cb9d2b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "frontierchallenge-97-10"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-206-f0f7e11c1919319b",
+        "benchmark_id": "frontierchallenge-97",
+        "benchmark_version_id": "frontierchallenge-97-canonical",
+        "model_id": "model-grok-4-6-claude-code-81d4057aceaab0f8",
+        "model_configuration": "Grok 4.6 (Claude Code)",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-6-claude-code",
+        "model_family_id": "xai-grok-4-6",
+        "model": "Grok 4.6 (Claude Code)",
+        "organization": "xAI",
+        "score": 0.20600000000000002,
+        "input_score": 20.6,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "frontierchallenge-97-metric-v1",
+        "protocol_id": "frontierchallenge-97-source-export-v1",
+        "task_set_id": "frontierchallenge-97-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "frontierchallenge-97-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-08-12",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-25",
+        "source_publication_date": "2026-08-25",
+        "observation_date": "2026-08-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-08-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067",
+              "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3",
+          "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-25",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-08-25",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-08-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-25",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979-b96afb470941cdd0",
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3",
+          "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "source": "https://arxiv.org/abs/2608.24979v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-frontierchallenge-97-01-a606d988efe53783"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "frontierchallenge-97-01"
+        ],
+        "plot_date": "2026-08-25",
+        "frontier_observation_ids": [
+          "obs-0-031-23abb0d3db6289ba",
+          "obs-0-041-878a924755d7a64c",
+          "obs-0-103-e23f694f36c2d185",
+          "obs-0-124-1239213f239ebccf",
+          "obs-0-134-0b65f4a997b9c176",
+          "obs-0-155-c72b968aa84fecc0",
+          "obs-0-155-d86e1d794abf0f42",
+          "obs-0-175-c0d59d39abe597cb",
+          "obs-0-175-eb439ff93a0bdc9e",
+          "obs-0-206-2f98eebfd180e22b",
+          "obs-0-206-f0f7e11c1919319b"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-206-f0f7e11c1919319b",
+        "benchmark_id": "frontierchallenge-97",
+        "benchmark_version_id": "frontierchallenge-97-canonical",
+        "model_id": "model-grok-4-6-claude-code-81d4057aceaab0f8",
+        "model_configuration": "Grok 4.6 (Claude Code)",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-6-claude-code",
+        "model_family_id": "xai-grok-4-6",
+        "model": "Grok 4.6 (Claude Code)",
+        "organization": "xAI",
+        "score": 0.20600000000000002,
+        "input_score": 20.6,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "frontierchallenge-97-metric-v1",
+        "protocol_id": "frontierchallenge-97-source-export-v1",
+        "task_set_id": "frontierchallenge-97-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "frontierchallenge-97-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-08-12",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-25",
+        "source_publication_date": "2026-08-25",
+        "observation_date": "2026-08-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-08-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067",
+              "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3",
+          "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-25",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-08-25",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-08-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-25",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979-b96afb470941cdd0",
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3",
+          "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "source": "https://arxiv.org/abs/2608.24979v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-frontierchallenge-97-01-a606d988efe53783"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "frontierchallenge-97-01"
+        ],
+        "plot_date": "2026-08-25",
+        "frontier_observation_ids": [
+          "obs-0-031-23abb0d3db6289ba",
+          "obs-0-041-878a924755d7a64c",
+          "obs-0-103-e23f694f36c2d185",
+          "obs-0-124-1239213f239ebccf",
+          "obs-0-134-0b65f4a997b9c176",
+          "obs-0-155-c72b968aa84fecc0",
+          "obs-0-155-d86e1d794abf0f42",
+          "obs-0-175-c0d59d39abe597cb",
+          "obs-0-175-eb439ff93a0bdc9e",
+          "obs-0-206-2f98eebfd180e22b",
+          "obs-0-206-f0f7e11c1919319b"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-206-f0f7e11c1919319b",
+        "benchmark_id": "frontierchallenge-97",
+        "benchmark_version_id": "frontierchallenge-97-canonical",
+        "model_id": "model-grok-4-6-claude-code-81d4057aceaab0f8",
+        "model_configuration": "Grok 4.6 (Claude Code)",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-6-claude-code",
+        "model_family_id": "xai-grok-4-6",
+        "model": "Grok 4.6 (Claude Code)",
+        "organization": "xAI",
+        "score": 0.20600000000000002,
+        "input_score": 20.6,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "frontierchallenge-97-metric-v1",
+        "protocol_id": "frontierchallenge-97-source-export-v1",
+        "task_set_id": "frontierchallenge-97-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "frontierchallenge-97-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-08-12",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-25",
+        "source_publication_date": "2026-08-25",
+        "observation_date": "2026-08-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-08-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067",
+              "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3",
+          "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-25",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-08-25",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-08-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-25",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979-b96afb470941cdd0",
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3",
+          "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "source": "https://arxiv.org/abs/2608.24979v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-frontierchallenge-97-01-a606d988efe53783"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "frontierchallenge-97-01"
+        ],
+        "plot_date": "2026-08-25",
+        "frontier_observation_ids": [
+          "obs-0-031-23abb0d3db6289ba",
+          "obs-0-041-878a924755d7a64c",
+          "obs-0-103-e23f694f36c2d185",
+          "obs-0-124-1239213f239ebccf",
+          "obs-0-134-0b65f4a997b9c176",
+          "obs-0-155-c72b968aa84fecc0",
+          "obs-0-155-d86e1d794abf0f42",
+          "obs-0-175-c0d59d39abe597cb",
+          "obs-0-175-eb439ff93a0bdc9e",
+          "obs-0-206-2f98eebfd180e22b",
+          "obs-0-206-f0f7e11c1919319b"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-206-f0f7e11c1919319b",
+        "benchmark_id": "frontierchallenge-97",
+        "benchmark_version_id": "frontierchallenge-97-canonical",
+        "model_id": "model-grok-4-6-claude-code-81d4057aceaab0f8",
+        "model_configuration": "Grok 4.6 (Claude Code)",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-6-claude-code",
+        "model_family_id": "xai-grok-4-6",
+        "model": "Grok 4.6 (Claude Code)",
+        "organization": "xAI",
+        "score": 0.20600000000000002,
+        "input_score": 20.6,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "frontierchallenge-97-metric-v1",
+        "protocol_id": "frontierchallenge-97-source-export-v1",
+        "task_set_id": "frontierchallenge-97-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "frontierchallenge-97-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-08-12",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-25",
+        "source_publication_date": "2026-08-25",
+        "observation_date": "2026-08-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-08-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067",
+              "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3",
+          "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-25",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-08-25",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-08-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-25",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979-b96afb470941cdd0",
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3",
+          "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "source": "https://arxiv.org/abs/2608.24979v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-frontierchallenge-97-01-a606d988efe53783"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "frontierchallenge-97-01"
+        ],
+        "plot_date": "2026-08-25",
+        "frontier_observation_ids": [
+          "obs-0-031-23abb0d3db6289ba",
+          "obs-0-041-878a924755d7a64c",
+          "obs-0-103-e23f694f36c2d185",
+          "obs-0-124-1239213f239ebccf",
+          "obs-0-134-0b65f4a997b9c176",
+          "obs-0-155-c72b968aa84fecc0",
+          "obs-0-155-d86e1d794abf0f42",
+          "obs-0-175-c0d59d39abe597cb",
+          "obs-0-175-eb439ff93a0bdc9e",
+          "obs-0-206-2f98eebfd180e22b",
+          "obs-0-206-f0f7e11c1919319b"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-206-f0f7e11c1919319b",
+        "benchmark_id": "frontierchallenge-97",
+        "benchmark_version_id": "frontierchallenge-97-canonical",
+        "model_id": "model-grok-4-6-claude-code-81d4057aceaab0f8",
+        "model_configuration": "Grok 4.6 (Claude Code)",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-6-claude-code",
+        "model_family_id": "xai-grok-4-6",
+        "model": "Grok 4.6 (Claude Code)",
+        "organization": "xAI",
+        "score": 0.20600000000000002,
+        "input_score": 20.6,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": null,
+        "metric_id": "frontierchallenge-97-metric-v1",
+        "protocol_id": "frontierchallenge-97-source-export-v1",
+        "task_set_id": "frontierchallenge-97-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "frontierchallenge-97-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-08-12",
+        "evaluation_date": null,
+        "result_public_date": "2026-08-25",
+        "source_publication_date": "2026-08-25",
+        "observation_date": "2026-08-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-08-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067",
+              "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3",
+          "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-08-25",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-14",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-08-25",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-08-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-08-25",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979-b96afb470941cdd0",
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3",
+          "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2608-24979v1-ed17201a2aadf8e3"
+        ],
+        "source": "https://arxiv.org/abs/2608.24979v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-frontierchallenge-97-01-a606d988efe53783"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "frontierchallenge-97-01"
+        ],
+        "plot_date": "2026-08-25",
+        "frontier_observation_ids": [
+          "obs-0-031-23abb0d3db6289ba",
+          "obs-0-041-878a924755d7a64c",
+          "obs-0-103-e23f694f36c2d185",
+          "obs-0-124-1239213f239ebccf",
+          "obs-0-134-0b65f4a997b9c176",
+          "obs-0-155-c72b968aa84fecc0",
+          "obs-0-155-d86e1d794abf0f42",
+          "obs-0-175-c0d59d39abe597cb",
+          "obs-0-175-eb439ff93a0bdc9e",
+          "obs-0-206-2f98eebfd180e22b",
+          "obs-0-206-f0f7e11c1919319b"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.20600000000000002,
+    "capability_frontier_value": 0.20600000000000002,
+    "reported_frontier_value": 0.20600000000000002,
+    "current_frontier": 0.20600000000000002,
+    "normalized_progress": 0.20600000000000002,
+    "normalized_headroom": 0.794,
+    "threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 20
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 20
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 20
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 20
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 20
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 20
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 20
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 20
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 20
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.8571428571428571,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "DeepSeek",
+        "Qwen",
+        "xAI"
+      ],
+      "panel_size": 7,
+      "status": "high"
+    },
+    "unavailable": [
+      "T80: not included in the first vertical slice"
+    ],
+    "resource_ids": [
+      "resource-https-arxiv-org-abs-2608-24979-b96afb470941cdd0"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": true,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}
