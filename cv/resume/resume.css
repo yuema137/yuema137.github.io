@@ -72,8 +72,8 @@
      -------------------------------------------------------------------- */
   --sp-tiny:2pt;
   --sp-small:3.4pt;
-  --sp-med:13pt;
-  --sp-large:18pt;
+  --sp-med:10pt;
+  --sp-large:14pt;
 
   --indent:1.3em;         /* bullet hang: wide enough that the dash is not
                              glued to the text, shallow enough that it costs
@@ -129,6 +129,9 @@ ul{margin:0;padding:0;list-style:none}
 }
 
 .page + .page{margin-top:26px}   /* screen only; removed in print */
+
+/* The systems page carries architecture and measured results together. */
+.page-1{--sp-large:10pt;--sp-med:8pt;--lh-tight:1.30}
 
 /* --- Masthead ------------------------------------------------------------- */
 

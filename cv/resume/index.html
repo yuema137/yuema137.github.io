@@ -4,244 +4,178 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Yue Ma — CV</title>
-    <meta name="description" content="Curriculum vitae of Yue Ma — postdoctoral researcher at the Halıcıoğlu Data Science Institute, UC San Diego.">
+    <meta name="description" content="Yue Ma — agent systems and evaluation, statistical inference, and scientific machine learning.">
     <meta name="robots" content="noindex, nofollow">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <!-- Path is RELATIVE on purpose: the PDF build loads this file over
-         file://, where a leading slash resolves to the filesystem root.
-         See the header comment in resume.css. -->
     <link rel="stylesheet" href="resume.css">
   </head>
   <body>
-
-    <!-- ======================================================================
-         MAINTENANCE
-
-         WHEN THE SIDERIUS ARXIV LANDS: it becomes the first entry under
-         Selected Publications, and the 2023 XENONnT PRL comes out to keep the
-         list at three. Also link the SIDERIUS name in the entry below —
-         <span class="sysname"> is already its own element for that purpose.
-
-         CLAIMS MUST MATCH THE PAPERS. The SIDERIUS preprint states that no
-         campaign has run to completion and no scientific result is claimed
-         (deepest cohort: iteration 7 of 20). A "5x denoising improvement on
-         TIDMAD" line was removed from this CV for that reason. Before adding
-         any empirical number here, check it against the current preprint —
-         a recruiter who opens the paper will see the contradiction.
-
-         This document is the source of assets/cv/yue-ma-cv.pdf. Never edit
-         that PDF; it is overwritten on every build.
-
-           npm run cv        build the PDF
-           npm run cv:png    build it and render both pages for review
-
-         Then LOOK at build/cv-preview/page-{1,2}.png. The build passing is not
-         the same as the page looking right.
-
-         The two <article class="page"> elements are physical sheets. Content
-         does NOT flow between them: a page that runs long is clipped, not
-         pushed onto the next sheet. So when you add content you also choose
-         which page it lives on.
-
-         To rebalance, use the tokens in resume.css in this order and stop as
-         soon as it looks right:
-             1. --sp-large / --sp-med / --sp-small   (whitespace)
-             2. --lh-tight                           (line height)
-             3. --t-body                             (type size — last resort)
-         ================================================================== -->
-
+    <!-- This is the source of assets/cv/yue-ma-cv.pdf, not a published page.
+         Build with npm run cv:png and inspect both rendered PDF pages.
+         Each article.page is one physical sheet; content cannot flow between pages.
+         Keep claims grounded in the reference CVs and the project's public record.
+         Publication status follows publications/index.html. RESuM is an acknowledged
+         contribution, not an authored publication. SIDERIUS results follow Table 1 of
+         the September 26, 2026 manuscript: the best orchestrated configuration
+         without Data Analysis, not an average over configurations or repeated seeds.
+         Linear SNR ratio: 5.27 ** (2.744 - (-0.647)) = 280.32, rounded to 280.
+         This is the file-weighted aggregate over bandwise best valid models.
+         Relative font/CSS paths are required by the file:// PDF build. -->
     <main class="resume">
-
-      <!-- ============================== PAGE 1 ========================== -->
       <article class="page page-1">
-
         <header class="masthead">
           <h1 class="name">Yue&nbsp;Ma</h1>
           <p class="contact"><a href="https://www.linkedin.com/in/yue-ma-719818191/">LinkedIn</a><span class="sep">·</span><a href="https://github.com/yuema137">GitHub</a><span class="sep">·</span><a href="https://scholar.google.com/citations?user=kfhiI_kAAAAJ">Google Scholar</a><span class="sep">·</span><a href="https://yuema137.github.io">Website</a><span class="sep">·</span><a href="mailto:yuema9810@gmail.com">yuema9810@gmail.com</a></p>
         </header>
 
         <section class="section">
-          <h2>Profile</h2>
-          <p>Postdoctoral researcher building LLM agent systems and evaluation infrastructure for
-            science and engineering, with a focus on decision trajectories, action spaces, and
-            resource-bounded experimentation.</p>
+          <h2>Research Profile</h2>
+          <p>Postdoctoral researcher building resource-efficient agents for science and engineering.
+            My work spans autonomous research systems, agent evaluation, statistical modeling, and scientific ML,
+            measuring outcomes, decision trajectories, uncertainty, and resource use.</p>
         </section>
 
         <section class="section">
           <h2>Education &amp; Academic Positions</h2>
           <ul class="rows">
-            <li><span><b>Postdoctoral Researcher</b>, <span class="where">Halıcıoğlu Data Science Institute, UC San Diego</span></span><span class="when">Mar 2026 – Present</span></li>
-            <li><span><b>Ph.D. in Particle Physics</b>, <span class="where">University of California, San Diego</span></span><span class="when">Oct 2020 – Feb 2026</span></li>
-            <li><span><b>B.S. in Physics</b>, <span class="where">Nanjing University</span></span><span class="when">Aug 2016 – Jun 2020</span></li>
+            <li><span><b>Postdoctoral Researcher</b>, <span class="where">Halıcıoğlu Data Science Institute, UC San Diego</span></span><span class="when">Mar 2026 - Present</span></li>
+            <li><span><b>Ph.D. in Particle Physics</b>, <span class="where">University of California, San Diego</span></span><span class="when">Oct 2020 - Feb 2026</span></li>
+            <li><span><b>B.S. in Physics</b>, <span class="where">Kuang Yaming Honors School, Nanjing University</span></span><span class="when">Aug 2016 - Jun 2020</span></li>
           </ul>
         </section>
 
         <section class="section">
-          <h2>Agentic Systems, Evaluation, and Research Infrastructure</h2>
-
+          <h2>Agent Systems &amp; Scientific Evaluation</h2>
           <article class="entry">
-            <div class="entry-head">
-              <h3 class="entry-title">Resource-Aware Multi-Agent System for Autonomous Research</h3>
-              <p class="entry-date">Feb 2026 – Present</p>
-            </div>
-            <!-- SIDERIUS is the public system name. When the paper is out, this
-                 becomes <a href="..." class="sysname">SIDERIUS.</a> and nothing
-                 else has to change. -->
-            <p class="entry-sub"><span class="sysname">SIDERIUS.</span> A closed-loop agentic system
-              for proposing, implementing, and evaluating machine-learning experiments under online
-              compute constraints. Sole architect and developer; initially demonstrated on scientific
-              time-series denoising and now extending to additional domains.</p>
+            <div class="entry-head"><h3 class="entry-title">SIDERIUS: Resource-Aware Autonomous Research</h3><p class="entry-date">Feb 2026 - Present</p></div>
+            <p class="entry-sub">Sole architect and developer. Built long-horizon scientific ML infrastructure;
+              evaluated on TIDMAD and reused for TESS, LIGO, and Project 8 physics time-series tasks.</p>
             <ul class="bullets">
-              <li><b>Composable Agent Runtime:</b> Designed six reusable agent capabilities with typed,
-                caller-independent contracts, separating capability implementation from workflow wiring
-                and orchestration policy.</li>
-              <li><b>Scientific Evaluation and Resource Control:</b> Built declarative task and
-                evaluation contracts, device-specific runtime and GPU-memory calibration, quality
-                gates, bounded execution, and resumable long-horizon experimentation under explicit
-                compute budgets; demonstrated end to end on the
-                <a href="https://arxiv.org/abs/2406.04378">TIDMAD benchmark</a>.</li>
+              <li><b>Composable architecture:</b> Designed seven capabilities with typed, caller-independent contracts
+                for fixed workflows, LLM orchestration, and direct human intervention.</li>
+              <li><b>Scientific validity:</b> Separated optimization, monitoring, ranking, and supporting evidence.
+                Combined online scoreability/health checks with offline LLM behavioral review to detect collapse
+                and gaming, using a frozen rubric without feeding judgments back into search.</li>
+              <li><b>Resource-aware exploration:</b> Built GPU cost probes, runtime/VRAM budgets, feasibility checks,
+                monitoring, and bounded retries; measured costs and failures inform subsequent proposals.</li>
+              <li><b>TIDMAD dark-matter denoising benchmark:</b> Best orchestrated configuration (without Data Analysis) achieved
+                <b>63.8% valid proposals vs. 1.6%</b> for Codex with the same GPT backend, and
+                <b>over two orders of magnitude higher aggregate signal-to-noise ratio</b> for best valid models under the benchmark protocol.</li>
             </ul>
           </article>
-
           <article class="entry">
-            <div class="entry-head">
-              <h3 class="entry-title">SciTra: Scientific-Agent Evaluation and Trajectory Infrastructure</h3>
-              <p class="entry-date">Jul 2026 – Present</p>
-            </div>
-            <p class="entry-sub">Founder and Coordinator of a collaboration with approximately 100 scientists across 20+
-              institutions, developing scientific-agent evaluations and decision-trajectory
-              infrastructure.</p>
+            <div class="entry-head"><h3 class="entry-title"><a href="https://scitra.org">SciTra</a>: Scientific-Agent Evaluation &amp; Trajectories</h3><p class="entry-date">Jul 2026 - Present</p></div>
+            <p class="entry-sub">Founder and Coordinator. Built a collaboration of approximately 100 researchers across
+              20+ institutions, with 50+ evaluation tasks in development; coordinate domain, evaluation, and infrastructure teams.</p>
             <ul class="bullets">
-              <li><b>Scientific Agent Evaluation:</b> Developing a general methodology for representing
-                decision trajectories, action spaces, outcomes, and resource use, so that agent runs can
-                be compared across agents, tasks, and domains.</li>
-              <li><b>Trajectory Infrastructure:</b> Built cross-vendor infrastructure capturing
-                expert–agent interaction, tool use, Git changes, failures, costs, outputs, and typed
-                decision records, with append-only declarations, frozen evidence, and deterministic
-                export for reproducible evaluation.</li>
+              <li><b>Evaluation methodology:</b> Lead research on outcomes, resource use, and decision trajectories.
+                Represent scientific actions and decisions using domain knowledge and human-agent interactions
+                to support comparisons across agents, tasks, and domains.</li>
+              <li><b>Evidence infrastructure:</b> Built cross-vendor trajectory instrumentation and coordinate
+                requirements for a Rust-based runtime. Online records capture interactions, tool use, Git changes,
+                costs, outputs, and failures; task-specific evaluation processes the evidence offline.</li>
             </ul>
           </article>
-
         </section>
 
         <section class="section">
           <h2>Technical Skills</h2>
           <dl class="skills">
-            <dt>Programming &amp; ML</dt>
-            <dd>Python, PyTorch, NumPy, Pandas, SciPy, Scikit-learn, C/C++, Bash, Linux, Git</dd>
-            <dt>Agents &amp; Evaluation</dt>
-            <dd>LLM agent systems, multi-agent orchestration, agent evaluation, benchmark design,
-              <span class="nb">action-space</span> and trajectory instrumentation, autonomous experimental loops</dd>
-            <dt>Systems &amp; Infrastructure</dt>
-            <dd>Pydantic, FastAPI, pytest, GitHub Actions, SLURM/HPC, ETL pipelines, resource
-              monitoring and performance optimization</dd>
+            <dt>Programming &amp; ML</dt><dd>Python, PyTorch, NumPy, Pandas, SciPy, scikit-learn, C/C++, Numba, Bash, Linux, Git</dd>
+            <dt>Agents &amp; Statistics</dt><dd>Multi-agent orchestration, benchmark design, trajectory analysis, Bayesian and likelihood inference, uncertainty propagation, hypothesis testing</dd>
+            <dt>Infrastructure</dt><dd>Pydantic, FastAPI, pytest, GitHub Actions, SLURM/HPC, ETL pipelines, resource monitoring and performance optimization</dd>
           </dl>
+        </section>
+        <section class="section">
+          <h2>Selected Talks &amp; Service</h2>
+          <p>Invited SIDERIUS talk and scientific-agent Birds-of-a-Feather session, Fast ML for Science,
+            UC San Diego (Sep 2026). Session chair, APS Global Physics Summit (Mar 2026).</p>
         </section>
       </article>
 
-      <!-- ============================== PAGE 2 ========================== -->
       <article class="page page-2">
-
-        <div class="runhead"><b>Yue Ma</b><span>Page 2 of 2</span></div>
-
+        <div class="runhead"><b>Yue Ma</b><span>September 2026 · Page 2 of 2</span></div>
         <section class="section">
-          <h2>Machine Learning Research</h2>
-
+          <h2>Statistical Modeling, Evaluation &amp; Scientific Computing</h2>
           <article class="entry">
-            <div class="entry-head">
-              <h3 class="entry-title">Adaptive Neural Processes for Extreme Forecasting</h3>
-              <p class="entry-date">Nov 2024 – Jun 2025</p>
-            </div>
-            <p class="entry-sub">Probabilistic forecasting under distribution shifts and limited
-              observations. <a href="https://arxiv.org/abs/2602.04609">arXiv:2602.04609</a></p>
+            <div class="entry-head"><h3 class="entry-title">Measurement &amp; Inference in XENONnT</h3><p class="entry-date">Oct 2020 - Feb 2026</p></div>
             <ul class="bullets">
-              <li><b>Model Development and Evaluation:</b> Conceived and derived AdaCNP, a
-                target-conditioned context-reweighting mechanism enabling few-shot adaptation to unseen
-                extreme regimes without retraining; achieved a 22% reduction in MSE and the best
-                negative log-likelihood among Neural Process baselines across two real-world
-                power-system datasets.</li>
+              <li>Developed Bayesian and maximum-likelihood inference frameworks and Monte Carlo workflows for
+                uncertainty propagation, sensitivity estimation, and hypothesis testing in rare-event searches.</li>
+              <li><b>Corresponding author</b> on the first solar-neutrino measurement through keV-scale
+                neutrino-electron scattering; contributed statistical inference, data processing, and detector
+                response modeling. Core contributor to dark-matter and electronic-recoil searches through
+                event selection, efficiency/background modeling, and detector calibration.</li>
             </ul>
           </article>
-
           <article class="entry">
-            <div class="entry-head">
-              <h3 class="entry-title">Multi-Fidelity Surrogate Modeling for Scientific Simulation</h3>
-              <p class="entry-date">Jul 2024 – Oct 2024</p>
-            </div>
-            <p class="entry-sub">Learning efficient surrogates for computationally expensive,
-              high-variance detector simulations.</p>
-            <ul class="bullets">
-              <li><b>Compute-Efficient Scientific ML:</b> Developed a multi-fidelity surrogate combining
-                Gaussian Processes and Neural Processes to emulate high-dimensional rare-event
-                simulations, reducing simulation cost by 96.7% while improving background-suppression
-                efficiency by 66.5%; contributed core algorithms and derivations to the
-                <a href="https://openreview.net/pdf?id=lqTILjL6lP">ICLR 2025 Spotlight paper
-                “RESuM”</a> (acknowledged for significant contribution).</li>
-            </ul>
+            <div class="entry-head"><h3 class="entry-title">Data Infrastructure: strax &amp; straxen</h3><p class="entry-date">Jan 2024 - Feb 2026</p></div>
+            <p>Key maintainer of <a href="https://github.com/AxFoundation/strax">strax</a> and
+              <a href="https://github.com/XENONnT/straxen">straxen</a>, processing petabyte-scale detector data for 200+
+              collaborators. Reduced ETL latency by 40% through vectorized NumPy/Pandas workflows,
+              Numba acceleration, and memory-efficient processing.</p>
           </article>
         </section>
 
         <section class="section">
-          <h2>Statistical Inference and Large-Scale Scientific Computing</h2>
-          <p class="section-note">Research within the
-            <a href="https://xenonexperiment.org/">XENONnT Collaboration</a>, a 200+ scientist
-            international experiment operating petabyte-scale data systems for dark-matter and
-            solar-neutrino searches.</p>
+          <h2>Scientific Machine Learning</h2>
+          <ul class="bullets">
+            <li><b>Density-guided conditional neural processes:</b> First-author work on detector efficiency
+              estimation, connecting probabilistic ML with detector-response modeling (2026; publication below).</li>
+            <li><b>Adaptive neural processes for extreme forecasting</b> (Nov 2024 - Jun 2025): Conceived and derived
+              AdaCNP for few-shot adaptation to unseen extreme regimes without retraining; achieved 22% lower MSE
+              and best negative log-likelihood among Neural Process baselines on two power-system datasets.</li>
+            <li><b>Multi-fidelity surrogates for simulation</b> (Jul - Oct 2024): Combined Gaussian and Neural
+              Processes for rare-event simulation; reduced simulation cost by 96.7% and improved background-suppression
+              efficiency by 66.5%. Core algorithms and derivations for
+              <a href="https://arxiv.org/abs/2410.03873">RESuM</a>, ICLR 2025 Spotlight
+              (<b>acknowledged contribution; not a coauthor</b>).</li>
+          </ul>
+        </section>
 
-          <article class="entry">
-            <div class="entry-head">
-              <h3 class="entry-title">Probabilistic Modeling and Statistical Inference <span class="qualifier">(Corresponding Author)</span></h3>
-              <p class="entry-date">Oct 2020 – Feb 2026</p>
-            </div>
-            <p class="entry-sub">One of the corresponding authors on XENONnT's first measurement of
-              solar pp neutrinos at ultra-low momentum transfer.</p>
-            <ul class="bullets">
-              <li><b>Inference and Experimental Evaluation:</b> Developed Bayesian and
-                maximum-likelihood inference frameworks, improving the precision of efficiency
-                estimates by 60% through new calibration and data-selection strategies; built Monte
-                Carlo workflows for uncertainty propagation, sensitivity estimation, and hypothesis
-                testing.</li>
-            </ul>
-          </article>
-
-          <article class="entry">
-            <div class="entry-head">
-              <h3 class="entry-title">Data Infrastructure and High-Throughput Computing</h3>
-              <p class="entry-date">Jan 2024 – Feb 2026</p>
-            </div>
-            <ul class="bullets">
-              <li><b>Distributed Data Systems:</b> Key maintainer of the open-source
-                <a href="https://github.com/AxFoundation/strax">strax</a> and
-                <a href="https://github.com/XENONnT/straxen">straxen</a> frameworks processing
-                petabyte-scale detector data for 200+ collaborators; reduced ETL latency by 40% through
-                vectorized NumPy and Pandas workflows, Numba acceleration, and memory-efficient
-                processing.</li>
-            </ul>
-          </article>
+        <section class="section">
+          <h2>Evaluation Resources &amp; Human-Agent Tools</h2>
+          <ul class="bullets">
+            <li><b><a href="https://yuema137.github.io/ble/">Leaderboard of Benchmarks</a>:</b> Compare evaluation instruments by capability
+              coverage, frontier evolution, saturation, and cost. <b><a href="https://yuema137.github.io/scieval/">SciEval</a>:</b>
+              Bilingual map of scientific-agent benchmarks, measurement scope, and improvement opportunities.</li>
+            <li><b><a href="https://github.com/yuema137/PairTeX">PairTeX</a>:</b> In-place manuscript review and structured agent feedback for
+              LaTeX repositories. <b><a href="https://github.com/yuema137/structured-coding">Structured Coding</a>:</b>
+              Planning, implementation, validation, and review workflows for coding agents.</li>
+          </ul>
         </section>
 
         <section class="section">
           <h2>Selected Publications</h2>
           <ul class="pubs">
-            <li>Aprile, E. <i>et al.</i> (2026).
-              <span class="title">“First Measurement of Solar Neutrinos through Elastic
-              Neutrino-Electron Scattering at the keV Scale”.</span>
-              <a href="https://arxiv.org/abs/2608.29450">arXiv:2608.29450</a>.
-              <span class="me">Corresponding author.</span></li>
+            <li><span class="me">Yue Ma</span>, Lucas Venetoulias, Akbota Assan, Aobo Li (2026).
+              <span class="title">Beyond a Better Score: Long-Horizon Agentic ML Development and Evaluation Protocol for Physics Time Series.</span>
+              Preprint; submitted to ICLR.</li>
+            <li><span class="me">Yue Ma</span>, Aobo Li (2026).
+              <span class="title">Density-Guided Conditional Neural Processes for Detector Efficiency Estimation.</span>
+              Preprint, <a href="https://arxiv.org/abs/2609.13593">arXiv:2609.13593</a>.</li>
+            <li>E. Aprile et al. (XENON Collaboration, including <span class="me">Yue Ma</span>) (2026).
+              <span class="title">First Measurement of Solar Neutrinos through Elastic Neutrino-Electron Scattering at the keV Scale.</span>
+              Preprint, <a href="https://arxiv.org/abs/2608.29450">arXiv:2608.29450</a>. <span class="me">Corresponding author.</span></li>
+            <li>Yiming Huang et al. (including <span class="me">Yue Ma</span>) (2026).
+              <span class="title">Can LLMs Discover Scientific Laws in Real and Parallel Worlds?</span>
+              Submitted to ICLR; <a href="https://arxiv.org/abs/2609.01552">arXiv:2609.01552</a>.</li>
+            <li>Hejia Geng, Zesen Huang, et al. (including <span class="me">Yue Ma</span>) (2026).
+              <span class="title">ScienceIDE: Turning World's Scientific Codebase into Agent Learnable Environments.</span>
+              Submitted to ICLR; <a href="https://arxiv.org/abs/2609.19134">arXiv:2609.19134</a>.</li>
             <li>Chenxi Hu, <span class="me">Yue Ma</span>, Yifan Wu, Yunhe Hou (2026).
-              <span class="title">“Resilient Load Forecasting under Climate Change: Adaptive
-              Conditional Neural Processes for Few-Shot Extreme Load Forecasting”.</span>
-              <a href="https://arxiv.org/abs/2602.04609">arXiv:2602.04609</a>.</li>
-            <li>Aprile, E. <i>et al.</i> (2023).
-              <span class="title">“First Dark Matter Search with Nuclear Recoils from XENONnT”.</span>
-              <span class="venue">Phys. Rev. Lett.</span> <b>131</b>, 041003.</li>
+              <span class="title">Resilient Load Forecasting under Climate Change: Adaptive Conditional Neural Processes for Few-Shot Extreme Load Forecasting.</span>
+              Preprint, <a href="https://arxiv.org/abs/2602.04609">arXiv:2602.04609</a>.</li>
+            <li>E. Aprile et al. (XENON Collaboration, including <span class="me">Yue Ma</span>) (2023).
+              <span class="title">First Dark Matter Search with Nuclear Recoils from the XENONnT Experiment.</span>
+              <a href="https://doi.org/10.1103/PhysRevLett.131.041003">Phys. Rev. Lett. <b>131</b>, 041003</a>.</li>
+            <li>E. Aprile et al. (XENON Collaboration, including <span class="me">Yue Ma</span>) (2022).
+              <span class="title">Search for New Physics in Electronic Recoil Data from XENONnT.</span>
+              <a href="https://doi.org/10.1103/PhysRevLett.129.161805">Phys. Rev. Lett. <b>129</b>, 161805</a>.</li>
           </ul>
         </section>
 
       </article>
     </main>
-
     <p class="backlink">Build input for <code>assets/cv/yue-ma-cv.pdf</code> — not a page of the website.</p>
-
   </body>
 </html>
