@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-04",
+  "snapshot_id": "2026-09-23",
   "reference_organizations": [
     {
       "id": "openai",
@@ -102,7 +102,247 @@
       "progress_target": 1.0,
       "lifecycle_eligible": true
     },
-    "auxiliary_score_series": [],
+    "auxiliary_score_series": [
+      {
+        "series_id": "healthbench-auxiliary-healthbench-openai-sep22-raw",
+        "role": "auxiliary",
+        "label": "September 22 system card / raw",
+        "metric_id": "healthbench-metric-v1",
+        "metric_name": "Score",
+        "protocol_id": "healthbench-openai-sep22-raw",
+        "task_set_id": "healthbench-openai-sep22-raw",
+        "lifecycle_eligible": false,
+        "explanation": {
+          "en": "Overall unadjusted HealthBench score, Table 29. New evaluation configuration is isolated from the original paper; Astra values include the September 22 correction.",
+          "zh": "\u8868 29 \u7684 HealthBench \u603b\u4f53\u672a\u4f5c\u957f\u5ea6\u6821\u6b63\u7684\u5206\u6570\u3002\u65b0\u8bc4\u6d4b\u914d\u7f6e\u4e0e\u539f\u8bba\u6587\u9694\u79bb\uff1bAstra \u4f7f\u7528 9 \u6708 22 \u65e5\u4fee\u6b63\u503c\u3002"
+        },
+        "observation_ids": [
+          "obs-0-569-5f2224ad9628c85f",
+          "obs-0-471-221f715c34e0ed6d",
+          "obs-0-5-25532b8ac4780f26"
+        ],
+        "frontier_events": [
+          {
+            "observation_id": "obs-0-569-5f2224ad9628c85f",
+            "benchmark_id": "healthbench",
+            "benchmark_version_id": "healthbench-canonical",
+            "model_id": "model-gpt-6-astra-september-22-system-card-raw-b8dd91f3b83a6161",
+            "model_configuration": "GPT-6 Astra (September 22 system card, raw)",
+            "model_identity_organization": "openai",
+            "model_label_id": "gpt-6-astra-september-22-system-card-raw",
+            "model_family_id": "openai-gpt-6-astra",
+            "model": "GPT-6 Astra (September 22 system card, raw)",
+            "organization": "OpenAI",
+            "score": 0.569,
+            "input_score": 0.569,
+            "input_unit": "fraction",
+            "reported_cost_per_task": null,
+            "metric_id": "healthbench-metric-v1",
+            "protocol_id": "healthbench-openai-sep22-raw",
+            "task_set_id": "healthbench-openai-sep22-raw",
+            "metric": "Score",
+            "score_role": "auxiliary",
+            "score_series_id": "healthbench-auxiliary-healthbench-openai-sep22-raw",
+            "evaluation_protocol": "Overall unadjusted HealthBench score, Table 29. New evaluation configuration is isolated from the original paper; Astra values include the September 22 correction.",
+            "auxiliary_metadata": {
+              "protocol_id": "healthbench-openai-sep22-raw",
+              "task_set_id": "healthbench-openai-sep22-raw",
+              "label": "September 22 system card / raw",
+              "explanation": {
+                "en": "Overall unadjusted HealthBench score, Table 29. New evaluation configuration is isolated from the original paper; Astra values include the September 22 correction.",
+                "zh": "\u8868 29 \u7684 HealthBench \u603b\u4f53\u672a\u4f5c\u957f\u5ea6\u6821\u6b63\u7684\u5206\u6570\u3002\u65b0\u8bc4\u6d4b\u914d\u7f6e\u4e0e\u539f\u8bba\u6587\u9694\u79bb\uff1bAstra \u4f7f\u7528 9 \u6708 22 \u65e5\u4fee\u6b63\u503c\u3002"
+              }
+            },
+            "model_release_date": "2026-09-03",
+            "evaluation_date": null,
+            "result_public_date": "2026-09-22",
+            "source_publication_date": "2026-09-22",
+            "observation_date": "2026-09-03",
+            "observation_date_precision": "day",
+            "observation_date_sources": [
+              {
+                "date": "2026-09-03",
+                "kind": "model_release_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+                  "resource-https-deploymentsafety-openai-com-gpt-6-astra-d170283db76935da"
+                ]
+              }
+            ],
+            "observation_date_source_ids": [
+              "resource-https-deploymentsafety-openai-com-gpt-6-astra-d170283db76935da",
+              "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350"
+            ],
+            "evaluation_date_sources": [],
+            "score_publication_date_sources": [
+              {
+                "date": "2026-09-22",
+                "kind": "Result public date",
+                "precision": "day"
+              }
+            ],
+            "ingested_at": "2026-09-23",
+            "date_precision": "day",
+            "date_notes": null,
+            "date": "2026-09-03",
+            "date_kind": "earliest_observation_evidence_date",
+            "capability_date": "2026-09-03",
+            "capability_date_meaning": "earliest_observation_evidence_date",
+            "reported_date_meaning": "result_public_date",
+            "historical_frontier_date": "2026-09-22",
+            "temporal_class": "historical_or_unknown",
+            "retrospective": false,
+            "capability_frontier_eligible": false,
+            "historical_frontier_eligible": true,
+            "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+            "contemporaneous": true,
+            "source_ids": [
+              "resource-https-deploymentsafety-openai-com-gpt-6-astra-d170283db76935da",
+              "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+              "resource-https-openai-com-index-healthbench-eba97d45c48b70ff"
+            ],
+            "score_source_ids": [
+              "resource-https-deploymentsafety-openai-com-gpt-6-astra-d170283db76935da"
+            ],
+            "source": "https://deploymentsafety.openai.com/gpt-6-astra",
+            "notes": "Operational evaluation timeline only; not a historical public-result date.",
+            "evidence_ids": [
+              "evidence-sep2026-healthbench-gpt-6-astra-september-22-sys-341aed3158c0d3e1"
+            ],
+            "evidence_count": 1,
+            "source_row_ids": [
+              "sep2026-healthbench-gpt-6-astra-september-22-system-card-raw"
+            ],
+            "plot_date": "2026-09-03",
+            "frontier_observation_ids": [
+              "obs-0-569-5f2224ad9628c85f"
+            ]
+          }
+        ]
+      },
+      {
+        "series_id": "healthbench-auxiliary-healthbench-opus48-judge-sep22",
+        "role": "auxiliary",
+        "label": "Raw score / Opus 4.8 judge",
+        "metric_id": "healthbench-metric-v1",
+        "metric_name": "Score",
+        "protocol_id": "healthbench-opus48-judge-sep22",
+        "task_set_id": "healthbench-opus48-judge-sep22",
+        "lifecycle_eligible": false,
+        "explanation": {
+          "en": "HealthBench overall raw score, five trials, no tools, Opus 4.8 judge; Opus 5 refusal fallback enabled. Judge differs from the canonical source.",
+          "zh": "HealthBench \u603b\u4f53\u539f\u59cb\u5206\u6570\uff0c\u4e94\u6b21\u8fd0\u884c\uff0c\u65e0\u5de5\u5177\uff0c\u7531 Opus 4.8 \u8bc4\u5206\uff1b\u542f\u7528 Opus 5 \u62d2\u7edd\u540e\u5907\u3002\u8bc4\u5206\u5668\u4e0e\u4e3b\u5e8f\u5217\u6765\u6e90\u4e0d\u540c\u3002"
+        },
+        "observation_ids": [
+          "obs-0-681-42b59f7615543ea1"
+        ],
+        "frontier_events": [
+          {
+            "observation_id": "obs-0-681-42b59f7615543ea1",
+            "benchmark_id": "healthbench",
+            "benchmark_version_id": "healthbench-canonical",
+            "model_id": "model-claude-opus-5-5-max-raw-e2f9e9389619c5f1",
+            "model_configuration": "Claude Opus 5.5 (max, raw)",
+            "model_identity_organization": "anthropic",
+            "model_label_id": "claude-opus-5-5-max-raw",
+            "model_family_id": "anthropic-claude-opus-5-5",
+            "model": "Claude Opus 5.5 (max, raw)",
+            "organization": "Anthropic",
+            "score": 0.681,
+            "input_score": 0.681,
+            "input_unit": "fraction",
+            "reported_cost_per_task": null,
+            "metric_id": "healthbench-metric-v1",
+            "protocol_id": "healthbench-opus48-judge-sep22",
+            "task_set_id": "healthbench-opus48-judge-sep22",
+            "metric": "Score",
+            "score_role": "auxiliary",
+            "score_series_id": "healthbench-auxiliary-healthbench-opus48-judge-sep22",
+            "evaluation_protocol": "HealthBench overall raw score, five trials, no tools, Opus 4.8 judge; Opus 5 refusal fallback enabled. Judge differs from the canonical source.",
+            "auxiliary_metadata": {
+              "protocol_id": "healthbench-opus48-judge-sep22",
+              "task_set_id": "healthbench-opus48-judge-sep22",
+              "label": "Raw score / Opus 4.8 judge",
+              "explanation": {
+                "en": "HealthBench overall raw score, five trials, no tools, Opus 4.8 judge; Opus 5 refusal fallback enabled. Judge differs from the canonical source.",
+                "zh": "HealthBench \u603b\u4f53\u539f\u59cb\u5206\u6570\uff0c\u4e94\u6b21\u8fd0\u884c\uff0c\u65e0\u5de5\u5177\uff0c\u7531 Opus 4.8 \u8bc4\u5206\uff1b\u542f\u7528 Opus 5 \u62d2\u7edd\u540e\u5907\u3002\u8bc4\u5206\u5668\u4e0e\u4e3b\u5e8f\u5217\u6765\u6e90\u4e0d\u540c\u3002"
+              }
+            },
+            "model_release_date": "2026-09-22",
+            "evaluation_date": null,
+            "result_public_date": "2026-09-22",
+            "source_publication_date": "2026-09-22",
+            "observation_date": "2026-09-22",
+            "observation_date_precision": "day",
+            "observation_date_sources": [
+              {
+                "date": "2026-09-22",
+                "kind": "model_release_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+                ]
+              },
+              {
+                "date": "2026-09-22",
+                "kind": "score_publication_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+                ]
+              }
+            ],
+            "observation_date_source_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ],
+            "evaluation_date_sources": [],
+            "score_publication_date_sources": [
+              {
+                "date": "2026-09-22",
+                "kind": "Result public date",
+                "precision": "day"
+              }
+            ],
+            "ingested_at": "2026-09-23",
+            "date_precision": "day",
+            "date_notes": null,
+            "date": "2026-09-22",
+            "date_kind": "earliest_observation_evidence_date",
+            "capability_date": "2026-09-22",
+            "capability_date_meaning": "earliest_observation_evidence_date",
+            "reported_date_meaning": "result_public_date",
+            "historical_frontier_date": "2026-09-22",
+            "temporal_class": "historical_or_unknown",
+            "retrospective": false,
+            "capability_frontier_eligible": false,
+            "historical_frontier_eligible": true,
+            "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+            "contemporaneous": true,
+            "source_ids": [
+              "resource-https-openai-com-index-healthbench-eba97d45c48b70ff",
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ],
+            "score_source_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ],
+            "source": "https://www.anthropic.com/claude-opus-5-5-system-card",
+            "notes": "Operational evaluation timeline only; not a historical public-result date.",
+            "evidence_ids": [
+              "evidence-sep2026-healthbench-claude-opus-5-5-max-raw-f79f4fc01e108762"
+            ],
+            "evidence_count": 1,
+            "source_row_ids": [
+              "sep2026-healthbench-claude-opus-5-5-max-raw"
+            ],
+            "plot_date": "2026-09-22",
+            "frontier_observation_ids": [
+              "obs-0-681-42b59f7615543ea1"
+            ]
+          }
+        ]
+      }
+    ],
     "benchmark_version_id": "healthbench-canonical",
     "summary": {
       "en": "HealthBench tests whether models give useful and safe answers in realistic health conversations judged against physician-written criteria.",
@@ -120,8 +360,8 @@
       }
     },
     "evaluation_target": "process_and_output",
-    "observation_count": 3,
-    "evidence_record_count": 3,
+    "observation_count": 7,
+    "evidence_record_count": 7,
     "observations": [
       {
         "observation_id": "obs-0-16-b9f66d7cf4c9c6ce",
@@ -166,7 +406,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2022-11-30",
@@ -239,7 +479,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2024-05-13",
@@ -312,7 +552,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-04-16",
@@ -341,6 +581,393 @@
         ],
         "evidence_count": 1,
         "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-681-42b59f7615543ea1",
+        "benchmark_id": "healthbench",
+        "benchmark_version_id": "healthbench-canonical",
+        "model_id": "model-claude-opus-5-5-max-raw-e2f9e9389619c5f1",
+        "model_configuration": "Claude Opus 5.5 (max, raw)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-max-raw",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (max, raw)",
+        "organization": "Anthropic",
+        "score": 0.681,
+        "input_score": 0.681,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "healthbench-metric-v1",
+        "protocol_id": "healthbench-opus48-judge-sep22",
+        "task_set_id": "healthbench-opus48-judge-sep22",
+        "metric": "Score",
+        "score_role": "auxiliary",
+        "score_series_id": "healthbench-auxiliary-healthbench-opus48-judge-sep22",
+        "evaluation_protocol": "HealthBench overall raw score, five trials, no tools, Opus 4.8 judge; Opus 5 refusal fallback enabled. Judge differs from the canonical source.",
+        "auxiliary_metadata": {
+          "protocol_id": "healthbench-opus48-judge-sep22",
+          "task_set_id": "healthbench-opus48-judge-sep22",
+          "label": "Raw score / Opus 4.8 judge",
+          "explanation": {
+            "en": "HealthBench overall raw score, five trials, no tools, Opus 4.8 judge; Opus 5 refusal fallback enabled. Judge differs from the canonical source.",
+            "zh": "HealthBench \u603b\u4f53\u539f\u59cb\u5206\u6570\uff0c\u4e94\u6b21\u8fd0\u884c\uff0c\u65e0\u5de5\u5177\uff0c\u7531 Opus 4.8 \u8bc4\u5206\uff1b\u542f\u7528 Opus 5 \u62d2\u7edd\u540e\u5907\u3002\u8bc4\u5206\u5668\u4e0e\u4e3b\u5e8f\u5217\u6765\u6e90\u4e0d\u540c\u3002"
+          }
+        },
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-openai-com-index-healthbench-eba97d45c48b70ff",
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5-system-card",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-healthbench-claude-opus-5-5-max-raw-f79f4fc01e108762"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-healthbench-claude-opus-5-5-max-raw"
+        ]
+      },
+      {
+        "observation_id": "obs-0-569-5f2224ad9628c85f",
+        "benchmark_id": "healthbench",
+        "benchmark_version_id": "healthbench-canonical",
+        "model_id": "model-gpt-6-astra-september-22-system-card-raw-b8dd91f3b83a6161",
+        "model_configuration": "GPT-6 Astra (September 22 system card, raw)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-astra-september-22-system-card-raw",
+        "model_family_id": "openai-gpt-6-astra",
+        "model": "GPT-6 Astra (September 22 system card, raw)",
+        "organization": "OpenAI",
+        "score": 0.569,
+        "input_score": 0.569,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "healthbench-metric-v1",
+        "protocol_id": "healthbench-openai-sep22-raw",
+        "task_set_id": "healthbench-openai-sep22-raw",
+        "metric": "Score",
+        "score_role": "auxiliary",
+        "score_series_id": "healthbench-auxiliary-healthbench-openai-sep22-raw",
+        "evaluation_protocol": "Overall unadjusted HealthBench score, Table 29. New evaluation configuration is isolated from the original paper; Astra values include the September 22 correction.",
+        "auxiliary_metadata": {
+          "protocol_id": "healthbench-openai-sep22-raw",
+          "task_set_id": "healthbench-openai-sep22-raw",
+          "label": "September 22 system card / raw",
+          "explanation": {
+            "en": "Overall unadjusted HealthBench score, Table 29. New evaluation configuration is isolated from the original paper; Astra values include the September 22 correction.",
+            "zh": "\u8868 29 \u7684 HealthBench \u603b\u4f53\u672a\u4f5c\u957f\u5ea6\u6821\u6b63\u7684\u5206\u6570\u3002\u65b0\u8bc4\u6d4b\u914d\u7f6e\u4e0e\u539f\u8bba\u6587\u9694\u79bb\uff1bAstra \u4f7f\u7528 9 \u6708 22 \u65e5\u4fee\u6b63\u503c\u3002"
+          }
+        },
+        "model_release_date": "2026-09-03",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-03",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-03",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+              "resource-https-deploymentsafety-openai-com-gpt-6-astra-d170283db76935da"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-deploymentsafety-openai-com-gpt-6-astra-d170283db76935da",
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-03",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-deploymentsafety-openai-com-gpt-6-astra-d170283db76935da",
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-openai-com-index-healthbench-eba97d45c48b70ff"
+        ],
+        "score_source_ids": [
+          "resource-https-deploymentsafety-openai-com-gpt-6-astra-d170283db76935da"
+        ],
+        "source": "https://deploymentsafety.openai.com/gpt-6-astra",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-healthbench-gpt-6-astra-september-22-sys-341aed3158c0d3e1"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-healthbench-gpt-6-astra-september-22-system-card-raw"
+        ]
+      },
+      {
+        "observation_id": "obs-0-471-221f715c34e0ed6d",
+        "benchmark_id": "healthbench",
+        "benchmark_version_id": "healthbench-canonical",
+        "model_id": "model-gpt-6-sol-september-22-system-card-raw-404c2b2bcae7ab85",
+        "model_configuration": "GPT-6 Sol (September 22 system card, raw)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-sol-september-22-system-card-raw",
+        "model_family_id": "openai-gpt-6-sol",
+        "model": "GPT-6 Sol (September 22 system card, raw)",
+        "organization": "OpenAI",
+        "score": 0.471,
+        "input_score": 0.471,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "healthbench-metric-v1",
+        "protocol_id": "healthbench-openai-sep22-raw",
+        "task_set_id": "healthbench-openai-sep22-raw",
+        "metric": "Score",
+        "score_role": "auxiliary",
+        "score_series_id": "healthbench-auxiliary-healthbench-openai-sep22-raw",
+        "evaluation_protocol": "Overall unadjusted HealthBench score, Table 29. New evaluation configuration is isolated from the original paper; Astra values include the September 22 correction.",
+        "auxiliary_metadata": {
+          "protocol_id": "healthbench-openai-sep22-raw",
+          "task_set_id": "healthbench-openai-sep22-raw",
+          "label": "September 22 system card / raw",
+          "explanation": {
+            "en": "Overall unadjusted HealthBench score, Table 29. New evaluation configuration is isolated from the original paper; Astra values include the September 22 correction.",
+            "zh": "\u8868 29 \u7684 HealthBench \u603b\u4f53\u672a\u4f5c\u957f\u5ea6\u6821\u6b63\u7684\u5206\u6570\u3002\u65b0\u8bc4\u6d4b\u914d\u7f6e\u4e0e\u539f\u8bba\u6587\u9694\u79bb\uff1bAstra \u4f7f\u7528 9 \u6708 22 \u65e5\u4fee\u6b63\u503c\u3002"
+          }
+        },
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-deploymentsafety-openai-com-gpt-6-astra-d170283db76935da"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-deploymentsafety-openai-com-gpt-6-astra-d170283db76935da"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-deploymentsafety-openai-com-gpt-6-astra-d170283db76935da"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-deploymentsafety-openai-com-gpt-6-astra-d170283db76935da",
+          "resource-https-openai-com-index-healthbench-eba97d45c48b70ff"
+        ],
+        "score_source_ids": [
+          "resource-https-deploymentsafety-openai-com-gpt-6-astra-d170283db76935da"
+        ],
+        "source": "https://deploymentsafety.openai.com/gpt-6-astra",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-healthbench-gpt-6-sol-september-22-syste-046845353d1afd8c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-healthbench-gpt-6-sol-september-22-system-card-raw"
+        ]
+      },
+      {
+        "observation_id": "obs-0-5-25532b8ac4780f26",
+        "benchmark_id": "healthbench",
+        "benchmark_version_id": "healthbench-canonical",
+        "model_id": "model-gpt-6-luna-september-22-system-card-raw-59b473f9c1396c91",
+        "model_configuration": "GPT-6 Luna (September 22 system card, raw)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-luna-september-22-system-card-raw",
+        "model_family_id": "openai-gpt-6-luna",
+        "model": "GPT-6 Luna (September 22 system card, raw)",
+        "organization": "OpenAI",
+        "score": 0.5,
+        "input_score": 0.5,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "healthbench-metric-v1",
+        "protocol_id": "healthbench-openai-sep22-raw",
+        "task_set_id": "healthbench-openai-sep22-raw",
+        "metric": "Score",
+        "score_role": "auxiliary",
+        "score_series_id": "healthbench-auxiliary-healthbench-openai-sep22-raw",
+        "evaluation_protocol": "Overall unadjusted HealthBench score, Table 29. New evaluation configuration is isolated from the original paper; Astra values include the September 22 correction.",
+        "auxiliary_metadata": {
+          "protocol_id": "healthbench-openai-sep22-raw",
+          "task_set_id": "healthbench-openai-sep22-raw",
+          "label": "September 22 system card / raw",
+          "explanation": {
+            "en": "Overall unadjusted HealthBench score, Table 29. New evaluation configuration is isolated from the original paper; Astra values include the September 22 correction.",
+            "zh": "\u8868 29 \u7684 HealthBench \u603b\u4f53\u672a\u4f5c\u957f\u5ea6\u6821\u6b63\u7684\u5206\u6570\u3002\u65b0\u8bc4\u6d4b\u914d\u7f6e\u4e0e\u539f\u8bba\u6587\u9694\u79bb\uff1bAstra \u4f7f\u7528 9 \u6708 22 \u65e5\u4fee\u6b63\u503c\u3002"
+          }
+        },
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-deploymentsafety-openai-com-gpt-6-astra-d170283db76935da"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-deploymentsafety-openai-com-gpt-6-astra-d170283db76935da"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-deploymentsafety-openai-com-gpt-6-astra-d170283db76935da"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-deploymentsafety-openai-com-gpt-6-astra-d170283db76935da",
+          "resource-https-openai-com-index-healthbench-eba97d45c48b70ff"
+        ],
+        "score_source_ids": [
+          "resource-https-deploymentsafety-openai-com-gpt-6-astra-d170283db76935da"
+        ],
+        "source": "https://deploymentsafety.openai.com/gpt-6-astra",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-healthbench-gpt-6-luna-september-22-syst-0808b58e4b9be66f"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-healthbench-gpt-6-luna-september-22-system-card-raw"
+        ]
       }
     ],
     "frontier": [
@@ -387,7 +1014,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-05-12",
@@ -468,7 +1095,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-05-12",
@@ -549,7 +1176,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-05-12",
@@ -603,11 +1230,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 480
+        "days": 499
       },
       "T90": {
         "status": "right_censored",
-        "days": 480
+        "days": 499
       }
     },
     "capability_threshold_days": {
@@ -618,11 +1245,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 480
+        "days": 499
       },
       "T90": {
         "status": "right_censored",
-        "days": 480
+        "days": 499
       }
     },
     "reported_threshold_days": {

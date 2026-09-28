@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-04",
+  "snapshot_id": "2026-09-23",
   "reference_organizations": [
     {
       "id": "openai",
@@ -105,7 +105,322 @@
       "progress_target": 1.0,
       "lifecycle_eligible": true
     },
-    "auxiliary_score_series": [],
+    "auxiliary_score_series": [
+      {
+        "series_id": "benchcad-vision2code-auxiliary-benchcad-1000-256px-no-tools",
+        "role": "auxiliary",
+        "label": "1000-file subset / 256px / no tools",
+        "metric_id": "benchcad-vision2code-metric-v1",
+        "metric_name": "IoU-score",
+        "protocol_id": "benchcad-1000-256px-no-tools",
+        "task_set_id": "benchcad-1000-256px-no-tools",
+        "lifecycle_eligible": false,
+        "explanation": {
+          "en": "Anthropic random 1000-file Vision2Code subset, 256px views, five trials, no tools. Not the full public leaderboard; corrects earlier 128px evaluations.",
+          "zh": "Anthropic \u968f\u673a 1000 \u6587\u4ef6 Vision2Code \u5b50\u96c6\uff0c256px \u89c6\u56fe\uff0c\u4e94\u6b21\u8fd0\u884c\uff0c\u65e0\u5de5\u5177\u3002\u4e0d\u662f\u5b8c\u6574\u516c\u5f00\u699c\u5355\uff1b\u4fee\u6b63\u4e86\u6b64\u524d 128px \u8bc4\u6d4b\u3002"
+        },
+        "observation_ids": [
+          "obs-0-73-ea7cdcd10180369c",
+          "obs-0-606-132368fc6b362178",
+          "obs-0-497-ec9c50f07f42ba2e"
+        ],
+        "frontier_events": [
+          {
+            "observation_id": "obs-0-497-ec9c50f07f42ba2e",
+            "benchmark_id": "benchcad-vision2code",
+            "benchmark_version_id": "benchcad-vision2code-canonical",
+            "model_id": "model-claude-opus-5-max-no-tools-c8c98e777f9bc5cc",
+            "model_configuration": "Claude Opus 5 (max, no tools)",
+            "model_identity_organization": "anthropic",
+            "model_label_id": "claude-opus-5-max-no-tools",
+            "model_family_id": "anthropic-claude-opus-5",
+            "model": "Claude Opus 5 (max, no tools)",
+            "organization": "Anthropic",
+            "score": 0.497,
+            "input_score": 0.497,
+            "input_unit": "fraction",
+            "reported_cost_per_task": null,
+            "metric_id": "benchcad-vision2code-metric-v1",
+            "protocol_id": "benchcad-1000-256px-no-tools",
+            "task_set_id": "benchcad-1000-256px-no-tools",
+            "metric": "IoU-score",
+            "score_role": "auxiliary",
+            "score_series_id": "benchcad-vision2code-auxiliary-benchcad-1000-256px-no-tools",
+            "evaluation_protocol": "Anthropic random 1000-file Vision2Code subset, 256px views, five trials, no tools. Not the full public leaderboard; corrects earlier 128px evaluations.",
+            "auxiliary_metadata": {
+              "protocol_id": "benchcad-1000-256px-no-tools",
+              "task_set_id": "benchcad-1000-256px-no-tools",
+              "label": "1000-file subset / 256px / no tools",
+              "explanation": {
+                "en": "Anthropic random 1000-file Vision2Code subset, 256px views, five trials, no tools. Not the full public leaderboard; corrects earlier 128px evaluations.",
+                "zh": "Anthropic \u968f\u673a 1000 \u6587\u4ef6 Vision2Code \u5b50\u96c6\uff0c256px \u89c6\u56fe\uff0c\u4e94\u6b21\u8fd0\u884c\uff0c\u65e0\u5de5\u5177\u3002\u4e0d\u662f\u5b8c\u6574\u516c\u5f00\u699c\u5355\uff1b\u4fee\u6b63\u4e86\u6b64\u524d 128px \u8bc4\u6d4b\u3002"
+              }
+            },
+            "model_release_date": "2026-07-24",
+            "evaluation_date": null,
+            "result_public_date": "2026-09-22",
+            "source_publication_date": "2026-09-22",
+            "observation_date": "2026-07-24",
+            "observation_date_precision": "day",
+            "observation_date_sources": [
+              {
+                "date": "2026-07-24",
+                "kind": "model_release_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+                ]
+              }
+            ],
+            "observation_date_source_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ],
+            "evaluation_date_sources": [],
+            "score_publication_date_sources": [
+              {
+                "date": "2026-09-22",
+                "kind": "Result public date",
+                "precision": "day"
+              }
+            ],
+            "ingested_at": "2026-09-23",
+            "date_precision": "day",
+            "date_notes": null,
+            "date": "2026-07-24",
+            "date_kind": "earliest_observation_evidence_date",
+            "capability_date": "2026-07-24",
+            "capability_date_meaning": "earliest_observation_evidence_date",
+            "reported_date_meaning": "result_public_date",
+            "historical_frontier_date": "2026-09-22",
+            "temporal_class": "historical_or_unknown",
+            "retrospective": false,
+            "capability_frontier_eligible": false,
+            "historical_frontier_eligible": true,
+            "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+            "contemporaneous": true,
+            "source_ids": [
+              "resource-https-benchcad-com-leaderboard-ded8f054f5d6b199",
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ],
+            "score_source_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ],
+            "source": "https://www.anthropic.com/claude-opus-5-5-system-card",
+            "notes": "Operational evaluation timeline only; not a historical public-result date.",
+            "evidence_ids": [
+              "evidence-sep2026-benchcad-vision2code-claude-opus-5-max-n-fae1824c4a9ad56b"
+            ],
+            "evidence_count": 1,
+            "source_row_ids": [
+              "sep2026-benchcad-vision2code-claude-opus-5-max-no-tools"
+            ],
+            "plot_date": "2026-07-24",
+            "frontier_observation_ids": [
+              "obs-0-497-ec9c50f07f42ba2e"
+            ]
+          },
+          {
+            "observation_id": "obs-0-606-132368fc6b362178",
+            "benchmark_id": "benchcad-vision2code",
+            "benchmark_version_id": "benchcad-vision2code-canonical",
+            "model_id": "model-claude-fable-5-1-max-no-tools-cab4b2aae75f1ea4",
+            "model_configuration": "Claude Fable 5.1 (max, no tools)",
+            "model_identity_organization": "anthropic",
+            "model_label_id": "claude-fable-5-1-max-no-tools",
+            "model_family_id": "anthropic-claude-fable-5-1",
+            "model": "Claude Fable 5.1 (max, no tools)",
+            "organization": "Anthropic",
+            "score": 0.606,
+            "input_score": 0.606,
+            "input_unit": "fraction",
+            "reported_cost_per_task": null,
+            "metric_id": "benchcad-vision2code-metric-v1",
+            "protocol_id": "benchcad-1000-256px-no-tools",
+            "task_set_id": "benchcad-1000-256px-no-tools",
+            "metric": "IoU-score",
+            "score_role": "auxiliary",
+            "score_series_id": "benchcad-vision2code-auxiliary-benchcad-1000-256px-no-tools",
+            "evaluation_protocol": "Anthropic random 1000-file Vision2Code subset, 256px views, five trials, no tools. Not the full public leaderboard; corrects earlier 128px evaluations.",
+            "auxiliary_metadata": {
+              "protocol_id": "benchcad-1000-256px-no-tools",
+              "task_set_id": "benchcad-1000-256px-no-tools",
+              "label": "1000-file subset / 256px / no tools",
+              "explanation": {
+                "en": "Anthropic random 1000-file Vision2Code subset, 256px views, five trials, no tools. Not the full public leaderboard; corrects earlier 128px evaluations.",
+                "zh": "Anthropic \u968f\u673a 1000 \u6587\u4ef6 Vision2Code \u5b50\u96c6\uff0c256px \u89c6\u56fe\uff0c\u4e94\u6b21\u8fd0\u884c\uff0c\u65e0\u5de5\u5177\u3002\u4e0d\u662f\u5b8c\u6574\u516c\u5f00\u699c\u5355\uff1b\u4fee\u6b63\u4e86\u6b64\u524d 128px \u8bc4\u6d4b\u3002"
+              }
+            },
+            "model_release_date": "2026-09-01",
+            "evaluation_date": null,
+            "result_public_date": "2026-09-22",
+            "source_publication_date": "2026-09-22",
+            "observation_date": "2026-09-01",
+            "observation_date_precision": "day",
+            "observation_date_sources": [
+              {
+                "date": "2026-09-01",
+                "kind": "model_release_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+                  "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+                ]
+              }
+            ],
+            "observation_date_source_ids": [
+              "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ],
+            "evaluation_date_sources": [],
+            "score_publication_date_sources": [
+              {
+                "date": "2026-09-22",
+                "kind": "Result public date",
+                "precision": "day"
+              }
+            ],
+            "ingested_at": "2026-09-23",
+            "date_precision": "day",
+            "date_notes": null,
+            "date": "2026-09-01",
+            "date_kind": "earliest_observation_evidence_date",
+            "capability_date": "2026-09-01",
+            "capability_date_meaning": "earliest_observation_evidence_date",
+            "reported_date_meaning": "result_public_date",
+            "historical_frontier_date": "2026-09-22",
+            "temporal_class": "historical_or_unknown",
+            "retrospective": false,
+            "capability_frontier_eligible": false,
+            "historical_frontier_eligible": true,
+            "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+            "contemporaneous": true,
+            "source_ids": [
+              "resource-https-benchcad-com-leaderboard-ded8f054f5d6b199",
+              "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ],
+            "score_source_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ],
+            "source": "https://www.anthropic.com/claude-opus-5-5-system-card",
+            "notes": "Operational evaluation timeline only; not a historical public-result date.",
+            "evidence_ids": [
+              "evidence-sep2026-benchcad-vision2code-claude-fable-5-1-ma-63b4e124a3fd4109"
+            ],
+            "evidence_count": 1,
+            "source_row_ids": [
+              "sep2026-benchcad-vision2code-claude-fable-5-1-max-no-tools"
+            ],
+            "plot_date": "2026-09-01",
+            "frontier_observation_ids": [
+              "obs-0-606-132368fc6b362178"
+            ]
+          },
+          {
+            "observation_id": "obs-0-73-ea7cdcd10180369c",
+            "benchmark_id": "benchcad-vision2code",
+            "benchmark_version_id": "benchcad-vision2code-canonical",
+            "model_id": "model-claude-opus-5-5-max-no-tools-7b341f2351c83945",
+            "model_configuration": "Claude Opus 5.5 (max, no tools)",
+            "model_identity_organization": "anthropic",
+            "model_label_id": "claude-opus-5-5-max-no-tools",
+            "model_family_id": "anthropic-claude-opus-5-5",
+            "model": "Claude Opus 5.5 (max, no tools)",
+            "organization": "Anthropic",
+            "score": 0.73,
+            "input_score": 0.73,
+            "input_unit": "fraction",
+            "reported_cost_per_task": null,
+            "metric_id": "benchcad-vision2code-metric-v1",
+            "protocol_id": "benchcad-1000-256px-no-tools",
+            "task_set_id": "benchcad-1000-256px-no-tools",
+            "metric": "IoU-score",
+            "score_role": "auxiliary",
+            "score_series_id": "benchcad-vision2code-auxiliary-benchcad-1000-256px-no-tools",
+            "evaluation_protocol": "Anthropic random 1000-file Vision2Code subset, 256px views, five trials, no tools. Not the full public leaderboard; corrects earlier 128px evaluations.",
+            "auxiliary_metadata": {
+              "protocol_id": "benchcad-1000-256px-no-tools",
+              "task_set_id": "benchcad-1000-256px-no-tools",
+              "label": "1000-file subset / 256px / no tools",
+              "explanation": {
+                "en": "Anthropic random 1000-file Vision2Code subset, 256px views, five trials, no tools. Not the full public leaderboard; corrects earlier 128px evaluations.",
+                "zh": "Anthropic \u968f\u673a 1000 \u6587\u4ef6 Vision2Code \u5b50\u96c6\uff0c256px \u89c6\u56fe\uff0c\u4e94\u6b21\u8fd0\u884c\uff0c\u65e0\u5de5\u5177\u3002\u4e0d\u662f\u5b8c\u6574\u516c\u5f00\u699c\u5355\uff1b\u4fee\u6b63\u4e86\u6b64\u524d 128px \u8bc4\u6d4b\u3002"
+              }
+            },
+            "model_release_date": "2026-09-22",
+            "evaluation_date": null,
+            "result_public_date": "2026-09-22",
+            "source_publication_date": "2026-09-22",
+            "observation_date": "2026-09-22",
+            "observation_date_precision": "day",
+            "observation_date_sources": [
+              {
+                "date": "2026-09-22",
+                "kind": "model_release_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+                ]
+              },
+              {
+                "date": "2026-09-22",
+                "kind": "score_publication_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+                ]
+              }
+            ],
+            "observation_date_source_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ],
+            "evaluation_date_sources": [],
+            "score_publication_date_sources": [
+              {
+                "date": "2026-09-22",
+                "kind": "Result public date",
+                "precision": "day"
+              }
+            ],
+            "ingested_at": "2026-09-23",
+            "date_precision": "day",
+            "date_notes": null,
+            "date": "2026-09-22",
+            "date_kind": "earliest_observation_evidence_date",
+            "capability_date": "2026-09-22",
+            "capability_date_meaning": "earliest_observation_evidence_date",
+            "reported_date_meaning": "result_public_date",
+            "historical_frontier_date": "2026-09-22",
+            "temporal_class": "historical_or_unknown",
+            "retrospective": false,
+            "capability_frontier_eligible": false,
+            "historical_frontier_eligible": true,
+            "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+            "contemporaneous": true,
+            "source_ids": [
+              "resource-https-benchcad-com-leaderboard-ded8f054f5d6b199",
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ],
+            "score_source_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ],
+            "source": "https://www.anthropic.com/claude-opus-5-5-system-card",
+            "notes": "Operational evaluation timeline only; not a historical public-result date.",
+            "evidence_ids": [
+              "evidence-sep2026-benchcad-vision2code-claude-opus-5-5-max-8aab50f4922fb360"
+            ],
+            "evidence_count": 1,
+            "source_row_ids": [
+              "sep2026-benchcad-vision2code-claude-opus-5-5-max-no-tools"
+            ],
+            "plot_date": "2026-09-22",
+            "frontier_observation_ids": [
+              "obs-0-73-ea7cdcd10180369c"
+            ]
+          }
+        ]
+      }
+    ],
     "benchmark_version_id": "benchcad-vision2code-canonical",
     "summary": {
       "en": "BenchCAD Vision2Code tests whether a multimodal model can turn orthographic views of an industrial part into executable parametric CAD code.",
@@ -123,8 +438,8 @@
       }
     },
     "evaluation_target": "environment_outcome",
-    "observation_count": 8,
-    "evidence_record_count": 8,
+    "observation_count": 11,
+    "evidence_record_count": 11,
     "observations": [
       {
         "observation_id": "obs-0-1823-05c7ff7866f86031",
@@ -169,7 +484,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2024-05-13",
@@ -241,7 +556,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-04-16",
@@ -313,7 +628,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-02-17",
@@ -385,7 +700,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-02-19",
@@ -457,7 +772,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-04-16",
@@ -529,7 +844,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-04-23",
@@ -601,7 +916,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-24",
@@ -675,7 +990,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-08-12",
@@ -704,6 +1019,287 @@
         ],
         "evidence_count": 1,
         "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-73-ea7cdcd10180369c",
+        "benchmark_id": "benchcad-vision2code",
+        "benchmark_version_id": "benchcad-vision2code-canonical",
+        "model_id": "model-claude-opus-5-5-max-no-tools-7b341f2351c83945",
+        "model_configuration": "Claude Opus 5.5 (max, no tools)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-max-no-tools",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (max, no tools)",
+        "organization": "Anthropic",
+        "score": 0.73,
+        "input_score": 0.73,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "benchcad-vision2code-metric-v1",
+        "protocol_id": "benchcad-1000-256px-no-tools",
+        "task_set_id": "benchcad-1000-256px-no-tools",
+        "metric": "IoU-score",
+        "score_role": "auxiliary",
+        "score_series_id": "benchcad-vision2code-auxiliary-benchcad-1000-256px-no-tools",
+        "evaluation_protocol": "Anthropic random 1000-file Vision2Code subset, 256px views, five trials, no tools. Not the full public leaderboard; corrects earlier 128px evaluations.",
+        "auxiliary_metadata": {
+          "protocol_id": "benchcad-1000-256px-no-tools",
+          "task_set_id": "benchcad-1000-256px-no-tools",
+          "label": "1000-file subset / 256px / no tools",
+          "explanation": {
+            "en": "Anthropic random 1000-file Vision2Code subset, 256px views, five trials, no tools. Not the full public leaderboard; corrects earlier 128px evaluations.",
+            "zh": "Anthropic \u968f\u673a 1000 \u6587\u4ef6 Vision2Code \u5b50\u96c6\uff0c256px \u89c6\u56fe\uff0c\u4e94\u6b21\u8fd0\u884c\uff0c\u65e0\u5de5\u5177\u3002\u4e0d\u662f\u5b8c\u6574\u516c\u5f00\u699c\u5355\uff1b\u4fee\u6b63\u4e86\u6b64\u524d 128px \u8bc4\u6d4b\u3002"
+          }
+        },
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-benchcad-com-leaderboard-ded8f054f5d6b199",
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5-system-card",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-benchcad-vision2code-claude-opus-5-5-max-8aab50f4922fb360"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-benchcad-vision2code-claude-opus-5-5-max-no-tools"
+        ]
+      },
+      {
+        "observation_id": "obs-0-606-132368fc6b362178",
+        "benchmark_id": "benchcad-vision2code",
+        "benchmark_version_id": "benchcad-vision2code-canonical",
+        "model_id": "model-claude-fable-5-1-max-no-tools-cab4b2aae75f1ea4",
+        "model_configuration": "Claude Fable 5.1 (max, no tools)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-1-max-no-tools",
+        "model_family_id": "anthropic-claude-fable-5-1",
+        "model": "Claude Fable 5.1 (max, no tools)",
+        "organization": "Anthropic",
+        "score": 0.606,
+        "input_score": 0.606,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "benchcad-vision2code-metric-v1",
+        "protocol_id": "benchcad-1000-256px-no-tools",
+        "task_set_id": "benchcad-1000-256px-no-tools",
+        "metric": "IoU-score",
+        "score_role": "auxiliary",
+        "score_series_id": "benchcad-vision2code-auxiliary-benchcad-1000-256px-no-tools",
+        "evaluation_protocol": "Anthropic random 1000-file Vision2Code subset, 256px views, five trials, no tools. Not the full public leaderboard; corrects earlier 128px evaluations.",
+        "auxiliary_metadata": {
+          "protocol_id": "benchcad-1000-256px-no-tools",
+          "task_set_id": "benchcad-1000-256px-no-tools",
+          "label": "1000-file subset / 256px / no tools",
+          "explanation": {
+            "en": "Anthropic random 1000-file Vision2Code subset, 256px views, five trials, no tools. Not the full public leaderboard; corrects earlier 128px evaluations.",
+            "zh": "Anthropic \u968f\u673a 1000 \u6587\u4ef6 Vision2Code \u5b50\u96c6\uff0c256px \u89c6\u56fe\uff0c\u4e94\u6b21\u8fd0\u884c\uff0c\u65e0\u5de5\u5177\u3002\u4e0d\u662f\u5b8c\u6574\u516c\u5f00\u699c\u5355\uff1b\u4fee\u6b63\u4e86\u6b64\u524d 128px \u8bc4\u6d4b\u3002"
+          }
+        },
+        "model_release_date": "2026-09-01",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-benchcad-com-leaderboard-ded8f054f5d6b199",
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5-system-card",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-benchcad-vision2code-claude-fable-5-1-ma-63b4e124a3fd4109"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-benchcad-vision2code-claude-fable-5-1-max-no-tools"
+        ]
+      },
+      {
+        "observation_id": "obs-0-497-ec9c50f07f42ba2e",
+        "benchmark_id": "benchcad-vision2code",
+        "benchmark_version_id": "benchcad-vision2code-canonical",
+        "model_id": "model-claude-opus-5-max-no-tools-c8c98e777f9bc5cc",
+        "model_configuration": "Claude Opus 5 (max, no tools)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-max-no-tools",
+        "model_family_id": "anthropic-claude-opus-5",
+        "model": "Claude Opus 5 (max, no tools)",
+        "organization": "Anthropic",
+        "score": 0.497,
+        "input_score": 0.497,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "benchcad-vision2code-metric-v1",
+        "protocol_id": "benchcad-1000-256px-no-tools",
+        "task_set_id": "benchcad-1000-256px-no-tools",
+        "metric": "IoU-score",
+        "score_role": "auxiliary",
+        "score_series_id": "benchcad-vision2code-auxiliary-benchcad-1000-256px-no-tools",
+        "evaluation_protocol": "Anthropic random 1000-file Vision2Code subset, 256px views, five trials, no tools. Not the full public leaderboard; corrects earlier 128px evaluations.",
+        "auxiliary_metadata": {
+          "protocol_id": "benchcad-1000-256px-no-tools",
+          "task_set_id": "benchcad-1000-256px-no-tools",
+          "label": "1000-file subset / 256px / no tools",
+          "explanation": {
+            "en": "Anthropic random 1000-file Vision2Code subset, 256px views, five trials, no tools. Not the full public leaderboard; corrects earlier 128px evaluations.",
+            "zh": "Anthropic \u968f\u673a 1000 \u6587\u4ef6 Vision2Code \u5b50\u96c6\uff0c256px \u89c6\u56fe\uff0c\u4e94\u6b21\u8fd0\u884c\uff0c\u65e0\u5de5\u5177\u3002\u4e0d\u662f\u5b8c\u6574\u516c\u5f00\u699c\u5355\uff1b\u4fee\u6b63\u4e86\u6b64\u524d 128px \u8bc4\u6d4b\u3002"
+          }
+        },
+        "model_release_date": "2026-07-24",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-benchcad-com-leaderboard-ded8f054f5d6b199",
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5-system-card",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-benchcad-vision2code-claude-opus-5-max-n-fae1824c4a9ad56b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-benchcad-vision2code-claude-opus-5-max-no-tools"
+        ]
       }
     ],
     "frontier": [
@@ -750,7 +1346,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-05-11",
@@ -833,7 +1429,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-05-11",
@@ -916,7 +1512,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-05-11",
@@ -967,29 +1563,29 @@
     "threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 116
+        "days": 135
       },
       "T80": {
         "status": "right_censored",
-        "days": 116
+        "days": 135
       },
       "T90": {
         "status": "right_censored",
-        "days": 116
+        "days": 135
       }
     },
     "capability_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 116
+        "days": 135
       },
       "T80": {
         "status": "right_censored",
-        "days": 116
+        "days": 135
       },
       "T90": {
         "status": "right_censored",
-        "days": 116
+        "days": 135
       }
     },
     "reported_threshold_days": {

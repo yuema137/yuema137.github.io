@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-04",
+  "snapshot_id": "2026-09-23",
   "reference_organizations": [
     {
       "id": "openai",
@@ -125,8 +125,8 @@
       }
     },
     "evaluation_target": "environment_outcome",
-    "observation_count": 9,
-    "evidence_record_count": 9,
+    "observation_count": 10,
+    "evidence_record_count": 10,
     "observations": [
       {
         "observation_id": "obs-0-5629079-cc7972a85a32c1a1",
@@ -173,7 +173,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-01",
@@ -246,7 +246,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -318,7 +318,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-08-14",
@@ -390,7 +390,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-16",
@@ -464,7 +464,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-08-12",
@@ -537,7 +537,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-08-13",
@@ -611,7 +611,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-08-02",
@@ -684,7 +684,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-08-05",
@@ -756,7 +756,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-15",
@@ -784,6 +784,95 @@
         ],
         "evidence_count": 1,
         "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-623-807545cb64d44fb1",
+        "benchmark_id": "frontierswe-v2",
+        "benchmark_version_id": "frontierswe-v2-canonical",
+        "model_id": "model-claude-opus-5-5-max-proximal-harness-five-trials-484f6dee8d9ee31e",
+        "model_configuration": "Claude Opus 5.5 (max, Proximal harness, five trials)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-max-proximal-harness-five-trials",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (max, Proximal harness, five trials)",
+        "organization": "Anthropic",
+        "score": 0.623,
+        "input_score": 0.623,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "",
+        "metric_id": "frontierswe-v2-metric-v1",
+        "protocol_id": "frontierswe-v2-source-export-v1",
+        "task_set_id": "frontierswe-v2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "frontierswe-v2-canonical-score",
+        "evaluation_protocol": "FrontierSWE V2 public leaderboard export; Mean@5 rows using the proximus harness are kept together, while Best@5 and Worst@5 are not substituted for the headline metric.",
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414",
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5-system-card",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-frontierswe-v2-claude-opus-5-5-max-proxi-3617889ffec9762c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-frontierswe-v2-claude-opus-5-5-max-proximal-harness-five-trials"
+        ]
       }
     ],
     "frontier": [
@@ -830,7 +919,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -908,7 +997,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-01",
@@ -940,6 +1029,99 @@
         "plot_date": "2026-09-01",
         "frontier_observation_ids": [
           "obs-0-5629079-cc7972a85a32c1a1"
+        ]
+      },
+      {
+        "observation_id": "obs-0-623-807545cb64d44fb1",
+        "benchmark_id": "frontierswe-v2",
+        "benchmark_version_id": "frontierswe-v2-canonical",
+        "model_id": "model-claude-opus-5-5-max-proximal-harness-five-trials-484f6dee8d9ee31e",
+        "model_configuration": "Claude Opus 5.5 (max, Proximal harness, five trials)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-max-proximal-harness-five-trials",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (max, Proximal harness, five trials)",
+        "organization": "Anthropic",
+        "score": 0.623,
+        "input_score": 0.623,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "",
+        "metric_id": "frontierswe-v2-metric-v1",
+        "protocol_id": "frontierswe-v2-source-export-v1",
+        "task_set_id": "frontierswe-v2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "frontierswe-v2-canonical-score",
+        "evaluation_protocol": "FrontierSWE V2 public leaderboard export; Mean@5 rows using the proximus harness are kept together, while Best@5 and Worst@5 are not substituted for the headline metric.",
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414",
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5-system-card",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-frontierswe-v2-claude-opus-5-5-max-proxi-3617889ffec9762c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-frontierswe-v2-claude-opus-5-5-max-proximal-harness-five-trials"
+        ],
+        "plot_date": "2026-09-22",
+        "frontier_observation_ids": [
+          "obs-0-623-807545cb64d44fb1"
         ]
       }
     ],
@@ -987,7 +1169,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -1065,7 +1247,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-01",
@@ -1097,6 +1279,99 @@
         "plot_date": "2026-09-01",
         "frontier_observation_ids": [
           "obs-0-5629079-cc7972a85a32c1a1"
+        ]
+      },
+      {
+        "observation_id": "obs-0-623-807545cb64d44fb1",
+        "benchmark_id": "frontierswe-v2",
+        "benchmark_version_id": "frontierswe-v2-canonical",
+        "model_id": "model-claude-opus-5-5-max-proximal-harness-five-trials-484f6dee8d9ee31e",
+        "model_configuration": "Claude Opus 5.5 (max, Proximal harness, five trials)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-max-proximal-harness-five-trials",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (max, Proximal harness, five trials)",
+        "organization": "Anthropic",
+        "score": 0.623,
+        "input_score": 0.623,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "",
+        "metric_id": "frontierswe-v2-metric-v1",
+        "protocol_id": "frontierswe-v2-source-export-v1",
+        "task_set_id": "frontierswe-v2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "frontierswe-v2-canonical-score",
+        "evaluation_protocol": "FrontierSWE V2 public leaderboard export; Mean@5 rows using the proximus harness are kept together, while Best@5 and Worst@5 are not substituted for the headline metric.",
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414",
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5-system-card",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-frontierswe-v2-claude-opus-5-5-max-proxi-3617889ffec9762c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-frontierswe-v2-claude-opus-5-5-max-proximal-harness-five-trials"
+        ],
+        "plot_date": "2026-09-22",
+        "frontier_observation_ids": [
+          "obs-0-623-807545cb64d44fb1"
         ]
       }
     ],
@@ -1144,7 +1419,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -1222,7 +1497,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-01",
@@ -1255,17 +1530,298 @@
         "frontier_observation_ids": [
           "obs-0-5629079-cc7972a85a32c1a1"
         ]
+      },
+      {
+        "observation_id": "obs-0-623-807545cb64d44fb1",
+        "benchmark_id": "frontierswe-v2",
+        "benchmark_version_id": "frontierswe-v2-canonical",
+        "model_id": "model-claude-opus-5-5-max-proximal-harness-five-trials-484f6dee8d9ee31e",
+        "model_configuration": "Claude Opus 5.5 (max, Proximal harness, five trials)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-max-proximal-harness-five-trials",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (max, Proximal harness, five trials)",
+        "organization": "Anthropic",
+        "score": 0.623,
+        "input_score": 0.623,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "",
+        "metric_id": "frontierswe-v2-metric-v1",
+        "protocol_id": "frontierswe-v2-source-export-v1",
+        "task_set_id": "frontierswe-v2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "frontierswe-v2-canonical-score",
+        "evaluation_protocol": "FrontierSWE V2 public leaderboard export; Mean@5 rows using the proximus harness are kept together, while Best@5 and Worst@5 are not substituted for the headline metric.",
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414",
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5-system-card",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-frontierswe-v2-claude-opus-5-5-max-proxi-3617889ffec9762c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-frontierswe-v2-claude-opus-5-5-max-proximal-harness-five-trials"
+        ],
+        "plot_date": "2026-09-22",
+        "frontier_observation_ids": [
+          "obs-0-623-807545cb64d44fb1"
+        ]
       }
     ],
-    "reported_frontier": [],
-    "historical_frontier": [],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-623-807545cb64d44fb1",
+        "benchmark_id": "frontierswe-v2",
+        "benchmark_version_id": "frontierswe-v2-canonical",
+        "model_id": "model-claude-opus-5-5-max-proximal-harness-five-trials-484f6dee8d9ee31e",
+        "model_configuration": "Claude Opus 5.5 (max, Proximal harness, five trials)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-max-proximal-harness-five-trials",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (max, Proximal harness, five trials)",
+        "organization": "Anthropic",
+        "score": 0.623,
+        "input_score": 0.623,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "",
+        "metric_id": "frontierswe-v2-metric-v1",
+        "protocol_id": "frontierswe-v2-source-export-v1",
+        "task_set_id": "frontierswe-v2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "frontierswe-v2-canonical-score",
+        "evaluation_protocol": "FrontierSWE V2 public leaderboard export; Mean@5 rows using the proximus harness are kept together, while Best@5 and Worst@5 are not substituted for the headline metric.",
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414",
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5-system-card",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-frontierswe-v2-claude-opus-5-5-max-proxi-3617889ffec9762c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-frontierswe-v2-claude-opus-5-5-max-proximal-harness-five-trials"
+        ],
+        "plot_date": "2026-09-22",
+        "frontier_observation_ids": [
+          "obs-0-623-807545cb64d44fb1"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-623-807545cb64d44fb1",
+        "benchmark_id": "frontierswe-v2",
+        "benchmark_version_id": "frontierswe-v2-canonical",
+        "model_id": "model-claude-opus-5-5-max-proximal-harness-five-trials-484f6dee8d9ee31e",
+        "model_configuration": "Claude Opus 5.5 (max, Proximal harness, five trials)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-max-proximal-harness-five-trials",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (max, Proximal harness, five trials)",
+        "organization": "Anthropic",
+        "score": 0.623,
+        "input_score": 0.623,
+        "input_unit": "fraction",
+        "reported_cost_per_task": "",
+        "metric_id": "frontierswe-v2-metric-v1",
+        "protocol_id": "frontierswe-v2-source-export-v1",
+        "task_set_id": "frontierswe-v2-canonical",
+        "metric": "Score",
+        "score_role": "canonical",
+        "score_series_id": "frontierswe-v2-canonical-score",
+        "evaluation_protocol": "FrontierSWE V2 public leaderboard export; Mean@5 rows using the proximus harness are kept together, while Best@5 and Worst@5 are not substituted for the headline metric.",
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414",
+          "resource-https-www-frontierswe-com-595e7d6ffd585872"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5-system-card",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-frontierswe-v2-claude-opus-5-5-max-proxi-3617889ffec9762c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-frontierswe-v2-claude-opus-5-5-max-proximal-harness-five-trials"
+        ],
+        "plot_date": "2026-09-22",
+        "frontier_observation_ids": [
+          "obs-0-623-807545cb64d44fb1"
+        ]
+      }
+    ],
     "retrospective_observations": [],
-    "observed_frontier": 0.5629079,
-    "capability_frontier_value": 0.5629079,
-    "reported_frontier_value": null,
-    "current_frontier": 0.5629079,
-    "normalized_progress": 0.5629079,
-    "normalized_headroom": 0.4370921,
+    "observed_frontier": 0.623,
+    "capability_frontier_value": 0.623,
+    "reported_frontier_value": 0.623,
+    "current_frontier": 0.623,
+    "normalized_progress": 0.623,
+    "normalized_headroom": 0.377,
     "threshold_days": {
       "T50": {
         "status": "reached",
@@ -1274,11 +1830,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 65
+        "days": 84
       },
       "T90": {
         "status": "right_censored",
-        "days": 65
+        "days": 84
       }
     },
     "capability_threshold_days": {
@@ -1289,25 +1845,26 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 65
+        "days": 84
       },
       "T90": {
         "status": "right_censored",
-        "days": 65
+        "days": 84
       }
     },
     "reported_threshold_days": {
       "T50": {
-        "status": "unknown",
-        "reason": "No dated observations are available on this timeline."
+        "status": "reached",
+        "days": 83,
+        "qualifying_observation_date": "2026-09-22"
       },
       "T80": {
-        "status": "unknown",
-        "reason": "No dated observations are available on this timeline."
+        "status": "right_censored",
+        "days": 84
       },
       "T90": {
-        "status": "unknown",
-        "reason": "No dated observations are available on this timeline."
+        "status": "right_censored",
+        "days": 84
       }
     },
     "velocity_180d": null,
@@ -1321,6 +1878,7 @@
       "source_ids": [
         "resource-https-docs-modelstudio-console-alibabacloud-com--6742ad46468fc647",
         "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+        "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414",
         "resource-https-www-frontierswe-com-595e7d6ffd585872",
         "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
       ],
@@ -1344,7 +1902,7 @@
       "resource-https-www-frontierswe-com-595e7d6ffd585872"
     ],
     "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
-    "historical_frontier_status": "unknown_public_dates",
+    "historical_frontier_status": "available",
     "timeline_default": "capability",
     "lifecycle_eligibility": {
       "test-of-time": {

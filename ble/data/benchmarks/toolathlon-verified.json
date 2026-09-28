@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-04",
+  "snapshot_id": "2026-09-23",
   "reference_organizations": [
     {
       "id": "openai",
@@ -107,7 +107,244 @@
       "progress_target": 1.0,
       "lifecycle_eligible": true
     },
-    "auxiliary_score_series": [],
+    "auxiliary_score_series": [
+      {
+        "series_id": "toolathlon-verified-auxiliary-toolathlon-mimo-sep21",
+        "role": "auxiliary",
+        "label": "MiMo model-card harness",
+        "metric_id": "toolathlon-verified-metric-v1",
+        "metric_name": "Pass@1",
+        "protocol_id": "toolathlon-mimo-sep21",
+        "task_set_id": "toolathlon-mimo-sep21",
+        "lifecycle_eligible": false,
+        "explanation": {
+          "en": "Verified score from MiMo; environment patches, retry policy and exact task count are not pinned.",
+          "zh": "MiMo \u53d1\u5e03\u7684 verified \u6210\u7ee9\uff1b\u672a\u56fa\u5b9a\u73af\u5883\u8865\u4e01\u3001\u91cd\u8bd5\u7b56\u7565\u6216\u51c6\u786e\u9898\u6570\u3002"
+        },
+        "observation_ids": [
+          "obs-0-769-8f559c2f8cf4ba26",
+          "obs-0-736-d03bb6affc217f74"
+        ],
+        "frontier_events": [
+          {
+            "observation_id": "obs-0-769-8f559c2f8cf4ba26",
+            "benchmark_id": "toolathlon-verified",
+            "benchmark_version_id": "toolathlon-verified-canonical",
+            "model_id": "model-mimo-v2-6-pro-rl-model-card-settings-fb28d1e8a8d24000",
+            "model_configuration": "MiMo-V2.6-Pro-RL (model-card settings)",
+            "model_identity_organization": "xiaomi",
+            "model_label_id": "mimo-v2-6-pro-rl-model-card-settings",
+            "model_family_id": "xiaomi-mimo-v2-6-pro-rl",
+            "model": "MiMo-V2.6-Pro-RL (model-card settings)",
+            "organization": "Xiaomi",
+            "score": 0.769,
+            "input_score": 0.769,
+            "input_unit": "fraction",
+            "reported_cost_per_task": null,
+            "metric_id": "toolathlon-verified-metric-v1",
+            "protocol_id": "toolathlon-mimo-sep21",
+            "task_set_id": "toolathlon-mimo-sep21",
+            "metric": "Pass@1",
+            "score_role": "auxiliary",
+            "score_series_id": "toolathlon-verified-auxiliary-toolathlon-mimo-sep21",
+            "evaluation_protocol": "Verified score from MiMo; environment patches, retry policy and exact task count are not pinned.",
+            "auxiliary_metadata": {
+              "protocol_id": "toolathlon-mimo-sep21",
+              "task_set_id": "toolathlon-mimo-sep21",
+              "label": "MiMo model-card harness",
+              "explanation": {
+                "en": "Verified score from MiMo; environment patches, retry policy and exact task count are not pinned.",
+                "zh": "MiMo \u53d1\u5e03\u7684 verified \u6210\u7ee9\uff1b\u672a\u56fa\u5b9a\u73af\u5883\u8865\u4e01\u3001\u91cd\u8bd5\u7b56\u7565\u6216\u51c6\u786e\u9898\u6570\u3002"
+              }
+            },
+            "model_release_date": null,
+            "evaluation_date": null,
+            "result_public_date": "2026-09-21",
+            "source_publication_date": "2026-09-21",
+            "observation_date": "2026-09-21",
+            "observation_date_precision": "day",
+            "observation_date_sources": [
+              {
+                "date": "2026-09-21",
+                "kind": "score_publication_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+                ]
+              }
+            ],
+            "observation_date_source_ids": [
+              "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+            ],
+            "evaluation_date_sources": [],
+            "score_publication_date_sources": [
+              {
+                "date": "2026-09-21",
+                "kind": "Result public date",
+                "precision": "day"
+              }
+            ],
+            "ingested_at": "2026-09-23",
+            "date_precision": "day",
+            "date_notes": null,
+            "date": "2026-09-21",
+            "date_kind": "earliest_observation_evidence_date",
+            "capability_date": "2026-09-21",
+            "capability_date_meaning": "earliest_observation_evidence_date",
+            "reported_date_meaning": "result_public_date",
+            "historical_frontier_date": "2026-09-21",
+            "temporal_class": "historical_or_unknown",
+            "retrospective": false,
+            "capability_frontier_eligible": false,
+            "historical_frontier_eligible": true,
+            "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+            "contemporaneous": true,
+            "source_ids": [
+              "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349",
+              "resource-https-toolathlon-xyz-docs-leaderboard-929cc5cdff51f3c0"
+            ],
+            "score_source_ids": [
+              "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+            ],
+            "source": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL/blob/c165b4c7d1936ec55425c029597f414f84bd5d34/README.md",
+            "notes": "Operational evaluation timeline only; not a historical public-result date.",
+            "evidence_ids": [
+              "evidence-sep2026-toolathlon-verified-mimo-v2-6-pro-rl-mod-f0cfbed41c7c0037"
+            ],
+            "evidence_count": 1,
+            "source_row_ids": [
+              "sep2026-toolathlon-verified-mimo-v2-6-pro-rl-model-card-settings"
+            ],
+            "plot_date": "2026-09-21",
+            "frontier_observation_ids": [
+              "obs-0-736-d03bb6affc217f74",
+              "obs-0-769-8f559c2f8cf4ba26"
+            ]
+          }
+        ]
+      },
+      {
+        "series_id": "toolathlon-verified-auxiliary-toolathlon-verified-anthropic-sep22",
+        "role": "auxiliary",
+        "label": "Anthropic harness / verified tasks",
+        "metric_id": "toolathlon-verified-metric-v1",
+        "metric_name": "Pass@1",
+        "protocol_id": "toolathlon-verified-anthropic-sep22",
+        "task_set_id": "toolathlon-verified-anthropic-sep22",
+        "lifecycle_eligible": false,
+        "explanation": {
+          "en": "108 verified tasks, three trials, max effort; patched environment and pinned feeds. Null-attempt handling differs from the public leaderboard.",
+          "zh": "108 \u4e2a verified \u4efb\u52a1\u3001\u4e09\u6b21\u8fd0\u884c\u3001max \u6863\u4f4d\uff1b\u4fee\u8865\u73af\u5883\u5e76\u56fa\u5b9a\u6570\u636e\u6e90\uff0c\u7a7a\u8fd0\u884c\u5904\u7406\u4e0e\u516c\u5f00\u699c\u5355\u4e0d\u540c\u3002"
+        },
+        "observation_ids": [
+          "obs-0-778-40a4c8a091418e8c"
+        ],
+        "frontier_events": [
+          {
+            "observation_id": "obs-0-778-40a4c8a091418e8c",
+            "benchmark_id": "toolathlon-verified",
+            "benchmark_version_id": "toolathlon-verified-canonical",
+            "model_id": "model-claude-opus-5-5-max-no-fallback-abcd1986d6af75c8",
+            "model_configuration": "Claude Opus 5.5 (max, no fallback)",
+            "model_identity_organization": "anthropic",
+            "model_label_id": "claude-opus-5-5-max-no-fallback",
+            "model_family_id": "anthropic-claude-opus-5-5",
+            "model": "Claude Opus 5.5 (max, no fallback)",
+            "organization": "Anthropic",
+            "score": 0.778,
+            "input_score": 0.778,
+            "input_unit": "fraction",
+            "reported_cost_per_task": null,
+            "metric_id": "toolathlon-verified-metric-v1",
+            "protocol_id": "toolathlon-verified-anthropic-sep22",
+            "task_set_id": "toolathlon-verified-anthropic-sep22",
+            "metric": "Pass@1",
+            "score_role": "auxiliary",
+            "score_series_id": "toolathlon-verified-auxiliary-toolathlon-verified-anthropic-sep22",
+            "evaluation_protocol": "108 verified tasks, three trials, max effort; patched environment and pinned feeds. Null-attempt handling differs from the public leaderboard.",
+            "auxiliary_metadata": {
+              "protocol_id": "toolathlon-verified-anthropic-sep22",
+              "task_set_id": "toolathlon-verified-anthropic-sep22",
+              "label": "Anthropic harness / verified tasks",
+              "explanation": {
+                "en": "108 verified tasks, three trials, max effort; patched environment and pinned feeds. Null-attempt handling differs from the public leaderboard.",
+                "zh": "108 \u4e2a verified \u4efb\u52a1\u3001\u4e09\u6b21\u8fd0\u884c\u3001max \u6863\u4f4d\uff1b\u4fee\u8865\u73af\u5883\u5e76\u56fa\u5b9a\u6570\u636e\u6e90\uff0c\u7a7a\u8fd0\u884c\u5904\u7406\u4e0e\u516c\u5f00\u699c\u5355\u4e0d\u540c\u3002"
+              }
+            },
+            "model_release_date": "2026-09-22",
+            "evaluation_date": null,
+            "result_public_date": "2026-09-22",
+            "source_publication_date": "2026-09-22",
+            "observation_date": "2026-09-22",
+            "observation_date_precision": "day",
+            "observation_date_sources": [
+              {
+                "date": "2026-09-22",
+                "kind": "model_release_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+                ]
+              },
+              {
+                "date": "2026-09-22",
+                "kind": "score_publication_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+                ]
+              }
+            ],
+            "observation_date_source_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ],
+            "evaluation_date_sources": [],
+            "score_publication_date_sources": [
+              {
+                "date": "2026-09-22",
+                "kind": "Result public date",
+                "precision": "day"
+              }
+            ],
+            "ingested_at": "2026-09-23",
+            "date_precision": "day",
+            "date_notes": null,
+            "date": "2026-09-22",
+            "date_kind": "earliest_observation_evidence_date",
+            "capability_date": "2026-09-22",
+            "capability_date_meaning": "earliest_observation_evidence_date",
+            "reported_date_meaning": "result_public_date",
+            "historical_frontier_date": "2026-09-22",
+            "temporal_class": "historical_or_unknown",
+            "retrospective": false,
+            "capability_frontier_eligible": false,
+            "historical_frontier_eligible": true,
+            "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+            "contemporaneous": true,
+            "source_ids": [
+              "resource-https-toolathlon-xyz-docs-leaderboard-929cc5cdff51f3c0",
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ],
+            "score_source_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ],
+            "source": "https://www.anthropic.com/claude-opus-5-5-system-card",
+            "notes": "Operational evaluation timeline only; not a historical public-result date.",
+            "evidence_ids": [
+              "evidence-sep2026-toolathlon-verified-claude-opus-5-5-max--3c64e54c8180b15e"
+            ],
+            "evidence_count": 1,
+            "source_row_ids": [
+              "sep2026-toolathlon-verified-claude-opus-5-5-max-no-fallback"
+            ],
+            "plot_date": "2026-09-22",
+            "frontier_observation_ids": [
+              "obs-0-778-40a4c8a091418e8c"
+            ]
+          }
+        ]
+      }
+    ],
     "benchmark_version_id": "toolathlon-verified-canonical",
     "summary": {
       "en": "Toolathlon-Verified tests models and agents on diverse tool-use tasks that require multi-step planning and execution.",
@@ -125,8 +362,8 @@
       }
     },
     "evaluation_target": "environment_outcome",
-    "observation_count": 5,
-    "evidence_record_count": 5,
+    "observation_count": 8,
+    "evidence_record_count": 8,
     "observations": [
       {
         "observation_id": "obs-0-765-e54ef5398cbdfd1b",
@@ -171,7 +408,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-16",
@@ -243,7 +480,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-05-28",
@@ -315,7 +552,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-06-30",
@@ -387,7 +624,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-01",
@@ -459,7 +696,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-05-19",
@@ -487,6 +724,284 @@
         ],
         "evidence_count": 1,
         "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-778-40a4c8a091418e8c",
+        "benchmark_id": "toolathlon-verified",
+        "benchmark_version_id": "toolathlon-verified-canonical",
+        "model_id": "model-claude-opus-5-5-max-no-fallback-abcd1986d6af75c8",
+        "model_configuration": "Claude Opus 5.5 (max, no fallback)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-max-no-fallback",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (max, no fallback)",
+        "organization": "Anthropic",
+        "score": 0.778,
+        "input_score": 0.778,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "toolathlon-verified-metric-v1",
+        "protocol_id": "toolathlon-verified-anthropic-sep22",
+        "task_set_id": "toolathlon-verified-anthropic-sep22",
+        "metric": "Pass@1",
+        "score_role": "auxiliary",
+        "score_series_id": "toolathlon-verified-auxiliary-toolathlon-verified-anthropic-sep22",
+        "evaluation_protocol": "108 verified tasks, three trials, max effort; patched environment and pinned feeds. Null-attempt handling differs from the public leaderboard.",
+        "auxiliary_metadata": {
+          "protocol_id": "toolathlon-verified-anthropic-sep22",
+          "task_set_id": "toolathlon-verified-anthropic-sep22",
+          "label": "Anthropic harness / verified tasks",
+          "explanation": {
+            "en": "108 verified tasks, three trials, max effort; patched environment and pinned feeds. Null-attempt handling differs from the public leaderboard.",
+            "zh": "108 \u4e2a verified \u4efb\u52a1\u3001\u4e09\u6b21\u8fd0\u884c\u3001max \u6863\u4f4d\uff1b\u4fee\u8865\u73af\u5883\u5e76\u56fa\u5b9a\u6570\u636e\u6e90\uff0c\u7a7a\u8fd0\u884c\u5904\u7406\u4e0e\u516c\u5f00\u699c\u5355\u4e0d\u540c\u3002"
+          }
+        },
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-toolathlon-xyz-docs-leaderboard-929cc5cdff51f3c0",
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5-system-card",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-toolathlon-verified-claude-opus-5-5-max--3c64e54c8180b15e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-toolathlon-verified-claude-opus-5-5-max-no-fallback"
+        ]
+      },
+      {
+        "observation_id": "obs-0-769-8f559c2f8cf4ba26",
+        "benchmark_id": "toolathlon-verified",
+        "benchmark_version_id": "toolathlon-verified-canonical",
+        "model_id": "model-mimo-v2-6-pro-rl-model-card-settings-fb28d1e8a8d24000",
+        "model_configuration": "MiMo-V2.6-Pro-RL (model-card settings)",
+        "model_identity_organization": "xiaomi",
+        "model_label_id": "mimo-v2-6-pro-rl-model-card-settings",
+        "model_family_id": "xiaomi-mimo-v2-6-pro-rl",
+        "model": "MiMo-V2.6-Pro-RL (model-card settings)",
+        "organization": "Xiaomi",
+        "score": 0.769,
+        "input_score": 0.769,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "toolathlon-verified-metric-v1",
+        "protocol_id": "toolathlon-mimo-sep21",
+        "task_set_id": "toolathlon-mimo-sep21",
+        "metric": "Pass@1",
+        "score_role": "auxiliary",
+        "score_series_id": "toolathlon-verified-auxiliary-toolathlon-mimo-sep21",
+        "evaluation_protocol": "Verified score from MiMo; environment patches, retry policy and exact task count are not pinned.",
+        "auxiliary_metadata": {
+          "protocol_id": "toolathlon-mimo-sep21",
+          "task_set_id": "toolathlon-mimo-sep21",
+          "label": "MiMo model-card harness",
+          "explanation": {
+            "en": "Verified score from MiMo; environment patches, retry policy and exact task count are not pinned.",
+            "zh": "MiMo \u53d1\u5e03\u7684 verified \u6210\u7ee9\uff1b\u672a\u56fa\u5b9a\u73af\u5883\u8865\u4e01\u3001\u91cd\u8bd5\u7b56\u7565\u6216\u51c6\u786e\u9898\u6570\u3002"
+          }
+        },
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-21",
+        "source_publication_date": "2026-09-21",
+        "observation_date": "2026-09-21",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-21",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-21",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349",
+          "resource-https-toolathlon-xyz-docs-leaderboard-929cc5cdff51f3c0"
+        ],
+        "score_source_ids": [
+          "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+        ],
+        "source": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL/blob/c165b4c7d1936ec55425c029597f414f84bd5d34/README.md",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-toolathlon-verified-mimo-v2-6-pro-rl-mod-f0cfbed41c7c0037"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-toolathlon-verified-mimo-v2-6-pro-rl-model-card-settings"
+        ]
+      },
+      {
+        "observation_id": "obs-0-736-d03bb6affc217f74",
+        "benchmark_id": "toolathlon-verified",
+        "benchmark_version_id": "toolathlon-verified-canonical",
+        "model_id": "model-mimo-v2-6-flash-rl-model-card-settings-876368974dacc51a",
+        "model_configuration": "MiMo-V2.6-Flash-RL (model-card settings)",
+        "model_identity_organization": "xiaomi",
+        "model_label_id": "mimo-v2-6-flash-rl-model-card-settings",
+        "model_family_id": "xiaomi-mimo-v2-6-flash-rl",
+        "model": "MiMo-V2.6-Flash-RL (model-card settings)",
+        "organization": "Xiaomi",
+        "score": 0.736,
+        "input_score": 0.736,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "toolathlon-verified-metric-v1",
+        "protocol_id": "toolathlon-mimo-sep21",
+        "task_set_id": "toolathlon-mimo-sep21",
+        "metric": "Pass@1",
+        "score_role": "auxiliary",
+        "score_series_id": "toolathlon-verified-auxiliary-toolathlon-mimo-sep21",
+        "evaluation_protocol": "Verified score from MiMo; environment patches, retry policy and exact task count are not pinned.",
+        "auxiliary_metadata": {
+          "protocol_id": "toolathlon-mimo-sep21",
+          "task_set_id": "toolathlon-mimo-sep21",
+          "label": "MiMo model-card harness",
+          "explanation": {
+            "en": "Verified score from MiMo; environment patches, retry policy and exact task count are not pinned.",
+            "zh": "MiMo \u53d1\u5e03\u7684 verified \u6210\u7ee9\uff1b\u672a\u56fa\u5b9a\u73af\u5883\u8865\u4e01\u3001\u91cd\u8bd5\u7b56\u7565\u6216\u51c6\u786e\u9898\u6570\u3002"
+          }
+        },
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-21",
+        "source_publication_date": "2026-09-21",
+        "observation_date": "2026-09-21",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-21",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-21",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349",
+          "resource-https-toolathlon-xyz-docs-leaderboard-929cc5cdff51f3c0"
+        ],
+        "score_source_ids": [
+          "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+        ],
+        "source": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL/blob/c165b4c7d1936ec55425c029597f414f84bd5d34/README.md",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-toolathlon-verified-mimo-v2-6-flash-rl-m-30c08af7fded2af3"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-toolathlon-verified-mimo-v2-6-flash-rl-model-card-settings"
+        ]
       }
     ],
     "frontier": [
@@ -533,7 +1048,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-06-30",
@@ -611,7 +1126,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-16",
@@ -689,7 +1204,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-06-30",
@@ -767,7 +1282,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-16",
@@ -845,7 +1360,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-06-30",
@@ -923,7 +1438,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-16",
@@ -974,11 +1489,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 66
+        "days": 85
       },
       "T90": {
         "status": "right_censored",
-        "days": 66
+        "days": 85
       }
     },
     "capability_threshold_days": {
@@ -989,11 +1504,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 66
+        "days": 85
       },
       "T90": {
         "status": "right_censored",
-        "days": 66
+        "days": 85
       }
     },
     "reported_threshold_days": {

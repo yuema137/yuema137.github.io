@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-04",
+  "snapshot_id": "2026-09-23",
   "reference_organizations": [
     {
       "id": "openai",
@@ -124,8 +124,8 @@
       }
     },
     "evaluation_target": "environment_outcome",
-    "observation_count": 5,
-    "evidence_record_count": 5,
+    "observation_count": 6,
+    "evidence_record_count": 6,
     "observations": [
       {
         "observation_id": "obs-0-616-5a83fc3283d288df",
@@ -176,7 +176,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-24",
@@ -258,7 +258,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-08-12",
@@ -349,7 +349,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-01",
@@ -430,7 +430,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-04-23",
@@ -510,7 +510,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-02-19",
@@ -539,6 +539,95 @@
         "evidence_count": 1,
         "source_row_ids": [
           "eebench-gemini-3-1-pro"
+        ]
+      },
+      {
+        "observation_id": "obs-0-64-d63a04dd3ccbae9e",
+        "benchmark_id": "eebench",
+        "benchmark_version_id": "eebench-canonical",
+        "model_id": "model-grok-4-7-xhigh-284218343a0aaca6",
+        "model_configuration": "Grok 4.7 (xhigh)",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-7-xhigh",
+        "model_family_id": "xai-grok-4-7",
+        "model": "Grok 4.7 (xhigh)",
+        "organization": "xAI",
+        "score": 0.64,
+        "input_score": 64.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": "",
+        "metric_id": "eebench-metric-v1",
+        "protocol_id": "eebench-source-export-v1",
+        "task_set_id": "eebench-canonical",
+        "metric": "Score (%)",
+        "score_role": "canonical",
+        "score_series_id": "eebench-canonical-score",
+        "evaluation_protocol": "EEBench official leaderboard snapshot; Score (%) is kept as the headline metric and each model/harness configuration remains a separate observation. Cost/task is preserved as reported context, not treated as a benchmark constant.",
+        "model_release_date": "2026-09-21",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-21",
+        "source_publication_date": "2026-09-21",
+        "observation_date": "2026-09-21",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+            ]
+          },
+          {
+            "date": "2026-09-21",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-21",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-21",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-eebench-org-e2a1b6e7d360eb84",
+          "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+        ],
+        "score_source_ids": [
+          "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+        ],
+        "source": "https://x.ai/news/grok-4-7",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-eebench-grok-4-7-xhigh-093427a623d2ebb0"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-eebench-grok-4-7-xhigh"
         ]
       }
     ],
@@ -592,7 +681,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-08-01",
@@ -627,6 +716,99 @@
           "obs-0-423-e11a2eaa909e6795",
           "obs-0-463-83030ff848d82b27",
           "obs-0-616-5a83fc3283d288df"
+        ]
+      },
+      {
+        "observation_id": "obs-0-64-d63a04dd3ccbae9e",
+        "benchmark_id": "eebench",
+        "benchmark_version_id": "eebench-canonical",
+        "model_id": "model-grok-4-7-xhigh-284218343a0aaca6",
+        "model_configuration": "Grok 4.7 (xhigh)",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-7-xhigh",
+        "model_family_id": "xai-grok-4-7",
+        "model": "Grok 4.7 (xhigh)",
+        "organization": "xAI",
+        "score": 0.64,
+        "input_score": 64.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": "",
+        "metric_id": "eebench-metric-v1",
+        "protocol_id": "eebench-source-export-v1",
+        "task_set_id": "eebench-canonical",
+        "metric": "Score (%)",
+        "score_role": "canonical",
+        "score_series_id": "eebench-canonical-score",
+        "evaluation_protocol": "EEBench official leaderboard snapshot; Score (%) is kept as the headline metric and each model/harness configuration remains a separate observation. Cost/task is preserved as reported context, not treated as a benchmark constant.",
+        "model_release_date": "2026-09-21",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-21",
+        "source_publication_date": "2026-09-21",
+        "observation_date": "2026-09-21",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+            ]
+          },
+          {
+            "date": "2026-09-21",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-21",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-21",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-eebench-org-e2a1b6e7d360eb84",
+          "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+        ],
+        "score_source_ids": [
+          "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+        ],
+        "source": "https://x.ai/news/grok-4-7",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-eebench-grok-4-7-xhigh-093427a623d2ebb0"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-eebench-grok-4-7-xhigh"
+        ],
+        "plot_date": "2026-09-21",
+        "frontier_observation_ids": [
+          "obs-0-64-d63a04dd3ccbae9e"
         ]
       }
     ],
@@ -680,7 +862,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-08-01",
@@ -715,6 +897,99 @@
           "obs-0-423-e11a2eaa909e6795",
           "obs-0-463-83030ff848d82b27",
           "obs-0-616-5a83fc3283d288df"
+        ]
+      },
+      {
+        "observation_id": "obs-0-64-d63a04dd3ccbae9e",
+        "benchmark_id": "eebench",
+        "benchmark_version_id": "eebench-canonical",
+        "model_id": "model-grok-4-7-xhigh-284218343a0aaca6",
+        "model_configuration": "Grok 4.7 (xhigh)",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-7-xhigh",
+        "model_family_id": "xai-grok-4-7",
+        "model": "Grok 4.7 (xhigh)",
+        "organization": "xAI",
+        "score": 0.64,
+        "input_score": 64.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": "",
+        "metric_id": "eebench-metric-v1",
+        "protocol_id": "eebench-source-export-v1",
+        "task_set_id": "eebench-canonical",
+        "metric": "Score (%)",
+        "score_role": "canonical",
+        "score_series_id": "eebench-canonical-score",
+        "evaluation_protocol": "EEBench official leaderboard snapshot; Score (%) is kept as the headline metric and each model/harness configuration remains a separate observation. Cost/task is preserved as reported context, not treated as a benchmark constant.",
+        "model_release_date": "2026-09-21",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-21",
+        "source_publication_date": "2026-09-21",
+        "observation_date": "2026-09-21",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+            ]
+          },
+          {
+            "date": "2026-09-21",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-21",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-21",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-eebench-org-e2a1b6e7d360eb84",
+          "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+        ],
+        "score_source_ids": [
+          "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+        ],
+        "source": "https://x.ai/news/grok-4-7",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-eebench-grok-4-7-xhigh-093427a623d2ebb0"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-eebench-grok-4-7-xhigh"
+        ],
+        "plot_date": "2026-09-21",
+        "frontier_observation_ids": [
+          "obs-0-64-d63a04dd3ccbae9e"
         ]
       }
     ],
@@ -768,7 +1043,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-08-01",
@@ -804,10 +1079,291 @@
           "obs-0-463-83030ff848d82b27",
           "obs-0-616-5a83fc3283d288df"
         ]
+      },
+      {
+        "observation_id": "obs-0-64-d63a04dd3ccbae9e",
+        "benchmark_id": "eebench",
+        "benchmark_version_id": "eebench-canonical",
+        "model_id": "model-grok-4-7-xhigh-284218343a0aaca6",
+        "model_configuration": "Grok 4.7 (xhigh)",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-7-xhigh",
+        "model_family_id": "xai-grok-4-7",
+        "model": "Grok 4.7 (xhigh)",
+        "organization": "xAI",
+        "score": 0.64,
+        "input_score": 64.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": "",
+        "metric_id": "eebench-metric-v1",
+        "protocol_id": "eebench-source-export-v1",
+        "task_set_id": "eebench-canonical",
+        "metric": "Score (%)",
+        "score_role": "canonical",
+        "score_series_id": "eebench-canonical-score",
+        "evaluation_protocol": "EEBench official leaderboard snapshot; Score (%) is kept as the headline metric and each model/harness configuration remains a separate observation. Cost/task is preserved as reported context, not treated as a benchmark constant.",
+        "model_release_date": "2026-09-21",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-21",
+        "source_publication_date": "2026-09-21",
+        "observation_date": "2026-09-21",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+            ]
+          },
+          {
+            "date": "2026-09-21",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-21",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-21",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-eebench-org-e2a1b6e7d360eb84",
+          "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+        ],
+        "score_source_ids": [
+          "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+        ],
+        "source": "https://x.ai/news/grok-4-7",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-eebench-grok-4-7-xhigh-093427a623d2ebb0"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-eebench-grok-4-7-xhigh"
+        ],
+        "plot_date": "2026-09-21",
+        "frontier_observation_ids": [
+          "obs-0-64-d63a04dd3ccbae9e"
+        ]
       }
     ],
-    "reported_frontier": [],
-    "historical_frontier": [],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-64-d63a04dd3ccbae9e",
+        "benchmark_id": "eebench",
+        "benchmark_version_id": "eebench-canonical",
+        "model_id": "model-grok-4-7-xhigh-284218343a0aaca6",
+        "model_configuration": "Grok 4.7 (xhigh)",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-7-xhigh",
+        "model_family_id": "xai-grok-4-7",
+        "model": "Grok 4.7 (xhigh)",
+        "organization": "xAI",
+        "score": 0.64,
+        "input_score": 64.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": "",
+        "metric_id": "eebench-metric-v1",
+        "protocol_id": "eebench-source-export-v1",
+        "task_set_id": "eebench-canonical",
+        "metric": "Score (%)",
+        "score_role": "canonical",
+        "score_series_id": "eebench-canonical-score",
+        "evaluation_protocol": "EEBench official leaderboard snapshot; Score (%) is kept as the headline metric and each model/harness configuration remains a separate observation. Cost/task is preserved as reported context, not treated as a benchmark constant.",
+        "model_release_date": "2026-09-21",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-21",
+        "source_publication_date": "2026-09-21",
+        "observation_date": "2026-09-21",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+            ]
+          },
+          {
+            "date": "2026-09-21",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-21",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-09-21",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-eebench-org-e2a1b6e7d360eb84",
+          "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+        ],
+        "score_source_ids": [
+          "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+        ],
+        "source": "https://x.ai/news/grok-4-7",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-eebench-grok-4-7-xhigh-093427a623d2ebb0"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-eebench-grok-4-7-xhigh"
+        ],
+        "plot_date": "2026-09-21",
+        "frontier_observation_ids": [
+          "obs-0-64-d63a04dd3ccbae9e"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-64-d63a04dd3ccbae9e",
+        "benchmark_id": "eebench",
+        "benchmark_version_id": "eebench-canonical",
+        "model_id": "model-grok-4-7-xhigh-284218343a0aaca6",
+        "model_configuration": "Grok 4.7 (xhigh)",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-7-xhigh",
+        "model_family_id": "xai-grok-4-7",
+        "model": "Grok 4.7 (xhigh)",
+        "organization": "xAI",
+        "score": 0.64,
+        "input_score": 64.0,
+        "input_unit": "percentage_points",
+        "reported_cost_per_task": "",
+        "metric_id": "eebench-metric-v1",
+        "protocol_id": "eebench-source-export-v1",
+        "task_set_id": "eebench-canonical",
+        "metric": "Score (%)",
+        "score_role": "canonical",
+        "score_series_id": "eebench-canonical-score",
+        "evaluation_protocol": "EEBench official leaderboard snapshot; Score (%) is kept as the headline metric and each model/harness configuration remains a separate observation. Cost/task is preserved as reported context, not treated as a benchmark constant.",
+        "model_release_date": "2026-09-21",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-21",
+        "source_publication_date": "2026-09-21",
+        "observation_date": "2026-09-21",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+            ]
+          },
+          {
+            "date": "2026-09-21",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-21",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-09-21",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-eebench-org-e2a1b6e7d360eb84",
+          "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+        ],
+        "score_source_ids": [
+          "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+        ],
+        "source": "https://x.ai/news/grok-4-7",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-eebench-grok-4-7-xhigh-093427a623d2ebb0"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-eebench-grok-4-7-xhigh"
+        ],
+        "plot_date": "2026-09-21",
+        "frontier_observation_ids": [
+          "obs-0-64-d63a04dd3ccbae9e"
+        ]
+      }
+    ],
     "retrospective_observations": [
       {
         "observation_id": "obs-0-616-5a83fc3283d288df",
@@ -858,7 +1414,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-24",
@@ -940,7 +1496,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-08-12",
@@ -1021,7 +1577,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-04-23",
@@ -1101,7 +1657,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-02-19",
@@ -1133,12 +1689,12 @@
         ]
       }
     ],
-    "observed_frontier": 0.616,
-    "capability_frontier_value": 0.616,
-    "reported_frontier_value": null,
-    "current_frontier": 0.616,
-    "normalized_progress": 0.616,
-    "normalized_headroom": 0.384,
+    "observed_frontier": 0.64,
+    "capability_frontier_value": 0.64,
+    "reported_frontier_value": 0.64,
+    "current_frontier": 0.64,
+    "normalized_progress": 0.64,
+    "normalized_headroom": 0.36,
     "threshold_days": {
       "T50": {
         "status": "at_release",
@@ -1147,11 +1703,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 34
+        "days": 53
       },
       "T90": {
         "status": "right_censored",
-        "days": 34
+        "days": 53
       }
     },
     "capability_threshold_days": {
@@ -1162,25 +1718,26 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 34
+        "days": 53
       },
       "T90": {
         "status": "right_censored",
-        "days": 34
+        "days": 53
       }
     },
     "reported_threshold_days": {
       "T50": {
-        "status": "unknown",
-        "reason": "No dated observations are available on this timeline."
+        "status": "reached",
+        "days": 51,
+        "qualifying_observation_date": "2026-09-21"
       },
       "T80": {
-        "status": "unknown",
-        "reason": "No dated observations are available on this timeline."
+        "status": "right_censored",
+        "days": 53
       },
       "T90": {
-        "status": "unknown",
-        "reason": "No dated observations are available on this timeline."
+        "status": "right_censored",
+        "days": 53
       }
     },
     "velocity_180d": null,
@@ -1194,7 +1751,8 @@
       "source_ids": [
         "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
         "resource-https-www-eebench-org-e2a1b6e7d360eb84",
-        "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
+        "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067",
+        "resource-https-x-ai-news-grok-4-7-39b901174b543376"
       ],
       "notes": "Cost varies by model, harness, and inference settings."
     },
@@ -1214,7 +1772,7 @@
       "resource-https-www-eebench-org-e2a1b6e7d360eb84"
     ],
     "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
-    "historical_frontier_status": "unknown_public_dates",
+    "historical_frontier_status": "available",
     "timeline_default": "capability",
     "lifecycle_eligibility": {
       "test-of-time": {
