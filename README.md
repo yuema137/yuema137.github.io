@@ -22,7 +22,7 @@ python3 -m http.server 8000
 index.html              Home — landing page, points at everything else
 research/               Research interests and long-term direction
 projects/               What I build; one card per project
-publications/           Formal scholarly output, reverse-chronological
+publications/           Formal scholarly output, representative work first
 talks/                  Conference talks, seminars, invited talks
 blog/                   Post index + one directory per post
 cv/                     Web summary + PDF download
