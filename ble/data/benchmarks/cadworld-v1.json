@@ -1,0 +1,1237 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-23",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "cadworld-v1",
+    "name": "CADWorld v1",
+    "domain": "Mechanical & Aerospace Engineering",
+    "release": "2026-09-14",
+    "source": "https://arxiv.org/abs/2609.16251v1",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Agent",
+    "tags": [
+      "September 2026 curation"
+    ],
+    "labels": [
+      "spatial-reasoning",
+      "multimodal-perception",
+      "planning",
+      "environment-interaction",
+      "state-tracking"
+    ],
+    "metric": "Success rate",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "cadworld-v1-metric-v1",
+    "protocol_id": "cadworld-v1-protocol-v1",
+    "canonical_score": {
+      "series_id": "cadworld-v1-canonical-score",
+      "role": "canonical",
+      "metric_id": "cadworld-v1-metric-v1",
+      "metric_name": "Success rate",
+      "protocol_id": "cadworld-v1-protocol-v1",
+      "task_set_id": "cadworld-v1-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "cadworld-v1-canonical",
+    "summary": {
+      "en": "Tests completion of engineering workflows through the FreeCAD GUI.",
+      "zh": "\u6d4b\u8bd5\u901a\u8fc7 FreeCAD \u56fe\u5f62\u754c\u9762\u5b8c\u6210\u5de5\u7a0b\u5de5\u4f5c\u6d41\u7a0b\u7684\u80fd\u529b\u3002"
+    },
+    "task_format": {
+      "en": "200 tasks across 11 CAD workflows; agents use screenshots and GUI actions to save native artifacts.",
+      "zh": "200 \u9879\u4efb\u52a1\u8986\u76d6 11 \u7c7b CAD \u5de5\u4f5c\u6d41\u7a0b\uff1bagent \u901a\u8fc7\u622a\u56fe\u548c\u754c\u9762\u64cd\u4f5c\u4fdd\u5b58\u539f\u751f\u5de5\u7a0b\u6587\u4ef6\u3002"
+    },
+    "scoring": {
+      "metric_name": "Success rate",
+      "explanation": {
+        "en": "Fraction passing every executable artifact check. Diagnostic partial results and the 87% expert reference are not the model score or ceiling.",
+        "zh": "\u6240\u6709\u6587\u4ef6\u68c0\u67e5\u5747\u901a\u8fc7\u7684\u4efb\u52a1\u6bd4\u4f8b\u3002\u8bca\u65ad\u6027\u90e8\u5206\u5206\u6570\u548c 87% \u4e13\u5bb6\u53c2\u8003\u6210\u7ee9\u4e0d\u4f5c\u4e3a\u6a21\u578b\u5206\u6570\u6216\u4e0a\u9650\u3002"
+      }
+    },
+    "evaluation_target": "environment_outcome",
+    "observation_count": 7,
+    "evidence_record_count": 7,
+    "observations": [
+      {
+        "observation_id": "obs-0-175-60a2eac4620375f4",
+        "benchmark_id": "cadworld-v1",
+        "benchmark_version_id": "cadworld-v1-canonical",
+        "model_id": "model-gpt-5-4-cua-5b8eb7b08035aa13",
+        "model_configuration": "GPT-5.4 CUA",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-4-cua",
+        "model_family_id": "openai-gpt-5-4-cua",
+        "model": "GPT-5.4 CUA",
+        "organization": "OpenAI",
+        "score": 0.175,
+        "input_score": 0.175,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cadworld-v1-metric-v1",
+        "protocol_id": "cadworld-v1-protocol-v1",
+        "task_set_id": "cadworld-v1-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "cadworld-v1-canonical-score",
+        "evaluation_protocol": "arXiv v1 Table 3; full 200 tasks, shared FreeCAD Ubuntu VM runner; binary success.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-14",
+        "source_publication_date": "2026-09-14",
+        "observation_date": "2026-09-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-14",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-14",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-14",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "source": "https://arxiv.org/abs/2609.16251v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cadworld-v1-gpt-5-4-cua-5a337f4ae8062898"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cadworld-v1-gpt-5-4-cua"
+        ]
+      },
+      {
+        "observation_id": "obs-0-16-5c5022ca7fc71d57",
+        "benchmark_id": "cadworld-v1",
+        "benchmark_version_id": "cadworld-v1-canonical",
+        "model_id": "model-claude-opus-4-8-cua-8f86c0c43f6cc0be",
+        "model_configuration": "Claude Opus 4.8 CUA",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-8-cua",
+        "model_family_id": "anthropic-claude-opus-4-8-cua",
+        "model": "Claude Opus 4.8 CUA",
+        "organization": "Anthropic",
+        "score": 0.16,
+        "input_score": 0.16,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cadworld-v1-metric-v1",
+        "protocol_id": "cadworld-v1-protocol-v1",
+        "task_set_id": "cadworld-v1-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "cadworld-v1-canonical-score",
+        "evaluation_protocol": "arXiv v1 Table 3; full 200 tasks, shared FreeCAD Ubuntu VM runner; binary success.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-14",
+        "source_publication_date": "2026-09-14",
+        "observation_date": "2026-09-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-14",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-14",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-14",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "source": "https://arxiv.org/abs/2609.16251v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cadworld-v1-claude-opus-4-8-cua-526c6ee075ccae55"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cadworld-v1-claude-opus-4-8-cua"
+        ]
+      },
+      {
+        "observation_id": "obs-0-075-165477a36af84446",
+        "benchmark_id": "cadworld-v1",
+        "benchmark_version_id": "cadworld-v1-canonical",
+        "model_id": "model-kimi-k2-6-a8ef29979eaf1a12",
+        "model_configuration": "Kimi K2.6",
+        "model_identity_organization": "moonshot-ai",
+        "model_label_id": "kimi-k2-6",
+        "model_family_id": "moonshot-ai-kimi-k2-6",
+        "model": "Kimi K2.6",
+        "organization": "Moonshot AI",
+        "score": 0.075,
+        "input_score": 0.075,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cadworld-v1-metric-v1",
+        "protocol_id": "cadworld-v1-protocol-v1",
+        "task_set_id": "cadworld-v1-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "cadworld-v1-canonical-score",
+        "evaluation_protocol": "arXiv v1 Table 3; full 200 tasks, shared FreeCAD Ubuntu VM runner; binary success.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-14",
+        "source_publication_date": "2026-09-14",
+        "observation_date": "2026-09-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-14",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-14",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-14",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "source": "https://arxiv.org/abs/2609.16251v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cadworld-v1-kimi-k2-6-610e029dc9b69ba7"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cadworld-v1-kimi-k2-6"
+        ]
+      },
+      {
+        "observation_id": "obs-0-015-02fcf6ca2768b2aa",
+        "benchmark_id": "cadworld-v1",
+        "benchmark_version_id": "cadworld-v1-canonical",
+        "model_id": "model-opencua-dd170e0484ca5ad4",
+        "model_configuration": "OpenCUA",
+        "model_identity_organization": "unknown",
+        "model_label_id": "opencua",
+        "model_family_id": "unknown-opencua",
+        "model": "OpenCUA",
+        "organization": "Unknown",
+        "score": 0.015,
+        "input_score": 0.015,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cadworld-v1-metric-v1",
+        "protocol_id": "cadworld-v1-protocol-v1",
+        "task_set_id": "cadworld-v1-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "cadworld-v1-canonical-score",
+        "evaluation_protocol": "arXiv v1 Table 3; full 200 tasks, shared FreeCAD Ubuntu VM runner; binary success.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-14",
+        "source_publication_date": "2026-09-14",
+        "observation_date": "2026-09-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-14",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-14",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-14",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "source": "https://arxiv.org/abs/2609.16251v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cadworld-v1-opencua-ad3b880179d0a0b4"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cadworld-v1-opencua"
+        ]
+      },
+      {
+        "observation_id": "obs-0-005-f401b4aec84d318e",
+        "benchmark_id": "cadworld-v1",
+        "benchmark_version_id": "cadworld-v1-canonical",
+        "model_id": "model-holo-3-1-08ca76d90b5a8b1f",
+        "model_configuration": "Holo 3.1",
+        "model_identity_organization": "h-company",
+        "model_label_id": "holo-3-1",
+        "model_family_id": "h-company-holo-3-1",
+        "model": "Holo 3.1",
+        "organization": "H Company",
+        "score": 0.005,
+        "input_score": 0.005,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cadworld-v1-metric-v1",
+        "protocol_id": "cadworld-v1-protocol-v1",
+        "task_set_id": "cadworld-v1-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "cadworld-v1-canonical-score",
+        "evaluation_protocol": "arXiv v1 Table 3; full 200 tasks, shared FreeCAD Ubuntu VM runner; binary success.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-14",
+        "source_publication_date": "2026-09-14",
+        "observation_date": "2026-09-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-14",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-14",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-14",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "source": "https://arxiv.org/abs/2609.16251v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cadworld-v1-holo-3-1-298de05246cd2e70"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cadworld-v1-holo-3-1"
+        ]
+      },
+      {
+        "observation_id": "obs-0-0eb159a12281c747",
+        "benchmark_id": "cadworld-v1",
+        "benchmark_version_id": "cadworld-v1-canonical",
+        "model_id": "model-qwen3-6-0d94f4f85b0d1461",
+        "model_configuration": "Qwen3.6",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen3-6",
+        "model_family_id": "alibaba-qwen3-6",
+        "model": "Qwen3.6",
+        "organization": "Alibaba",
+        "score": 0.0,
+        "input_score": 0.0,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cadworld-v1-metric-v1",
+        "protocol_id": "cadworld-v1-protocol-v1",
+        "task_set_id": "cadworld-v1-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "cadworld-v1-canonical-score",
+        "evaluation_protocol": "arXiv v1 Table 3; full 200 tasks, shared FreeCAD Ubuntu VM runner; binary success.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-14",
+        "source_publication_date": "2026-09-14",
+        "observation_date": "2026-09-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-14",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-14",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-14",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "source": "https://arxiv.org/abs/2609.16251v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cadworld-v1-qwen3-6-a6c39398d6f303d3"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cadworld-v1-qwen3-6"
+        ]
+      },
+      {
+        "observation_id": "obs-0-d78e4412846ee0a8",
+        "benchmark_id": "cadworld-v1",
+        "benchmark_version_id": "cadworld-v1-canonical",
+        "model_id": "model-minimax-m3-14205efcb9e7cca7",
+        "model_configuration": "MiniMax M3",
+        "model_identity_organization": "minimax",
+        "model_label_id": "minimax-m3",
+        "model_family_id": "minimax-minimax-m3",
+        "model": "MiniMax M3",
+        "organization": "MiniMax",
+        "score": 0.0,
+        "input_score": 0.0,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cadworld-v1-metric-v1",
+        "protocol_id": "cadworld-v1-protocol-v1",
+        "task_set_id": "cadworld-v1-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "cadworld-v1-canonical-score",
+        "evaluation_protocol": "arXiv v1 Table 3; full 200 tasks, shared FreeCAD Ubuntu VM runner; binary success.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-14",
+        "source_publication_date": "2026-09-14",
+        "observation_date": "2026-09-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-14",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-14",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-14",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "source": "https://arxiv.org/abs/2609.16251v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cadworld-v1-minimax-m3-e92d5b9a5670a990"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cadworld-v1-minimax-m3"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-175-60a2eac4620375f4",
+        "benchmark_id": "cadworld-v1",
+        "benchmark_version_id": "cadworld-v1-canonical",
+        "model_id": "model-gpt-5-4-cua-5b8eb7b08035aa13",
+        "model_configuration": "GPT-5.4 CUA",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-4-cua",
+        "model_family_id": "openai-gpt-5-4-cua",
+        "model": "GPT-5.4 CUA",
+        "organization": "OpenAI",
+        "score": 0.175,
+        "input_score": 0.175,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cadworld-v1-metric-v1",
+        "protocol_id": "cadworld-v1-protocol-v1",
+        "task_set_id": "cadworld-v1-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "cadworld-v1-canonical-score",
+        "evaluation_protocol": "arXiv v1 Table 3; full 200 tasks, shared FreeCAD Ubuntu VM runner; binary success.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-14",
+        "source_publication_date": "2026-09-14",
+        "observation_date": "2026-09-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-14",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-14",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-14",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "source": "https://arxiv.org/abs/2609.16251v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cadworld-v1-gpt-5-4-cua-5a337f4ae8062898"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cadworld-v1-gpt-5-4-cua"
+        ],
+        "plot_date": "2026-09-14",
+        "frontier_observation_ids": [
+          "obs-0-d78e4412846ee0a8",
+          "obs-0-0eb159a12281c747",
+          "obs-0-005-f401b4aec84d318e",
+          "obs-0-015-02fcf6ca2768b2aa",
+          "obs-0-075-165477a36af84446",
+          "obs-0-16-5c5022ca7fc71d57",
+          "obs-0-175-60a2eac4620375f4"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-175-60a2eac4620375f4",
+        "benchmark_id": "cadworld-v1",
+        "benchmark_version_id": "cadworld-v1-canonical",
+        "model_id": "model-gpt-5-4-cua-5b8eb7b08035aa13",
+        "model_configuration": "GPT-5.4 CUA",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-4-cua",
+        "model_family_id": "openai-gpt-5-4-cua",
+        "model": "GPT-5.4 CUA",
+        "organization": "OpenAI",
+        "score": 0.175,
+        "input_score": 0.175,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cadworld-v1-metric-v1",
+        "protocol_id": "cadworld-v1-protocol-v1",
+        "task_set_id": "cadworld-v1-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "cadworld-v1-canonical-score",
+        "evaluation_protocol": "arXiv v1 Table 3; full 200 tasks, shared FreeCAD Ubuntu VM runner; binary success.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-14",
+        "source_publication_date": "2026-09-14",
+        "observation_date": "2026-09-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-14",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-14",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-14",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "source": "https://arxiv.org/abs/2609.16251v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cadworld-v1-gpt-5-4-cua-5a337f4ae8062898"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cadworld-v1-gpt-5-4-cua"
+        ],
+        "plot_date": "2026-09-14",
+        "frontier_observation_ids": [
+          "obs-0-d78e4412846ee0a8",
+          "obs-0-0eb159a12281c747",
+          "obs-0-005-f401b4aec84d318e",
+          "obs-0-015-02fcf6ca2768b2aa",
+          "obs-0-075-165477a36af84446",
+          "obs-0-16-5c5022ca7fc71d57",
+          "obs-0-175-60a2eac4620375f4"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-175-60a2eac4620375f4",
+        "benchmark_id": "cadworld-v1",
+        "benchmark_version_id": "cadworld-v1-canonical",
+        "model_id": "model-gpt-5-4-cua-5b8eb7b08035aa13",
+        "model_configuration": "GPT-5.4 CUA",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-4-cua",
+        "model_family_id": "openai-gpt-5-4-cua",
+        "model": "GPT-5.4 CUA",
+        "organization": "OpenAI",
+        "score": 0.175,
+        "input_score": 0.175,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cadworld-v1-metric-v1",
+        "protocol_id": "cadworld-v1-protocol-v1",
+        "task_set_id": "cadworld-v1-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "cadworld-v1-canonical-score",
+        "evaluation_protocol": "arXiv v1 Table 3; full 200 tasks, shared FreeCAD Ubuntu VM runner; binary success.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-14",
+        "source_publication_date": "2026-09-14",
+        "observation_date": "2026-09-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-14",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-14",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-14",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "source": "https://arxiv.org/abs/2609.16251v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cadworld-v1-gpt-5-4-cua-5a337f4ae8062898"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cadworld-v1-gpt-5-4-cua"
+        ],
+        "plot_date": "2026-09-14",
+        "frontier_observation_ids": [
+          "obs-0-d78e4412846ee0a8",
+          "obs-0-0eb159a12281c747",
+          "obs-0-005-f401b4aec84d318e",
+          "obs-0-015-02fcf6ca2768b2aa",
+          "obs-0-075-165477a36af84446",
+          "obs-0-16-5c5022ca7fc71d57",
+          "obs-0-175-60a2eac4620375f4"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-175-60a2eac4620375f4",
+        "benchmark_id": "cadworld-v1",
+        "benchmark_version_id": "cadworld-v1-canonical",
+        "model_id": "model-gpt-5-4-cua-5b8eb7b08035aa13",
+        "model_configuration": "GPT-5.4 CUA",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-4-cua",
+        "model_family_id": "openai-gpt-5-4-cua",
+        "model": "GPT-5.4 CUA",
+        "organization": "OpenAI",
+        "score": 0.175,
+        "input_score": 0.175,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cadworld-v1-metric-v1",
+        "protocol_id": "cadworld-v1-protocol-v1",
+        "task_set_id": "cadworld-v1-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "cadworld-v1-canonical-score",
+        "evaluation_protocol": "arXiv v1 Table 3; full 200 tasks, shared FreeCAD Ubuntu VM runner; binary success.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-14",
+        "source_publication_date": "2026-09-14",
+        "observation_date": "2026-09-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-14",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-14",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-14",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-09-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-14",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "source": "https://arxiv.org/abs/2609.16251v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cadworld-v1-gpt-5-4-cua-5a337f4ae8062898"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cadworld-v1-gpt-5-4-cua"
+        ],
+        "plot_date": "2026-09-14",
+        "frontier_observation_ids": [
+          "obs-0-d78e4412846ee0a8",
+          "obs-0-0eb159a12281c747",
+          "obs-0-005-f401b4aec84d318e",
+          "obs-0-015-02fcf6ca2768b2aa",
+          "obs-0-075-165477a36af84446",
+          "obs-0-16-5c5022ca7fc71d57",
+          "obs-0-175-60a2eac4620375f4"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-175-60a2eac4620375f4",
+        "benchmark_id": "cadworld-v1",
+        "benchmark_version_id": "cadworld-v1-canonical",
+        "model_id": "model-gpt-5-4-cua-5b8eb7b08035aa13",
+        "model_configuration": "GPT-5.4 CUA",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-4-cua",
+        "model_family_id": "openai-gpt-5-4-cua",
+        "model": "GPT-5.4 CUA",
+        "organization": "OpenAI",
+        "score": 0.175,
+        "input_score": 0.175,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cadworld-v1-metric-v1",
+        "protocol_id": "cadworld-v1-protocol-v1",
+        "task_set_id": "cadworld-v1-canonical",
+        "metric": "Success rate",
+        "score_role": "canonical",
+        "score_series_id": "cadworld-v1-canonical-score",
+        "evaluation_protocol": "arXiv v1 Table 3; full 200 tasks, shared FreeCAD Ubuntu VM runner; binary success.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-14",
+        "source_publication_date": "2026-09-14",
+        "observation_date": "2026-09-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-14",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-14",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-14",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-09-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-14",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+        ],
+        "source": "https://arxiv.org/abs/2609.16251v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cadworld-v1-gpt-5-4-cua-5a337f4ae8062898"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cadworld-v1-gpt-5-4-cua"
+        ],
+        "plot_date": "2026-09-14",
+        "frontier_observation_ids": [
+          "obs-0-d78e4412846ee0a8",
+          "obs-0-0eb159a12281c747",
+          "obs-0-005-f401b4aec84d318e",
+          "obs-0-015-02fcf6ca2768b2aa",
+          "obs-0-075-165477a36af84446",
+          "obs-0-16-5c5022ca7fc71d57",
+          "obs-0-175-60a2eac4620375f4"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.175,
+    "capability_frontier_value": 0.175,
+    "reported_frontier_value": 0.175,
+    "current_frontier": 0.175,
+    "normalized_progress": 0.175,
+    "normalized_headroom": 0.825,
+    "threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 9
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 9
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 9
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 9
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 9
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 9
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "right_censored",
+        "days": 9
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 9
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 9
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.42857142857142855,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Qwen"
+      ],
+      "panel_size": 7,
+      "status": "medium"
+    },
+    "unavailable": [],
+    "resource_ids": [
+      "resource-https-arxiv-org-abs-2609-16251v1-20d4354677c7e858"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": true,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

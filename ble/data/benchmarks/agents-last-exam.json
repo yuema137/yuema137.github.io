@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-04",
+  "snapshot_id": "2026-09-23",
   "reference_organizations": [
     {
       "id": "openai",
@@ -104,7 +104,123 @@
       "progress_target": 1.0,
       "lifecycle_eligible": true
     },
-    "auxiliary_score_series": [],
+    "auxiliary_score_series": [
+      {
+        "series_id": "agents-last-exam-auxiliary-ale-mimo-sep21",
+        "role": "auxiliary",
+        "label": "MiMo model-card task set unpinned",
+        "metric_id": "agents-last-exam-metric-v1",
+        "metric_name": "Pass Rate",
+        "protocol_id": "ale-mimo-sep21",
+        "task_set_id": "ale-mimo-sep21",
+        "lifecycle_eligible": false,
+        "explanation": {
+          "en": "MiMo reports Agents\u2019 Last Exam without pinning the registry task set and harness.",
+          "zh": "MiMo \u62a5\u544a Agents\u2019 Last Exam\uff0c\u4f46\u672a\u56fa\u5b9a\u672c\u5e93\u4e3b\u5e8f\u5217\u7684\u9898\u96c6\u548c harness\u3002"
+        },
+        "observation_ids": [
+          "obs-0-316-02af30d6b044f960",
+          "obs-0-276-f9536b9d3075ce1c"
+        ],
+        "frontier_events": [
+          {
+            "observation_id": "obs-0-316-02af30d6b044f960",
+            "benchmark_id": "agents-last-exam",
+            "benchmark_version_id": "agents-last-exam-canonical",
+            "model_id": "model-mimo-v2-6-pro-rl-model-card-settings-fb28d1e8a8d24000",
+            "model_configuration": "MiMo-V2.6-Pro-RL (model-card settings)",
+            "model_identity_organization": "xiaomi",
+            "model_label_id": "mimo-v2-6-pro-rl-model-card-settings",
+            "model_family_id": "xiaomi-mimo-v2-6-pro-rl",
+            "model": "MiMo-V2.6-Pro-RL (model-card settings)",
+            "organization": "Xiaomi",
+            "score": 0.316,
+            "input_score": 0.316,
+            "input_unit": "fraction",
+            "reported_cost_per_task": null,
+            "metric_id": "agents-last-exam-metric-v1",
+            "protocol_id": "ale-mimo-sep21",
+            "task_set_id": "ale-mimo-sep21",
+            "metric": "Pass Rate",
+            "score_role": "auxiliary",
+            "score_series_id": "agents-last-exam-auxiliary-ale-mimo-sep21",
+            "evaluation_protocol": "MiMo reports Agents\u2019 Last Exam without pinning the registry task set and harness.",
+            "auxiliary_metadata": {
+              "protocol_id": "ale-mimo-sep21",
+              "task_set_id": "ale-mimo-sep21",
+              "label": "MiMo model-card task set unpinned",
+              "explanation": {
+                "en": "MiMo reports Agents\u2019 Last Exam without pinning the registry task set and harness.",
+                "zh": "MiMo \u62a5\u544a Agents\u2019 Last Exam\uff0c\u4f46\u672a\u56fa\u5b9a\u672c\u5e93\u4e3b\u5e8f\u5217\u7684\u9898\u96c6\u548c harness\u3002"
+              }
+            },
+            "model_release_date": null,
+            "evaluation_date": null,
+            "result_public_date": "2026-09-21",
+            "source_publication_date": "2026-09-21",
+            "observation_date": "2026-09-21",
+            "observation_date_precision": "day",
+            "observation_date_sources": [
+              {
+                "date": "2026-09-21",
+                "kind": "score_publication_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+                ]
+              }
+            ],
+            "observation_date_source_ids": [
+              "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+            ],
+            "evaluation_date_sources": [],
+            "score_publication_date_sources": [
+              {
+                "date": "2026-09-21",
+                "kind": "Result public date",
+                "precision": "day"
+              }
+            ],
+            "ingested_at": "2026-09-23",
+            "date_precision": "day",
+            "date_notes": null,
+            "date": "2026-09-21",
+            "date_kind": "earliest_observation_evidence_date",
+            "capability_date": "2026-09-21",
+            "capability_date_meaning": "earliest_observation_evidence_date",
+            "reported_date_meaning": "result_public_date",
+            "historical_frontier_date": "2026-09-21",
+            "temporal_class": "historical_or_unknown",
+            "retrospective": false,
+            "capability_frontier_eligible": false,
+            "historical_frontier_eligible": true,
+            "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+            "contemporaneous": true,
+            "source_ids": [
+              "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca",
+              "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+            ],
+            "score_source_ids": [
+              "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+            ],
+            "source": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL/blob/c165b4c7d1936ec55425c029597f414f84bd5d34/README.md",
+            "notes": "Operational evaluation timeline only; not a historical public-result date.",
+            "evidence_ids": [
+              "evidence-sep2026-agents-last-exam-mimo-v2-6-pro-rl-model--d1879d0df63c1ef7"
+            ],
+            "evidence_count": 1,
+            "source_row_ids": [
+              "sep2026-agents-last-exam-mimo-v2-6-pro-rl-model-card-settings"
+            ],
+            "plot_date": "2026-09-21",
+            "frontier_observation_ids": [
+              "obs-0-276-f9536b9d3075ce1c",
+              "obs-0-316-02af30d6b044f960"
+            ]
+          }
+        ]
+      }
+    ],
     "benchmark_version_id": "agents-last-exam-canonical",
     "summary": {
       "en": "Agents' Last Exam evaluates agents on long-horizon, economically valuable professional workflows with verifiable outcomes.",
@@ -122,8 +238,8 @@
       }
     },
     "evaluation_target": "environment_outcome",
-    "observation_count": 9,
-    "evidence_record_count": 9,
+    "observation_count": 12,
+    "evidence_record_count": 12,
     "observations": [
       {
         "observation_id": "obs-0-306-66443091d670df53",
@@ -168,7 +284,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -242,7 +358,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-03",
@@ -316,7 +432,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -388,7 +504,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-16",
@@ -460,7 +576,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -532,7 +648,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-04-22",
@@ -604,7 +720,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-08",
@@ -676,7 +792,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-05-28",
@@ -748,7 +864,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-06-09",
@@ -776,6 +892,275 @@
         ],
         "evidence_count": 1,
         "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-564-3eea0b6871074d5a",
+        "benchmark_id": "agents-last-exam",
+        "benchmark_version_id": "agents-last-exam-canonical",
+        "model_id": "model-gpt-6-sol-max-e6ef7da7ad687ffd",
+        "model_configuration": "GPT-6 Sol (max)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-sol-max",
+        "model_family_id": "openai-gpt-6-sol",
+        "model": "GPT-6 Sol (max)",
+        "organization": "OpenAI",
+        "score": 0.564,
+        "input_score": 0.564,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "agents-last-exam-metric-v1",
+        "protocol_id": "agents-last-exam-source-export-v1",
+        "task_set_id": "agents-last-exam-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "agents-last-exam-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca",
+          "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+        ],
+        "score_source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+        ],
+        "source": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-agents-last-exam-gpt-6-sol-max-158a60789f9ce427"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-agents-last-exam-gpt-6-sol-max"
+        ]
+      },
+      {
+        "observation_id": "obs-0-316-02af30d6b044f960",
+        "benchmark_id": "agents-last-exam",
+        "benchmark_version_id": "agents-last-exam-canonical",
+        "model_id": "model-mimo-v2-6-pro-rl-model-card-settings-fb28d1e8a8d24000",
+        "model_configuration": "MiMo-V2.6-Pro-RL (model-card settings)",
+        "model_identity_organization": "xiaomi",
+        "model_label_id": "mimo-v2-6-pro-rl-model-card-settings",
+        "model_family_id": "xiaomi-mimo-v2-6-pro-rl",
+        "model": "MiMo-V2.6-Pro-RL (model-card settings)",
+        "organization": "Xiaomi",
+        "score": 0.316,
+        "input_score": 0.316,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "agents-last-exam-metric-v1",
+        "protocol_id": "ale-mimo-sep21",
+        "task_set_id": "ale-mimo-sep21",
+        "metric": "Pass Rate",
+        "score_role": "auxiliary",
+        "score_series_id": "agents-last-exam-auxiliary-ale-mimo-sep21",
+        "evaluation_protocol": "MiMo reports Agents\u2019 Last Exam without pinning the registry task set and harness.",
+        "auxiliary_metadata": {
+          "protocol_id": "ale-mimo-sep21",
+          "task_set_id": "ale-mimo-sep21",
+          "label": "MiMo model-card task set unpinned",
+          "explanation": {
+            "en": "MiMo reports Agents\u2019 Last Exam without pinning the registry task set and harness.",
+            "zh": "MiMo \u62a5\u544a Agents\u2019 Last Exam\uff0c\u4f46\u672a\u56fa\u5b9a\u672c\u5e93\u4e3b\u5e8f\u5217\u7684\u9898\u96c6\u548c harness\u3002"
+          }
+        },
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-21",
+        "source_publication_date": "2026-09-21",
+        "observation_date": "2026-09-21",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-21",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-21",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca",
+          "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+        ],
+        "score_source_ids": [
+          "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+        ],
+        "source": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL/blob/c165b4c7d1936ec55425c029597f414f84bd5d34/README.md",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-agents-last-exam-mimo-v2-6-pro-rl-model--d1879d0df63c1ef7"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-agents-last-exam-mimo-v2-6-pro-rl-model-card-settings"
+        ]
+      },
+      {
+        "observation_id": "obs-0-276-f9536b9d3075ce1c",
+        "benchmark_id": "agents-last-exam",
+        "benchmark_version_id": "agents-last-exam-canonical",
+        "model_id": "model-mimo-v2-6-flash-rl-model-card-settings-876368974dacc51a",
+        "model_configuration": "MiMo-V2.6-Flash-RL (model-card settings)",
+        "model_identity_organization": "xiaomi",
+        "model_label_id": "mimo-v2-6-flash-rl-model-card-settings",
+        "model_family_id": "xiaomi-mimo-v2-6-flash-rl",
+        "model": "MiMo-V2.6-Flash-RL (model-card settings)",
+        "organization": "Xiaomi",
+        "score": 0.276,
+        "input_score": 0.276,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "agents-last-exam-metric-v1",
+        "protocol_id": "ale-mimo-sep21",
+        "task_set_id": "ale-mimo-sep21",
+        "metric": "Pass Rate",
+        "score_role": "auxiliary",
+        "score_series_id": "agents-last-exam-auxiliary-ale-mimo-sep21",
+        "evaluation_protocol": "MiMo reports Agents\u2019 Last Exam without pinning the registry task set and harness.",
+        "auxiliary_metadata": {
+          "protocol_id": "ale-mimo-sep21",
+          "task_set_id": "ale-mimo-sep21",
+          "label": "MiMo model-card task set unpinned",
+          "explanation": {
+            "en": "MiMo reports Agents\u2019 Last Exam without pinning the registry task set and harness.",
+            "zh": "MiMo \u62a5\u544a Agents\u2019 Last Exam\uff0c\u4f46\u672a\u56fa\u5b9a\u672c\u5e93\u4e3b\u5e8f\u5217\u7684\u9898\u96c6\u548c harness\u3002"
+          }
+        },
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-21",
+        "source_publication_date": "2026-09-21",
+        "observation_date": "2026-09-21",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-21",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-21",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca",
+          "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+        ],
+        "score_source_ids": [
+          "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+        ],
+        "source": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL/blob/c165b4c7d1936ec55425c029597f414f84bd5d34/README.md",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-agents-last-exam-mimo-v2-6-flash-rl-mode-d233bb541095aefb"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-agents-last-exam-mimo-v2-6-flash-rl-model-card-settings"
+        ]
       }
     ],
     "frontier": [
@@ -822,7 +1207,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-06-03",
@@ -899,7 +1284,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -979,7 +1364,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-03",
@@ -1059,7 +1444,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-06-03",
@@ -1136,7 +1521,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -1216,7 +1601,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-03",
@@ -1296,7 +1681,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-06-03",
@@ -1373,7 +1758,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -1453,7 +1838,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-03",
@@ -1489,12 +1874,200 @@
         ]
       }
     ],
-    "reported_frontier": [],
-    "historical_frontier": [],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-564-3eea0b6871074d5a",
+        "benchmark_id": "agents-last-exam",
+        "benchmark_version_id": "agents-last-exam-canonical",
+        "model_id": "model-gpt-6-sol-max-e6ef7da7ad687ffd",
+        "model_configuration": "GPT-6 Sol (max)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-sol-max",
+        "model_family_id": "openai-gpt-6-sol",
+        "model": "GPT-6 Sol (max)",
+        "organization": "OpenAI",
+        "score": 0.564,
+        "input_score": 0.564,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "agents-last-exam-metric-v1",
+        "protocol_id": "agents-last-exam-source-export-v1",
+        "task_set_id": "agents-last-exam-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "agents-last-exam-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca",
+          "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+        ],
+        "score_source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+        ],
+        "source": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-agents-last-exam-gpt-6-sol-max-158a60789f9ce427"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-agents-last-exam-gpt-6-sol-max"
+        ],
+        "plot_date": "2026-09-22",
+        "frontier_observation_ids": [
+          "obs-0-564-3eea0b6871074d5a"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-564-3eea0b6871074d5a",
+        "benchmark_id": "agents-last-exam",
+        "benchmark_version_id": "agents-last-exam-canonical",
+        "model_id": "model-gpt-6-sol-max-e6ef7da7ad687ffd",
+        "model_configuration": "GPT-6 Sol (max)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-sol-max",
+        "model_family_id": "openai-gpt-6-sol",
+        "model": "GPT-6 Sol (max)",
+        "organization": "OpenAI",
+        "score": 0.564,
+        "input_score": 0.564,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "agents-last-exam-metric-v1",
+        "protocol_id": "agents-last-exam-source-export-v1",
+        "task_set_id": "agents-last-exam-canonical",
+        "metric": "Pass Rate",
+        "score_role": "canonical",
+        "score_series_id": "agents-last-exam-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca",
+          "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+        ],
+        "score_source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+        ],
+        "source": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-agents-last-exam-gpt-6-sol-max-158a60789f9ce427"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-agents-last-exam-gpt-6-sol-max"
+        ],
+        "plot_date": "2026-09-22",
+        "frontier_observation_ids": [
+          "obs-0-564-3eea0b6871074d5a"
+        ]
+      }
+    ],
     "retrospective_observations": [],
     "observed_frontier": 0.593,
     "capability_frontier_value": 0.593,
-    "reported_frontier_value": null,
+    "reported_frontier_value": 0.564,
     "current_frontier": 0.593,
     "normalized_progress": 0.593,
     "normalized_headroom": 0.40700000000000003,
@@ -1506,11 +2079,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 93
+        "days": 112
       },
       "T90": {
         "status": "right_censored",
-        "days": 93
+        "days": 112
       }
     },
     "capability_threshold_days": {
@@ -1521,25 +2094,26 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 93
+        "days": 112
       },
       "T90": {
         "status": "right_censored",
-        "days": 93
+        "days": 112
       }
     },
     "reported_threshold_days": {
       "T50": {
-        "status": "unknown",
-        "reason": "No dated observations are available on this timeline."
+        "status": "reached",
+        "days": 111,
+        "qualifying_observation_date": "2026-09-22"
       },
       "T80": {
-        "status": "unknown",
-        "reason": "No dated observations are available on this timeline."
+        "status": "right_censored",
+        "days": 112
       },
       "T90": {
-        "status": "unknown",
-        "reason": "No dated observations are available on this timeline."
+        "status": "right_censored",
+        "days": 112
       }
     },
     "velocity_180d": null,
@@ -1562,7 +2136,7 @@
       "resource-https-agents-last-exam-org-leaderboard-28aa05e4c40dc8ca"
     ],
     "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
-    "historical_frontier_status": "unknown_public_dates",
+    "historical_frontier_status": "available",
     "timeline_default": "capability",
     "lifecycle_eligibility": {
       "test-of-time": {

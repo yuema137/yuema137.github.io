@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-04",
+  "snapshot_id": "2026-09-23",
   "reference_organizations": [
     {
       "id": "openai",
@@ -105,7 +105,361 @@
       "progress_target": 1.0,
       "lifecycle_eligible": true
     },
-    "auxiliary_score_series": [],
+    "auxiliary_score_series": [
+      {
+        "series_id": "automationbench-auxiliary-automationbench-mimo-1-0-6",
+        "role": "auxiliary",
+        "label": "MiMo v1.0.6 / split unpinned",
+        "metric_id": "automationbench-metric-v1",
+        "metric_name": "Pass Rate",
+        "protocol_id": "automationbench-mimo-1-0-6",
+        "task_set_id": "automationbench-mimo-1-0-6",
+        "lifecycle_eligible": false,
+        "explanation": {
+          "en": "Version 1.0.6 is named, but public versus private task split and fallback policy are not pinned.",
+          "zh": "\u6807\u660e 1.0.6\uff0c\u4f46\u672a\u56fa\u5b9a\u516c\u5f00\u6216\u79c1\u6709\u5212\u5206\u4ee5\u53ca\u540e\u5907\u6a21\u578b\u7b56\u7565\u3002"
+        },
+        "observation_ids": [
+          "obs-0-531-f8e46927e61486bc",
+          "obs-0-523-b2e9f573f7cf843e"
+        ],
+        "frontier_events": [
+          {
+            "observation_id": "obs-0-531-f8e46927e61486bc",
+            "benchmark_id": "automationbench",
+            "benchmark_version_id": "automationbench-canonical",
+            "model_id": "model-mimo-v2-6-pro-rl-model-card-settings-fb28d1e8a8d24000",
+            "model_configuration": "MiMo-V2.6-Pro-RL (model-card settings)",
+            "model_identity_organization": "xiaomi",
+            "model_label_id": "mimo-v2-6-pro-rl-model-card-settings",
+            "model_family_id": "xiaomi-mimo-v2-6-pro-rl",
+            "model": "MiMo-V2.6-Pro-RL (model-card settings)",
+            "organization": "Xiaomi",
+            "score": 0.531,
+            "input_score": 0.531,
+            "input_unit": "fraction",
+            "reported_cost_per_task": null,
+            "metric_id": "automationbench-metric-v1",
+            "protocol_id": "automationbench-mimo-1-0-6",
+            "task_set_id": "automationbench-mimo-1-0-6",
+            "metric": "Pass Rate",
+            "score_role": "auxiliary",
+            "score_series_id": "automationbench-auxiliary-automationbench-mimo-1-0-6",
+            "evaluation_protocol": "Version 1.0.6 is named, but public versus private task split and fallback policy are not pinned.",
+            "auxiliary_metadata": {
+              "protocol_id": "automationbench-mimo-1-0-6",
+              "task_set_id": "automationbench-mimo-1-0-6",
+              "label": "MiMo v1.0.6 / split unpinned",
+              "explanation": {
+                "en": "Version 1.0.6 is named, but public versus private task split and fallback policy are not pinned.",
+                "zh": "\u6807\u660e 1.0.6\uff0c\u4f46\u672a\u56fa\u5b9a\u516c\u5f00\u6216\u79c1\u6709\u5212\u5206\u4ee5\u53ca\u540e\u5907\u6a21\u578b\u7b56\u7565\u3002"
+              }
+            },
+            "model_release_date": null,
+            "evaluation_date": null,
+            "result_public_date": "2026-09-21",
+            "source_publication_date": "2026-09-21",
+            "observation_date": "2026-09-21",
+            "observation_date_precision": "day",
+            "observation_date_sources": [
+              {
+                "date": "2026-09-21",
+                "kind": "score_publication_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+                ]
+              }
+            ],
+            "observation_date_source_ids": [
+              "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+            ],
+            "evaluation_date_sources": [],
+            "score_publication_date_sources": [
+              {
+                "date": "2026-09-21",
+                "kind": "Result public date",
+                "precision": "day"
+              }
+            ],
+            "ingested_at": "2026-09-23",
+            "date_precision": "day",
+            "date_notes": null,
+            "date": "2026-09-21",
+            "date_kind": "earliest_observation_evidence_date",
+            "capability_date": "2026-09-21",
+            "capability_date_meaning": "earliest_observation_evidence_date",
+            "reported_date_meaning": "result_public_date",
+            "historical_frontier_date": "2026-09-21",
+            "temporal_class": "historical_or_unknown",
+            "retrospective": false,
+            "capability_frontier_eligible": false,
+            "historical_frontier_eligible": true,
+            "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+            "contemporaneous": true,
+            "source_ids": [
+              "resource-https-github-com-zapier-automationbench-45f05783897a22a1",
+              "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+            ],
+            "score_source_ids": [
+              "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+            ],
+            "source": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL/blob/c165b4c7d1936ec55425c029597f414f84bd5d34/README.md",
+            "notes": "Operational evaluation timeline only; not a historical public-result date.",
+            "evidence_ids": [
+              "evidence-sep2026-automationbench-mimo-v2-6-pro-rl-model-c-2d5610ddb294c828"
+            ],
+            "evidence_count": 1,
+            "source_row_ids": [
+              "sep2026-automationbench-mimo-v2-6-pro-rl-model-card-settings"
+            ],
+            "plot_date": "2026-09-21",
+            "frontier_observation_ids": [
+              "obs-0-523-b2e9f573f7cf843e",
+              "obs-0-531-f8e46927e61486bc"
+            ]
+          }
+        ]
+      },
+      {
+        "series_id": "automationbench-auxiliary-automationbench-private-1-0-6",
+        "role": "auxiliary",
+        "label": "Private held-out set 1.0.6",
+        "metric_id": "automationbench-metric-v1",
+        "metric_name": "Pass Rate",
+        "protocol_id": "automationbench-private-1-0-6",
+        "task_set_id": "automationbench-private-1-0-6",
+        "lifecycle_eligible": false,
+        "explanation": {
+          "en": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+          "zh": "Zapier 1.0.6 \u79c1\u6709\u4fdd\u7559\u6d4b\u8bd5\u96c6\uff0c\u4e0d\u662f\u516c\u5f00 600 \u9898\u96c6\u3002\u5b89\u5168\u62e6\u622a\u8ba1\u4e3a\u5931\u8d25\uff0c\u4e0d\u542f\u7528\u540e\u5907\u6a21\u578b\u3002"
+        },
+        "observation_ids": [
+          "obs-0-233-b4a0cc17a0cd5544",
+          "obs-0-286-9465d9d8c87134b3",
+          "obs-0-32-4dfaddd8db201b64",
+          "obs-0-344-7828c56edf353d44",
+          "obs-0-4-2446a8ba1fea3dad",
+          "obs-0-204-67fed840d4047413",
+          "obs-0-239-2fd71cd782b8786b",
+          "obs-0-206-c60c79952b9960c3",
+          "obs-0-253-26e8f709edf8163c",
+          "obs-0-269-264579d1c598f81c",
+          "obs-0-117-ee19054350615660",
+          "obs-0-196-a47ce18b0100679b",
+          "obs-0-248-bf08214f3d48fd90",
+          "obs-0-263-7e342252383de823",
+          "obs-0-288-120062aa967bd323",
+          "obs-0-303-0cc83037ac6c1f5e",
+          "obs-0-341-b11af0abe17d4b34",
+          "obs-0-371-31dafc0bd3f9259c",
+          "obs-0-39-7d91672da0880d5f",
+          "obs-0-414-1a66326c1fe02964",
+          "obs-0-332-1f13c4de7ec01e9c"
+        ],
+        "frontier_events": [
+          {
+            "observation_id": "obs-0-288-120062aa967bd323",
+            "benchmark_id": "automationbench",
+            "benchmark_version_id": "automationbench-canonical",
+            "model_id": "model-gpt-5-6-sol-max-zapier-private-no-fallback-121ba7cedb954afe",
+            "model_configuration": "GPT-5.6 Sol (max, Zapier private, no fallback)",
+            "model_identity_organization": "openai",
+            "model_label_id": "gpt-5-6-sol-max-zapier-private-no-fallback",
+            "model_family_id": "openai-gpt-5-6-sol",
+            "model": "GPT-5.6 Sol (max, Zapier private, no fallback)",
+            "organization": "OpenAI",
+            "score": 0.28800000000000003,
+            "input_score": 0.28800000000000003,
+            "input_unit": "fraction",
+            "reported_cost_per_task": null,
+            "metric_id": "automationbench-metric-v1",
+            "protocol_id": "automationbench-private-1-0-6",
+            "task_set_id": "automationbench-private-1-0-6",
+            "metric": "Pass Rate",
+            "score_role": "auxiliary",
+            "score_series_id": "automationbench-auxiliary-automationbench-private-1-0-6",
+            "evaluation_protocol": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+            "auxiliary_metadata": {
+              "protocol_id": "automationbench-private-1-0-6",
+              "task_set_id": "automationbench-private-1-0-6",
+              "label": "Private held-out set 1.0.6",
+              "explanation": {
+                "en": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+                "zh": "Zapier 1.0.6 \u79c1\u6709\u4fdd\u7559\u6d4b\u8bd5\u96c6\uff0c\u4e0d\u662f\u516c\u5f00 600 \u9898\u96c6\u3002\u5b89\u5168\u62e6\u622a\u8ba1\u4e3a\u5931\u8d25\uff0c\u4e0d\u542f\u7528\u540e\u5907\u6a21\u578b\u3002"
+              }
+            },
+            "model_release_date": "2026-07-09",
+            "evaluation_date": null,
+            "result_public_date": "2026-09-22",
+            "source_publication_date": "2026-09-22",
+            "observation_date": "2026-07-09",
+            "observation_date_precision": "day",
+            "observation_date_sources": [
+              {
+                "date": "2026-07-09",
+                "kind": "model_release_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+                ]
+              }
+            ],
+            "observation_date_source_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ],
+            "evaluation_date_sources": [],
+            "score_publication_date_sources": [
+              {
+                "date": "2026-09-22",
+                "kind": "Result public date",
+                "precision": "day"
+              }
+            ],
+            "ingested_at": "2026-09-23",
+            "date_precision": "day",
+            "date_notes": null,
+            "date": "2026-07-09",
+            "date_kind": "earliest_observation_evidence_date",
+            "capability_date": "2026-07-09",
+            "capability_date_meaning": "earliest_observation_evidence_date",
+            "reported_date_meaning": "result_public_date",
+            "historical_frontier_date": "2026-09-22",
+            "temporal_class": "historical_or_unknown",
+            "retrospective": false,
+            "capability_frontier_eligible": false,
+            "historical_frontier_eligible": true,
+            "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+            "contemporaneous": true,
+            "source_ids": [
+              "resource-https-github-com-zapier-automationbench-45f05783897a22a1",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ],
+            "score_source_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ],
+            "source": "https://www.anthropic.com/claude-opus-5-5",
+            "notes": "Operational evaluation timeline only; not a historical public-result date.",
+            "evidence_ids": [
+              "evidence-sep2026-automationbench-gpt-5-6-sol-max-zapier-p-cb917f031c4a2953"
+            ],
+            "evidence_count": 1,
+            "source_row_ids": [
+              "sep2026-automationbench-gpt-5-6-sol-max-zapier-private-no-fallback"
+            ],
+            "plot_date": "2026-07-09",
+            "frontier_observation_ids": [
+              "obs-0-117-ee19054350615660",
+              "obs-0-196-a47ce18b0100679b",
+              "obs-0-248-bf08214f3d48fd90",
+              "obs-0-263-7e342252383de823",
+              "obs-0-288-120062aa967bd323"
+            ]
+          },
+          {
+            "observation_id": "obs-0-414-1a66326c1fe02964",
+            "benchmark_id": "automationbench",
+            "benchmark_version_id": "automationbench-canonical",
+            "model_id": "model-gpt-6-astra-max-zapier-private-no-fallback-f5cc44b5034ff163",
+            "model_configuration": "GPT-6 Astra (max, Zapier private, no fallback)",
+            "model_identity_organization": "openai",
+            "model_label_id": "gpt-6-astra-max-zapier-private-no-fallback",
+            "model_family_id": "openai-gpt-6-astra",
+            "model": "GPT-6 Astra (max, Zapier private, no fallback)",
+            "organization": "OpenAI",
+            "score": 0.414,
+            "input_score": 0.414,
+            "input_unit": "fraction",
+            "reported_cost_per_task": null,
+            "metric_id": "automationbench-metric-v1",
+            "protocol_id": "automationbench-private-1-0-6",
+            "task_set_id": "automationbench-private-1-0-6",
+            "metric": "Pass Rate",
+            "score_role": "auxiliary",
+            "score_series_id": "automationbench-auxiliary-automationbench-private-1-0-6",
+            "evaluation_protocol": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+            "auxiliary_metadata": {
+              "protocol_id": "automationbench-private-1-0-6",
+              "task_set_id": "automationbench-private-1-0-6",
+              "label": "Private held-out set 1.0.6",
+              "explanation": {
+                "en": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+                "zh": "Zapier 1.0.6 \u79c1\u6709\u4fdd\u7559\u6d4b\u8bd5\u96c6\uff0c\u4e0d\u662f\u516c\u5f00 600 \u9898\u96c6\u3002\u5b89\u5168\u62e6\u622a\u8ba1\u4e3a\u5931\u8d25\uff0c\u4e0d\u542f\u7528\u540e\u5907\u6a21\u578b\u3002"
+              }
+            },
+            "model_release_date": "2026-09-03",
+            "evaluation_date": null,
+            "result_public_date": "2026-09-22",
+            "source_publication_date": "2026-09-22",
+            "observation_date": "2026-09-03",
+            "observation_date_precision": "day",
+            "observation_date_sources": [
+              {
+                "date": "2026-09-03",
+                "kind": "model_release_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+                  "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+                ]
+              }
+            ],
+            "observation_date_source_ids": [
+              "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ],
+            "evaluation_date_sources": [],
+            "score_publication_date_sources": [
+              {
+                "date": "2026-09-22",
+                "kind": "Result public date",
+                "precision": "day"
+              }
+            ],
+            "ingested_at": "2026-09-23",
+            "date_precision": "day",
+            "date_notes": null,
+            "date": "2026-09-03",
+            "date_kind": "earliest_observation_evidence_date",
+            "capability_date": "2026-09-03",
+            "capability_date_meaning": "earliest_observation_evidence_date",
+            "reported_date_meaning": "result_public_date",
+            "historical_frontier_date": "2026-09-22",
+            "temporal_class": "historical_or_unknown",
+            "retrospective": false,
+            "capability_frontier_eligible": false,
+            "historical_frontier_eligible": true,
+            "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+            "contemporaneous": true,
+            "source_ids": [
+              "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+              "resource-https-github-com-zapier-automationbench-45f05783897a22a1",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ],
+            "score_source_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ],
+            "source": "https://www.anthropic.com/claude-opus-5-5",
+            "notes": "Operational evaluation timeline only; not a historical public-result date.",
+            "evidence_ids": [
+              "evidence-sep2026-automationbench-gpt-6-astra-max-zapier-p-888c6fc21352452b"
+            ],
+            "evidence_count": 1,
+            "source_row_ids": [
+              "sep2026-automationbench-gpt-6-astra-max-zapier-private-no-fallback"
+            ],
+            "plot_date": "2026-09-03",
+            "frontier_observation_ids": [
+              "obs-0-303-0cc83037ac6c1f5e",
+              "obs-0-341-b11af0abe17d4b34",
+              "obs-0-371-31dafc0bd3f9259c",
+              "obs-0-39-7d91672da0880d5f",
+              "obs-0-414-1a66326c1fe02964"
+            ]
+          }
+        ]
+      }
+    ],
     "benchmark_version_id": "automationbench-canonical",
     "summary": {
       "en": "AutomationBench tests whether agents can complete realistic business workflows across simulated SaaS tools.",
@@ -123,8 +477,8 @@
       }
     },
     "evaluation_target": "environment_outcome",
-    "observation_count": 8,
-    "evidence_record_count": 8,
+    "observation_count": 31,
+    "evidence_record_count": 31,
     "observations": [
       {
         "observation_id": "obs-0-3033-f2f646f726235ed3",
@@ -169,7 +523,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-05-28",
@@ -241,7 +595,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -315,7 +669,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-03",
@@ -389,7 +743,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -461,7 +815,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-06-09",
@@ -533,7 +887,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-06-30",
@@ -605,7 +959,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-04-24",
@@ -677,7 +1031,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-05-19",
@@ -705,6 +1059,2139 @@
         ],
         "evidence_count": 1,
         "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-233-b4a0cc17a0cd5544",
+        "benchmark_id": "automationbench",
+        "benchmark_version_id": "automationbench-canonical",
+        "model_id": "model-claude-opus-5-5-low-zapier-private-no-fallback-a7668b57b6f82f90",
+        "model_configuration": "Claude Opus 5.5 (low, Zapier private, no fallback)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-low-zapier-private-no-fallback",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (low, Zapier private, no fallback)",
+        "organization": "Anthropic",
+        "score": 0.233,
+        "input_score": 0.233,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "automationbench-metric-v1",
+        "protocol_id": "automationbench-private-1-0-6",
+        "task_set_id": "automationbench-private-1-0-6",
+        "metric": "Pass Rate",
+        "score_role": "auxiliary",
+        "score_series_id": "automationbench-auxiliary-automationbench-private-1-0-6",
+        "evaluation_protocol": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+        "auxiliary_metadata": {
+          "protocol_id": "automationbench-private-1-0-6",
+          "task_set_id": "automationbench-private-1-0-6",
+          "label": "Private held-out set 1.0.6",
+          "explanation": {
+            "en": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+            "zh": "Zapier 1.0.6 \u79c1\u6709\u4fdd\u7559\u6d4b\u8bd5\u96c6\uff0c\u4e0d\u662f\u516c\u5f00 600 \u9898\u96c6\u3002\u5b89\u5168\u62e6\u622a\u8ba1\u4e3a\u5931\u8d25\uff0c\u4e0d\u542f\u7528\u540e\u5907\u6a21\u578b\u3002"
+          }
+        },
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-zapier-automationbench-45f05783897a22a1",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-automationbench-claude-opus-5-5-low-zapi-a5d388fff919f060"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-automationbench-claude-opus-5-5-low-zapier-private-no-fallback"
+        ]
+      },
+      {
+        "observation_id": "obs-0-286-9465d9d8c87134b3",
+        "benchmark_id": "automationbench",
+        "benchmark_version_id": "automationbench-canonical",
+        "model_id": "model-claude-opus-5-5-medium-zapier-private-no-fallbac-4bad109fa7a3011c",
+        "model_configuration": "Claude Opus 5.5 (medium, Zapier private, no fallback)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-medium-zapier-private-no-fallback",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (medium, Zapier private, no fallback)",
+        "organization": "Anthropic",
+        "score": 0.28600000000000003,
+        "input_score": 0.28600000000000003,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "automationbench-metric-v1",
+        "protocol_id": "automationbench-private-1-0-6",
+        "task_set_id": "automationbench-private-1-0-6",
+        "metric": "Pass Rate",
+        "score_role": "auxiliary",
+        "score_series_id": "automationbench-auxiliary-automationbench-private-1-0-6",
+        "evaluation_protocol": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+        "auxiliary_metadata": {
+          "protocol_id": "automationbench-private-1-0-6",
+          "task_set_id": "automationbench-private-1-0-6",
+          "label": "Private held-out set 1.0.6",
+          "explanation": {
+            "en": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+            "zh": "Zapier 1.0.6 \u79c1\u6709\u4fdd\u7559\u6d4b\u8bd5\u96c6\uff0c\u4e0d\u662f\u516c\u5f00 600 \u9898\u96c6\u3002\u5b89\u5168\u62e6\u622a\u8ba1\u4e3a\u5931\u8d25\uff0c\u4e0d\u542f\u7528\u540e\u5907\u6a21\u578b\u3002"
+          }
+        },
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-zapier-automationbench-45f05783897a22a1",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-automationbench-claude-opus-5-5-medium-z-9a3d4986aa979ebb"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-automationbench-claude-opus-5-5-medium-zapier-private-no-fallback"
+        ]
+      },
+      {
+        "observation_id": "obs-0-32-4dfaddd8db201b64",
+        "benchmark_id": "automationbench",
+        "benchmark_version_id": "automationbench-canonical",
+        "model_id": "model-claude-opus-5-5-high-zapier-private-no-fallback-d8c1098e6bb378f7",
+        "model_configuration": "Claude Opus 5.5 (high, Zapier private, no fallback)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-high-zapier-private-no-fallback",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (high, Zapier private, no fallback)",
+        "organization": "Anthropic",
+        "score": 0.32,
+        "input_score": 0.32,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "automationbench-metric-v1",
+        "protocol_id": "automationbench-private-1-0-6",
+        "task_set_id": "automationbench-private-1-0-6",
+        "metric": "Pass Rate",
+        "score_role": "auxiliary",
+        "score_series_id": "automationbench-auxiliary-automationbench-private-1-0-6",
+        "evaluation_protocol": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+        "auxiliary_metadata": {
+          "protocol_id": "automationbench-private-1-0-6",
+          "task_set_id": "automationbench-private-1-0-6",
+          "label": "Private held-out set 1.0.6",
+          "explanation": {
+            "en": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+            "zh": "Zapier 1.0.6 \u79c1\u6709\u4fdd\u7559\u6d4b\u8bd5\u96c6\uff0c\u4e0d\u662f\u516c\u5f00 600 \u9898\u96c6\u3002\u5b89\u5168\u62e6\u622a\u8ba1\u4e3a\u5931\u8d25\uff0c\u4e0d\u542f\u7528\u540e\u5907\u6a21\u578b\u3002"
+          }
+        },
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-zapier-automationbench-45f05783897a22a1",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-automationbench-claude-opus-5-5-high-zap-5ab7671762d61fd7"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-automationbench-claude-opus-5-5-high-zapier-private-no-fallback"
+        ]
+      },
+      {
+        "observation_id": "obs-0-344-7828c56edf353d44",
+        "benchmark_id": "automationbench",
+        "benchmark_version_id": "automationbench-canonical",
+        "model_id": "model-claude-opus-5-5-xhigh-zapier-private-no-fallback-59f3e2d47357cdd9",
+        "model_configuration": "Claude Opus 5.5 (xhigh, Zapier private, no fallback)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-xhigh-zapier-private-no-fallback",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (xhigh, Zapier private, no fallback)",
+        "organization": "Anthropic",
+        "score": 0.344,
+        "input_score": 0.344,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "automationbench-metric-v1",
+        "protocol_id": "automationbench-private-1-0-6",
+        "task_set_id": "automationbench-private-1-0-6",
+        "metric": "Pass Rate",
+        "score_role": "auxiliary",
+        "score_series_id": "automationbench-auxiliary-automationbench-private-1-0-6",
+        "evaluation_protocol": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+        "auxiliary_metadata": {
+          "protocol_id": "automationbench-private-1-0-6",
+          "task_set_id": "automationbench-private-1-0-6",
+          "label": "Private held-out set 1.0.6",
+          "explanation": {
+            "en": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+            "zh": "Zapier 1.0.6 \u79c1\u6709\u4fdd\u7559\u6d4b\u8bd5\u96c6\uff0c\u4e0d\u662f\u516c\u5f00 600 \u9898\u96c6\u3002\u5b89\u5168\u62e6\u622a\u8ba1\u4e3a\u5931\u8d25\uff0c\u4e0d\u542f\u7528\u540e\u5907\u6a21\u578b\u3002"
+          }
+        },
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-zapier-automationbench-45f05783897a22a1",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-automationbench-claude-opus-5-5-xhigh-za-f37cd7c6a0d4d6b1"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-automationbench-claude-opus-5-5-xhigh-zapier-private-no-fallback"
+        ]
+      },
+      {
+        "observation_id": "obs-0-4-2446a8ba1fea3dad",
+        "benchmark_id": "automationbench",
+        "benchmark_version_id": "automationbench-canonical",
+        "model_id": "model-claude-opus-5-5-max-zapier-private-no-fallback-17b5f5e90bca7b37",
+        "model_configuration": "Claude Opus 5.5 (max, Zapier private, no fallback)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-max-zapier-private-no-fallback",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (max, Zapier private, no fallback)",
+        "organization": "Anthropic",
+        "score": 0.4,
+        "input_score": 0.4,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "automationbench-metric-v1",
+        "protocol_id": "automationbench-private-1-0-6",
+        "task_set_id": "automationbench-private-1-0-6",
+        "metric": "Pass Rate",
+        "score_role": "auxiliary",
+        "score_series_id": "automationbench-auxiliary-automationbench-private-1-0-6",
+        "evaluation_protocol": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+        "auxiliary_metadata": {
+          "protocol_id": "automationbench-private-1-0-6",
+          "task_set_id": "automationbench-private-1-0-6",
+          "label": "Private held-out set 1.0.6",
+          "explanation": {
+            "en": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+            "zh": "Zapier 1.0.6 \u79c1\u6709\u4fdd\u7559\u6d4b\u8bd5\u96c6\uff0c\u4e0d\u662f\u516c\u5f00 600 \u9898\u96c6\u3002\u5b89\u5168\u62e6\u622a\u8ba1\u4e3a\u5931\u8d25\uff0c\u4e0d\u542f\u7528\u540e\u5907\u6a21\u578b\u3002"
+          }
+        },
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-zapier-automationbench-45f05783897a22a1",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-automationbench-claude-opus-5-5-max-zapi-a5b485d10293469d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-automationbench-claude-opus-5-5-max-zapier-private-no-fallback"
+        ]
+      },
+      {
+        "observation_id": "obs-0-204-67fed840d4047413",
+        "benchmark_id": "automationbench",
+        "benchmark_version_id": "automationbench-canonical",
+        "model_id": "model-claude-opus-5-low-zapier-private-no-fallback-5f2f1523b92365cc",
+        "model_configuration": "Claude Opus 5 (low, Zapier private, no fallback)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-low-zapier-private-no-fallback",
+        "model_family_id": "anthropic-claude-opus-5",
+        "model": "Claude Opus 5 (low, Zapier private, no fallback)",
+        "organization": "Anthropic",
+        "score": 0.204,
+        "input_score": 0.204,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "automationbench-metric-v1",
+        "protocol_id": "automationbench-private-1-0-6",
+        "task_set_id": "automationbench-private-1-0-6",
+        "metric": "Pass Rate",
+        "score_role": "auxiliary",
+        "score_series_id": "automationbench-auxiliary-automationbench-private-1-0-6",
+        "evaluation_protocol": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+        "auxiliary_metadata": {
+          "protocol_id": "automationbench-private-1-0-6",
+          "task_set_id": "automationbench-private-1-0-6",
+          "label": "Private held-out set 1.0.6",
+          "explanation": {
+            "en": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+            "zh": "Zapier 1.0.6 \u79c1\u6709\u4fdd\u7559\u6d4b\u8bd5\u96c6\uff0c\u4e0d\u662f\u516c\u5f00 600 \u9898\u96c6\u3002\u5b89\u5168\u62e6\u622a\u8ba1\u4e3a\u5931\u8d25\uff0c\u4e0d\u542f\u7528\u540e\u5907\u6a21\u578b\u3002"
+          }
+        },
+        "model_release_date": "2026-07-24",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-zapier-automationbench-45f05783897a22a1",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-automationbench-claude-opus-5-low-zapier-c6eaee40aacc53e0"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-automationbench-claude-opus-5-low-zapier-private-no-fallback"
+        ]
+      },
+      {
+        "observation_id": "obs-0-239-2fd71cd782b8786b",
+        "benchmark_id": "automationbench",
+        "benchmark_version_id": "automationbench-canonical",
+        "model_id": "model-claude-opus-5-medium-zapier-private-no-fallback-8c317c8df517b9c6",
+        "model_configuration": "Claude Opus 5 (medium, Zapier private, no fallback)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-medium-zapier-private-no-fallback",
+        "model_family_id": "anthropic-claude-opus-5",
+        "model": "Claude Opus 5 (medium, Zapier private, no fallback)",
+        "organization": "Anthropic",
+        "score": 0.239,
+        "input_score": 0.239,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "automationbench-metric-v1",
+        "protocol_id": "automationbench-private-1-0-6",
+        "task_set_id": "automationbench-private-1-0-6",
+        "metric": "Pass Rate",
+        "score_role": "auxiliary",
+        "score_series_id": "automationbench-auxiliary-automationbench-private-1-0-6",
+        "evaluation_protocol": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+        "auxiliary_metadata": {
+          "protocol_id": "automationbench-private-1-0-6",
+          "task_set_id": "automationbench-private-1-0-6",
+          "label": "Private held-out set 1.0.6",
+          "explanation": {
+            "en": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+            "zh": "Zapier 1.0.6 \u79c1\u6709\u4fdd\u7559\u6d4b\u8bd5\u96c6\uff0c\u4e0d\u662f\u516c\u5f00 600 \u9898\u96c6\u3002\u5b89\u5168\u62e6\u622a\u8ba1\u4e3a\u5931\u8d25\uff0c\u4e0d\u542f\u7528\u540e\u5907\u6a21\u578b\u3002"
+          }
+        },
+        "model_release_date": "2026-07-24",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-zapier-automationbench-45f05783897a22a1",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-automationbench-claude-opus-5-medium-zap-6305877be700eb5b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-automationbench-claude-opus-5-medium-zapier-private-no-fallback"
+        ]
+      },
+      {
+        "observation_id": "obs-0-206-c60c79952b9960c3",
+        "benchmark_id": "automationbench",
+        "benchmark_version_id": "automationbench-canonical",
+        "model_id": "model-claude-opus-5-high-zapier-private-no-fallback-c7a9115929bc6f52",
+        "model_configuration": "Claude Opus 5 (high, Zapier private, no fallback)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-high-zapier-private-no-fallback",
+        "model_family_id": "anthropic-claude-opus-5",
+        "model": "Claude Opus 5 (high, Zapier private, no fallback)",
+        "organization": "Anthropic",
+        "score": 0.20600000000000002,
+        "input_score": 0.20600000000000002,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "automationbench-metric-v1",
+        "protocol_id": "automationbench-private-1-0-6",
+        "task_set_id": "automationbench-private-1-0-6",
+        "metric": "Pass Rate",
+        "score_role": "auxiliary",
+        "score_series_id": "automationbench-auxiliary-automationbench-private-1-0-6",
+        "evaluation_protocol": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+        "auxiliary_metadata": {
+          "protocol_id": "automationbench-private-1-0-6",
+          "task_set_id": "automationbench-private-1-0-6",
+          "label": "Private held-out set 1.0.6",
+          "explanation": {
+            "en": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+            "zh": "Zapier 1.0.6 \u79c1\u6709\u4fdd\u7559\u6d4b\u8bd5\u96c6\uff0c\u4e0d\u662f\u516c\u5f00 600 \u9898\u96c6\u3002\u5b89\u5168\u62e6\u622a\u8ba1\u4e3a\u5931\u8d25\uff0c\u4e0d\u542f\u7528\u540e\u5907\u6a21\u578b\u3002"
+          }
+        },
+        "model_release_date": "2026-07-24",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-zapier-automationbench-45f05783897a22a1",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-automationbench-claude-opus-5-high-zapie-8d07ffa1beb76ef0"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-automationbench-claude-opus-5-high-zapier-private-no-fallback"
+        ]
+      },
+      {
+        "observation_id": "obs-0-253-26e8f709edf8163c",
+        "benchmark_id": "automationbench",
+        "benchmark_version_id": "automationbench-canonical",
+        "model_id": "model-claude-opus-5-xhigh-zapier-private-no-fallback-e53d681ea39ba95d",
+        "model_configuration": "Claude Opus 5 (xhigh, Zapier private, no fallback)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-xhigh-zapier-private-no-fallback",
+        "model_family_id": "anthropic-claude-opus-5",
+        "model": "Claude Opus 5 (xhigh, Zapier private, no fallback)",
+        "organization": "Anthropic",
+        "score": 0.253,
+        "input_score": 0.253,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "automationbench-metric-v1",
+        "protocol_id": "automationbench-private-1-0-6",
+        "task_set_id": "automationbench-private-1-0-6",
+        "metric": "Pass Rate",
+        "score_role": "auxiliary",
+        "score_series_id": "automationbench-auxiliary-automationbench-private-1-0-6",
+        "evaluation_protocol": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+        "auxiliary_metadata": {
+          "protocol_id": "automationbench-private-1-0-6",
+          "task_set_id": "automationbench-private-1-0-6",
+          "label": "Private held-out set 1.0.6",
+          "explanation": {
+            "en": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+            "zh": "Zapier 1.0.6 \u79c1\u6709\u4fdd\u7559\u6d4b\u8bd5\u96c6\uff0c\u4e0d\u662f\u516c\u5f00 600 \u9898\u96c6\u3002\u5b89\u5168\u62e6\u622a\u8ba1\u4e3a\u5931\u8d25\uff0c\u4e0d\u542f\u7528\u540e\u5907\u6a21\u578b\u3002"
+          }
+        },
+        "model_release_date": "2026-07-24",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-zapier-automationbench-45f05783897a22a1",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-automationbench-claude-opus-5-xhigh-zapi-6b646ad4b2a64b19"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-automationbench-claude-opus-5-xhigh-zapier-private-no-fallback"
+        ]
+      },
+      {
+        "observation_id": "obs-0-269-264579d1c598f81c",
+        "benchmark_id": "automationbench",
+        "benchmark_version_id": "automationbench-canonical",
+        "model_id": "model-claude-opus-5-max-zapier-private-no-fallback-b7474561fafe97f0",
+        "model_configuration": "Claude Opus 5 (max, Zapier private, no fallback)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-max-zapier-private-no-fallback",
+        "model_family_id": "anthropic-claude-opus-5",
+        "model": "Claude Opus 5 (max, Zapier private, no fallback)",
+        "organization": "Anthropic",
+        "score": 0.26899999999999996,
+        "input_score": 0.26899999999999996,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "automationbench-metric-v1",
+        "protocol_id": "automationbench-private-1-0-6",
+        "task_set_id": "automationbench-private-1-0-6",
+        "metric": "Pass Rate",
+        "score_role": "auxiliary",
+        "score_series_id": "automationbench-auxiliary-automationbench-private-1-0-6",
+        "evaluation_protocol": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+        "auxiliary_metadata": {
+          "protocol_id": "automationbench-private-1-0-6",
+          "task_set_id": "automationbench-private-1-0-6",
+          "label": "Private held-out set 1.0.6",
+          "explanation": {
+            "en": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+            "zh": "Zapier 1.0.6 \u79c1\u6709\u4fdd\u7559\u6d4b\u8bd5\u96c6\uff0c\u4e0d\u662f\u516c\u5f00 600 \u9898\u96c6\u3002\u5b89\u5168\u62e6\u622a\u8ba1\u4e3a\u5931\u8d25\uff0c\u4e0d\u542f\u7528\u540e\u5907\u6a21\u578b\u3002"
+          }
+        },
+        "model_release_date": "2026-07-24",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-zapier-automationbench-45f05783897a22a1",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-automationbench-claude-opus-5-max-zapier-b2e82362d4b01acb"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-automationbench-claude-opus-5-max-zapier-private-no-fallback"
+        ]
+      },
+      {
+        "observation_id": "obs-0-117-ee19054350615660",
+        "benchmark_id": "automationbench",
+        "benchmark_version_id": "automationbench-canonical",
+        "model_id": "model-gpt-5-6-sol-low-zapier-private-no-fallback-eb7d5721252ef3fa",
+        "model_configuration": "GPT-5.6 Sol (low, Zapier private, no fallback)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol-low-zapier-private-no-fallback",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "GPT-5.6 Sol (low, Zapier private, no fallback)",
+        "organization": "OpenAI",
+        "score": 0.11699999999999999,
+        "input_score": 0.11699999999999999,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "automationbench-metric-v1",
+        "protocol_id": "automationbench-private-1-0-6",
+        "task_set_id": "automationbench-private-1-0-6",
+        "metric": "Pass Rate",
+        "score_role": "auxiliary",
+        "score_series_id": "automationbench-auxiliary-automationbench-private-1-0-6",
+        "evaluation_protocol": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+        "auxiliary_metadata": {
+          "protocol_id": "automationbench-private-1-0-6",
+          "task_set_id": "automationbench-private-1-0-6",
+          "label": "Private held-out set 1.0.6",
+          "explanation": {
+            "en": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+            "zh": "Zapier 1.0.6 \u79c1\u6709\u4fdd\u7559\u6d4b\u8bd5\u96c6\uff0c\u4e0d\u662f\u516c\u5f00 600 \u9898\u96c6\u3002\u5b89\u5168\u62e6\u622a\u8ba1\u4e3a\u5931\u8d25\uff0c\u4e0d\u542f\u7528\u540e\u5907\u6a21\u578b\u3002"
+          }
+        },
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-zapier-automationbench-45f05783897a22a1",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-automationbench-gpt-5-6-sol-low-zapier-p-e899c5542f02463f"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-automationbench-gpt-5-6-sol-low-zapier-private-no-fallback"
+        ]
+      },
+      {
+        "observation_id": "obs-0-196-a47ce18b0100679b",
+        "benchmark_id": "automationbench",
+        "benchmark_version_id": "automationbench-canonical",
+        "model_id": "model-gpt-5-6-sol-medium-zapier-private-no-fallback-5cf868ba96e33490",
+        "model_configuration": "GPT-5.6 Sol (medium, Zapier private, no fallback)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol-medium-zapier-private-no-fallback",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "GPT-5.6 Sol (medium, Zapier private, no fallback)",
+        "organization": "OpenAI",
+        "score": 0.196,
+        "input_score": 0.196,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "automationbench-metric-v1",
+        "protocol_id": "automationbench-private-1-0-6",
+        "task_set_id": "automationbench-private-1-0-6",
+        "metric": "Pass Rate",
+        "score_role": "auxiliary",
+        "score_series_id": "automationbench-auxiliary-automationbench-private-1-0-6",
+        "evaluation_protocol": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+        "auxiliary_metadata": {
+          "protocol_id": "automationbench-private-1-0-6",
+          "task_set_id": "automationbench-private-1-0-6",
+          "label": "Private held-out set 1.0.6",
+          "explanation": {
+            "en": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+            "zh": "Zapier 1.0.6 \u79c1\u6709\u4fdd\u7559\u6d4b\u8bd5\u96c6\uff0c\u4e0d\u662f\u516c\u5f00 600 \u9898\u96c6\u3002\u5b89\u5168\u62e6\u622a\u8ba1\u4e3a\u5931\u8d25\uff0c\u4e0d\u542f\u7528\u540e\u5907\u6a21\u578b\u3002"
+          }
+        },
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-zapier-automationbench-45f05783897a22a1",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-automationbench-gpt-5-6-sol-medium-zapie-9b5bf5c56f8e702c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-automationbench-gpt-5-6-sol-medium-zapier-private-no-fallback"
+        ]
+      },
+      {
+        "observation_id": "obs-0-248-bf08214f3d48fd90",
+        "benchmark_id": "automationbench",
+        "benchmark_version_id": "automationbench-canonical",
+        "model_id": "model-gpt-5-6-sol-high-zapier-private-no-fallback-f678f863859e80f6",
+        "model_configuration": "GPT-5.6 Sol (high, Zapier private, no fallback)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol-high-zapier-private-no-fallback",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "GPT-5.6 Sol (high, Zapier private, no fallback)",
+        "organization": "OpenAI",
+        "score": 0.248,
+        "input_score": 0.248,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "automationbench-metric-v1",
+        "protocol_id": "automationbench-private-1-0-6",
+        "task_set_id": "automationbench-private-1-0-6",
+        "metric": "Pass Rate",
+        "score_role": "auxiliary",
+        "score_series_id": "automationbench-auxiliary-automationbench-private-1-0-6",
+        "evaluation_protocol": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+        "auxiliary_metadata": {
+          "protocol_id": "automationbench-private-1-0-6",
+          "task_set_id": "automationbench-private-1-0-6",
+          "label": "Private held-out set 1.0.6",
+          "explanation": {
+            "en": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+            "zh": "Zapier 1.0.6 \u79c1\u6709\u4fdd\u7559\u6d4b\u8bd5\u96c6\uff0c\u4e0d\u662f\u516c\u5f00 600 \u9898\u96c6\u3002\u5b89\u5168\u62e6\u622a\u8ba1\u4e3a\u5931\u8d25\uff0c\u4e0d\u542f\u7528\u540e\u5907\u6a21\u578b\u3002"
+          }
+        },
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-zapier-automationbench-45f05783897a22a1",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-automationbench-gpt-5-6-sol-high-zapier--9e71b27952fa8bce"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-automationbench-gpt-5-6-sol-high-zapier-private-no-fallback"
+        ]
+      },
+      {
+        "observation_id": "obs-0-263-7e342252383de823",
+        "benchmark_id": "automationbench",
+        "benchmark_version_id": "automationbench-canonical",
+        "model_id": "model-gpt-5-6-sol-xhigh-zapier-private-no-fallback-17b13a909391d7a9",
+        "model_configuration": "GPT-5.6 Sol (xhigh, Zapier private, no fallback)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol-xhigh-zapier-private-no-fallback",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "GPT-5.6 Sol (xhigh, Zapier private, no fallback)",
+        "organization": "OpenAI",
+        "score": 0.263,
+        "input_score": 0.263,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "automationbench-metric-v1",
+        "protocol_id": "automationbench-private-1-0-6",
+        "task_set_id": "automationbench-private-1-0-6",
+        "metric": "Pass Rate",
+        "score_role": "auxiliary",
+        "score_series_id": "automationbench-auxiliary-automationbench-private-1-0-6",
+        "evaluation_protocol": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+        "auxiliary_metadata": {
+          "protocol_id": "automationbench-private-1-0-6",
+          "task_set_id": "automationbench-private-1-0-6",
+          "label": "Private held-out set 1.0.6",
+          "explanation": {
+            "en": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+            "zh": "Zapier 1.0.6 \u79c1\u6709\u4fdd\u7559\u6d4b\u8bd5\u96c6\uff0c\u4e0d\u662f\u516c\u5f00 600 \u9898\u96c6\u3002\u5b89\u5168\u62e6\u622a\u8ba1\u4e3a\u5931\u8d25\uff0c\u4e0d\u542f\u7528\u540e\u5907\u6a21\u578b\u3002"
+          }
+        },
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-zapier-automationbench-45f05783897a22a1",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-automationbench-gpt-5-6-sol-xhigh-zapier-8e742d4f9edd2ccd"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-automationbench-gpt-5-6-sol-xhigh-zapier-private-no-fallback"
+        ]
+      },
+      {
+        "observation_id": "obs-0-288-120062aa967bd323",
+        "benchmark_id": "automationbench",
+        "benchmark_version_id": "automationbench-canonical",
+        "model_id": "model-gpt-5-6-sol-max-zapier-private-no-fallback-121ba7cedb954afe",
+        "model_configuration": "GPT-5.6 Sol (max, Zapier private, no fallback)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol-max-zapier-private-no-fallback",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "GPT-5.6 Sol (max, Zapier private, no fallback)",
+        "organization": "OpenAI",
+        "score": 0.28800000000000003,
+        "input_score": 0.28800000000000003,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "automationbench-metric-v1",
+        "protocol_id": "automationbench-private-1-0-6",
+        "task_set_id": "automationbench-private-1-0-6",
+        "metric": "Pass Rate",
+        "score_role": "auxiliary",
+        "score_series_id": "automationbench-auxiliary-automationbench-private-1-0-6",
+        "evaluation_protocol": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+        "auxiliary_metadata": {
+          "protocol_id": "automationbench-private-1-0-6",
+          "task_set_id": "automationbench-private-1-0-6",
+          "label": "Private held-out set 1.0.6",
+          "explanation": {
+            "en": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+            "zh": "Zapier 1.0.6 \u79c1\u6709\u4fdd\u7559\u6d4b\u8bd5\u96c6\uff0c\u4e0d\u662f\u516c\u5f00 600 \u9898\u96c6\u3002\u5b89\u5168\u62e6\u622a\u8ba1\u4e3a\u5931\u8d25\uff0c\u4e0d\u542f\u7528\u540e\u5907\u6a21\u578b\u3002"
+          }
+        },
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-zapier-automationbench-45f05783897a22a1",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-automationbench-gpt-5-6-sol-max-zapier-p-cb917f031c4a2953"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-automationbench-gpt-5-6-sol-max-zapier-private-no-fallback"
+        ]
+      },
+      {
+        "observation_id": "obs-0-303-0cc83037ac6c1f5e",
+        "benchmark_id": "automationbench",
+        "benchmark_version_id": "automationbench-canonical",
+        "model_id": "model-gpt-6-astra-low-zapier-private-no-fallback-ee349513ddbf6ad2",
+        "model_configuration": "GPT-6 Astra (low, Zapier private, no fallback)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-astra-low-zapier-private-no-fallback",
+        "model_family_id": "openai-gpt-6-astra",
+        "model": "GPT-6 Astra (low, Zapier private, no fallback)",
+        "organization": "OpenAI",
+        "score": 0.303,
+        "input_score": 0.303,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "automationbench-metric-v1",
+        "protocol_id": "automationbench-private-1-0-6",
+        "task_set_id": "automationbench-private-1-0-6",
+        "metric": "Pass Rate",
+        "score_role": "auxiliary",
+        "score_series_id": "automationbench-auxiliary-automationbench-private-1-0-6",
+        "evaluation_protocol": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+        "auxiliary_metadata": {
+          "protocol_id": "automationbench-private-1-0-6",
+          "task_set_id": "automationbench-private-1-0-6",
+          "label": "Private held-out set 1.0.6",
+          "explanation": {
+            "en": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+            "zh": "Zapier 1.0.6 \u79c1\u6709\u4fdd\u7559\u6d4b\u8bd5\u96c6\uff0c\u4e0d\u662f\u516c\u5f00 600 \u9898\u96c6\u3002\u5b89\u5168\u62e6\u622a\u8ba1\u4e3a\u5931\u8d25\uff0c\u4e0d\u542f\u7528\u540e\u5907\u6a21\u578b\u3002"
+          }
+        },
+        "model_release_date": "2026-09-03",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-03",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-03",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-03",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-github-com-zapier-automationbench-45f05783897a22a1",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-automationbench-gpt-6-astra-low-zapier-p-cc10c48bac917b00"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-automationbench-gpt-6-astra-low-zapier-private-no-fallback"
+        ]
+      },
+      {
+        "observation_id": "obs-0-341-b11af0abe17d4b34",
+        "benchmark_id": "automationbench",
+        "benchmark_version_id": "automationbench-canonical",
+        "model_id": "model-gpt-6-astra-medium-zapier-private-no-fallback-d5b219384aa63a0a",
+        "model_configuration": "GPT-6 Astra (medium, Zapier private, no fallback)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-astra-medium-zapier-private-no-fallback",
+        "model_family_id": "openai-gpt-6-astra",
+        "model": "GPT-6 Astra (medium, Zapier private, no fallback)",
+        "organization": "OpenAI",
+        "score": 0.341,
+        "input_score": 0.341,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "automationbench-metric-v1",
+        "protocol_id": "automationbench-private-1-0-6",
+        "task_set_id": "automationbench-private-1-0-6",
+        "metric": "Pass Rate",
+        "score_role": "auxiliary",
+        "score_series_id": "automationbench-auxiliary-automationbench-private-1-0-6",
+        "evaluation_protocol": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+        "auxiliary_metadata": {
+          "protocol_id": "automationbench-private-1-0-6",
+          "task_set_id": "automationbench-private-1-0-6",
+          "label": "Private held-out set 1.0.6",
+          "explanation": {
+            "en": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+            "zh": "Zapier 1.0.6 \u79c1\u6709\u4fdd\u7559\u6d4b\u8bd5\u96c6\uff0c\u4e0d\u662f\u516c\u5f00 600 \u9898\u96c6\u3002\u5b89\u5168\u62e6\u622a\u8ba1\u4e3a\u5931\u8d25\uff0c\u4e0d\u542f\u7528\u540e\u5907\u6a21\u578b\u3002"
+          }
+        },
+        "model_release_date": "2026-09-03",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-03",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-03",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-03",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-github-com-zapier-automationbench-45f05783897a22a1",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-automationbench-gpt-6-astra-medium-zapie-f513e81947c70435"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-automationbench-gpt-6-astra-medium-zapier-private-no-fallback"
+        ]
+      },
+      {
+        "observation_id": "obs-0-371-31dafc0bd3f9259c",
+        "benchmark_id": "automationbench",
+        "benchmark_version_id": "automationbench-canonical",
+        "model_id": "model-gpt-6-astra-high-zapier-private-no-fallback-16229ab6e5f409f1",
+        "model_configuration": "GPT-6 Astra (high, Zapier private, no fallback)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-astra-high-zapier-private-no-fallback",
+        "model_family_id": "openai-gpt-6-astra",
+        "model": "GPT-6 Astra (high, Zapier private, no fallback)",
+        "organization": "OpenAI",
+        "score": 0.371,
+        "input_score": 0.371,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "automationbench-metric-v1",
+        "protocol_id": "automationbench-private-1-0-6",
+        "task_set_id": "automationbench-private-1-0-6",
+        "metric": "Pass Rate",
+        "score_role": "auxiliary",
+        "score_series_id": "automationbench-auxiliary-automationbench-private-1-0-6",
+        "evaluation_protocol": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+        "auxiliary_metadata": {
+          "protocol_id": "automationbench-private-1-0-6",
+          "task_set_id": "automationbench-private-1-0-6",
+          "label": "Private held-out set 1.0.6",
+          "explanation": {
+            "en": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+            "zh": "Zapier 1.0.6 \u79c1\u6709\u4fdd\u7559\u6d4b\u8bd5\u96c6\uff0c\u4e0d\u662f\u516c\u5f00 600 \u9898\u96c6\u3002\u5b89\u5168\u62e6\u622a\u8ba1\u4e3a\u5931\u8d25\uff0c\u4e0d\u542f\u7528\u540e\u5907\u6a21\u578b\u3002"
+          }
+        },
+        "model_release_date": "2026-09-03",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-03",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-03",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-03",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-github-com-zapier-automationbench-45f05783897a22a1",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-automationbench-gpt-6-astra-high-zapier--9cf3be87bf866296"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-automationbench-gpt-6-astra-high-zapier-private-no-fallback"
+        ]
+      },
+      {
+        "observation_id": "obs-0-39-7d91672da0880d5f",
+        "benchmark_id": "automationbench",
+        "benchmark_version_id": "automationbench-canonical",
+        "model_id": "model-gpt-6-astra-xhigh-zapier-private-no-fallback-ddd0402bfabdbe36",
+        "model_configuration": "GPT-6 Astra (xhigh, Zapier private, no fallback)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-astra-xhigh-zapier-private-no-fallback",
+        "model_family_id": "openai-gpt-6-astra",
+        "model": "GPT-6 Astra (xhigh, Zapier private, no fallback)",
+        "organization": "OpenAI",
+        "score": 0.39,
+        "input_score": 0.39,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "automationbench-metric-v1",
+        "protocol_id": "automationbench-private-1-0-6",
+        "task_set_id": "automationbench-private-1-0-6",
+        "metric": "Pass Rate",
+        "score_role": "auxiliary",
+        "score_series_id": "automationbench-auxiliary-automationbench-private-1-0-6",
+        "evaluation_protocol": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+        "auxiliary_metadata": {
+          "protocol_id": "automationbench-private-1-0-6",
+          "task_set_id": "automationbench-private-1-0-6",
+          "label": "Private held-out set 1.0.6",
+          "explanation": {
+            "en": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+            "zh": "Zapier 1.0.6 \u79c1\u6709\u4fdd\u7559\u6d4b\u8bd5\u96c6\uff0c\u4e0d\u662f\u516c\u5f00 600 \u9898\u96c6\u3002\u5b89\u5168\u62e6\u622a\u8ba1\u4e3a\u5931\u8d25\uff0c\u4e0d\u542f\u7528\u540e\u5907\u6a21\u578b\u3002"
+          }
+        },
+        "model_release_date": "2026-09-03",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-03",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-03",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-03",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-github-com-zapier-automationbench-45f05783897a22a1",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-automationbench-gpt-6-astra-xhigh-zapier-b2b65049c4a612af"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-automationbench-gpt-6-astra-xhigh-zapier-private-no-fallback"
+        ]
+      },
+      {
+        "observation_id": "obs-0-414-1a66326c1fe02964",
+        "benchmark_id": "automationbench",
+        "benchmark_version_id": "automationbench-canonical",
+        "model_id": "model-gpt-6-astra-max-zapier-private-no-fallback-f5cc44b5034ff163",
+        "model_configuration": "GPT-6 Astra (max, Zapier private, no fallback)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-astra-max-zapier-private-no-fallback",
+        "model_family_id": "openai-gpt-6-astra",
+        "model": "GPT-6 Astra (max, Zapier private, no fallback)",
+        "organization": "OpenAI",
+        "score": 0.414,
+        "input_score": 0.414,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "automationbench-metric-v1",
+        "protocol_id": "automationbench-private-1-0-6",
+        "task_set_id": "automationbench-private-1-0-6",
+        "metric": "Pass Rate",
+        "score_role": "auxiliary",
+        "score_series_id": "automationbench-auxiliary-automationbench-private-1-0-6",
+        "evaluation_protocol": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+        "auxiliary_metadata": {
+          "protocol_id": "automationbench-private-1-0-6",
+          "task_set_id": "automationbench-private-1-0-6",
+          "label": "Private held-out set 1.0.6",
+          "explanation": {
+            "en": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+            "zh": "Zapier 1.0.6 \u79c1\u6709\u4fdd\u7559\u6d4b\u8bd5\u96c6\uff0c\u4e0d\u662f\u516c\u5f00 600 \u9898\u96c6\u3002\u5b89\u5168\u62e6\u622a\u8ba1\u4e3a\u5931\u8d25\uff0c\u4e0d\u542f\u7528\u540e\u5907\u6a21\u578b\u3002"
+          }
+        },
+        "model_release_date": "2026-09-03",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-03",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-03",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-03",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-github-com-zapier-automationbench-45f05783897a22a1",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-automationbench-gpt-6-astra-max-zapier-p-888c6fc21352452b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-automationbench-gpt-6-astra-max-zapier-private-no-fallback"
+        ]
+      },
+      {
+        "observation_id": "obs-0-332-1f13c4de7ec01e9c",
+        "benchmark_id": "automationbench",
+        "benchmark_version_id": "automationbench-canonical",
+        "model_id": "model-gpt-6-sol-xhigh-zapier-private-578b93f9d2be8103",
+        "model_configuration": "GPT-6 Sol (xhigh, Zapier private)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-sol-xhigh-zapier-private",
+        "model_family_id": "openai-gpt-6-sol",
+        "model": "GPT-6 Sol (xhigh, Zapier private)",
+        "organization": "OpenAI",
+        "score": 0.332,
+        "input_score": 0.332,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "automationbench-metric-v1",
+        "protocol_id": "automationbench-private-1-0-6",
+        "task_set_id": "automationbench-private-1-0-6",
+        "metric": "Pass Rate",
+        "score_role": "auxiliary",
+        "score_series_id": "automationbench-auxiliary-automationbench-private-1-0-6",
+        "evaluation_protocol": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+        "auxiliary_metadata": {
+          "protocol_id": "automationbench-private-1-0-6",
+          "task_set_id": "automationbench-private-1-0-6",
+          "label": "Private held-out set 1.0.6",
+          "explanation": {
+            "en": "Zapier private held-out leaderboard, release 1.0.6; not the public 600-task set. Safeguard interventions count as failures without fallbacks.",
+            "zh": "Zapier 1.0.6 \u79c1\u6709\u4fdd\u7559\u6d4b\u8bd5\u96c6\uff0c\u4e0d\u662f\u516c\u5f00 600 \u9898\u96c6\u3002\u5b89\u5168\u62e6\u622a\u8ba1\u4e3a\u5931\u8d25\uff0c\u4e0d\u542f\u7528\u540e\u5907\u6a21\u578b\u3002"
+          }
+        },
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-zapier-automationbench-45f05783897a22a1",
+          "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+        ],
+        "score_source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+        ],
+        "source": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-automationbench-gpt-6-sol-xhigh-zapier-p-9fc6dd8f581fa673"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-automationbench-gpt-6-sol-xhigh-zapier-private"
+        ]
+      },
+      {
+        "observation_id": "obs-0-531-f8e46927e61486bc",
+        "benchmark_id": "automationbench",
+        "benchmark_version_id": "automationbench-canonical",
+        "model_id": "model-mimo-v2-6-pro-rl-model-card-settings-fb28d1e8a8d24000",
+        "model_configuration": "MiMo-V2.6-Pro-RL (model-card settings)",
+        "model_identity_organization": "xiaomi",
+        "model_label_id": "mimo-v2-6-pro-rl-model-card-settings",
+        "model_family_id": "xiaomi-mimo-v2-6-pro-rl",
+        "model": "MiMo-V2.6-Pro-RL (model-card settings)",
+        "organization": "Xiaomi",
+        "score": 0.531,
+        "input_score": 0.531,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "automationbench-metric-v1",
+        "protocol_id": "automationbench-mimo-1-0-6",
+        "task_set_id": "automationbench-mimo-1-0-6",
+        "metric": "Pass Rate",
+        "score_role": "auxiliary",
+        "score_series_id": "automationbench-auxiliary-automationbench-mimo-1-0-6",
+        "evaluation_protocol": "Version 1.0.6 is named, but public versus private task split and fallback policy are not pinned.",
+        "auxiliary_metadata": {
+          "protocol_id": "automationbench-mimo-1-0-6",
+          "task_set_id": "automationbench-mimo-1-0-6",
+          "label": "MiMo v1.0.6 / split unpinned",
+          "explanation": {
+            "en": "Version 1.0.6 is named, but public versus private task split and fallback policy are not pinned.",
+            "zh": "\u6807\u660e 1.0.6\uff0c\u4f46\u672a\u56fa\u5b9a\u516c\u5f00\u6216\u79c1\u6709\u5212\u5206\u4ee5\u53ca\u540e\u5907\u6a21\u578b\u7b56\u7565\u3002"
+          }
+        },
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-21",
+        "source_publication_date": "2026-09-21",
+        "observation_date": "2026-09-21",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-21",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-21",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-zapier-automationbench-45f05783897a22a1",
+          "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+        ],
+        "score_source_ids": [
+          "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+        ],
+        "source": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL/blob/c165b4c7d1936ec55425c029597f414f84bd5d34/README.md",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-automationbench-mimo-v2-6-pro-rl-model-c-2d5610ddb294c828"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-automationbench-mimo-v2-6-pro-rl-model-card-settings"
+        ]
+      },
+      {
+        "observation_id": "obs-0-523-b2e9f573f7cf843e",
+        "benchmark_id": "automationbench",
+        "benchmark_version_id": "automationbench-canonical",
+        "model_id": "model-mimo-v2-6-flash-rl-model-card-settings-876368974dacc51a",
+        "model_configuration": "MiMo-V2.6-Flash-RL (model-card settings)",
+        "model_identity_organization": "xiaomi",
+        "model_label_id": "mimo-v2-6-flash-rl-model-card-settings",
+        "model_family_id": "xiaomi-mimo-v2-6-flash-rl",
+        "model": "MiMo-V2.6-Flash-RL (model-card settings)",
+        "organization": "Xiaomi",
+        "score": 0.523,
+        "input_score": 0.523,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "automationbench-metric-v1",
+        "protocol_id": "automationbench-mimo-1-0-6",
+        "task_set_id": "automationbench-mimo-1-0-6",
+        "metric": "Pass Rate",
+        "score_role": "auxiliary",
+        "score_series_id": "automationbench-auxiliary-automationbench-mimo-1-0-6",
+        "evaluation_protocol": "Version 1.0.6 is named, but public versus private task split and fallback policy are not pinned.",
+        "auxiliary_metadata": {
+          "protocol_id": "automationbench-mimo-1-0-6",
+          "task_set_id": "automationbench-mimo-1-0-6",
+          "label": "MiMo v1.0.6 / split unpinned",
+          "explanation": {
+            "en": "Version 1.0.6 is named, but public versus private task split and fallback policy are not pinned.",
+            "zh": "\u6807\u660e 1.0.6\uff0c\u4f46\u672a\u56fa\u5b9a\u516c\u5f00\u6216\u79c1\u6709\u5212\u5206\u4ee5\u53ca\u540e\u5907\u6a21\u578b\u7b56\u7565\u3002"
+          }
+        },
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-21",
+        "source_publication_date": "2026-09-21",
+        "observation_date": "2026-09-21",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-21",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-21",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-github-com-zapier-automationbench-45f05783897a22a1",
+          "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+        ],
+        "score_source_ids": [
+          "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+        ],
+        "source": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL/blob/c165b4c7d1936ec55425c029597f414f84bd5d34/README.md",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-automationbench-mimo-v2-6-flash-rl-model-6d3d99f6b81cf4a8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-automationbench-mimo-v2-6-flash-rl-model-card-settings"
+        ]
       }
     ],
     "frontier": [
@@ -751,7 +3238,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-04-24",
@@ -827,7 +3314,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-05-28",
@@ -905,7 +3392,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-03",
@@ -985,7 +3472,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-04-24",
@@ -1061,7 +3548,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-05-28",
@@ -1139,7 +3626,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-03",
@@ -1219,7 +3706,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-04-24",
@@ -1295,7 +3782,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-05-28",
@@ -1373,7 +3860,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-03",
@@ -1421,29 +3908,29 @@
     "threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 137
+        "days": 156
       },
       "T80": {
         "status": "right_censored",
-        "days": 137
+        "days": 156
       },
       "T90": {
         "status": "right_censored",
-        "days": 137
+        "days": 156
       }
     },
     "capability_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 137
+        "days": 156
       },
       "T80": {
         "status": "right_censored",
-        "days": 137
+        "days": 156
       },
       "T90": {
         "status": "right_censored",
-        "days": 137
+        "days": 156
       }
     },
     "reported_threshold_days": {

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-04",
+  "snapshot_id": "2026-09-23",
   "reference_organizations": [
     {
       "id": "openai",
@@ -126,8 +126,8 @@
       }
     },
     "evaluation_target": "environment_outcome",
-    "observation_count": 10,
-    "evidence_record_count": 10,
+    "observation_count": 11,
+    "evidence_record_count": 11,
     "observations": [
       {
         "observation_id": "obs-0-3-d704fae885d61005",
@@ -172,7 +172,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-24",
@@ -245,7 +245,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -320,7 +320,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-03",
@@ -394,7 +394,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-06-09",
@@ -467,7 +467,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-05-28",
@@ -540,7 +540,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -613,7 +613,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-08-14",
@@ -686,7 +686,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-16",
@@ -761,7 +761,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-08-12",
@@ -835,7 +835,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -864,6 +864,95 @@
         ],
         "evidence_count": 1,
         "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-587-620a4ddf7113c0d4",
+        "benchmark_id": "terminal-bench-science-0-1",
+        "benchmark_version_id": "terminal-bench-science-0-1-canonical",
+        "model_id": "model-claude-opus-5-5-max-claude-code-bare-safeguards--4e88fbda62f37aef",
+        "model_configuration": "Claude Opus 5.5 (max, Claude Code bare, safeguards/fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-max-claude-code-bare-safeguards-fallbacks",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (max, Claude Code bare, safeguards/fallbacks)",
+        "organization": "Anthropic",
+        "score": 0.587,
+        "input_score": 0.587,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "terminal-bench-science-0-1-metric-v1",
+        "protocol_id": "terminal-bench-science-0-1-source-export-v1",
+        "task_set_id": "terminal-bench-science-0-1-canonical",
+        "metric": "Resolution rate",
+        "score_role": "canonical",
+        "score_series_id": "terminal-bench-science-0-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414",
+          "resource-https-www-terminal-bench-science-ai-announcement-6f8f0395b3313ab9"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5-system-card",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-terminal-bench-science-0-1-claude-opus-5-bc3afdac683660ba"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-terminal-bench-science-0-1-claude-opus-5-5-max-claude-code-bare-safeguards-fallbacks"
+        ]
       }
     ],
     "frontier": [
@@ -910,7 +999,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-05-28",
@@ -987,7 +1076,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-06-09",
@@ -1064,7 +1153,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -1143,7 +1232,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-24",
@@ -1222,7 +1311,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-03",
@@ -1302,7 +1391,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-05-28",
@@ -1379,7 +1468,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-06-09",
@@ -1456,7 +1545,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -1535,7 +1624,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-24",
@@ -1614,7 +1703,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-03",
@@ -1694,7 +1783,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-05-28",
@@ -1771,7 +1860,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-06-09",
@@ -1848,7 +1937,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -1927,7 +2016,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-24",
@@ -2006,7 +2095,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-03",
@@ -2042,12 +2131,200 @@
         ]
       }
     ],
-    "reported_frontier": [],
-    "historical_frontier": [],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-587-620a4ddf7113c0d4",
+        "benchmark_id": "terminal-bench-science-0-1",
+        "benchmark_version_id": "terminal-bench-science-0-1-canonical",
+        "model_id": "model-claude-opus-5-5-max-claude-code-bare-safeguards--4e88fbda62f37aef",
+        "model_configuration": "Claude Opus 5.5 (max, Claude Code bare, safeguards/fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-max-claude-code-bare-safeguards-fallbacks",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (max, Claude Code bare, safeguards/fallbacks)",
+        "organization": "Anthropic",
+        "score": 0.587,
+        "input_score": 0.587,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "terminal-bench-science-0-1-metric-v1",
+        "protocol_id": "terminal-bench-science-0-1-source-export-v1",
+        "task_set_id": "terminal-bench-science-0-1-canonical",
+        "metric": "Resolution rate",
+        "score_role": "canonical",
+        "score_series_id": "terminal-bench-science-0-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414",
+          "resource-https-www-terminal-bench-science-ai-announcement-6f8f0395b3313ab9"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5-system-card",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-terminal-bench-science-0-1-claude-opus-5-bc3afdac683660ba"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-terminal-bench-science-0-1-claude-opus-5-5-max-claude-code-bare-safeguards-fallbacks"
+        ],
+        "plot_date": "2026-09-22",
+        "frontier_observation_ids": [
+          "obs-0-587-620a4ddf7113c0d4"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-587-620a4ddf7113c0d4",
+        "benchmark_id": "terminal-bench-science-0-1",
+        "benchmark_version_id": "terminal-bench-science-0-1-canonical",
+        "model_id": "model-claude-opus-5-5-max-claude-code-bare-safeguards--4e88fbda62f37aef",
+        "model_configuration": "Claude Opus 5.5 (max, Claude Code bare, safeguards/fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-max-claude-code-bare-safeguards-fallbacks",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (max, Claude Code bare, safeguards/fallbacks)",
+        "organization": "Anthropic",
+        "score": 0.587,
+        "input_score": 0.587,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "terminal-bench-science-0-1-metric-v1",
+        "protocol_id": "terminal-bench-science-0-1-source-export-v1",
+        "task_set_id": "terminal-bench-science-0-1-canonical",
+        "metric": "Resolution rate",
+        "score_role": "canonical",
+        "score_series_id": "terminal-bench-science-0-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414",
+          "resource-https-www-terminal-bench-science-ai-announcement-6f8f0395b3313ab9"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5-system-card",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-terminal-bench-science-0-1-claude-opus-5-bc3afdac683660ba"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-terminal-bench-science-0-1-claude-opus-5-5-max-claude-code-bare-safeguards-fallbacks"
+        ],
+        "plot_date": "2026-09-22",
+        "frontier_observation_ids": [
+          "obs-0-587-620a4ddf7113c0d4"
+        ]
+      }
+    ],
     "retrospective_observations": [],
     "observed_frontier": 0.646,
     "capability_frontier_value": 0.646,
-    "reported_frontier_value": null,
+    "reported_frontier_value": 0.587,
     "current_frontier": 0.646,
     "normalized_progress": 0.646,
     "normalized_headroom": 0.354,
@@ -2059,11 +2336,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 107
+        "days": 126
       },
       "T90": {
         "status": "right_censored",
-        "days": 107
+        "days": 126
       }
     },
     "capability_threshold_days": {
@@ -2074,25 +2351,26 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 107
+        "days": 126
       },
       "T90": {
         "status": "right_censored",
-        "days": 107
+        "days": 126
       }
     },
     "reported_threshold_days": {
       "T50": {
-        "status": "unknown",
-        "reason": "No dated observations are available on this timeline."
+        "status": "reached",
+        "days": 125,
+        "qualifying_observation_date": "2026-09-22"
       },
       "T80": {
-        "status": "unknown",
-        "reason": "No dated observations are available on this timeline."
+        "status": "right_censored",
+        "days": 126
       },
       "T90": {
-        "status": "unknown",
-        "reason": "No dated observations are available on this timeline."
+        "status": "right_censored",
+        "days": 126
       }
     },
     "velocity_180d": null,
@@ -2114,7 +2392,7 @@
       "resource-https-www-terminal-bench-science-ai-announcement-6f8f0395b3313ab9"
     ],
     "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
-    "historical_frontier_status": "unknown_public_dates",
+    "historical_frontier_status": "available",
     "timeline_default": "capability",
     "lifecycle_eligibility": {
       "test-of-time": {

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-04",
+  "snapshot_id": "2026-09-23",
   "reference_organizations": [
     {
       "id": "openai",
@@ -103,7 +103,576 @@
       "progress_target": null,
       "lifecycle_eligible": true
     },
-    "auxiliary_score_series": [],
+    "auxiliary_score_series": [
+      {
+        "series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+        "role": "auxiliary",
+        "label": "GDPval-AA v2.1 Elo",
+        "metric_id": "gdpval-aa-v2-metric-v1",
+        "metric_name": "Elo",
+        "protocol_id": "gdpval-aa-v2-1",
+        "task_set_id": "gdpval-aa-v2-1",
+        "lifecycle_eligible": false,
+        "explanation": {
+          "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+          "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+        },
+        "observation_ids": [
+          "obs-1224-922b463b2c608c45",
+          "obs-1576-8fce0d2e76162164",
+          "obs-1692-a77c184834b4434a",
+          "obs-1820-84f33d89bd0fa640",
+          "obs-1846-88e02350d154801b",
+          "obs-1450-aae062eba2afd54f",
+          "obs-1536-a70493756fade66b",
+          "obs-1617-5defc95fe55ac209",
+          "obs-1721-0ccb7e6219eff781",
+          "obs-1735-0db423a5d3003eba",
+          "obs-1294-2973ebc54325d383",
+          "obs-1476-cd6355df3f970339",
+          "obs-1581-0cddbf99582811ba",
+          "obs-1676-a403a3dfda3a47d3",
+          "obs-1708-bf246bd5efc472d8",
+          "obs-1289-a217466d64134dd4",
+          "obs-1403-01c4e8951f227b9f",
+          "obs-1480-750856cd8d97995c",
+          "obs-1548-52f01ea239a4bce1",
+          "obs-1588-1d765e8ef41a3af0",
+          "obs-1366-84699095049783df",
+          "obs-1468-868ce575385a2287",
+          "obs-1485-6f20aeb9992459bf",
+          "obs-1516-ace4d79544e3ccc4",
+          "obs-1542-efe1ca8ff00064f3",
+          "obs-1673-84fa81da2a867194"
+        ],
+        "frontier_events": [
+          {
+            "observation_id": "obs-1588-1d765e8ef41a3af0",
+            "benchmark_id": "gdpval-aa-v2",
+            "benchmark_version_id": "gdpval-aa-v2-canonical",
+            "model_id": "model-gpt-5-6-sol-max-anthropic-release-settings-b10443a07c6bd938",
+            "model_configuration": "GPT-5.6 Sol (max, Anthropic release settings)",
+            "model_identity_organization": "openai",
+            "model_label_id": "gpt-5-6-sol-max-anthropic-release-settings",
+            "model_family_id": "openai-gpt-5-6-sol",
+            "model": "GPT-5.6 Sol (max, Anthropic release settings)",
+            "organization": "OpenAI",
+            "score": 1588.0,
+            "input_score": 1588.0,
+            "input_unit": "number",
+            "reported_cost_per_task": null,
+            "metric_id": "gdpval-aa-v2-metric-v1",
+            "protocol_id": "gdpval-aa-v2-1",
+            "task_set_id": "gdpval-aa-v2-1",
+            "metric": "Elo",
+            "score_role": "auxiliary",
+            "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+            "evaluation_protocol": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+            "auxiliary_metadata": {
+              "protocol_id": "gdpval-aa-v2-1",
+              "task_set_id": "gdpval-aa-v2-1",
+              "label": "GDPval-AA v2.1 Elo",
+              "explanation": {
+                "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+                "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+              }
+            },
+            "model_release_date": "2026-07-09",
+            "evaluation_date": null,
+            "result_public_date": "2026-09-22",
+            "source_publication_date": "2026-09-22",
+            "observation_date": "2026-07-09",
+            "observation_date_precision": "day",
+            "observation_date_sources": [
+              {
+                "date": "2026-07-09",
+                "kind": "model_release_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+                ]
+              }
+            ],
+            "observation_date_source_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ],
+            "evaluation_date_sources": [],
+            "score_publication_date_sources": [
+              {
+                "date": "2026-09-22",
+                "kind": "Result public date",
+                "precision": "day"
+              }
+            ],
+            "ingested_at": "2026-09-23",
+            "date_precision": "day",
+            "date_notes": null,
+            "date": "2026-07-09",
+            "date_kind": "earliest_observation_evidence_date",
+            "capability_date": "2026-07-09",
+            "capability_date_meaning": "earliest_observation_evidence_date",
+            "reported_date_meaning": "result_public_date",
+            "historical_frontier_date": "2026-09-22",
+            "temporal_class": "historical_or_unknown",
+            "retrospective": false,
+            "capability_frontier_eligible": false,
+            "historical_frontier_eligible": true,
+            "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+            "contemporaneous": true,
+            "source_ids": [
+              "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ],
+            "score_source_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ],
+            "source": "https://www.anthropic.com/claude-opus-5-5",
+            "notes": "Operational evaluation timeline only; not a historical public-result date.",
+            "evidence_ids": [
+              "evidence-sep2026-gdpval-aa-v2-gpt-5-6-sol-max-anthropic-r-0f2f6d4baf9022b1"
+            ],
+            "evidence_count": 1,
+            "source_row_ids": [
+              "sep2026-gdpval-aa-v2-gpt-5-6-sol-max-anthropic-release-settings"
+            ],
+            "plot_date": "2026-07-09",
+            "frontier_observation_ids": [
+              "obs-1289-a217466d64134dd4",
+              "obs-1403-01c4e8951f227b9f",
+              "obs-1480-750856cd8d97995c",
+              "obs-1548-52f01ea239a4bce1",
+              "obs-1588-1d765e8ef41a3af0"
+            ]
+          },
+          {
+            "observation_id": "obs-1708-bf246bd5efc472d8",
+            "benchmark_id": "gdpval-aa-v2",
+            "benchmark_version_id": "gdpval-aa-v2-canonical",
+            "model_id": "model-claude-opus-5-max-anthropic-release-settings-c3b24d36a9d132fd",
+            "model_configuration": "Claude Opus 5 (max, Anthropic release settings)",
+            "model_identity_organization": "anthropic",
+            "model_label_id": "claude-opus-5-max-anthropic-release-settings",
+            "model_family_id": "anthropic-claude-opus-5",
+            "model": "Claude Opus 5 (max, Anthropic release settings)",
+            "organization": "Anthropic",
+            "score": 1708.0,
+            "input_score": 1708.0,
+            "input_unit": "number",
+            "reported_cost_per_task": null,
+            "metric_id": "gdpval-aa-v2-metric-v1",
+            "protocol_id": "gdpval-aa-v2-1",
+            "task_set_id": "gdpval-aa-v2-1",
+            "metric": "Elo",
+            "score_role": "auxiliary",
+            "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+            "evaluation_protocol": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+            "auxiliary_metadata": {
+              "protocol_id": "gdpval-aa-v2-1",
+              "task_set_id": "gdpval-aa-v2-1",
+              "label": "GDPval-AA v2.1 Elo",
+              "explanation": {
+                "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+                "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+              }
+            },
+            "model_release_date": "2026-07-24",
+            "evaluation_date": null,
+            "result_public_date": "2026-09-22",
+            "source_publication_date": "2026-09-22",
+            "observation_date": "2026-07-24",
+            "observation_date_precision": "day",
+            "observation_date_sources": [
+              {
+                "date": "2026-07-24",
+                "kind": "model_release_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+                ]
+              }
+            ],
+            "observation_date_source_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ],
+            "evaluation_date_sources": [],
+            "score_publication_date_sources": [
+              {
+                "date": "2026-09-22",
+                "kind": "Result public date",
+                "precision": "day"
+              }
+            ],
+            "ingested_at": "2026-09-23",
+            "date_precision": "day",
+            "date_notes": null,
+            "date": "2026-07-24",
+            "date_kind": "earliest_observation_evidence_date",
+            "capability_date": "2026-07-24",
+            "capability_date_meaning": "earliest_observation_evidence_date",
+            "reported_date_meaning": "result_public_date",
+            "historical_frontier_date": "2026-09-22",
+            "temporal_class": "historical_or_unknown",
+            "retrospective": false,
+            "capability_frontier_eligible": false,
+            "historical_frontier_eligible": true,
+            "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+            "contemporaneous": true,
+            "source_ids": [
+              "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ],
+            "score_source_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ],
+            "source": "https://www.anthropic.com/claude-opus-5-5",
+            "notes": "Operational evaluation timeline only; not a historical public-result date.",
+            "evidence_ids": [
+              "evidence-sep2026-gdpval-aa-v2-claude-opus-5-max-anthropic-eb3fd61cedbafeb8"
+            ],
+            "evidence_count": 1,
+            "source_row_ids": [
+              "sep2026-gdpval-aa-v2-claude-opus-5-max-anthropic-release-settings"
+            ],
+            "plot_date": "2026-07-24",
+            "frontier_observation_ids": [
+              "obs-1294-2973ebc54325d383",
+              "obs-1476-cd6355df3f970339",
+              "obs-1581-0cddbf99582811ba",
+              "obs-1676-a403a3dfda3a47d3",
+              "obs-1708-bf246bd5efc472d8"
+            ]
+          },
+          {
+            "observation_id": "obs-1735-0db423a5d3003eba",
+            "benchmark_id": "gdpval-aa-v2",
+            "benchmark_version_id": "gdpval-aa-v2-canonical",
+            "model_id": "model-claude-fable-5-1-max-safeguards-and-disclosed-fa-11deef9e9df7c996",
+            "model_configuration": "Claude Fable 5.1 (max, safeguards and disclosed fallbacks)",
+            "model_identity_organization": "anthropic",
+            "model_label_id": "claude-fable-5-1-max-safeguards-and-disclosed-fallbacks",
+            "model_family_id": "anthropic-claude-fable-5-1",
+            "model": "Claude Fable 5.1 (max, safeguards and disclosed fallbacks)",
+            "organization": "Anthropic",
+            "score": 1735.0,
+            "input_score": 1735.0,
+            "input_unit": "number",
+            "reported_cost_per_task": null,
+            "metric_id": "gdpval-aa-v2-metric-v1",
+            "protocol_id": "gdpval-aa-v2-1",
+            "task_set_id": "gdpval-aa-v2-1",
+            "metric": "Elo",
+            "score_role": "auxiliary",
+            "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+            "evaluation_protocol": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+            "auxiliary_metadata": {
+              "protocol_id": "gdpval-aa-v2-1",
+              "task_set_id": "gdpval-aa-v2-1",
+              "label": "GDPval-AA v2.1 Elo",
+              "explanation": {
+                "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+                "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+              }
+            },
+            "model_release_date": "2026-09-01",
+            "evaluation_date": null,
+            "result_public_date": "2026-09-22",
+            "source_publication_date": "2026-09-22",
+            "observation_date": "2026-09-01",
+            "observation_date_precision": "day",
+            "observation_date_sources": [
+              {
+                "date": "2026-09-01",
+                "kind": "model_release_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+                  "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+                ]
+              }
+            ],
+            "observation_date_source_ids": [
+              "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ],
+            "evaluation_date_sources": [],
+            "score_publication_date_sources": [
+              {
+                "date": "2026-09-22",
+                "kind": "Result public date",
+                "precision": "day"
+              }
+            ],
+            "ingested_at": "2026-09-23",
+            "date_precision": "day",
+            "date_notes": null,
+            "date": "2026-09-01",
+            "date_kind": "earliest_observation_evidence_date",
+            "capability_date": "2026-09-01",
+            "capability_date_meaning": "earliest_observation_evidence_date",
+            "reported_date_meaning": "result_public_date",
+            "historical_frontier_date": "2026-09-22",
+            "temporal_class": "historical_or_unknown",
+            "retrospective": false,
+            "capability_frontier_eligible": false,
+            "historical_frontier_eligible": true,
+            "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+            "contemporaneous": true,
+            "source_ids": [
+              "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+              "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ],
+            "score_source_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ],
+            "source": "https://www.anthropic.com/claude-opus-5-5",
+            "notes": "Operational evaluation timeline only; not a historical public-result date.",
+            "evidence_ids": [
+              "evidence-sep2026-gdpval-aa-v2-claude-fable-5-1-max-safegu-c237a4b1fb54fe6d"
+            ],
+            "evidence_count": 1,
+            "source_row_ids": [
+              "sep2026-gdpval-aa-v2-claude-fable-5-1-max-safeguards-and-disclosed-fallbacks"
+            ],
+            "plot_date": "2026-09-01",
+            "frontier_observation_ids": [
+              "obs-1450-aae062eba2afd54f",
+              "obs-1536-a70493756fade66b",
+              "obs-1617-5defc95fe55ac209",
+              "obs-1721-0ccb7e6219eff781",
+              "obs-1735-0db423a5d3003eba"
+            ]
+          },
+          {
+            "observation_id": "obs-1846-88e02350d154801b",
+            "benchmark_id": "gdpval-aa-v2",
+            "benchmark_version_id": "gdpval-aa-v2-canonical",
+            "model_id": "model-claude-opus-5-5-max-safeguards-and-disclosed-fal-3287b50270319bad",
+            "model_configuration": "Claude Opus 5.5 (max, safeguards and disclosed fallbacks)",
+            "model_identity_organization": "anthropic",
+            "model_label_id": "claude-opus-5-5-max-safeguards-and-disclosed-fallbacks",
+            "model_family_id": "anthropic-claude-opus-5-5",
+            "model": "Claude Opus 5.5 (max, safeguards and disclosed fallbacks)",
+            "organization": "Anthropic",
+            "score": 1846.0,
+            "input_score": 1846.0,
+            "input_unit": "number",
+            "reported_cost_per_task": null,
+            "metric_id": "gdpval-aa-v2-metric-v1",
+            "protocol_id": "gdpval-aa-v2-1",
+            "task_set_id": "gdpval-aa-v2-1",
+            "metric": "Elo",
+            "score_role": "auxiliary",
+            "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+            "evaluation_protocol": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+            "auxiliary_metadata": {
+              "protocol_id": "gdpval-aa-v2-1",
+              "task_set_id": "gdpval-aa-v2-1",
+              "label": "GDPval-AA v2.1 Elo",
+              "explanation": {
+                "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+                "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+              }
+            },
+            "model_release_date": "2026-09-22",
+            "evaluation_date": null,
+            "result_public_date": "2026-09-22",
+            "source_publication_date": "2026-09-22",
+            "observation_date": "2026-09-22",
+            "observation_date_precision": "day",
+            "observation_date_sources": [
+              {
+                "date": "2026-09-22",
+                "kind": "model_release_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+                ]
+              },
+              {
+                "date": "2026-09-22",
+                "kind": "score_publication_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+                ]
+              }
+            ],
+            "observation_date_source_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ],
+            "evaluation_date_sources": [],
+            "score_publication_date_sources": [
+              {
+                "date": "2026-09-22",
+                "kind": "Result public date",
+                "precision": "day"
+              }
+            ],
+            "ingested_at": "2026-09-23",
+            "date_precision": "day",
+            "date_notes": null,
+            "date": "2026-09-22",
+            "date_kind": "earliest_observation_evidence_date",
+            "capability_date": "2026-09-22",
+            "capability_date_meaning": "earliest_observation_evidence_date",
+            "reported_date_meaning": "result_public_date",
+            "historical_frontier_date": "2026-09-22",
+            "temporal_class": "historical_or_unknown",
+            "retrospective": false,
+            "capability_frontier_eligible": false,
+            "historical_frontier_eligible": true,
+            "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+            "contemporaneous": true,
+            "source_ids": [
+              "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ],
+            "score_source_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ],
+            "source": "https://www.anthropic.com/claude-opus-5-5",
+            "notes": "Operational evaluation timeline only; not a historical public-result date.",
+            "evidence_ids": [
+              "evidence-sep2026-gdpval-aa-v2-claude-opus-5-5-max-safegua-a984fc420a4c6708"
+            ],
+            "evidence_count": 1,
+            "source_row_ids": [
+              "sep2026-gdpval-aa-v2-claude-opus-5-5-max-safeguards-and-disclosed-fallbacks"
+            ],
+            "plot_date": "2026-09-22",
+            "frontier_observation_ids": [
+              "obs-1224-922b463b2c608c45",
+              "obs-1576-8fce0d2e76162164",
+              "obs-1692-a77c184834b4434a",
+              "obs-1820-84f33d89bd0fa640",
+              "obs-1846-88e02350d154801b"
+            ]
+          }
+        ]
+      },
+      {
+        "series_id": "gdpval-aa-v2-auxiliary-gdpval-grok47-version-unpinned",
+        "role": "auxiliary",
+        "label": "Grok release / version unpinned",
+        "metric_id": "gdpval-aa-v2-metric-v1",
+        "metric_name": "Elo",
+        "protocol_id": "gdpval-grok47-version-unpinned",
+        "task_set_id": "gdpval-grok47-version-unpinned",
+        "lifecycle_eligible": false,
+        "explanation": {
+          "en": "Official Elo result without a pinned GDPval-AA version/calibration; not comparable to canonical v2.",
+          "zh": "\u5b98\u65b9 Elo \u6210\u7ee9\u672a\u56fa\u5b9a GDPval-AA \u7248\u672c\u6216\u6807\u5b9a\uff1b\u4e0d\u80fd\u4e0e v2 \u4e3b\u5e8f\u5217\u76f4\u63a5\u6bd4\u8f83\u3002"
+        },
+        "observation_ids": [
+          "obs-1695-74488595add788cd"
+        ],
+        "frontier_events": [
+          {
+            "observation_id": "obs-1695-74488595add788cd",
+            "benchmark_id": "gdpval-aa-v2",
+            "benchmark_version_id": "gdpval-aa-v2-canonical",
+            "model_id": "model-grok-4-7-xhigh-gdpval-version-unpinned-f7629190ed35afd8",
+            "model_configuration": "Grok 4.7 (xhigh, GDPval version unpinned)",
+            "model_identity_organization": "xai",
+            "model_label_id": "grok-4-7-xhigh-gdpval-version-unpinned",
+            "model_family_id": "xai-grok-4-7",
+            "model": "Grok 4.7 (xhigh, GDPval version unpinned)",
+            "organization": "xAI",
+            "score": 1695.0,
+            "input_score": 1695.0,
+            "input_unit": "number",
+            "reported_cost_per_task": null,
+            "metric_id": "gdpval-aa-v2-metric-v1",
+            "protocol_id": "gdpval-grok47-version-unpinned",
+            "task_set_id": "gdpval-grok47-version-unpinned",
+            "metric": "Elo",
+            "score_role": "auxiliary",
+            "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-grok47-version-unpinned",
+            "evaluation_protocol": "Official Elo result without a pinned GDPval-AA version/calibration; not comparable to canonical v2.",
+            "auxiliary_metadata": {
+              "protocol_id": "gdpval-grok47-version-unpinned",
+              "task_set_id": "gdpval-grok47-version-unpinned",
+              "label": "Grok release / version unpinned",
+              "explanation": {
+                "en": "Official Elo result without a pinned GDPval-AA version/calibration; not comparable to canonical v2.",
+                "zh": "\u5b98\u65b9 Elo \u6210\u7ee9\u672a\u56fa\u5b9a GDPval-AA \u7248\u672c\u6216\u6807\u5b9a\uff1b\u4e0d\u80fd\u4e0e v2 \u4e3b\u5e8f\u5217\u76f4\u63a5\u6bd4\u8f83\u3002"
+              }
+            },
+            "model_release_date": "2026-09-21",
+            "evaluation_date": null,
+            "result_public_date": "2026-09-21",
+            "source_publication_date": "2026-09-21",
+            "observation_date": "2026-09-21",
+            "observation_date_precision": "day",
+            "observation_date_sources": [
+              {
+                "date": "2026-09-21",
+                "kind": "model_release_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+                ]
+              },
+              {
+                "date": "2026-09-21",
+                "kind": "score_publication_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+                ]
+              }
+            ],
+            "observation_date_source_ids": [
+              "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+            ],
+            "evaluation_date_sources": [],
+            "score_publication_date_sources": [
+              {
+                "date": "2026-09-21",
+                "kind": "Result public date",
+                "precision": "day"
+              }
+            ],
+            "ingested_at": "2026-09-23",
+            "date_precision": "day",
+            "date_notes": null,
+            "date": "2026-09-21",
+            "date_kind": "earliest_observation_evidence_date",
+            "capability_date": "2026-09-21",
+            "capability_date_meaning": "earliest_observation_evidence_date",
+            "reported_date_meaning": "result_public_date",
+            "historical_frontier_date": "2026-09-21",
+            "temporal_class": "historical_or_unknown",
+            "retrospective": false,
+            "capability_frontier_eligible": false,
+            "historical_frontier_eligible": true,
+            "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+            "contemporaneous": true,
+            "source_ids": [
+              "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+              "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+            ],
+            "score_source_ids": [
+              "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+            ],
+            "source": "https://x.ai/news/grok-4-7",
+            "notes": "Operational evaluation timeline only; not a historical public-result date.",
+            "evidence_ids": [
+              "evidence-sep2026-gdpval-aa-v2-grok-4-7-xhigh-gdpval-versi-1ca97fdcf9b59640"
+            ],
+            "evidence_count": 1,
+            "source_row_ids": [
+              "sep2026-gdpval-aa-v2-grok-4-7-xhigh-gdpval-version-unpinned"
+            ],
+            "plot_date": "2026-09-21",
+            "frontier_observation_ids": [
+              "obs-1695-74488595add788cd"
+            ]
+          }
+        ]
+      }
+    ],
     "benchmark_version_id": "gdpval-aa-v2-canonical",
     "summary": {
       "en": "GDPval-AA v2 evaluates agentic systems on real-world professional deliverables across occupations and industries.",
@@ -121,8 +690,8 @@
       }
     },
     "evaluation_target": "process_and_output",
-    "observation_count": 8,
-    "evidence_record_count": 8,
+    "observation_count": 35,
+    "evidence_record_count": 35,
     "observations": [
       {
         "observation_id": "obs-1853-9a83278cfb1e9952",
@@ -169,7 +738,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-01",
@@ -242,7 +811,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-24",
@@ -314,7 +883,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-08-14",
@@ -386,7 +955,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-08-14",
@@ -460,7 +1029,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-08-12",
@@ -533,7 +1102,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-06-09",
@@ -605,7 +1174,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-24",
@@ -677,7 +1246,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -705,6 +1274,2514 @@
         ],
         "evidence_count": 1,
         "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-1224-922b463b2c608c45",
+        "benchmark_id": "gdpval-aa-v2",
+        "benchmark_version_id": "gdpval-aa-v2-canonical",
+        "model_id": "model-claude-opus-5-5-low-safeguards-and-disclosed-fal-f8505f4120b89e76",
+        "model_configuration": "Claude Opus 5.5 (low, safeguards and disclosed fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-low-safeguards-and-disclosed-fallbacks",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (low, safeguards and disclosed fallbacks)",
+        "organization": "Anthropic",
+        "score": 1224.0,
+        "input_score": 1224.0,
+        "input_unit": "number",
+        "reported_cost_per_task": null,
+        "metric_id": "gdpval-aa-v2-metric-v1",
+        "protocol_id": "gdpval-aa-v2-1",
+        "task_set_id": "gdpval-aa-v2-1",
+        "metric": "Elo",
+        "score_role": "auxiliary",
+        "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+        "evaluation_protocol": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+        "auxiliary_metadata": {
+          "protocol_id": "gdpval-aa-v2-1",
+          "task_set_id": "gdpval-aa-v2-1",
+          "label": "GDPval-AA v2.1 Elo",
+          "explanation": {
+            "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+            "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+          }
+        },
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-gdpval-aa-v2-claude-opus-5-5-low-safegua-e92f78be298810bd"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-gdpval-aa-v2-claude-opus-5-5-low-safeguards-and-disclosed-fallbacks"
+        ]
+      },
+      {
+        "observation_id": "obs-1576-8fce0d2e76162164",
+        "benchmark_id": "gdpval-aa-v2",
+        "benchmark_version_id": "gdpval-aa-v2-canonical",
+        "model_id": "model-claude-opus-5-5-medium-safeguards-and-disclosed--0ee71a56c5202729",
+        "model_configuration": "Claude Opus 5.5 (medium, safeguards and disclosed fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-medium-safeguards-and-disclosed-fallbacks",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (medium, safeguards and disclosed fallbacks)",
+        "organization": "Anthropic",
+        "score": 1576.0,
+        "input_score": 1576.0,
+        "input_unit": "number",
+        "reported_cost_per_task": null,
+        "metric_id": "gdpval-aa-v2-metric-v1",
+        "protocol_id": "gdpval-aa-v2-1",
+        "task_set_id": "gdpval-aa-v2-1",
+        "metric": "Elo",
+        "score_role": "auxiliary",
+        "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+        "evaluation_protocol": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+        "auxiliary_metadata": {
+          "protocol_id": "gdpval-aa-v2-1",
+          "task_set_id": "gdpval-aa-v2-1",
+          "label": "GDPval-AA v2.1 Elo",
+          "explanation": {
+            "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+            "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+          }
+        },
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-gdpval-aa-v2-claude-opus-5-5-medium-safe-66e3b2ab627adfd8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-gdpval-aa-v2-claude-opus-5-5-medium-safeguards-and-disclosed-fallbacks"
+        ]
+      },
+      {
+        "observation_id": "obs-1692-a77c184834b4434a",
+        "benchmark_id": "gdpval-aa-v2",
+        "benchmark_version_id": "gdpval-aa-v2-canonical",
+        "model_id": "model-claude-opus-5-5-high-safeguards-and-disclosed-fa-4cfbfe804bf0a563",
+        "model_configuration": "Claude Opus 5.5 (high, safeguards and disclosed fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-high-safeguards-and-disclosed-fallbacks",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (high, safeguards and disclosed fallbacks)",
+        "organization": "Anthropic",
+        "score": 1692.0,
+        "input_score": 1692.0,
+        "input_unit": "number",
+        "reported_cost_per_task": null,
+        "metric_id": "gdpval-aa-v2-metric-v1",
+        "protocol_id": "gdpval-aa-v2-1",
+        "task_set_id": "gdpval-aa-v2-1",
+        "metric": "Elo",
+        "score_role": "auxiliary",
+        "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+        "evaluation_protocol": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+        "auxiliary_metadata": {
+          "protocol_id": "gdpval-aa-v2-1",
+          "task_set_id": "gdpval-aa-v2-1",
+          "label": "GDPval-AA v2.1 Elo",
+          "explanation": {
+            "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+            "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+          }
+        },
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-gdpval-aa-v2-claude-opus-5-5-high-safegu-351e247ca3d111b0"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-gdpval-aa-v2-claude-opus-5-5-high-safeguards-and-disclosed-fallbacks"
+        ]
+      },
+      {
+        "observation_id": "obs-1820-84f33d89bd0fa640",
+        "benchmark_id": "gdpval-aa-v2",
+        "benchmark_version_id": "gdpval-aa-v2-canonical",
+        "model_id": "model-claude-opus-5-5-xhigh-safeguards-and-disclosed-f-dbbf9f274c75a1a9",
+        "model_configuration": "Claude Opus 5.5 (xhigh, safeguards and disclosed fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-xhigh-safeguards-and-disclosed-fallbacks",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (xhigh, safeguards and disclosed fallbacks)",
+        "organization": "Anthropic",
+        "score": 1820.0,
+        "input_score": 1820.0,
+        "input_unit": "number",
+        "reported_cost_per_task": null,
+        "metric_id": "gdpval-aa-v2-metric-v1",
+        "protocol_id": "gdpval-aa-v2-1",
+        "task_set_id": "gdpval-aa-v2-1",
+        "metric": "Elo",
+        "score_role": "auxiliary",
+        "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+        "evaluation_protocol": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+        "auxiliary_metadata": {
+          "protocol_id": "gdpval-aa-v2-1",
+          "task_set_id": "gdpval-aa-v2-1",
+          "label": "GDPval-AA v2.1 Elo",
+          "explanation": {
+            "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+            "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+          }
+        },
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-gdpval-aa-v2-claude-opus-5-5-xhigh-safeg-4f442721b2005f45"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-gdpval-aa-v2-claude-opus-5-5-xhigh-safeguards-and-disclosed-fallbacks"
+        ]
+      },
+      {
+        "observation_id": "obs-1846-88e02350d154801b",
+        "benchmark_id": "gdpval-aa-v2",
+        "benchmark_version_id": "gdpval-aa-v2-canonical",
+        "model_id": "model-claude-opus-5-5-max-safeguards-and-disclosed-fal-3287b50270319bad",
+        "model_configuration": "Claude Opus 5.5 (max, safeguards and disclosed fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-max-safeguards-and-disclosed-fallbacks",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (max, safeguards and disclosed fallbacks)",
+        "organization": "Anthropic",
+        "score": 1846.0,
+        "input_score": 1846.0,
+        "input_unit": "number",
+        "reported_cost_per_task": null,
+        "metric_id": "gdpval-aa-v2-metric-v1",
+        "protocol_id": "gdpval-aa-v2-1",
+        "task_set_id": "gdpval-aa-v2-1",
+        "metric": "Elo",
+        "score_role": "auxiliary",
+        "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+        "evaluation_protocol": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+        "auxiliary_metadata": {
+          "protocol_id": "gdpval-aa-v2-1",
+          "task_set_id": "gdpval-aa-v2-1",
+          "label": "GDPval-AA v2.1 Elo",
+          "explanation": {
+            "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+            "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+          }
+        },
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-gdpval-aa-v2-claude-opus-5-5-max-safegua-a984fc420a4c6708"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-gdpval-aa-v2-claude-opus-5-5-max-safeguards-and-disclosed-fallbacks"
+        ]
+      },
+      {
+        "observation_id": "obs-1450-aae062eba2afd54f",
+        "benchmark_id": "gdpval-aa-v2",
+        "benchmark_version_id": "gdpval-aa-v2-canonical",
+        "model_id": "model-claude-fable-5-1-low-safeguards-and-disclosed-fa-d1f8e05a3fce59c9",
+        "model_configuration": "Claude Fable 5.1 (low, safeguards and disclosed fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-1-low-safeguards-and-disclosed-fallbacks",
+        "model_family_id": "anthropic-claude-fable-5-1",
+        "model": "Claude Fable 5.1 (low, safeguards and disclosed fallbacks)",
+        "organization": "Anthropic",
+        "score": 1450.0,
+        "input_score": 1450.0,
+        "input_unit": "number",
+        "reported_cost_per_task": null,
+        "metric_id": "gdpval-aa-v2-metric-v1",
+        "protocol_id": "gdpval-aa-v2-1",
+        "task_set_id": "gdpval-aa-v2-1",
+        "metric": "Elo",
+        "score_role": "auxiliary",
+        "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+        "evaluation_protocol": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+        "auxiliary_metadata": {
+          "protocol_id": "gdpval-aa-v2-1",
+          "task_set_id": "gdpval-aa-v2-1",
+          "label": "GDPval-AA v2.1 Elo",
+          "explanation": {
+            "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+            "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+          }
+        },
+        "model_release_date": "2026-09-01",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-gdpval-aa-v2-claude-fable-5-1-low-safegu-0af91f18944fa33e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-gdpval-aa-v2-claude-fable-5-1-low-safeguards-and-disclosed-fallbacks"
+        ]
+      },
+      {
+        "observation_id": "obs-1536-a70493756fade66b",
+        "benchmark_id": "gdpval-aa-v2",
+        "benchmark_version_id": "gdpval-aa-v2-canonical",
+        "model_id": "model-claude-fable-5-1-medium-safeguards-and-disclosed-7ef7cc8bc283e172",
+        "model_configuration": "Claude Fable 5.1 (medium, safeguards and disclosed fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-1-medium-safeguards-and-disclosed-fallbacks",
+        "model_family_id": "anthropic-claude-fable-5-1",
+        "model": "Claude Fable 5.1 (medium, safeguards and disclosed fallbacks)",
+        "organization": "Anthropic",
+        "score": 1536.0,
+        "input_score": 1536.0,
+        "input_unit": "number",
+        "reported_cost_per_task": null,
+        "metric_id": "gdpval-aa-v2-metric-v1",
+        "protocol_id": "gdpval-aa-v2-1",
+        "task_set_id": "gdpval-aa-v2-1",
+        "metric": "Elo",
+        "score_role": "auxiliary",
+        "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+        "evaluation_protocol": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+        "auxiliary_metadata": {
+          "protocol_id": "gdpval-aa-v2-1",
+          "task_set_id": "gdpval-aa-v2-1",
+          "label": "GDPval-AA v2.1 Elo",
+          "explanation": {
+            "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+            "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+          }
+        },
+        "model_release_date": "2026-09-01",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-gdpval-aa-v2-claude-fable-5-1-medium-saf-0e9a6e9b39675d7b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-gdpval-aa-v2-claude-fable-5-1-medium-safeguards-and-disclosed-fallbacks"
+        ]
+      },
+      {
+        "observation_id": "obs-1617-5defc95fe55ac209",
+        "benchmark_id": "gdpval-aa-v2",
+        "benchmark_version_id": "gdpval-aa-v2-canonical",
+        "model_id": "model-claude-fable-5-1-high-safeguards-and-disclosed-f-3abf363f1384fbbb",
+        "model_configuration": "Claude Fable 5.1 (high, safeguards and disclosed fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-1-high-safeguards-and-disclosed-fallbacks",
+        "model_family_id": "anthropic-claude-fable-5-1",
+        "model": "Claude Fable 5.1 (high, safeguards and disclosed fallbacks)",
+        "organization": "Anthropic",
+        "score": 1617.0,
+        "input_score": 1617.0,
+        "input_unit": "number",
+        "reported_cost_per_task": null,
+        "metric_id": "gdpval-aa-v2-metric-v1",
+        "protocol_id": "gdpval-aa-v2-1",
+        "task_set_id": "gdpval-aa-v2-1",
+        "metric": "Elo",
+        "score_role": "auxiliary",
+        "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+        "evaluation_protocol": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+        "auxiliary_metadata": {
+          "protocol_id": "gdpval-aa-v2-1",
+          "task_set_id": "gdpval-aa-v2-1",
+          "label": "GDPval-AA v2.1 Elo",
+          "explanation": {
+            "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+            "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+          }
+        },
+        "model_release_date": "2026-09-01",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-gdpval-aa-v2-claude-fable-5-1-high-safeg-c5f400ea525ccb3e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-gdpval-aa-v2-claude-fable-5-1-high-safeguards-and-disclosed-fallbacks"
+        ]
+      },
+      {
+        "observation_id": "obs-1721-0ccb7e6219eff781",
+        "benchmark_id": "gdpval-aa-v2",
+        "benchmark_version_id": "gdpval-aa-v2-canonical",
+        "model_id": "model-claude-fable-5-1-xhigh-safeguards-and-disclosed--2b86b3d8727cf01f",
+        "model_configuration": "Claude Fable 5.1 (xhigh, safeguards and disclosed fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-1-xhigh-safeguards-and-disclosed-fallbacks",
+        "model_family_id": "anthropic-claude-fable-5-1",
+        "model": "Claude Fable 5.1 (xhigh, safeguards and disclosed fallbacks)",
+        "organization": "Anthropic",
+        "score": 1721.0,
+        "input_score": 1721.0,
+        "input_unit": "number",
+        "reported_cost_per_task": null,
+        "metric_id": "gdpval-aa-v2-metric-v1",
+        "protocol_id": "gdpval-aa-v2-1",
+        "task_set_id": "gdpval-aa-v2-1",
+        "metric": "Elo",
+        "score_role": "auxiliary",
+        "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+        "evaluation_protocol": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+        "auxiliary_metadata": {
+          "protocol_id": "gdpval-aa-v2-1",
+          "task_set_id": "gdpval-aa-v2-1",
+          "label": "GDPval-AA v2.1 Elo",
+          "explanation": {
+            "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+            "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+          }
+        },
+        "model_release_date": "2026-09-01",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-gdpval-aa-v2-claude-fable-5-1-xhigh-safe-32e4577cfaa5b404"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-gdpval-aa-v2-claude-fable-5-1-xhigh-safeguards-and-disclosed-fallbacks"
+        ]
+      },
+      {
+        "observation_id": "obs-1735-0db423a5d3003eba",
+        "benchmark_id": "gdpval-aa-v2",
+        "benchmark_version_id": "gdpval-aa-v2-canonical",
+        "model_id": "model-claude-fable-5-1-max-safeguards-and-disclosed-fa-11deef9e9df7c996",
+        "model_configuration": "Claude Fable 5.1 (max, safeguards and disclosed fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-1-max-safeguards-and-disclosed-fallbacks",
+        "model_family_id": "anthropic-claude-fable-5-1",
+        "model": "Claude Fable 5.1 (max, safeguards and disclosed fallbacks)",
+        "organization": "Anthropic",
+        "score": 1735.0,
+        "input_score": 1735.0,
+        "input_unit": "number",
+        "reported_cost_per_task": null,
+        "metric_id": "gdpval-aa-v2-metric-v1",
+        "protocol_id": "gdpval-aa-v2-1",
+        "task_set_id": "gdpval-aa-v2-1",
+        "metric": "Elo",
+        "score_role": "auxiliary",
+        "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+        "evaluation_protocol": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+        "auxiliary_metadata": {
+          "protocol_id": "gdpval-aa-v2-1",
+          "task_set_id": "gdpval-aa-v2-1",
+          "label": "GDPval-AA v2.1 Elo",
+          "explanation": {
+            "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+            "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+          }
+        },
+        "model_release_date": "2026-09-01",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-gdpval-aa-v2-claude-fable-5-1-max-safegu-c237a4b1fb54fe6d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-gdpval-aa-v2-claude-fable-5-1-max-safeguards-and-disclosed-fallbacks"
+        ]
+      },
+      {
+        "observation_id": "obs-1294-2973ebc54325d383",
+        "benchmark_id": "gdpval-aa-v2",
+        "benchmark_version_id": "gdpval-aa-v2-canonical",
+        "model_id": "model-claude-opus-5-low-anthropic-release-settings-026dab39685ceb28",
+        "model_configuration": "Claude Opus 5 (low, Anthropic release settings)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-low-anthropic-release-settings",
+        "model_family_id": "anthropic-claude-opus-5",
+        "model": "Claude Opus 5 (low, Anthropic release settings)",
+        "organization": "Anthropic",
+        "score": 1294.0,
+        "input_score": 1294.0,
+        "input_unit": "number",
+        "reported_cost_per_task": null,
+        "metric_id": "gdpval-aa-v2-metric-v1",
+        "protocol_id": "gdpval-aa-v2-1",
+        "task_set_id": "gdpval-aa-v2-1",
+        "metric": "Elo",
+        "score_role": "auxiliary",
+        "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+        "evaluation_protocol": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+        "auxiliary_metadata": {
+          "protocol_id": "gdpval-aa-v2-1",
+          "task_set_id": "gdpval-aa-v2-1",
+          "label": "GDPval-AA v2.1 Elo",
+          "explanation": {
+            "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+            "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+          }
+        },
+        "model_release_date": "2026-07-24",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-gdpval-aa-v2-claude-opus-5-low-anthropic-75dbd73d58b46320"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-gdpval-aa-v2-claude-opus-5-low-anthropic-release-settings"
+        ]
+      },
+      {
+        "observation_id": "obs-1476-cd6355df3f970339",
+        "benchmark_id": "gdpval-aa-v2",
+        "benchmark_version_id": "gdpval-aa-v2-canonical",
+        "model_id": "model-claude-opus-5-medium-anthropic-release-settings-3999410f4d1dd214",
+        "model_configuration": "Claude Opus 5 (medium, Anthropic release settings)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-medium-anthropic-release-settings",
+        "model_family_id": "anthropic-claude-opus-5",
+        "model": "Claude Opus 5 (medium, Anthropic release settings)",
+        "organization": "Anthropic",
+        "score": 1476.0,
+        "input_score": 1476.0,
+        "input_unit": "number",
+        "reported_cost_per_task": null,
+        "metric_id": "gdpval-aa-v2-metric-v1",
+        "protocol_id": "gdpval-aa-v2-1",
+        "task_set_id": "gdpval-aa-v2-1",
+        "metric": "Elo",
+        "score_role": "auxiliary",
+        "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+        "evaluation_protocol": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+        "auxiliary_metadata": {
+          "protocol_id": "gdpval-aa-v2-1",
+          "task_set_id": "gdpval-aa-v2-1",
+          "label": "GDPval-AA v2.1 Elo",
+          "explanation": {
+            "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+            "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+          }
+        },
+        "model_release_date": "2026-07-24",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-gdpval-aa-v2-claude-opus-5-medium-anthro-5508f155441673f6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-gdpval-aa-v2-claude-opus-5-medium-anthropic-release-settings"
+        ]
+      },
+      {
+        "observation_id": "obs-1581-0cddbf99582811ba",
+        "benchmark_id": "gdpval-aa-v2",
+        "benchmark_version_id": "gdpval-aa-v2-canonical",
+        "model_id": "model-claude-opus-5-high-anthropic-release-settings-16cab57210b86de6",
+        "model_configuration": "Claude Opus 5 (high, Anthropic release settings)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-high-anthropic-release-settings",
+        "model_family_id": "anthropic-claude-opus-5",
+        "model": "Claude Opus 5 (high, Anthropic release settings)",
+        "organization": "Anthropic",
+        "score": 1581.0,
+        "input_score": 1581.0,
+        "input_unit": "number",
+        "reported_cost_per_task": null,
+        "metric_id": "gdpval-aa-v2-metric-v1",
+        "protocol_id": "gdpval-aa-v2-1",
+        "task_set_id": "gdpval-aa-v2-1",
+        "metric": "Elo",
+        "score_role": "auxiliary",
+        "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+        "evaluation_protocol": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+        "auxiliary_metadata": {
+          "protocol_id": "gdpval-aa-v2-1",
+          "task_set_id": "gdpval-aa-v2-1",
+          "label": "GDPval-AA v2.1 Elo",
+          "explanation": {
+            "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+            "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+          }
+        },
+        "model_release_date": "2026-07-24",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-gdpval-aa-v2-claude-opus-5-high-anthropi-5d281b8908d791d6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-gdpval-aa-v2-claude-opus-5-high-anthropic-release-settings"
+        ]
+      },
+      {
+        "observation_id": "obs-1676-a403a3dfda3a47d3",
+        "benchmark_id": "gdpval-aa-v2",
+        "benchmark_version_id": "gdpval-aa-v2-canonical",
+        "model_id": "model-claude-opus-5-xhigh-anthropic-release-settings-5697eaffbff4149c",
+        "model_configuration": "Claude Opus 5 (xhigh, Anthropic release settings)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-xhigh-anthropic-release-settings",
+        "model_family_id": "anthropic-claude-opus-5",
+        "model": "Claude Opus 5 (xhigh, Anthropic release settings)",
+        "organization": "Anthropic",
+        "score": 1676.0,
+        "input_score": 1676.0,
+        "input_unit": "number",
+        "reported_cost_per_task": null,
+        "metric_id": "gdpval-aa-v2-metric-v1",
+        "protocol_id": "gdpval-aa-v2-1",
+        "task_set_id": "gdpval-aa-v2-1",
+        "metric": "Elo",
+        "score_role": "auxiliary",
+        "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+        "evaluation_protocol": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+        "auxiliary_metadata": {
+          "protocol_id": "gdpval-aa-v2-1",
+          "task_set_id": "gdpval-aa-v2-1",
+          "label": "GDPval-AA v2.1 Elo",
+          "explanation": {
+            "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+            "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+          }
+        },
+        "model_release_date": "2026-07-24",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-gdpval-aa-v2-claude-opus-5-xhigh-anthrop-66e3b41c48bff78a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-gdpval-aa-v2-claude-opus-5-xhigh-anthropic-release-settings"
+        ]
+      },
+      {
+        "observation_id": "obs-1708-bf246bd5efc472d8",
+        "benchmark_id": "gdpval-aa-v2",
+        "benchmark_version_id": "gdpval-aa-v2-canonical",
+        "model_id": "model-claude-opus-5-max-anthropic-release-settings-c3b24d36a9d132fd",
+        "model_configuration": "Claude Opus 5 (max, Anthropic release settings)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-max-anthropic-release-settings",
+        "model_family_id": "anthropic-claude-opus-5",
+        "model": "Claude Opus 5 (max, Anthropic release settings)",
+        "organization": "Anthropic",
+        "score": 1708.0,
+        "input_score": 1708.0,
+        "input_unit": "number",
+        "reported_cost_per_task": null,
+        "metric_id": "gdpval-aa-v2-metric-v1",
+        "protocol_id": "gdpval-aa-v2-1",
+        "task_set_id": "gdpval-aa-v2-1",
+        "metric": "Elo",
+        "score_role": "auxiliary",
+        "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+        "evaluation_protocol": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+        "auxiliary_metadata": {
+          "protocol_id": "gdpval-aa-v2-1",
+          "task_set_id": "gdpval-aa-v2-1",
+          "label": "GDPval-AA v2.1 Elo",
+          "explanation": {
+            "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+            "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+          }
+        },
+        "model_release_date": "2026-07-24",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-gdpval-aa-v2-claude-opus-5-max-anthropic-eb3fd61cedbafeb8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-gdpval-aa-v2-claude-opus-5-max-anthropic-release-settings"
+        ]
+      },
+      {
+        "observation_id": "obs-1289-a217466d64134dd4",
+        "benchmark_id": "gdpval-aa-v2",
+        "benchmark_version_id": "gdpval-aa-v2-canonical",
+        "model_id": "model-gpt-5-6-sol-low-anthropic-release-settings-09b8785cb765a992",
+        "model_configuration": "GPT-5.6 Sol (low, Anthropic release settings)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol-low-anthropic-release-settings",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "GPT-5.6 Sol (low, Anthropic release settings)",
+        "organization": "OpenAI",
+        "score": 1289.0,
+        "input_score": 1289.0,
+        "input_unit": "number",
+        "reported_cost_per_task": null,
+        "metric_id": "gdpval-aa-v2-metric-v1",
+        "protocol_id": "gdpval-aa-v2-1",
+        "task_set_id": "gdpval-aa-v2-1",
+        "metric": "Elo",
+        "score_role": "auxiliary",
+        "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+        "evaluation_protocol": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+        "auxiliary_metadata": {
+          "protocol_id": "gdpval-aa-v2-1",
+          "task_set_id": "gdpval-aa-v2-1",
+          "label": "GDPval-AA v2.1 Elo",
+          "explanation": {
+            "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+            "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+          }
+        },
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-gdpval-aa-v2-gpt-5-6-sol-low-anthropic-r-4c2fe57360038873"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-gdpval-aa-v2-gpt-5-6-sol-low-anthropic-release-settings"
+        ]
+      },
+      {
+        "observation_id": "obs-1403-01c4e8951f227b9f",
+        "benchmark_id": "gdpval-aa-v2",
+        "benchmark_version_id": "gdpval-aa-v2-canonical",
+        "model_id": "model-gpt-5-6-sol-medium-anthropic-release-settings-208cb9ffc918b991",
+        "model_configuration": "GPT-5.6 Sol (medium, Anthropic release settings)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol-medium-anthropic-release-settings",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "GPT-5.6 Sol (medium, Anthropic release settings)",
+        "organization": "OpenAI",
+        "score": 1403.0,
+        "input_score": 1403.0,
+        "input_unit": "number",
+        "reported_cost_per_task": null,
+        "metric_id": "gdpval-aa-v2-metric-v1",
+        "protocol_id": "gdpval-aa-v2-1",
+        "task_set_id": "gdpval-aa-v2-1",
+        "metric": "Elo",
+        "score_role": "auxiliary",
+        "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+        "evaluation_protocol": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+        "auxiliary_metadata": {
+          "protocol_id": "gdpval-aa-v2-1",
+          "task_set_id": "gdpval-aa-v2-1",
+          "label": "GDPval-AA v2.1 Elo",
+          "explanation": {
+            "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+            "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+          }
+        },
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-gdpval-aa-v2-gpt-5-6-sol-medium-anthropi-4324e104d6b941ca"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-gdpval-aa-v2-gpt-5-6-sol-medium-anthropic-release-settings"
+        ]
+      },
+      {
+        "observation_id": "obs-1480-750856cd8d97995c",
+        "benchmark_id": "gdpval-aa-v2",
+        "benchmark_version_id": "gdpval-aa-v2-canonical",
+        "model_id": "model-gpt-5-6-sol-high-anthropic-release-settings-f734659f8ae89c89",
+        "model_configuration": "GPT-5.6 Sol (high, Anthropic release settings)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol-high-anthropic-release-settings",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "GPT-5.6 Sol (high, Anthropic release settings)",
+        "organization": "OpenAI",
+        "score": 1480.0,
+        "input_score": 1480.0,
+        "input_unit": "number",
+        "reported_cost_per_task": null,
+        "metric_id": "gdpval-aa-v2-metric-v1",
+        "protocol_id": "gdpval-aa-v2-1",
+        "task_set_id": "gdpval-aa-v2-1",
+        "metric": "Elo",
+        "score_role": "auxiliary",
+        "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+        "evaluation_protocol": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+        "auxiliary_metadata": {
+          "protocol_id": "gdpval-aa-v2-1",
+          "task_set_id": "gdpval-aa-v2-1",
+          "label": "GDPval-AA v2.1 Elo",
+          "explanation": {
+            "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+            "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+          }
+        },
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-gdpval-aa-v2-gpt-5-6-sol-high-anthropic--bf48dd8c0b173b1b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-gdpval-aa-v2-gpt-5-6-sol-high-anthropic-release-settings"
+        ]
+      },
+      {
+        "observation_id": "obs-1548-52f01ea239a4bce1",
+        "benchmark_id": "gdpval-aa-v2",
+        "benchmark_version_id": "gdpval-aa-v2-canonical",
+        "model_id": "model-gpt-5-6-sol-xhigh-anthropic-release-settings-a9abd074a917728b",
+        "model_configuration": "GPT-5.6 Sol (xhigh, Anthropic release settings)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol-xhigh-anthropic-release-settings",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "GPT-5.6 Sol (xhigh, Anthropic release settings)",
+        "organization": "OpenAI",
+        "score": 1548.0,
+        "input_score": 1548.0,
+        "input_unit": "number",
+        "reported_cost_per_task": null,
+        "metric_id": "gdpval-aa-v2-metric-v1",
+        "protocol_id": "gdpval-aa-v2-1",
+        "task_set_id": "gdpval-aa-v2-1",
+        "metric": "Elo",
+        "score_role": "auxiliary",
+        "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+        "evaluation_protocol": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+        "auxiliary_metadata": {
+          "protocol_id": "gdpval-aa-v2-1",
+          "task_set_id": "gdpval-aa-v2-1",
+          "label": "GDPval-AA v2.1 Elo",
+          "explanation": {
+            "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+            "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+          }
+        },
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-gdpval-aa-v2-gpt-5-6-sol-xhigh-anthropic-5040b07e49a570e1"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-gdpval-aa-v2-gpt-5-6-sol-xhigh-anthropic-release-settings"
+        ]
+      },
+      {
+        "observation_id": "obs-1588-1d765e8ef41a3af0",
+        "benchmark_id": "gdpval-aa-v2",
+        "benchmark_version_id": "gdpval-aa-v2-canonical",
+        "model_id": "model-gpt-5-6-sol-max-anthropic-release-settings-b10443a07c6bd938",
+        "model_configuration": "GPT-5.6 Sol (max, Anthropic release settings)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol-max-anthropic-release-settings",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "GPT-5.6 Sol (max, Anthropic release settings)",
+        "organization": "OpenAI",
+        "score": 1588.0,
+        "input_score": 1588.0,
+        "input_unit": "number",
+        "reported_cost_per_task": null,
+        "metric_id": "gdpval-aa-v2-metric-v1",
+        "protocol_id": "gdpval-aa-v2-1",
+        "task_set_id": "gdpval-aa-v2-1",
+        "metric": "Elo",
+        "score_role": "auxiliary",
+        "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+        "evaluation_protocol": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+        "auxiliary_metadata": {
+          "protocol_id": "gdpval-aa-v2-1",
+          "task_set_id": "gdpval-aa-v2-1",
+          "label": "GDPval-AA v2.1 Elo",
+          "explanation": {
+            "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+            "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+          }
+        },
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-gdpval-aa-v2-gpt-5-6-sol-max-anthropic-r-0f2f6d4baf9022b1"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-gdpval-aa-v2-gpt-5-6-sol-max-anthropic-release-settings"
+        ]
+      },
+      {
+        "observation_id": "obs-1366-84699095049783df",
+        "benchmark_id": "gdpval-aa-v2",
+        "benchmark_version_id": "gdpval-aa-v2-canonical",
+        "model_id": "model-gpt-6-astra-low-anthropic-release-settings-03ce1f73e165ec36",
+        "model_configuration": "GPT-6 Astra (low, Anthropic release settings)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-astra-low-anthropic-release-settings",
+        "model_family_id": "openai-gpt-6-astra",
+        "model": "GPT-6 Astra (low, Anthropic release settings)",
+        "organization": "OpenAI",
+        "score": 1366.0,
+        "input_score": 1366.0,
+        "input_unit": "number",
+        "reported_cost_per_task": null,
+        "metric_id": "gdpval-aa-v2-metric-v1",
+        "protocol_id": "gdpval-aa-v2-1",
+        "task_set_id": "gdpval-aa-v2-1",
+        "metric": "Elo",
+        "score_role": "auxiliary",
+        "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+        "evaluation_protocol": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+        "auxiliary_metadata": {
+          "protocol_id": "gdpval-aa-v2-1",
+          "task_set_id": "gdpval-aa-v2-1",
+          "label": "GDPval-AA v2.1 Elo",
+          "explanation": {
+            "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+            "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+          }
+        },
+        "model_release_date": "2026-09-03",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-03",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-03",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-03",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-gdpval-aa-v2-gpt-6-astra-low-anthropic-r-196541693d099528"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-gdpval-aa-v2-gpt-6-astra-low-anthropic-release-settings"
+        ]
+      },
+      {
+        "observation_id": "obs-1468-868ce575385a2287",
+        "benchmark_id": "gdpval-aa-v2",
+        "benchmark_version_id": "gdpval-aa-v2-canonical",
+        "model_id": "model-gpt-6-astra-medium-anthropic-release-settings-edc3df4b307bf5cf",
+        "model_configuration": "GPT-6 Astra (medium, Anthropic release settings)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-astra-medium-anthropic-release-settings",
+        "model_family_id": "openai-gpt-6-astra",
+        "model": "GPT-6 Astra (medium, Anthropic release settings)",
+        "organization": "OpenAI",
+        "score": 1468.0,
+        "input_score": 1468.0,
+        "input_unit": "number",
+        "reported_cost_per_task": null,
+        "metric_id": "gdpval-aa-v2-metric-v1",
+        "protocol_id": "gdpval-aa-v2-1",
+        "task_set_id": "gdpval-aa-v2-1",
+        "metric": "Elo",
+        "score_role": "auxiliary",
+        "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+        "evaluation_protocol": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+        "auxiliary_metadata": {
+          "protocol_id": "gdpval-aa-v2-1",
+          "task_set_id": "gdpval-aa-v2-1",
+          "label": "GDPval-AA v2.1 Elo",
+          "explanation": {
+            "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+            "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+          }
+        },
+        "model_release_date": "2026-09-03",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-03",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-03",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-03",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-gdpval-aa-v2-gpt-6-astra-medium-anthropi-c3a4e3cbd5b42e31"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-gdpval-aa-v2-gpt-6-astra-medium-anthropic-release-settings"
+        ]
+      },
+      {
+        "observation_id": "obs-1485-6f20aeb9992459bf",
+        "benchmark_id": "gdpval-aa-v2",
+        "benchmark_version_id": "gdpval-aa-v2-canonical",
+        "model_id": "model-gpt-6-astra-high-anthropic-release-settings-e61fd9ba0b8254d4",
+        "model_configuration": "GPT-6 Astra (high, Anthropic release settings)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-astra-high-anthropic-release-settings",
+        "model_family_id": "openai-gpt-6-astra",
+        "model": "GPT-6 Astra (high, Anthropic release settings)",
+        "organization": "OpenAI",
+        "score": 1485.0,
+        "input_score": 1485.0,
+        "input_unit": "number",
+        "reported_cost_per_task": null,
+        "metric_id": "gdpval-aa-v2-metric-v1",
+        "protocol_id": "gdpval-aa-v2-1",
+        "task_set_id": "gdpval-aa-v2-1",
+        "metric": "Elo",
+        "score_role": "auxiliary",
+        "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+        "evaluation_protocol": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+        "auxiliary_metadata": {
+          "protocol_id": "gdpval-aa-v2-1",
+          "task_set_id": "gdpval-aa-v2-1",
+          "label": "GDPval-AA v2.1 Elo",
+          "explanation": {
+            "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+            "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+          }
+        },
+        "model_release_date": "2026-09-03",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-03",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-03",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-03",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-gdpval-aa-v2-gpt-6-astra-high-anthropic--81b795f39600aee2"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-gdpval-aa-v2-gpt-6-astra-high-anthropic-release-settings"
+        ]
+      },
+      {
+        "observation_id": "obs-1516-ace4d79544e3ccc4",
+        "benchmark_id": "gdpval-aa-v2",
+        "benchmark_version_id": "gdpval-aa-v2-canonical",
+        "model_id": "model-gpt-6-astra-xhigh-anthropic-release-settings-ac69327431f489b8",
+        "model_configuration": "GPT-6 Astra (xhigh, Anthropic release settings)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-astra-xhigh-anthropic-release-settings",
+        "model_family_id": "openai-gpt-6-astra",
+        "model": "GPT-6 Astra (xhigh, Anthropic release settings)",
+        "organization": "OpenAI",
+        "score": 1516.0,
+        "input_score": 1516.0,
+        "input_unit": "number",
+        "reported_cost_per_task": null,
+        "metric_id": "gdpval-aa-v2-metric-v1",
+        "protocol_id": "gdpval-aa-v2-1",
+        "task_set_id": "gdpval-aa-v2-1",
+        "metric": "Elo",
+        "score_role": "auxiliary",
+        "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+        "evaluation_protocol": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+        "auxiliary_metadata": {
+          "protocol_id": "gdpval-aa-v2-1",
+          "task_set_id": "gdpval-aa-v2-1",
+          "label": "GDPval-AA v2.1 Elo",
+          "explanation": {
+            "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+            "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+          }
+        },
+        "model_release_date": "2026-09-03",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-03",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-03",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-03",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-gdpval-aa-v2-gpt-6-astra-xhigh-anthropic-2038281f76f94e6a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-gdpval-aa-v2-gpt-6-astra-xhigh-anthropic-release-settings"
+        ]
+      },
+      {
+        "observation_id": "obs-1542-efe1ca8ff00064f3",
+        "benchmark_id": "gdpval-aa-v2",
+        "benchmark_version_id": "gdpval-aa-v2-canonical",
+        "model_id": "model-gpt-6-astra-max-anthropic-release-settings-ef95cd827230a7ac",
+        "model_configuration": "GPT-6 Astra (max, Anthropic release settings)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-astra-max-anthropic-release-settings",
+        "model_family_id": "openai-gpt-6-astra",
+        "model": "GPT-6 Astra (max, Anthropic release settings)",
+        "organization": "OpenAI",
+        "score": 1542.0,
+        "input_score": 1542.0,
+        "input_unit": "number",
+        "reported_cost_per_task": null,
+        "metric_id": "gdpval-aa-v2-metric-v1",
+        "protocol_id": "gdpval-aa-v2-1",
+        "task_set_id": "gdpval-aa-v2-1",
+        "metric": "Elo",
+        "score_role": "auxiliary",
+        "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+        "evaluation_protocol": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+        "auxiliary_metadata": {
+          "protocol_id": "gdpval-aa-v2-1",
+          "task_set_id": "gdpval-aa-v2-1",
+          "label": "GDPval-AA v2.1 Elo",
+          "explanation": {
+            "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+            "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+          }
+        },
+        "model_release_date": "2026-09-03",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-03",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-03",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-03",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-gdpval-aa-v2-gpt-6-astra-max-anthropic-r-2c360113d1b8751a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-gdpval-aa-v2-gpt-6-astra-max-anthropic-release-settings"
+        ]
+      },
+      {
+        "observation_id": "obs-1673-84fa81da2a867194",
+        "benchmark_id": "gdpval-aa-v2",
+        "benchmark_version_id": "gdpval-aa-v2-canonical",
+        "model_id": "model-mimo-v2-6-pro-rl-model-card-settings-fb28d1e8a8d24000",
+        "model_configuration": "MiMo-V2.6-Pro-RL (model-card settings)",
+        "model_identity_organization": "xiaomi",
+        "model_label_id": "mimo-v2-6-pro-rl-model-card-settings",
+        "model_family_id": "xiaomi-mimo-v2-6-pro-rl",
+        "model": "MiMo-V2.6-Pro-RL (model-card settings)",
+        "organization": "Xiaomi",
+        "score": 1673.0,
+        "input_score": 1673.0,
+        "input_unit": "number",
+        "reported_cost_per_task": null,
+        "metric_id": "gdpval-aa-v2-metric-v1",
+        "protocol_id": "gdpval-aa-v2-1",
+        "task_set_id": "gdpval-aa-v2-1",
+        "metric": "Elo",
+        "score_role": "auxiliary",
+        "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-aa-v2-1",
+        "evaluation_protocol": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+        "auxiliary_metadata": {
+          "protocol_id": "gdpval-aa-v2-1",
+          "task_set_id": "gdpval-aa-v2-1",
+          "label": "GDPval-AA v2.1 Elo",
+          "explanation": {
+            "en": "v2.1 Stirrup evaluation, anchored to DeepSeek V4.1 Flash max at 1600. Different calibration from v2; no percent or lifecycle normalization.",
+            "zh": "v2.1 \u4f7f\u7528 Stirrup\uff0c\u4ee5 DeepSeek V4.1 Flash max \u7684 1600 \u5206\u4e3a\u951a\u70b9\u3002\u4e0e v2 \u6807\u5b9a\u4e0d\u540c\uff0c\u4e0d\u8f6c\u6362\u6210\u767e\u5206\u6bd4\u6216\u751f\u547d\u5468\u671f\u8fdb\u5ea6\u3002"
+          }
+        },
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-21",
+        "source_publication_date": "2026-09-21",
+        "observation_date": "2026-09-21",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-21",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-21",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+          "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+        ],
+        "score_source_ids": [
+          "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349"
+        ],
+        "source": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL/blob/c165b4c7d1936ec55425c029597f414f84bd5d34/README.md",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-gdpval-aa-v2-mimo-v2-6-pro-rl-model-card-534e7289af326044"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-gdpval-aa-v2-mimo-v2-6-pro-rl-model-card-settings"
+        ]
+      },
+      {
+        "observation_id": "obs-1695-74488595add788cd",
+        "benchmark_id": "gdpval-aa-v2",
+        "benchmark_version_id": "gdpval-aa-v2-canonical",
+        "model_id": "model-grok-4-7-xhigh-gdpval-version-unpinned-f7629190ed35afd8",
+        "model_configuration": "Grok 4.7 (xhigh, GDPval version unpinned)",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-7-xhigh-gdpval-version-unpinned",
+        "model_family_id": "xai-grok-4-7",
+        "model": "Grok 4.7 (xhigh, GDPval version unpinned)",
+        "organization": "xAI",
+        "score": 1695.0,
+        "input_score": 1695.0,
+        "input_unit": "number",
+        "reported_cost_per_task": null,
+        "metric_id": "gdpval-aa-v2-metric-v1",
+        "protocol_id": "gdpval-grok47-version-unpinned",
+        "task_set_id": "gdpval-grok47-version-unpinned",
+        "metric": "Elo",
+        "score_role": "auxiliary",
+        "score_series_id": "gdpval-aa-v2-auxiliary-gdpval-grok47-version-unpinned",
+        "evaluation_protocol": "Official Elo result without a pinned GDPval-AA version/calibration; not comparable to canonical v2.",
+        "auxiliary_metadata": {
+          "protocol_id": "gdpval-grok47-version-unpinned",
+          "task_set_id": "gdpval-grok47-version-unpinned",
+          "label": "Grok release / version unpinned",
+          "explanation": {
+            "en": "Official Elo result without a pinned GDPval-AA version/calibration; not comparable to canonical v2.",
+            "zh": "\u5b98\u65b9 Elo \u6210\u7ee9\u672a\u56fa\u5b9a GDPval-AA \u7248\u672c\u6216\u6807\u5b9a\uff1b\u4e0d\u80fd\u4e0e v2 \u4e3b\u5e8f\u5217\u76f4\u63a5\u6bd4\u8f83\u3002"
+          }
+        },
+        "model_release_date": "2026-09-21",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-21",
+        "source_publication_date": "2026-09-21",
+        "observation_date": "2026-09-21",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+            ]
+          },
+          {
+            "date": "2026-09-21",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-21",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-21",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-artificialanalysis-ai-evaluations-gdpval-a-5d24e844043c2d59",
+          "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+        ],
+        "score_source_ids": [
+          "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+        ],
+        "source": "https://x.ai/news/grok-4-7",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-gdpval-aa-v2-grok-4-7-xhigh-gdpval-versi-1ca97fdcf9b59640"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-gdpval-aa-v2-grok-4-7-xhigh-gdpval-version-unpinned"
+        ]
       }
     ],
     "frontier": [
@@ -751,7 +3828,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-06-09",
@@ -827,7 +3904,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-24",
@@ -906,7 +3983,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-01",
@@ -985,7 +4062,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-06-09",
@@ -1061,7 +4138,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-24",
@@ -1140,7 +4217,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-01",
@@ -1219,7 +4296,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-06-09",
@@ -1295,7 +4372,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-24",
@@ -1374,7 +4451,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-01",

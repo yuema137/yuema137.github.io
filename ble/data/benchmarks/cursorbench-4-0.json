@@ -1,0 +1,3000 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-23",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "cursorbench-4-0",
+    "name": "CursorBench 4.0",
+    "domain": "Software engineering",
+    "release": "2026-09-10",
+    "source": "https://cursor.com/cursorbench",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Agent",
+    "tags": [
+      "September 2026 curation"
+    ],
+    "labels": [
+      "code-generation",
+      "code-execution-debugging",
+      "planning",
+      "instruction-following"
+    ],
+    "metric": "Task score",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "cursorbench-4-0-metric-v1",
+    "protocol_id": "cursorbench-4-0-protocol-v1",
+    "canonical_score": {
+      "series_id": "cursorbench-4-0-canonical-score",
+      "role": "canonical",
+      "metric_id": "cursorbench-4-0-metric-v1",
+      "metric_name": "Task score",
+      "protocol_id": "cursorbench-4-0-protocol-v1",
+      "task_set_id": "cursorbench-4-0-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "cursorbench-4-0-canonical",
+    "summary": {
+      "en": "Evaluates coding agents on tasks drawn from Cursor usage.",
+      "zh": "\u8bc4\u4f30 coding agent \u5b8c\u6210\u6e90\u4e8e Cursor \u5b9e\u9645\u4f7f\u7528\u4efb\u52a1\u7684\u80fd\u529b\u3002"
+    },
+    "task_format": {
+      "en": "Version 4.0 adds longer editing, refactoring, investigation and design-following workflows in Cursor\u2019s production harness.",
+      "zh": "4.0 \u5728 Cursor \u751f\u4ea7 harness \u4e2d\u52a0\u5165\u66f4\u957f\u7684\u7f16\u8f91\u3001\u91cd\u6784\u3001\u8c03\u67e5\u548c\u9075\u5faa\u8bbe\u8ba1\u8981\u6c42\u7684\u5de5\u4f5c\u6d41\u7a0b\u3002"
+    },
+    "scoring": {
+      "metric_name": "Task score",
+      "explanation": {
+        "en": "Reported task score under Cursor\u2019s grading; version 4.0 is separate from 3.2. Effort settings remain separate observations.",
+        "zh": "\u91c7\u7528 Cursor \u8bc4\u5206\u534f\u8bae\u62a5\u544a\u7684\u4efb\u52a1\u5206\u6570\uff1b4.0 \u4e0e 3.2 \u5206\u5f00\uff0c\u4e0d\u540c\u63a8\u7406\u6863\u4f4d\u4fdd\u7559\u4e3a\u72ec\u7acb\u89c2\u6d4b\u3002"
+      }
+    },
+    "evaluation_target": "environment_outcome",
+    "observation_count": 21,
+    "evidence_record_count": 21,
+    "observations": [
+      {
+        "observation_id": "obs-0-437-ca3157329bfbee5c",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-claude-opus-5-5-low-safeguards-and-disclosed-fal-f8505f4120b89e76",
+        "model_configuration": "Claude Opus 5.5 (low, safeguards and disclosed fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-low-safeguards-and-disclosed-fallbacks",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (low, safeguards and disclosed fallbacks)",
+        "organization": "Anthropic",
+        "score": 0.43700000000000006,
+        "input_score": 0.43700000000000006,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-claude-opus-5-5-low-safe-52325b810d56dd7d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-claude-opus-5-5-low-safeguards-and-disclosed-fallbacks"
+        ]
+      },
+      {
+        "observation_id": "obs-0-525-d2ec37ffaf080de6",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-claude-opus-5-5-medium-safeguards-and-disclosed--0ee71a56c5202729",
+        "model_configuration": "Claude Opus 5.5 (medium, safeguards and disclosed fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-medium-safeguards-and-disclosed-fallbacks",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (medium, safeguards and disclosed fallbacks)",
+        "organization": "Anthropic",
+        "score": 0.525,
+        "input_score": 0.525,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-claude-opus-5-5-medium-s-ea46a8cf85409934"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-claude-opus-5-5-medium-safeguards-and-disclosed-fallbacks"
+        ]
+      },
+      {
+        "observation_id": "obs-0-56-a55a7bd2d8dd3a67",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-claude-opus-5-5-high-safeguards-and-disclosed-fa-4cfbfe804bf0a563",
+        "model_configuration": "Claude Opus 5.5 (high, safeguards and disclosed fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-high-safeguards-and-disclosed-fallbacks",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (high, safeguards and disclosed fallbacks)",
+        "organization": "Anthropic",
+        "score": 0.56,
+        "input_score": 0.56,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-claude-opus-5-5-high-saf-62975a27c9c4aef0"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-claude-opus-5-5-high-safeguards-and-disclosed-fallbacks"
+        ]
+      },
+      {
+        "observation_id": "obs-0-56-542c7657241577a4",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-claude-opus-5-5-xhigh-safeguards-and-disclosed-f-dbbf9f274c75a1a9",
+        "model_configuration": "Claude Opus 5.5 (xhigh, safeguards and disclosed fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-xhigh-safeguards-and-disclosed-fallbacks",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (xhigh, safeguards and disclosed fallbacks)",
+        "organization": "Anthropic",
+        "score": 0.56,
+        "input_score": 0.56,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-claude-opus-5-5-xhigh-sa-8e4f3f80a47ae7dc"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-claude-opus-5-5-xhigh-safeguards-and-disclosed-fallbacks"
+        ]
+      },
+      {
+        "observation_id": "obs-0-578-6ee5448d6ae00fef",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-claude-opus-5-5-max-safeguards-and-disclosed-fal-3287b50270319bad",
+        "model_configuration": "Claude Opus 5.5 (max, safeguards and disclosed fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-max-safeguards-and-disclosed-fallbacks",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (max, safeguards and disclosed fallbacks)",
+        "organization": "Anthropic",
+        "score": 0.578,
+        "input_score": 0.578,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-claude-opus-5-5-max-safe-a3dadc452ddd4955"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-claude-opus-5-5-max-safeguards-and-disclosed-fallbacks"
+        ]
+      },
+      {
+        "observation_id": "obs-0-451-3f2bcf97e24888a2",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-claude-fable-5-1-low-safeguards-and-disclosed-fa-d1f8e05a3fce59c9",
+        "model_configuration": "Claude Fable 5.1 (low, safeguards and disclosed fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-1-low-safeguards-and-disclosed-fallbacks",
+        "model_family_id": "anthropic-claude-fable-5-1",
+        "model": "Claude Fable 5.1 (low, safeguards and disclosed fallbacks)",
+        "organization": "Anthropic",
+        "score": 0.451,
+        "input_score": 0.451,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-09-01",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-claude-fable-5-1-low-saf-e20e32361c1a0579"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-claude-fable-5-1-low-safeguards-and-disclosed-fallbacks"
+        ]
+      },
+      {
+        "observation_id": "obs-0-468-9c7c6bee0363a94c",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-claude-fable-5-1-medium-safeguards-and-disclosed-7ef7cc8bc283e172",
+        "model_configuration": "Claude Fable 5.1 (medium, safeguards and disclosed fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-1-medium-safeguards-and-disclosed-fallbacks",
+        "model_family_id": "anthropic-claude-fable-5-1",
+        "model": "Claude Fable 5.1 (medium, safeguards and disclosed fallbacks)",
+        "organization": "Anthropic",
+        "score": 0.46799999999999997,
+        "input_score": 0.46799999999999997,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-09-01",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-claude-fable-5-1-medium--80a087e833f214d6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-claude-fable-5-1-medium-safeguards-and-disclosed-fallbacks"
+        ]
+      },
+      {
+        "observation_id": "obs-0-492-4e98003b030fd70d",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-claude-fable-5-1-high-safeguards-and-disclosed-f-3abf363f1384fbbb",
+        "model_configuration": "Claude Fable 5.1 (high, safeguards and disclosed fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-1-high-safeguards-and-disclosed-fallbacks",
+        "model_family_id": "anthropic-claude-fable-5-1",
+        "model": "Claude Fable 5.1 (high, safeguards and disclosed fallbacks)",
+        "organization": "Anthropic",
+        "score": 0.49200000000000005,
+        "input_score": 0.49200000000000005,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-09-01",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-claude-fable-5-1-high-sa-b625623d2facbe66"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-claude-fable-5-1-high-safeguards-and-disclosed-fallbacks"
+        ]
+      },
+      {
+        "observation_id": "obs-0-516-1367b7f21fb1c9d4",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-claude-fable-5-1-xhigh-safeguards-and-disclosed--2b86b3d8727cf01f",
+        "model_configuration": "Claude Fable 5.1 (xhigh, safeguards and disclosed fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-1-xhigh-safeguards-and-disclosed-fallbacks",
+        "model_family_id": "anthropic-claude-fable-5-1",
+        "model": "Claude Fable 5.1 (xhigh, safeguards and disclosed fallbacks)",
+        "organization": "Anthropic",
+        "score": 0.516,
+        "input_score": 0.516,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-09-01",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-claude-fable-5-1-xhigh-s-89a64402d422b887"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-claude-fable-5-1-xhigh-safeguards-and-disclosed-fallbacks"
+        ]
+      },
+      {
+        "observation_id": "obs-0-518-1bde36c3c1bf73cb",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-claude-fable-5-1-max-safeguards-and-disclosed-fa-11deef9e9df7c996",
+        "model_configuration": "Claude Fable 5.1 (max, safeguards and disclosed fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-1-max-safeguards-and-disclosed-fallbacks",
+        "model_family_id": "anthropic-claude-fable-5-1",
+        "model": "Claude Fable 5.1 (max, safeguards and disclosed fallbacks)",
+        "organization": "Anthropic",
+        "score": 0.518,
+        "input_score": 0.518,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-09-01",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-claude-fable-5-1-max-saf-00263ecaadea0b6d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-claude-fable-5-1-max-safeguards-and-disclosed-fallbacks"
+        ]
+      },
+      {
+        "observation_id": "obs-0-407-63cd9dec02631924",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-claude-opus-5-low-anthropic-release-settings-026dab39685ceb28",
+        "model_configuration": "Claude Opus 5 (low, Anthropic release settings)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-low-anthropic-release-settings",
+        "model_family_id": "anthropic-claude-opus-5",
+        "model": "Claude Opus 5 (low, Anthropic release settings)",
+        "organization": "Anthropic",
+        "score": 0.40700000000000003,
+        "input_score": 0.40700000000000003,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-07-24",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-claude-opus-5-low-anthro-fc2c10d79bf981f8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-claude-opus-5-low-anthropic-release-settings"
+        ]
+      },
+      {
+        "observation_id": "obs-0-433-d5733c18aed7c55b",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-claude-opus-5-medium-anthropic-release-settings-3999410f4d1dd214",
+        "model_configuration": "Claude Opus 5 (medium, Anthropic release settings)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-medium-anthropic-release-settings",
+        "model_family_id": "anthropic-claude-opus-5",
+        "model": "Claude Opus 5 (medium, Anthropic release settings)",
+        "organization": "Anthropic",
+        "score": 0.433,
+        "input_score": 0.433,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-07-24",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-claude-opus-5-medium-ant-1f358f388a92f1f8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-claude-opus-5-medium-anthropic-release-settings"
+        ]
+      },
+      {
+        "observation_id": "obs-0-447-54c8f48da0c9f6cb",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-claude-opus-5-high-anthropic-release-settings-16cab57210b86de6",
+        "model_configuration": "Claude Opus 5 (high, Anthropic release settings)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-high-anthropic-release-settings",
+        "model_family_id": "anthropic-claude-opus-5",
+        "model": "Claude Opus 5 (high, Anthropic release settings)",
+        "organization": "Anthropic",
+        "score": 0.447,
+        "input_score": 0.447,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-07-24",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-claude-opus-5-high-anthr-93aeb43423bfaa6c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-claude-opus-5-high-anthropic-release-settings"
+        ]
+      },
+      {
+        "observation_id": "obs-0-461-700c21315edff7d1",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-claude-opus-5-xhigh-anthropic-release-settings-5697eaffbff4149c",
+        "model_configuration": "Claude Opus 5 (xhigh, Anthropic release settings)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-xhigh-anthropic-release-settings",
+        "model_family_id": "anthropic-claude-opus-5",
+        "model": "Claude Opus 5 (xhigh, Anthropic release settings)",
+        "organization": "Anthropic",
+        "score": 0.461,
+        "input_score": 0.461,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-07-24",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-claude-opus-5-xhigh-anth-86f50eb4d8b3106e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-claude-opus-5-xhigh-anthropic-release-settings"
+        ]
+      },
+      {
+        "observation_id": "obs-0-466-f14e913b67f1f7a5",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-claude-opus-5-max-anthropic-release-settings-c3b24d36a9d132fd",
+        "model_configuration": "Claude Opus 5 (max, Anthropic release settings)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-max-anthropic-release-settings",
+        "model_family_id": "anthropic-claude-opus-5",
+        "model": "Claude Opus 5 (max, Anthropic release settings)",
+        "organization": "Anthropic",
+        "score": 0.466,
+        "input_score": 0.466,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-07-24",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-claude-opus-5-max-anthro-3be532150a73bb20"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-claude-opus-5-max-anthropic-release-settings"
+        ]
+      },
+      {
+        "observation_id": "obs-0-246-9315abe1e1ceaeeb",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-gpt-5-6-sol-low-anthropic-release-settings-09b8785cb765a992",
+        "model_configuration": "GPT-5.6 Sol (low, Anthropic release settings)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol-low-anthropic-release-settings",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "GPT-5.6 Sol (low, Anthropic release settings)",
+        "organization": "OpenAI",
+        "score": 0.24600000000000002,
+        "input_score": 0.24600000000000002,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-gpt-5-6-sol-low-anthropi-424fbe5dc8a864c2"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-gpt-5-6-sol-low-anthropic-release-settings"
+        ]
+      },
+      {
+        "observation_id": "obs-0-311-a736d82ff045063c",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-gpt-5-6-sol-medium-anthropic-release-settings-208cb9ffc918b991",
+        "model_configuration": "GPT-5.6 Sol (medium, Anthropic release settings)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol-medium-anthropic-release-settings",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "GPT-5.6 Sol (medium, Anthropic release settings)",
+        "organization": "OpenAI",
+        "score": 0.311,
+        "input_score": 0.311,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-gpt-5-6-sol-medium-anthr-90817a44c344ad3b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-gpt-5-6-sol-medium-anthropic-release-settings"
+        ]
+      },
+      {
+        "observation_id": "obs-0-357-77a8e155241b820e",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-gpt-5-6-sol-high-anthropic-release-settings-f734659f8ae89c89",
+        "model_configuration": "GPT-5.6 Sol (high, Anthropic release settings)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol-high-anthropic-release-settings",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "GPT-5.6 Sol (high, Anthropic release settings)",
+        "organization": "OpenAI",
+        "score": 0.35700000000000004,
+        "input_score": 0.35700000000000004,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-gpt-5-6-sol-high-anthrop-bfef76e09ab3a103"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-gpt-5-6-sol-high-anthropic-release-settings"
+        ]
+      },
+      {
+        "observation_id": "obs-0-377-bcbc84fd4816513c",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-gpt-5-6-sol-xhigh-anthropic-release-settings-a9abd074a917728b",
+        "model_configuration": "GPT-5.6 Sol (xhigh, Anthropic release settings)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol-xhigh-anthropic-release-settings",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "GPT-5.6 Sol (xhigh, Anthropic release settings)",
+        "organization": "OpenAI",
+        "score": 0.377,
+        "input_score": 0.377,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-gpt-5-6-sol-xhigh-anthro-c759afd37531aecd"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-gpt-5-6-sol-xhigh-anthropic-release-settings"
+        ]
+      },
+      {
+        "observation_id": "obs-0-417-21bcec1f6dfe2e4a",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-gpt-5-6-sol-max-anthropic-release-settings-b10443a07c6bd938",
+        "model_configuration": "GPT-5.6 Sol (max, Anthropic release settings)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol-max-anthropic-release-settings",
+        "model_family_id": "openai-gpt-5-6-sol",
+        "model": "GPT-5.6 Sol (max, Anthropic release settings)",
+        "organization": "OpenAI",
+        "score": 0.41700000000000004,
+        "input_score": 0.41700000000000004,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-07-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-gpt-5-6-sol-max-anthropi-3788113ca9fbb785"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-gpt-5-6-sol-max-anthropic-release-settings"
+        ]
+      },
+      {
+        "observation_id": "obs-0-463-a5420ac994bc280a",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-grok-4-7-xhigh-284218343a0aaca6",
+        "model_configuration": "Grok 4.7 (xhigh)",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-7-xhigh",
+        "model_family_id": "xai-grok-4-7",
+        "model": "Grok 4.7 (xhigh)",
+        "organization": "xAI",
+        "score": 0.463,
+        "input_score": 0.463,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-09-21",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-21",
+        "source_publication_date": "2026-09-21",
+        "observation_date": "2026-09-21",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+            ]
+          },
+          {
+            "date": "2026-09-21",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-21",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-21",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+        ],
+        "score_source_ids": [
+          "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+        ],
+        "source": "https://x.ai/news/grok-4-7",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-grok-4-7-xhigh-8bb57d88d4e39489"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-grok-4-7-xhigh"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-0-518-1bde36c3c1bf73cb",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-claude-fable-5-1-max-safeguards-and-disclosed-fa-11deef9e9df7c996",
+        "model_configuration": "Claude Fable 5.1 (max, safeguards and disclosed fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-1-max-safeguards-and-disclosed-fallbacks",
+        "model_family_id": "anthropic-claude-fable-5-1",
+        "model": "Claude Fable 5.1 (max, safeguards and disclosed fallbacks)",
+        "organization": "Anthropic",
+        "score": 0.518,
+        "input_score": 0.518,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-09-01",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-10",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-claude-fable-5-1-max-saf-00263ecaadea0b6d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-claude-fable-5-1-max-safeguards-and-disclosed-fallbacks"
+        ],
+        "plot_date": "2026-09-10",
+        "frontier_observation_ids": [
+          "obs-0-246-9315abe1e1ceaeeb",
+          "obs-0-311-a736d82ff045063c",
+          "obs-0-357-77a8e155241b820e",
+          "obs-0-377-bcbc84fd4816513c",
+          "obs-0-407-63cd9dec02631924",
+          "obs-0-417-21bcec1f6dfe2e4a",
+          "obs-0-433-d5733c18aed7c55b",
+          "obs-0-447-54c8f48da0c9f6cb",
+          "obs-0-451-3f2bcf97e24888a2",
+          "obs-0-461-700c21315edff7d1",
+          "obs-0-466-f14e913b67f1f7a5",
+          "obs-0-468-9c7c6bee0363a94c",
+          "obs-0-492-4e98003b030fd70d",
+          "obs-0-516-1367b7f21fb1c9d4",
+          "obs-0-518-1bde36c3c1bf73cb"
+        ]
+      },
+      {
+        "observation_id": "obs-0-578-6ee5448d6ae00fef",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-claude-opus-5-5-max-safeguards-and-disclosed-fal-3287b50270319bad",
+        "model_configuration": "Claude Opus 5.5 (max, safeguards and disclosed fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-max-safeguards-and-disclosed-fallbacks",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (max, safeguards and disclosed fallbacks)",
+        "organization": "Anthropic",
+        "score": 0.578,
+        "input_score": 0.578,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-claude-opus-5-5-max-safe-a3dadc452ddd4955"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-claude-opus-5-5-max-safeguards-and-disclosed-fallbacks"
+        ],
+        "plot_date": "2026-09-22",
+        "frontier_observation_ids": [
+          "obs-0-437-ca3157329bfbee5c",
+          "obs-0-525-d2ec37ffaf080de6",
+          "obs-0-56-a55a7bd2d8dd3a67",
+          "obs-0-56-542c7657241577a4",
+          "obs-0-578-6ee5448d6ae00fef"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-0-518-1bde36c3c1bf73cb",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-claude-fable-5-1-max-safeguards-and-disclosed-fa-11deef9e9df7c996",
+        "model_configuration": "Claude Fable 5.1 (max, safeguards and disclosed fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-1-max-safeguards-and-disclosed-fallbacks",
+        "model_family_id": "anthropic-claude-fable-5-1",
+        "model": "Claude Fable 5.1 (max, safeguards and disclosed fallbacks)",
+        "organization": "Anthropic",
+        "score": 0.518,
+        "input_score": 0.518,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-09-01",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-10",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-claude-fable-5-1-max-saf-00263ecaadea0b6d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-claude-fable-5-1-max-safeguards-and-disclosed-fallbacks"
+        ],
+        "plot_date": "2026-09-10",
+        "frontier_observation_ids": [
+          "obs-0-246-9315abe1e1ceaeeb",
+          "obs-0-311-a736d82ff045063c",
+          "obs-0-357-77a8e155241b820e",
+          "obs-0-377-bcbc84fd4816513c",
+          "obs-0-407-63cd9dec02631924",
+          "obs-0-417-21bcec1f6dfe2e4a",
+          "obs-0-433-d5733c18aed7c55b",
+          "obs-0-447-54c8f48da0c9f6cb",
+          "obs-0-451-3f2bcf97e24888a2",
+          "obs-0-461-700c21315edff7d1",
+          "obs-0-466-f14e913b67f1f7a5",
+          "obs-0-468-9c7c6bee0363a94c",
+          "obs-0-492-4e98003b030fd70d",
+          "obs-0-516-1367b7f21fb1c9d4",
+          "obs-0-518-1bde36c3c1bf73cb"
+        ]
+      },
+      {
+        "observation_id": "obs-0-578-6ee5448d6ae00fef",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-claude-opus-5-5-max-safeguards-and-disclosed-fal-3287b50270319bad",
+        "model_configuration": "Claude Opus 5.5 (max, safeguards and disclosed fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-max-safeguards-and-disclosed-fallbacks",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (max, safeguards and disclosed fallbacks)",
+        "organization": "Anthropic",
+        "score": 0.578,
+        "input_score": 0.578,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-claude-opus-5-5-max-safe-a3dadc452ddd4955"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-claude-opus-5-5-max-safeguards-and-disclosed-fallbacks"
+        ],
+        "plot_date": "2026-09-22",
+        "frontier_observation_ids": [
+          "obs-0-437-ca3157329bfbee5c",
+          "obs-0-525-d2ec37ffaf080de6",
+          "obs-0-56-a55a7bd2d8dd3a67",
+          "obs-0-56-542c7657241577a4",
+          "obs-0-578-6ee5448d6ae00fef"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-518-1bde36c3c1bf73cb",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-claude-fable-5-1-max-safeguards-and-disclosed-fa-11deef9e9df7c996",
+        "model_configuration": "Claude Fable 5.1 (max, safeguards and disclosed fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-1-max-safeguards-and-disclosed-fallbacks",
+        "model_family_id": "anthropic-claude-fable-5-1",
+        "model": "Claude Fable 5.1 (max, safeguards and disclosed fallbacks)",
+        "organization": "Anthropic",
+        "score": 0.518,
+        "input_score": 0.518,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-09-01",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-10",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-claude-fable-5-1-max-saf-00263ecaadea0b6d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-claude-fable-5-1-max-safeguards-and-disclosed-fallbacks"
+        ],
+        "plot_date": "2026-09-10",
+        "frontier_observation_ids": [
+          "obs-0-246-9315abe1e1ceaeeb",
+          "obs-0-311-a736d82ff045063c",
+          "obs-0-357-77a8e155241b820e",
+          "obs-0-377-bcbc84fd4816513c",
+          "obs-0-407-63cd9dec02631924",
+          "obs-0-417-21bcec1f6dfe2e4a",
+          "obs-0-433-d5733c18aed7c55b",
+          "obs-0-447-54c8f48da0c9f6cb",
+          "obs-0-451-3f2bcf97e24888a2",
+          "obs-0-461-700c21315edff7d1",
+          "obs-0-466-f14e913b67f1f7a5",
+          "obs-0-468-9c7c6bee0363a94c",
+          "obs-0-492-4e98003b030fd70d",
+          "obs-0-516-1367b7f21fb1c9d4",
+          "obs-0-518-1bde36c3c1bf73cb"
+        ]
+      },
+      {
+        "observation_id": "obs-0-578-6ee5448d6ae00fef",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-claude-opus-5-5-max-safeguards-and-disclosed-fal-3287b50270319bad",
+        "model_configuration": "Claude Opus 5.5 (max, safeguards and disclosed fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-max-safeguards-and-disclosed-fallbacks",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (max, safeguards and disclosed fallbacks)",
+        "organization": "Anthropic",
+        "score": 0.578,
+        "input_score": 0.578,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-claude-opus-5-5-max-safe-a3dadc452ddd4955"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-claude-opus-5-5-max-safeguards-and-disclosed-fallbacks"
+        ],
+        "plot_date": "2026-09-22",
+        "frontier_observation_ids": [
+          "obs-0-437-ca3157329bfbee5c",
+          "obs-0-525-d2ec37ffaf080de6",
+          "obs-0-56-a55a7bd2d8dd3a67",
+          "obs-0-56-542c7657241577a4",
+          "obs-0-578-6ee5448d6ae00fef"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-463-a5420ac994bc280a",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-grok-4-7-xhigh-284218343a0aaca6",
+        "model_configuration": "Grok 4.7 (xhigh)",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-7-xhigh",
+        "model_family_id": "xai-grok-4-7",
+        "model": "Grok 4.7 (xhigh)",
+        "organization": "xAI",
+        "score": 0.463,
+        "input_score": 0.463,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-09-21",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-21",
+        "source_publication_date": "2026-09-21",
+        "observation_date": "2026-09-21",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+            ]
+          },
+          {
+            "date": "2026-09-21",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-21",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-09-21",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+        ],
+        "score_source_ids": [
+          "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+        ],
+        "source": "https://x.ai/news/grok-4-7",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-grok-4-7-xhigh-8bb57d88d4e39489"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-grok-4-7-xhigh"
+        ],
+        "plot_date": "2026-09-21",
+        "frontier_observation_ids": [
+          "obs-0-463-a5420ac994bc280a"
+        ]
+      },
+      {
+        "observation_id": "obs-0-578-6ee5448d6ae00fef",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-claude-opus-5-5-max-safeguards-and-disclosed-fal-3287b50270319bad",
+        "model_configuration": "Claude Opus 5.5 (max, safeguards and disclosed fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-max-safeguards-and-disclosed-fallbacks",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (max, safeguards and disclosed fallbacks)",
+        "organization": "Anthropic",
+        "score": 0.578,
+        "input_score": 0.578,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-claude-opus-5-5-max-safe-a3dadc452ddd4955"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-claude-opus-5-5-max-safeguards-and-disclosed-fallbacks"
+        ],
+        "plot_date": "2026-09-22",
+        "frontier_observation_ids": [
+          "obs-0-246-9315abe1e1ceaeeb",
+          "obs-0-311-a736d82ff045063c",
+          "obs-0-357-77a8e155241b820e",
+          "obs-0-377-bcbc84fd4816513c",
+          "obs-0-407-63cd9dec02631924",
+          "obs-0-417-21bcec1f6dfe2e4a",
+          "obs-0-433-d5733c18aed7c55b",
+          "obs-0-437-ca3157329bfbee5c",
+          "obs-0-447-54c8f48da0c9f6cb",
+          "obs-0-451-3f2bcf97e24888a2",
+          "obs-0-461-700c21315edff7d1",
+          "obs-0-466-f14e913b67f1f7a5",
+          "obs-0-468-9c7c6bee0363a94c",
+          "obs-0-492-4e98003b030fd70d",
+          "obs-0-516-1367b7f21fb1c9d4",
+          "obs-0-518-1bde36c3c1bf73cb",
+          "obs-0-525-d2ec37ffaf080de6",
+          "obs-0-56-a55a7bd2d8dd3a67",
+          "obs-0-56-542c7657241577a4",
+          "obs-0-578-6ee5448d6ae00fef"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-463-a5420ac994bc280a",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-grok-4-7-xhigh-284218343a0aaca6",
+        "model_configuration": "Grok 4.7 (xhigh)",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-7-xhigh",
+        "model_family_id": "xai-grok-4-7",
+        "model": "Grok 4.7 (xhigh)",
+        "organization": "xAI",
+        "score": 0.463,
+        "input_score": 0.463,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-09-21",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-21",
+        "source_publication_date": "2026-09-21",
+        "observation_date": "2026-09-21",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+            ]
+          },
+          {
+            "date": "2026-09-21",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-21",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-09-21",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+        ],
+        "score_source_ids": [
+          "resource-https-x-ai-news-grok-4-7-39b901174b543376"
+        ],
+        "source": "https://x.ai/news/grok-4-7",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-grok-4-7-xhigh-8bb57d88d4e39489"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-grok-4-7-xhigh"
+        ],
+        "plot_date": "2026-09-21",
+        "frontier_observation_ids": [
+          "obs-0-463-a5420ac994bc280a"
+        ]
+      },
+      {
+        "observation_id": "obs-0-578-6ee5448d6ae00fef",
+        "benchmark_id": "cursorbench-4-0",
+        "benchmark_version_id": "cursorbench-4-0-canonical",
+        "model_id": "model-claude-opus-5-5-max-safeguards-and-disclosed-fal-3287b50270319bad",
+        "model_configuration": "Claude Opus 5.5 (max, safeguards and disclosed fallbacks)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-max-safeguards-and-disclosed-fallbacks",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (max, safeguards and disclosed fallbacks)",
+        "organization": "Anthropic",
+        "score": 0.578,
+        "input_score": 0.578,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "cursorbench-4-0-metric-v1",
+        "protocol_id": "cursorbench-4-0-protocol-v1",
+        "task_set_id": "cursorbench-4-0-canonical",
+        "metric": "Task score",
+        "score_role": "canonical",
+        "score_series_id": "cursorbench-4-0-canonical-score",
+        "evaluation_protocol": "CursorBench 4.0, Cursor production agent harness; official September 10 changelog.",
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-cursor-com-cursorbench-28e7d62747c5444e",
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-0dd3bed5c7dd1c27"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-cursorbench-4-0-claude-opus-5-5-max-safe-a3dadc452ddd4955"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-cursorbench-4-0-claude-opus-5-5-max-safeguards-and-disclosed-fallbacks"
+        ],
+        "plot_date": "2026-09-22",
+        "frontier_observation_ids": [
+          "obs-0-246-9315abe1e1ceaeeb",
+          "obs-0-311-a736d82ff045063c",
+          "obs-0-357-77a8e155241b820e",
+          "obs-0-377-bcbc84fd4816513c",
+          "obs-0-407-63cd9dec02631924",
+          "obs-0-417-21bcec1f6dfe2e4a",
+          "obs-0-433-d5733c18aed7c55b",
+          "obs-0-437-ca3157329bfbee5c",
+          "obs-0-447-54c8f48da0c9f6cb",
+          "obs-0-451-3f2bcf97e24888a2",
+          "obs-0-461-700c21315edff7d1",
+          "obs-0-466-f14e913b67f1f7a5",
+          "obs-0-468-9c7c6bee0363a94c",
+          "obs-0-492-4e98003b030fd70d",
+          "obs-0-516-1367b7f21fb1c9d4",
+          "obs-0-518-1bde36c3c1bf73cb",
+          "obs-0-525-d2ec37ffaf080de6",
+          "obs-0-56-a55a7bd2d8dd3a67",
+          "obs-0-56-542c7657241577a4",
+          "obs-0-578-6ee5448d6ae00fef"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 0.578,
+    "capability_frontier_value": 0.578,
+    "reported_frontier_value": 0.578,
+    "current_frontier": 0.578,
+    "normalized_progress": 0.578,
+    "normalized_headroom": 0.42200000000000004,
+    "threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-09-10"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 13
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 13
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-09-10"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 13
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 13
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "reached",
+        "days": 12,
+        "qualifying_observation_date": "2026-09-22"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 13
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 13
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.42857142857142855,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "xAI"
+      ],
+      "panel_size": 7,
+      "status": "medium"
+    },
+    "unavailable": [],
+    "resource_ids": [
+      "resource-https-cursor-com-cursorbench-28e7d62747c5444e"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

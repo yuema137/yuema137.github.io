@@ -1,0 +1,3980 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-09-23",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "akita-v4-vigilance",
+    "name": "Akita coding benchmark v4 \u00b7 Vigilance",
+    "domain": "Software engineering",
+    "release": "2026-09-15",
+    "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2/",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Agent",
+    "tags": [
+      "September 2026 curation"
+    ],
+    "labels": [
+      "code-generation",
+      "code-execution-debugging",
+      "error-recovery",
+      "long-context-integration"
+    ],
+    "metric": "Vigilance score",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "akita-v4-vigilance-metric-v1",
+    "protocol_id": "akita-v4-vigilance-protocol-v1",
+    "canonical_score": {
+      "series_id": "akita-v4-vigilance-canonical-score",
+      "role": "canonical",
+      "metric_id": "akita-v4-vigilance-metric-v1",
+      "metric_name": "Vigilance score",
+      "protocol_id": "akita-v4-vigilance-protocol-v1",
+      "task_set_id": "akita-v4-vigilance-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "akita-v4-vigilance-canonical",
+    "summary": {
+      "en": "Tests whether coding agents find and repair injected defects while developing an application.",
+      "zh": "\u6d4b\u8bd5 coding agent \u5728\u5f00\u53d1\u5e94\u7528\u65f6\u53d1\u73b0\u5e76\u4fee\u590d\u690d\u5165\u7f3a\u9677\u7684\u80fd\u529b\u3002"
+    },
+    "task_format": {
+      "en": "One Rails application evolves across seven sprints with fourteen injected defects; model and harness are evaluated together.",
+      "zh": "\u4e00\u4e2a Rails \u5e94\u7528\u7ecf\u8fc7\u4e03\u8f6e\u8fed\u4ee3\u5e76\u690d\u5165\u5341\u56db\u9879\u7f3a\u9677\uff0c\u6a21\u578b\u4e0e harness \u4e00\u8d77\u63a5\u53d7\u8bc4\u6d4b\u3002"
+    },
+    "scoring": {
+      "metric_name": "Vigilance score",
+      "explanation": {
+        "en": "Severity-weighted repair score: unprompted fixes get full credit, fixes after disclosure get 40%, unfixed defects get zero. Single-run evidence; no confidence interval.",
+        "zh": "\u6309\u4e25\u91cd\u7a0b\u5ea6\u52a0\u6743\uff1a\u4e3b\u52a8\u4fee\u590d\u5f97\u6ee1\u5206\uff0c\u63d0\u793a\u540e\u4fee\u590d\u5f97 40%\uff0c\u672a\u4fee\u590d\u5f97\u96f6\u5206\u3002\u5c5e\u4e8e\u5355\u6b21\u8fd0\u884c\u8bc1\u636e\uff0c\u6ca1\u6709\u7f6e\u4fe1\u533a\u95f4\u3002"
+      }
+    },
+    "evaluation_target": "environment_outcome",
+    "observation_count": 39,
+    "evidence_record_count": 39,
+    "observations": [
+      {
+        "observation_id": "obs-1-abb4034bd4d64c93",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-gpt-6-astra-codex-56d8ef097ff90dfe",
+        "model_configuration": "GPT-6 Astra / codex",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-astra-codex",
+        "model_family_id": "openai-gpt-6-astra-codex",
+        "model": "GPT-6 Astra / codex",
+        "organization": "OpenAI",
+        "score": 1.0,
+        "input_score": 1.0,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1",
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-gpt-6-astra-codex-1884fd4ee58b7f92"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-gpt-6-astra-codex"
+        ]
+      },
+      {
+        "observation_id": "obs-1-e32df77a73e5a34a",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-claude-opus-5-claude-5dbdba6c631e595d",
+        "model_configuration": "Claude Opus 5 / claude",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-claude",
+        "model_family_id": "anthropic-claude-opus-5-claude",
+        "model": "Claude Opus 5 / claude",
+        "organization": "Anthropic",
+        "score": 1.0,
+        "input_score": 1.0,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-claude-opus-5-claude-1614ea06dfa6c8f6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-claude-opus-5-claude"
+        ]
+      },
+      {
+        "observation_id": "obs-1-2ddedbca984924e8",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-claude-fable-5-claude-8ebfd9ca929dc2db",
+        "model_configuration": "Claude Fable 5 / claude",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-claude",
+        "model_family_id": "anthropic-claude-fable-5-claude",
+        "model": "Claude Fable 5 / claude",
+        "organization": "Anthropic",
+        "score": 1.0,
+        "input_score": 1.0,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-claude-fable-5-claude-c00bb3009f7a967e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-claude-fable-5-claude"
+        ]
+      },
+      {
+        "observation_id": "obs-1-71dfe2b0deb33465",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-gpt-5-6-sol-codex-963229d6fd1e5bc4",
+        "model_configuration": "GPT 5.6 sol / codex",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-sol-codex",
+        "model_family_id": "openai-gpt-5-6-sol-codex",
+        "model": "GPT 5.6 sol / codex",
+        "organization": "OpenAI",
+        "score": 1.0,
+        "input_score": 1.0,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-gpt-5-6-sol-codex-15c27808c6aba1b6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-gpt-5-6-sol-codex"
+        ]
+      },
+      {
+        "observation_id": "obs-1-60723946a0b41b1d",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-gpt-5-6-terra-codex-a41402540a40392b",
+        "model_configuration": "GPT 5.6 terra / codex",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-terra-codex",
+        "model_family_id": "openai-gpt-5-6-terra-codex",
+        "model": "GPT 5.6 terra / codex",
+        "organization": "OpenAI",
+        "score": 1.0,
+        "input_score": 1.0,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-gpt-5-6-terra-codex-a45c5b8100a7dfe0"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-gpt-5-6-terra-codex"
+        ]
+      },
+      {
+        "observation_id": "obs-1-44d6faad21cb3f08",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-gpt-5-5-codex-9386616f419ca41d",
+        "model_configuration": "GPT 5.5 / codex",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-5-codex",
+        "model_family_id": "openai-gpt-5-5-codex",
+        "model": "GPT 5.5 / codex",
+        "organization": "OpenAI",
+        "score": 1.0,
+        "input_score": 1.0,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-gpt-5-5-codex-c1dc4dcd377eb2c6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-gpt-5-5-codex"
+        ]
+      },
+      {
+        "observation_id": "obs-0-985-e951dd0cd80342d9",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-grok-4-6-opencode-74f60340dde3078a",
+        "model_configuration": "Grok 4.6 / opencode",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-6-opencode",
+        "model_family_id": "xai-grok-4-6-opencode",
+        "model": "Grok 4.6 / opencode",
+        "organization": "xAI",
+        "score": 0.985,
+        "input_score": 0.985,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1",
+          "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-grok-4-6-opencode-721882a4361455dc"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-grok-4-6-opencode"
+        ]
+      },
+      {
+        "observation_id": "obs-0-955-0cd0cfb5cf1089b9",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-claude-fable-5-1-claude-bcefa5b471ea4c61",
+        "model_configuration": "Claude Fable 5.1 / claude",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-1-claude",
+        "model_family_id": "anthropic-claude-fable-5-1-claude",
+        "model": "Claude Fable 5.1 / claude",
+        "organization": "Anthropic",
+        "score": 0.955,
+        "input_score": 0.955,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1",
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-claude-fable-5-1-clau-ca453d58c3899f24"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-claude-fable-5-1-claude"
+        ]
+      },
+      {
+        "observation_id": "obs-0-955-007dde7dd9a8b3b0",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-sakana-fugu-ultra-v2-opencode-1b0090d396bd1870",
+        "model_configuration": "Sakana Fugu Ultra v2 / opencode",
+        "model_identity_organization": "unknown",
+        "model_label_id": "sakana-fugu-ultra-v2-opencode",
+        "model_family_id": "unknown-sakana-fugu-ultra-v2-opencode",
+        "model": "Sakana Fugu Ultra v2 / opencode",
+        "organization": "Unknown",
+        "score": 0.955,
+        "input_score": 0.955,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-sakana-fugu-ultra-v2--e3fdf562e67e8f83"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-sakana-fugu-ultra-v2-opencode"
+        ]
+      },
+      {
+        "observation_id": "obs-0-95-a7b028321029b2fb",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-gpt-5-6-luna-codex-310f17e05aa69775",
+        "model_configuration": "GPT 5.6 luna / codex",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-5-6-luna-codex",
+        "model_family_id": "openai-gpt-5-6-luna-codex",
+        "model": "GPT 5.6 luna / codex",
+        "organization": "OpenAI",
+        "score": 0.95,
+        "input_score": 0.95,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-gpt-5-6-luna-codex-788c7b747a24ff21"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-gpt-5-6-luna-codex"
+        ]
+      },
+      {
+        "observation_id": "obs-0-94-a9c64861b71b6a2a",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-nex-n2-5-pro-opencode-b1494e1831fd65fe",
+        "model_configuration": "Nex N2.5 Pro / opencode",
+        "model_identity_organization": "unknown",
+        "model_label_id": "nex-n2-5-pro-opencode",
+        "model_family_id": "unknown-nex-n2-5-pro-opencode",
+        "model": "Nex N2.5 Pro / opencode",
+        "organization": "Unknown",
+        "score": 0.94,
+        "input_score": 0.94,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-nex-n2-5-pro-opencode-7e97ccde17a49587"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-nex-n2-5-pro-opencode"
+        ]
+      },
+      {
+        "observation_id": "obs-0-94-52d49102d8cea8e8",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-glm-5-3-zcode-zcode-991818eafe3f0b4d",
+        "model_configuration": "GLM 5.3 (zcode) / zcode",
+        "model_identity_organization": "z-ai",
+        "model_label_id": "glm-5-3-zcode-zcode",
+        "model_family_id": "z-ai-glm-5-3-zcode",
+        "model": "GLM 5.3 (zcode) / zcode",
+        "organization": "Z.ai",
+        "score": 0.94,
+        "input_score": 0.94,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-glm-5-3-zcode-zcode-ed0bfbdac4ba8d47"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-glm-5-3-zcode-zcode"
+        ]
+      },
+      {
+        "observation_id": "obs-0-925-0e7f15b344692fa3",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-deepseek-v4-1-flash-opencode-7d005c3886f92232",
+        "model_configuration": "DeepSeek V4.1 Flash / opencode",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-v4-1-flash-opencode",
+        "model_family_id": "deepseek-deepseek-v4-1-flash-opencode",
+        "model": "DeepSeek V4.1 Flash / opencode",
+        "organization": "DeepSeek",
+        "score": 0.925,
+        "input_score": 0.925,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-deepseek-v4-1-flash-o-5a0e414f7a0b2014"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-deepseek-v4-1-flash-opencode"
+        ]
+      },
+      {
+        "observation_id": "obs-0-91-a97254f461f718ea",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-claude-sonnet-5-claude-bcdf66420407ee13",
+        "model_configuration": "Claude Sonnet 5 / claude",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-sonnet-5-claude",
+        "model_family_id": "anthropic-claude-sonnet-5-claude",
+        "model": "Claude Sonnet 5 / claude",
+        "organization": "Anthropic",
+        "score": 0.91,
+        "input_score": 0.91,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-claude-sonnet-5-claud-0b4b1f61c718fdb9"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-claude-sonnet-5-claude"
+        ]
+      },
+      {
+        "observation_id": "obs-0-905-32a709d9ce64b787",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-gemini-3-8-flash-high-openrouter-opencode-025c784a2666e479",
+        "model_configuration": "Gemini 3.8 Flash\u00b7high (OpenRouter) / opencode",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-8-flash-high-openrouter-opencode",
+        "model_family_id": "google-gemini-3-8-flash-high-opencode",
+        "model": "Gemini 3.8 Flash\u00b7high (OpenRouter) / opencode",
+        "organization": "Google",
+        "score": 0.905,
+        "input_score": 0.905,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1",
+          "resource-https-deepmind-google-models-model-cards-gemini--1867674ae3462202"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-gemini-3-8-flash-high-f92d9b995e798bdb"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-gemini-3-8-flash-high-openrouter-opencode"
+        ]
+      },
+      {
+        "observation_id": "obs-0-895-62556edfc9217ff0",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-gemini-3-8-flash-antigravity-agy-d2c2eb3a67932121",
+        "model_configuration": "Gemini 3.8 Flash (Antigravity) / agy",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-8-flash-antigravity-agy",
+        "model_family_id": "google-gemini-3-8-flash-agy",
+        "model": "Gemini 3.8 Flash (Antigravity) / agy",
+        "organization": "Google",
+        "score": 0.895,
+        "input_score": 0.895,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1",
+          "resource-https-deepmind-google-models-model-cards-gemini--1867674ae3462202"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-gemini-3-8-flash-anti-e61a87c0c5f92797"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-gemini-3-8-flash-antigravity-agy"
+        ]
+      },
+      {
+        "observation_id": "obs-0-8875-421f8329f5863e5a",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-muse-spark-1-3-opencode-7485177c91f506a2",
+        "model_configuration": "Muse Spark 1.3 / opencode",
+        "model_identity_organization": "meta",
+        "model_label_id": "muse-spark-1-3-opencode",
+        "model_family_id": "meta-muse-spark-1-3-opencode",
+        "model": "Muse Spark 1.3 / opencode",
+        "organization": "Meta",
+        "score": 0.8875,
+        "input_score": 0.8875,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-muse-spark-1-3-openco-e856530e42c4823d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-muse-spark-1-3-opencode"
+        ]
+      },
+      {
+        "observation_id": "obs-0-88-b551e770f26b1b2e",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-grok-4-5-opencode-6887a90b1a22a99c",
+        "model_configuration": "Grok 4.5 / opencode",
+        "model_identity_organization": "xai",
+        "model_label_id": "grok-4-5-opencode",
+        "model_family_id": "xai-grok-4-5-opencode",
+        "model": "Grok 4.5 / opencode",
+        "organization": "xAI",
+        "score": 0.88,
+        "input_score": 0.88,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-grok-4-5-opencode-837a1c304b2cf17e"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-grok-4-5-opencode"
+        ]
+      },
+      {
+        "observation_id": "obs-0-875-9b3d1901b41e084d",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-claude-opus-4-6-claude-ecfa2b800a285340",
+        "model_configuration": "Claude Opus 4.6 / claude",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-6-claude",
+        "model_family_id": "anthropic-claude-opus-4-6-claude",
+        "model": "Claude Opus 4.6 / claude",
+        "organization": "Anthropic",
+        "score": 0.875,
+        "input_score": 0.875,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-claude-opus-4-6-claud-6a008e66d91a1bd8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-claude-opus-4-6-claude"
+        ]
+      },
+      {
+        "observation_id": "obs-0-8725-229855d7e5b69054",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-kimi-k2-7-kimi-c529de0a3b13e566",
+        "model_configuration": "Kimi K2.7 / kimi",
+        "model_identity_organization": "moonshot-ai",
+        "model_label_id": "kimi-k2-7-kimi",
+        "model_family_id": "moonshot-ai-kimi-k2-7-kimi",
+        "model": "Kimi K2.7 / kimi",
+        "organization": "Moonshot AI",
+        "score": 0.8725,
+        "input_score": 0.8725,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-kimi-k2-7-kimi-9c2b5f387b90a897"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-kimi-k2-7-kimi"
+        ]
+      },
+      {
+        "observation_id": "obs-0-865-0873cd8db7730967",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-mimo-v2-5-pro-opencode-a5b64c09a2689fb1",
+        "model_configuration": "MiMo V2.5 Pro / opencode",
+        "model_identity_organization": "xiaomi",
+        "model_label_id": "mimo-v2-5-pro-opencode",
+        "model_family_id": "xiaomi-mimo-v2-5-pro-opencode",
+        "model": "MiMo V2.5 Pro / opencode",
+        "organization": "Xiaomi",
+        "score": 0.865,
+        "input_score": 0.865,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-mimo-v2-5-pro-opencod-2bcbb98fb5035297"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-mimo-v2-5-pro-opencode"
+        ]
+      },
+      {
+        "observation_id": "obs-0-865-77931f9c5e30d180",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-qwen3-8-flash-opencode-951234f2669880ea",
+        "model_configuration": "Qwen3 8 Flash / opencode",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen3-8-flash-opencode",
+        "model_family_id": "alibaba-qwen3-8-flash-opencode",
+        "model": "Qwen3 8 Flash / opencode",
+        "organization": "Alibaba",
+        "score": 0.865,
+        "input_score": 0.865,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-qwen3-8-flash-opencod-b27b7c58e72ddede"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-qwen3-8-flash-opencode"
+        ]
+      },
+      {
+        "observation_id": "obs-0-86-13e60186561d1c74",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-deepseek-v4-flash-opencode-8f8acbdfa54fb746",
+        "model_configuration": "DeepSeek V4 Flash / opencode",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-v4-flash-opencode",
+        "model_family_id": "deepseek-deepseek-v4-flash-opencode",
+        "model": "DeepSeek V4 Flash / opencode",
+        "organization": "DeepSeek",
+        "score": 0.86,
+        "input_score": 0.86,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-deepseek-v4-flash-ope-55de68ee18527f1c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-deepseek-v4-flash-opencode"
+        ]
+      },
+      {
+        "observation_id": "obs-0-86-733455b68911268e",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-claude-opus-4-8-claude-9b11b70f783d3d4d",
+        "model_configuration": "Claude Opus 4.8 / claude",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-4-8-claude",
+        "model_family_id": "anthropic-claude-opus-4-8-claude",
+        "model": "Claude Opus 4.8 / claude",
+        "organization": "Anthropic",
+        "score": 0.86,
+        "input_score": 0.86,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-claude-opus-4-8-claud-e801c595475e42b8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-claude-opus-4-8-claude"
+        ]
+      },
+      {
+        "observation_id": "obs-0-8575-7568c7baaea2058d",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-claude-sonnet-4-6-claude-776f21b745e72d4f",
+        "model_configuration": "Claude Sonnet 4.6 / claude",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-sonnet-4-6-claude",
+        "model_family_id": "anthropic-claude-sonnet-4-6-claude",
+        "model": "Claude Sonnet 4.6 / claude",
+        "organization": "Anthropic",
+        "score": 0.8575,
+        "input_score": 0.8575,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-claude-sonnet-4-6-cla-67aa5aa6c7793926"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-claude-sonnet-4-6-claude"
+        ]
+      },
+      {
+        "observation_id": "obs-0-85-efabcd1f96f6308b",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-kimi-k3-kimi-1c153adabf7f715f",
+        "model_configuration": "Kimi K3 / kimi",
+        "model_identity_organization": "moonshot-ai",
+        "model_label_id": "kimi-k3-kimi",
+        "model_family_id": "moonshot-ai-kimi-k3-kimi",
+        "model": "Kimi K3 / kimi",
+        "organization": "Moonshot AI",
+        "score": 0.85,
+        "input_score": 0.85,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-kimi-k3-kimi-513dfb0f05acf392"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-kimi-k3-kimi"
+        ]
+      },
+      {
+        "observation_id": "obs-0-85-b160f803b2a46254",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-deepseek-v4-flash-0731-opencode-9a024db36ef0806e",
+        "model_configuration": "DeepSeek V4 Flash 0731 / opencode",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-v4-flash-0731-opencode",
+        "model_family_id": "deepseek-deepseek-v4-flash-0731-opencode",
+        "model": "DeepSeek V4 Flash 0731 / opencode",
+        "organization": "DeepSeek",
+        "score": 0.85,
+        "input_score": 0.85,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-deepseek-v4-flash-073-df133f03edb5f02f"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-deepseek-v4-flash-0731-opencode"
+        ]
+      },
+      {
+        "observation_id": "obs-0-8425-3ed789f7ec0fe48d",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-glm-5-3-flash-zcode-zcode-5b01b523f41b0047",
+        "model_configuration": "GLM 5.3 Flash (zcode) / zcode",
+        "model_identity_organization": "z-ai",
+        "model_label_id": "glm-5-3-flash-zcode-zcode",
+        "model_family_id": "z-ai-glm-5-3-flash-zcode",
+        "model": "GLM 5.3 Flash (zcode) / zcode",
+        "organization": "Z.ai",
+        "score": 0.8425,
+        "input_score": 0.8425,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-glm-5-3-flash-zcode-z-1f81df6a9af7a6e0"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-glm-5-3-flash-zcode-zcode"
+        ]
+      },
+      {
+        "observation_id": "obs-0-84-41a6745463ed6b56",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-deepseek-v4-pro-0813-opencode-b4a137bfa995b780",
+        "model_configuration": "DeepSeek V4 Pro 0813 / opencode",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-v4-pro-0813-opencode",
+        "model_family_id": "deepseek-deepseek-v4-pro-0813-opencode",
+        "model": "DeepSeek V4 Pro 0813 / opencode",
+        "organization": "DeepSeek",
+        "score": 0.84,
+        "input_score": 0.84,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1",
+          "resource-https-api-docs-deepseek-com-news-news260813-fe54be560bf95e2c"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-deepseek-v4-pro-0813--a007294e13fcaa3b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-deepseek-v4-pro-0813-opencode"
+        ]
+      },
+      {
+        "observation_id": "obs-0-8375-fe3f41f72cbbb64f",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-step-3-7-flash-opencode-32cf5623c35f761e",
+        "model_configuration": "Step 3.7 Flash / opencode",
+        "model_identity_organization": "unknown",
+        "model_label_id": "step-3-7-flash-opencode",
+        "model_family_id": "unknown-step-3-7-flash-opencode",
+        "model": "Step 3.7 Flash / opencode",
+        "organization": "Unknown",
+        "score": 0.8375,
+        "input_score": 0.8375,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-step-3-7-flash-openco-dbec152f74de09e1"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-step-3-7-flash-opencode"
+        ]
+      },
+      {
+        "observation_id": "obs-0-82-c4b83cfa8c298820",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-deepseek-v4-pro-base-opencode-3a940ecdd096507e",
+        "model_configuration": "DeepSeek V4 Pro (base) / opencode",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-v4-pro-base-opencode",
+        "model_family_id": "deepseek-deepseek-v4-pro-opencode",
+        "model": "DeepSeek V4 Pro (base) / opencode",
+        "organization": "DeepSeek",
+        "score": 0.82,
+        "input_score": 0.82,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-deepseek-v4-pro-base--6c590c92a98fc1ad"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-deepseek-v4-pro-base-opencode"
+        ]
+      },
+      {
+        "observation_id": "obs-0-8-48859f0dd9d5fdd3",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-qwen-3-8-27b-strix-halo-local-opencode-72b7695064e93ad5",
+        "model_configuration": "Qwen 3.8 27B (Strix Halo, local) / opencode",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen-3-8-27b-strix-halo-local-opencode",
+        "model_family_id": "alibaba-qwen-3-8-27b-opencode",
+        "model": "Qwen 3.8 27B (Strix Halo, local) / opencode",
+        "organization": "Alibaba",
+        "score": 0.8,
+        "input_score": 0.8,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-qwen-3-8-27b-strix-ha-23985647e4cf3098"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-qwen-3-8-27b-strix-halo-local-opencode"
+        ]
+      },
+      {
+        "observation_id": "obs-0-79-75a36312e05fa888",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-qwen-3-7-max-opencode-b71b911589250633",
+        "model_configuration": "Qwen 3.7 Max / opencode",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen-3-7-max-opencode",
+        "model_family_id": "alibaba-qwen-3-7-max-opencode",
+        "model": "Qwen 3.7 Max / opencode",
+        "organization": "Alibaba",
+        "score": 0.79,
+        "input_score": 0.79,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-qwen-3-7-max-opencode-6e8e57eb930fdfa7"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-qwen-3-7-max-opencode"
+        ]
+      },
+      {
+        "observation_id": "obs-0-77-cdbdc873d68caa4f",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-glm-5-2-zcode-zcode-a72b780ba7801735",
+        "model_configuration": "GLM 5.2 (zcode) / zcode",
+        "model_identity_organization": "z-ai",
+        "model_label_id": "glm-5-2-zcode-zcode",
+        "model_family_id": "z-ai-glm-5-2-zcode",
+        "model": "GLM 5.2 (zcode) / zcode",
+        "organization": "Z.ai",
+        "score": 0.77,
+        "input_score": 0.77,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-glm-5-2-zcode-zcode-b52a28830dfc739a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-glm-5-2-zcode-zcode"
+        ]
+      },
+      {
+        "observation_id": "obs-0-755-306c4db95e9941c1",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-gemini-3-7-flash-high-opencode-3f418a2bcb1f62c4",
+        "model_configuration": "Gemini 3.7 Flash\u00b7high / opencode",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-7-flash-high-opencode",
+        "model_family_id": "google-gemini-3-7-flash-high-opencode",
+        "model": "Gemini 3.7 Flash\u00b7high / opencode",
+        "organization": "Google",
+        "score": 0.755,
+        "input_score": 0.755,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-gemini-3-7-flash-high-d247869e09352df6"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-gemini-3-7-flash-high-opencode"
+        ]
+      },
+      {
+        "observation_id": "obs-0-755-26bfd722abd51df8",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-minimax-m3-opencode-a4ab278dd51a1d5a",
+        "model_configuration": "MiniMax M3 / opencode",
+        "model_identity_organization": "minimax",
+        "model_label_id": "minimax-m3-opencode",
+        "model_family_id": "minimax-minimax-m3-opencode",
+        "model": "MiniMax M3 / opencode",
+        "organization": "MiniMax",
+        "score": 0.755,
+        "input_score": 0.755,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-minimax-m3-opencode-32b40302253e9cdf"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-minimax-m3-opencode"
+        ]
+      },
+      {
+        "observation_id": "obs-0-39-5fb2710e61fbfdf7",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-mistral-large-3-opencode-58a752f29f1142fe",
+        "model_configuration": "Mistral Large 3 / opencode",
+        "model_identity_organization": "mistral",
+        "model_label_id": "mistral-large-3-opencode",
+        "model_family_id": "mistral-mistral-large-3-opencode",
+        "model": "Mistral Large 3 / opencode",
+        "organization": "Mistral",
+        "score": 0.39,
+        "input_score": 0.39,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-mistral-large-3-openc-eabbf9672c9ebe0c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-mistral-large-3-opencode"
+        ]
+      },
+      {
+        "observation_id": "obs-0-325-4410a9feb2545308",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-gemini-3-1-pro-openrouter-opencode-c088aa9a1db859c0",
+        "model_configuration": "Gemini 3.1 Pro (OpenRouter) / opencode",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-3-1-pro-openrouter-opencode",
+        "model_family_id": "google-gemini-3-1-pro-opencode",
+        "model": "Gemini 3.1 Pro (OpenRouter) / opencode",
+        "organization": "Google",
+        "score": 0.325,
+        "input_score": 0.325,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-gemini-3-1-pro-openro-c27006d1255eca1c"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-gemini-3-1-pro-openrouter-opencode"
+        ]
+      },
+      {
+        "observation_id": "obs-0-24-f083a3fc7096b3a3",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-glm-4-7-flash-local-opencode-0738a0023d4699da",
+        "model_configuration": "GLM-4.7-Flash (local) / opencode",
+        "model_identity_organization": "z-ai",
+        "model_label_id": "glm-4-7-flash-local-opencode",
+        "model_family_id": "z-ai-glm-4-7-flash-opencode",
+        "model": "GLM-4.7-Flash (local) / opencode",
+        "organization": "Z.ai",
+        "score": 0.24,
+        "input_score": 0.24,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-glm-4-7-flash-local-o-d6a3d0fc7f212b9b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-glm-4-7-flash-local-opencode"
+        ]
+      }
+    ],
+    "frontier": [
+      {
+        "observation_id": "obs-1-abb4034bd4d64c93",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-gpt-6-astra-codex-56d8ef097ff90dfe",
+        "model_configuration": "GPT-6 Astra / codex",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-astra-codex",
+        "model_family_id": "openai-gpt-6-astra-codex",
+        "model": "GPT-6 Astra / codex",
+        "organization": "OpenAI",
+        "score": 1.0,
+        "input_score": 1.0,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1",
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-gpt-6-astra-codex-1884fd4ee58b7f92"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-gpt-6-astra-codex"
+        ],
+        "plot_date": "2026-09-15",
+        "frontier_observation_ids": [
+          "obs-0-24-f083a3fc7096b3a3",
+          "obs-0-325-4410a9feb2545308",
+          "obs-0-39-5fb2710e61fbfdf7",
+          "obs-0-755-306c4db95e9941c1",
+          "obs-0-755-26bfd722abd51df8",
+          "obs-0-77-cdbdc873d68caa4f",
+          "obs-0-79-75a36312e05fa888",
+          "obs-0-8-48859f0dd9d5fdd3",
+          "obs-0-82-c4b83cfa8c298820",
+          "obs-0-8375-fe3f41f72cbbb64f",
+          "obs-0-84-41a6745463ed6b56",
+          "obs-0-8425-3ed789f7ec0fe48d",
+          "obs-0-85-b160f803b2a46254",
+          "obs-0-85-efabcd1f96f6308b",
+          "obs-0-8575-7568c7baaea2058d",
+          "obs-0-86-733455b68911268e",
+          "obs-0-86-13e60186561d1c74",
+          "obs-0-865-0873cd8db7730967",
+          "obs-0-865-77931f9c5e30d180",
+          "obs-0-8725-229855d7e5b69054",
+          "obs-0-875-9b3d1901b41e084d",
+          "obs-0-88-b551e770f26b1b2e",
+          "obs-0-8875-421f8329f5863e5a",
+          "obs-0-895-62556edfc9217ff0",
+          "obs-0-905-32a709d9ce64b787",
+          "obs-0-91-a97254f461f718ea",
+          "obs-0-925-0e7f15b344692fa3",
+          "obs-0-94-52d49102d8cea8e8",
+          "obs-0-94-a9c64861b71b6a2a",
+          "obs-0-95-a7b028321029b2fb",
+          "obs-0-955-0cd0cfb5cf1089b9",
+          "obs-0-955-007dde7dd9a8b3b0",
+          "obs-0-985-e951dd0cd80342d9",
+          "obs-1-2ddedbca984924e8",
+          "obs-1-e32df77a73e5a34a",
+          "obs-1-44d6faad21cb3f08",
+          "obs-1-71dfe2b0deb33465",
+          "obs-1-60723946a0b41b1d",
+          "obs-1-abb4034bd4d64c93"
+        ]
+      }
+    ],
+    "frontier_events": [
+      {
+        "observation_id": "obs-1-abb4034bd4d64c93",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-gpt-6-astra-codex-56d8ef097ff90dfe",
+        "model_configuration": "GPT-6 Astra / codex",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-astra-codex",
+        "model_family_id": "openai-gpt-6-astra-codex",
+        "model": "GPT-6 Astra / codex",
+        "organization": "OpenAI",
+        "score": 1.0,
+        "input_score": 1.0,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1",
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-gpt-6-astra-codex-1884fd4ee58b7f92"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-gpt-6-astra-codex"
+        ],
+        "plot_date": "2026-09-15",
+        "frontier_observation_ids": [
+          "obs-0-24-f083a3fc7096b3a3",
+          "obs-0-325-4410a9feb2545308",
+          "obs-0-39-5fb2710e61fbfdf7",
+          "obs-0-755-306c4db95e9941c1",
+          "obs-0-755-26bfd722abd51df8",
+          "obs-0-77-cdbdc873d68caa4f",
+          "obs-0-79-75a36312e05fa888",
+          "obs-0-8-48859f0dd9d5fdd3",
+          "obs-0-82-c4b83cfa8c298820",
+          "obs-0-8375-fe3f41f72cbbb64f",
+          "obs-0-84-41a6745463ed6b56",
+          "obs-0-8425-3ed789f7ec0fe48d",
+          "obs-0-85-b160f803b2a46254",
+          "obs-0-85-efabcd1f96f6308b",
+          "obs-0-8575-7568c7baaea2058d",
+          "obs-0-86-733455b68911268e",
+          "obs-0-86-13e60186561d1c74",
+          "obs-0-865-0873cd8db7730967",
+          "obs-0-865-77931f9c5e30d180",
+          "obs-0-8725-229855d7e5b69054",
+          "obs-0-875-9b3d1901b41e084d",
+          "obs-0-88-b551e770f26b1b2e",
+          "obs-0-8875-421f8329f5863e5a",
+          "obs-0-895-62556edfc9217ff0",
+          "obs-0-905-32a709d9ce64b787",
+          "obs-0-91-a97254f461f718ea",
+          "obs-0-925-0e7f15b344692fa3",
+          "obs-0-94-52d49102d8cea8e8",
+          "obs-0-94-a9c64861b71b6a2a",
+          "obs-0-95-a7b028321029b2fb",
+          "obs-0-955-0cd0cfb5cf1089b9",
+          "obs-0-955-007dde7dd9a8b3b0",
+          "obs-0-985-e951dd0cd80342d9",
+          "obs-1-2ddedbca984924e8",
+          "obs-1-e32df77a73e5a34a",
+          "obs-1-44d6faad21cb3f08",
+          "obs-1-71dfe2b0deb33465",
+          "obs-1-60723946a0b41b1d",
+          "obs-1-abb4034bd4d64c93"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-1-abb4034bd4d64c93",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-gpt-6-astra-codex-56d8ef097ff90dfe",
+        "model_configuration": "GPT-6 Astra / codex",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-astra-codex",
+        "model_family_id": "openai-gpt-6-astra-codex",
+        "model": "GPT-6 Astra / codex",
+        "organization": "OpenAI",
+        "score": 1.0,
+        "input_score": 1.0,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1",
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-gpt-6-astra-codex-1884fd4ee58b7f92"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-gpt-6-astra-codex"
+        ],
+        "plot_date": "2026-09-15",
+        "frontier_observation_ids": [
+          "obs-0-24-f083a3fc7096b3a3",
+          "obs-0-325-4410a9feb2545308",
+          "obs-0-39-5fb2710e61fbfdf7",
+          "obs-0-755-306c4db95e9941c1",
+          "obs-0-755-26bfd722abd51df8",
+          "obs-0-77-cdbdc873d68caa4f",
+          "obs-0-79-75a36312e05fa888",
+          "obs-0-8-48859f0dd9d5fdd3",
+          "obs-0-82-c4b83cfa8c298820",
+          "obs-0-8375-fe3f41f72cbbb64f",
+          "obs-0-84-41a6745463ed6b56",
+          "obs-0-8425-3ed789f7ec0fe48d",
+          "obs-0-85-b160f803b2a46254",
+          "obs-0-85-efabcd1f96f6308b",
+          "obs-0-8575-7568c7baaea2058d",
+          "obs-0-86-733455b68911268e",
+          "obs-0-86-13e60186561d1c74",
+          "obs-0-865-0873cd8db7730967",
+          "obs-0-865-77931f9c5e30d180",
+          "obs-0-8725-229855d7e5b69054",
+          "obs-0-875-9b3d1901b41e084d",
+          "obs-0-88-b551e770f26b1b2e",
+          "obs-0-8875-421f8329f5863e5a",
+          "obs-0-895-62556edfc9217ff0",
+          "obs-0-905-32a709d9ce64b787",
+          "obs-0-91-a97254f461f718ea",
+          "obs-0-925-0e7f15b344692fa3",
+          "obs-0-94-52d49102d8cea8e8",
+          "obs-0-94-a9c64861b71b6a2a",
+          "obs-0-95-a7b028321029b2fb",
+          "obs-0-955-0cd0cfb5cf1089b9",
+          "obs-0-955-007dde7dd9a8b3b0",
+          "obs-0-985-e951dd0cd80342d9",
+          "obs-1-2ddedbca984924e8",
+          "obs-1-e32df77a73e5a34a",
+          "obs-1-44d6faad21cb3f08",
+          "obs-1-71dfe2b0deb33465",
+          "obs-1-60723946a0b41b1d",
+          "obs-1-abb4034bd4d64c93"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-1-abb4034bd4d64c93",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-gpt-6-astra-codex-56d8ef097ff90dfe",
+        "model_configuration": "GPT-6 Astra / codex",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-astra-codex",
+        "model_family_id": "openai-gpt-6-astra-codex",
+        "model": "GPT-6 Astra / codex",
+        "organization": "OpenAI",
+        "score": 1.0,
+        "input_score": 1.0,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1",
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-gpt-6-astra-codex-1884fd4ee58b7f92"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-gpt-6-astra-codex"
+        ],
+        "plot_date": "2026-09-15",
+        "frontier_observation_ids": [
+          "obs-0-24-f083a3fc7096b3a3",
+          "obs-0-325-4410a9feb2545308",
+          "obs-0-39-5fb2710e61fbfdf7",
+          "obs-0-755-306c4db95e9941c1",
+          "obs-0-755-26bfd722abd51df8",
+          "obs-0-77-cdbdc873d68caa4f",
+          "obs-0-79-75a36312e05fa888",
+          "obs-0-8-48859f0dd9d5fdd3",
+          "obs-0-82-c4b83cfa8c298820",
+          "obs-0-8375-fe3f41f72cbbb64f",
+          "obs-0-84-41a6745463ed6b56",
+          "obs-0-8425-3ed789f7ec0fe48d",
+          "obs-0-85-b160f803b2a46254",
+          "obs-0-85-efabcd1f96f6308b",
+          "obs-0-8575-7568c7baaea2058d",
+          "obs-0-86-733455b68911268e",
+          "obs-0-86-13e60186561d1c74",
+          "obs-0-865-0873cd8db7730967",
+          "obs-0-865-77931f9c5e30d180",
+          "obs-0-8725-229855d7e5b69054",
+          "obs-0-875-9b3d1901b41e084d",
+          "obs-0-88-b551e770f26b1b2e",
+          "obs-0-8875-421f8329f5863e5a",
+          "obs-0-895-62556edfc9217ff0",
+          "obs-0-905-32a709d9ce64b787",
+          "obs-0-91-a97254f461f718ea",
+          "obs-0-925-0e7f15b344692fa3",
+          "obs-0-94-52d49102d8cea8e8",
+          "obs-0-94-a9c64861b71b6a2a",
+          "obs-0-95-a7b028321029b2fb",
+          "obs-0-955-0cd0cfb5cf1089b9",
+          "obs-0-955-007dde7dd9a8b3b0",
+          "obs-0-985-e951dd0cd80342d9",
+          "obs-1-2ddedbca984924e8",
+          "obs-1-e32df77a73e5a34a",
+          "obs-1-44d6faad21cb3f08",
+          "obs-1-71dfe2b0deb33465",
+          "obs-1-60723946a0b41b1d",
+          "obs-1-abb4034bd4d64c93"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-1-abb4034bd4d64c93",
+        "benchmark_id": "akita-v4-vigilance",
+        "benchmark_version_id": "akita-v4-vigilance-canonical",
+        "model_id": "model-gpt-6-astra-codex-56d8ef097ff90dfe",
+        "model_configuration": "GPT-6 Astra / codex",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-astra-codex",
+        "model_family_id": "openai-gpt-6-astra-codex",
+        "model": "GPT-6 Astra / codex",
+        "organization": "OpenAI",
+        "score": 1.0,
+        "input_score": 1.0,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "akita-v4-vigilance-metric-v1",
+        "protocol_id": "akita-v4-vigilance-protocol-v1",
+        "task_set_id": "akita-v4-vigilance-canonical",
+        "metric": "Vigilance score",
+        "score_role": "canonical",
+        "score_series_id": "akita-v4-vigilance-canonical-score",
+        "evaluation_protocol": "v4 September 15 audited results; native harness per model; excludes cost/time from score.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-09-15",
+        "source_publication_date": "2026-09-15",
+        "observation_date": "2026-09-15",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-15",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-15",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-09-15",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-15",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1",
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350"
+        ],
+        "score_source_ids": [
+          "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+        ],
+        "source": "https://akitaonrails.github.io/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-akita-v4-vigilance-gpt-6-astra-codex-1884fd4ee58b7f92"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-akita-v4-vigilance-gpt-6-astra-codex"
+        ],
+        "plot_date": "2026-09-15",
+        "frontier_observation_ids": [
+          "obs-0-24-f083a3fc7096b3a3",
+          "obs-0-325-4410a9feb2545308",
+          "obs-0-39-5fb2710e61fbfdf7",
+          "obs-0-755-306c4db95e9941c1",
+          "obs-0-755-26bfd722abd51df8",
+          "obs-0-77-cdbdc873d68caa4f",
+          "obs-0-79-75a36312e05fa888",
+          "obs-0-8-48859f0dd9d5fdd3",
+          "obs-0-82-c4b83cfa8c298820",
+          "obs-0-8375-fe3f41f72cbbb64f",
+          "obs-0-84-41a6745463ed6b56",
+          "obs-0-8425-3ed789f7ec0fe48d",
+          "obs-0-85-b160f803b2a46254",
+          "obs-0-85-efabcd1f96f6308b",
+          "obs-0-8575-7568c7baaea2058d",
+          "obs-0-86-733455b68911268e",
+          "obs-0-86-13e60186561d1c74",
+          "obs-0-865-0873cd8db7730967",
+          "obs-0-865-77931f9c5e30d180",
+          "obs-0-8725-229855d7e5b69054",
+          "obs-0-875-9b3d1901b41e084d",
+          "obs-0-88-b551e770f26b1b2e",
+          "obs-0-8875-421f8329f5863e5a",
+          "obs-0-895-62556edfc9217ff0",
+          "obs-0-905-32a709d9ce64b787",
+          "obs-0-91-a97254f461f718ea",
+          "obs-0-925-0e7f15b344692fa3",
+          "obs-0-94-52d49102d8cea8e8",
+          "obs-0-94-a9c64861b71b6a2a",
+          "obs-0-95-a7b028321029b2fb",
+          "obs-0-955-0cd0cfb5cf1089b9",
+          "obs-0-955-007dde7dd9a8b3b0",
+          "obs-0-985-e951dd0cd80342d9",
+          "obs-1-2ddedbca984924e8",
+          "obs-1-e32df77a73e5a34a",
+          "obs-1-44d6faad21cb3f08",
+          "obs-1-71dfe2b0deb33465",
+          "obs-1-60723946a0b41b1d",
+          "obs-1-abb4034bd4d64c93"
+        ]
+      }
+    ],
+    "retrospective_observations": [],
+    "observed_frontier": 1.0,
+    "capability_frontier_value": 1.0,
+    "reported_frontier_value": 1.0,
+    "current_frontier": 1.0,
+    "normalized_progress": 1.0,
+    "normalized_headroom": 0.0,
+    "threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-09-15"
+      },
+      "T80": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-09-15"
+      },
+      "T90": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-09-15"
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-09-15"
+      },
+      "T80": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-09-15"
+      },
+      "T90": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-09-15"
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-09-15"
+      },
+      "T80": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-09-15"
+      },
+      "T90": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-09-15"
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 1.0,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "DeepSeek",
+        "Qwen",
+        "Meta",
+        "xAI"
+      ],
+      "panel_size": 7,
+      "status": "high"
+    },
+    "unavailable": [],
+    "resource_ids": [
+      "resource-https-akitaonrails-github-io-en-2026-09-15-new-l-dca7469483597fd1"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": true,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

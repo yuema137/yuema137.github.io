@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-04",
+  "snapshot_id": "2026-09-23",
   "reference_organizations": [
     {
       "id": "openai",
@@ -104,7 +104,322 @@
       "progress_target": 1.0,
       "lifecycle_eligible": true
     },
-    "auxiliary_score_series": [],
+    "auxiliary_score_series": [
+      {
+        "series_id": "osworld-2-auxiliary-osworld-2026-09-10-anthropic",
+        "role": "auxiliary",
+        "label": "September 10 tasks / Anthropic harness",
+        "metric_id": "osworld-2-metric-v1",
+        "metric_name": "Partial score",
+        "protocol_id": "osworld-2026-09-10-anthropic",
+        "task_set_id": "osworld-2026-09-10-anthropic",
+        "lifecycle_eligible": false,
+        "explanation": {
+          "en": "September 10 task files and assets; all screenshots retained with server compaction at 100k; 108 tasks, 500 steps. Not comparable to the earlier offline snapshot.",
+          "zh": "9 \u6708 10 \u65e5\u4efb\u52a1\u53ca\u8d44\u6e90\uff1b\u4fdd\u7559\u6240\u6709\u622a\u56fe\u5e76\u5728 100k \u65f6\u7531\u670d\u52a1\u5668\u538b\u7f29\u4e0a\u4e0b\u6587\uff1b108 \u9898\u3001500 \u6b65\u3002\u4e0d\u80fd\u4e0e\u8f83\u65e9\u79bb\u7ebf\u5feb\u7167\u76f4\u63a5\u6bd4\u8f83\u3002"
+        },
+        "observation_ids": [
+          "obs-0-818-449a481b46b47dae",
+          "obs-0-807-dcbfbda080740214",
+          "obs-0-74-423eca3993090bdb"
+        ],
+        "frontier_events": [
+          {
+            "observation_id": "obs-0-74-423eca3993090bdb",
+            "benchmark_id": "osworld-2",
+            "benchmark_version_id": "osworld-2-canonical",
+            "model_id": "model-claude-opus-5-max-partial-eb1c41f98bc79035",
+            "model_configuration": "Claude Opus 5 (max, partial)",
+            "model_identity_organization": "anthropic",
+            "model_label_id": "claude-opus-5-max-partial",
+            "model_family_id": "anthropic-claude-opus-5",
+            "model": "Claude Opus 5 (max, partial)",
+            "organization": "Anthropic",
+            "score": 0.74,
+            "input_score": 0.74,
+            "input_unit": "fraction",
+            "reported_cost_per_task": null,
+            "metric_id": "osworld-2-metric-v1",
+            "protocol_id": "osworld-2026-09-10-anthropic",
+            "task_set_id": "osworld-2026-09-10-anthropic",
+            "metric": "Partial score",
+            "score_role": "auxiliary",
+            "score_series_id": "osworld-2-auxiliary-osworld-2026-09-10-anthropic",
+            "evaluation_protocol": "September 10 task files and assets; all screenshots retained with server compaction at 100k; 108 tasks, 500 steps. Not comparable to the earlier offline snapshot.",
+            "auxiliary_metadata": {
+              "protocol_id": "osworld-2026-09-10-anthropic",
+              "task_set_id": "osworld-2026-09-10-anthropic",
+              "label": "September 10 tasks / Anthropic harness",
+              "explanation": {
+                "en": "September 10 task files and assets; all screenshots retained with server compaction at 100k; 108 tasks, 500 steps. Not comparable to the earlier offline snapshot.",
+                "zh": "9 \u6708 10 \u65e5\u4efb\u52a1\u53ca\u8d44\u6e90\uff1b\u4fdd\u7559\u6240\u6709\u622a\u56fe\u5e76\u5728 100k \u65f6\u7531\u670d\u52a1\u5668\u538b\u7f29\u4e0a\u4e0b\u6587\uff1b108 \u9898\u3001500 \u6b65\u3002\u4e0d\u80fd\u4e0e\u8f83\u65e9\u79bb\u7ebf\u5feb\u7167\u76f4\u63a5\u6bd4\u8f83\u3002"
+              }
+            },
+            "model_release_date": "2026-07-24",
+            "evaluation_date": null,
+            "result_public_date": "2026-09-22",
+            "source_publication_date": "2026-09-22",
+            "observation_date": "2026-07-24",
+            "observation_date_precision": "day",
+            "observation_date_sources": [
+              {
+                "date": "2026-07-24",
+                "kind": "model_release_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+                ]
+              }
+            ],
+            "observation_date_source_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ],
+            "evaluation_date_sources": [],
+            "score_publication_date_sources": [
+              {
+                "date": "2026-09-22",
+                "kind": "Result public date",
+                "precision": "day"
+              }
+            ],
+            "ingested_at": "2026-09-23",
+            "date_precision": "day",
+            "date_notes": null,
+            "date": "2026-07-24",
+            "date_kind": "earliest_observation_evidence_date",
+            "capability_date": "2026-07-24",
+            "capability_date_meaning": "earliest_observation_evidence_date",
+            "reported_date_meaning": "result_public_date",
+            "historical_frontier_date": "2026-09-22",
+            "temporal_class": "historical_or_unknown",
+            "retrospective": false,
+            "capability_frontier_eligible": false,
+            "historical_frontier_eligible": true,
+            "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+            "contemporaneous": true,
+            "source_ids": [
+              "resource-https-os-world-github-io-c819ef71cbf34802",
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ],
+            "score_source_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ],
+            "source": "https://www.anthropic.com/claude-opus-5-5-system-card",
+            "notes": "Operational evaluation timeline only; not a historical public-result date.",
+            "evidence_ids": [
+              "evidence-sep2026-osworld-2-claude-opus-5-max-partial-f3895e6cdc960dc8"
+            ],
+            "evidence_count": 1,
+            "source_row_ids": [
+              "sep2026-osworld-2-claude-opus-5-max-partial"
+            ],
+            "plot_date": "2026-07-24",
+            "frontier_observation_ids": [
+              "obs-0-74-423eca3993090bdb"
+            ]
+          },
+          {
+            "observation_id": "obs-0-807-dcbfbda080740214",
+            "benchmark_id": "osworld-2",
+            "benchmark_version_id": "osworld-2-canonical",
+            "model_id": "model-claude-fable-5-1-max-partial-4af097ee7f2eacef",
+            "model_configuration": "Claude Fable 5.1 (max, partial)",
+            "model_identity_organization": "anthropic",
+            "model_label_id": "claude-fable-5-1-max-partial",
+            "model_family_id": "anthropic-claude-fable-5-1",
+            "model": "Claude Fable 5.1 (max, partial)",
+            "organization": "Anthropic",
+            "score": 0.807,
+            "input_score": 0.807,
+            "input_unit": "fraction",
+            "reported_cost_per_task": null,
+            "metric_id": "osworld-2-metric-v1",
+            "protocol_id": "osworld-2026-09-10-anthropic",
+            "task_set_id": "osworld-2026-09-10-anthropic",
+            "metric": "Partial score",
+            "score_role": "auxiliary",
+            "score_series_id": "osworld-2-auxiliary-osworld-2026-09-10-anthropic",
+            "evaluation_protocol": "September 10 task files and assets; all screenshots retained with server compaction at 100k; 108 tasks, 500 steps. Not comparable to the earlier offline snapshot.",
+            "auxiliary_metadata": {
+              "protocol_id": "osworld-2026-09-10-anthropic",
+              "task_set_id": "osworld-2026-09-10-anthropic",
+              "label": "September 10 tasks / Anthropic harness",
+              "explanation": {
+                "en": "September 10 task files and assets; all screenshots retained with server compaction at 100k; 108 tasks, 500 steps. Not comparable to the earlier offline snapshot.",
+                "zh": "9 \u6708 10 \u65e5\u4efb\u52a1\u53ca\u8d44\u6e90\uff1b\u4fdd\u7559\u6240\u6709\u622a\u56fe\u5e76\u5728 100k \u65f6\u7531\u670d\u52a1\u5668\u538b\u7f29\u4e0a\u4e0b\u6587\uff1b108 \u9898\u3001500 \u6b65\u3002\u4e0d\u80fd\u4e0e\u8f83\u65e9\u79bb\u7ebf\u5feb\u7167\u76f4\u63a5\u6bd4\u8f83\u3002"
+              }
+            },
+            "model_release_date": "2026-09-01",
+            "evaluation_date": null,
+            "result_public_date": "2026-09-22",
+            "source_publication_date": "2026-09-22",
+            "observation_date": "2026-09-01",
+            "observation_date_precision": "day",
+            "observation_date_sources": [
+              {
+                "date": "2026-09-01",
+                "kind": "model_release_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+                  "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+                ]
+              }
+            ],
+            "observation_date_source_ids": [
+              "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ],
+            "evaluation_date_sources": [],
+            "score_publication_date_sources": [
+              {
+                "date": "2026-09-22",
+                "kind": "Result public date",
+                "precision": "day"
+              }
+            ],
+            "ingested_at": "2026-09-23",
+            "date_precision": "day",
+            "date_notes": null,
+            "date": "2026-09-01",
+            "date_kind": "earliest_observation_evidence_date",
+            "capability_date": "2026-09-01",
+            "capability_date_meaning": "earliest_observation_evidence_date",
+            "reported_date_meaning": "result_public_date",
+            "historical_frontier_date": "2026-09-22",
+            "temporal_class": "historical_or_unknown",
+            "retrospective": false,
+            "capability_frontier_eligible": false,
+            "historical_frontier_eligible": true,
+            "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+            "contemporaneous": true,
+            "source_ids": [
+              "resource-https-os-world-github-io-c819ef71cbf34802",
+              "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ],
+            "score_source_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ],
+            "source": "https://www.anthropic.com/claude-opus-5-5-system-card",
+            "notes": "Operational evaluation timeline only; not a historical public-result date.",
+            "evidence_ids": [
+              "evidence-sep2026-osworld-2-claude-fable-5-1-max-partial-c2d16f9afd8d7463"
+            ],
+            "evidence_count": 1,
+            "source_row_ids": [
+              "sep2026-osworld-2-claude-fable-5-1-max-partial"
+            ],
+            "plot_date": "2026-09-01",
+            "frontier_observation_ids": [
+              "obs-0-807-dcbfbda080740214"
+            ]
+          },
+          {
+            "observation_id": "obs-0-818-449a481b46b47dae",
+            "benchmark_id": "osworld-2",
+            "benchmark_version_id": "osworld-2-canonical",
+            "model_id": "model-claude-opus-5-5-max-partial-7718e742a7e1359d",
+            "model_configuration": "Claude Opus 5.5 (max, partial)",
+            "model_identity_organization": "anthropic",
+            "model_label_id": "claude-opus-5-5-max-partial",
+            "model_family_id": "anthropic-claude-opus-5-5",
+            "model": "Claude Opus 5.5 (max, partial)",
+            "organization": "Anthropic",
+            "score": 0.818,
+            "input_score": 0.818,
+            "input_unit": "fraction",
+            "reported_cost_per_task": null,
+            "metric_id": "osworld-2-metric-v1",
+            "protocol_id": "osworld-2026-09-10-anthropic",
+            "task_set_id": "osworld-2026-09-10-anthropic",
+            "metric": "Partial score",
+            "score_role": "auxiliary",
+            "score_series_id": "osworld-2-auxiliary-osworld-2026-09-10-anthropic",
+            "evaluation_protocol": "September 10 task files and assets; all screenshots retained with server compaction at 100k; 108 tasks, 500 steps. Not comparable to the earlier offline snapshot.",
+            "auxiliary_metadata": {
+              "protocol_id": "osworld-2026-09-10-anthropic",
+              "task_set_id": "osworld-2026-09-10-anthropic",
+              "label": "September 10 tasks / Anthropic harness",
+              "explanation": {
+                "en": "September 10 task files and assets; all screenshots retained with server compaction at 100k; 108 tasks, 500 steps. Not comparable to the earlier offline snapshot.",
+                "zh": "9 \u6708 10 \u65e5\u4efb\u52a1\u53ca\u8d44\u6e90\uff1b\u4fdd\u7559\u6240\u6709\u622a\u56fe\u5e76\u5728 100k \u65f6\u7531\u670d\u52a1\u5668\u538b\u7f29\u4e0a\u4e0b\u6587\uff1b108 \u9898\u3001500 \u6b65\u3002\u4e0d\u80fd\u4e0e\u8f83\u65e9\u79bb\u7ebf\u5feb\u7167\u76f4\u63a5\u6bd4\u8f83\u3002"
+              }
+            },
+            "model_release_date": "2026-09-22",
+            "evaluation_date": null,
+            "result_public_date": "2026-09-22",
+            "source_publication_date": "2026-09-22",
+            "observation_date": "2026-09-22",
+            "observation_date_precision": "day",
+            "observation_date_sources": [
+              {
+                "date": "2026-09-22",
+                "kind": "model_release_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+                ]
+              },
+              {
+                "date": "2026-09-22",
+                "kind": "score_publication_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+                ]
+              }
+            ],
+            "observation_date_source_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ],
+            "evaluation_date_sources": [],
+            "score_publication_date_sources": [
+              {
+                "date": "2026-09-22",
+                "kind": "Result public date",
+                "precision": "day"
+              }
+            ],
+            "ingested_at": "2026-09-23",
+            "date_precision": "day",
+            "date_notes": null,
+            "date": "2026-09-22",
+            "date_kind": "earliest_observation_evidence_date",
+            "capability_date": "2026-09-22",
+            "capability_date_meaning": "earliest_observation_evidence_date",
+            "reported_date_meaning": "result_public_date",
+            "historical_frontier_date": "2026-09-22",
+            "temporal_class": "historical_or_unknown",
+            "retrospective": false,
+            "capability_frontier_eligible": false,
+            "historical_frontier_eligible": true,
+            "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+            "contemporaneous": true,
+            "source_ids": [
+              "resource-https-os-world-github-io-c819ef71cbf34802",
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ],
+            "score_source_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ],
+            "source": "https://www.anthropic.com/claude-opus-5-5-system-card",
+            "notes": "Operational evaluation timeline only; not a historical public-result date.",
+            "evidence_ids": [
+              "evidence-sep2026-osworld-2-claude-opus-5-5-max-partial-6a05808a33f7c7ac"
+            ],
+            "evidence_count": 1,
+            "source_row_ids": [
+              "sep2026-osworld-2-claude-opus-5-5-max-partial"
+            ],
+            "plot_date": "2026-09-22",
+            "frontier_observation_ids": [
+              "obs-0-818-449a481b46b47dae"
+            ]
+          }
+        ]
+      }
+    ],
     "benchmark_version_id": "osworld-2-canonical",
     "summary": {
       "en": "OSWorld 2.0 tests whether a computer-use agent can complete tasks in real desktop and web applications.",
@@ -122,8 +437,8 @@
       }
     },
     "evaluation_target": "environment_outcome",
-    "observation_count": 17,
-    "evidence_record_count": 17,
+    "observation_count": 21,
+    "evidence_record_count": 21,
     "observations": [
       {
         "observation_id": "obs-0-726-774cfb538bb3ec00",
@@ -170,7 +485,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-03",
@@ -244,7 +559,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-05-28",
@@ -317,7 +632,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-05-28",
@@ -390,7 +705,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-04-16",
@@ -463,7 +778,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-04-16",
@@ -536,7 +851,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-02-17",
@@ -609,7 +924,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-02-17",
@@ -682,7 +997,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-04-23",
@@ -755,7 +1070,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-06-01",
@@ -828,7 +1143,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-04-20",
@@ -901,7 +1216,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-06-02",
@@ -974,7 +1289,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-24",
@@ -1047,7 +1362,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-24",
@@ -1120,7 +1435,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-24",
@@ -1193,7 +1508,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-24",
@@ -1266,7 +1581,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-24",
@@ -1339,7 +1654,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -1368,6 +1683,376 @@
         ],
         "evidence_count": 1,
         "source_row_ids": []
+      },
+      {
+        "observation_id": "obs-0-818-449a481b46b47dae",
+        "benchmark_id": "osworld-2",
+        "benchmark_version_id": "osworld-2-canonical",
+        "model_id": "model-claude-opus-5-5-max-partial-7718e742a7e1359d",
+        "model_configuration": "Claude Opus 5.5 (max, partial)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-max-partial",
+        "model_family_id": "anthropic-claude-opus-5-5",
+        "model": "Claude Opus 5.5 (max, partial)",
+        "organization": "Anthropic",
+        "score": 0.818,
+        "input_score": 0.818,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "osworld-2-metric-v1",
+        "protocol_id": "osworld-2026-09-10-anthropic",
+        "task_set_id": "osworld-2026-09-10-anthropic",
+        "metric": "Partial score",
+        "score_role": "auxiliary",
+        "score_series_id": "osworld-2-auxiliary-osworld-2026-09-10-anthropic",
+        "evaluation_protocol": "September 10 task files and assets; all screenshots retained with server compaction at 100k; 108 tasks, 500 steps. Not comparable to the earlier offline snapshot.",
+        "auxiliary_metadata": {
+          "protocol_id": "osworld-2026-09-10-anthropic",
+          "task_set_id": "osworld-2026-09-10-anthropic",
+          "label": "September 10 tasks / Anthropic harness",
+          "explanation": {
+            "en": "September 10 task files and assets; all screenshots retained with server compaction at 100k; 108 tasks, 500 steps. Not comparable to the earlier offline snapshot.",
+            "zh": "9 \u6708 10 \u65e5\u4efb\u52a1\u53ca\u8d44\u6e90\uff1b\u4fdd\u7559\u6240\u6709\u622a\u56fe\u5e76\u5728 100k \u65f6\u7531\u670d\u52a1\u5668\u538b\u7f29\u4e0a\u4e0b\u6587\uff1b108 \u9898\u3001500 \u6b65\u3002\u4e0d\u80fd\u4e0e\u8f83\u65e9\u79bb\u7ebf\u5feb\u7167\u76f4\u63a5\u6bd4\u8f83\u3002"
+          }
+        },
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-os-world-github-io-c819ef71cbf34802",
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5-system-card",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-osworld-2-claude-opus-5-5-max-partial-6a05808a33f7c7ac"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-osworld-2-claude-opus-5-5-max-partial"
+        ]
+      },
+      {
+        "observation_id": "obs-0-807-dcbfbda080740214",
+        "benchmark_id": "osworld-2",
+        "benchmark_version_id": "osworld-2-canonical",
+        "model_id": "model-claude-fable-5-1-max-partial-4af097ee7f2eacef",
+        "model_configuration": "Claude Fable 5.1 (max, partial)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-fable-5-1-max-partial",
+        "model_family_id": "anthropic-claude-fable-5-1",
+        "model": "Claude Fable 5.1 (max, partial)",
+        "organization": "Anthropic",
+        "score": 0.807,
+        "input_score": 0.807,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "osworld-2-metric-v1",
+        "protocol_id": "osworld-2026-09-10-anthropic",
+        "task_set_id": "osworld-2026-09-10-anthropic",
+        "metric": "Partial score",
+        "score_role": "auxiliary",
+        "score_series_id": "osworld-2-auxiliary-osworld-2026-09-10-anthropic",
+        "evaluation_protocol": "September 10 task files and assets; all screenshots retained with server compaction at 100k; 108 tasks, 500 steps. Not comparable to the earlier offline snapshot.",
+        "auxiliary_metadata": {
+          "protocol_id": "osworld-2026-09-10-anthropic",
+          "task_set_id": "osworld-2026-09-10-anthropic",
+          "label": "September 10 tasks / Anthropic harness",
+          "explanation": {
+            "en": "September 10 task files and assets; all screenshots retained with server compaction at 100k; 108 tasks, 500 steps. Not comparable to the earlier offline snapshot.",
+            "zh": "9 \u6708 10 \u65e5\u4efb\u52a1\u53ca\u8d44\u6e90\uff1b\u4fdd\u7559\u6240\u6709\u622a\u56fe\u5e76\u5728 100k \u65f6\u7531\u670d\u52a1\u5668\u538b\u7f29\u4e0a\u4e0b\u6587\uff1b108 \u9898\u3001500 \u6b65\u3002\u4e0d\u80fd\u4e0e\u8f83\u65e9\u79bb\u7ebf\u5feb\u7167\u76f4\u63a5\u6bd4\u8f83\u3002"
+          }
+        },
+        "model_release_date": "2026-09-01",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-01",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-01",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-01",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-01",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-os-world-github-io-c819ef71cbf34802",
+          "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5-system-card",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-osworld-2-claude-fable-5-1-max-partial-c2d16f9afd8d7463"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-osworld-2-claude-fable-5-1-max-partial"
+        ]
+      },
+      {
+        "observation_id": "obs-0-74-423eca3993090bdb",
+        "benchmark_id": "osworld-2",
+        "benchmark_version_id": "osworld-2-canonical",
+        "model_id": "model-claude-opus-5-max-partial-eb1c41f98bc79035",
+        "model_configuration": "Claude Opus 5 (max, partial)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-max-partial",
+        "model_family_id": "anthropic-claude-opus-5",
+        "model": "Claude Opus 5 (max, partial)",
+        "organization": "Anthropic",
+        "score": 0.74,
+        "input_score": 0.74,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "osworld-2-metric-v1",
+        "protocol_id": "osworld-2026-09-10-anthropic",
+        "task_set_id": "osworld-2026-09-10-anthropic",
+        "metric": "Partial score",
+        "score_role": "auxiliary",
+        "score_series_id": "osworld-2-auxiliary-osworld-2026-09-10-anthropic",
+        "evaluation_protocol": "September 10 task files and assets; all screenshots retained with server compaction at 100k; 108 tasks, 500 steps. Not comparable to the earlier offline snapshot.",
+        "auxiliary_metadata": {
+          "protocol_id": "osworld-2026-09-10-anthropic",
+          "task_set_id": "osworld-2026-09-10-anthropic",
+          "label": "September 10 tasks / Anthropic harness",
+          "explanation": {
+            "en": "September 10 task files and assets; all screenshots retained with server compaction at 100k; 108 tasks, 500 steps. Not comparable to the earlier offline snapshot.",
+            "zh": "9 \u6708 10 \u65e5\u4efb\u52a1\u53ca\u8d44\u6e90\uff1b\u4fdd\u7559\u6240\u6709\u622a\u56fe\u5e76\u5728 100k \u65f6\u7531\u670d\u52a1\u5668\u538b\u7f29\u4e0a\u4e0b\u6587\uff1b108 \u9898\u3001500 \u6b65\u3002\u4e0d\u80fd\u4e0e\u8f83\u65e9\u79bb\u7ebf\u5feb\u7167\u76f4\u63a5\u6bd4\u8f83\u3002"
+          }
+        },
+        "model_release_date": "2026-07-24",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-07-24",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-24",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-24",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-24",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-os-world-github-io-c819ef71cbf34802",
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+        ],
+        "source": "https://www.anthropic.com/claude-opus-5-5-system-card",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-osworld-2-claude-opus-5-max-partial-f3895e6cdc960dc8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-osworld-2-claude-opus-5-max-partial"
+        ]
+      },
+      {
+        "observation_id": "obs-0-605-bd4673cb6032845e",
+        "benchmark_id": "osworld-2",
+        "benchmark_version_id": "osworld-2-canonical",
+        "model_id": "model-gpt-6-sol-xhigh-offline-2026-08-08-7479681d7931e8c2",
+        "model_configuration": "GPT-6 Sol (xhigh, offline 2026.08.08)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-sol-xhigh-offline-2026-08-08",
+        "model_family_id": "openai-gpt-6-sol",
+        "model": "GPT-6 Sol (xhigh, offline 2026.08.08)",
+        "organization": "OpenAI",
+        "score": 0.605,
+        "input_score": 0.605,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "osworld-2-metric-v1",
+        "protocol_id": "osworld-2-source-export-v1",
+        "task_set_id": "osworld-2-canonical",
+        "metric": "Partial score",
+        "score_role": "canonical",
+        "score_series_id": "osworld-2-canonical-score",
+        "evaluation_protocol": "OSWorld 2.0 partial-score series. The source export's Partial score is used; binary accuracy is preserved in the raw CSV but is not mixed into this headline frontier.",
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93",
+          "resource-https-os-world-github-io-c819ef71cbf34802"
+        ],
+        "score_source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+        ],
+        "source": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-osworld-2-gpt-6-sol-xhigh-offline-2026-0-c46b014602d44d1b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-osworld-2-gpt-6-sol-xhigh-offline-2026-08-08"
+        ]
       }
     ],
     "frontier": [
@@ -1414,7 +2099,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-06-26",
@@ -1500,7 +2185,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -1577,7 +2262,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-24",
@@ -1660,7 +2345,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-03",
@@ -1740,7 +2425,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-06-26",
@@ -1826,7 +2511,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -1903,7 +2588,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-24",
@@ -1986,7 +2671,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-03",
@@ -2066,7 +2751,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-06-26",
@@ -2152,7 +2837,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -2229,7 +2914,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-24",
@@ -2312,7 +2997,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-04",
+        "ingested_at": "2026-09-23",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-03",
@@ -2348,12 +3033,200 @@
         ]
       }
     ],
-    "reported_frontier": [],
-    "historical_frontier": [],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-605-bd4673cb6032845e",
+        "benchmark_id": "osworld-2",
+        "benchmark_version_id": "osworld-2-canonical",
+        "model_id": "model-gpt-6-sol-xhigh-offline-2026-08-08-7479681d7931e8c2",
+        "model_configuration": "GPT-6 Sol (xhigh, offline 2026.08.08)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-sol-xhigh-offline-2026-08-08",
+        "model_family_id": "openai-gpt-6-sol",
+        "model": "GPT-6 Sol (xhigh, offline 2026.08.08)",
+        "organization": "OpenAI",
+        "score": 0.605,
+        "input_score": 0.605,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "osworld-2-metric-v1",
+        "protocol_id": "osworld-2-source-export-v1",
+        "task_set_id": "osworld-2-canonical",
+        "metric": "Partial score",
+        "score_role": "canonical",
+        "score_series_id": "osworld-2-canonical-score",
+        "evaluation_protocol": "OSWorld 2.0 partial-score series. The source export's Partial score is used; binary accuracy is preserved in the raw CSV but is not mixed into this headline frontier.",
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93",
+          "resource-https-os-world-github-io-c819ef71cbf34802"
+        ],
+        "score_source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+        ],
+        "source": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-osworld-2-gpt-6-sol-xhigh-offline-2026-0-c46b014602d44d1b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-osworld-2-gpt-6-sol-xhigh-offline-2026-08-08"
+        ],
+        "plot_date": "2026-09-22",
+        "frontier_observation_ids": [
+          "obs-0-605-bd4673cb6032845e"
+        ]
+      }
+    ],
+    "historical_frontier": [
+      {
+        "observation_id": "obs-0-605-bd4673cb6032845e",
+        "benchmark_id": "osworld-2",
+        "benchmark_version_id": "osworld-2-canonical",
+        "model_id": "model-gpt-6-sol-xhigh-offline-2026-08-08-7479681d7931e8c2",
+        "model_configuration": "GPT-6 Sol (xhigh, offline 2026.08.08)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-sol-xhigh-offline-2026-08-08",
+        "model_family_id": "openai-gpt-6-sol",
+        "model": "GPT-6 Sol (xhigh, offline 2026.08.08)",
+        "organization": "OpenAI",
+        "score": 0.605,
+        "input_score": 0.605,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "osworld-2-metric-v1",
+        "protocol_id": "osworld-2-source-export-v1",
+        "task_set_id": "osworld-2-canonical",
+        "metric": "Partial score",
+        "score_role": "canonical",
+        "score_series_id": "osworld-2-canonical-score",
+        "evaluation_protocol": "OSWorld 2.0 partial-score series. The source export's Partial score is used; binary accuracy is preserved in the raw CSV but is not mixed into this headline frontier.",
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-22",
+        "source_publication_date": "2026-09-22",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+            ]
+          },
+          {
+            "date": "2026-09-22",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-09-23",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-22",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93",
+          "resource-https-os-world-github-io-c819ef71cbf34802"
+        ],
+        "score_source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93"
+        ],
+        "source": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-sep2026-osworld-2-gpt-6-sol-xhigh-offline-2026-0-c46b014602d44d1b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "sep2026-osworld-2-gpt-6-sol-xhigh-offline-2026-08-08"
+        ],
+        "plot_date": "2026-09-22",
+        "frontier_observation_ids": [
+          "obs-0-605-bd4673cb6032845e"
+        ]
+      }
+    ],
     "retrospective_observations": [],
     "observed_frontier": 0.726,
     "capability_frontier_value": 0.726,
-    "reported_frontier_value": null,
+    "reported_frontier_value": 0.605,
     "current_frontier": 0.726,
     "normalized_progress": 0.726,
     "normalized_headroom": 0.274,
@@ -2365,11 +3238,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 70
+        "days": 89
       },
       "T90": {
         "status": "right_censored",
-        "days": 70
+        "days": 89
       }
     },
     "capability_threshold_days": {
@@ -2380,25 +3253,26 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 70
+        "days": 89
       },
       "T90": {
         "status": "right_censored",
-        "days": 70
+        "days": 89
       }
     },
     "reported_threshold_days": {
       "T50": {
-        "status": "unknown",
-        "reason": "No dated observations are available on this timeline."
+        "status": "reached",
+        "days": 88,
+        "qualifying_observation_date": "2026-09-22"
       },
       "T80": {
-        "status": "unknown",
-        "reason": "No dated observations are available on this timeline."
+        "status": "right_censored",
+        "days": 89
       },
       "T90": {
-        "status": "unknown",
-        "reason": "No dated observations are available on this timeline."
+        "status": "right_censored",
+        "days": 89
       }
     },
     "velocity_180d": null,
@@ -2420,7 +3294,7 @@
       "resource-https-os-world-github-io-c819ef71cbf34802"
     ],
     "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
-    "historical_frontier_status": "unknown_public_dates",
+    "historical_frontier_status": "available",
     "timeline_default": "capability",
     "lifecycle_eligibility": {
       "test-of-time": {
