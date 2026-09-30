@@ -1,7 +1,8 @@
 # yuema137.github.io
 
 Personal academic/research website for Yue Ma.
-Plain HTML + CSS. No build step, no framework, no dependencies, no JavaScript.
+Plain HTML + CSS. No build step, no framework, no dependencies, almost no
+JavaScript (see "Conventions").
 
 Live at <https://yuema137.github.io>, deployed from the `main` branch root by
 GitHub Pages.
@@ -28,6 +29,7 @@ blog/                   Post index + one directory per post
 cv/                     Web summary + PDF download
 cv/resume/              The CV itself — source of the PDF (see "The CV")
 scieval/                Generated, self-contained SciEval snapshot
+ble/                    Generated, self-contained Leaderboard of Benchmarks snapshot
 404.html                Served automatically by GitHub Pages
 
 css/style.css           The entire stylesheet, in six commented sections
@@ -51,6 +53,10 @@ page structure. It is generated and validated in
 that is restricted to `scieval/**`. The main Pages workflow only copies the
 last-known-good snapshot; it never builds SciEval or shares its CSS and
 JavaScript with the personal site.
+
+`ble/` follows the same pattern. It is generated in
+`yuema137/benchs-last-exam` and synchronized here through a PR restricted to
+`ble/**`.
 
 ## Conventions
 
@@ -96,7 +102,8 @@ blog language switch is a plain link. There is exactly one script on the regular
 pages — `js/blog-tags.js`, which filters `/blog/` by tag. It is progressive
 enhancement: with JavaScript off, every post is listed, the tags are still
 visible, and the tag links still resolve. (The AV evaluation post is a separate
-case — see "Self-contained documents".) If something else seems to need JS,
+case — see "Self-contained documents". The generated `scieval/` and `ble/`
+snapshots ship their own scripts and are outside these rules.) If something else seems to need JS,
 reconsider first.
 
 ## Updating the last-updated date
@@ -181,8 +188,9 @@ Body — inside the usual `<main id="main"><div class="c">`:
 
 `blog/2026-08-av-evaluation/` is the one page that does **not** use `css/style.css`.
 It is a standalone interactive document (sidebar sections, searchable glossary,
-term cross-links) with its own embedded stylesheet and JavaScript, and it is the
-only JavaScript on the site. Its palette tokens are copied from the ones in
+term cross-links) with its own embedded stylesheet and JavaScript. Apart from
+`js/blog-tags.js` and the generated snapshots, it is the only JavaScript on the
+site. Its palette tokens are copied from the ones in
 `css/style.css` — if you change the site palette, update that file's `:root`
 block too. Its Chinese version is an in-page toggle rather than a `/zh/` URL,
 because both languages live in the same data arrays.
