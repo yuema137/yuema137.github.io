@@ -11,7 +11,7 @@ import assert from 'node:assert/strict';
 import {
   generate, difficulty, isSolvable, createPosition, canExit, exitableIds, removeArrow,
   rayCells, head, mulberry32, hashString, seedFor, DIRS, GENERATOR_VERSION, MAX_LEVEL, difficultyStats,
-  targetMiss,
+  targetMiss, coverage,
 } from '../../games/give-way/generator.js';
 import { ITEMS, bombArea } from '../../games/give-way/items.js';
 import * as rules from '../../games/give-way/rules.js';
@@ -89,7 +89,7 @@ test('1b. seeds are pinned (if this fails, bump GENERATOR_VERSION on purpose)', 
   // an arrow changes this: bump GENERATOR_VERSION, rerun
   // tools/give-way-levels.mjs, and update this number in the same commit.
   const layouts = levels(1, MAX_LEVEL).map((n) => JSON.stringify(board(n))).join('|');
-  assert.equal(hashString(layouts), 1754663618);
+  assert.equal(hashString(layouts), 731504198);
 });
 
 test('2. solvable: every level clears greedily', () => {
@@ -157,6 +157,13 @@ test('5. sizes: levels 1-20 are 8x12, levels 21-100 are 12x18', () => {
     const d = difficulty(n);
     assert.deepEqual([d.W, d.H], n <= 20 ? [8, 12] : [12, 18], `level ${n}`);
   }
+});
+
+test('5b. fill: every level covers at least 90% of the board', () => {
+  const low = levels(1, MAX_LEVEL).filter((n) => coverage(board(n)) < 0.9);
+  assert.deepEqual(low, [], 'under 90% filled (rerun tools/give-way-levels.mjs)');
+  const fills = levels(1, MAX_LEVEL).map((n) => coverage(board(n)));
+  console.log(`        fill ${Math.round(100 * Math.min(...fills))}%-${Math.round(100 * Math.max(...fills))}%`);
 });
 
 test('6. difficulty: every level lands inside its band targets', () => {

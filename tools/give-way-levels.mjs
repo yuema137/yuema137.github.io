@@ -5,9 +5,10 @@
  *
  * Each level can be generated from many seed variants. For every level this
  * searches the variants (searchVariant in games/give-way/generator.js) for one
- * whose difficulty lands inside its band's targets, as close to the middle of
- * the ranges as it can find, and writes the chosen variant numbers to
- * games/give-way/levels.js. The game then builds exactly that layout.
+ * that covers at least minFill of the board and whose difficulty lands inside
+ * its band's targets, as close to the middle of the ranges as it can find, and
+ * writes the chosen variant numbers to games/give-way/levels.js. The game then
+ * builds exactly that layout.
  *
  * Run it after any change to generator.js that alters layouts (and bump
  * GENERATOR_VERSION), or after changing a band's targets. It fails, and
@@ -30,13 +31,15 @@ const variants = [];
 const failures = [];
 const t0 = performance.now();
 
-console.log('\n  level  size   variant  tried  open0 open20 open50');
+console.log('\n  level  size   variant  tried  fill  open0 open20 open50');
 for (let level = 1; level <= MAX_LEVEL; level++) {
   const { W, H } = difficulty(level);
   const found = searchVariant(level);
   variants.push(found.variant);
   const s = found.stats;
-  const cols = s ? `${pct(s.open0)}  ${pct(s.open20)}  ${pct(s.open50)}` : '   (no variant met the opening target)';
+  const cols = s
+    ? `${pct(found.fill)}  ${pct(s.open0)}  ${pct(s.open20)}  ${pct(s.open50)}`
+    : `${pct(found.fill)}  (no variant met the fill and opening targets)`;
   console.log(
     `  ${String(level).padStart(5)}  ${`${W}x${H}`.padEnd(6)} ${String(found.variant).padStart(7)} ${String(found.tried).padStart(6)}  ${cols}${found.miss ? '  MISS' : ''}`
   );
