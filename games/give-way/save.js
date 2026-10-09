@@ -5,7 +5,8 @@
  * replaced with defaults rather than allowed to break the page.
  */
 
-import { GENERATOR_VERSION, MAX_LEVEL, isValidLevel } from './generator.js';
+import { MAX_LEVEL, isValidLevel } from './generator.js';
+import { LEVELS_VERSION } from './levels.js';
 import { LIVES, MODES } from './rules.js';
 
 export const SAVE_KEY = 'give-way:save';
@@ -14,7 +15,7 @@ export const SAVE_VERSION = 1;
 export function defaultSave() {
   return {
     version: SAVE_VERSION,
-    generatorVersion: GENERATOR_VERSION,
+    levelsVersion: LEVELS_VERSION,
     currentLevel: 1,
     maxUnlocked: 1,
     mode: 'basic',
@@ -48,15 +49,15 @@ function cleanRecords(raw, mode) {
   return out;
 }
 
-/* Never throws. Returns { save, generatorChanged }. */
+/* Never throws. Returns { save, levelsChanged }. */
 export function parseSave(text) {
   let raw;
   try {
     raw = JSON.parse(text);
   } catch {
-    return { save: defaultSave(), generatorChanged: false };
+    return { save: defaultSave(), levelsChanged: false };
   }
-  if (!isObject(raw)) return { save: defaultSave(), generatorChanged: false };
+  if (!isObject(raw)) return { save: defaultSave(), levelsChanged: false };
 
   const save = defaultSave();
   if (isValidLevel(raw.currentLevel)) save.currentLevel = raw.currentLevel;
@@ -72,9 +73,8 @@ export function parseSave(text) {
     save.completed.basic = cleanRecords(c, 'basic');
   }
 
-  const generatorChanged =
-    Number.isInteger(raw.generatorVersion) && raw.generatorVersion !== GENERATOR_VERSION;
-  return { save, generatorChanged };
+  const levelsChanged = Number.isInteger(raw.levelsVersion) && raw.levelsVersion !== LEVELS_VERSION;
+  return { save, levelsChanged };
 }
 
 /* More lives left wins; on a tie, fewer hints. */

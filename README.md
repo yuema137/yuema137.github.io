@@ -219,14 +219,16 @@ the publish allowlist.
 games/give-way/
   index.html     page, dialogs, controls
   style.css      game styles, on top of the site tokens
-  game.js        UI: rendering, input, animation, saving
-  generator.js   PRNG, level generation, board rules, difficulty metrics (no DOM)
-  levels.js      GENERATED: which seed variant each level uses
+  game.js        UI: rendering, input, animation, saving, custom boards
+  generator.js   board rules, generator, difficulty and shape metrics,
+                 board text format (no DOM)
+  levels.js      GENERATED: the 100 boards, stored as text
+  worker.js      runs the generator off the main thread for custom boards
   rules.js       in-level state machine: taps, lives, hints, items, clock (no DOM)
   items.js       item registry — items may only REMOVE arrows (no DOM)
   save.js        save format, validation, migration (no DOM)
 tests/give-way/generator.test.mjs
-tools/give-way-levels.mjs   chooses levels.js (authoring tool, not published)
+tools/give-way-levels.mjs   generates levels.js (authoring tool, not published)
 ```
 
 Run the tests (no install needed):
@@ -235,32 +237,46 @@ Run the tests (no install needed):
 node tests/give-way/generator.test.mjs
 ```
 
-There are 100 levels, in four bands defined in `LEVEL_BANDS` in
-`generator.js`: board size, arrow lengths, and difficulty targets. Difficulty
-is measured as the share of arrows that can exit at the start, and after 20%
-and after 50% of arrows have been removed by random legal play; lower is
-harder.
+**The 100 levels are stored, not generated.** `tools/give-way-levels.mjs`
+generates them offline and writes the boards to `levels.js`, one short line
+of text per board (see `encodeBoard`): about 50 KB for all 100, less than half
+that over the wire. The game only decodes them, so every level is identical on
+every device and loads instantly. Levels are stored portrait and drawn a
+quarter turn on landscape screens; that changes nothing about the puzzle.
 
-| Levels | Board | Free at start | After 20% | After 50% |
-|---|---|---|---|---|
-| 1–5 | 8×12 | 30% ± 10 | 30% ± 10 | 40% ± 10 |
-| 6–20 | 8×12 | 20% ± 5 | 25% ± 5 | 30% ± 5 |
-| 21–50 | 12×18 | 15% ± 5 | 20% ± 5 | 20% ± 5 |
-| 51–100 | 12×18 | 10% ± 5 | 10% ± 5 | 15% ± 5 |
+Four bands, defined in `BANDS` in `generator.js`, set each level's board size
+and difficulty targets. Difficulty is the share of arrows that can exit at the
+start, and after 20% and after 50% of arrows have been removed by random legal
+play; lower is harder. Every stored level also covers at least 90% of the
+board, has long arrows (a minimum mean length per band), and almost never has
+one arrow pointing straight at another's tail.
 
-Level *N* is built from a seed derived from *N* and a variant number, so it is
-identical on every device. The variant for each level is chosen offline:
-`tools/give-way-levels.mjs` searches variants until the level's difficulty
-lands inside its band's targets and writes the choice to `levels.js`. The
-search takes a couple of minutes; the game then builds each level in a few
-milliseconds. Levels are generated portrait and drawn a quarter turn on
-landscape screens; that changes nothing about the puzzle.
+| Levels | Band | Board | Free at start | After 20% | After 50% |
+|---|---|---|---|---|---|
+| 1–5 | Easy | 8×12 | 30% ± 10 | 30% ± 10 | 40% ± 10 |
+| 6–20 | Medium | 8×12 | 20% ± 5 | 25% ± 5 | 30% ± 5 |
+| 21–50 | Hard | 18×26 | 15% ± 5 | 20% ± 5 | 20% ± 5 |
+| 51–100 | Expert | 22×30 | 10% ± 5 | 10% ± 5 | 15% ± 5 |
 
-**If you change anything in `generator.js` that moves an arrow, or change a
-band:** bump `GENERATOR_VERSION`, run `node tools/give-way-levels.mjs`, run
-the tests, and update the layout fingerprint in the test in the same commit.
-Players' saves record the version and they are told when levels change. The
-tests fail if any level misses its targets or if layouts change unannounced.
+The generator builds boards in reverse removal order, so every board is
+solvable by construction, and checks it again before returning it. Hard and
+expert boards are framed by hairpin-shaped arrows around the rim, which keeps
+the number of free arrows at the start low. `searchBoard` tries seeds until a
+board meets all of the above.
+
+Players can also generate a **custom board** of any band from the Levels
+dialog. It runs in `worker.js` and usually takes well under a second, but the
+UI warns that it can take a few seconds on a slow phone. A custom board is
+identified by its band and a random key in the URL (`?custom=expert-k3x…`), so
+the link rebuilds the same board for anyone; custom boards are not recorded in
+the save.
+
+**To change the levels:** edit the generator or `BANDS`, run
+`node tools/give-way-levels.mjs` (a minute or two), bump `LEVELS_VERSION` in
+that tool if any stored board changed, rerun it, run the tests, and update the
+fingerprint in the test in the same commit. Players' saves record
+`LEVELS_VERSION` and they are told when levels change. The tests fail if any
+level misses its targets or if the stored boards change unannounced.
 
 ## Publishing slides and PDFs
 

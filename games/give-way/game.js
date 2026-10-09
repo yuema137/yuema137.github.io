@@ -5,7 +5,8 @@
  * other arrows during the animation are judged against the real board.
  */
 
-import { generate, DIRS, GENERATOR_VERSION, MAX_LEVEL, head } from './generator.js';
+import { DIRS, MAX_LEVEL, BANDS, difficulty, customSeed, searchBoard, decodeBoard, encodeBoard, head } from './generator.js';
+import { loadLevel, LEVELS_VERSION } from './levels.js';
 import { ITEMS, bombArea } from './items.js';
 import * as rules from './rules.js';
 import * as saves from './save.js';
@@ -25,6 +26,7 @@ const els = {
   stage: $('gw-stage'),
   board: $('gw-board'),
   level: $('gw-level'),
+  levelWord: $('gw-level-word'),
   modeTag: $('gw-mode-tag'),
   timer: $('gw-timer'),
   lives: $('gw-lives'),
@@ -45,6 +47,8 @@ const els = {
   levelsTitle: $('gw-levels-title'),
   levelGrid: $('gw-level-grid'),
   perfectKey: $('gw-perfect-key'),
+  makeBand: $('gw-make-band'),
+  makeGo: $('gw-make-go'),
   confirmDialog: $('gw-confirm'),
   confirmTitle: $('gw-confirm-title'),
 };
@@ -76,6 +80,7 @@ let save = loaded.save;
 /* ---- Per-level state ---------------------------------------------------- */
 
 let level = 1;
+let custom = null; // { band, key, board } while playing a custom board
 let game = null;
 let arrowEls = new Map(); // id -> { g, line, tip }
 let errorTimers = new Map(); // id -> timeout
@@ -93,8 +98,42 @@ function now() {
   return performance.now();
 }
 
+/* A numbered level: loaded from levels.js, recorded in the save. */
 function startLevel(n) {
+  custom = null;
+  level = n;
+  save.currentLevel = n;
+  store.write(save);
+  setUrl({ level: String(n) });
+  startBoard(loadLevel(n));
+}
+
+/* A custom board: built from band + key (see generateCustom), never saved. */
+function startCustom(spec) {
+  custom = spec;
+  setUrl({ custom: `${spec.band}-${spec.key}` });
+  startBoard(spec.board);
+}
+
+function restart() {
+  if (custom) startCustom(custom);
+  else startLevel(level);
+}
+
+function next() {
+  if (custom) generateCustom(custom.band);
+  else startLevel(Math.min(MAX_LEVEL, level + 1));
+}
+
+function setUrl(params) {
+  const url = new URL(window.location.href);
+  url.search = new URLSearchParams(params).toString();
+  window.history.replaceState(null, '', url);
+}
+
+function startBoard(board) {
   token++;
+  cancelGeneration();
   for (const t of errorTimers.values()) clearTimeout(t);
   errorTimers = new Map();
   clearTimeout(hintTimer);
@@ -105,15 +144,7 @@ function startLevel(n) {
   hintedId = -1;
   aiming = null;
 
-  level = n;
-  game = rules.createGame(generate(n), save.mode);
-  save.currentLevel = n;
-  store.write(save);
-
-  const url = new URL(window.location.href);
-  url.searchParams.set('level', String(n));
-  window.history.replaceState(null, '', url);
-
+  game = rules.createGame(board, save.mode);
   closeDialogs();
   rotated = wantRotated(rotated);
   renderBoard();
@@ -211,7 +242,7 @@ function renderBoard() {
   const board = els.board;
   board.replaceChildren();
   board.setAttribute('viewBox', `0 0 ${W} ${H}`);
-  board.setAttribute('aria-label', `Level ${level} board, ${W} by ${H}, ${rules.remainingCount(game)} arrows left`);
+  board.setAttribute('aria-label', `${boardName()} board, ${W} by ${H}, ${rules.remainingCount(game)} arrows left`);
   els.stage.style.setProperty('--gw-ratio', String(W / H));
 
   const defs = svg('defs');
@@ -287,7 +318,8 @@ function syncClock() {
 function updateHud() {
   const playing = game.status === 'playing';
   const itemsMode = game.mode === 'items';
-  els.level.textContent = String(level);
+  els.levelWord.textContent = custom ? 'Custom' : 'Level';
+  els.level.textContent = custom ? bandName(custom.band) : String(level);
   els.modeTag.hidden = !itemsMode;
   els.mode.setAttribute('aria-checked', String(itemsMode));
 
@@ -300,7 +332,8 @@ function updateHud() {
   els.bomb.disabled = !aiming && (bombs <= 0 || !playing);
   els.bomb.setAttribute('aria-pressed', String(!!aiming));
 
-  els.next.hidden = game.status !== 'won' || level >= MAX_LEVEL;
+  els.next.hidden = game.status !== 'won' || (!custom && level >= MAX_LEVEL);
+  els.next.textContent = custom ? 'New board' : 'Next level';
   els.restart.classList.toggle('btn--p', game.status === 'lost');
   els.restart.classList.toggle('btn--s', game.status !== 'lost');
   els.board.classList.toggle('is-over', !playing);
@@ -490,7 +523,7 @@ function celebrate() {
 function logDeadlock(where) {
   console.error(
     `[${GAME.slug}] Deadlock after ${where}: arrows remain but none can exit. This is a bug.`,
-    { level, generatorVersion: GENERATOR_VERSION, position: JSON.stringify(rules.boardView(game)) }
+    { level: custom ? `custom ${custom.band}-${custom.key}` : level, levelsVersion: LEVELS_VERSION, position: JSON.stringify(rules.boardView(game)) }
   );
 }
 
@@ -525,16 +558,21 @@ function handleHint() {
 function finishLevel(delay) {
   stopAiming();
   const rec = rules.result(game);
-  const outcome = saves.recordWin(save, game.mode, level, rec);
-  save = outcome.save;
-  store.write(save);
+  let timeNote = '';
+  if (!custom) {
+    const outcome = saves.recordWin(save, game.mode, level, rec);
+    save = outcome.save;
+    store.write(save);
+    const best = save.completed[game.mode][level]?.bestTimeSec;
+    if (outcome.newBestTime) timeNote = ' · New best!';
+    else if (best !== undefined && best < rec.timeSec) timeNote = ` · Best ${saves.formatTime(best)}`;
+  }
 
-  const best = save.completed[game.mode][level]?.bestTimeSec;
-  const last = level >= MAX_LEVEL;
-  els.winTitle.textContent = last ? `🎉 All ${MAX_LEVEL} levels complete` : `🎉 Level ${level} complete`;
-  els.winTime.textContent =
-    `Time ${saves.formatTime(rec.timeSec)}` +
-    (outcome.newBestTime ? ' · New best!' : best !== undefined && best < rec.timeSec ? ` · Best ${saves.formatTime(best)}` : '');
+  const last = !custom && level >= MAX_LEVEL;
+  els.winTitle.textContent = custom
+    ? '🎉 Board cleared'
+    : last ? `🎉 All ${MAX_LEVEL} levels complete` : `🎉 Level ${level} complete`;
+  els.winTime.textContent = `Time ${saves.formatTime(rec.timeSec)}${timeNote}`;
 
   const parts = [
     rec.livesLeft === rules.LIVES ? 'No lives lost' : `${rec.livesLeft} of ${rules.LIVES} lives left`,
@@ -545,6 +583,7 @@ function finishLevel(delay) {
     parts.join(', ') + '.' + (saves.isPerfect(game.mode, rec) ? ' A perfect clear.' : '') +
     (last ? ` That was the last level for now. Replay any level from Levels.` : '');
   els.winNext.hidden = last;
+  els.winNext.textContent = custom ? 'New board' : 'Next level';
 
   const t = token;
   endTimer = setTimeout(() => {
@@ -631,7 +670,7 @@ function detonate(cell) {
 function applyMode(mode) {
   save.mode = mode;
   store.write(save);
-  startLevel(level);
+  restart();
 }
 
 function requestModeSwitch() {
@@ -643,6 +682,98 @@ function requestModeSwitch() {
   } else {
     applyMode(target);
   }
+}
+
+
+/* ---- Custom boards ------------------------------------------------------ */
+
+function bandName(id) {
+  return BANDS.find((b) => b.id === id)?.name ?? id;
+}
+
+function boardName() {
+  return custom ? `Custom ${bandName(custom.band)}` : `Level ${level}`;
+}
+
+let worker = null;
+let generating = 0; // bumped per request, so a stale result is ignored
+
+function cancelGeneration() {
+  generating++;
+  worker?.terminate();
+  worker = null;
+  els.stage.classList.remove('is-generating');
+}
+
+function randomKey() {
+  const bytes = new Uint32Array(2);
+  crypto.getRandomValues(bytes);
+  return Array.from(bytes, (n) => n.toString(36)).join('').slice(0, 10);
+}
+
+/* Builds a board for band + key in a worker (a larger board can take a few
+   seconds) and starts it. The same band and key always give the same board,
+   which is what makes ?custom= links shareable. Falls back to the main thread
+   if workers are unavailable. */
+function generateCustom(band, key = randomKey()) {
+  cancelGeneration();
+  const request = generating;
+  const { W, H } = difficulty(band);
+  const label = `${bandName(band)} ${W}×${H}`;
+  closeDialogs();
+  stopAiming();
+  els.stage.classList.add('is-generating');
+  setStatus(`Generating a new ${label} board. This can take a few seconds.`);
+
+  const done = (text) => {
+    if (request !== generating) return;
+    worker?.terminate();
+    worker = null;
+    startCustom({ band, key, board: decodeBoard(text) });
+    setStatus(`New ${label} board. Share this page's link to share the board.`, 5000);
+  };
+
+  try {
+    worker = new Worker(new URL('./worker.js', import.meta.url), { type: 'module' });
+  } catch {
+    worker = null;
+  }
+  if (!worker) {
+    // No workers: generate here. The page is unresponsive meanwhile.
+    setTimeout(() => {
+      const found = searchBoard(difficulty(band), (v) => customSeed(key, v), { maxVariants: 20000, goodEnough: 1 });
+      done(encodeBoard(found.board));
+    }, 50);
+    return;
+  }
+  worker.onmessage = (e) => {
+    if (request !== generating) return;
+    if (e.data.type === 'progress') {
+      setStatus(`Generating a new ${label} board. This can take a few seconds. Tried ${e.data.tried} layouts.`);
+    } else if (e.data.type === 'done') {
+      done(e.data.text);
+    }
+  };
+  worker.onerror = () => {
+    if (request !== generating) return;
+    cancelGeneration();
+    setStatus('Could not generate a board. Please try again.', 5000);
+  };
+  worker.postMessage({ band, key });
+}
+
+for (const band of BANDS) {
+  const o = document.createElement('option');
+  o.value = band.id;
+  o.textContent = `${band.name} · ${band.size[0]}×${band.size[1]}`;
+  els.makeBand.append(o);
+}
+els.makeGo.addEventListener('click', () => generateCustom(els.makeBand.value));
+
+/* `?custom=` value -> { band, key }, or null. */
+function parseCustomParam(value) {
+  const m = /^([a-z]+)-([a-z0-9]{1,16})$/.exec(value ?? '');
+  return m && BANDS.some((b) => b.id === m[1]) ? { band: m[1], key: m[2] } : null;
 }
 
 
@@ -659,7 +790,7 @@ function closeDialogs() {
 function openLevels() {
   stopAiming();
   const records = save.completed[save.mode];
-  const top = Math.max(save.maxUnlocked, level);
+  const top = Math.max(save.maxUnlocked, save.currentLevel);
   els.levelsTitle.textContent = save.mode === 'items' ? 'Levels · items mode' : 'Levels';
   els.perfectKey.hidden = save.mode !== 'basic';
   const frag = document.createDocumentFragment();
@@ -683,7 +814,7 @@ function openLevels() {
       b.classList.add('is-perfect');
       notes.push('perfect');
     }
-    if (n === level) {
+    if (!custom && n === level) {
       b.setAttribute('aria-current', 'true');
       notes.push('current');
     }
@@ -691,6 +822,7 @@ function openLevels() {
     frag.append(b);
   }
   els.levelGrid.replaceChildren(frag);
+  if (custom) els.makeBand.value = custom.band;
   showDialog(els.levelsDialog);
   els.levelGrid.querySelector('[aria-current]')?.scrollIntoView({ block: 'nearest' });
 }
@@ -744,8 +876,8 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && aiming && !document.querySelector('dialog[open]')) stopAiming();
 });
 
-els.restart.addEventListener('click', () => startLevel(level));
-els.next.addEventListener('click', () => startLevel(Math.min(MAX_LEVEL, level + 1)));
+els.restart.addEventListener('click', restart);
+els.next.addEventListener('click', next);
 els.hint.addEventListener('click', handleHint);
 els.levels.addEventListener('click', openLevels);
 els.mode.addEventListener('click', requestModeSwitch);
@@ -760,8 +892,8 @@ for (const dialog of [els.winDialog, els.loseDialog, els.levelsDialog, els.confi
   dialog.addEventListener('close', () => {
     const value = dialog.returnValue;
     dialog.returnValue = '';
-    if (value === 'next') startLevel(Math.min(MAX_LEVEL, level + 1));
-    else if (value === 'restart') startLevel(level);
+    if (value === 'next') next();
+    else if (value === 'restart') restart();
     else if (value === 'switch') applyMode(dialog.dataset.target);
   });
   // A click on the backdrop (outside the panel) closes the dialog.
@@ -810,15 +942,18 @@ wide.addEventListener('change', fit);
 
 /* ---- Boot --------------------------------------------------------------- */
 
-const fromUrl = saves.parseLevelParam(new URLSearchParams(window.location.search).get('level'));
-if (loaded.generatorChanged) {
-  save.generatorVersion = GENERATOR_VERSION;
+const query = new URLSearchParams(window.location.search);
+const fromUrl = saves.parseLevelParam(query.get('level'));
+const customFromUrl = parseCustomParam(query.get('custom'));
+if (loaded.levelsChanged) {
+  save.levelsVersion = LEVELS_VERSION;
   store.write(save);
 }
 fitBoard();
 startLevel(fromUrl ?? save.currentLevel);
 fitBoard();
 fitOrientation();
-if (loaded.generatorChanged) {
+if (customFromUrl) generateCustom(customFromUrl.band, customFromUrl.key);
+if (loaded.levelsChanged) {
   setStatus('Levels have been updated since your last visit. Your level number is kept.', 6000);
 }

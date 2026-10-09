@@ -1,8 +1,12 @@
-/* Give Way — level generation and board rules.
+/* Give Way — board rules, level generation, and the board text format.
  *
- * Pure logic: no DOM, no timers, no Math.random(), no Date. Everything that
- * decides what a level looks like flows from the seeded PRNG below, so level N
- * is the same on every device, forever — until GENERATOR_VERSION is bumped.
+ * Pure logic: no DOM, no timers, no Math.random(), no Date. Generation flows
+ * from the seeded PRNG below, so a seed always gives the same board.
+ *
+ * The 100 levels are NOT generated in the browser. tools/give-way-levels.mjs
+ * generates them offline (as slowly as it likes) and stores the boards in
+ * levels.js in the compact text format at the end of this file; the game only
+ * decodes them. The generator also runs in the browser for custom boards.
  *
  * Coordinates: (x, y) with (0, 0) at the top left. An arrow is
  *   { id, dir, cells: [{x, y}, ...] }
@@ -10,17 +14,11 @@
  * direction the head points ('up' | 'right' | 'down' | 'left').
  */
 
-import { LEVEL_VARIANTS } from './levels.js';
-
-/* Bump when the generator changes in any way that alters existing levels.
-   The save file records it, and the game tells players when it changes. */
-export const GENERATOR_VERSION = 1;
-
 /* Part of every seed. Deliberately NOT derived from the game's display name:
-   renaming the game must not regenerate every level. */
+   renaming the game must not change what a seed produces. */
 const SEED_NAMESPACE = 'give-way';
 
-/* Levels 1-100 are designed (see LEVEL_BANDS); what comes after is undecided. */
+/* Levels 1-100 are designed (see BANDS); what comes after is undecided. */
 export const MAX_LEVEL = 100;
 
 export const DIRS = Object.freeze({
@@ -59,11 +57,13 @@ export function mulberry32(seed) {
   };
 }
 
-/* `variant` > 0 picks an alternative layout for the same level (see
-   generate); variant 0 is the level's primary seed. */
-export function seedFor(level, variant = 0) {
-  const base = `${SEED_NAMESPACE}:v${GENERATOR_VERSION}:${level}`;
-  return hashString(variant ? `${base}:${variant}` : base);
+/* Seeds for the offline level search and for custom boards. Each tries
+   variants 0, 1, 2, ... until one meets its targets (see searchBoard). */
+export function levelSeed(level, variant) {
+  return hashString(`${SEED_NAMESPACE}:level:${level}:${variant}`);
+}
+export function customSeed(key, variant) {
+  return hashString(`${SEED_NAMESPACE}:custom:${key}:${variant}`);
 }
 
 /* Integer in [lo, hi], inclusive. */
@@ -83,47 +83,53 @@ function shuffle(rng, items) {
 /* ---- Difficulty curve -------------------------------------------------- */
 
 /* One row per band of levels; a level uses the first row whose upTo it does
-   not exceed.
+   not exceed. Custom boards use a band by its id.
      size      [width, height]. Boards are generated portrait; the UI turns
                them a quarter turn on landscape screens, which changes nothing
                about the puzzle or its solution.
      len       [min, max] arrow length when placed, before tails grow
-     fill      share of cells the placement phase tries to cover
+     fill      share of the interior the placement phase tries to cover
      search    how each placement is chosen (see buildBoard):
                  candidates  drawn per placement
                  blocked     score weight for each free arrow a candidate blocks
                  ray         score weight for ray length
                  targeted    share of candidates grown from a free arrow's ray
-                 lane        share of candidates headed down a free arrow's lane
-                 minRay      shortest ray allowed; 0 lets arrows point straight
-                             off the edge, where nothing can ever block them
                  growTails   once placed, tails grow into leftover space up to
                              this many cells per arrow (see growTails)
-     minFill   share of cells every level must cover
+                 frame       chance that each rim segment is laid; 0 or absent
+                             means no frame (see placeFrame)
+     minFill   share of cells every board must cover
+     minAvgLen shortest acceptable mean arrow length (see shapeStats)
      targets   [low, high] for each difficultyStats share: free at the start,
-               after 20% of arrows are gone, after 50%. Every level must land
-               inside its band's ranges; see levels.js. */
-const EASY_SEARCH = Object.freeze({ candidates: 20, blocked: 12, ray: 2, growTails: 30 });
-const HARD_SEARCH = Object.freeze({
-  candidates: 40, blocked: 20, ray: 2, targeted: 0.8, lane: 0.5, minRay: 1, growTails: 30,
-});
+               after 20% of arrows are gone, after 50%. Every board must land
+               inside its band's ranges. */
 const MIN_FILL = 0.9;
+/* At most this share of arrows may point straight at another's tail. */
+export const MAX_CHAIN = 0.05;
 
-const LEVEL_BANDS = Object.freeze([
+export const BANDS = Object.freeze([
   {
-    upTo: 5, size: [8, 12], len: [2, 5], fill: 0.75, search: EASY_SEARCH, minFill: MIN_FILL,
+    id: 'easy', name: 'Easy', upTo: 5, size: [8, 12], len: [5, 14], fill: 0.85,
+    search: { candidates: 20, blocked: 12, ray: 2, growTails: 40 },
+    minFill: MIN_FILL, minAvgLen: 8,
     targets: { open0: [0.2, 0.4], open20: [0.2, 0.4], open50: [0.3, 0.5] },
   },
   {
-    upTo: 20, size: [8, 12], len: [2, 5], fill: 0.75, search: HARD_SEARCH, minFill: MIN_FILL,
+    id: 'medium', name: 'Medium', upTo: 20, size: [8, 12], len: [5, 14], fill: 0.85,
+    search: { candidates: 30, blocked: 16, ray: 2, targeted: 0.6, growTails: 40 },
+    minFill: MIN_FILL, minAvgLen: 8,
     targets: { open0: [0.15, 0.25], open20: [0.2, 0.3], open50: [0.25, 0.35] },
   },
   {
-    upTo: 50, size: [12, 18], len: [2, 5], fill: 0.88, search: HARD_SEARCH, minFill: MIN_FILL,
+    id: 'hard', name: 'Hard', upTo: 50, size: [18, 26], len: [8, 24], fill: 0.9,
+    search: { candidates: 40, blocked: 20, ray: 2, targeted: 0.6, growTails: 60, frame: 1 },
+    minFill: MIN_FILL, minAvgLen: 12,
     targets: { open0: [0.1, 0.2], open20: [0.15, 0.25], open50: [0.15, 0.25] },
   },
   {
-    upTo: 100, size: [12, 18], len: [2, 5], fill: 0.88, search: HARD_SEARCH, minFill: MIN_FILL,
+    id: 'expert', name: 'Expert', upTo: 100, size: [22, 30], len: [6, 18], fill: 0.9,
+    search: { candidates: 40, blocked: 20, ray: 2, targeted: 0.8, growTails: 60, frame: 1 },
+    minFill: MIN_FILL, minAvgLen: 12,
     targets: { open0: [0.05, 0.15], open20: [0.05, 0.15], open50: [0.1, 0.2] },
   },
 ].map((band) => Object.freeze(band)));
@@ -132,12 +138,17 @@ export function isValidLevel(level) {
   return Number.isInteger(level) && level >= 1 && level <= MAX_LEVEL;
 }
 
-export function difficulty(level) {
-  const band = LEVEL_BANDS.find((b) => level <= b.upTo);
+/* Generation parameters for a band (by id) or for a level (by number). */
+export function difficulty(levelOrBand) {
+  const band =
+    typeof levelOrBand === 'string'
+      ? BANDS.find((b) => b.id === levelOrBand)
+      : BANDS.find((b) => levelOrBand <= b.upTo);
   const [W, H] = band.size;
   const [minLen, maxLen] = band.len;
   return {
-    W, H, minLen, maxLen, fill: band.fill, search: band.search, minFill: band.minFill, targets: band.targets,
+    band: band.id, W, H, minLen, maxLen, fill: band.fill, search: band.search,
+    minFill: band.minFill, minAvgLen: band.minAvgLen, targets: band.targets,
   };
 }
 
@@ -227,106 +238,115 @@ export function isSolvable(board) {
 
 /* ---- Generation -------------------------------------------------------- */
 
+/* Grid value for the two outer rings while they are held back for the frame
+   (see placeFrame). Bodies cannot use them; rays pass through them. */
+const RESERVED = -2;
 
-/* Draws one candidate arrow, or null if the random pick does not fit. The
-   head's ray must be clear of every arrow placed so far, and the body never
-   steps onto that ray, so the arrow can always exit once later arrows are gone. */
-function drawCandidate(rng, ctx, fixed = null) {
-  const { W, grid, inBounds, empties, minLen, maxLen } = ctx;
-  const start = fixed ? fixed.head : empties[randInt(rng, 0, empties.length - 1)];
-  const hx = start % W;
-  const hy = Math.floor(start / W);
-  const dirName = fixed ? fixed.dirName : DIR_NAMES[randInt(rng, 0, 3)];
-  const d = DIRS[dirName];
-
-  const ray = [];
-  for (let x = hx + d.x, y = hy + d.y; inBounds(x, y); x += d.x, y += d.y) {
-    const i = y * W + x;
-    if (grid[i] !== -1) return null;
-    ray.push(i);
-  }
-  const onRay = new Set(ray);
-
-  // The first body cell sits directly behind the head, so the last segment
-  // always agrees with dir.
-  const bx = hx - d.x;
-  const by = hy - d.y;
-  if (!inBounds(bx, by) || grid[by * W + bx] !== -1) return null;
-
-  const body = [start, by * W + bx];
-  const own = new Set(body);
-  const targetLen = randInt(rng, minLen, maxLen);
-  while (body.length < targetLen) {
-    const cur = body[body.length - 1];
-    const cx = cur % W;
-    const cy = Math.floor(cur / W);
-    let next = -1;
-    for (const name of shuffle(rng, [...DIR_NAMES])) {
-      const nx = cx + DIRS[name].x;
-      const ny = cy + DIRS[name].y;
-      if (!inBounds(nx, ny)) continue;
-      const ni = ny * W + nx;
-      if (grid[ni] === -1 && !own.has(ni) && !onRay.has(ni)) {
-        next = ni;
-        break;
+/* Grows a path from `start` through free cells (empty and not in `avoid`),
+   up to `len` cells. With probability `straight` it carries straight on;
+   otherwise it takes the free neighbour with the fewest free neighbours of its
+   own, which hugs what is already placed and strands fewer single cells. */
+function walk(rng, ctx, start, len, avoid, straight) {
+  const { W, grid, inBounds } = ctx;
+  const path = [start];
+  const own = new Set(path);
+  const free = (i) => grid[i] === -1 && !own.has(i) && !avoid.has(i);
+  const freeNeighbours = (i) => {
+    let n = 0;
+    for (const d of DIR_NAMES) {
+      const x = (i % W) + DIRS[d].x;
+      const y = Math.floor(i / W) + DIRS[d].y;
+      if (inBounds(x, y) && free(y * W + x)) n++;
+    }
+    return n;
+  };
+  let last = null;
+  while (path.length < len) {
+    const cur = path[path.length - 1];
+    const options = [];
+    for (const d of shuffle(rng, [...DIR_NAMES])) {
+      const x = (cur % W) + DIRS[d].x;
+      const y = Math.floor(cur / W) + DIRS[d].y;
+      if (inBounds(x, y) && free(y * W + x)) options.push({ d, i: y * W + x });
+    }
+    if (!options.length) break;
+    let pick = last && rng() < straight ? options.find((o) => o.d === last) : null;
+    if (!pick) {
+      let fewest = Infinity;
+      for (const o of options) {
+        const n = freeNeighbours(o.i);
+        if (n < fewest) {
+          fewest = n;
+          pick = o;
+        }
       }
     }
-    if (next === -1) break;
-    body.push(next);
-    own.add(next);
+    path.push(pick.i);
+    own.add(pick.i);
+    last = pick.d;
   }
-  return { dirName, body, ray }; // body runs head -> tail
+  return path;
 }
 
-/* Draws a candidate whose body passes through `start`, an empty cell on the
-   ray of an arrow that can currently exit, so placing it blocks that arrow.
-   A short walk is grown from `start`, then either end may become the head,
-   subject to the same ray rules as drawCandidate. */
-function drawTargeted(rng, ctx, start) {
-  const { W, grid, inBounds, minLen, maxLen } = ctx;
-  const walk = [start];
-  const own = new Set(walk);
-  const targetLen = randInt(rng, minLen, maxLen);
-  while (walk.length < targetLen) {
-    const cur = walk[walk.length - 1];
-    const cx = cur % W;
-    const cy = Math.floor(cur / W);
-    let next = -1;
-    for (const name of shuffle(rng, [...DIR_NAMES])) {
-      const nx = cx + DIRS[name].x;
-      const ny = cy + DIRS[name].y;
-      if (!inBounds(nx, ny)) continue;
-      const ni = ny * W + nx;
-      if (grid[ni] === -1 && !own.has(ni)) {
-        next = ni;
-        break;
-      }
-    }
-    if (next === -1) break;
-    walk.push(next);
-    own.add(next);
+/* The ray of a head at cell h pointing (dx, dy), or null if a placed arrow
+   (or one of `own`) is in the way. Reserved cells do not block. */
+function clearRay(ctx, h, dx, dy, own) {
+  const { W, grid, inBounds } = ctx;
+  const ray = [];
+  for (let x = (h % W) + dx, y = Math.floor(h / W) + dy; inBounds(x, y); x += dx, y += dy) {
+    const i = y * W + x;
+    if (grid[i] >= 0 || own.has(i)) return null;
+    ray.push(i);
   }
-  if (walk.length < 2) return null;
+  return ray;
+}
 
-  // Try both ends as the head, in random order. body runs head -> tail.
-  const options = rng() < 0.5 ? [[...walk].reverse(), walk] : [walk, [...walk].reverse()];
-  for (const body of options) {
-    const h = body[0];
-    const p = body[1];
+/* Trims a body (head -> tail) so its tail is not the cell straight in front
+   of another arrow's head: two arrows meeting head to tail read as one
+   broken line and give the order away. */
+function untangle(body, front) {
+  while (body.length > 2 && front.has(body[body.length - 1])) body.pop();
+  return front.has(body[body.length - 1]) ? null : body;
+}
+
+/* A candidate with its head at a random free cell, pointing a random way:
+   its ray must be clear of everything placed so far, and the body walks away
+   from behind the head without touching that ray, so it can never block
+   itself and can always leave once later arrows are gone. */
+function drawCandidate(rng, ctx) {
+  const { W, grid, inBounds, empties, minLen, maxLen, front, straight } = ctx;
+  const h = empties[randInt(rng, 0, empties.length - 1)];
+  const dirName = DIR_NAMES[randInt(rng, 0, 3)];
+  const d = DIRS[dirName];
+  const ray = clearRay(ctx, h, d.x, d.y, new Set([h]));
+  if (!ray) return null;
+  const bx = (h % W) - d.x;
+  const by = Math.floor(h / W) - d.y;
+  if (!inBounds(bx, by) || grid[by * W + bx] !== -1) return null;
+  const rest = walk(rng, ctx, by * W + bx, randInt(rng, minLen, maxLen) - 1, new Set([h, ...ray]), straight);
+  const body = untangle([h, ...rest], front);
+  return body && { dirName, body, ray };
+}
+
+/* A candidate grown through `start`, an empty cell on the ray of an arrow
+   that can currently leave, so placing it blocks that arrow. Either end of
+   the walk may become the head, if its ray is clear. */
+function drawTargeted(rng, ctx, start) {
+  const { W, minLen, maxLen, front, straight } = ctx;
+  const path = walk(rng, ctx, start, randInt(rng, minLen, maxLen), new Set(), straight);
+  if (path.length < 2) return null;
+  const ends = rng() < 0.5 ? [path, [...path].reverse()] : [[...path].reverse(), path];
+  for (const order of ends) {
+    const h = order[0];
+    const p = order[1];
     const dx = (h % W) - (p % W);
     const dy = Math.floor(h / W) - Math.floor(p / W);
+    const ray = clearRay(ctx, h, dx, dy, new Set(order));
+    if (!ray) continue;
+    const body = untangle([...order], front);
+    if (!body) continue;
     const dirName = DIR_NAMES.find((n) => DIRS[n].x === dx && DIRS[n].y === dy);
-    const ray = [];
-    let ok = true;
-    for (let x = (h % W) + dx, y = Math.floor(h / W) + dy; inBounds(x, y); x += dx, y += dy) {
-      const i = y * W + x;
-      if (grid[i] !== -1 || own.has(i)) {
-        ok = false;
-        break;
-      }
-      ray.push(i);
-    }
-    if (ok) return { dirName, body, ray };
+    return { dirName, body, ray };
   }
   return null;
 }
@@ -337,11 +357,12 @@ function drawTargeted(rng, ctx, start) {
    need their rays clear. Covering the ray of an arrow placed before k is
    fine — it only means that arrow waits for k, which it already did. So
    solvability is untouched, and every growth can only block more arrows.
+   Cells straight in front of a head are left alone, so no tail ends there.
 
    Repeats rounds over all arrows (in a seeded order) until no tail can grow
    or `maxLen` caps them. Prefers the neighbour with the fewest empty
    neighbours, so narrow gaps are filled before they become isolated holes. */
-function growTails(rng, { W, grid, inBounds, placed, rayOwners, rays }, maxLen) {
+function growTails(rng, { W, grid, inBounds, placed, rayOwners, rays, front }, maxLen) {
   const onOwnRay = placed.map((_, k) => new Set(rays[k]));
   const emptyNeighbours = (i) => {
     let n = 0;
@@ -366,7 +387,7 @@ function growTails(rng, { W, grid, inBounds, placed, rayOwners, rays }, maxLen) 
         const y = tail.y + DIRS[name].y;
         if (!inBounds(x, y)) continue;
         const i = y * W + x;
-        if (grid[i] !== -1 || onOwnRay[k].has(i)) continue;
+        if (grid[i] !== -1 || onOwnRay[k].has(i) || front.has(i)) continue;
         if (rayOwners[i].some((j) => j > k)) continue;
         const score = emptyNeighbours(i);
         if (score < bestScore) {
@@ -382,42 +403,97 @@ function growTails(rng, { W, grid, inBounds, placed, rayOwners, rays }, maxLen) 
   }
 }
 
+/* Lays arrows along the two outer rings, which were held back while the
+   interior was built. Each side runs one way and is cut into segments. A
+   segment is a hairpin: its tail runs back along the inner ring, steps out to
+   the edge, and its head runs forward along the edge. So the head of one
+   segment points into the side of the next one, never at its tail. A
+   segment's ray runs over the segments ahead of it, so on each side only the
+   one at the end can leave first and the rest queue behind it; and since the
+   frame covers the rim, it blocks every interior arrow that points outward.
+
+   Solvability: frame arrows are placed after every interior arrow, so lying
+   on interior rays is allowed. Within a side, segments are placed from the
+   far end towards the end they point at, so each ray only crosses segments
+   placed later. A ray that runs off a side's end continues into the next
+   side's corner; sides are placed left, bottom, right, top, which always puts
+   that corner's owner later, so there is no cycle.
+
+   search.frame is the chance that each segment is laid at all; skipped
+   segments leave gaps through which interior arrows can see out. */
+function placeFrame(rng, { W, H, grid, placed, front }, search) {
+  const [minLen, maxLen] = search.frameLen ?? [4, 10];
+  const at = (x, y) => y * W + x;
+  const range = (a, b) => Array.from({ length: Math.max(0, b - a + 1) }, (_, k) => a + k);
+  // Edge cells of each side in increasing order, each with its inward
+  // neighbour on the inner ring when that neighbour belongs to this side.
+  const sides = [
+    { dirs: ['down', 'up'], cells: range(1, H - 2).map((y) => ({ e: at(0, y), i: y >= 2 && y <= H - 3 ? at(1, y) : -1 })) },
+    { dirs: ['right', 'left'], cells: range(0, W - 2).map((x) => ({ e: at(x, H - 1), i: x >= 1 ? at(x, H - 2) : -1 })) },
+    { dirs: ['down', 'up'], cells: range(1, H - 1).map((y) => ({ e: at(W - 1, y), i: y >= 2 && y <= H - 3 ? at(W - 2, y) : -1 })) },
+    { dirs: ['right', 'left'], cells: range(0, W - 1).map((x) => ({ e: at(x, 0), i: x >= 1 && x <= W - 2 ? at(x, 1) : -1 })) },
+  ];
+  for (const side of sides) for (const c of side.cells) {
+    grid[c.e] = -1;
+    if (c.i >= 0) grid[c.i] = -1;
+  }
+  for (const side of sides) {
+    const dirName = side.dirs[randInt(rng, 0, 1)];
+    const run = dirName === side.dirs[0] ? side.cells : [...side.cells].reverse();
+    for (let start = 0; start < run.length; ) {
+      let n = Math.min(randInt(rng, minLen, maxLen), run.length - start);
+      if (run.length - start - n === 1) n++; // never leave a single cell behind
+      const seg = run.slice(start, start + n);
+      start += n;
+      if (rng() >= search.frame) continue;
+      const first = seg.findIndex((c) => c.i >= 0);
+      if (first === -1) continue;
+      // Head -> tail: back along the edge to the first paired cell, step in,
+      // then forward along the inner ring.
+      const edge = seg.slice(first).map((c) => c.e);
+      const inner = seg.slice(first).filter((c) => c.i >= 0).map((c) => c.i);
+      const body = untangle([...edge].reverse().concat(inner), front);
+      if (!body || body.length < 2) continue;
+      const index = placed.length;
+      for (const i of body) grid[i] = index;
+      placed.push({ dir: dirName, cells: [...body].reverse().map((i) => ({ x: i % W, y: Math.floor(i / W) })) });
+    }
+  }
+}
+
 /* Reverse construction: arrows are placed one at a time, and each must be
    able to exit when only the arrows placed before it exist. Removing them in
    reverse placement order therefore always clears the board. Which candidate
    is chosen at each step only affects difficulty, never solvability.
 
-   Each level has many possible layouts, one per seed variant. Which one is
-   used is decided offline by tools/give-way-levels.mjs, which searches for a
-   variant whose difficultyStats land inside the band's targets and records
-   it in levels.js. At runtime that layout is simply built: one pass, however
-   demanding the targets. */
-export function generate(level) {
-  if (!isValidLevel(level)) throw new RangeError(`Invalid level: ${level}`);
-  return buildBoard(level, LEVEL_VARIANTS[level - 1] ?? 0, difficulty(level));
-}
+   A seed gives one layout, which may or may not meet the band's targets, so
+   searchBoard tries a sequence of seeds until one does. */
 
-/* Offline search, used by tools/give-way-levels.mjs. Tries variants in order
-   and keeps the one inside every target range and closest to their middles,
-   stopping early once one is within `goodEnough` of the middle (as a fraction
-   of each range's half-width). A variant must also cover minFill of the board.
-   Fill and the opening share are exact and cheap, so a variant that misses
-   either is ranked on that alone and skips the sampled stats. */
-export function searchVariant(level, { maxVariants = 4000, goodEnough = 0.5 } = {}) {
-  const params = difficulty(level);
+/* Tries seeds seedOf(0), seedOf(1), ... and keeps the board inside every
+   target range and closest to their middles, stopping early once one is
+   within `goodEnough` of the middle (as a fraction of each range's
+   half-width). A board must also cover minFill of the board, have arrows
+   minAvgLen long on average, and keep head-to-tail chains under MAX_CHAIN.
+   Those and the opening share are exact and cheap, so a board that misses
+   any of them is ranked on that alone and skips the sampled stats. `onProgress(tried)` is called
+   every 25 tries, for UIs. */
+export function searchBoard(params, seedOf, { maxVariants = 4000, goodEnough = 0.5, level = 0, onProgress } = {}) {
   const range0 = params.targets.open0;
   let best = null;
   let tried = 0;
   for (let variant = 0; variant < maxVariants; variant++) {
     tried++;
-    const board = buildBoard(level, variant, params);
+    if (onProgress && tried % 25 === 0) onProgress(tried);
+    const board = buildBoard(seedOf(variant), params, level);
     const fill = coverage(board);
+    const shape = shapeStats(board);
     const open0 = exitableIds(createPosition(board)).length / board.arrows.length;
     let miss;
     let off = Infinity;
     let stats = null;
-    if (fill < params.minFill) {
-      miss = 2 + params.minFill - fill; // behind anything that filled the board
+    const shortBy = Math.max(0, (params.minAvgLen ?? 0) - shape.avgLen) / 10 + Math.max(0, shape.chain - MAX_CHAIN);
+    if (fill < params.minFill || shortBy > 0) {
+      miss = 2 + Math.max(0, params.minFill - fill) + shortBy; // behind any well-formed board
     } else if (open0 < range0[0] || open0 > range0[1]) {
       miss = 1 + targetMiss({ open0 }, { open0: range0 }); // behind anything that passed
     } else {
@@ -426,7 +502,7 @@ export function searchVariant(level, { maxVariants = 4000, goodEnough = 0.5 } = 
       off = targetOffCentre(stats, params.targets);
     }
     if (!best || miss < best.miss || (miss === best.miss && off < best.off)) {
-      best = { variant, miss, off, stats, fill };
+      best = { board, variant, miss, off, stats, fill, shape };
       if (miss === 0 && off <= goodEnough) break;
     }
   }
@@ -462,10 +538,10 @@ export function targetMiss(stats, targets) {
 /* Each placement draws search.candidates candidates and keeps the one that
    blocks the most arrows which could otherwise exit straight away, leaning
    towards long rays (arrows pointing across the board, which later arrows
-   are likely to block). This deepens the chains of "this must go before
-   that" and keeps the opening from being a free-for-all. */
-export function buildBoard(level, variant, { W, H, minLen, maxLen, fill, search }) {
-  const rng = mulberry32(seedFor(level, variant));
+   are likely to block) and long bodies. Then tails grow into what is left,
+   and the frame closes the rim. */
+export function buildBoard(seed, { W, H, minLen, maxLen, fill, search }, level = 0) {
+  const rng = mulberry32(seed);
   const size = W * H;
   const grid = new Int32Array(size).fill(-1);
   const inBounds = (x, y) => x >= 0 && y >= 0 && x < W && y < H;
@@ -473,8 +549,20 @@ export function buildBoard(level, variant, { W, H, minLen, maxLen, fill, search 
   const rayOwners = Array.from({ length: size }, () => []); // cell -> arrows whose ray crosses it
   const open = []; // open[j]: nothing placed since sits on arrow j's ray
   const rays = []; // rays[j]: arrow j's ray cells, from the head outwards
+  const front = new Set(); // the cell straight in front of each head
   let filled = 0;
-  const ctx = { W, grid, inBounds, empties: [...grid.keys()], minLen, maxLen };
+  if (search.frame) {
+    for (let i = 0; i < size; i++) {
+      const x = i % W;
+      const y = Math.floor(i / W);
+      if (Math.min(x, y, W - 1 - x, H - 1 - y) <= 1) grid[i] = RESERVED;
+    }
+  }
+  const ctx = {
+    W, grid, inBounds, minLen, maxLen, front, straight: search.straight ?? 0.3,
+    empties: [...grid.keys()].filter((i) => grid[i] === -1),
+  };
+  const area = ctx.empties.length;
 
   const blocks = (cand) => {
     const hit = new Set();
@@ -484,38 +572,24 @@ export function buildBoard(level, variant, { W, H, minLen, maxLen, fill, search 
 
   const maxAttempts = size * 40;
   let attempt = 0;
-  while (attempt < maxAttempts && filled < fill * size && ctx.empties.length) {
+  while (attempt < maxAttempts && filled < fill * area && ctx.empties.length) {
     let best = null;
-    let bestScore = -1;
-    // Empty cells on the rays of arrows that can still exit: where a targeted
-    // candidate starts. Only computed (and rng only consumed) when the band
-    // asks for targeted candidates, so other bands are unaffected.
+    let bestScore = -Infinity;
+    // Empty cells on the rays of arrows that can still leave: where targeted
+    // candidates start.
     let openCells = null;
-    let lanes = null;
     if (search.targeted) {
       openCells = [];
       for (const i of ctx.empties) if (rayOwners[i].some((j) => open[j])) openCells.push(i);
     }
-    if (search.lane) {
-      // A free arrow's ray is an empty lane to the edge. An arrow headed the
-      // same way from inside the lane always has a clear ray, and its body
-      // sits on the lane, so it always blocks the free arrow.
-      lanes = [];
-      for (let j = 0; j < placed.length; j++) if (open[j] && rays[j].length >= 2) lanes.push(j);
-    }
     for (let k = 0; k < search.candidates && attempt < maxAttempts; k++, attempt++) {
-      let cand;
-      if (lanes && lanes.length && rng() < search.lane) {
-        const j = lanes[randInt(rng, 0, lanes.length - 1)];
-        const t = randInt(rng, 1, rays[j].length - 1);
-        cand = drawCandidate(rng, ctx, { head: rays[j][t], dirName: placed[j].dir });
-      } else if (openCells && openCells.length && rng() < search.targeted) {
-        cand = drawTargeted(rng, ctx, openCells[randInt(rng, 0, openCells.length - 1)]);
-      } else {
-        cand = drawCandidate(rng, ctx);
-      }
+      const cand =
+        openCells && openCells.length && rng() < search.targeted
+          ? drawTargeted(rng, ctx, openCells[randInt(rng, 0, openCells.length - 1)])
+          : drawCandidate(rng, ctx);
       if (!cand || cand.body.length < 2 || cand.ray.length < (search.minRay ?? 0)) continue;
-      const score = blocks(cand) * search.blocked + cand.ray.length * search.ray + cand.body.length;
+      const score =
+        blocks(cand) * search.blocked + cand.ray.length * search.ray + cand.body.length * (search.length ?? 1);
       if (score > bestScore) {
         best = cand;
         bestScore = score;
@@ -529,15 +603,16 @@ export function buildBoard(level, variant, { W, H, minLen, maxLen, fill, search 
       for (const j of rayOwners[i]) open[j] = false;
     }
     for (const i of best.ray) rayOwners[i].push(index);
+    if (best.ray.length) front.add(best.ray[0]);
     open.push(true);
     rays.push(best.ray);
-    const cells = [...best.body].reverse().map((i) => ({ x: i % W, y: Math.floor(i / W) }));
-    placed.push({ dir: best.dirName, cells });
-    filled += cells.length;
+    placed.push({ dir: best.dirName, cells: [...best.body].reverse().map((i) => ({ x: i % W, y: Math.floor(i / W) })) });
+    filled += best.body.length;
     ctx.empties = ctx.empties.filter((i) => grid[i] === -1);
   }
 
-  if (search.growTails) growTails(rng, { W, grid, inBounds, placed, rayOwners, rays }, search.growTails);
+  if (search.growTails) growTails(rng, { W, grid, inBounds, placed, rayOwners, rays, front }, search.growTails);
+  if (search.frame) placeFrame(rng, { W, H, grid, placed, front }, search);
 
   // Shuffle so that ids do not leak the solution order.
   const arrows = shuffle(rng, placed).map((a, id) =>
@@ -546,9 +621,32 @@ export function buildBoard(level, variant, { W, H, minLen, maxLen, fill, search 
   const board = Object.freeze({ level, W, H, arrows: Object.freeze(arrows) });
 
   if (!isSolvable(board)) {
-    throw new Error(`Generator bug: level ${level} is not solvable`);
+    throw new Error(`Generator bug: seed ${seed} (level ${level}) is not solvable`);
   }
   return board;
+}
+
+
+/* ---- Shape measurement -------------------------------------------------- */
+
+/* How the arrows look, in numbers:
+     avgLen     mean arrow length in cells
+     chain      share of arrows whose head points straight at another arrow's
+                tail, which reads as one broken line and gives the order away */
+export function shapeStats(board) {
+  const { W, H } = board;
+  const tails = new Set(board.arrows.map((a) => a.cells[0].y * W + a.cells[0].x));
+  let cells = 0;
+  let chained = 0;
+  for (const a of board.arrows) {
+    cells += a.cells.length;
+    const h = head(a);
+    const d = DIRS[a.dir];
+    const x = h.x + d.x;
+    const y = h.y + d.y;
+    if (x >= 0 && y >= 0 && x < W && y < H && tails.has(y * W + x)) chained++;
+  }
+  return { avgLen: cells / board.arrows.length, chain: chained / board.arrows.length };
 }
 
 
@@ -594,4 +692,55 @@ export function difficultyStats(board, { samples = 20, seed = 1 } = {}) {
     open20: sums[0] / samples,
     open50: sums[1] / samples,
   };
+}
+
+
+/* ---- Board text format -------------------------------------------------- */
+
+/* A board as one short line of text, used to store the 100 levels:
+
+     "8x12:2kRRD 1cUUL ..."
+
+   width x height, then one word per arrow in id order: the tail's cell index
+   (y * width + x) in base 36, then one letter per step from the tail towards
+   the head (U R D L). The head's direction is the last step. */
+const STEP = Object.freeze({ U: 'up', R: 'right', D: 'down', L: 'left' });
+const LETTER = Object.freeze({ up: 'U', right: 'R', down: 'D', left: 'L' });
+
+export function encodeBoard(board) {
+  const words = board.arrows.map((arrow) => {
+    const tail = arrow.cells[0];
+    let word = (tail.y * board.W + tail.x).toString(36);
+    for (let i = 1; i < arrow.cells.length; i++) {
+      const dx = arrow.cells[i].x - arrow.cells[i - 1].x;
+      const dy = arrow.cells[i].y - arrow.cells[i - 1].y;
+      word += LETTER[DIR_NAMES.find((n) => DIRS[n].x === dx && DIRS[n].y === dy)];
+    }
+    return word;
+  });
+  return `${board.W}x${board.H}:${words.join(' ')}`;
+}
+
+export function decodeBoard(text, level = 0) {
+  const m = /^(\d+)x(\d+):(.*)$/.exec(text);
+  if (!m) throw new Error(`Bad board text for level ${level}`);
+  const W = Number(m[1]);
+  const H = Number(m[2]);
+  const arrows = m[3].split(' ').map((word, id) => {
+    const w = /^([0-9a-z]+)([URDL]+)$/.exec(word);
+    if (!w) throw new Error(`Bad arrow "${word}" in level ${level}`);
+    const t = parseInt(w[1], 36);
+    const cells = [{ x: t % W, y: Math.floor(t / W) }];
+    for (const letter of w[2]) {
+      const d = DIRS[STEP[letter]];
+      const p = cells[cells.length - 1];
+      cells.push({ x: p.x + d.x, y: p.y + d.y });
+    }
+    return Object.freeze({
+      id,
+      dir: STEP[w[2][w[2].length - 1]],
+      cells: Object.freeze(cells.map((c) => Object.freeze(c))),
+    });
+  });
+  return Object.freeze({ level, W, H, arrows: Object.freeze(arrows) });
 }

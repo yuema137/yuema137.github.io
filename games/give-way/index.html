@@ -56,7 +56,7 @@
           <div class="gw-top">
             <h1 id="gw-title">Give Way</h1>
             <div class="gw-hud">
-              <p class="gw-level-label">Level <span id="gw-level">1</span>
+              <p class="gw-level-label"><span id="gw-level-word">Level</span> <span id="gw-level">1</span>
                 <span class="gw-tag" id="gw-mode-tag" hidden>Items</span></p>
               <span class="gw-timer" id="gw-timer" role="timer" aria-label="Time">0:00</span>
               <div class="gw-lives" id="gw-lives" role="img" aria-label="3 of 3 lives left"></div>
@@ -131,6 +131,15 @@
             <span id="gw-perfect-key"><i class="gw-key is-perfect"></i> Perfect: all lives, no hints</span>
           </p>
           <div class="gw-level-grid" id="gw-level-grid"></div>
+          <section class="gw-make" aria-labelledby="gw-make-title">
+            <h3 id="gw-make-title">Make a new board</h3>
+            <p class="muted">Generated in your browser. Larger boards can take a few seconds.</p>
+            <div class="gw-make-row">
+              <label class="sr-only" for="gw-make-band">Difficulty</label>
+              <select id="gw-make-band"></select>
+              <button type="button" class="btn btn--s" id="gw-make-go">Generate</button>
+            </div>
+          </section>
         </form>
       </dialog>
     </main>

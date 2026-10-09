@@ -210,3 +210,15 @@
 .gw-lvl.is-perfect::after,.gw-key.is-perfect{background:var(--gw-hint);
   box-shadow:0 0 0 2px var(--card-solid),0 0 0 3.5px var(--gw-hint)}
 .gw-key.is-perfect{margin-inline:3px 1px}
+
+
+/* ---- Custom boards ------------------------------------------------------ */
+.gw-make{border-top:1px solid var(--border);margin-top:16px;padding-top:14px}
+.gw-make h3{font-size:16px}
+.gw-make p{margin-top:4px;font-size:14px}
+.gw-make-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.gw-make select{font:inherit;font-size:15px;padding:8px 12px;border-radius:999px;
+  border:1px solid var(--border-hi);background:var(--card);color:var(--fg)}
+
+/* While a board is being generated the current one is dimmed and inert. */
+.gw-stage.is-generating .gw-board{opacity:.3;pointer-events:none;transition:opacity .2s}
