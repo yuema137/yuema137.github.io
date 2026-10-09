@@ -91,7 +91,7 @@ test('1b. pinned: the stored levels only change on purpose', () => {
   // bump LEVELS_VERSION in tools/give-way-levels.mjs and update this number.
   assert.equal(LEVELS_VERSION, 1);
   const all = levels(1, MAX_LEVEL).map((n) => encodeBoard(board(n))).join('|');
-  assert.equal(hashString(all), 4269016526);
+  assert.equal(hashString(all), 4069254539);
 });
 
 test('2. solvable: every level clears greedily', () => {
@@ -157,9 +157,9 @@ test('5. sizes: 8x12 to level 20, 18x26 to 50, 22x30 to 100', () => {
   }
 });
 
-test('5b. fill: every level covers at least 90% of the board', () => {
-  const low = levels(1, MAX_LEVEL).filter((n) => coverage(board(n)) < 0.9);
-  assert.deepEqual(low, [], 'under 90% filled (rerun tools/give-way-levels.mjs)');
+test('5b. fill: every level covers at least 95% of the board', () => {
+  const low = levels(1, MAX_LEVEL).filter((n) => coverage(board(n)) < 0.95);
+  assert.deepEqual(low, [], 'under 95% filled (rerun tools/give-way-levels.mjs)');
   const fills = levels(1, MAX_LEVEL).map((n) => coverage(board(n)));
   console.log(`        fill ${Math.round(100 * Math.min(...fills))}%-${Math.round(100 * Math.max(...fills))}%`);
 });

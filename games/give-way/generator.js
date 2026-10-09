@@ -103,7 +103,7 @@ function shuffle(rng, items) {
      targets   [low, high] for each difficultyStats share: free at the start,
                after 20% of arrows are gone, after 50%. Every board must land
                inside its band's ranges. */
-const MIN_FILL = 0.9;
+const MIN_FILL = 0.95;
 /* At most this share of arrows may point straight at another's tail. */
 export const MAX_CHAIN = 0.05;
 
@@ -243,11 +243,13 @@ export function isSolvable(board) {
 const RESERVED = -2;
 
 /* Grows a path from `start` through free cells (empty and not in `avoid`),
-   up to `len` cells. With probability `straight` it carries straight on;
-   otherwise it takes the free neighbour with the fewest free neighbours of its
-   own, which hugs what is already placed and strands fewer single cells. */
+   up to `len` cells. Each step: with probability `straight` it carries
+   straight on; otherwise, with probability `hug`, it takes the free neighbour
+   with the fewest free neighbours of its own (which hugs what is placed and
+   strands fewer single cells); otherwise it turns at random. Always hugging
+   draws tight back-and-forth combs that are easy to read, so it is mixed. */
 function walk(rng, ctx, start, len, avoid, straight) {
-  const { W, grid, inBounds } = ctx;
+  const { W, grid, inBounds, hug } = ctx;
   const path = [start];
   const own = new Set(path);
   const free = (i) => grid[i] === -1 && !own.has(i) && !avoid.has(i);
@@ -271,6 +273,7 @@ function walk(rng, ctx, start, len, avoid, straight) {
     }
     if (!options.length) break;
     let pick = last && rng() < straight ? options.find((o) => o.d === last) : null;
+    if (!pick && rng() >= hug) pick = options[0]; // options are already shuffled
     if (!pick) {
       let fewest = Infinity;
       for (const o of options) {
@@ -361,9 +364,17 @@ function drawTargeted(rng, ctx, start) {
 
    Repeats rounds over all arrows (in a seeded order) until no tail can grow
    or `maxLen` caps them. Prefers the neighbour with the fewest empty
-   neighbours, so narrow gaps are filled before they become isolated holes. */
+   neighbours, so narrow gaps are filled before they become isolated holes.
+
+   Then bulges: where two empty cells sit side by side next to a straight
+   piece of a body, the body detours through them (a-b becomes a-c-d-b). That
+   fills gaps no tail can reach and keeps the head and tail where they are.
+   The same rule applies to the new cells, and the piece next to the head is
+   left alone so the head keeps its direction. Growing and bulging alternate
+   until neither changes anything. */
 function growTails(rng, { W, grid, inBounds, placed, rayOwners, rays, front }, maxLen) {
   const onOwnRay = placed.map((_, k) => new Set(rays[k]));
+  const usable = (k, i) => grid[i] === -1 && !onOwnRay[k].has(i) && !rayOwners[i].some((j) => j > k);
   const emptyNeighbours = (i) => {
     let n = 0;
     for (const name of DIR_NAMES) {
@@ -387,8 +398,7 @@ function growTails(rng, { W, grid, inBounds, placed, rayOwners, rays, front }, m
         const y = tail.y + DIRS[name].y;
         if (!inBounds(x, y)) continue;
         const i = y * W + x;
-        if (grid[i] !== -1 || onOwnRay[k].has(i) || front.has(i)) continue;
-        if (rayOwners[i].some((j) => j > k)) continue;
+        if (!usable(k, i) || front.has(i)) continue;
         const score = emptyNeighbours(i);
         if (score < bestScore) {
           best = i;
@@ -400,65 +410,98 @@ function growTails(rng, { W, grid, inBounds, placed, rayOwners, rays, front }, m
       cells.unshift({ x: best % W, y: Math.floor(best / W) });
       grew = true;
     }
+    for (const k of shuffle(rng, [...placed.keys()])) {
+      const cells = placed[k].cells;
+      // Pieces a-b, excluding the last one (into the head).
+      for (let n = 0; n + 2 < cells.length && cells.length + 2 <= maxLen; n++) {
+        const a = cells[n];
+        const b = cells[n + 1];
+        for (const p of shuffle(rng, [...DIR_NAMES])) {
+          const { x: px, y: py } = DIRS[p];
+          if (px === b.x - a.x && py === b.y - a.y) continue; // along the piece
+          if (px === a.x - b.x && py === a.y - b.y) continue;
+          const c = { x: a.x + px, y: a.y + py };
+          const d = { x: b.x + px, y: b.y + py };
+          if (!inBounds(c.x, c.y) || !inBounds(d.x, d.y)) continue;
+          const ci = c.y * W + c.x;
+          const di = d.y * W + d.x;
+          if (!usable(k, ci) || !usable(k, di)) continue;
+          grid[ci] = k;
+          grid[di] = k;
+          cells.splice(n + 1, 0, c, d);
+          grew = true;
+          break;
+        }
+      }
+    }
   }
 }
 
-/* Lays arrows along the two outer rings, which were held back while the
-   interior was built. Each side runs one way and is cut into segments. A
-   segment is a hairpin: its tail runs back along the inner ring, steps out to
-   the edge, and its head runs forward along the edge. So the head of one
-   segment points into the side of the next one, never at its tail. A
-   segment's ray runs over the segments ahead of it, so on each side only the
-   one at the end can leave first and the rest queue behind it; and since the
-   frame covers the rim, it blocks every interior arrow that points outward.
+/* Lays arrows around the rim (the two outer rings), which was held back
+   while the interior was built. Each side runs one way. Along it, heads are
+   placed at irregular intervals on the edge, each pointing along the side;
+   from each head the body walks back and wanders through this side's strip of
+   the rim (and any interior cell still free) for a random length, so frame
+   arrows come in all shapes rather than one repeated hairpin. A head's ray
+   runs over the edge ahead of it, so on each side only the arrow nearest the
+   end can leave first; and since the frame covers the rim, it blocks every
+   interior arrow that points outward.
 
    Solvability: frame arrows are placed after every interior arrow, so lying
-   on interior rays is allowed. Within a side, segments are placed from the
-   far end towards the end they point at, so each ray only crosses segments
-   placed later. A ray that runs off a side's end continues into the next
-   side's corner; sides are placed left, bottom, right, top, which always puts
-   that corner's owner later, so there is no cycle.
+   on interior rays is allowed. Within a side, heads are placed from the far
+   end towards the end they point at, and a body never enters the edge ahead
+   of its own head, so it never lies on the ray of a frame arrow placed after
+   it. A ray that runs off a side's end continues into the next side's corner;
+   sides are placed left, bottom, right, top, which always puts that corner's
+   owner later, so there is no cycle. Bodies stay out of other sides' strips.
 
-   search.frame is the chance that each segment is laid at all; skipped
-   segments leave gaps through which interior arrows can see out. */
-function placeFrame(rng, { W, H, grid, placed, front }, search) {
-  const [minLen, maxLen] = search.frameLen ?? [4, 10];
+   Records each arrow's ray in rays/rayOwners like the interior does, so tails
+   can grow into whatever is left afterwards. */
+function placeFrame(rng, ctx, { H, placed, rays, rayOwners, front }, search) {
+  const { W, grid } = ctx;
+  const [minLen, maxLen] = search.frameLen ?? [6, 20];
   const at = (x, y) => y * W + x;
   const range = (a, b) => Array.from({ length: Math.max(0, b - a + 1) }, (_, k) => a + k);
-  // Edge cells of each side in increasing order, each with its inward
-  // neighbour on the inner ring when that neighbour belongs to this side.
+  // Edge cells of each side in increasing order, and the inner-ring cells that
+  // belong to the side (the inward neighbours of its edge cells).
   const sides = [
-    { dirs: ['down', 'up'], cells: range(1, H - 2).map((y) => ({ e: at(0, y), i: y >= 2 && y <= H - 3 ? at(1, y) : -1 })) },
-    { dirs: ['right', 'left'], cells: range(0, W - 2).map((x) => ({ e: at(x, H - 1), i: x >= 1 ? at(x, H - 2) : -1 })) },
-    { dirs: ['down', 'up'], cells: range(1, H - 1).map((y) => ({ e: at(W - 1, y), i: y >= 2 && y <= H - 3 ? at(W - 2, y) : -1 })) },
-    { dirs: ['right', 'left'], cells: range(0, W - 1).map((x) => ({ e: at(x, 0), i: x >= 1 && x <= W - 2 ? at(x, 1) : -1 })) },
+    { dirs: ['down', 'up'], edge: range(1, H - 2).map((y) => at(0, y)), inner: range(2, H - 3).map((y) => at(1, y)) },
+    { dirs: ['right', 'left'], edge: range(0, W - 2).map((x) => at(x, H - 1)), inner: range(1, W - 2).map((x) => at(x, H - 2)) },
+    { dirs: ['down', 'up'], edge: range(1, H - 1).map((y) => at(W - 1, y)), inner: range(2, H - 3).map((y) => at(W - 2, y)) },
+    { dirs: ['right', 'left'], edge: range(0, W - 1).map((x) => at(x, 0)), inner: range(1, W - 2).map((x) => at(x, 1)) },
   ];
-  for (const side of sides) for (const c of side.cells) {
-    grid[c.e] = -1;
-    if (c.i >= 0) grid[c.i] = -1;
-  }
-  for (const side of sides) {
+  const sideOf = new Int8Array(W * H).fill(-1);
+  sides.forEach((side, k) => {
+    for (const i of [...side.edge, ...side.inner]) {
+      sideOf[i] = k;
+      grid[i] = -1;
+    }
+  });
+
+  sides.forEach((side, k) => {
     const dirName = side.dirs[randInt(rng, 0, 1)];
-    const run = dirName === side.dirs[0] ? side.cells : [...side.cells].reverse();
-    for (let start = 0; start < run.length; ) {
-      let n = Math.min(randInt(rng, minLen, maxLen), run.length - start);
-      if (run.length - start - n === 1) n++; // never leave a single cell behind
-      const seg = run.slice(start, start + n);
-      start += n;
-      if (rng() >= search.frame) continue;
-      const first = seg.findIndex((c) => c.i >= 0);
-      if (first === -1) continue;
-      // Head -> tail: back along the edge to the first paired cell, step in,
-      // then forward along the inner ring.
-      const edge = seg.slice(first).map((c) => c.e);
-      const inner = seg.slice(first).filter((c) => c.i >= 0).map((c) => c.i);
-      const body = untangle([...edge].reverse().concat(inner), front);
-      if (!body || body.length < 2) continue;
+    const d = DIRS[dirName];
+    const run = dirName === side.dirs[0] ? side.edge : [...side.edge].reverse();
+    for (let h = randInt(rng, 1, 4); h < run.length; h += randInt(rng, 3, 8)) {
+      const head = run[h];
+      const behind = run[h - 1];
+      if (grid[head] !== -1 || grid[behind] !== -1 || rng() >= search.frame) continue;
+      const ray = clearRay(ctx, head, d.x, d.y, new Set([head]));
+      if (!ray) continue;
+      const ahead = new Set(run.slice(h + 1));
+      // Bodies stay in this side's strip or the interior, off their own ray.
+      const avoid = { has: (i) => ahead.has(i) || (sideOf[i] !== -1 && sideOf[i] !== k) || i === head };
+      const rest = walk(rng, ctx, behind, randInt(rng, minLen, maxLen) - 1, avoid, ctx.straight);
+      const body = untangle([head, ...rest], front);
+      if (!body) continue;
       const index = placed.length;
       for (const i of body) grid[i] = index;
+      for (const i of ray) rayOwners[i].push(index);
+      if (ray.length) front.add(ray[0]);
+      rays.push(ray);
       placed.push({ dir: dirName, cells: [...body].reverse().map((i) => ({ x: i % W, y: Math.floor(i / W) })) });
     }
-  }
+  });
 }
 
 /* Reverse construction: arrows are placed one at a time, and each must be
@@ -559,7 +602,7 @@ export function buildBoard(seed, { W, H, minLen, maxLen, fill, search }, level =
     }
   }
   const ctx = {
-    W, grid, inBounds, minLen, maxLen, front, straight: search.straight ?? 0.3,
+    W, grid, inBounds, minLen, maxLen, front, straight: search.straight ?? 0.35, hug: search.hug ?? 0.5,
     empties: [...grid.keys()].filter((i) => grid[i] === -1),
   };
   const area = ctx.empties.length;
@@ -611,8 +654,12 @@ export function buildBoard(seed, { W, H, minLen, maxLen, fill, search }, level =
     ctx.empties = ctx.empties.filter((i) => grid[i] === -1);
   }
 
-  if (search.growTails) growTails(rng, { W, grid, inBounds, placed, rayOwners, rays, front }, search.growTails);
-  if (search.frame) placeFrame(rng, { W, H, grid, placed, front }, search);
+  const parts = { W, H, grid, inBounds, placed, rayOwners, rays, front };
+  if (search.growTails) growTails(rng, parts, search.growTails);
+  if (search.frame) {
+    placeFrame(rng, ctx, parts, search);
+    if (search.growTails) growTails(rng, parts, search.growTails);
+  }
 
   // Shuffle so that ids do not leak the solution order.
   const arrows = shuffle(rng, placed).map((a, id) =>
