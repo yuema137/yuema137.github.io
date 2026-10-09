@@ -64,11 +64,16 @@ const store = {
       return null;
     }
   },
+  /* Merges with whatever another tab may have saved meanwhile, writes, and
+     returns the merged save for this tab to carry on with. */
   write(save) {
     try {
-      window.localStorage.setItem(saves.SAVE_KEY, JSON.stringify(save));
+      const stored = saves.parseSave(window.localStorage.getItem(saves.SAVE_KEY)).save;
+      const merged = saves.mergeSaves(stored, save);
+      window.localStorage.setItem(saves.SAVE_KEY, JSON.stringify(merged));
+      return merged;
     } catch {
-      /* Playing without saving is fine. */
+      return save; /* Playing without saving is fine. */
     }
   },
 };
@@ -103,7 +108,7 @@ function startLevel(n) {
   custom = null;
   level = n;
   save.currentLevel = n;
-  store.write(save);
+  save = store.write(save);
   setUrl({ level: String(n) });
   startBoard(loadLevel(n));
 }
@@ -450,7 +455,8 @@ function flashError(id) {
     id,
     setTimeout(() => {
       errorTimers.delete(id);
-      parts.g.classList.remove('is-error');
+      // Look the arrow up again: the board may have been redrawn (turned) since.
+      arrowEls.get(id)?.g.classList.remove('is-error');
     }, rules.ERROR_MS)
   );
 }
@@ -562,7 +568,7 @@ function finishLevel(delay) {
   if (!custom) {
     const outcome = saves.recordWin(save, game.mode, level, rec);
     save = outcome.save;
-    store.write(save);
+    save = store.write(save);
     const best = save.completed[game.mode][level]?.bestTimeSec;
     if (outcome.newBestTime) timeNote = ' · New best!';
     else if (best !== undefined && best < rec.timeSec) timeNote = ` · Best ${saves.formatTime(best)}`;
@@ -669,7 +675,7 @@ function detonate(cell) {
 
 function applyMode(mode) {
   save.mode = mode;
-  store.write(save);
+  save = store.write(save);
   restart();
 }
 
@@ -702,7 +708,14 @@ function cancelGeneration() {
   generating++;
   worker?.terminate();
   worker = null;
-  els.stage.classList.remove('is-generating');
+  setGenerating(false);
+}
+
+/* While a board is being built, the current one and its controls are dimmed
+   and inert, so nothing is spent on a board about to be replaced. */
+function setGenerating(on) {
+  els.stage.classList.toggle('is-generating', on);
+  for (const el of els.stage.querySelectorAll('.gw-buttons, .gw-switch')) el.inert = on;
 }
 
 function randomKey() {
@@ -722,7 +735,7 @@ function generateCustom(band, key = randomKey()) {
   const label = `${bandName(band)} ${W}×${H}`;
   closeDialogs();
   stopAiming();
-  els.stage.classList.add('is-generating');
+  setGenerating(true);
   setStatus(`Generating a new ${label} board. This can take a few seconds.`);
 
   const done = (text) => {
@@ -947,13 +960,18 @@ const fromUrl = saves.parseLevelParam(query.get('level'));
 const customFromUrl = parseCustomParam(query.get('custom'));
 if (loaded.levelsChanged) {
   save.levelsVersion = LEVELS_VERSION;
-  store.write(save);
+  save = store.write(save);
 }
 fitBoard();
 startLevel(fromUrl ?? save.currentLevel);
 fitBoard();
 fitOrientation();
-if (customFromUrl) generateCustom(customFromUrl.band, customFromUrl.key);
+if (customFromUrl) {
+  // Keep the shared link in the address bar while the board is built, so it
+  // is not lost if generation fails.
+  setUrl({ custom: `${customFromUrl.band}-${customFromUrl.key}` });
+  generateCustom(customFromUrl.band, customFromUrl.key);
+}
 if (loaded.levelsChanged) {
   setStatus('Levels have been updated since your last visit. Your level number is kept.', 6000);
 }

@@ -105,6 +105,26 @@ export function recordWin(save, mode, level, result) {
   return { save: next, newBestTime: newBestTime && prevBest !== undefined };
 }
 
+/* Combines the save in storage with this tab's copy, so two open tabs cannot
+   erase each other's progress. Unlocks and records keep the better of the
+   two (records by isBetter, best times by the minimum); the current level,
+   mode and levels version are this tab's. */
+export function mergeSaves(stored, mine) {
+  const out = structuredClone(mine);
+  out.maxUnlocked = Math.max(stored.maxUnlocked, mine.maxUnlocked);
+  for (const mode of MODES) {
+    for (const [level, rec] of Object.entries(stored.completed[mode])) {
+      const cur = out.completed[mode][level];
+      const kept = !cur || isBetter(rec, cur) ? { ...rec } : { ...cur };
+      const times = [rec.bestTimeSec, cur?.bestTimeSec].filter(Number.isInteger);
+      if (times.length) kept.bestTimeSec = Math.min(...times);
+      else delete kept.bestTimeSec;
+      out.completed[mode][level] = kept;
+    }
+  }
+  return out;
+}
+
 /* 83 -> "1:23" */
 export function formatTime(sec) {
   const s = Math.max(0, Math.floor(sec));

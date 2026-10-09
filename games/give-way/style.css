@@ -175,8 +175,11 @@
 
 /* ---- Dialogs ------------------------------------------------------------ */
 .gw-dialog{border:1px solid var(--border-hi);border-radius:12px;background:var(--card-solid);
-  color:var(--fg);padding:24px;width:min(420px,calc(100vw - 32px));max-height:calc(100dvh - 32px);
+  color:var(--fg);padding:0;width:min(420px,calc(100vw - 32px));max-height:calc(100dvh - 32px);
   box-shadow:0 18px 50px rgba(8,19,29,.18)}
+/* Padding lives on the form: a click that lands on the <dialog> element itself
+   is then always on the backdrop, which is what closes it. */
+.gw-dialog>form{padding:24px}
 .gw-dialog::backdrop{background:rgba(8,19,29,.32);backdrop-filter:blur(2px)}
 .gw-dialog h2{font-size:22px}
 .gw-dialog .gw-win-time{font-family:var(--mono);font-size:15px;color:var(--fg);font-variant-numeric:tabular-nums}
@@ -221,4 +224,5 @@
   border:1px solid var(--border-hi);background:var(--card);color:var(--fg)}
 
 /* While a board is being generated the current one is dimmed and inert. */
-.gw-stage.is-generating .gw-board{opacity:.3;pointer-events:none;transition:opacity .2s}
+.gw-stage.is-generating .gw-board,.gw-stage.is-generating .gw-buttons,
+.gw-stage.is-generating .gw-switch{opacity:.3;pointer-events:none;transition:opacity .2s}

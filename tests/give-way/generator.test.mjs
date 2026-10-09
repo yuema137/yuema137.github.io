@@ -418,6 +418,24 @@ test('wins keep the best record, the best time separately, and unlock N+1', () =
   assert.deepEqual(s.completed.items[2], { livesLeft: 3, hintsUsed: 0, itemsUsed: 1, bestTimeSec: 9 });
 });
 
+test('two tabs: merging keeps the better of both, and this tab\'s place', () => {
+  const a = saves.defaultSave();
+  a.maxUnlocked = 9;
+  a.currentLevel = 8;
+  a.completed.basic = { 3: { livesLeft: 3, hintsUsed: 0, bestTimeSec: 50 }, 5: { livesLeft: 1, hintsUsed: 2 } };
+  const b = saves.defaultSave();
+  b.maxUnlocked = 4;
+  b.currentLevel = 2;
+  b.mode = 'items';
+  b.completed.basic = { 3: { livesLeft: 2, hintsUsed: 0, bestTimeSec: 40 } };
+  const m = saves.mergeSaves(a, b); // a is in storage, b is this tab
+  assert.equal(m.maxUnlocked, 9);
+  assert.equal(m.currentLevel, 2);
+  assert.equal(m.mode, 'items');
+  assert.deepEqual(m.completed.basic[3], { livesLeft: 3, hintsUsed: 0, bestTimeSec: 40 });
+  assert.deepEqual(m.completed.basic[5], { livesLeft: 1, hintsUsed: 2 });
+});
+
 test('perfect is basic mode, all lives, no hints', () => {
   assert.equal(saves.isPerfect('basic', { livesLeft: 3, hintsUsed: 0 }), true);
   assert.equal(saves.isPerfect('basic', { livesLeft: 3, hintsUsed: 1 }), false);
