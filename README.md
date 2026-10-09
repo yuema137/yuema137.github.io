@@ -225,7 +225,8 @@ games/give-way/
   levels.js      GENERATED: the 100 boards, stored as text
   worker.js      runs the generator off the main thread for custom boards
   rules.js       in-level state machine: taps, lives, hints, items, clock (no DOM)
-  items.js       item registry — items may only REMOVE arrows (no DOM)
+  items.js       item registry: bomb, scissors, sweep — items may only REMOVE
+                 arrows (no DOM)
   save.js        save format, validation, migration (no DOM)
 tests/give-way/generator.test.mjs
 tools/give-way-levels.mjs   generates levels.js (authoring tool, not published)
@@ -263,6 +264,11 @@ solvable by construction, and checks it again before returning it. Hard and
 expert boards are framed by hairpin-shaped arrows around the rim, which keeps
 the number of free arrows at the start low. `searchBoard` tries seeds until a
 board meets all of the above.
+
+**Items mode** gives one of each item per level: a bomb (every arrow touching
+a 3×3 square), scissors (one arrow) and a sweep (every arrow crossing a row or
+column, as seen on screen). Items may only remove arrows, which keeps every
+board solvable; a new item that does anything else needs its own proof.
 
 Players can also generate a **custom board** of any band from the Levels
 dialog. It runs in `worker.js` and usually takes well under a second, but the

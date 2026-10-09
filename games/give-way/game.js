@@ -7,7 +7,7 @@
 
 import { DIRS, MAX_LEVEL, BANDS, difficulty, customSeed, searchBoard, decodeBoard, encodeBoard, head } from './generator.js';
 import { loadLevel, LEVELS_VERSION } from './levels.js';
-import { ITEMS, bombArea } from './items.js';
+import { ITEMS, ITEM_IDS } from './items.js';
 import * as rules from './rules.js';
 import * as saves from './save.js';
 
@@ -33,7 +33,6 @@ const els = {
   status: $('gw-status'),
   restart: $('gw-restart'),
   hint: $('gw-hint'),
-  bomb: $('gw-bomb'),
   next: $('gw-next'),
   levels: $('gw-levels'),
   mode: $('gw-mode'),
@@ -94,7 +93,7 @@ let hintedId = -1;
 let statusTimer = null;
 let endTimer = null;
 let clockTimer = null;
-let aiming = null; // { itemId, cell, preview: [ids] } while an item is being aimed
+let aiming = null; // { itemId, cell, viewAxis } while an item is being aimed
 let aimEls = null; // { rect } overlay for the aimed area
 let token = 0; // bumped on every level start; stale callbacks check it
 let rotated = false; // board shown a quarter turn clockwise (landscape)
@@ -331,11 +330,17 @@ function updateHud() {
   els.hint.textContent = `Hint (${game.hintsLeft})`;
   els.hint.disabled = game.hintsLeft <= 0 || !playing;
 
-  const bombs = game.items.bomb ?? 0;
-  els.bomb.hidden = !itemsMode;
-  els.bomb.textContent = aiming ? 'Cancel bomb' : `${ITEMS.bomb.name} ×${bombs}`;
-  els.bomb.disabled = !aiming && (bombs <= 0 || !playing);
-  els.bomb.setAttribute('aria-pressed', String(!!aiming));
+  for (const [id, button] of itemButtons) {
+    const count = game.items[id] ?? 0;
+    const active = aiming?.itemId === id;
+    button.hidden = !itemsMode;
+    button.textContent = active ? `Cancel ${ITEMS[id].name.toLowerCase()}` : `${ITEMS[id].name} ×${count}`;
+    button.disabled = !active && (count <= 0 || !playing);
+    button.setAttribute('aria-pressed', String(active));
+  }
+  const lineAim = aiming && ITEMS[aiming.itemId].targeting === 'line';
+  turnButton.hidden = !lineAim;
+  if (lineAim) turnButton.textContent = aiming.viewAxis === 'row' ? 'Turn to column' : 'Turn to row';
 
   els.next.hidden = game.status !== 'won' || (!custom && level >= MAX_LEVEL);
   els.next.textContent = custom ? 'New board' : 'Next level';
@@ -410,10 +415,11 @@ function animateExit(id) {
   return duration;
 }
 
-/* Bombed arrows shrink and fade where they are. */
+/* Arrows removed by an item shrink and fade where they are; a bomb also
+   flashes at the spot it hit (`cell`, or null for no flash). */
 function animateBlast(ids, cell) {
   const duration = 300;
-  if (!reducedMotion.matches) {
+  if (cell && !reducedMotion.matches) {
     const v = toView(cell);
     const flash = svg('circle', { cx: v.x + 0.5, cy: v.y + 0.5, r: 1.6, class: 'gw-flash' });
     els.board.append(flash);
@@ -607,15 +613,28 @@ function setPreview(ids) {
   for (const [id, parts] of arrowEls) parts.g.classList.toggle('is-bomb', next.has(id));
 }
 
+/* The view axis ('row' runs across the screen) as a board axis: on a turned
+   board, a row on screen is a column of the board. */
+function boardAxis(viewAxis) {
+  return rotated === (viewAxis === 'row') ? 'col' : 'row';
+}
+
+/* What the aimed item would hit, in board coordinates. */
+function aimTarget(cell = aiming?.cell) {
+  if (!aiming || !cell) return null;
+  return ITEMS[aiming.itemId].targeting === 'line' ? { ...cell, axis: boardAxis(aiming.viewAxis) } : cell;
+}
+
 function renderAim() {
   const rect = aimEls?.rect;
   if (!rect) return;
-  if (!aiming || !aiming.cell) {
+  const target = aimTarget();
+  if (!target) {
     rect.setAttribute('visibility', 'hidden');
     setPreview([]);
     return;
   }
-  const a = bombArea(game.board, aiming.cell, ITEMS[aiming.itemId].radius);
+  const a = ITEMS[aiming.itemId].area(game.board, target);
   const p = toView({ x: a.x0, y: a.y0 });
   const q = toView({ x: a.x1, y: a.y1 });
   const x0 = Math.min(p.x, q.x);
@@ -625,13 +644,26 @@ function renderAim() {
   rect.setAttribute('width', Math.max(p.x, q.x) - x0 + 1 - 0.08);
   rect.setAttribute('height', Math.max(p.y, q.y) - y0 + 1 - 0.08);
   rect.setAttribute('visibility', 'visible');
-  setPreview(rules.previewItem(game, aiming.itemId, aiming.cell));
+  setPreview(rules.previewItem(game, aiming.itemId, target));
 }
 
-function startAiming(itemId) {
+/* Pressing an item's button starts aiming it; pressing it again cancels. */
+function toggleAiming(itemId) {
+  if (aiming?.itemId === itemId) {
+    stopAiming();
+    return;
+  }
   if (game.status !== 'playing' || !(game.items[itemId] > 0)) return;
-  aiming = { itemId, cell: null };
-  setStatus('Pick a spot. Every arrow touching the 3×3 square is removed.');
+  aiming = { itemId, cell: null, viewAxis: 'row' };
+  const item = ITEMS[itemId];
+  setStatus(item.targeting === 'line' ? `${item.aimHint} Turn switches between a row and a column.` : item.aimHint);
+  renderAim();
+  updateHud();
+}
+
+function turnAim() {
+  if (!aiming || ITEMS[aiming.itemId].targeting !== 'line') return;
+  aiming.viewAxis = aiming.viewAxis === 'row' ? 'col' : 'row';
   renderAim();
   updateHud();
 }
@@ -654,21 +686,40 @@ function aimAt(cell) {
 
 function detonate(cell) {
   const itemId = aiming.itemId;
-  const ev = rules.useItem(game, itemId, cell, now());
+  const ev = rules.useItem(game, itemId, aimTarget(cell), now());
   if (ev.type === 'empty') {
-    setStatus('Nothing to hit here. Pick a spot with arrows in it.', 2000);
+    setStatus(ITEMS[itemId].emptyHint, 2000);
     return;
   }
   if (ev.type !== 'used') return;
   aiming = null;
   renderAim();
   setStatus('');
-  const duration = animateBlast(ev.ids, cell);
+  const duration = animateBlast(ev.ids, itemId === 'bomb' ? cell : null);
   if (ev.hintCleared) syncHint();
   if (ev.deadlock) logDeadlock('an item');
   if (ev.won) finishLevel(duration);
   updateHud();
 }
+
+/* One button per item, built from the registry, plus Turn for line items. */
+const itemButtons = new Map();
+for (const id of ITEM_IDS) {
+  const b = document.createElement('button');
+  b.type = 'button';
+  b.className = 'btn btn--s gw-item-btn';
+  b.hidden = true;
+  b.dataset.item = id;
+  b.addEventListener('click', () => toggleAiming(id));
+  els.levels.before(b);
+  itemButtons.set(id, b);
+}
+const turnButton = document.createElement('button');
+turnButton.type = 'button';
+turnButton.className = 'btn btn--s';
+turnButton.hidden = true;
+turnButton.addEventListener('click', turnAim);
+els.levels.before(turnButton);
 
 
 /* ---- Modes -------------------------------------------------------------- */
@@ -886,7 +937,9 @@ els.board.addEventListener('pointerleave', (e) => {
 });
 
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && aiming && !document.querySelector('dialog[open]')) stopAiming();
+  if (!aiming || document.querySelector('dialog[open]')) return;
+  if (e.key === 'Escape') stopAiming();
+  else if (e.key === 't' || e.key === 'T') turnAim();
 });
 
 els.restart.addEventListener('click', restart);
@@ -894,7 +947,6 @@ els.next.addEventListener('click', next);
 els.hint.addEventListener('click', handleHint);
 els.levels.addEventListener('click', openLevels);
 els.mode.addEventListener('click', requestModeSwitch);
-els.bomb.addEventListener('click', () => (aiming ? stopAiming() : startAiming('bomb')));
 
 els.levelGrid.addEventListener('click', (e) => {
   const b = e.target.closest('[data-level]');

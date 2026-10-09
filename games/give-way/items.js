@@ -5,12 +5,19 @@
  * solvable after any item (see removeArrow in generator.js). An item that
  * breaks this rule needs its own no-deadlock argument before it ships.
  *
- * Items never touch the board themselves. affected(board, target) is a pure
- * function returning the ids to remove; the rules engine does the removal.
- * `board` is { W, H, arrows } holding only the arrows still in play.
+ * Items never touch the board themselves. Each is a set of pure functions of
+ * `board` ({ W, H, arrows } holding only the arrows still in play) and a
+ * target, in board coordinates:
+ *   affected(board, target)  ids of the arrows the item would remove
+ *   area(board, target)      the cells it covers, { x0, y0, x1, y1 }, for the
+ *                            aiming preview
+ * The rules engine does the removal. Any arrow touched is removed whole:
+ * cutting an arrow in two would leave pieces whose direction is ambiguous.
  *
- * To add an item, add an entry here. targeting is 'cell' when the player picks
- * a cell first, or 'none' when the item applies immediately.
+ * targeting says what the player picks: 'cell' (target = { x, y }) or 'line'
+ * (target = { x, y, axis }, axis 'row' or 'col', the line through that cell).
+ *
+ * To add an item, add an entry here; the UI builds its button from it.
  */
 
 const BOMB_RADIUS = 1;
@@ -25,6 +32,18 @@ export function bombArea(board, target, radius = BOMB_RADIUS) {
   };
 }
 
+/* The row or column through target. */
+export function lineArea(board, target) {
+  return target.axis === 'col'
+    ? { x0: target.x, y0: 0, x1: target.x, y1: board.H - 1 }
+    : { x0: 0, y0: target.y, x1: board.W - 1, y1: target.y };
+}
+
+const touching = (board, a) =>
+  board.arrows
+    .filter((arrow) => arrow.cells.some((c) => c.x >= a.x0 && c.x <= a.x1 && c.y >= a.y0 && c.y <= a.y1))
+    .map((arrow) => arrow.id);
+
 export const ITEMS = Object.freeze({
   bomb: Object.freeze({
     id: 'bomb',
@@ -32,16 +51,30 @@ export const ITEMS = Object.freeze({
     perLevel: 1,
     targeting: 'cell',
     radius: BOMB_RADIUS,
-    /* Any arrow with at least one cell in range is removed whole. Cutting an
-       arrow in two would leave pieces whose direction is ambiguous. */
-    affected(board, target) {
-      const a = bombArea(board, target, BOMB_RADIUS);
-      return board.arrows
-        .filter((arrow) =>
-          arrow.cells.some((c) => c.x >= a.x0 && c.x <= a.x1 && c.y >= a.y0 && c.y <= a.y1)
-        )
-        .map((arrow) => arrow.id);
-    },
+    aimHint: 'Pick a spot. Every arrow touching the 3×3 square is removed.',
+    emptyHint: 'Nothing to hit here. Pick a spot with arrows in it.',
+    area: (board, target) => bombArea(board, target),
+    affected: (board, target) => touching(board, bombArea(board, target)),
+  }),
+  scissors: Object.freeze({
+    id: 'scissors',
+    name: 'Scissors',
+    perLevel: 1,
+    targeting: 'cell',
+    aimHint: 'Pick an arrow to cut. It is removed whole.',
+    emptyHint: 'Nothing to cut here. Pick an arrow.',
+    area: (board, target) => ({ x0: target.x, y0: target.y, x1: target.x, y1: target.y }),
+    affected: (board, target) => touching(board, { x0: target.x, y0: target.y, x1: target.x, y1: target.y }),
+  }),
+  sweep: Object.freeze({
+    id: 'sweep',
+    name: 'Sweep',
+    perLevel: 1,
+    targeting: 'line',
+    aimHint: 'Pick a line. Every arrow crossing it is removed.',
+    emptyHint: 'No arrows in that line. Pick another.',
+    area: (board, target) => lineArea(board, target),
+    affected: (board, target) => touching(board, lineArea(board, target)),
   }),
 });
 

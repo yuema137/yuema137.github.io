@@ -95,6 +95,11 @@
 .gw-stage .btn:disabled{opacity:.45;cursor:not-allowed}
 .gw-stage .btn--s:disabled:hover{border-color:var(--border)}
 .btn[hidden]{display:none}
+/* Narrow screens: compact buttons, so items mode does not squeeze the board. */
+@media (max-width:759px){
+  .gw-buttons{gap:6px}
+  .gw-stage .gw-buttons .btn{font-size:14px;padding:7px 13px}
+}
 
 
 /* Items-mode switch: a real <button role="switch">, styled as a toggle. */
@@ -109,7 +114,7 @@
 .gw-switch[aria-checked="true"] .gw-switch-track{background:var(--gw-bomb);border-color:var(--gw-bomb)}
 .gw-switch[aria-checked="true"] .gw-switch-track::after{transform:translateX(14px);background:var(--gw-surface)}
 
-.gw-bomb-btn[aria-pressed="true"]{border-color:var(--gw-bomb);color:var(--gw-bomb);
+.gw-item-btn[aria-pressed="true"]{border-color:var(--gw-bomb);color:var(--gw-bomb);
   box-shadow:inset 0 0 0 1px var(--gw-bomb)}
 
 

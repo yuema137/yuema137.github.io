@@ -14,7 +14,7 @@ import {
   mulberry32, hashString, customSeed, DIRS, MAX_LEVEL, BANDS, difficultyStats, targetMiss, coverage,
   searchBoard, encodeBoard, decodeBoard, shapeStats, MAX_CHAIN,
 } from '../../games/give-way/generator.js';
-import { ITEMS, bombArea } from '../../games/give-way/items.js';
+import { ITEMS, ITEM_IDS, bombArea, lineArea } from '../../games/give-way/items.js';
 import * as rules from '../../games/give-way/rules.js';
 import * as saves from '../../games/give-way/save.js';
 import { loadLevel, LEVEL_COUNT, LEVELS_VERSION } from '../../games/give-way/levels.js';
@@ -45,8 +45,8 @@ function handBoard(W, H, arrows) {
 }
 
 /* Plays a board to the end, picking uniformly among exitable arrows (and, in
-   items mode, sometimes firing a bomb at a random cell). Returns the number of
-   steps, or throws on a deadlock. */
+   items mode, sometimes using a random item at a random cell or line).
+   Returns the number of steps, or throws on a deadlock. */
 function randomPlay(b, rng, { items = false } = {}) {
   const game = rules.createGame(b, items ? 'items' : 'basic');
   let t = 0;
@@ -54,9 +54,11 @@ function randomPlay(b, rng, { items = false } = {}) {
   while (rules.remainingCount(game) > 0) {
     if (++steps > 10000) throw new Error('runaway simulation');
     t += 5000; // past any red cool-down
-    if (items && game.items.bomb > 0 && rng() < 0.15) {
-      const cell = { x: Math.floor(rng() * b.W), y: Math.floor(rng() * b.H) };
-      const ev = rules.useItem(game, 'bomb', cell, t);
+    const left = ITEM_IDS.filter((id) => game.items[id] > 0);
+    if (items && left.length && rng() < 0.15) {
+      const id = left[Math.floor(rng() * left.length)];
+      const cell = { x: Math.floor(rng() * b.W), y: Math.floor(rng() * b.H), axis: rng() < 0.5 ? 'row' : 'col' };
+      const ev = rules.useItem(game, id, cell, t);
       assert.ok(['used', 'empty'].includes(ev.type), `unexpected item event ${ev.type}`);
     } else {
       const ids = exitableIds(game.pos);
@@ -361,6 +363,54 @@ test('2e. bombing the hinted or red arrow clears that state', () => {
   assert.equal(ev.hintCleared, true);
   assert.equal(g.errorUntil.size, 0);
   assert.equal(g.hint, null);
+});
+
+test('2e. scissors remove exactly the arrow under the cell, or nothing', () => {
+  const b = handBoard(6, 6, [
+    { dir: 'right', cells: [{ x: 0, y: 5 }, { x: 1, y: 5 }, { x: 2, y: 5 }] },
+    { dir: 'up', cells: [{ x: 5, y: 1 }, { x: 5, y: 0 }] },
+  ]);
+  assert.deepEqual(ITEMS.scissors.affected(b, { x: 1, y: 5 }), [0]);
+  assert.deepEqual(ITEMS.scissors.affected(b, { x: 5, y: 0 }), [1]);
+  assert.deepEqual(ITEMS.scissors.affected(b, { x: 3, y: 3 }), []);
+  const g = rules.createGame(b, 'items');
+  assert.equal(rules.useItem(g, 'scissors', { x: 3, y: 3 }, 0).type, 'empty');
+  assert.equal(g.items.scissors, 1, 'not charged');
+  assert.deepEqual(rules.useItem(g, 'scissors', { x: 0, y: 5 }, 0).ids, [0]);
+  assert.equal(g.items.scissors, 0);
+  assert.equal(rules.useItem(g, 'scissors', { x: 5, y: 0 }, 0).type, 'none-left');
+});
+
+test('2e. sweep removes every arrow crossing the row or the column', () => {
+  const b = handBoard(6, 6, [
+    { dir: 'right', cells: [{ x: 0, y: 2 }, { x: 1, y: 2 }] },
+    { dir: 'down', cells: [{ x: 3, y: 0 }, { x: 3, y: 1 }, { x: 3, y: 2 }, { x: 3, y: 3 }] },
+    { dir: 'left', cells: [{ x: 5, y: 5 }, { x: 4, y: 5 }] },
+  ]);
+  assert.deepEqual(lineArea(b, { x: 1, y: 2, axis: 'row' }), { x0: 0, y0: 2, x1: 5, y1: 2 });
+  assert.deepEqual(lineArea(b, { x: 3, y: 1, axis: 'col' }), { x0: 3, y0: 0, x1: 3, y1: 5 });
+  assert.deepEqual(ITEMS.sweep.affected(b, { x: 0, y: 2, axis: 'row' }), [0, 1]);
+  assert.deepEqual(ITEMS.sweep.affected(b, { x: 3, y: 0, axis: 'col' }), [1]);
+  assert.deepEqual(ITEMS.sweep.affected(b, { x: 4, y: 0, axis: 'col' }), [2]);
+  assert.deepEqual(ITEMS.sweep.affected(b, { x: 0, y: 4, axis: 'row' }), []);
+  const g = rules.createGame(b, 'items');
+  const ev = rules.useItem(g, 'sweep', { x: 0, y: 2, axis: 'row' }, 0);
+  assert.deepEqual(ev.ids, [0, 1]);
+  assert.equal(g.lives, rules.LIVES, 'items never cost lives');
+});
+
+test('2e. every item: one per level, and affected() never modifies the board', () => {
+  const g = rules.createGame(loadLevel(30), 'items');
+  for (const id of ITEM_IDS) assert.equal(g.items[id], 1, id);
+  const view = JSON.parse(JSON.stringify(loadLevel(30)));
+  const plain = JSON.parse(JSON.stringify(view));
+  for (const id of ITEM_IDS) {
+    for (let y = 0; y < view.H; y += 3) for (let x = 0; x < view.W; x += 3) {
+      ITEMS[id].affected(view, { x, y, axis: 'row' });
+      ITEMS[id].affected(view, { x, y, axis: 'col' });
+    }
+  }
+  assert.deepEqual(view, plain);
 });
 
 test('2e. items do nothing in basic mode', () => {
