@@ -221,10 +221,12 @@ games/give-way/
   style.css      game styles, on top of the site tokens
   game.js        UI: rendering, input, animation, saving
   generator.js   PRNG, level generation, board rules, difficulty metrics (no DOM)
+  levels.js      GENERATED: which seed variant each level uses
   rules.js       in-level state machine: taps, lives, hints, items, clock (no DOM)
   items.js       item registry — items may only REMOVE arrows (no DOM)
   save.js        save format, validation, migration (no DOM)
 tests/give-way/generator.test.mjs
+tools/give-way-levels.mjs   chooses levels.js (authoring tool, not published)
 ```
 
 Run the tests (no install needed):
@@ -233,19 +235,32 @@ Run the tests (no install needed):
 node tests/give-way/generator.test.mjs
 ```
 
-Level *N* is generated from a seed derived from *N*, so it is identical on
-every device. Levels are generated portrait and drawn a quarter turn on
+There are 100 levels, in four bands defined in `LEVEL_BANDS` in
+`generator.js`: board size, arrow lengths, and difficulty targets. Difficulty
+is measured as the share of arrows that can exit at the start, and after 20%
+and after 50% of arrows have been removed by random legal play; lower is
+harder.
+
+| Levels | Board | Free at start | After 20% | After 50% |
+|---|---|---|---|---|
+| 1–5 | 8×12 | 30% ± 10 | 30% ± 10 | 40% ± 10 |
+| 6–20 | 8×12 | 20% ± 5 | 25% ± 5 | 30% ± 5 |
+| 21–50 | 12×18 | 15% ± 5 | 20% ± 5 | 20% ± 5 |
+| 51–100 | 12×18 | 10% ± 5 | 10% ± 5 | 15% ± 5 |
+
+Level *N* is built from a seed derived from *N* and a variant number, so it is
+identical on every device. The variant for each level is chosen offline:
+`tools/give-way-levels.mjs` searches variants until the level's difficulty
+lands inside its band's targets and writes the choice to `levels.js`. The
+search takes a couple of minutes; the game then builds each level in a few
+milliseconds. Levels are generated portrait and drawn a quarter turn on
 landscape screens; that changes nothing about the puzzle.
 
-**If you change anything in `generator.js` that moves an arrow, bump
-`GENERATOR_VERSION`.** Players' saves record the version and they are told
-when levels change. The test suite pins a fingerprint of levels 1–20, so an
-accidental change fails loudly; update the fingerprint in the same commit as
-the version bump.
-
-The tests also print a difficulty table: board size, and the share of arrows
-that can exit at the start and after 20% and 50% of arrows have been removed
-by random legal play. Lower shares mean a harder level.
+**If you change anything in `generator.js` that moves an arrow, or change a
+band:** bump `GENERATOR_VERSION`, run `node tools/give-way-levels.mjs`, run
+the tests, and update the layout fingerprint in the test in the same commit.
+Players' saves record the version and they are told when levels change. The
+tests fail if any level misses its targets or if layouts change unannounced.
 
 ## Publishing slides and PDFs
 

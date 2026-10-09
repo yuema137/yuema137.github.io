@@ -11,10 +11,12 @@ import assert from 'node:assert/strict';
 import {
   generate, difficulty, isSolvable, createPosition, canExit, exitableIds, removeArrow,
   rayCells, head, mulberry32, hashString, seedFor, DIRS, GENERATOR_VERSION, MAX_LEVEL, difficultyStats,
+  targetMiss,
 } from '../../games/give-way/generator.js';
 import { ITEMS, bombArea } from '../../games/give-way/items.js';
 import * as rules from '../../games/give-way/rules.js';
 import * as saves from '../../games/give-way/save.js';
+import { LEVEL_VARIANTS } from '../../games/give-way/levels.js';
 
 let failures = 0;
 let count = 0;
@@ -73,7 +75,7 @@ function randomPlay(b, rng, { items = false } = {}) {
 console.log('\nGeneration');
 
 test('1. determinism: the same level generates identically', () => {
-  for (const n of [1, 2, 7, 31, 99, 300, MAX_LEVEL]) {
+  for (const n of [1, 2, 7, 31, 99, MAX_LEVEL]) {
     assert.deepEqual(JSON.parse(JSON.stringify(generate(n))), JSON.parse(JSON.stringify(generate(n))));
   }
 });
@@ -83,14 +85,15 @@ test('1b. seeds are pinned (if this fails, bump GENERATOR_VERSION on purpose)', 
   assert.equal(seedFor(1), hashString('give-way:v1:1'));
   const r = mulberry32(12345);
   assert.deepEqual([r(), r(), r()].map((x) => x.toFixed(10)), ['0.9797282678', '0.3067522645', '0.4842054215']);
-  // Fingerprint of the layouts of levels 1-20. Any change to generation that
-  // moves an arrow changes this; that is the moment to bump GENERATOR_VERSION.
-  const layouts = levels(1, 20).map((n) => JSON.stringify(generate(n))).join('|');
-  assert.equal(hashString(layouts), 2821059783);
+  // Fingerprint of every level's layout. Any change to generation that moves
+  // an arrow changes this: bump GENERATOR_VERSION, rerun
+  // tools/give-way-levels.mjs, and update this number in the same commit.
+  const layouts = levels(1, MAX_LEVEL).map((n) => JSON.stringify(board(n))).join('|');
+  assert.equal(hashString(layouts), 1754663618);
 });
 
-test('2. solvable: levels 1-300 clear greedily', () => {
-  for (const n of levels(1, 300)) assert.ok(isSolvable(board(n)), `level ${n}`);
+test('2. solvable: every level clears greedily', () => {
+  for (const n of levels(1, MAX_LEVEL)) assert.ok(isSolvable(board(n)), `level ${n}`);
 });
 
 test('2b. no deadlock: levels 1-100, 20 random play orders each', () => {
@@ -103,8 +106,8 @@ test('2d. no deadlock in items mode: levels 1-100, 20 random games each', () => 
   for (const n of levels(1, 100)) for (let i = 0; i < 20; i++) randomPlay(board(n), rng, { items: true });
 });
 
-test('3. structure: every arrow on levels 1-300 is well formed', () => {
-  for (const n of levels(1, 300)) {
+test('3. structure: every arrow on every level is well formed', () => {
+  for (const n of levels(1, MAX_LEVEL)) {
     const b = board(n);
     const seen = new Set();
     for (const a of b.arrows) {
@@ -132,11 +135,11 @@ test('3. structure: every arrow on levels 1-300 is well formed', () => {
   }
 });
 
-test('4. performance: each of levels 1-300 generates in under 50 ms', () => {
+test('4. performance: every level generates in under 50 ms', () => {
   generate(1); // warm up the JIT
   let total = 0;
   let worst = 0;
-  for (const n of levels(1, 300)) {
+  for (const n of levels(1, MAX_LEVEL)) {
     const t0 = performance.now();
     generate(n);
     const dt = performance.now() - t0;
@@ -147,31 +150,27 @@ test('4. performance: each of levels 1-300 generates in under 50 ms', () => {
   assert.ok(worst < 50, `slowest level took ${worst.toFixed(1)} ms`);
 });
 
-test('5. difficulty: boards start at 8x12 and grow to 12x18', () => {
-  assert.deepEqual([difficulty(1).W, difficulty(1).H], [8, 12]);
-  assert.deepEqual([difficulty(5).W, difficulty(5).H], [8, 12]);
-  assert.deepEqual([difficulty(60).W, difficulty(60).H], [12, 18]);
-  assert.deepEqual([difficulty(MAX_LEVEL).W, difficulty(MAX_LEVEL).H], [12, 18]);
-  let prev = { W: 0, H: 0 };
-  for (const n of levels(1, 120)) {
+test('5. sizes: levels 1-20 are 8x12, levels 21-100 are 12x18', () => {
+  assert.equal(MAX_LEVEL, 100);
+  assert.equal(LEVEL_VARIANTS.length, MAX_LEVEL, 'levels.js covers every level');
+  for (const n of levels(1, MAX_LEVEL)) {
     const d = difficulty(n);
-    assert.ok(d.W >= 8 && d.H >= 12 && d.H > d.W, `level ${n}: generated portrait, at least 8x12`);
-    assert.ok(d.W >= prev.W && d.H >= prev.H, `level ${n} shrank`);
-    prev = d;
+    assert.deepEqual([d.W, d.H], n <= 20 ? [8, 12] : [12, 18], `level ${n}`);
   }
-  const avg = (a, b) => levels(a, b).reduce((s, n) => s + board(n).arrows.length, 0) / (b - a + 1);
-  assert.ok(avg(1, 10) < avg(11, 30) && avg(11, 30) < avg(61, 100), 'arrow count grows');
 });
 
-
-test('6. difficulty metrics (report): size, and the share of arrows free at 0/20/50% removed', () => {
+test('6. difficulty: every level lands inside its band targets', () => {
   const pct = (x) => `${Math.round(100 * x)}%`.padStart(5);
   console.log('        level   size  arrows  open0 open20 open50');
-  for (const n of [1, 3, 5, 6, 10, 15, 16, 25, 35, 50, 60, 100, 200, 300]) {
+  const misses = [];
+  for (const n of levels(1, MAX_LEVEL)) {
     const d = difficultyStats(board(n));
-    for (const k of ['open0', 'open20', 'open50']) assert.ok(d[k] > 0 && d[k] <= 1, `level ${n} ${k}`);
-    console.log(`        ${String(n).padStart(5)} ${`${d.W}x${d.H}`.padStart(6)} ${String(d.arrows).padStart(7)} ${pct(d.open0)}  ${pct(d.open20)}  ${pct(d.open50)}`);
+    if (targetMiss(d, difficulty(n).targets) > 0) misses.push(n);
+    if ([1, 5, 6, 20, 21, 50, 51, 100].includes(n) || misses.at(-1) === n) {
+      console.log(`        ${String(n).padStart(5)} ${`${d.W}x${d.H}`.padStart(6)} ${String(d.arrows).padStart(7)} ${pct(d.open0)}  ${pct(d.open20)}  ${pct(d.open50)}`);
+    }
   }
+  assert.deepEqual(misses, [], 'outside targets (rerun tools/give-way-levels.mjs)');
   assert.deepEqual(difficultyStats(board(7)), difficultyStats(board(7)), 'deterministic');
 });
 

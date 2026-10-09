@@ -300,7 +300,7 @@ function updateHud() {
   els.bomb.disabled = !aiming && (bombs <= 0 || !playing);
   els.bomb.setAttribute('aria-pressed', String(!!aiming));
 
-  els.next.hidden = game.status !== 'won';
+  els.next.hidden = game.status !== 'won' || level >= MAX_LEVEL;
   els.restart.classList.toggle('btn--p', game.status === 'lost');
   els.restart.classList.toggle('btn--s', game.status !== 'lost');
   els.board.classList.toggle('is-over', !playing);
@@ -530,7 +530,8 @@ function finishLevel(delay) {
   store.write(save);
 
   const best = save.completed[game.mode][level]?.bestTimeSec;
-  els.winTitle.textContent = `🎉 Level ${level} complete`;
+  const last = level >= MAX_LEVEL;
+  els.winTitle.textContent = last ? `🎉 All ${MAX_LEVEL} levels complete` : `🎉 Level ${level} complete`;
   els.winTime.textContent =
     `Time ${saves.formatTime(rec.timeSec)}` +
     (outcome.newBestTime ? ' · New best!' : best !== undefined && best < rec.timeSec ? ` · Best ${saves.formatTime(best)}` : '');
@@ -541,8 +542,9 @@ function finishLevel(delay) {
   ];
   if (game.mode === 'items') parts.push(rec.itemsUsed ? `${rec.itemsUsed} item${rec.itemsUsed > 1 ? 's' : ''} used` : 'no items');
   els.winDetail.textContent =
-    parts.join(', ') + '.' + (saves.isPerfect(game.mode, rec) ? ' A perfect clear.' : '');
-  els.winNext.hidden = level >= MAX_LEVEL;
+    parts.join(', ') + '.' + (saves.isPerfect(game.mode, rec) ? ' A perfect clear.' : '') +
+    (last ? ` That was the last level for now. Replay any level from Levels.` : '');
+  els.winNext.hidden = last;
 
   const t = token;
   endTimer = setTimeout(() => {
