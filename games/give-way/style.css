@@ -1,0 +1,212 @@
+/* ===========================================================================
+   Give Way — game styles. Loaded after /css/style.css and built on its tokens
+   (--bg, --fg, --muted, --border, --blue-ink, ...). Fallbacks are given so the
+   game still renders if that stylesheet fails to load.
+
+   Layout: the stage fills the viewport below the sticky site header, and the
+   board takes whatever space is left, so the whole level is visible without
+   scrolling at any window size.
+     narrow   title + lives / board / controls, stacked
+     wide     board on the left, a control column on the right
+   =========================================================================== */
+
+:root{
+  --gw-surface:var(--card-solid,#fbfcfe);
+  --gw-arrow:var(--blue-ink,#1a4e7a);    /* 8.4:1 on --gw-surface */
+  --gw-dot:rgba(22,62,105,.28);
+  --gw-error:#c42f27;                    /* 5.4:1 on --gw-surface */
+  --gw-hint:#0b7d61;                     /* 5.1:1 on --gw-surface */
+  --gw-bomb:#7c45cf;                     /* reserved for items mode */
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --gw-surface:var(--card-solid,#0e1e2d);
+    --gw-arrow:var(--blue-ink,#8ec8f0);  /* 9.6:1 on --gw-surface */
+    --gw-dot:rgba(150,200,245,.26);
+    --gw-error:#ff7b70;                  /* 6.6:1 on --gw-surface */
+    --gw-hint:#4fdcaa;                   /* 9.6:1 on --gw-surface */
+    --gw-bomb:#c2a2ff;
+  }
+}
+
+
+/* ---- Stage ---------------------------------------------------------------- */
+/* The game gets a wider column than the site's reading width, so a landscape
+   board can use a big desktop window. */
+.gw-wrap{max-width:1440px}
+
+.gw-stage{
+  display:grid;gap:12px;
+  grid-template-columns:minmax(0,1fr);
+  /* Narrow: the three rows size to content and sit together in the middle;
+     game.js sets --gw-board-max to the height left over for the board. */
+  grid-template-rows:auto auto auto;
+  align-content:center;
+  grid-template-areas:"top" "board" "ctrl";
+  /* --gw-header is measured by game.js; 64px is the single-line header. */
+  height:calc(100vh - var(--gw-header,64px));
+  height:calc(100dvh - var(--gw-header,64px));
+  min-height:420px;max-height:1000px;
+  padding-block:14px 16px;
+}
+
+.gw-top{grid-area:top;display:flex;align-items:center;justify-content:space-between;gap:8px 16px;flex-wrap:wrap}
+.gw-top h1{font-size:24px;line-height:1.1}
+.gw-hud{display:flex;align-items:center;gap:14px}
+.gw-level-label{font-family:var(--mono);font-size:13px;color:var(--muted)}
+.gw-level-label #gw-level{color:var(--fg);font-weight:700}
+.gw-tag{font-family:var(--mono);font-size:11px;color:var(--gw-bomb);border:1px solid currentColor;
+  border-radius:999px;padding:1px 7px;margin-left:6px;vertical-align:1px}
+.gw-tag[hidden]{display:none}
+.gw-timer{font-family:var(--mono);font-size:13px;color:var(--fg);font-variant-numeric:tabular-nums;min-width:4ch}
+
+.gw-board-wrap{grid-area:board;position:relative;min-width:0;min-height:0;display:flex;
+  align-items:center;justify-content:center}
+
+.gw-ctrl{grid-area:ctrl;display:flex;flex-direction:column;gap:8px}
+.gw-buttons{display:flex;flex-wrap:wrap;gap:8px}
+.gw-status{min-height:1.5em;font-size:14px;color:var(--muted);margin:0}
+.gw-help{display:none;font-size:14.5px;color:var(--muted);line-height:1.55}
+.gw-noscript{color:var(--muted);text-align:center;padding:24px}
+
+/* Wide windows: the board gets the full height; controls move to the side. */
+@media (min-width:760px){
+  .gw-stage{
+    column-gap:28px;
+    grid-template-columns:minmax(0,1fr) 260px;
+    grid-template-rows:auto minmax(0,1fr);
+    align-content:stretch;
+    grid-template-areas:"board top" "board ctrl";
+    padding-block:22px 24px;
+  }
+  .gw-top{flex-direction:column;align-items:flex-start;gap:14px;padding-top:4px}
+  .gw-top h1{font-size:30px}
+  .gw-ctrl{justify-content:flex-start;gap:14px}
+  .gw-buttons{flex-direction:column;align-items:stretch}
+  .gw-buttons .btn{text-align:left}
+  .gw-help{display:block;border-top:1px solid var(--border);padding-top:14px}
+  .gw-status{order:3}
+}
+
+
+/* ---- Buttons (site .btn, adapted for <button>) -------------------------- */
+.gw-stage .btn,.gw-dialog .btn{font:inherit;font-size:15px;font-weight:500;cursor:pointer;
+  -webkit-tap-highlight-color:transparent}
+.gw-stage .btn:disabled{opacity:.45;cursor:not-allowed}
+.gw-stage .btn--s:disabled:hover{border-color:var(--border)}
+.btn[hidden]{display:none}
+
+
+/* Items-mode switch: a real <button role="switch">, styled as a toggle. */
+.gw-switch{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;font:inherit;font-size:14.5px;
+  color:var(--muted);background:none;border:0;padding:4px 0;cursor:pointer}
+.gw-switch:hover{color:var(--fg)}
+.gw-switch-track{width:34px;height:20px;border-radius:999px;border:1px solid var(--border-hi);
+  background:var(--card);position:relative;transition:background .15s,border-color .15s;flex-shrink:0}
+.gw-switch-track::after{content:"";position:absolute;top:2px;left:2px;width:14px;height:14px;border-radius:50%;
+  background:var(--muted);transition:transform .15s,background .15s}
+.gw-switch[aria-checked="true"]{color:var(--fg)}
+.gw-switch[aria-checked="true"] .gw-switch-track{background:var(--gw-bomb);border-color:var(--gw-bomb)}
+.gw-switch[aria-checked="true"] .gw-switch-track::after{transform:translateX(14px);background:var(--gw-surface)}
+
+.gw-bomb-btn[aria-pressed="true"]{border-color:var(--gw-bomb);color:var(--gw-bomb);
+  box-shadow:inset 0 0 0 1px var(--gw-bomb)}
+
+
+/* ---- Lives -------------------------------------------------------------- */
+.gw-lives{display:flex;gap:7px}
+.gw-life{width:12px;height:12px;border-radius:50%;border:1.5px solid var(--gw-arrow);
+  display:grid;place-items:center}
+.gw-life::after{content:"";width:100%;height:100%;border-radius:50%;background:var(--gw-arrow);
+  transition:transform .3s ease-in,opacity .3s ease-in}
+.gw-life.is-lost{border-color:var(--border-hi)}
+.gw-life.is-lost::after{transform:scale(0);opacity:0}
+.gw-life.is-losing::after{animation:gw-life-out .45s ease-in forwards}
+@keyframes gw-life-out{
+  0%{transform:scale(1);opacity:1;background:var(--gw-error)}
+  35%{transform:scale(1.35);opacity:1;background:var(--gw-error)}
+  100%{transform:scale(0);opacity:0;background:var(--gw-error)}
+}
+
+
+/* ---- Board -------------------------------------------------------------- */
+/* The SVG fills the wrap; its viewBox keeps cells square and centres the
+   board, and hit-testing maps through the same transform. */
+.gw-board{width:100%;height:auto;aspect-ratio:var(--gw-ratio,1);max-height:var(--gw-board-max,60vh);
+  display:block;overflow:visible;
+  touch-action:manipulation;user-select:none;-webkit-user-select:none;
+  -webkit-tap-highlight-color:transparent;cursor:pointer}
+.gw-board.is-over{cursor:default}
+@media (min-width:760px){ .gw-board{height:100%;aspect-ratio:auto;max-height:none} }
+.gw-surface{fill:var(--gw-surface);stroke:var(--border-hi);stroke-width:.03}
+.gw-dot{fill:var(--gw-dot)}
+
+.gw-line{fill:none;stroke:var(--gw-arrow);stroke-linecap:round;stroke-linejoin:round}
+.gw-tip{fill:var(--gw-arrow);stroke:var(--gw-arrow);stroke-width:.06;stroke-linejoin:round}
+.gw-arrow{transition:opacity .2s}
+.gw-arrow .gw-line,.gw-arrow .gw-tip{transition:stroke .12s,fill .12s,stroke-width .12s}
+
+.gw-arrow.is-error .gw-line{stroke:var(--gw-error)}
+.gw-arrow.is-error .gw-tip{fill:var(--gw-error);stroke:var(--gw-error)}
+
+/* Hint: colour plus a heavier line, so it does not rely on hue alone. */
+.gw-arrow.is-hint .gw-line{stroke:var(--gw-hint);stroke-width:.2}
+.gw-arrow.is-hint .gw-tip{fill:var(--gw-hint);stroke:var(--gw-hint);stroke-width:.1}
+.gw-arrow.is-hint{animation:gw-pulse 1s ease-in-out infinite}
+@keyframes gw-pulse{50%{opacity:.6}}
+
+.gw-arrow.is-bomb .gw-line{stroke:var(--gw-bomb);stroke-width:.2}
+.gw-arrow.is-bomb .gw-tip{fill:var(--gw-bomb);stroke:var(--gw-bomb);stroke-width:.1}
+.gw-arrow.is-bombed{transform-box:fill-box;transform-origin:center}
+
+/* Aiming: the board stops panning so a finger can drag the target around. */
+.gw-board.is-aiming{touch-action:none;cursor:crosshair}
+.gw-aim{fill:color-mix(in srgb,var(--gw-bomb) 14%,transparent);stroke:var(--gw-bomb);
+  stroke-width:.06;stroke-dasharray:.18 .12;pointer-events:none}
+.gw-flash{fill:var(--gw-bomb);transform-box:fill-box;transform-origin:center;pointer-events:none}
+
+.gw-arrow.is-leaving{pointer-events:none}
+.gw-arrow.is-fading{opacity:0}
+
+@media (prefers-reduced-motion:reduce){
+  .gw-arrow.is-hint{animation:none}
+}
+
+
+/* ---- Dialogs ------------------------------------------------------------ */
+.gw-dialog{border:1px solid var(--border-hi);border-radius:12px;background:var(--card-solid);
+  color:var(--fg);padding:24px;width:min(420px,calc(100vw - 32px));max-height:calc(100dvh - 32px);
+  box-shadow:0 18px 50px rgba(8,19,29,.18)}
+.gw-dialog::backdrop{background:rgba(8,19,29,.32);backdrop-filter:blur(2px)}
+.gw-dialog h2{font-size:22px}
+.gw-dialog .gw-win-time{font-family:var(--mono);font-size:15px;color:var(--fg);font-variant-numeric:tabular-nums}
+.gw-legend [hidden]{display:none}
+
+/* Confetti: absolutely nothing here is interactive. */
+.gw-confetti{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:1}
+.gw-confetti i{position:fixed;width:9px;height:6px;border-radius:2px;will-change:transform,opacity}
+.gw-dialog p{margin-top:10px;font-size:15.5px}
+.gw-dialog-actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;margin-top:22px}
+.gw-dialog-head{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.gw-close{font:inherit;font-size:14px;color:var(--muted);background:none;border:0;cursor:pointer;padding:4px}
+.gw-close:hover{color:var(--fg)}
+
+.gw-dialog--levels{width:min(520px,calc(100vw - 32px))}
+.gw-dialog--levels form{display:flex;flex-direction:column;max-height:calc(100dvh - 82px)}
+.gw-legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13.5px}
+.gw-legend span{display:inline-flex;align-items:center;gap:6px}
+.gw-level-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(46px,1fr));gap:6px;
+  margin-top:16px;overflow-y:auto;padding:2px}
+.gw-lvl{font:inherit;font-family:var(--mono);font-size:14px;height:42px;border-radius:var(--r);
+  border:1px solid var(--border);background:var(--card);color:var(--fg);cursor:pointer;position:relative}
+.gw-lvl:hover{border-color:var(--border-hi)}
+.gw-lvl[aria-current]{border-color:var(--blue-ink);box-shadow:inset 0 0 0 1px var(--blue-ink)}
+.gw-lvl.is-done{background:var(--blue-soft)}
+
+/* Marks: a small dot for completed, a ring-and-dot for perfect. */
+.gw-lvl.is-done::after{content:"";position:absolute;top:5px;right:5px;width:6px;height:6px;
+  border-radius:50%;background:var(--gw-arrow)}
+.gw-key{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--gw-arrow)}
+.gw-lvl.is-perfect::after,.gw-key.is-perfect{background:var(--gw-hint);
+  box-shadow:0 0 0 2px var(--card-solid),0 0 0 3.5px var(--gw-hint)}
+.gw-key.is-perfect{margin-inline:3px 1px}

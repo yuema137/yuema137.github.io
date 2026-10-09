@@ -28,6 +28,7 @@ talks/                  Conference talks, seminars, invited talks
 blog/                   Post index + one directory per post
 cv/                     Web summary + PDF download
 cv/resume/              The CV itself — source of the PDF (see "The CV")
+games/                  Games index + one self-contained directory per game (see "Games")
 scieval/                Generated, self-contained SciEval snapshot
 ble/                    Generated, self-contained Leaderboard of Benchmarks snapshot
 404.html                Served automatically by GitHub Pages
@@ -40,6 +41,7 @@ assets/slides/          Talk slide decks
 assets/cv/              CV PDF — GENERATED, do not hand-edit
 
 tools/build-cv.mjs      Compiles cv/resume/ to the CV PDF
+tests/                  Node tests for the games' logic. Not published.
 package.json            Build tooling only. Nothing here ships to the browser.
 
 .nojekyll               Required — keep. Disables Jekyll processing.
@@ -103,12 +105,12 @@ pages — `js/blog-tags.js`, which filters `/blog/` by tag. It is progressive
 enhancement: with JavaScript off, every post is listed, the tags are still
 visible, and the tag links still resolve. (The AV evaluation post is a separate
 case — see "Self-contained documents". The generated `scieval/` and `ble/`
-snapshots ship their own scripts and are outside these rules.) If something else seems to need JS,
-reconsider first.
+snapshots ship their own scripts and are outside these rules, and so are the games
+under `games/` — see "Games".) If something else seems to need JS, reconsider first.
 
 ## Updating the last-updated date
 
-The footer carries one site-wide date, identical in all 10 pages. To bump it,
+The footer carries one site-wide date, identical in all 12 pages. To bump it,
 change both the machine-readable and the human-readable form together:
 
 ```sh
@@ -194,6 +196,56 @@ site. Its palette tokens are copied from the ones in
 `css/style.css` — if you change the site palette, update that file's `:root`
 block too. Its Chinese version is an in-page toggle rather than a `/zh/` URL,
 because both languages live in the same data arrays.
+
+## Games
+
+`/games/` is a plain page listing the games; each game lives in its own
+directory, `games/<slug>/`, and is the one place on the site built around
+JavaScript. A game is self-contained: native ES modules, no framework, no
+build step, no CDN, no network requests, no analytics. It loads
+`/css/style.css` for the shared header, footer and tokens, and its own
+`style.css` after it. Paths inside a game directory are relative (`./game.js`),
+because module imports are. Progress is kept in `localStorage` only, and every
+access is wrapped so the game still works when storage is blocked.
+
+To add a game: create `games/<slug>/`, copy the shared header and footer into
+its `index.html` (with `aria-current="page"` on **Games**), add a card to
+`games/index.html`, and add the URL to `sitemap.xml`. `games/` is already in
+the publish allowlist.
+
+### Give Way
+
+```
+games/give-way/
+  index.html     page, dialogs, controls
+  style.css      game styles, on top of the site tokens
+  game.js        UI: rendering, input, animation, saving
+  generator.js   PRNG, level generation, board rules, difficulty metrics (no DOM)
+  rules.js       in-level state machine: taps, lives, hints, items, clock (no DOM)
+  items.js       item registry — items may only REMOVE arrows (no DOM)
+  save.js        save format, validation, migration (no DOM)
+tests/give-way/generator.test.mjs
+```
+
+Run the tests (no install needed):
+
+```sh
+node tests/give-way/generator.test.mjs
+```
+
+Level *N* is generated from a seed derived from *N*, so it is identical on
+every device. Levels are generated portrait and drawn a quarter turn on
+landscape screens; that changes nothing about the puzzle.
+
+**If you change anything in `generator.js` that moves an arrow, bump
+`GENERATOR_VERSION`.** Players' saves record the version and they are told
+when levels change. The test suite pins a fingerprint of levels 1–20, so an
+accidental change fails loudly; update the fingerprint in the same commit as
+the version bump.
+
+The tests also print a difficulty table: board size, and the share of arrows
+that can exit at the start and after 20% and 50% of arrows have been removed
+by random legal play. Lower shares mean a harder level.
 
 ## Publishing slides and PDFs
 

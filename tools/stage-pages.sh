@@ -17,7 +17,7 @@ mkdir -p "$output"
 publish=(
   index.html 404.html favicon.svg robots.txt sitemap.xml .nojekyll
   assets css js
-  blog cv projects publications research talks
+  blog cv games projects publications research talks
 )
 for path in "${publish[@]}"; do
   cp -R "$path" "$output/"
@@ -47,7 +47,7 @@ else
   echo "Warning: no BLE snapshot is present; publishing the main site without it." >&2
 fi
 
-for path in cv/resume tools package.json package-lock.json README.md .github node_modules build; do
+for path in cv/resume tests tools package.json package-lock.json README.md .github node_modules build; do
   if [ -e "$output/$path" ]; then
     echo "$output/$path was staged but must not be published." >&2
     exit 1

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Give Way — Yue Ma</title>
+    <meta name="description" content="A small arrow puzzle: slide every arrow off the board without hitting another one. Runs entirely in your browser.">
+    <link rel="canonical" href="https://yuema137.github.io/games/give-way/">
+    <meta name="theme-color" content="#f1f6fb" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#08131d" media="(prefers-color-scheme: dark)">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Yue Ma">
+    <meta property="og:title" content="Give Way — Yue Ma">
+    <meta property="og:description" content="A small arrow puzzle: slide every arrow off the board without hitting another one. Runs entirely in your browser.">
+    <meta property="og:url" content="https://yuema137.github.io/games/give-way/">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/satoshi-400.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/satoshi-700.woff2" crossorigin>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./game.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <!-- SHARED:HEADER start ===================================================
+         Keep this block identical across every page. The ONLY permitted
+         difference between copies is on the active link.
+         ====================================================================== -->
+    <header class="site-header">
+      <div class="c">
+        <a class="brand" href="/">Yue Ma</a>
+        <nav class="site-nav" aria-label="Primary">
+          <ul>
+            <li><a href="/research/">Research</a></li>
+            <li><a href="/projects/">Projects</a></li>
+            <li><a href="/publications/">Selected Publications</a></li>
+            <li><a href="/talks/">Talks</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/cv/">CV</a></li>
+            <li><a href="/games/" aria-current="page">Games</a></li>
+          </ul>
+        </nav>
+        <ul class="hlinks">
+          <li><a href="https://scholar.google.com/citations?user=kfhiI_kAAAAJ&amp;hl=en">Google Scholar</a></li>
+          <li><a href="https://github.com/yuema137">GitHub</a></li>
+        </ul>
+      </div>
+    </header>
+    <!-- SHARED:HEADER end ==================================================== -->
+    <main id="main">
+      <div class="c gw-wrap">
+        <section class="gw-stage" id="gw-stage" aria-labelledby="gw-title">
+          <div class="gw-top">
+            <h1 id="gw-title">Give Way</h1>
+            <div class="gw-hud">
+              <p class="gw-level-label">Level <span id="gw-level">1</span>
+                <span class="gw-tag" id="gw-mode-tag" hidden>Items</span></p>
+              <span class="gw-timer" id="gw-timer" role="timer" aria-label="Time">0:00</span>
+              <div class="gw-lives" id="gw-lives" role="img" aria-label="3 of 3 lives left"></div>
+            </div>
+          </div>
+
+          <div class="gw-board-wrap">
+            <svg class="gw-board" id="gw-board" role="img" aria-label="Game board"></svg>
+            <noscript><p class="gw-noscript">This game runs in your browser and needs JavaScript.</p></noscript>
+          </div>
+
+          <div class="gw-ctrl">
+            <p class="gw-status" id="gw-status" role="status" aria-live="polite"></p>
+            <div class="gw-buttons">
+              <button type="button" class="btn btn--s" id="gw-restart">Restart</button>
+              <button type="button" class="btn btn--s" id="gw-hint">Hint (3)</button>
+              <button type="button" class="btn btn--s gw-bomb-btn" id="gw-bomb" aria-pressed="false" hidden>Bomb ×1</button>
+              <button type="button" class="btn btn--s" id="gw-levels">Levels</button>
+              <button type="button" class="btn btn--p" id="gw-next" hidden>Next level</button>
+            </div>
+            <button type="button" class="gw-switch" id="gw-mode" role="switch" aria-checked="false">
+              <span class="gw-switch-track" aria-hidden="true"></span>Items mode</button>
+            <p class="gw-help">Tap an arrow to slide it off the board. If another arrow is in its
+              way, it turns red and you lose a life. Clear the board to win. Items mode adds a bomb that
+              removes every arrow touching a 3×3 square.</p>
+          </div>
+        </section>
+      </div>
+
+      <dialog class="gw-dialog" id="gw-win" aria-labelledby="gw-win-title">
+        <form method="dialog">
+          <h2 id="gw-win-title">Level complete</h2>
+          <p class="gw-win-time" id="gw-win-time"></p>
+          <p class="muted" id="gw-win-detail"></p>
+          <div class="gw-dialog-actions">
+            <button class="btn btn--s" value="restart">Play again</button>
+            <button class="btn btn--p" value="next" id="gw-win-next" autofocus>Next level</button>
+          </div>
+        </form>
+      </dialog>
+
+      <dialog class="gw-dialog" id="gw-lose" aria-labelledby="gw-lose-title">
+        <form method="dialog">
+          <h2 id="gw-lose-title">Out of lives</h2>
+          <p class="muted">The board resets exactly as it was. Every level has a solution.</p>
+          <div class="gw-dialog-actions">
+            <button class="btn btn--s" value="close">Look at the board</button>
+            <button class="btn btn--p" value="restart" autofocus>Restart level</button>
+          </div>
+        </form>
+      </dialog>
+
+      <dialog class="gw-dialog" id="gw-confirm" aria-labelledby="gw-confirm-title">
+        <form method="dialog">
+          <h2 id="gw-confirm-title">Switch mode?</h2>
+          <p class="muted">Switching modes restarts this level. The layout stays the same.</p>
+          <div class="gw-dialog-actions">
+            <button class="btn btn--s" value="cancel" autofocus>Cancel</button>
+            <button class="btn btn--p" value="switch">Switch and restart</button>
+          </div>
+        </form>
+      </dialog>
+
+      <dialog class="gw-dialog gw-dialog--levels" id="gw-levels-dialog" aria-labelledby="gw-levels-title">
+        <form method="dialog">
+          <div class="gw-dialog-head">
+            <h2 id="gw-levels-title">Levels</h2>
+            <button class="gw-close" value="close" aria-label="Close">Close</button>
+          </div>
+          <p class="gw-legend muted">
+            <span><i class="gw-key is-done"></i> Completed</span>
+            <span id="gw-perfect-key"><i class="gw-key is-perfect"></i> Perfect: all lives, no hints</span>
+          </p>
+          <div class="gw-level-grid" id="gw-level-grid"></div>
+        </form>
+      </dialog>
+    </main>
+    <!-- SHARED:FOOTER start ===================================================
+         Keep this block identical across every page. To bump the date, see
+         "Updating the last-updated date" in README.md.
+         ====================================================================== -->
+    <footer class="site-footer">
+      <div class="c">
+        <span>© 2026 Yue Ma · <a href="mailto:yuema9810@gmail.com">yuema9810@gmail.com</a></span>
+        <ul>
+          <li><a href="https://scholar.google.com/citations?user=kfhiI_kAAAAJ&amp;hl=en">Google Scholar</a></li>
+          <li><a href="https://github.com/yuema137">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/yue-ma-719818191/">LinkedIn</a></li>
+          <li><a href="/cv/">CV</a></li>
+        </ul>
+        <span>Last updated <time datetime="2026-10-09">9 October 2026</time></span>
+      </div>
+    </footer>
+    <!-- SHARED:FOOTER end ==================================================== -->
+  </body>
+</html>
