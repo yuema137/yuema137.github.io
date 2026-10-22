@@ -75,7 +75,7 @@
       "zh_name": "Evaluator Reliability & Validation",
       "url": "./documents/en/topics/evaluator_reliability_validation.json",
       "zh_url": "./documents/zh/topics/evaluator_reliability_validation.json",
-      "count": 15
+      "count": 16
     },
     {
       "slug": "planning_decision_evaluation",
@@ -149,7 +149,7 @@
       "zh_name": "Physics",
       "url": "./documents/en/domains/physics.json",
       "zh_url": "./documents/zh/domains/physics.json",
-      "count": 49
+      "count": 50
     },
     {
       "slug": "biology",
@@ -157,7 +157,7 @@
       "zh_name": "Biology",
       "url": "./documents/en/domains/biology.json",
       "zh_url": "./documents/zh/domains/biology.json",
-      "count": 41
+      "count": 42
     },
     {
       "slug": "chemistry",
@@ -165,7 +165,7 @@
       "zh_name": "Chemistry",
       "url": "./documents/en/domains/chemistry.json",
       "zh_url": "./documents/zh/domains/chemistry.json",
-      "count": 41
+      "count": 42
     },
     {
       "slug": "astronomy",
@@ -197,7 +197,7 @@
       "zh_name": "Materials Science",
       "url": "./documents/en/domains/materials_science.json",
       "zh_url": "./documents/zh/domains/materials_science.json",
-      "count": 29
+      "count": 30
     },
     {
       "slug": "medicine_health",
@@ -205,7 +205,7 @@
       "zh_name": "Medicine & Health",
       "url": "./documents/en/domains/medicine_health.json",
       "zh_url": "./documents/zh/domains/medicine_health.json",
-      "count": 24
+      "count": 25
     },
     {
       "slug": "software_systems_engineering",
@@ -240,6 +240,14 @@
       "count": 18
     },
     {
+      "slug": "earth_science",
+      "name": "Earth Science",
+      "zh_name": "Earth Science",
+      "url": "./documents/en/domains/earth_science.json",
+      "zh_url": "./documents/zh/domains/earth_science.json",
+      "count": 13
+    },
+    {
       "slug": "neuroscience_cognitive_science",
       "name": "Neuroscience & Cognitive Science",
       "zh_name": "Neuroscience & Cognitive Science",
@@ -253,14 +261,6 @@
       "zh_name": "Chemical Engineering",
       "url": "./documents/en/domains/chemical_engineering.json",
       "zh_url": "./documents/zh/domains/chemical_engineering.json",
-      "count": 12
-    },
-    {
-      "slug": "earth_science",
-      "name": "Earth Science",
-      "zh_name": "Earth Science",
-      "url": "./documents/en/domains/earth_science.json",
-      "zh_url": "./documents/zh/domains/earth_science.json",
       "count": 12
     },
     {
@@ -3472,65 +3472,6 @@
       "first_appeared_month": "2026-08"
     },
     {
-      "slug": "autoresearcheval",
-      "title": "AutoResearchEval",
-      "year": 2026,
-      "card_url": "./documents/en/works/autoresearcheval.json",
-      "zh_card_url": "./documents/zh/works/autoresearcheval.json",
-      "first_appeared": "2026-08-14",
-      "first_appeared_source": {
-        "label": "arXiv initial submission",
-        "url": "https://arxiv.org/abs/2608.14905"
-      },
-      "overview": "AutoResearchEval is a diagnostic evaluation of end-to-end autonomous research agents over 100 tasks grounded in published frontier science, spanning the full research lifecycle from ideation to review. Rather than ranking systems by a final score, it annotates 800 complete trajectories at the process level and organises the results into ARFT, a taxonomy of 45 empirically grounded failure patterns.",
-      "summary": "The authors observe that existing AutoResearch evaluations report performance without revealing process: tasks are narrowly scoped, scores say nothing about where an agent broke down, and failure diagnoses lack systematic coverage or visibility into intermediate artifacts. AutoResearchEval is built to answer the diagnostic question instead. Tasks are grounded in published frontier science and cover six lifecycle stages, and each of eight harness–model combinations is run over all 100 tasks to produce 800 trajectories with process-level annotation. Those annotations are consolidated into ARFT, which cross-classifies failures by lifecycle stage and by root cause. To make fine-grained attribution affordable at this scale, the authors build a human-calibrated agent-as-a-judge pipeline that inspects complete trajectories and intermediate artifacts rather than final answers. The headline finding is convergent: failure patterns across every configuration point to a missing metacognitive loop — the ability to check produced output against gathered evidence, revise when it does not hold, and question whether the chosen path was sound.",
-      "domains_text": "The benchmark spans **seven scientific domains**, but the paper reports their distribution only graphically and gives no per-domain task counts. Because a multi-field benchmark earns a domain on this repository's domain axis only when the slice is both identifiable and sized, **no canonical domain is assigned** pending a numeric breakdown from the authors.",
-      "topics": [
-        {
-          "name": "Scientific Agent Benchmarks",
-          "zh_name": "Scientific Agent Benchmarks",
-          "slug": "scientific_agents",
-          "url": "./documents/en/topics/scientific_agents.json",
-          "zh_url": "./documents/zh/topics/scientific_agents.json"
-        },
-        {
-          "name": "Trajectory Evaluation",
-          "zh_name": "Trajectory Evaluation",
-          "slug": "trajectory_evaluation",
-          "url": "./documents/en/topics/trajectory_evaluation.json",
-          "zh_url": "./documents/zh/topics/trajectory_evaluation.json"
-        },
-        {
-          "name": "General Long-Horizon Agent Benchmarks",
-          "zh_name": "General Long-Horizon Agent Benchmarks",
-          "slug": "long_horizon_evaluation",
-          "url": "./documents/en/topics/long_horizon_evaluation.json",
-          "zh_url": "./documents/zh/topics/long_horizon_evaluation.json"
-        }
-      ],
-      "activities": [
-        {
-          "name": "End-to-End Research",
-          "zh_name": "端到端研究",
-          "slug": "end_to_end_research",
-          "url": "./documents/en/activities/end_to_end_research.json",
-          "zh_url": "./documents/zh/activities/end_to_end_research.json"
-        }
-      ],
-      "links": [
-        {
-          "label": "Paper",
-          "url": "https://arxiv.org/abs/2608.14905"
-        }
-      ],
-      "zh": {
-        "overview": "AutoResearchEval 是对端到端自主研究 agent 的一次诊断式评估：100 个任务取材于已发表的前沿科学，覆盖从构思到复查的完整研究生命周期。它不按最终分数给系统排名，而是对 800 条完整轨迹做过程级标注，并把结果整理成 ARFT——一套由实证归纳出的 45 种失效模式。",
-        "summary": "作者观察到，现有的 AutoResearch 评估只报告表现，不透露过程：任务范围窄，分数说不出 agent 在哪一步垮掉，失效诊断既缺乏系统覆盖，也看不到中间产物。AutoResearchEval 转而正面回答诊断问题。任务取材于已发表的前沿科学，覆盖六个生命周期阶段；八种 harness–模型组合各自跑完全部 100 个任务，产出 800 条带过程级标注的轨迹。这些标注被归并成 ARFT，按生命周期阶段与根因两个维度交叉归类失效。为了让这种细粒度归因在这一规模上还负担得起，作者构建了一条经人类校准的 agent-as-a-judge 流水线，它检查的是完整轨迹与中间产物，而不是最终答案。核心发现是收敛的：所有配置下的失效模式都指向同一处缺口——缺少元认知回路，也就是把产出与所掌握的证据相互核对、发现对不上就修正、并回头质疑所走路径是否站得住的能力。"
-      },
-      "domains": [],
-      "first_appeared_month": "2026-08"
-    },
-    {
       "slug": "pace-bench",
       "title": "PACE-Bench",
       "year": 2026,
@@ -3591,6 +3532,127 @@
         "summary": "现有的自演化 agent 评估都在固定执行条件下做优化，从不检验条件变了之后会怎样。PACE-Bench 从构造上堵住这个缺口。一个任务的起点是一份能用的解——一段定义 `build_agent()`（结构装配）与 `agent_action()`（控制逻辑）的 Python 程序——它在源 Box2D 环境中是成功的。目标环境的目标与接口都不变，只变异摩擦系数、材料强度、重力、力上限这类物理参数，而源设计在那里会失败。agent 要把程序改造成在目标环境中可用的设计，依据是一份结构化诊断反馈：它报告哪里出了问题，但不给出该怎么改。作者比较了来自四种范式的十种自演化方法，结果显示这个 benchmark 远未饱和。两个结果撑起了全文的论点：有仿真器兜底的反思比未经验证的自我修改更可靠；而在全文最扎眼的一次实验里，把究竟哪些物理量变了原原本本告诉 agent，也抬不高天花板——这把瓶颈定位在机制的重新设计上，而不是参数的推断上。"
       },
       "domains": [
+        {
+          "name": "Physics",
+          "zh_name": "Physics",
+          "slug": "physics",
+          "url": "./documents/en/domains/physics.json",
+          "zh_url": "./documents/zh/domains/physics.json"
+        }
+      ],
+      "first_appeared_month": "2026-08"
+    },
+    {
+      "slug": "autoresearcheval",
+      "title": "AutoResearchEval",
+      "year": 2026,
+      "card_url": "./documents/en/works/autoresearcheval.json",
+      "zh_card_url": "./documents/zh/works/autoresearcheval.json",
+      "first_appeared": "2026-08-13",
+      "first_appeared_source": {
+        "label": "official data-generation pipeline release",
+        "url": "https://github.com/PrentisAI/AutoResearchEval/commit/55bb0dbf5e7a4539f22c3ef7f7d8784adb61c4b4"
+      },
+      "overview": "AutoResearchEval checks whether a research agent's claims agree with the code, data, and execution logs it actually produced. It diagnoses 800 trajectories from 100 scientific tasks using ARFT, a taxonomy of 45 failure patterns across research stages and four root-cause categories.",
+      "summary": "A polished report can conceal an unexecuted experiment or a claim contradicted by the agent's own files. The judge therefore inspects the complete artifact set and attaches evidence to each diagnosed failure. Three experts refined the taxonomy through five agreement rounds; an agent judge scales this inspection to eight harness-model combinations. The study reports recurring failures in checking evidence, revising conclusions, and reconsidering a research plan, rather than a leaderboard of scientific success.",
+      "domains_text": "Figure 2 explicitly gives the source-domain counts: biology **24** (15 discovery + 9 optimization), medicine **15** (12 + 3), chemistry **14** (9 + 5), scientific computing **13** (11 + 2), materials science **12** (7 + 5), physics **12** (7 + 5), and geophysics **10** (9 + 1).\n\nAppendix G includes microbiome and cellular biology, clinical prediction and biomedical modeling, quantum chemistry and biomolecular binding, crystal structure and materials processing, condensed-matter and gravitational physics, and seismic and climate investigations. Repository note: geophysics maps to Earth Science. The heterogeneous scientific-computing label is retained as a source category, not automatically assigned wholesale to Computer Science.",
+      "topics": [
+        {
+          "name": "Scientific Agent Benchmarks",
+          "zh_name": "Scientific Agent Benchmarks",
+          "slug": "scientific_agents",
+          "url": "./documents/en/topics/scientific_agents.json",
+          "zh_url": "./documents/zh/topics/scientific_agents.json"
+        },
+        {
+          "name": "Trajectory Evaluation",
+          "zh_name": "Trajectory Evaluation",
+          "slug": "trajectory_evaluation",
+          "url": "./documents/en/topics/trajectory_evaluation.json",
+          "zh_url": "./documents/zh/topics/trajectory_evaluation.json"
+        },
+        {
+          "name": "General Long-Horizon Agent Benchmarks",
+          "zh_name": "General Long-Horizon Agent Benchmarks",
+          "slug": "long_horizon_evaluation",
+          "url": "./documents/en/topics/long_horizon_evaluation.json",
+          "zh_url": "./documents/zh/topics/long_horizon_evaluation.json"
+        },
+        {
+          "name": "Evaluator Reliability & Validation",
+          "zh_name": "Evaluator Reliability & Validation",
+          "slug": "evaluator_reliability_validation",
+          "url": "./documents/en/topics/evaluator_reliability_validation.json",
+          "zh_url": "./documents/zh/topics/evaluator_reliability_validation.json"
+        }
+      ],
+      "activities": [
+        {
+          "name": "End-to-End Research",
+          "zh_name": "端到端研究",
+          "slug": "end_to_end_research",
+          "url": "./documents/en/activities/end_to_end_research.json",
+          "zh_url": "./documents/zh/activities/end_to_end_research.json"
+        }
+      ],
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.14905"
+        },
+        {
+          "label": "Full text",
+          "url": "https://arxiv.org/html/2608.14905v3"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/PrentisAI/AutoResearchEval"
+        },
+        {
+          "label": "Data",
+          "url": "https://huggingface.co/datasets/PrentisAI/AutoResearchEval"
+        }
+      ],
+      "zh": {
+        "overview": "AutoResearchEval 检查研究 agent 的论断是否符合它实际生成的代码、数据与执行日志。它分析 100 个科学任务产生的 800 条轨迹，用 ARFT 将 45 种失败模式按研究阶段与四类根因整理起来。",
+        "summary": "一份写得完整的报告，可能掩盖根本没有执行的实验，也可能与 agent 自己留下的文件相矛盾。因此，评判器检查整套产物，并为每项失败诊断附上证据。三位专家经过五轮一致性检查完善分类，再由 agent 评判器将检查扩展到八种 harness 与模型组合。研究关注的是反复出现的证据核对、结论修正和研究计划调整问题，并不提供科学研究成功率排行榜。"
+      },
+      "domains": [
+        {
+          "name": "Biology",
+          "zh_name": "Biology",
+          "slug": "biology",
+          "url": "./documents/en/domains/biology.json",
+          "zh_url": "./documents/zh/domains/biology.json"
+        },
+        {
+          "name": "Chemistry",
+          "zh_name": "Chemistry",
+          "slug": "chemistry",
+          "url": "./documents/en/domains/chemistry.json",
+          "zh_url": "./documents/zh/domains/chemistry.json"
+        },
+        {
+          "name": "Earth Science",
+          "zh_name": "Earth Science",
+          "slug": "earth_science",
+          "url": "./documents/en/domains/earth_science.json",
+          "zh_url": "./documents/zh/domains/earth_science.json"
+        },
+        {
+          "name": "Materials Science",
+          "zh_name": "Materials Science",
+          "slug": "materials_science",
+          "url": "./documents/en/domains/materials_science.json",
+          "zh_url": "./documents/zh/domains/materials_science.json"
+        },
+        {
+          "name": "Medicine & Health",
+          "zh_name": "Medicine & Health",
+          "slug": "medicine_health",
+          "url": "./documents/en/domains/medicine_health.json",
+          "zh_url": "./documents/zh/domains/medicine_health.json"
+        },
         {
           "name": "Physics",
           "zh_name": "Physics",
