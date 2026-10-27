@@ -1,0 +1,1708 @@
+{
+  "schema_version": 2,
+  "bundle_kind": "benchmark_detail",
+  "snapshot_id": "2026-10-27",
+  "reference_organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "Google",
+        "Google DeepMind",
+        "DeepMind",
+        "Google Research"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "DeepSeek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "Qwen",
+        "Alibaba",
+        "Alibaba/Qwen",
+        "Qwen/Alibaba"
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "Meta",
+        "Meta AI"
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": [
+        "xAI"
+      ]
+    }
+  ],
+  "benchmark": {
+    "id": "frontiercs-2",
+    "name": "FrontierCS 2",
+    "domain": "Software engineering",
+    "release": "2026-10-21",
+    "source": "https://arxiv.org/abs/2610.29932v1",
+    "floor": 0.0,
+    "ceiling": 1.0,
+    "hard_min": 0.0,
+    "hard_max": 1.0,
+    "progress_baseline": 0.0,
+    "progress_target": 1.0,
+    "input_unit": "fraction",
+    "evaluation_type": "Agent",
+    "tags": [
+      "October 2026 curation",
+      "repository",
+      "research engineering",
+      "long-horizon"
+    ],
+    "labels": [
+      "planning",
+      "tool-use",
+      "environment-interaction",
+      "code-generation",
+      "code-execution-debugging",
+      "design-optimization"
+    ],
+    "metric": "Pass rate",
+    "score_format": "ratio",
+    "score_decimals": null,
+    "metric_id": "frontiercs-2-metric-v1",
+    "protocol_id": "frontiercs-2-protocol-v1",
+    "canonical_score": {
+      "series_id": "frontiercs-2-canonical-score",
+      "role": "canonical",
+      "metric_id": "frontiercs-2-metric-v1",
+      "metric_name": "Pass rate",
+      "protocol_id": "frontiercs-2-protocol-v1",
+      "task_set_id": "frontiercs-2-canonical",
+      "direction": "higher_is_better",
+      "score_format": "ratio",
+      "input_unit": "fraction",
+      "progress_baseline": 0.0,
+      "progress_target": 1.0,
+      "lifecycle_eligible": true
+    },
+    "auxiliary_score_series": [],
+    "benchmark_version_id": "frontiercs-2-canonical",
+    "summary": {
+      "en": "Tests whether coding agents can deliver open-ended computer-science R&D results inside a real research repository.",
+      "zh": "\u6d4b\u8bd5 coding agent \u80fd\u5426\u5728\u771f\u5b9e\u7814\u7a76\u4ee3\u7801\u4ed3\u5e93\u4e2d\u5b8c\u6210\u5f00\u653e\u5f0f\u8ba1\u7b97\u673a\u79d1\u5b66\u7814\u53d1\u4efb\u52a1\u3002"
+    },
+    "task_format": {
+      "en": "48 public tasks across 13 domains such as ML systems, HPC, databases, security and robotics; the agent inherits a working repository, works for up to five hours, and submits a patch.",
+      "zh": "48 \u4e2a\u516c\u5f00\u4efb\u52a1\u8986\u76d6 ML \u7cfb\u7edf\u3001HPC\u3001\u6570\u636e\u5e93\u3001\u5b89\u5168\u548c\u673a\u5668\u4eba\u7b49 13 \u4e2a\u9886\u57df\uff1bagent \u63a5\u624b\u4e00\u4e2a\u53ef\u8fd0\u884c\u7684\u4ee3\u7801\u4ed3\u5e93\uff0c\u6700\u591a\u5de5\u4f5c\u4e94\u5c0f\u65f6\uff0c\u7136\u540e\u63d0\u4ea4\u8865\u4e01\u3002"
+    },
+    "scoring": {
+      "metric_name": "Pass rate",
+      "explanation": {
+        "en": "Share of the 48 task runs whose final submission passes the hidden-reference judge. The FCI capability index on the leaderboard is a separate IRT scale and is not used here.",
+        "zh": "48 \u4e2a\u4efb\u52a1\u8fd0\u884c\u4e2d\uff0c\u6700\u7ec8\u63d0\u4ea4\u901a\u8fc7\u9690\u85cf\u53c2\u8003\u7b54\u6848\u8bc4\u5ba1\u7684\u6bd4\u4f8b\u3002\u699c\u5355\u4e0a\u7684 FCI \u80fd\u529b\u6307\u6570\u662f\u53e6\u4e00\u79cd IRT \u91cf\u8868\uff0c\u8fd9\u91cc\u4e0d\u4f7f\u7528\u3002"
+      }
+    },
+    "evaluation_target": "environment_outcome",
+    "observation_count": 16,
+    "evidence_record_count": 16,
+    "observations": [
+      {
+        "observation_id": "obs-0-583333-2a5f405fa83edfa0",
+        "benchmark_id": "frontiercs-2",
+        "benchmark_version_id": "frontiercs-2-canonical",
+        "model_id": "model-claude-opus-5-5-claude-code-950e88e1982c93e2",
+        "model_configuration": "Claude Opus 5.5 / Claude Code",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-claude-code",
+        "model_family_id": "anthropic-claude-opus-5-5-claude-code",
+        "model": "Claude Opus 5.5 / Claude Code",
+        "organization": "Anthropic",
+        "score": 0.583333,
+        "input_score": 0.583333,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "frontiercs-2-metric-v1",
+        "protocol_id": "frontiercs-2-protocol-v1",
+        "task_set_id": "frontiercs-2-canonical",
+        "metric": "Pass rate",
+        "score_role": "canonical",
+        "score_series_id": "frontiercs-2-canonical-score",
+        "evaluation_protocol": "Official FrontierCS 2 leaderboard; 48 public tasks, one five-hour run per task, each agent in its own vendor harness; pass rate is passing runs divided by 48.",
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-10-21",
+        "source_publication_date": "2026-10-21",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2610-29932v1-fda32b0867d2e848"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2610-29932v1-fda32b0867d2e848"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-10-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-22",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-10-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2610-29932v1-fda32b0867d2e848"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2610-29932v1-fda32b0867d2e848"
+        ],
+        "source": "https://arxiv.org/abs/2610.29932v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-frontiercs-2-claude-opus-5-5-claude-code-d0a9ea2622f40932"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "oct2026-frontiercs-2-claude-opus-5-5-claude-code"
+        ]
+      },
+      {
+        "observation_id": "obs-0-541667-d49ebd6fe54fd489",
+        "benchmark_id": "frontiercs-2",
+        "benchmark_version_id": "frontiercs-2-canonical",
+        "model_id": "model-gemini-4-argon-antigravity-60fc806d18290695",
+        "model_configuration": "Gemini 4 Argon / Antigravity",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-4-argon-antigravity",
+        "model_family_id": "google-gemini-4-argon-antigravity",
+        "model": "Gemini 4 Argon / Antigravity",
+        "organization": "Google",
+        "score": 0.541667,
+        "input_score": 0.541667,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "frontiercs-2-metric-v1",
+        "protocol_id": "frontiercs-2-protocol-v1",
+        "task_set_id": "frontiercs-2-canonical",
+        "metric": "Pass rate",
+        "score_role": "canonical",
+        "score_series_id": "frontiercs-2-canonical-score",
+        "evaluation_protocol": "Official FrontierCS 2 leaderboard; 48 public tasks, one five-hour run per task, each agent in its own vendor harness; pass rate is passing runs divided by 48.",
+        "model_release_date": "2026-10-13",
+        "evaluation_date": null,
+        "result_public_date": "2026-10-27",
+        "source_publication_date": "2026-10-27",
+        "observation_date": "2026-10-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-10-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-10-27",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-10-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-10-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-10-27",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2610-29932v1-fda32b0867d2e848",
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "score_source_ids": [
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "source": "https://frontier-cs.org/assets/js/fcs2-data.js",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-frontiercs-2-gemini-4-argon-antigravity-f60409b88fd9c2c4"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "oct2026-frontiercs-2-gemini-4-argon-antigravity"
+        ]
+      },
+      {
+        "observation_id": "obs-0-4375-15cf895128a02e58",
+        "benchmark_id": "frontiercs-2",
+        "benchmark_version_id": "frontiercs-2-canonical",
+        "model_id": "model-gpt-6-astra-codex-cli-cac65219393ab78b",
+        "model_configuration": "GPT-6 Astra / Codex CLI",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-astra-codex-cli",
+        "model_family_id": "openai-gpt-6-astra-codex-cli",
+        "model": "GPT-6 Astra / Codex CLI",
+        "organization": "OpenAI",
+        "score": 0.4375,
+        "input_score": 0.4375,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "frontiercs-2-metric-v1",
+        "protocol_id": "frontiercs-2-protocol-v1",
+        "task_set_id": "frontiercs-2-canonical",
+        "metric": "Pass rate",
+        "score_role": "canonical",
+        "score_series_id": "frontiercs-2-canonical-score",
+        "evaluation_protocol": "Official FrontierCS 2 leaderboard; 48 public tasks, one five-hour run per task, each agent in its own vendor harness; pass rate is passing runs divided by 48.",
+        "model_release_date": "2026-09-03",
+        "evaluation_date": null,
+        "result_public_date": "2026-10-27",
+        "source_publication_date": "2026-10-27",
+        "observation_date": "2026-09-03",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-03",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+              "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-10-27",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-03",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-03",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-10-27",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2610-29932v1-fda32b0867d2e848",
+          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "score_source_ids": [
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "source": "https://frontier-cs.org/assets/js/fcs2-data.js",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-frontiercs-2-gpt-6-astra-codex-cli-6b299441c9839b85"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "oct2026-frontiercs-2-gpt-6-astra-codex-cli"
+        ]
+      },
+      {
+        "observation_id": "obs-0-395833-d2087ca3a6befc7e",
+        "benchmark_id": "frontiercs-2",
+        "benchmark_version_id": "frontiercs-2-canonical",
+        "model_id": "model-gemini-4-argon-pi-65294df0402e115e",
+        "model_configuration": "Gemini 4 Argon / Pi",
+        "model_identity_organization": "google",
+        "model_label_id": "gemini-4-argon-pi",
+        "model_family_id": "google-gemini-4-argon-pi",
+        "model": "Gemini 4 Argon / Pi",
+        "organization": "Google",
+        "score": 0.395833,
+        "input_score": 0.395833,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "frontiercs-2-metric-v1",
+        "protocol_id": "frontiercs-2-protocol-v1",
+        "task_set_id": "frontiercs-2-canonical",
+        "metric": "Pass rate",
+        "score_role": "canonical",
+        "score_series_id": "frontiercs-2-canonical-score",
+        "evaluation_protocol": "Official FrontierCS 2 leaderboard; 48 public tasks, one five-hour run per task, each agent in its own vendor harness; pass rate is passing runs divided by 48.",
+        "model_release_date": "2026-10-13",
+        "evaluation_date": null,
+        "result_public_date": "2026-10-27",
+        "source_publication_date": "2026-10-27",
+        "observation_date": "2026-10-13",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-10-13",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-10-27",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-10-13",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-10-13",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-10-27",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2610-29932v1-fda32b0867d2e848",
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "score_source_ids": [
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "source": "https://frontier-cs.org/assets/js/fcs2-data.js",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-frontiercs-2-gemini-4-argon-pi-568b267ab92609b8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "oct2026-frontiercs-2-gemini-4-argon-pi"
+        ]
+      },
+      {
+        "observation_id": "obs-0-395833-b9cf878081e14d1c",
+        "benchmark_id": "frontiercs-2",
+        "benchmark_version_id": "frontiercs-2-canonical",
+        "model_id": "model-gpt-6-1-terra-codex-cli-cec10ee0f215bb03",
+        "model_configuration": "GPT-6.1 Terra / Codex CLI",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-1-terra-codex-cli",
+        "model_family_id": "openai-gpt-6-1-terra-codex-cli",
+        "model": "GPT-6.1 Terra / Codex CLI",
+        "organization": "OpenAI",
+        "score": 0.395833,
+        "input_score": 0.395833,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "frontiercs-2-metric-v1",
+        "protocol_id": "frontiercs-2-protocol-v1",
+        "task_set_id": "frontiercs-2-canonical",
+        "metric": "Pass rate",
+        "score_role": "canonical",
+        "score_series_id": "frontiercs-2-canonical-score",
+        "evaluation_protocol": "Official FrontierCS 2 leaderboard; 48 public tasks, one five-hour run per task, each agent in its own vendor harness; pass rate is passing runs divided by 48.",
+        "model_release_date": "2026-10-26",
+        "evaluation_date": null,
+        "result_public_date": "2026-10-27",
+        "source_publication_date": "2026-10-27",
+        "observation_date": "2026-10-26",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-10-26",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-10-27",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-10-26",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-10-26",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-10-27",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2610-29932v1-fda32b0867d2e848",
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "score_source_ids": [
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "source": "https://frontier-cs.org/assets/js/fcs2-data.js",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-frontiercs-2-gpt-6-1-terra-codex-cli-825d7faa663a5768"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "oct2026-frontiercs-2-gpt-6-1-terra-codex-cli"
+        ]
+      },
+      {
+        "observation_id": "obs-0-354167-1b021644f0ab4cfb",
+        "benchmark_id": "frontiercs-2",
+        "benchmark_version_id": "frontiercs-2-canonical",
+        "model_id": "model-gpt-6-1-sol-codex-cli-b2e9314305bfd184",
+        "model_configuration": "GPT-6.1 Sol / Codex CLI",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-1-sol-codex-cli",
+        "model_family_id": "openai-gpt-6-1-sol-codex-cli",
+        "model": "GPT-6.1 Sol / Codex CLI",
+        "organization": "OpenAI",
+        "score": 0.354167,
+        "input_score": 0.354167,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "frontiercs-2-metric-v1",
+        "protocol_id": "frontiercs-2-protocol-v1",
+        "task_set_id": "frontiercs-2-canonical",
+        "metric": "Pass rate",
+        "score_role": "canonical",
+        "score_series_id": "frontiercs-2-canonical-score",
+        "evaluation_protocol": "Official FrontierCS 2 leaderboard; 48 public tasks, one five-hour run per task, each agent in its own vendor harness; pass rate is passing runs divided by 48.",
+        "model_release_date": "2026-09-29",
+        "evaluation_date": null,
+        "result_public_date": "2026-10-27",
+        "source_publication_date": "2026-10-27",
+        "observation_date": "2026-09-29",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-29",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-10-27",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-29",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-29",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-10-27",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2610-29932v1-fda32b0867d2e848",
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "score_source_ids": [
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "source": "https://frontier-cs.org/assets/js/fcs2-data.js",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-frontiercs-2-gpt-6-1-sol-codex-cli-ecd8ee13c6dcd9cf"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "oct2026-frontiercs-2-gpt-6-1-sol-codex-cli"
+        ]
+      },
+      {
+        "observation_id": "obs-0-25-fd092bfb81a5ac36",
+        "benchmark_id": "frontiercs-2",
+        "benchmark_version_id": "frontiercs-2-canonical",
+        "model_id": "model-glm-5-3-zcode-7f7e7824314f7c2a",
+        "model_configuration": "GLM 5.3 / ZCode",
+        "model_identity_organization": "z-ai",
+        "model_label_id": "glm-5-3-zcode",
+        "model_family_id": "z-ai-glm-5-3-zcode",
+        "model": "GLM 5.3 / ZCode",
+        "organization": "Z.ai",
+        "score": 0.25,
+        "input_score": 0.25,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "frontiercs-2-metric-v1",
+        "protocol_id": "frontiercs-2-protocol-v1",
+        "task_set_id": "frontiercs-2-canonical",
+        "metric": "Pass rate",
+        "score_role": "canonical",
+        "score_series_id": "frontiercs-2-canonical-score",
+        "evaluation_protocol": "Official FrontierCS 2 leaderboard; 48 public tasks, one five-hour run per task, each agent in its own vendor harness; pass rate is passing runs divided by 48.",
+        "model_release_date": "2026-08-14",
+        "evaluation_date": null,
+        "result_public_date": "2026-10-27",
+        "source_publication_date": "2026-10-27",
+        "observation_date": "2026-08-14",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-08-14",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-10-27",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-08-14",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-08-14",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-10-27",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2610-29932v1-fda32b0867d2e848",
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "score_source_ids": [
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "source": "https://frontier-cs.org/assets/js/fcs2-data.js",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-frontiercs-2-glm-5-3-zcode-6cb664187a68c3c5"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "oct2026-frontiercs-2-glm-5-3-zcode"
+        ]
+      },
+      {
+        "observation_id": "obs-0-25-0d42f508a9118c63",
+        "benchmark_id": "frontiercs-2",
+        "benchmark_version_id": "frontiercs-2-canonical",
+        "model_id": "model-kimi-k3-1-pro-kimi-code-5417ac0efc051bfd",
+        "model_configuration": "Kimi K3.1 Pro / Kimi Code",
+        "model_identity_organization": "moonshot",
+        "model_label_id": "kimi-k3-1-pro-kimi-code",
+        "model_family_id": "moonshot-kimi-k3-1-pro-kimi-code",
+        "model": "Kimi K3.1 Pro / Kimi Code",
+        "organization": "Moonshot",
+        "score": 0.25,
+        "input_score": 0.25,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "frontiercs-2-metric-v1",
+        "protocol_id": "frontiercs-2-protocol-v1",
+        "task_set_id": "frontiercs-2-canonical",
+        "metric": "Pass rate",
+        "score_role": "canonical",
+        "score_series_id": "frontiercs-2-canonical-score",
+        "evaluation_protocol": "Official FrontierCS 2 leaderboard; 48 public tasks, one five-hour run per task, each agent in its own vendor harness; pass rate is passing runs divided by 48.",
+        "model_release_date": "2026-10-23",
+        "evaluation_date": null,
+        "result_public_date": "2026-10-27",
+        "source_publication_date": "2026-10-27",
+        "observation_date": "2026-10-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-10-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-10-27",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-10-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-10-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-10-27",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2610-29932v1-fda32b0867d2e848",
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "score_source_ids": [
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "source": "https://frontier-cs.org/assets/js/fcs2-data.js",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-frontiercs-2-kimi-k3-1-pro-kimi-code-2a4da92325170e89"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "oct2026-frontiercs-2-kimi-k3-1-pro-kimi-code"
+        ]
+      },
+      {
+        "observation_id": "obs-0-208333-af39b3e691af070d",
+        "benchmark_id": "frontiercs-2",
+        "benchmark_version_id": "frontiercs-2-canonical",
+        "model_id": "model-kimi-k3-kimi-code-13d5b555f95e3975",
+        "model_configuration": "Kimi K3 / Kimi Code",
+        "model_identity_organization": "moonshot",
+        "model_label_id": "kimi-k3-kimi-code",
+        "model_family_id": "moonshot-kimi-k3-kimi-code",
+        "model": "Kimi K3 / Kimi Code",
+        "organization": "Moonshot",
+        "score": 0.208333,
+        "input_score": 0.208333,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "frontiercs-2-metric-v1",
+        "protocol_id": "frontiercs-2-protocol-v1",
+        "task_set_id": "frontiercs-2-canonical",
+        "metric": "Pass rate",
+        "score_role": "canonical",
+        "score_series_id": "frontiercs-2-canonical-score",
+        "evaluation_protocol": "Official FrontierCS 2 leaderboard; 48 public tasks, one five-hour run per task, each agent in its own vendor harness; pass rate is passing runs divided by 48.",
+        "model_release_date": "2026-07-16",
+        "evaluation_date": null,
+        "result_public_date": "2026-10-27",
+        "source_publication_date": "2026-10-27",
+        "observation_date": "2026-07-16",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-07-16",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-10-27",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-07-16",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-07-16",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-10-27",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2610-29932v1-fda32b0867d2e848",
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "score_source_ids": [
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "source": "https://frontier-cs.org/assets/js/fcs2-data.js",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-frontiercs-2-kimi-k3-kimi-code-d12cf6e39985bfad"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "oct2026-frontiercs-2-kimi-k3-kimi-code"
+        ]
+      },
+      {
+        "observation_id": "obs-0-208333-ea3833774c10f5ec",
+        "benchmark_id": "frontiercs-2",
+        "benchmark_version_id": "frontiercs-2-canonical",
+        "model_id": "model-muse-wonder-1-0-muse-code-fcfa894d80c92d9e",
+        "model_configuration": "Muse Wonder 1.0 / Muse Code",
+        "model_identity_organization": "meta",
+        "model_label_id": "muse-wonder-1-0-muse-code",
+        "model_family_id": "meta-muse-wonder-1-0-muse-code",
+        "model": "Muse Wonder 1.0 / Muse Code",
+        "organization": "Meta",
+        "score": 0.208333,
+        "input_score": 0.208333,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "frontiercs-2-metric-v1",
+        "protocol_id": "frontiercs-2-protocol-v1",
+        "task_set_id": "frontiercs-2-canonical",
+        "metric": "Pass rate",
+        "score_role": "canonical",
+        "score_series_id": "frontiercs-2-canonical-score",
+        "evaluation_protocol": "Official FrontierCS 2 leaderboard; 48 public tasks, one five-hour run per task, each agent in its own vendor harness; pass rate is passing runs divided by 48.",
+        "model_release_date": "2026-10-12",
+        "evaluation_date": null,
+        "result_public_date": "2026-10-27",
+        "source_publication_date": "2026-10-27",
+        "observation_date": "2026-10-12",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-10-12",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-10-27",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-10-12",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-10-12",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-10-27",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2610-29932v1-fda32b0867d2e848",
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "score_source_ids": [
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "source": "https://frontier-cs.org/assets/js/fcs2-data.js",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-frontiercs-2-muse-wonder-1-0-muse-code-e24658db8108320b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "oct2026-frontiercs-2-muse-wonder-1-0-muse-code"
+        ]
+      },
+      {
+        "observation_id": "obs-0-166667-bf7554cb128a300a",
+        "benchmark_id": "frontiercs-2",
+        "benchmark_version_id": "frontiercs-2-canonical",
+        "model_id": "model-deepseek-v4-1-flash-1017-deepseek-harness-3f8250a0c197b69e",
+        "model_configuration": "DeepSeek V4.1 Flash 1017 / DeepSeek Harness",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-v4-1-flash-1017-deepseek-harness",
+        "model_family_id": "deepseek-deepseek-v4-1-flash-1017-deepseek-harness",
+        "model": "DeepSeek V4.1 Flash 1017 / DeepSeek Harness",
+        "organization": "DeepSeek",
+        "score": 0.166667,
+        "input_score": 0.166667,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "frontiercs-2-metric-v1",
+        "protocol_id": "frontiercs-2-protocol-v1",
+        "task_set_id": "frontiercs-2-canonical",
+        "metric": "Pass rate",
+        "score_role": "canonical",
+        "score_series_id": "frontiercs-2-canonical-score",
+        "evaluation_protocol": "Official FrontierCS 2 leaderboard; 48 public tasks, one five-hour run per task, each agent in its own vendor harness; pass rate is passing runs divided by 48.",
+        "model_release_date": "2026-10-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-10-27",
+        "source_publication_date": "2026-10-27",
+        "observation_date": "2026-10-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-10-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-10-27",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-10-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-10-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-10-27",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2610-29932v1-fda32b0867d2e848",
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "score_source_ids": [
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "source": "https://frontier-cs.org/assets/js/fcs2-data.js",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-frontiercs-2-deepseek-v4-1-flash-1017-de-7d48251e93e11cf7"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "oct2026-frontiercs-2-deepseek-v4-1-flash-1017-deepseek-harness"
+        ]
+      },
+      {
+        "observation_id": "obs-0-145833-19474333a5800669",
+        "benchmark_id": "frontiercs-2",
+        "benchmark_version_id": "frontiercs-2-canonical",
+        "model_id": "model-deepseek-v4-1-flash-deepseek-harness-d6eaccb1337fe99d",
+        "model_configuration": "DeepSeek V4.1 Flash / DeepSeek Harness",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-v4-1-flash-deepseek-harness",
+        "model_family_id": "deepseek-deepseek-v4-1-flash-deepseek-harness",
+        "model": "DeepSeek V4.1 Flash / DeepSeek Harness",
+        "organization": "DeepSeek",
+        "score": 0.145833,
+        "input_score": 0.145833,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "frontiercs-2-metric-v1",
+        "protocol_id": "frontiercs-2-protocol-v1",
+        "task_set_id": "frontiercs-2-canonical",
+        "metric": "Pass rate",
+        "score_role": "canonical",
+        "score_series_id": "frontiercs-2-canonical-score",
+        "evaluation_protocol": "Official FrontierCS 2 leaderboard; 48 public tasks, one five-hour run per task, each agent in its own vendor harness; pass rate is passing runs divided by 48.",
+        "model_release_date": "2026-09-09",
+        "evaluation_date": null,
+        "result_public_date": "2026-10-27",
+        "source_publication_date": "2026-10-27",
+        "observation_date": "2026-09-09",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-09",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-10-27",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-09",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-09",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-10-27",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2610-29932v1-fda32b0867d2e848",
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "score_source_ids": [
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "source": "https://frontier-cs.org/assets/js/fcs2-data.js",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-frontiercs-2-deepseek-v4-1-flash-deepsee-81cc061b29dfde15"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "oct2026-frontiercs-2-deepseek-v4-1-flash-deepseek-harness"
+        ]
+      },
+      {
+        "observation_id": "obs-0-125-d960ad7d4788ef1f",
+        "benchmark_id": "frontiercs-2",
+        "benchmark_version_id": "frontiercs-2-canonical",
+        "model_id": "model-glm-5-3-flash-zcode-7e480f5aeca9f5e7",
+        "model_configuration": "GLM 5.3 Flash / ZCode",
+        "model_identity_organization": "z-ai",
+        "model_label_id": "glm-5-3-flash-zcode",
+        "model_family_id": "z-ai-glm-5-3-flash-zcode",
+        "model": "GLM 5.3 Flash / ZCode",
+        "organization": "Z.ai",
+        "score": 0.125,
+        "input_score": 0.125,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "frontiercs-2-metric-v1",
+        "protocol_id": "frontiercs-2-protocol-v1",
+        "task_set_id": "frontiercs-2-canonical",
+        "metric": "Pass rate",
+        "score_role": "canonical",
+        "score_series_id": "frontiercs-2-canonical-score",
+        "evaluation_protocol": "Official FrontierCS 2 leaderboard; 48 public tasks, one five-hour run per task, each agent in its own vendor harness; pass rate is passing runs divided by 48.",
+        "model_release_date": "2026-08-20",
+        "evaluation_date": null,
+        "result_public_date": "2026-10-27",
+        "source_publication_date": "2026-10-27",
+        "observation_date": "2026-08-20",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-08-20",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-10-27",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-08-20",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-08-20",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-10-27",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2610-29932v1-fda32b0867d2e848",
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "score_source_ids": [
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "source": "https://frontier-cs.org/assets/js/fcs2-data.js",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-frontiercs-2-glm-5-3-flash-zcode-32934c5e2e9e6124"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "oct2026-frontiercs-2-glm-5-3-flash-zcode"
+        ]
+      },
+      {
+        "observation_id": "obs-0-125-2230c8b262e26673",
+        "benchmark_id": "frontiercs-2",
+        "benchmark_version_id": "frontiercs-2-canonical",
+        "model_id": "model-muse-spark-1-3-muse-code-d94f166cae723514",
+        "model_configuration": "Muse Spark 1.3 / Muse Code",
+        "model_identity_organization": "meta",
+        "model_label_id": "muse-spark-1-3-muse-code",
+        "model_family_id": "meta-muse-spark-1-3-muse-code",
+        "model": "Muse Spark 1.3 / Muse Code",
+        "organization": "Meta",
+        "score": 0.125,
+        "input_score": 0.125,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "frontiercs-2-metric-v1",
+        "protocol_id": "frontiercs-2-protocol-v1",
+        "task_set_id": "frontiercs-2-canonical",
+        "metric": "Pass rate",
+        "score_role": "canonical",
+        "score_series_id": "frontiercs-2-canonical-score",
+        "evaluation_protocol": "Official FrontierCS 2 leaderboard; 48 public tasks, one five-hour run per task, each agent in its own vendor harness; pass rate is passing runs divided by 48.",
+        "model_release_date": "2026-09-02",
+        "evaluation_date": null,
+        "result_public_date": "2026-10-27",
+        "source_publication_date": "2026-10-27",
+        "observation_date": "2026-09-02",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-02",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-10-27",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-02",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-02",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-10-27",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2610-29932v1-fda32b0867d2e848",
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "score_source_ids": [
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "source": "https://frontier-cs.org/assets/js/fcs2-data.js",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-frontiercs-2-muse-spark-1-3-muse-code-0b8f6bed4d6c5326"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "oct2026-frontiercs-2-muse-spark-1-3-muse-code"
+        ]
+      },
+      {
+        "observation_id": "obs-0-125-34f42a86b5ed3829",
+        "benchmark_id": "frontiercs-2",
+        "benchmark_version_id": "frontiercs-2-canonical",
+        "model_id": "model-qwen-3-8-max-qwen-code-a0427a3d238a7f8e",
+        "model_configuration": "Qwen 3.8 Max / Qwen Code",
+        "model_identity_organization": "qwen",
+        "model_label_id": "qwen-3-8-max-qwen-code",
+        "model_family_id": "qwen-qwen-3-8-max-qwen-code",
+        "model": "Qwen 3.8 Max / Qwen Code",
+        "organization": "Qwen",
+        "score": 0.125,
+        "input_score": 0.125,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "frontiercs-2-metric-v1",
+        "protocol_id": "frontiercs-2-protocol-v1",
+        "task_set_id": "frontiercs-2-canonical",
+        "metric": "Pass rate",
+        "score_role": "canonical",
+        "score_series_id": "frontiercs-2-canonical-score",
+        "evaluation_protocol": "Official FrontierCS 2 leaderboard; 48 public tasks, one five-hour run per task, each agent in its own vendor harness; pass rate is passing runs divided by 48.",
+        "model_release_date": null,
+        "evaluation_date": null,
+        "result_public_date": "2026-10-27",
+        "source_publication_date": "2026-10-27",
+        "observation_date": "2026-10-27",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-10-27",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-10-27",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-10-27",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-10-27",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-10-27",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2610-29932v1-fda32b0867d2e848",
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "score_source_ids": [
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "source": "https://frontier-cs.org/assets/js/fcs2-data.js",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-frontiercs-2-qwen-3-8-max-qwen-code-e576756af9259860"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "oct2026-frontiercs-2-qwen-3-8-max-qwen-code"
+        ]
+      },
+      {
+        "observation_id": "obs-0-083333-cc03d94e1e03c751",
+        "benchmark_id": "frontiercs-2",
+        "benchmark_version_id": "frontiercs-2-canonical",
+        "model_id": "model-step-5-preview-step-code-d25bbac3ecc4efc3",
+        "model_configuration": "Step 5 Preview / Step Code",
+        "model_identity_organization": "stepfun",
+        "model_label_id": "step-5-preview-step-code",
+        "model_family_id": "stepfun-step-5-preview-step-code",
+        "model": "Step 5 Preview / Step Code",
+        "organization": "StepFun",
+        "score": 0.083333,
+        "input_score": 0.083333,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "frontiercs-2-metric-v1",
+        "protocol_id": "frontiercs-2-protocol-v1",
+        "task_set_id": "frontiercs-2-canonical",
+        "metric": "Pass rate",
+        "score_role": "canonical",
+        "score_series_id": "frontiercs-2-canonical-score",
+        "evaluation_protocol": "Official FrontierCS 2 leaderboard; 48 public tasks, one five-hour run per task, each agent in its own vendor harness; pass rate is passing runs divided by 48.",
+        "model_release_date": "2026-09-18",
+        "evaluation_date": null,
+        "result_public_date": "2026-10-27",
+        "source_publication_date": "2026-10-27",
+        "observation_date": "2026-09-18",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-18",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-10-27",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-18",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-18",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-10-27",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2610-29932v1-fda32b0867d2e848",
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "score_source_ids": [
+          "resource-https-frontier-cs-org-assets-js-fcs2-data-js-8fffb109181c7fe7"
+        ],
+        "source": "https://frontier-cs.org/assets/js/fcs2-data.js",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-frontiercs-2-step-5-preview-step-code-7004a3d653356f13"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "oct2026-frontiercs-2-step-5-preview-step-code"
+        ]
+      }
+    ],
+    "capability_frontier": [
+      {
+        "observation_id": "obs-0-583333-2a5f405fa83edfa0",
+        "benchmark_id": "frontiercs-2",
+        "benchmark_version_id": "frontiercs-2-canonical",
+        "model_id": "model-claude-opus-5-5-claude-code-950e88e1982c93e2",
+        "model_configuration": "Claude Opus 5.5 / Claude Code",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-claude-code",
+        "model_family_id": "anthropic-claude-opus-5-5-claude-code",
+        "model": "Claude Opus 5.5 / Claude Code",
+        "organization": "Anthropic",
+        "score": 0.583333,
+        "input_score": 0.583333,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "frontiercs-2-metric-v1",
+        "protocol_id": "frontiercs-2-protocol-v1",
+        "task_set_id": "frontiercs-2-canonical",
+        "metric": "Pass rate",
+        "score_role": "canonical",
+        "score_series_id": "frontiercs-2-canonical-score",
+        "evaluation_protocol": "Official FrontierCS 2 leaderboard; 48 public tasks, one five-hour run per task, each agent in its own vendor harness; pass rate is passing runs divided by 48.",
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-10-21",
+        "source_publication_date": "2026-10-21",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2610-29932v1-fda32b0867d2e848"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2610-29932v1-fda32b0867d2e848"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-10-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-10-21",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-10-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2610-29932v1-fda32b0867d2e848"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2610-29932v1-fda32b0867d2e848"
+        ],
+        "source": "https://arxiv.org/abs/2610.29932v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-frontiercs-2-claude-opus-5-5-claude-code-d0a9ea2622f40932"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "oct2026-frontiercs-2-claude-opus-5-5-claude-code"
+        ],
+        "plot_date": "2026-10-21",
+        "frontier_observation_ids": [
+          "obs-0-083333-cc03d94e1e03c751",
+          "obs-0-125-d960ad7d4788ef1f",
+          "obs-0-125-2230c8b262e26673",
+          "obs-0-145833-19474333a5800669",
+          "obs-0-166667-bf7554cb128a300a",
+          "obs-0-208333-af39b3e691af070d",
+          "obs-0-208333-ea3833774c10f5ec",
+          "obs-0-25-fd092bfb81a5ac36",
+          "obs-0-354167-1b021644f0ab4cfb",
+          "obs-0-395833-d2087ca3a6befc7e",
+          "obs-0-4375-15cf895128a02e58",
+          "obs-0-541667-d49ebd6fe54fd489",
+          "obs-0-583333-2a5f405fa83edfa0"
+        ]
+      }
+    ],
+    "reported_frontier": [
+      {
+        "observation_id": "obs-0-583333-2a5f405fa83edfa0",
+        "benchmark_id": "frontiercs-2",
+        "benchmark_version_id": "frontiercs-2-canonical",
+        "model_id": "model-claude-opus-5-5-claude-code-950e88e1982c93e2",
+        "model_configuration": "Claude Opus 5.5 / Claude Code",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-opus-5-5-claude-code",
+        "model_family_id": "anthropic-claude-opus-5-5-claude-code",
+        "model": "Claude Opus 5.5 / Claude Code",
+        "organization": "Anthropic",
+        "score": 0.583333,
+        "input_score": 0.583333,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "frontiercs-2-metric-v1",
+        "protocol_id": "frontiercs-2-protocol-v1",
+        "task_set_id": "frontiercs-2-canonical",
+        "metric": "Pass rate",
+        "score_role": "canonical",
+        "score_series_id": "frontiercs-2-canonical-score",
+        "evaluation_protocol": "Official FrontierCS 2 leaderboard; 48 public tasks, one five-hour run per task, each agent in its own vendor harness; pass rate is passing runs divided by 48.",
+        "model_release_date": "2026-09-22",
+        "evaluation_date": null,
+        "result_public_date": "2026-10-21",
+        "source_publication_date": "2026-10-21",
+        "observation_date": "2026-09-22",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-22",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-arxiv-org-abs-2610-29932v1-fda32b0867d2e848"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-arxiv-org-abs-2610-29932v1-fda32b0867d2e848"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-10-21",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-10-21",
+        "date_kind": "result first-public date",
+        "capability_date": "2026-09-22",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-10-21",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-arxiv-org-abs-2610-29932v1-fda32b0867d2e848"
+        ],
+        "score_source_ids": [
+          "resource-https-arxiv-org-abs-2610-29932v1-fda32b0867d2e848"
+        ],
+        "source": "https://arxiv.org/abs/2610.29932v1",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-frontiercs-2-claude-opus-5-5-claude-code-d0a9ea2622f40932"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "oct2026-frontiercs-2-claude-opus-5-5-claude-code"
+        ],
+        "plot_date": "2026-10-21",
+        "frontier_observation_ids": [
+          "obs-0-583333-2a5f405fa83edfa0"
+        ]
+      }
+    ],
+    "observed_frontier": 0.583333,
+    "capability_frontier_value": 0.583333,
+    "reported_frontier_value": 0.583333,
+    "current_frontier": 0.583333,
+    "normalized_progress": 0.583333,
+    "normalized_headroom": 0.416667,
+    "threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-10-21"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 6
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 6
+      }
+    },
+    "capability_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-10-21"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 6
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 6
+      }
+    },
+    "reported_threshold_days": {
+      "T50": {
+        "status": "at_release",
+        "days": 0,
+        "qualifying_observation_date": "2026-10-21"
+      },
+      "T80": {
+        "status": "right_censored",
+        "days": 6
+      },
+      "T90": {
+        "status": "right_censored",
+        "days": 6
+      }
+    },
+    "velocity_180d": null,
+    "capability_velocity_180d": null,
+    "reported_velocity_180d": null,
+    "cost_per_task": null,
+    "coverage": {
+      "value": 0.8571428571428571,
+      "represented_organizations": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "DeepSeek",
+        "Qwen",
+        "Meta"
+      ],
+      "panel_size": 7,
+      "status": "high"
+    },
+    "unavailable": [],
+    "resource_ids": [
+      "resource-https-arxiv-org-abs-2610-29932v1-fda32b0867d2e848"
+    ],
+    "date_policy": "Primary lifecycle time uses the earliest available date among evaluation/run time, model release time, and the earliest recorded score-publication time for the same observation. Plot dates and T50/T80/T90 are clipped at benchmark release, so lifecycle durations are never negative; original dates remain preserved for provenance.",
+    "historical_frontier_status": "available",
+    "timeline_default": "capability",
+    "lifecycle_eligibility": {
+      "test-of-time": {
+        "eligible": false,
+        "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+      },
+      "still-frontier": {
+        "eligible": false,
+        "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+      },
+      "fastest-solved": {
+        "eligible": false,
+        "rule": "known reached T90 < 6 months"
+      },
+      "recently-saturated": {
+        "eligible": false,
+        "rule": "T90 crossing within 3 months of snapshot"
+      }
+    }
+  }
+}

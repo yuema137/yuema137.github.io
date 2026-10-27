@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -167,7 +167,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2023-10-15",
@@ -239,7 +239,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2023-12-06",
@@ -311,7 +311,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2023-12-21",
@@ -383,7 +383,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2024-05-13",
@@ -455,7 +455,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2024-06-20",
@@ -527,7 +527,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2024-09-12",
@@ -555,770 +555,6 @@
         ],
         "evidence_count": 1,
         "source_row_ids": []
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-499-0adafda92cb7a6ea",
-        "benchmark_id": "mathvista",
-        "benchmark_version_id": "mathvista-canonical",
-        "model_id": "model-gpt-4v-1ec31e4d88cb5975",
-        "model_configuration": "gpt-4v",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-4v",
-        "model_family_id": "openai-gpt-4v",
-        "model": "GPT-4V",
-        "organization": "OpenAI",
-        "score": 0.499,
-        "input_score": 0.499,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "mathvista-metric-v1",
-        "protocol_id": "mathvista-source-export-v1",
-        "task_set_id": "mathvista-canonical",
-        "metric": "Score",
-        "score_role": "canonical",
-        "score_series_id": "mathvista-canonical-score",
-        "evaluation_protocol": "MathVista official project-page score series; test/testmini and materially different subsets are not silently merged.",
-        "model_release_date": "2023-10-15",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2023-10-15",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2023-10-15",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-mathvista-github-io-c693a247e6d30379"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-mathvista-github-io-c693a247e6d30379"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2023-10-15",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2023-10-15",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-mathvista-github-io-c693a247e6d30379"
-        ],
-        "score_source_ids": [
-          "resource-https-mathvista-github-io-c693a247e6d30379"
-        ],
-        "source": "https://mathvista.github.io/",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-model-version-gpt-4v-name-gpt-4v-notes-official--8e0c606cc2069377"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2023-10-15",
-        "frontier_observation_ids": [
-          "obs-0-499-0adafda92cb7a6ea"
-        ]
-      },
-      {
-        "observation_id": "obs-0-503-8c742e807f81bd64",
-        "benchmark_id": "mathvista",
-        "benchmark_version_id": "mathvista-canonical",
-        "model_id": "model-gemini-1-5-pro-cbb82d54e094a69c",
-        "model_configuration": "gemini-1-5-pro",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini",
-        "model_family_id": "google-gemini",
-        "model": "Gemini",
-        "organization": "Google",
-        "score": 0.503,
-        "input_score": 0.503,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "mathvista-metric-v1",
-        "protocol_id": "mathvista-source-export-v1",
-        "task_set_id": "mathvista-canonical",
-        "metric": "Score",
-        "score_role": "canonical",
-        "score_series_id": "mathvista-canonical-score",
-        "evaluation_protocol": "MathVista official project-page score series; test/testmini and materially different subsets are not silently merged.",
-        "model_release_date": "2023-12-06",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2023-12-06",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2023-12-06",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-mathvista-github-io-c693a247e6d30379"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-mathvista-github-io-c693a247e6d30379"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2023-12-06",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2023-12-06",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-mathvista-github-io-c693a247e6d30379"
-        ],
-        "score_source_ids": [
-          "resource-https-mathvista-github-io-c693a247e6d30379"
-        ],
-        "source": "https://mathvista.github.io/",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-model-version-gemini-1-5-pro-name-gemini-notes-o-22478df81758f785"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2023-12-06",
-        "frontier_observation_ids": [
-          "obs-0-503-8c742e807f81bd64"
-        ]
-      },
-      {
-        "observation_id": "obs-0-638-c7c9a8cc125d9e27",
-        "benchmark_id": "mathvista",
-        "benchmark_version_id": "mathvista-canonical",
-        "model_id": "model-gpt-4o-d491e46221c560b3",
-        "model_configuration": "gpt-4o",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-4o",
-        "model_family_id": "openai-gpt-4o",
-        "model": "GPT-4o",
-        "organization": "OpenAI",
-        "score": 0.638,
-        "input_score": 0.638,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "mathvista-metric-v1",
-        "protocol_id": "mathvista-source-export-v1",
-        "task_set_id": "mathvista-canonical",
-        "metric": "Score",
-        "score_role": "canonical",
-        "score_series_id": "mathvista-canonical-score",
-        "evaluation_protocol": "MathVista official project-page score series; test/testmini and materially different subsets are not silently merged.",
-        "model_release_date": "2024-05-13",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2024-05-13",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-05-13",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-mathvista-github-io-c693a247e6d30379"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-mathvista-github-io-c693a247e6d30379"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2024-05-13",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-05-13",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-mathvista-github-io-c693a247e6d30379"
-        ],
-        "score_source_ids": [
-          "resource-https-mathvista-github-io-c693a247e6d30379"
-        ],
-        "source": "https://mathvista.github.io/",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-model-version-gpt-4o-name-gpt-4o-notes-official--ec989d9831eeb12f"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2024-05-13",
-        "frontier_observation_ids": [
-          "obs-0-638-c7c9a8cc125d9e27"
-        ]
-      },
-      {
-        "observation_id": "obs-0-677-f20cfecae1f6937a",
-        "benchmark_id": "mathvista",
-        "benchmark_version_id": "mathvista-canonical",
-        "model_id": "model-claude-3-5-sonnet-ca0330ced73b499d",
-        "model_configuration": "claude-3-5-sonnet",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-3-5-sonnet",
-        "model_family_id": "anthropic-claude-3-5-sonnet",
-        "model": "Claude 3.5 Sonnet",
-        "organization": "Anthropic",
-        "score": 0.677,
-        "input_score": 0.677,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "mathvista-metric-v1",
-        "protocol_id": "mathvista-source-export-v1",
-        "task_set_id": "mathvista-canonical",
-        "metric": "Score",
-        "score_role": "canonical",
-        "score_series_id": "mathvista-canonical-score",
-        "evaluation_protocol": "MathVista official project-page score series; test/testmini and materially different subsets are not silently merged.",
-        "model_release_date": "2024-06-20",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2024-06-20",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-06-20",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-mathvista-github-io-c693a247e6d30379"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-mathvista-github-io-c693a247e6d30379"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2024-06-20",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-06-20",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-mathvista-github-io-c693a247e6d30379"
-        ],
-        "score_source_ids": [
-          "resource-https-mathvista-github-io-c693a247e6d30379"
-        ],
-        "source": "https://mathvista.github.io/",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-model-version-claude-3-5-sonnet-name-claude-3-5--472c23dcf8e83ba0"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2024-06-20",
-        "frontier_observation_ids": [
-          "obs-0-677-f20cfecae1f6937a"
-        ]
-      },
-      {
-        "observation_id": "obs-0-739-f17c667d8f81ee3a",
-        "benchmark_id": "mathvista",
-        "benchmark_version_id": "mathvista-canonical",
-        "model_id": "model-o1-4a7c062686813901",
-        "model_configuration": "o1",
-        "model_identity_organization": "openai",
-        "model_label_id": "openai-o1",
-        "model_family_id": "openai-openai-o1",
-        "model": "OpenAI o1",
-        "organization": "OpenAI",
-        "score": 0.739,
-        "input_score": 0.739,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "mathvista-metric-v1",
-        "protocol_id": "mathvista-source-export-v1",
-        "task_set_id": "mathvista-canonical",
-        "metric": "Score",
-        "score_role": "canonical",
-        "score_series_id": "mathvista-canonical-score",
-        "evaluation_protocol": "MathVista official project-page score series; test/testmini and materially different subsets are not silently merged.",
-        "model_release_date": "2024-09-12",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2024-09-12",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-09-12",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-mathvista-github-io-c693a247e6d30379"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-mathvista-github-io-c693a247e6d30379"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2024-09-12",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-09-12",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-mathvista-github-io-c693a247e6d30379"
-        ],
-        "score_source_ids": [
-          "resource-https-mathvista-github-io-c693a247e6d30379"
-        ],
-        "source": "https://mathvista.github.io/",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-model-version-o1-name-openai-o1-notes-official-m-6cc0492485caed17"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2024-09-12",
-        "frontier_observation_ids": [
-          "obs-0-739-f17c667d8f81ee3a"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-499-0adafda92cb7a6ea",
-        "benchmark_id": "mathvista",
-        "benchmark_version_id": "mathvista-canonical",
-        "model_id": "model-gpt-4v-1ec31e4d88cb5975",
-        "model_configuration": "gpt-4v",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-4v",
-        "model_family_id": "openai-gpt-4v",
-        "model": "GPT-4V",
-        "organization": "OpenAI",
-        "score": 0.499,
-        "input_score": 0.499,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "mathvista-metric-v1",
-        "protocol_id": "mathvista-source-export-v1",
-        "task_set_id": "mathvista-canonical",
-        "metric": "Score",
-        "score_role": "canonical",
-        "score_series_id": "mathvista-canonical-score",
-        "evaluation_protocol": "MathVista official project-page score series; test/testmini and materially different subsets are not silently merged.",
-        "model_release_date": "2023-10-15",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2023-10-15",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2023-10-15",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-mathvista-github-io-c693a247e6d30379"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-mathvista-github-io-c693a247e6d30379"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2023-10-15",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2023-10-15",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-mathvista-github-io-c693a247e6d30379"
-        ],
-        "score_source_ids": [
-          "resource-https-mathvista-github-io-c693a247e6d30379"
-        ],
-        "source": "https://mathvista.github.io/",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-model-version-gpt-4v-name-gpt-4v-notes-official--8e0c606cc2069377"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2023-10-15",
-        "frontier_observation_ids": [
-          "obs-0-499-0adafda92cb7a6ea"
-        ]
-      },
-      {
-        "observation_id": "obs-0-503-8c742e807f81bd64",
-        "benchmark_id": "mathvista",
-        "benchmark_version_id": "mathvista-canonical",
-        "model_id": "model-gemini-1-5-pro-cbb82d54e094a69c",
-        "model_configuration": "gemini-1-5-pro",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini",
-        "model_family_id": "google-gemini",
-        "model": "Gemini",
-        "organization": "Google",
-        "score": 0.503,
-        "input_score": 0.503,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "mathvista-metric-v1",
-        "protocol_id": "mathvista-source-export-v1",
-        "task_set_id": "mathvista-canonical",
-        "metric": "Score",
-        "score_role": "canonical",
-        "score_series_id": "mathvista-canonical-score",
-        "evaluation_protocol": "MathVista official project-page score series; test/testmini and materially different subsets are not silently merged.",
-        "model_release_date": "2023-12-06",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2023-12-06",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2023-12-06",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-mathvista-github-io-c693a247e6d30379"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-mathvista-github-io-c693a247e6d30379"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2023-12-06",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2023-12-06",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-mathvista-github-io-c693a247e6d30379"
-        ],
-        "score_source_ids": [
-          "resource-https-mathvista-github-io-c693a247e6d30379"
-        ],
-        "source": "https://mathvista.github.io/",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-model-version-gemini-1-5-pro-name-gemini-notes-o-22478df81758f785"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2023-12-06",
-        "frontier_observation_ids": [
-          "obs-0-503-8c742e807f81bd64"
-        ]
-      },
-      {
-        "observation_id": "obs-0-638-c7c9a8cc125d9e27",
-        "benchmark_id": "mathvista",
-        "benchmark_version_id": "mathvista-canonical",
-        "model_id": "model-gpt-4o-d491e46221c560b3",
-        "model_configuration": "gpt-4o",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-4o",
-        "model_family_id": "openai-gpt-4o",
-        "model": "GPT-4o",
-        "organization": "OpenAI",
-        "score": 0.638,
-        "input_score": 0.638,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "mathvista-metric-v1",
-        "protocol_id": "mathvista-source-export-v1",
-        "task_set_id": "mathvista-canonical",
-        "metric": "Score",
-        "score_role": "canonical",
-        "score_series_id": "mathvista-canonical-score",
-        "evaluation_protocol": "MathVista official project-page score series; test/testmini and materially different subsets are not silently merged.",
-        "model_release_date": "2024-05-13",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2024-05-13",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-05-13",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-mathvista-github-io-c693a247e6d30379"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-mathvista-github-io-c693a247e6d30379"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2024-05-13",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-05-13",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-mathvista-github-io-c693a247e6d30379"
-        ],
-        "score_source_ids": [
-          "resource-https-mathvista-github-io-c693a247e6d30379"
-        ],
-        "source": "https://mathvista.github.io/",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-model-version-gpt-4o-name-gpt-4o-notes-official--ec989d9831eeb12f"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2024-05-13",
-        "frontier_observation_ids": [
-          "obs-0-638-c7c9a8cc125d9e27"
-        ]
-      },
-      {
-        "observation_id": "obs-0-677-f20cfecae1f6937a",
-        "benchmark_id": "mathvista",
-        "benchmark_version_id": "mathvista-canonical",
-        "model_id": "model-claude-3-5-sonnet-ca0330ced73b499d",
-        "model_configuration": "claude-3-5-sonnet",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-3-5-sonnet",
-        "model_family_id": "anthropic-claude-3-5-sonnet",
-        "model": "Claude 3.5 Sonnet",
-        "organization": "Anthropic",
-        "score": 0.677,
-        "input_score": 0.677,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "mathvista-metric-v1",
-        "protocol_id": "mathvista-source-export-v1",
-        "task_set_id": "mathvista-canonical",
-        "metric": "Score",
-        "score_role": "canonical",
-        "score_series_id": "mathvista-canonical-score",
-        "evaluation_protocol": "MathVista official project-page score series; test/testmini and materially different subsets are not silently merged.",
-        "model_release_date": "2024-06-20",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2024-06-20",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-06-20",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-mathvista-github-io-c693a247e6d30379"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-mathvista-github-io-c693a247e6d30379"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2024-06-20",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-06-20",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-mathvista-github-io-c693a247e6d30379"
-        ],
-        "score_source_ids": [
-          "resource-https-mathvista-github-io-c693a247e6d30379"
-        ],
-        "source": "https://mathvista.github.io/",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-model-version-claude-3-5-sonnet-name-claude-3-5--472c23dcf8e83ba0"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2024-06-20",
-        "frontier_observation_ids": [
-          "obs-0-677-f20cfecae1f6937a"
-        ]
-      },
-      {
-        "observation_id": "obs-0-739-f17c667d8f81ee3a",
-        "benchmark_id": "mathvista",
-        "benchmark_version_id": "mathvista-canonical",
-        "model_id": "model-o1-4a7c062686813901",
-        "model_configuration": "o1",
-        "model_identity_organization": "openai",
-        "model_label_id": "openai-o1",
-        "model_family_id": "openai-openai-o1",
-        "model": "OpenAI o1",
-        "organization": "OpenAI",
-        "score": 0.739,
-        "input_score": 0.739,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "mathvista-metric-v1",
-        "protocol_id": "mathvista-source-export-v1",
-        "task_set_id": "mathvista-canonical",
-        "metric": "Score",
-        "score_role": "canonical",
-        "score_series_id": "mathvista-canonical-score",
-        "evaluation_protocol": "MathVista official project-page score series; test/testmini and materially different subsets are not silently merged.",
-        "model_release_date": "2024-09-12",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2024-09-12",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-09-12",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-mathvista-github-io-c693a247e6d30379"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-mathvista-github-io-c693a247e6d30379"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2024-09-12",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-09-12",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-mathvista-github-io-c693a247e6d30379"
-        ],
-        "score_source_ids": [
-          "resource-https-mathvista-github-io-c693a247e6d30379"
-        ],
-        "source": "https://mathvista.github.io/",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-model-version-o1-name-openai-o1-notes-official-m-6cc0492485caed17"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2024-09-12",
-        "frontier_observation_ids": [
-          "obs-0-739-f17c667d8f81ee3a"
-        ]
       }
     ],
     "capability_frontier": [
@@ -1365,7 +601,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2023-10-15",
@@ -1441,7 +677,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2023-12-06",
@@ -1517,7 +753,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2024-05-13",
@@ -1593,7 +829,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2024-06-20",
@@ -1669,7 +905,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2024-09-12",
@@ -1704,8 +940,6 @@
       }
     ],
     "reported_frontier": [],
-    "historical_frontier": [],
-    "retrospective_observations": [],
     "observed_frontier": 0.739,
     "capability_frontier_value": 0.739,
     "reported_frontier_value": null,
@@ -1720,11 +954,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 1086
+        "days": 1120
       },
       "T90": {
         "status": "right_censored",
-        "days": 1086
+        "days": 1120
       }
     },
     "capability_threshold_days": {
@@ -1735,11 +969,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 1086
+        "days": 1120
       },
       "T90": {
         "status": "right_censored",
-        "days": 1086
+        "days": 1120
       }
     },
     "reported_threshold_days": {

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -177,7 +177,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-03-05",
@@ -257,7 +257,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-02-19",
@@ -337,7 +337,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-02-05",
@@ -366,182 +366,6 @@
         "evidence_count": 1,
         "source_row_ids": [
           "compbiobench-claude-opus-4-6"
-        ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-83-b7ee6a2501ac868e",
-        "benchmark_id": "compbiobench",
-        "benchmark_version_id": "compbiobench-canonical",
-        "model_id": "model-gpt-5-4-e04bff139d4a64e2",
-        "model_configuration": "gpt-5-4",
-        "model_identity_organization": "openai",
-        "model_label_id": "codex-cli-gpt-5-4",
-        "model_family_id": "openai-codex-cli",
-        "model": "Codex CLI (GPT-5.4)",
-        "organization": "OpenAI",
-        "score": 0.83,
-        "input_score": 0.83,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "compbiobench-metric-v1",
-        "protocol_id": "compbiobench-source-export-v1",
-        "task_set_id": "compbiobench-canonical",
-        "metric": "Score",
-        "score_role": "canonical",
-        "score_series_id": "compbiobench-canonical-score",
-        "evaluation_protocol": "CompBioBench v1 fixed 100-task agent-system evaluation; Codex CLI, Gemini CLI, and Claude Code configurations remain system-level observations and are not treated as bare-model scores.",
-        "model_release_date": "2026-03-05",
-        "evaluation_date": "2026-04-09",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-03-05",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-03-05",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-www-biorxiv-org-content-10-64898-2026-04-0-fb718f9b0a2285b0"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-www-biorxiv-org-content-10-64898-2026-04-0-fb718f9b0a2285b0"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-04-09",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-04-09",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-03-05",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-www-biorxiv-org-content-10-64898-2026-04-0-fb718f9b0a2285b0"
-        ],
-        "score_source_ids": [
-          "resource-https-www-biorxiv-org-content-10-64898-2026-04-0-fb718f9b0a2285b0"
-        ],
-        "source": "https://www.biorxiv.org/content/10.64898/2026.04.06.716850v2.full",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-compbiobench-gpt-5-4-5a679956e4790066"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "compbiobench-gpt-5-4"
-        ],
-        "plot_date": "2026-04-09",
-        "frontier_observation_ids": [
-          "obs-0-81-6915d579903abc11",
-          "obs-0-82-612853b2d9be7c8e",
-          "obs-0-83-b7ee6a2501ac868e"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-83-b7ee6a2501ac868e",
-        "benchmark_id": "compbiobench",
-        "benchmark_version_id": "compbiobench-canonical",
-        "model_id": "model-gpt-5-4-e04bff139d4a64e2",
-        "model_configuration": "gpt-5-4",
-        "model_identity_organization": "openai",
-        "model_label_id": "codex-cli-gpt-5-4",
-        "model_family_id": "openai-codex-cli",
-        "model": "Codex CLI (GPT-5.4)",
-        "organization": "OpenAI",
-        "score": 0.83,
-        "input_score": 0.83,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "compbiobench-metric-v1",
-        "protocol_id": "compbiobench-source-export-v1",
-        "task_set_id": "compbiobench-canonical",
-        "metric": "Score",
-        "score_role": "canonical",
-        "score_series_id": "compbiobench-canonical-score",
-        "evaluation_protocol": "CompBioBench v1 fixed 100-task agent-system evaluation; Codex CLI, Gemini CLI, and Claude Code configurations remain system-level observations and are not treated as bare-model scores.",
-        "model_release_date": "2026-03-05",
-        "evaluation_date": "2026-04-09",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-03-05",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-03-05",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-www-biorxiv-org-content-10-64898-2026-04-0-fb718f9b0a2285b0"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-www-biorxiv-org-content-10-64898-2026-04-0-fb718f9b0a2285b0"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-04-09",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-04-09",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-03-05",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-www-biorxiv-org-content-10-64898-2026-04-0-fb718f9b0a2285b0"
-        ],
-        "score_source_ids": [
-          "resource-https-www-biorxiv-org-content-10-64898-2026-04-0-fb718f9b0a2285b0"
-        ],
-        "source": "https://www.biorxiv.org/content/10.64898/2026.04.06.716850v2.full",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-compbiobench-gpt-5-4-5a679956e4790066"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "compbiobench-gpt-5-4"
-        ],
-        "plot_date": "2026-04-09",
-        "frontier_observation_ids": [
-          "obs-0-81-6915d579903abc11",
-          "obs-0-82-612853b2d9be7c8e",
-          "obs-0-83-b7ee6a2501ac868e"
         ]
       }
     ],
@@ -595,7 +419,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-04-09",
@@ -634,249 +458,6 @@
       }
     ],
     "reported_frontier": [],
-    "historical_frontier": [],
-    "retrospective_observations": [
-      {
-        "observation_id": "obs-0-83-b7ee6a2501ac868e",
-        "benchmark_id": "compbiobench",
-        "benchmark_version_id": "compbiobench-canonical",
-        "model_id": "model-gpt-5-4-e04bff139d4a64e2",
-        "model_configuration": "gpt-5-4",
-        "model_identity_organization": "openai",
-        "model_label_id": "codex-cli-gpt-5-4",
-        "model_family_id": "openai-codex-cli",
-        "model": "Codex CLI (GPT-5.4)",
-        "organization": "OpenAI",
-        "score": 0.83,
-        "input_score": 0.83,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "compbiobench-metric-v1",
-        "protocol_id": "compbiobench-source-export-v1",
-        "task_set_id": "compbiobench-canonical",
-        "metric": "Score",
-        "score_role": "canonical",
-        "score_series_id": "compbiobench-canonical-score",
-        "evaluation_protocol": "CompBioBench v1 fixed 100-task agent-system evaluation; Codex CLI, Gemini CLI, and Claude Code configurations remain system-level observations and are not treated as bare-model scores.",
-        "model_release_date": "2026-03-05",
-        "evaluation_date": "2026-04-09",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-03-05",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-03-05",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-www-biorxiv-org-content-10-64898-2026-04-0-fb718f9b0a2285b0"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-www-biorxiv-org-content-10-64898-2026-04-0-fb718f9b0a2285b0"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-04-09",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-03-05",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-03-05",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-www-biorxiv-org-content-10-64898-2026-04-0-fb718f9b0a2285b0"
-        ],
-        "score_source_ids": [
-          "resource-https-www-biorxiv-org-content-10-64898-2026-04-0-fb718f9b0a2285b0"
-        ],
-        "source": "https://www.biorxiv.org/content/10.64898/2026.04.06.716850v2.full",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-compbiobench-gpt-5-4-5a679956e4790066"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "compbiobench-gpt-5-4"
-        ]
-      },
-      {
-        "observation_id": "obs-0-82-612853b2d9be7c8e",
-        "benchmark_id": "compbiobench",
-        "benchmark_version_id": "compbiobench-canonical",
-        "model_id": "model-gemini-3-1-pro-4768a082b6c248b2",
-        "model_configuration": "gemini-3-1-pro",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-cli-gemini-3-1-pro",
-        "model_family_id": "google-gemini-cli",
-        "model": "Gemini CLI (Gemini 3.1 Pro)",
-        "organization": "Google",
-        "score": 0.82,
-        "input_score": 0.82,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "compbiobench-metric-v1",
-        "protocol_id": "compbiobench-source-export-v1",
-        "task_set_id": "compbiobench-canonical",
-        "metric": "Score",
-        "score_role": "canonical",
-        "score_series_id": "compbiobench-canonical-score",
-        "evaluation_protocol": "CompBioBench v1 fixed 100-task agent-system evaluation; Codex CLI, Gemini CLI, and Claude Code configurations remain system-level observations and are not treated as bare-model scores.",
-        "model_release_date": "2026-02-19",
-        "evaluation_date": "2026-04-09",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-02-19",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-02-19",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-www-biorxiv-org-content-10-64898-2026-04-0-fb718f9b0a2285b0"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-www-biorxiv-org-content-10-64898-2026-04-0-fb718f9b0a2285b0"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-04-09",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-02-19",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-02-19",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-www-biorxiv-org-content-10-64898-2026-04-0-fb718f9b0a2285b0"
-        ],
-        "score_source_ids": [
-          "resource-https-www-biorxiv-org-content-10-64898-2026-04-0-fb718f9b0a2285b0"
-        ],
-        "source": "https://www.biorxiv.org/content/10.64898/2026.04.06.716850v2.full",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-compbiobench-gemini-3-1-pro-0711bdcfee7fae55"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "compbiobench-gemini-3-1-pro"
-        ]
-      },
-      {
-        "observation_id": "obs-0-81-6915d579903abc11",
-        "benchmark_id": "compbiobench",
-        "benchmark_version_id": "compbiobench-canonical",
-        "model_id": "model-claude-opus-4-6-49675742c406fafd",
-        "model_configuration": "claude-opus-4-6",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-code-claude-opus-4-6",
-        "model_family_id": "anthropic-claude-code",
-        "model": "Claude Code (Claude Opus 4.6)",
-        "organization": "Anthropic",
-        "score": 0.81,
-        "input_score": 0.81,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "compbiobench-metric-v1",
-        "protocol_id": "compbiobench-source-export-v1",
-        "task_set_id": "compbiobench-canonical",
-        "metric": "Score",
-        "score_role": "canonical",
-        "score_series_id": "compbiobench-canonical-score",
-        "evaluation_protocol": "CompBioBench v1 fixed 100-task agent-system evaluation; Codex CLI, Gemini CLI, and Claude Code configurations remain system-level observations and are not treated as bare-model scores.",
-        "model_release_date": "2026-02-05",
-        "evaluation_date": "2026-04-09",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-02-05",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-02-05",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-www-biorxiv-org-content-10-64898-2026-04-0-fb718f9b0a2285b0"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-www-biorxiv-org-content-10-64898-2026-04-0-fb718f9b0a2285b0"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-04-09",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-02-05",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-02-05",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-www-biorxiv-org-content-10-64898-2026-04-0-fb718f9b0a2285b0"
-        ],
-        "score_source_ids": [
-          "resource-https-www-biorxiv-org-content-10-64898-2026-04-0-fb718f9b0a2285b0"
-        ],
-        "source": "https://www.biorxiv.org/content/10.64898/2026.04.06.716850v2.full",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-compbiobench-claude-opus-4-6-c592c47162c4a78e"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "compbiobench-claude-opus-4-6"
-        ]
-      }
-    ],
     "observed_frontier": 0.83,
     "capability_frontier_value": 0.83,
     "reported_frontier_value": null,
@@ -896,7 +477,7 @@
       },
       "T90": {
         "status": "right_censored",
-        "days": 167
+        "days": 201
       }
     },
     "capability_threshold_days": {
@@ -912,7 +493,7 @@
       },
       "T90": {
         "status": "right_censored",
-        "days": 167
+        "days": 201
       }
     },
     "reported_threshold_days": {

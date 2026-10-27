@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -175,7 +175,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-02-15",
@@ -256,7 +256,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-12-06",
@@ -337,7 +337,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-09-19",
@@ -418,7 +418,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-12-26",
@@ -499,7 +499,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-05-13",
@@ -580,7 +580,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-10-22",
@@ -610,190 +610,6 @@
         "evidence_count": 1,
         "source_row_ids": [
           "medagent-sonnet35v2"
-        ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-6967-15ef76daafa4edf0",
-        "benchmark_id": "medagentbench-v1-overall-sr",
-        "benchmark_version_id": "medagentbench-v1-overall-sr-canonical",
-        "model_id": "model-claude-3-5-sonnet-v2-b9f491fcf96b2f36",
-        "model_configuration": "Claude-3.5-Sonnet-v2",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-3-5-sonnet-v2",
-        "model_family_id": "anthropic-claude-3-5-sonnet-v2",
-        "model": "Claude-3.5-Sonnet-v2",
-        "organization": "Anthropic",
-        "score": 0.6967,
-        "input_score": 0.6967,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "medagentbench-v1-overall-sr-metric-v1",
-        "protocol_id": "medagentbench-v1-overall-sr-source-export-v1",
-        "task_set_id": "medagentbench-v1-overall-sr-canonical",
-        "metric": "Success rate",
-        "score_role": "canonical",
-        "score_series_id": "medagentbench-v1-overall-sr-canonical-score",
-        "evaluation_protocol": "MedAgentBench paper-v2 fixed 300 tasks, simple orchestrator, nine FHIR functions, eight-round limit, pass@1.",
-        "model_release_date": "2024-10-22",
-        "evaluation_date": null,
-        "result_public_date": "2025-02-12",
-        "source_publication_date": "2025-02-12",
-        "observation_date": "2024-10-22",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-10-22",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2501-14654-8bf4e5d35aad3e8c"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2501-14654-8bf4e5d35aad3e8c"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2025-02-12",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-01-24",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-10-22",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2025-02-12",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2501-14654-8bf4e5d35aad3e8c",
-          "resource-https-github-com-stanfordmlgroup-medagentbench-4657e420960b327f"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2501-14654-8bf4e5d35aad3e8c"
-        ],
-        "source": "https://arxiv.org/abs/2501.14654",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-medagent-sonnet35v2-3290bcf29b22a307"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "medagent-sonnet35v2"
-        ],
-        "plot_date": "2025-01-24",
-        "frontier_observation_ids": [
-          "obs-0-4633-622a2eddd1b58dc1",
-          "obs-0-5133-c27a3b3d136e0c6c",
-          "obs-0-62-0ac44f2da970b2d6",
-          "obs-0-6267-892d2ac03b245534",
-          "obs-0-64-fe8ddb0a96e584f8",
-          "obs-0-6967-15ef76daafa4edf0"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-6967-15ef76daafa4edf0",
-        "benchmark_id": "medagentbench-v1-overall-sr",
-        "benchmark_version_id": "medagentbench-v1-overall-sr-canonical",
-        "model_id": "model-claude-3-5-sonnet-v2-b9f491fcf96b2f36",
-        "model_configuration": "Claude-3.5-Sonnet-v2",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-3-5-sonnet-v2",
-        "model_family_id": "anthropic-claude-3-5-sonnet-v2",
-        "model": "Claude-3.5-Sonnet-v2",
-        "organization": "Anthropic",
-        "score": 0.6967,
-        "input_score": 0.6967,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "medagentbench-v1-overall-sr-metric-v1",
-        "protocol_id": "medagentbench-v1-overall-sr-source-export-v1",
-        "task_set_id": "medagentbench-v1-overall-sr-canonical",
-        "metric": "Success rate",
-        "score_role": "canonical",
-        "score_series_id": "medagentbench-v1-overall-sr-canonical-score",
-        "evaluation_protocol": "MedAgentBench paper-v2 fixed 300 tasks, simple orchestrator, nine FHIR functions, eight-round limit, pass@1.",
-        "model_release_date": "2024-10-22",
-        "evaluation_date": null,
-        "result_public_date": "2025-02-12",
-        "source_publication_date": "2025-02-12",
-        "observation_date": "2024-10-22",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-10-22",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2501-14654-8bf4e5d35aad3e8c"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2501-14654-8bf4e5d35aad3e8c"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2025-02-12",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-01-24",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-10-22",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2025-02-12",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2501-14654-8bf4e5d35aad3e8c",
-          "resource-https-github-com-stanfordmlgroup-medagentbench-4657e420960b327f"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2501-14654-8bf4e5d35aad3e8c"
-        ],
-        "source": "https://arxiv.org/abs/2501.14654",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-medagent-sonnet35v2-3290bcf29b22a307"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "medagent-sonnet35v2"
-        ],
-        "plot_date": "2025-01-24",
-        "frontier_observation_ids": [
-          "obs-0-4633-622a2eddd1b58dc1",
-          "obs-0-5133-c27a3b3d136e0c6c",
-          "obs-0-62-0ac44f2da970b2d6",
-          "obs-0-6267-892d2ac03b245534",
-          "obs-0-64-fe8ddb0a96e584f8",
-          "obs-0-6967-15ef76daafa4edf0"
         ]
       }
     ],
@@ -847,7 +663,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-01-24",
@@ -939,7 +755,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-02-12",
@@ -981,99 +797,6 @@
         ]
       }
     ],
-    "historical_frontier": [
-      {
-        "observation_id": "obs-0-6967-15ef76daafa4edf0",
-        "benchmark_id": "medagentbench-v1-overall-sr",
-        "benchmark_version_id": "medagentbench-v1-overall-sr-canonical",
-        "model_id": "model-claude-3-5-sonnet-v2-b9f491fcf96b2f36",
-        "model_configuration": "Claude-3.5-Sonnet-v2",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-3-5-sonnet-v2",
-        "model_family_id": "anthropic-claude-3-5-sonnet-v2",
-        "model": "Claude-3.5-Sonnet-v2",
-        "organization": "Anthropic",
-        "score": 0.6967,
-        "input_score": 0.6967,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "medagentbench-v1-overall-sr-metric-v1",
-        "protocol_id": "medagentbench-v1-overall-sr-source-export-v1",
-        "task_set_id": "medagentbench-v1-overall-sr-canonical",
-        "metric": "Success rate",
-        "score_role": "canonical",
-        "score_series_id": "medagentbench-v1-overall-sr-canonical-score",
-        "evaluation_protocol": "MedAgentBench paper-v2 fixed 300 tasks, simple orchestrator, nine FHIR functions, eight-round limit, pass@1.",
-        "model_release_date": "2024-10-22",
-        "evaluation_date": null,
-        "result_public_date": "2025-02-12",
-        "source_publication_date": "2025-02-12",
-        "observation_date": "2024-10-22",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-10-22",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2501-14654-8bf4e5d35aad3e8c"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2501-14654-8bf4e5d35aad3e8c"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2025-02-12",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-02-12",
-        "date_kind": "result first-public date",
-        "capability_date": "2024-10-22",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2025-02-12",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2501-14654-8bf4e5d35aad3e8c",
-          "resource-https-github-com-stanfordmlgroup-medagentbench-4657e420960b327f"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2501-14654-8bf4e5d35aad3e8c"
-        ],
-        "source": "https://arxiv.org/abs/2501.14654",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-medagent-sonnet35v2-3290bcf29b22a307"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "medagent-sonnet35v2"
-        ],
-        "plot_date": "2025-02-12",
-        "frontier_observation_ids": [
-          "obs-0-4633-622a2eddd1b58dc1",
-          "obs-0-5133-c27a3b3d136e0c6c",
-          "obs-0-62-0ac44f2da970b2d6",
-          "obs-0-6267-892d2ac03b245534",
-          "obs-0-64-fe8ddb0a96e584f8",
-          "obs-0-6967-15ef76daafa4edf0"
-        ]
-      }
-    ],
-    "retrospective_observations": [],
     "observed_frontier": 0.6967,
     "capability_frontier_value": 0.6967,
     "reported_frontier_value": 0.6967,
@@ -1088,11 +811,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 607
+        "days": 641
       },
       "T90": {
         "status": "right_censored",
-        "days": 607
+        "days": 641
       }
     },
     "capability_threshold_days": {
@@ -1103,11 +826,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 607
+        "days": 641
       },
       "T90": {
         "status": "right_censored",
-        "days": 607
+        "days": 641
       }
     },
     "reported_threshold_days": {
@@ -1118,11 +841,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 607
+        "days": 641
       },
       "T90": {
         "status": "right_censored",
-        "days": 607
+        "days": 641
       }
     },
     "velocity_180d": null,

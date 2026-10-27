@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -176,7 +176,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-07-18",
@@ -257,7 +257,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-12-06",
@@ -338,7 +338,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-02-05",
@@ -419,7 +419,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-12-26",
@@ -500,7 +500,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-05-13",
@@ -581,7 +581,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-10-22",
@@ -611,190 +611,6 @@
         "evidence_count": 1,
         "source_row_ids": [
           "fle-sonnet35v2"
-        ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-219-00a5238a5a97c35a",
-        "benchmark_id": "fle-neurips-2025-planning",
-        "benchmark_version_id": "fle-neurips-2025-planning-canonical",
-        "model_id": "model-claude-3-5-sonnet-v2-b9f491fcf96b2f36",
-        "model_configuration": "Claude-3.5-Sonnet-v2",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-3-5-sonnet-v2",
-        "model_family_id": "anthropic-claude-3-5-sonnet-v2",
-        "model": "Claude-3.5-Sonnet-v2",
-        "organization": "Anthropic",
-        "score": 0.219,
-        "input_score": 0.219,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "fle-neurips-2025-planning-metric-v1",
-        "protocol_id": "fle-neurips-2025-planning-source-export-v1",
-        "task_set_id": "fle-neurips-2025-planning-canonical",
-        "metric": "Planning success",
-        "score_role": "canonical",
-        "score_series_id": "fle-neurips-2025-planning-canonical-score",
-        "evaluation_protocol": "NeurIPS 2025 FLE Lab-Play Planning, Factorio 1.1.110, 24 products, 128 interactions, eight runs, temperature 0.5.",
-        "model_release_date": "2024-10-22",
-        "evaluation_date": null,
-        "result_public_date": "2025-03-06",
-        "source_publication_date": "2025-03-06",
-        "observation_date": "2024-10-22",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-10-22",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-papers-neurips-cc-paper-files-paper-2025-f-92d96d855f816588"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-papers-neurips-cc-paper-files-paper-2025-f-92d96d855f816588"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2025-03-06",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-03-06",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-10-22",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2025-03-06",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-github-com-jackhopkins-factorio-learning-e-7fab7f329e1d7035",
-          "resource-https-papers-neurips-cc-paper-files-paper-2025-f-92d96d855f816588"
-        ],
-        "score_source_ids": [
-          "resource-https-papers-neurips-cc-paper-files-paper-2025-f-92d96d855f816588"
-        ],
-        "source": "https://papers.neurips.cc/paper_files/paper/2025/file/75f3a62e55187bc3e5e5961fa2a46bcf-Paper-Datasets_and_Benchmarks_Track.pdf",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-fle-sonnet35v2-e16b28e084803599"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "fle-sonnet35v2"
-        ],
-        "plot_date": "2025-03-06",
-        "frontier_observation_ids": [
-          "obs-0-042-fbb16135a47f3996",
-          "obs-0-052-beb6e54f88b02918",
-          "obs-0-13-064eea21edd04bb7",
-          "obs-0-151-d13354a41976b721",
-          "obs-0-166-2e1cf52761826634",
-          "obs-0-219-00a5238a5a97c35a"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-219-00a5238a5a97c35a",
-        "benchmark_id": "fle-neurips-2025-planning",
-        "benchmark_version_id": "fle-neurips-2025-planning-canonical",
-        "model_id": "model-claude-3-5-sonnet-v2-b9f491fcf96b2f36",
-        "model_configuration": "Claude-3.5-Sonnet-v2",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-3-5-sonnet-v2",
-        "model_family_id": "anthropic-claude-3-5-sonnet-v2",
-        "model": "Claude-3.5-Sonnet-v2",
-        "organization": "Anthropic",
-        "score": 0.219,
-        "input_score": 0.219,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "fle-neurips-2025-planning-metric-v1",
-        "protocol_id": "fle-neurips-2025-planning-source-export-v1",
-        "task_set_id": "fle-neurips-2025-planning-canonical",
-        "metric": "Planning success",
-        "score_role": "canonical",
-        "score_series_id": "fle-neurips-2025-planning-canonical-score",
-        "evaluation_protocol": "NeurIPS 2025 FLE Lab-Play Planning, Factorio 1.1.110, 24 products, 128 interactions, eight runs, temperature 0.5.",
-        "model_release_date": "2024-10-22",
-        "evaluation_date": null,
-        "result_public_date": "2025-03-06",
-        "source_publication_date": "2025-03-06",
-        "observation_date": "2024-10-22",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-10-22",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-papers-neurips-cc-paper-files-paper-2025-f-92d96d855f816588"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-papers-neurips-cc-paper-files-paper-2025-f-92d96d855f816588"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2025-03-06",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-03-06",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-10-22",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2025-03-06",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-github-com-jackhopkins-factorio-learning-e-7fab7f329e1d7035",
-          "resource-https-papers-neurips-cc-paper-files-paper-2025-f-92d96d855f816588"
-        ],
-        "score_source_ids": [
-          "resource-https-papers-neurips-cc-paper-files-paper-2025-f-92d96d855f816588"
-        ],
-        "source": "https://papers.neurips.cc/paper_files/paper/2025/file/75f3a62e55187bc3e5e5961fa2a46bcf-Paper-Datasets_and_Benchmarks_Track.pdf",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-fle-sonnet35v2-e16b28e084803599"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "fle-sonnet35v2"
-        ],
-        "plot_date": "2025-03-06",
-        "frontier_observation_ids": [
-          "obs-0-042-fbb16135a47f3996",
-          "obs-0-052-beb6e54f88b02918",
-          "obs-0-13-064eea21edd04bb7",
-          "obs-0-151-d13354a41976b721",
-          "obs-0-166-2e1cf52761826634",
-          "obs-0-219-00a5238a5a97c35a"
         ]
       }
     ],
@@ -848,7 +664,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-03-06",
@@ -940,7 +756,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-03-06",
@@ -982,99 +798,6 @@
         ]
       }
     ],
-    "historical_frontier": [
-      {
-        "observation_id": "obs-0-219-00a5238a5a97c35a",
-        "benchmark_id": "fle-neurips-2025-planning",
-        "benchmark_version_id": "fle-neurips-2025-planning-canonical",
-        "model_id": "model-claude-3-5-sonnet-v2-b9f491fcf96b2f36",
-        "model_configuration": "Claude-3.5-Sonnet-v2",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-3-5-sonnet-v2",
-        "model_family_id": "anthropic-claude-3-5-sonnet-v2",
-        "model": "Claude-3.5-Sonnet-v2",
-        "organization": "Anthropic",
-        "score": 0.219,
-        "input_score": 0.219,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "fle-neurips-2025-planning-metric-v1",
-        "protocol_id": "fle-neurips-2025-planning-source-export-v1",
-        "task_set_id": "fle-neurips-2025-planning-canonical",
-        "metric": "Planning success",
-        "score_role": "canonical",
-        "score_series_id": "fle-neurips-2025-planning-canonical-score",
-        "evaluation_protocol": "NeurIPS 2025 FLE Lab-Play Planning, Factorio 1.1.110, 24 products, 128 interactions, eight runs, temperature 0.5.",
-        "model_release_date": "2024-10-22",
-        "evaluation_date": null,
-        "result_public_date": "2025-03-06",
-        "source_publication_date": "2025-03-06",
-        "observation_date": "2024-10-22",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-10-22",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-papers-neurips-cc-paper-files-paper-2025-f-92d96d855f816588"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-papers-neurips-cc-paper-files-paper-2025-f-92d96d855f816588"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2025-03-06",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-03-06",
-        "date_kind": "result first-public date",
-        "capability_date": "2024-10-22",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2025-03-06",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-github-com-jackhopkins-factorio-learning-e-7fab7f329e1d7035",
-          "resource-https-papers-neurips-cc-paper-files-paper-2025-f-92d96d855f816588"
-        ],
-        "score_source_ids": [
-          "resource-https-papers-neurips-cc-paper-files-paper-2025-f-92d96d855f816588"
-        ],
-        "source": "https://papers.neurips.cc/paper_files/paper/2025/file/75f3a62e55187bc3e5e5961fa2a46bcf-Paper-Datasets_and_Benchmarks_Track.pdf",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-fle-sonnet35v2-e16b28e084803599"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "fle-sonnet35v2"
-        ],
-        "plot_date": "2025-03-06",
-        "frontier_observation_ids": [
-          "obs-0-042-fbb16135a47f3996",
-          "obs-0-052-beb6e54f88b02918",
-          "obs-0-13-064eea21edd04bb7",
-          "obs-0-151-d13354a41976b721",
-          "obs-0-166-2e1cf52761826634",
-          "obs-0-219-00a5238a5a97c35a"
-        ]
-      }
-    ],
-    "retrospective_observations": [],
     "observed_frontier": 0.219,
     "capability_frontier_value": 0.219,
     "reported_frontier_value": 0.219,
@@ -1084,43 +807,43 @@
     "threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 566
+        "days": 600
       },
       "T80": {
         "status": "right_censored",
-        "days": 566
+        "days": 600
       },
       "T90": {
         "status": "right_censored",
-        "days": 566
+        "days": 600
       }
     },
     "capability_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 566
+        "days": 600
       },
       "T80": {
         "status": "right_censored",
-        "days": 566
+        "days": 600
       },
       "T90": {
         "status": "right_censored",
-        "days": 566
+        "days": 600
       }
     },
     "reported_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 566
+        "days": 600
       },
       "T80": {
         "status": "right_censored",
-        "days": 566
+        "days": 600
       },
       "T90": {
         "status": "right_censored",
-        "days": 566
+        "days": 600
       }
     },
     "velocity_180d": null,

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -173,7 +173,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-06-27",
@@ -254,7 +254,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-06-20",
@@ -335,7 +335,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-05-13",
@@ -416,7 +416,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-10-22",
@@ -497,7 +497,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-01-31",
@@ -578,7 +578,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-04-17",
@@ -608,190 +608,6 @@
         "evidence_count": 1,
         "source_row_ids": [
           "cfdcode-gemini25"
-        ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-14-416d90de9a605746",
-        "benchmark_id": "cfdcodebench-v1-zeroshot",
-        "benchmark_version_id": "cfdcodebench-v1-zeroshot-canonical",
-        "model_id": "model-o3-mini-c8cc52bda8f726c8",
-        "model_configuration": "o3-mini",
-        "model_identity_organization": "openai",
-        "model_label_id": "o3-mini",
-        "model_family_id": "openai-o3-mini",
-        "model": "o3-mini",
-        "organization": "OpenAI",
-        "score": 0.14,
-        "input_score": 0.14,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "cfdcodebench-v1-zeroshot-metric-v1",
-        "protocol_id": "cfdcodebench-v1-zeroshot-source-export-v1",
-        "task_set_id": "cfdcodebench-v1-zeroshot-canonical",
-        "metric": "Success rate",
-        "score_role": "canonical",
-        "score_series_id": "cfdcodebench-v1-zeroshot-canonical-score",
-        "evaluation_protocol": "CFDCodeBench fixed 24 tasks, standard zero-shot, 60-second sandbox timeout, strict execution/accuracy/convergence success.",
-        "model_release_date": "2025-01-31",
-        "evaluation_date": null,
-        "result_public_date": "2026-04-26",
-        "source_publication_date": "2026-04-26",
-        "observation_date": "2025-01-31",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-01-31",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2509-20374-18f6681a1eb1df7b"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2509-20374-18f6681a1eb1df7b"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-04-26",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-09-19",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-01-31",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-04-26",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2509-20374-18f6681a1eb1df7b",
-          "resource-https-github-com-nlr-theseus-cfdllmbench-4db83d0ca7cc98ac"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2509-20374-18f6681a1eb1df7b"
-        ],
-        "source": "https://arxiv.org/abs/2509.20374",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-cfdcode-o3mini-c36e0570f851f30e"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "cfdcode-o3mini"
-        ],
-        "plot_date": "2025-09-19",
-        "frontier_observation_ids": [
-          "obs-0-04-c44940bebf5b9f23",
-          "obs-0-07-e740595a1442b973",
-          "obs-0-11-f859da474a1ef71b",
-          "obs-0-14-4a2377c139718585",
-          "obs-0-14-5072293444349cad",
-          "obs-0-14-416d90de9a605746"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-14-416d90de9a605746",
-        "benchmark_id": "cfdcodebench-v1-zeroshot",
-        "benchmark_version_id": "cfdcodebench-v1-zeroshot-canonical",
-        "model_id": "model-o3-mini-c8cc52bda8f726c8",
-        "model_configuration": "o3-mini",
-        "model_identity_organization": "openai",
-        "model_label_id": "o3-mini",
-        "model_family_id": "openai-o3-mini",
-        "model": "o3-mini",
-        "organization": "OpenAI",
-        "score": 0.14,
-        "input_score": 0.14,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "cfdcodebench-v1-zeroshot-metric-v1",
-        "protocol_id": "cfdcodebench-v1-zeroshot-source-export-v1",
-        "task_set_id": "cfdcodebench-v1-zeroshot-canonical",
-        "metric": "Success rate",
-        "score_role": "canonical",
-        "score_series_id": "cfdcodebench-v1-zeroshot-canonical-score",
-        "evaluation_protocol": "CFDCodeBench fixed 24 tasks, standard zero-shot, 60-second sandbox timeout, strict execution/accuracy/convergence success.",
-        "model_release_date": "2025-01-31",
-        "evaluation_date": null,
-        "result_public_date": "2026-04-26",
-        "source_publication_date": "2026-04-26",
-        "observation_date": "2025-01-31",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-01-31",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2509-20374-18f6681a1eb1df7b"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2509-20374-18f6681a1eb1df7b"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-04-26",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-09-19",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-01-31",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-04-26",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2509-20374-18f6681a1eb1df7b",
-          "resource-https-github-com-nlr-theseus-cfdllmbench-4db83d0ca7cc98ac"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2509-20374-18f6681a1eb1df7b"
-        ],
-        "source": "https://arxiv.org/abs/2509.20374",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-cfdcode-o3mini-c36e0570f851f30e"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "cfdcode-o3mini"
-        ],
-        "plot_date": "2025-09-19",
-        "frontier_observation_ids": [
-          "obs-0-04-c44940bebf5b9f23",
-          "obs-0-07-e740595a1442b973",
-          "obs-0-11-f859da474a1ef71b",
-          "obs-0-14-4a2377c139718585",
-          "obs-0-14-5072293444349cad",
-          "obs-0-14-416d90de9a605746"
         ]
       }
     ],
@@ -845,7 +661,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-09-19",
@@ -937,7 +753,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-04-26",
@@ -979,99 +795,6 @@
         ]
       }
     ],
-    "historical_frontier": [
-      {
-        "observation_id": "obs-0-14-416d90de9a605746",
-        "benchmark_id": "cfdcodebench-v1-zeroshot",
-        "benchmark_version_id": "cfdcodebench-v1-zeroshot-canonical",
-        "model_id": "model-o3-mini-c8cc52bda8f726c8",
-        "model_configuration": "o3-mini",
-        "model_identity_organization": "openai",
-        "model_label_id": "o3-mini",
-        "model_family_id": "openai-o3-mini",
-        "model": "o3-mini",
-        "organization": "OpenAI",
-        "score": 0.14,
-        "input_score": 0.14,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "cfdcodebench-v1-zeroshot-metric-v1",
-        "protocol_id": "cfdcodebench-v1-zeroshot-source-export-v1",
-        "task_set_id": "cfdcodebench-v1-zeroshot-canonical",
-        "metric": "Success rate",
-        "score_role": "canonical",
-        "score_series_id": "cfdcodebench-v1-zeroshot-canonical-score",
-        "evaluation_protocol": "CFDCodeBench fixed 24 tasks, standard zero-shot, 60-second sandbox timeout, strict execution/accuracy/convergence success.",
-        "model_release_date": "2025-01-31",
-        "evaluation_date": null,
-        "result_public_date": "2026-04-26",
-        "source_publication_date": "2026-04-26",
-        "observation_date": "2025-01-31",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-01-31",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2509-20374-18f6681a1eb1df7b"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2509-20374-18f6681a1eb1df7b"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-04-26",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2026-04-26",
-        "date_kind": "result first-public date",
-        "capability_date": "2025-01-31",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-04-26",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2509-20374-18f6681a1eb1df7b",
-          "resource-https-github-com-nlr-theseus-cfdllmbench-4db83d0ca7cc98ac"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2509-20374-18f6681a1eb1df7b"
-        ],
-        "source": "https://arxiv.org/abs/2509.20374",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-cfdcode-o3mini-c36e0570f851f30e"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "cfdcode-o3mini"
-        ],
-        "plot_date": "2026-04-26",
-        "frontier_observation_ids": [
-          "obs-0-04-c44940bebf5b9f23",
-          "obs-0-07-e740595a1442b973",
-          "obs-0-11-f859da474a1ef71b",
-          "obs-0-14-4a2377c139718585",
-          "obs-0-14-5072293444349cad",
-          "obs-0-14-416d90de9a605746"
-        ]
-      }
-    ],
-    "retrospective_observations": [],
     "observed_frontier": 0.14,
     "capability_frontier_value": 0.14,
     "reported_frontier_value": 0.14,
@@ -1081,43 +804,43 @@
     "threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 369
+        "days": 403
       },
       "T80": {
         "status": "right_censored",
-        "days": 369
+        "days": 403
       },
       "T90": {
         "status": "right_censored",
-        "days": 369
+        "days": 403
       }
     },
     "capability_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 369
+        "days": 403
       },
       "T80": {
         "status": "right_censored",
-        "days": 369
+        "days": 403
       },
       "T90": {
         "status": "right_censored",
-        "days": 369
+        "days": 403
       }
     },
     "reported_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 369
+        "days": 403
       },
       "T80": {
         "status": "right_censored",
-        "days": 369
+        "days": 403
       },
       "T90": {
         "status": "right_censored",
-        "days": 369
+        "days": 403
       }
     },
     "velocity_180d": null,

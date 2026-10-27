@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -166,7 +166,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-02-19",
@@ -240,7 +240,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2024-09-12",
@@ -314,7 +314,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2024-06-20",
@@ -343,478 +343,6 @@
         "evidence_count": 1,
         "source_row_ids": [
           "chembench-claude-3-5-sonnet"
-        ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-63-0a0165a9bf309403",
-        "benchmark_id": "chembench",
-        "benchmark_version_id": "chembench-canonical",
-        "model_id": "model-claude-3-5-sonnet-20240620-f30b888514e2c660",
-        "model_configuration": "claude-3-5-sonnet-20240620",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-3-5-sonnet",
-        "model_family_id": "anthropic-claude-3-5-sonnet",
-        "model": "Claude 3.5 Sonnet",
-        "organization": "Anthropic",
-        "score": 0.63,
-        "input_score": 0.63,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "chembench-metric-v1",
-        "protocol_id": "chembench-source-export-v1",
-        "task_set_id": "chembench-canonical",
-        "metric": "Overall",
-        "score_role": "canonical",
-        "score_series_id": "chembench-canonical-score",
-        "evaluation_protocol": "ChemBench official leaderboard overall score; the fixed question set and topic aggregation are retained, while user scores and topic-specific variants are not merged.",
-        "model_release_date": "2024-06-20",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2024-06-20",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-06-20",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-chembench-lamalab-org-b580015e18abb5b6"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-chembench-lamalab-org-b580015e18abb5b6"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2024-06-20",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-06-20",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-chembench-lamalab-org-b580015e18abb5b6"
-        ],
-        "score_source_ids": [
-          "resource-https-chembench-lamalab-org-b580015e18abb5b6"
-        ],
-        "source": "https://chembench.lamalab.org/",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-chembench-claude-3-5-sonnet-df4ae603f90ffe70"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "chembench-claude-3-5-sonnet"
-        ],
-        "plot_date": "2024-06-20",
-        "frontier_observation_ids": [
-          "obs-0-63-0a0165a9bf309403"
-        ]
-      },
-      {
-        "observation_id": "obs-0-64-712b68d27988265d",
-        "benchmark_id": "chembench",
-        "benchmark_version_id": "chembench-canonical",
-        "model_id": "model-o1-preview-2024-09-12-ac99792a0e4a182a",
-        "model_configuration": "o1-preview-2024-09-12",
-        "model_identity_organization": "openai",
-        "model_label_id": "o1-preview",
-        "model_family_id": "openai-o1-preview",
-        "model": "o1-preview",
-        "organization": "OpenAI",
-        "score": 0.64,
-        "input_score": 0.64,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "chembench-metric-v1",
-        "protocol_id": "chembench-source-export-v1",
-        "task_set_id": "chembench-canonical",
-        "metric": "Overall",
-        "score_role": "canonical",
-        "score_series_id": "chembench-canonical-score",
-        "evaluation_protocol": "ChemBench official leaderboard overall score; the fixed question set and topic aggregation are retained, while user scores and topic-specific variants are not merged.",
-        "model_release_date": "2024-09-12",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2024-09-12",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-09-12",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-chembench-lamalab-org-b580015e18abb5b6"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-chembench-lamalab-org-b580015e18abb5b6"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2024-09-12",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-09-12",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-chembench-lamalab-org-b580015e18abb5b6"
-        ],
-        "score_source_ids": [
-          "resource-https-chembench-lamalab-org-b580015e18abb5b6"
-        ],
-        "source": "https://chembench.lamalab.org/",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-chembench-o1-preview-799d05af7d114f2b"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "chembench-o1-preview"
-        ],
-        "plot_date": "2024-09-12",
-        "frontier_observation_ids": [
-          "obs-0-64-712b68d27988265d"
-        ]
-      },
-      {
-        "observation_id": "obs-0-6583-5f5729eee4041588",
-        "benchmark_id": "chembench",
-        "benchmark_version_id": "chembench-canonical",
-        "model_id": "model-claude-3-7-sonnet-20250219-d490474de83bc9ef",
-        "model_configuration": "claude-3-7-sonnet-20250219",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-3-7-sonnet",
-        "model_family_id": "anthropic-claude-3-7-sonnet",
-        "model": "Claude 3.7 Sonnet",
-        "organization": "Anthropic",
-        "score": 0.6583,
-        "input_score": 0.6583,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "chembench-metric-v1",
-        "protocol_id": "chembench-source-export-v1",
-        "task_set_id": "chembench-canonical",
-        "metric": "Overall",
-        "score_role": "canonical",
-        "score_series_id": "chembench-canonical-score",
-        "evaluation_protocol": "ChemBench official leaderboard overall score; the fixed question set and topic aggregation are retained, while user scores and topic-specific variants are not merged.",
-        "model_release_date": "2025-02-19",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2025-02-19",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-02-19",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-chembench-lamalab-org-b580015e18abb5b6"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-chembench-lamalab-org-b580015e18abb5b6"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2025-02-19",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-02-19",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-chembench-lamalab-org-b580015e18abb5b6"
-        ],
-        "score_source_ids": [
-          "resource-https-chembench-lamalab-org-b580015e18abb5b6"
-        ],
-        "source": "https://chembench.lamalab.org/",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-chembench-claude-3-7-sonnet-402154a449158634"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "chembench-claude-3-7-sonnet"
-        ],
-        "plot_date": "2025-02-19",
-        "frontier_observation_ids": [
-          "obs-0-6583-5f5729eee4041588"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-63-0a0165a9bf309403",
-        "benchmark_id": "chembench",
-        "benchmark_version_id": "chembench-canonical",
-        "model_id": "model-claude-3-5-sonnet-20240620-f30b888514e2c660",
-        "model_configuration": "claude-3-5-sonnet-20240620",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-3-5-sonnet",
-        "model_family_id": "anthropic-claude-3-5-sonnet",
-        "model": "Claude 3.5 Sonnet",
-        "organization": "Anthropic",
-        "score": 0.63,
-        "input_score": 0.63,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "chembench-metric-v1",
-        "protocol_id": "chembench-source-export-v1",
-        "task_set_id": "chembench-canonical",
-        "metric": "Overall",
-        "score_role": "canonical",
-        "score_series_id": "chembench-canonical-score",
-        "evaluation_protocol": "ChemBench official leaderboard overall score; the fixed question set and topic aggregation are retained, while user scores and topic-specific variants are not merged.",
-        "model_release_date": "2024-06-20",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2024-06-20",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-06-20",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-chembench-lamalab-org-b580015e18abb5b6"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-chembench-lamalab-org-b580015e18abb5b6"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2024-06-20",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-06-20",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-chembench-lamalab-org-b580015e18abb5b6"
-        ],
-        "score_source_ids": [
-          "resource-https-chembench-lamalab-org-b580015e18abb5b6"
-        ],
-        "source": "https://chembench.lamalab.org/",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-chembench-claude-3-5-sonnet-df4ae603f90ffe70"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "chembench-claude-3-5-sonnet"
-        ],
-        "plot_date": "2024-06-20",
-        "frontier_observation_ids": [
-          "obs-0-63-0a0165a9bf309403"
-        ]
-      },
-      {
-        "observation_id": "obs-0-64-712b68d27988265d",
-        "benchmark_id": "chembench",
-        "benchmark_version_id": "chembench-canonical",
-        "model_id": "model-o1-preview-2024-09-12-ac99792a0e4a182a",
-        "model_configuration": "o1-preview-2024-09-12",
-        "model_identity_organization": "openai",
-        "model_label_id": "o1-preview",
-        "model_family_id": "openai-o1-preview",
-        "model": "o1-preview",
-        "organization": "OpenAI",
-        "score": 0.64,
-        "input_score": 0.64,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "chembench-metric-v1",
-        "protocol_id": "chembench-source-export-v1",
-        "task_set_id": "chembench-canonical",
-        "metric": "Overall",
-        "score_role": "canonical",
-        "score_series_id": "chembench-canonical-score",
-        "evaluation_protocol": "ChemBench official leaderboard overall score; the fixed question set and topic aggregation are retained, while user scores and topic-specific variants are not merged.",
-        "model_release_date": "2024-09-12",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2024-09-12",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-09-12",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-chembench-lamalab-org-b580015e18abb5b6"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-chembench-lamalab-org-b580015e18abb5b6"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2024-09-12",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-09-12",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-chembench-lamalab-org-b580015e18abb5b6"
-        ],
-        "score_source_ids": [
-          "resource-https-chembench-lamalab-org-b580015e18abb5b6"
-        ],
-        "source": "https://chembench.lamalab.org/",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-chembench-o1-preview-799d05af7d114f2b"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "chembench-o1-preview"
-        ],
-        "plot_date": "2024-09-12",
-        "frontier_observation_ids": [
-          "obs-0-64-712b68d27988265d"
-        ]
-      },
-      {
-        "observation_id": "obs-0-6583-5f5729eee4041588",
-        "benchmark_id": "chembench",
-        "benchmark_version_id": "chembench-canonical",
-        "model_id": "model-claude-3-7-sonnet-20250219-d490474de83bc9ef",
-        "model_configuration": "claude-3-7-sonnet-20250219",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-3-7-sonnet",
-        "model_family_id": "anthropic-claude-3-7-sonnet",
-        "model": "Claude 3.7 Sonnet",
-        "organization": "Anthropic",
-        "score": 0.6583,
-        "input_score": 0.6583,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "chembench-metric-v1",
-        "protocol_id": "chembench-source-export-v1",
-        "task_set_id": "chembench-canonical",
-        "metric": "Overall",
-        "score_role": "canonical",
-        "score_series_id": "chembench-canonical-score",
-        "evaluation_protocol": "ChemBench official leaderboard overall score; the fixed question set and topic aggregation are retained, while user scores and topic-specific variants are not merged.",
-        "model_release_date": "2025-02-19",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2025-02-19",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-02-19",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-chembench-lamalab-org-b580015e18abb5b6"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-chembench-lamalab-org-b580015e18abb5b6"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2025-02-19",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-02-19",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-chembench-lamalab-org-b580015e18abb5b6"
-        ],
-        "score_source_ids": [
-          "resource-https-chembench-lamalab-org-b580015e18abb5b6"
-        ],
-        "source": "https://chembench.lamalab.org/",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-chembench-claude-3-7-sonnet-402154a449158634"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "chembench-claude-3-7-sonnet"
-        ],
-        "plot_date": "2025-02-19",
-        "frontier_observation_ids": [
-          "obs-0-6583-5f5729eee4041588"
         ]
       }
     ],
@@ -862,7 +390,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2024-06-20",
@@ -940,7 +468,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2024-09-12",
@@ -1018,7 +546,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-02-19",
@@ -1055,8 +583,6 @@
       }
     ],
     "reported_frontier": [],
-    "historical_frontier": [],
-    "retrospective_observations": [],
     "observed_frontier": 0.6583,
     "capability_frontier_value": 0.6583,
     "reported_frontier_value": null,
@@ -1071,11 +597,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 905
+        "days": 939
       },
       "T90": {
         "status": "right_censored",
-        "days": 905
+        "days": 939
       }
     },
     "capability_threshold_days": {
@@ -1086,11 +612,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 905
+        "days": 939
       },
       "T90": {
         "status": "right_censored",
-        "days": 905
+        "days": 939
       }
     },
     "reported_threshold_days": {

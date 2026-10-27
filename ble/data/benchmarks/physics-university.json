@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -171,7 +171,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-06-17",
@@ -252,7 +252,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-05-22",
@@ -333,7 +333,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-04-16",
@@ -414,7 +414,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-05-28",
@@ -495,7 +495,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-04-28",
@@ -525,180 +525,6 @@
         "evidence_count": 1,
         "source_row_ids": [
           "physics-university-qwen3-235b"
-        ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-7114-d556bff288806f53",
-        "benchmark_id": "physics-university",
-        "benchmark_version_id": "physics-university-canonical",
-        "model_id": "model-o3-high-2025-04-16-0aa6839a37041892",
-        "model_configuration": "o3-high-2025-04-16",
-        "model_identity_organization": "openai",
-        "model_label_id": "o3-high",
-        "model_family_id": "openai-o3",
-        "model": "o3 (high)",
-        "organization": "OpenAI",
-        "score": 0.7114,
-        "input_score": 0.7114,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "physics-university-metric-v1",
-        "protocol_id": "physics-university-source-export-v1",
-        "task_set_id": "physics-university-canonical",
-        "metric": "Score",
-        "score_role": "canonical",
-        "score_series_id": "physics-university-canonical-score",
-        "evaluation_protocol": "PHYSICS fixed university-physics accuracy series from the standardized ScienceEval panel; other prompts and subject-specific slices are not merged.",
-        "model_release_date": "2025-04-16",
-        "evaluation_date": "2025-07-01",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2025-04-16",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-04-16",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2025-07-01",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2025-04-16",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-04-16",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2503-21821-d6ee6dc3e7c1eb24",
-          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
-        ],
-        "source": "https://github.com/ScienceOne-AI/ScienceEval",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-physics-university-o3-high-a339a8c6aa164003"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "physics-university-o3-high"
-        ],
-        "plot_date": "2025-04-16",
-        "frontier_observation_ids": [
-          "obs-0-7114-d556bff288806f53"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-7114-d556bff288806f53",
-        "benchmark_id": "physics-university",
-        "benchmark_version_id": "physics-university-canonical",
-        "model_id": "model-o3-high-2025-04-16-0aa6839a37041892",
-        "model_configuration": "o3-high-2025-04-16",
-        "model_identity_organization": "openai",
-        "model_label_id": "o3-high",
-        "model_family_id": "openai-o3",
-        "model": "o3 (high)",
-        "organization": "OpenAI",
-        "score": 0.7114,
-        "input_score": 0.7114,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "physics-university-metric-v1",
-        "protocol_id": "physics-university-source-export-v1",
-        "task_set_id": "physics-university-canonical",
-        "metric": "Score",
-        "score_role": "canonical",
-        "score_series_id": "physics-university-canonical-score",
-        "evaluation_protocol": "PHYSICS fixed university-physics accuracy series from the standardized ScienceEval panel; other prompts and subject-specific slices are not merged.",
-        "model_release_date": "2025-04-16",
-        "evaluation_date": "2025-07-01",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2025-04-16",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-04-16",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2025-07-01",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2025-04-16",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-04-16",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2503-21821-d6ee6dc3e7c1eb24",
-          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
-        ],
-        "source": "https://github.com/ScienceOne-AI/ScienceEval",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-physics-university-o3-high-a339a8c6aa164003"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "physics-university-o3-high"
-        ],
-        "plot_date": "2025-04-16",
-        "frontier_observation_ids": [
-          "obs-0-7114-d556bff288806f53"
         ]
       }
     ],
@@ -752,7 +578,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-04-16",
@@ -790,414 +616,6 @@
       }
     ],
     "reported_frontier": [],
-    "historical_frontier": [],
-    "retrospective_observations": [
-      {
-        "observation_id": "obs-0-6338-af4ec35060f35195",
-        "benchmark_id": "physics-university",
-        "benchmark_version_id": "physics-university-canonical",
-        "model_id": "model-gemini-2-5-pro-53e6252cbff1cfa8",
-        "model_configuration": "gemini-2-5-pro",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-2-5-pro",
-        "model_family_id": "google-gemini-2-5-pro",
-        "model": "Gemini 2.5 Pro",
-        "organization": "Google",
-        "score": 0.6338,
-        "input_score": 0.6338,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "physics-university-metric-v1",
-        "protocol_id": "physics-university-source-export-v1",
-        "task_set_id": "physics-university-canonical",
-        "metric": "Score",
-        "score_role": "canonical",
-        "score_series_id": "physics-university-canonical-score",
-        "evaluation_protocol": "PHYSICS fixed university-physics accuracy series from the standardized ScienceEval panel; other prompts and subject-specific slices are not merged.",
-        "model_release_date": "2025-06-17",
-        "evaluation_date": "2025-07-01",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2025-06-17",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-06-17",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2025-07-01",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2025-06-17",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-06-17",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2503-21821-d6ee6dc3e7c1eb24",
-          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
-        ],
-        "source": "https://github.com/ScienceOne-AI/ScienceEval",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-physics-university-gemini-2-5-pro-d945ec3312ea136d"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "physics-university-gemini-2-5-pro"
-        ]
-      },
-      {
-        "observation_id": "obs-0-58-677233f0bfee7a95",
-        "benchmark_id": "physics-university",
-        "benchmark_version_id": "physics-university-canonical",
-        "model_id": "model-claude-sonnet-4-20250522-bd236032a6d4b861",
-        "model_configuration": "claude-sonnet-4-20250522",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-sonnet-4",
-        "model_family_id": "anthropic-claude-sonnet-4",
-        "model": "Claude Sonnet 4",
-        "organization": "Anthropic",
-        "score": 0.58,
-        "input_score": 0.58,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "physics-university-metric-v1",
-        "protocol_id": "physics-university-source-export-v1",
-        "task_set_id": "physics-university-canonical",
-        "metric": "Score",
-        "score_role": "canonical",
-        "score_series_id": "physics-university-canonical-score",
-        "evaluation_protocol": "PHYSICS fixed university-physics accuracy series from the standardized ScienceEval panel; other prompts and subject-specific slices are not merged.",
-        "model_release_date": "2025-05-22",
-        "evaluation_date": "2025-07-01",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2025-05-22",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-05-22",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2025-07-01",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2025-05-22",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-05-22",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2503-21821-d6ee6dc3e7c1eb24",
-          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
-        ],
-        "source": "https://github.com/ScienceOne-AI/ScienceEval",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-physics-university-claude-sonnet-4-d30e1ca148cd0acb"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "physics-university-claude-sonnet-4"
-        ]
-      },
-      {
-        "observation_id": "obs-0-7114-d556bff288806f53",
-        "benchmark_id": "physics-university",
-        "benchmark_version_id": "physics-university-canonical",
-        "model_id": "model-o3-high-2025-04-16-0aa6839a37041892",
-        "model_configuration": "o3-high-2025-04-16",
-        "model_identity_organization": "openai",
-        "model_label_id": "o3-high",
-        "model_family_id": "openai-o3",
-        "model": "o3 (high)",
-        "organization": "OpenAI",
-        "score": 0.7114,
-        "input_score": 0.7114,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "physics-university-metric-v1",
-        "protocol_id": "physics-university-source-export-v1",
-        "task_set_id": "physics-university-canonical",
-        "metric": "Score",
-        "score_role": "canonical",
-        "score_series_id": "physics-university-canonical-score",
-        "evaluation_protocol": "PHYSICS fixed university-physics accuracy series from the standardized ScienceEval panel; other prompts and subject-specific slices are not merged.",
-        "model_release_date": "2025-04-16",
-        "evaluation_date": "2025-07-01",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2025-04-16",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-04-16",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2025-07-01",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2025-04-16",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-04-16",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2503-21821-d6ee6dc3e7c1eb24",
-          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
-        ],
-        "source": "https://github.com/ScienceOne-AI/ScienceEval",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-physics-university-o3-high-a339a8c6aa164003"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "physics-university-o3-high"
-        ]
-      },
-      {
-        "observation_id": "obs-0-612-7b719f2c5887ca4c",
-        "benchmark_id": "physics-university",
-        "benchmark_version_id": "physics-university-canonical",
-        "model_id": "model-deepseek-r1-0528-8286c72fa3c74a07",
-        "model_configuration": "deepseek-r1-0528",
-        "model_identity_organization": "deepseek",
-        "model_label_id": "deepseek-r1-0528",
-        "model_family_id": "deepseek-deepseek-r1-0528",
-        "model": "DeepSeek R1 0528",
-        "organization": "DeepSeek",
-        "score": 0.612,
-        "input_score": 0.612,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "physics-university-metric-v1",
-        "protocol_id": "physics-university-source-export-v1",
-        "task_set_id": "physics-university-canonical",
-        "metric": "Score",
-        "score_role": "canonical",
-        "score_series_id": "physics-university-canonical-score",
-        "evaluation_protocol": "PHYSICS fixed university-physics accuracy series from the standardized ScienceEval panel; other prompts and subject-specific slices are not merged.",
-        "model_release_date": "2025-05-28",
-        "evaluation_date": "2025-07-01",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2025-05-28",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-05-28",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2025-07-01",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2025-05-28",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-05-28",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2503-21821-d6ee6dc3e7c1eb24",
-          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
-        ],
-        "source": "https://github.com/ScienceOne-AI/ScienceEval",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-physics-university-deepseek-r1-0528-8e1a490b6d9da1f2"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "physics-university-deepseek-r1-0528"
-        ]
-      },
-      {
-        "observation_id": "obs-0-6068-ac52448472b866ff",
-        "benchmark_id": "physics-university",
-        "benchmark_version_id": "physics-university-canonical",
-        "model_id": "model-qwen3-235b-20250428-e8d3d69e1d36adad",
-        "model_configuration": "qwen3-235b-20250428",
-        "model_identity_organization": "qwen",
-        "model_label_id": "qwen3-235b",
-        "model_family_id": "alibaba-qwen-qwen3-235b",
-        "model": "Qwen3 235B",
-        "organization": "Alibaba/Qwen",
-        "score": 0.6068,
-        "input_score": 0.6068,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "physics-university-metric-v1",
-        "protocol_id": "physics-university-source-export-v1",
-        "task_set_id": "physics-university-canonical",
-        "metric": "Score",
-        "score_role": "canonical",
-        "score_series_id": "physics-university-canonical-score",
-        "evaluation_protocol": "PHYSICS fixed university-physics accuracy series from the standardized ScienceEval panel; other prompts and subject-specific slices are not merged.",
-        "model_release_date": "2025-04-28",
-        "evaluation_date": "2025-07-01",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2025-04-28",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-04-28",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2025-07-01",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2025-04-28",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-04-28",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2503-21821-d6ee6dc3e7c1eb24",
-          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-scienceone-ai-scienceeval-30a3eac3043e06f0"
-        ],
-        "source": "https://github.com/ScienceOne-AI/ScienceEval",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-physics-university-qwen3-235b-6d261d0ff0d257a8"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "physics-university-qwen3-235b"
-        ]
-      }
-    ],
     "observed_frontier": 0.7114,
     "capability_frontier_value": 0.7114,
     "reported_frontier_value": null,
@@ -1212,11 +630,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 546
+        "days": 580
       },
       "T90": {
         "status": "right_censored",
-        "days": 546
+        "days": 580
       }
     },
     "capability_threshold_days": {
@@ -1227,11 +645,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 546
+        "days": 580
       },
       "T90": {
         "status": "right_censored",
-        "days": 546
+        "days": 580
       }
     },
     "reported_threshold_days": {

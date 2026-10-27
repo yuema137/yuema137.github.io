@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -175,7 +175,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2023-11-06",
@@ -255,7 +255,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-02-15",
@@ -335,7 +335,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-05-13",
@@ -364,182 +364,6 @@
         "evidence_count": 1,
         "source_row_ids": [
           "circuit-gpt4o"
-        ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-467-5c87f4922e26cd5b",
-        "benchmark_id": "circuit-v1-zeroshot-global",
-        "benchmark_version_id": "circuit-v1-zeroshot-global-canonical",
-        "model_id": "model-gpt-4o-d491e46221c560b3",
-        "model_configuration": "GPT-4o",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-4o",
-        "model_family_id": "openai-gpt-4o",
-        "model": "GPT-4o",
-        "organization": "OpenAI",
-        "score": 0.467,
-        "input_score": 0.467,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "circuit-v1-zeroshot-global-metric-v1",
-        "protocol_id": "circuit-v1-zeroshot-global-source-export-v1",
-        "task_set_id": "circuit-v1-zeroshot-global-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "circuit-v1-zeroshot-global-canonical-score",
-        "evaluation_protocol": "CIRCUIT v1 fixed 510 questions, plain zero-shot with diagrams, no netlist, global <0.001 absolute-error accuracy; one-shot and template-pass metrics are excluded.",
-        "model_release_date": "2024-05-13",
-        "evaluation_date": null,
-        "result_public_date": "2025-02-11",
-        "source_publication_date": "2025-02-11",
-        "observation_date": "2024-05-13",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-05-13",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2502-07980-3f741a5cc8bcde6d"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2502-07980-3f741a5cc8bcde6d"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2025-02-11",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-02-11",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-05-13",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2025-02-11",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2502-07980-3f741a5cc8bcde6d"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2502-07980-3f741a5cc8bcde6d"
-        ],
-        "source": "https://arxiv.org/abs/2502.07980",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-circuit-gpt4o-a78fed18aa2460ed"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "circuit-gpt4o"
-        ],
-        "plot_date": "2025-02-11",
-        "frontier_observation_ids": [
-          "obs-0-363-af5c3c4ecafd484a",
-          "obs-0-384-eff9386724461f32",
-          "obs-0-467-5c87f4922e26cd5b"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-467-5c87f4922e26cd5b",
-        "benchmark_id": "circuit-v1-zeroshot-global",
-        "benchmark_version_id": "circuit-v1-zeroshot-global-canonical",
-        "model_id": "model-gpt-4o-d491e46221c560b3",
-        "model_configuration": "GPT-4o",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-4o",
-        "model_family_id": "openai-gpt-4o",
-        "model": "GPT-4o",
-        "organization": "OpenAI",
-        "score": 0.467,
-        "input_score": 0.467,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "circuit-v1-zeroshot-global-metric-v1",
-        "protocol_id": "circuit-v1-zeroshot-global-source-export-v1",
-        "task_set_id": "circuit-v1-zeroshot-global-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "circuit-v1-zeroshot-global-canonical-score",
-        "evaluation_protocol": "CIRCUIT v1 fixed 510 questions, plain zero-shot with diagrams, no netlist, global <0.001 absolute-error accuracy; one-shot and template-pass metrics are excluded.",
-        "model_release_date": "2024-05-13",
-        "evaluation_date": null,
-        "result_public_date": "2025-02-11",
-        "source_publication_date": "2025-02-11",
-        "observation_date": "2024-05-13",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-05-13",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2502-07980-3f741a5cc8bcde6d"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2502-07980-3f741a5cc8bcde6d"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2025-02-11",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-02-11",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-05-13",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2025-02-11",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2502-07980-3f741a5cc8bcde6d"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2502-07980-3f741a5cc8bcde6d"
-        ],
-        "source": "https://arxiv.org/abs/2502.07980",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-circuit-gpt4o-a78fed18aa2460ed"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "circuit-gpt4o"
-        ],
-        "plot_date": "2025-02-11",
-        "frontier_observation_ids": [
-          "obs-0-363-af5c3c4ecafd484a",
-          "obs-0-384-eff9386724461f32",
-          "obs-0-467-5c87f4922e26cd5b"
         ]
       }
     ],
@@ -593,7 +417,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-02-11",
@@ -681,7 +505,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-02-11",
@@ -719,95 +543,6 @@
         ]
       }
     ],
-    "historical_frontier": [
-      {
-        "observation_id": "obs-0-467-5c87f4922e26cd5b",
-        "benchmark_id": "circuit-v1-zeroshot-global",
-        "benchmark_version_id": "circuit-v1-zeroshot-global-canonical",
-        "model_id": "model-gpt-4o-d491e46221c560b3",
-        "model_configuration": "GPT-4o",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-4o",
-        "model_family_id": "openai-gpt-4o",
-        "model": "GPT-4o",
-        "organization": "OpenAI",
-        "score": 0.467,
-        "input_score": 0.467,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "circuit-v1-zeroshot-global-metric-v1",
-        "protocol_id": "circuit-v1-zeroshot-global-source-export-v1",
-        "task_set_id": "circuit-v1-zeroshot-global-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "circuit-v1-zeroshot-global-canonical-score",
-        "evaluation_protocol": "CIRCUIT v1 fixed 510 questions, plain zero-shot with diagrams, no netlist, global <0.001 absolute-error accuracy; one-shot and template-pass metrics are excluded.",
-        "model_release_date": "2024-05-13",
-        "evaluation_date": null,
-        "result_public_date": "2025-02-11",
-        "source_publication_date": "2025-02-11",
-        "observation_date": "2024-05-13",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-05-13",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2502-07980-3f741a5cc8bcde6d"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2502-07980-3f741a5cc8bcde6d"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2025-02-11",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-02-11",
-        "date_kind": "result first-public date",
-        "capability_date": "2024-05-13",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2025-02-11",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2502-07980-3f741a5cc8bcde6d"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2502-07980-3f741a5cc8bcde6d"
-        ],
-        "source": "https://arxiv.org/abs/2502.07980",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-circuit-gpt4o-a78fed18aa2460ed"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "circuit-gpt4o"
-        ],
-        "plot_date": "2025-02-11",
-        "frontier_observation_ids": [
-          "obs-0-363-af5c3c4ecafd484a",
-          "obs-0-384-eff9386724461f32",
-          "obs-0-467-5c87f4922e26cd5b"
-        ]
-      }
-    ],
-    "retrospective_observations": [],
     "observed_frontier": 0.467,
     "capability_frontier_value": 0.467,
     "reported_frontier_value": 0.467,
@@ -817,43 +552,43 @@
     "threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 589
+        "days": 623
       },
       "T80": {
         "status": "right_censored",
-        "days": 589
+        "days": 623
       },
       "T90": {
         "status": "right_censored",
-        "days": 589
+        "days": 623
       }
     },
     "capability_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 589
+        "days": 623
       },
       "T80": {
         "status": "right_censored",
-        "days": 589
+        "days": 623
       },
       "T90": {
         "status": "right_censored",
-        "days": 589
+        "days": 623
       }
     },
     "reported_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 589
+        "days": 623
       },
       "T80": {
         "status": "right_censored",
-        "days": 589
+        "days": 623
       },
       "T90": {
         "status": "right_censored",
-        "days": 589
+        "days": 623
       }
     },
     "velocity_180d": null,

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -176,7 +176,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-04-05",
@@ -257,7 +257,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-04-17",
@@ -337,7 +337,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-03-31",
@@ -417,7 +417,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-04-23",
@@ -497,7 +497,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-02-19",
@@ -577,7 +577,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-04-16",
@@ -606,188 +606,6 @@
         "evidence_count": 1,
         "source_row_ids": [
           "omnimat-opus47"
-        ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-372-673849c9e6393710",
-        "benchmark_id": "omnimatbench-v2-vanilla",
-        "benchmark_version_id": "omnimatbench-v2-vanilla-canonical",
-        "model_id": "model-claude-opus-4-7-bf3d188ffeabc598",
-        "model_configuration": "Claude-Opus-4.7",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-opus-4-7",
-        "model_family_id": "anthropic-claude-opus-4-7",
-        "model": "Claude-Opus-4.7",
-        "organization": "Anthropic",
-        "score": 0.372,
-        "input_score": 0.372,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "omnimatbench-v2-vanilla-metric-v1",
-        "protocol_id": "omnimatbench-v2-vanilla-source-export-v1",
-        "task_set_id": "omnimatbench-v2-vanilla-canonical",
-        "metric": "Overall score",
-        "score_role": "canonical",
-        "score_series_id": "omnimatbench-v2-vanilla-canonical-score",
-        "evaluation_protocol": "OmniMatBench v2 fixed 3,171-item full suite, vanilla zero-shot, Table 3 Avg score. Formula grounding, retrieval, code assistance, subsets, and component-only metrics are excluded.",
-        "model_release_date": "2026-04-16",
-        "evaluation_date": null,
-        "result_public_date": "2026-05-29",
-        "source_publication_date": "2026-05-29",
-        "observation_date": "2026-04-16",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-04-16",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2605-29833v2-1e1479994ec18e4a"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2605-29833v2-1e1479994ec18e4a"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-05-29",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2026-05-29",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-04-16",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-05-29",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2605-29833v2-1e1479994ec18e4a"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2605-29833v2-1e1479994ec18e4a"
-        ],
-        "source": "https://arxiv.org/abs/2605.29833v2",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-omnimat-opus47-f396374fdf1c6ad0"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "omnimat-opus47"
-        ],
-        "plot_date": "2026-05-29",
-        "frontier_observation_ids": [
-          "obs-0-2-2cf5a778685259c6",
-          "obs-0-291-42a4ddbfc762dc40",
-          "obs-0-299-ff87fd88d9487f33",
-          "obs-0-324-d02e1cb91dce640a",
-          "obs-0-347-ece6661eb8614523",
-          "obs-0-372-673849c9e6393710"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-372-673849c9e6393710",
-        "benchmark_id": "omnimatbench-v2-vanilla",
-        "benchmark_version_id": "omnimatbench-v2-vanilla-canonical",
-        "model_id": "model-claude-opus-4-7-bf3d188ffeabc598",
-        "model_configuration": "Claude-Opus-4.7",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-opus-4-7",
-        "model_family_id": "anthropic-claude-opus-4-7",
-        "model": "Claude-Opus-4.7",
-        "organization": "Anthropic",
-        "score": 0.372,
-        "input_score": 0.372,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "omnimatbench-v2-vanilla-metric-v1",
-        "protocol_id": "omnimatbench-v2-vanilla-source-export-v1",
-        "task_set_id": "omnimatbench-v2-vanilla-canonical",
-        "metric": "Overall score",
-        "score_role": "canonical",
-        "score_series_id": "omnimatbench-v2-vanilla-canonical-score",
-        "evaluation_protocol": "OmniMatBench v2 fixed 3,171-item full suite, vanilla zero-shot, Table 3 Avg score. Formula grounding, retrieval, code assistance, subsets, and component-only metrics are excluded.",
-        "model_release_date": "2026-04-16",
-        "evaluation_date": null,
-        "result_public_date": "2026-05-29",
-        "source_publication_date": "2026-05-29",
-        "observation_date": "2026-04-16",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-04-16",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2605-29833v2-1e1479994ec18e4a"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2605-29833v2-1e1479994ec18e4a"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-05-29",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2026-05-29",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-04-16",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-05-29",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2605-29833v2-1e1479994ec18e4a"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2605-29833v2-1e1479994ec18e4a"
-        ],
-        "source": "https://arxiv.org/abs/2605.29833v2",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-omnimat-opus47-f396374fdf1c6ad0"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "omnimat-opus47"
-        ],
-        "plot_date": "2026-05-29",
-        "frontier_observation_ids": [
-          "obs-0-2-2cf5a778685259c6",
-          "obs-0-291-42a4ddbfc762dc40",
-          "obs-0-299-ff87fd88d9487f33",
-          "obs-0-324-d02e1cb91dce640a",
-          "obs-0-347-ece6661eb8614523",
-          "obs-0-372-673849c9e6393710"
         ]
       }
     ],
@@ -841,7 +659,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-05-29",
@@ -932,7 +750,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-05-29",
@@ -973,98 +791,6 @@
         ]
       }
     ],
-    "historical_frontier": [
-      {
-        "observation_id": "obs-0-372-673849c9e6393710",
-        "benchmark_id": "omnimatbench-v2-vanilla",
-        "benchmark_version_id": "omnimatbench-v2-vanilla-canonical",
-        "model_id": "model-claude-opus-4-7-bf3d188ffeabc598",
-        "model_configuration": "Claude-Opus-4.7",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-opus-4-7",
-        "model_family_id": "anthropic-claude-opus-4-7",
-        "model": "Claude-Opus-4.7",
-        "organization": "Anthropic",
-        "score": 0.372,
-        "input_score": 0.372,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "omnimatbench-v2-vanilla-metric-v1",
-        "protocol_id": "omnimatbench-v2-vanilla-source-export-v1",
-        "task_set_id": "omnimatbench-v2-vanilla-canonical",
-        "metric": "Overall score",
-        "score_role": "canonical",
-        "score_series_id": "omnimatbench-v2-vanilla-canonical-score",
-        "evaluation_protocol": "OmniMatBench v2 fixed 3,171-item full suite, vanilla zero-shot, Table 3 Avg score. Formula grounding, retrieval, code assistance, subsets, and component-only metrics are excluded.",
-        "model_release_date": "2026-04-16",
-        "evaluation_date": null,
-        "result_public_date": "2026-05-29",
-        "source_publication_date": "2026-05-29",
-        "observation_date": "2026-04-16",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-04-16",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2605-29833v2-1e1479994ec18e4a"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2605-29833v2-1e1479994ec18e4a"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-05-29",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2026-05-29",
-        "date_kind": "result first-public date",
-        "capability_date": "2026-04-16",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-05-29",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2605-29833v2-1e1479994ec18e4a"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2605-29833v2-1e1479994ec18e4a"
-        ],
-        "source": "https://arxiv.org/abs/2605.29833v2",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-omnimat-opus47-f396374fdf1c6ad0"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "omnimat-opus47"
-        ],
-        "plot_date": "2026-05-29",
-        "frontier_observation_ids": [
-          "obs-0-2-2cf5a778685259c6",
-          "obs-0-291-42a4ddbfc762dc40",
-          "obs-0-299-ff87fd88d9487f33",
-          "obs-0-324-d02e1cb91dce640a",
-          "obs-0-347-ece6661eb8614523",
-          "obs-0-372-673849c9e6393710"
-        ]
-      }
-    ],
-    "retrospective_observations": [],
     "observed_frontier": 0.372,
     "capability_frontier_value": 0.372,
     "reported_frontier_value": 0.372,
@@ -1074,43 +800,43 @@
     "threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 117
+        "days": 151
       },
       "T80": {
         "status": "right_censored",
-        "days": 117
+        "days": 151
       },
       "T90": {
         "status": "right_censored",
-        "days": 117
+        "days": 151
       }
     },
     "capability_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 117
+        "days": 151
       },
       "T80": {
         "status": "right_censored",
-        "days": 117
+        "days": 151
       },
       "T90": {
         "status": "right_censored",
-        "days": 117
+        "days": 151
       }
     },
     "reported_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 117
+        "days": 151
       },
       "T80": {
         "status": "right_censored",
-        "days": 117
+        "days": 151
       },
       "T90": {
         "status": "right_censored",
-        "days": 117
+        "days": 151
       }
     },
     "velocity_180d": null,

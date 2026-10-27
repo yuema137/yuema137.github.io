@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -117,7 +117,9 @@
           "zh": "\u65e0\u5de5\u5177 HLE \u6210\u7ee9\uff0c\u4e0e\u5df2\u6709\u4f7f\u7528\u5de5\u5177\u7684\u89c2\u6d4b\u9694\u79bb\u3002"
         },
         "observation_ids": [
-          "obs-0-644-30f615e46df0ee75"
+          "obs-0-644-30f615e46df0ee75",
+          "obs-0-569-3d8d5f40a0ed87ea",
+          "obs-0-459-5e50157c19ae0a1f"
         ],
         "frontier_events": [
           {
@@ -186,7 +188,7 @@
                 "precision": "day"
               }
             ],
-            "ingested_at": "2026-09-23",
+            "ingested_at": "2026-10-27",
             "date_precision": "day",
             "date_notes": null,
             "date": "2026-09-22",
@@ -223,6 +225,351 @@
             ]
           }
         ]
+      },
+      {
+        "series_id": "humanitys-last-exam-auxiliary-hle-no-tools-vendor-card-oct2026",
+        "role": "auxiliary",
+        "label": "No tools / vendor-reported grader",
+        "metric_id": "humanitys-last-exam-metric-v1",
+        "metric_name": "Accuracy",
+        "protocol_id": "hle-no-tools-vendor-card-oct2026",
+        "task_set_id": "hle-no-tools-vendor-card-oct2026",
+        "lifecycle_eligible": false,
+        "explanation": {
+          "en": "No-tools HLE score self-reported in a vendor release page with the vendor's own grader; isolated from the tool-enabled and leaderboard series.",
+          "zh": "\u5382\u5546\u53d1\u5e03\u9875\u81ea\u62a5\u7684\u65e0\u5de5\u5177 HLE \u6210\u7ee9\uff0c\u4f7f\u7528\u5382\u5546\u81ea\u5df1\u7684\u8bc4\u5206\u5668\uff1b\u4e0e\u4f7f\u7528\u5de5\u5177\u7684\u5e8f\u5217\u548c\u699c\u5355\u5e8f\u5217\u9694\u79bb\u3002"
+        },
+        "observation_ids": [
+          "obs-0-511-55ac6dc350daa23c",
+          "obs-0-426-1d226e3d57e91f36"
+        ],
+        "frontier_events": [
+          {
+            "observation_id": "obs-0-426-1d226e3d57e91f36",
+            "benchmark_id": "humanitys-last-exam",
+            "benchmark_version_id": "humanitys-last-exam-canonical",
+            "model_id": "model-deepseek-v4-1-flash-1017-no-tools-32b06a820d9a7ed1",
+            "model_configuration": "DeepSeek-V4.1-Flash-1017 (no tools)",
+            "model_identity_organization": "deepseek",
+            "model_label_id": "deepseek-v4-1-flash-1017-no-tools",
+            "model_family_id": "deepseek-deepseek-v4-1-flash-1017",
+            "model": "DeepSeek-V4.1-Flash-1017 (no tools)",
+            "organization": "DeepSeek",
+            "score": 0.426,
+            "input_score": 0.426,
+            "input_unit": "fraction",
+            "reported_cost_per_task": null,
+            "metric_id": "humanitys-last-exam-metric-v1",
+            "protocol_id": "hle-no-tools-vendor-card-oct2026",
+            "task_set_id": "hle-no-tools-vendor-card-oct2026",
+            "metric": "Accuracy",
+            "score_role": "auxiliary",
+            "score_series_id": "humanitys-last-exam-auxiliary-hle-no-tools-vendor-card-oct2026",
+            "evaluation_protocol": "No-tools HLE score self-reported in a vendor release page with the vendor's own grader; isolated from the tool-enabled and leaderboard series.",
+            "auxiliary_metadata": {
+              "protocol_id": "hle-no-tools-vendor-card-oct2026",
+              "task_set_id": "hle-no-tools-vendor-card-oct2026",
+              "label": "No tools / vendor-reported grader",
+              "explanation": {
+                "en": "No-tools HLE score self-reported in a vendor release page with the vendor's own grader; isolated from the tool-enabled and leaderboard series.",
+                "zh": "\u5382\u5546\u53d1\u5e03\u9875\u81ea\u62a5\u7684\u65e0\u5de5\u5177 HLE \u6210\u7ee9\uff0c\u4f7f\u7528\u5382\u5546\u81ea\u5df1\u7684\u8bc4\u5206\u5668\uff1b\u4e0e\u4f7f\u7528\u5de5\u5177\u7684\u5e8f\u5217\u548c\u699c\u5355\u5e8f\u5217\u9694\u79bb\u3002"
+              }
+            },
+            "model_release_date": "2026-10-17",
+            "evaluation_date": null,
+            "result_public_date": "2026-10-17",
+            "source_publication_date": "2026-10-17",
+            "observation_date": "2026-10-17",
+            "observation_date_precision": "day",
+            "observation_date_sources": [
+              {
+                "date": "2026-10-17",
+                "kind": "model_release_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-huggingface-co-deepseek-ai-deepseek-v4-1-f-cac24968e5aa0d5b"
+                ]
+              },
+              {
+                "date": "2026-10-17",
+                "kind": "score_publication_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-huggingface-co-deepseek-ai-deepseek-v4-1-f-cac24968e5aa0d5b"
+                ]
+              }
+            ],
+            "observation_date_source_ids": [
+              "resource-https-huggingface-co-deepseek-ai-deepseek-v4-1-f-cac24968e5aa0d5b"
+            ],
+            "evaluation_date_sources": [],
+            "score_publication_date_sources": [
+              {
+                "date": "2026-10-17",
+                "kind": "Result public date",
+                "precision": "day"
+              }
+            ],
+            "ingested_at": "2026-10-27",
+            "date_precision": "day",
+            "date_notes": null,
+            "date": "2026-10-17",
+            "date_kind": "earliest_observation_evidence_date",
+            "capability_date": "2026-10-17",
+            "capability_date_meaning": "earliest_observation_evidence_date",
+            "reported_date_meaning": "result_public_date",
+            "historical_frontier_date": "2026-10-17",
+            "temporal_class": "historical_or_unknown",
+            "retrospective": false,
+            "capability_frontier_eligible": false,
+            "historical_frontier_eligible": true,
+            "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+            "contemporaneous": true,
+            "source_ids": [
+              "resource-https-huggingface-co-deepseek-ai-deepseek-v4-1-f-cac24968e5aa0d5b",
+              "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
+            ],
+            "score_source_ids": [
+              "resource-https-huggingface-co-deepseek-ai-deepseek-v4-1-f-cac24968e5aa0d5b"
+            ],
+            "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+            "notes": "Operational evaluation timeline only; not a historical public-result date.",
+            "evidence_ids": [
+              "evidence-oct2026-humanitys-last-exam-deepseek-v4-1-flash--f7299cb590a8108b"
+            ],
+            "evidence_count": 1,
+            "source_row_ids": [
+              "oct2026-humanitys-last-exam-deepseek-v4-1-flash-1017-no-tools"
+            ],
+            "plot_date": "2026-10-17",
+            "frontier_observation_ids": [
+              "obs-0-426-1d226e3d57e91f36"
+            ]
+          },
+          {
+            "observation_id": "obs-0-511-55ac6dc350daa23c",
+            "benchmark_id": "humanitys-last-exam",
+            "benchmark_version_id": "humanitys-last-exam-canonical",
+            "model_id": "model-kimi-k3-1-pro-max-no-tools-84a8ee867fbabe3c",
+            "model_configuration": "Kimi K3.1 Pro (max, no tools)",
+            "model_identity_organization": "moonshot",
+            "model_label_id": "kimi-k3-1-pro-max-no-tools",
+            "model_family_id": "moonshot-kimi-k3-1-pro",
+            "model": "Kimi K3.1 Pro (max, no tools)",
+            "organization": "Moonshot",
+            "score": 0.511,
+            "input_score": 0.511,
+            "input_unit": "fraction",
+            "reported_cost_per_task": null,
+            "metric_id": "humanitys-last-exam-metric-v1",
+            "protocol_id": "hle-no-tools-vendor-card-oct2026",
+            "task_set_id": "hle-no-tools-vendor-card-oct2026",
+            "metric": "Accuracy",
+            "score_role": "auxiliary",
+            "score_series_id": "humanitys-last-exam-auxiliary-hle-no-tools-vendor-card-oct2026",
+            "evaluation_protocol": "No-tools HLE score self-reported in a vendor release page with the vendor's own grader; isolated from the tool-enabled and leaderboard series.",
+            "auxiliary_metadata": {
+              "protocol_id": "hle-no-tools-vendor-card-oct2026",
+              "task_set_id": "hle-no-tools-vendor-card-oct2026",
+              "label": "No tools / vendor-reported grader",
+              "explanation": {
+                "en": "No-tools HLE score self-reported in a vendor release page with the vendor's own grader; isolated from the tool-enabled and leaderboard series.",
+                "zh": "\u5382\u5546\u53d1\u5e03\u9875\u81ea\u62a5\u7684\u65e0\u5de5\u5177 HLE \u6210\u7ee9\uff0c\u4f7f\u7528\u5382\u5546\u81ea\u5df1\u7684\u8bc4\u5206\u5668\uff1b\u4e0e\u4f7f\u7528\u5de5\u5177\u7684\u5e8f\u5217\u548c\u699c\u5355\u5e8f\u5217\u9694\u79bb\u3002"
+              }
+            },
+            "model_release_date": "2026-10-23",
+            "evaluation_date": null,
+            "result_public_date": "2026-10-23",
+            "source_publication_date": "2026-10-23",
+            "observation_date": "2026-10-23",
+            "observation_date_precision": "day",
+            "observation_date_sources": [
+              {
+                "date": "2026-10-23",
+                "kind": "model_release_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
+                ]
+              },
+              {
+                "date": "2026-10-23",
+                "kind": "score_publication_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
+                ]
+              }
+            ],
+            "observation_date_source_ids": [
+              "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
+            ],
+            "evaluation_date_sources": [],
+            "score_publication_date_sources": [
+              {
+                "date": "2026-10-23",
+                "kind": "Result public date",
+                "precision": "day"
+              }
+            ],
+            "ingested_at": "2026-10-27",
+            "date_precision": "day",
+            "date_notes": null,
+            "date": "2026-10-23",
+            "date_kind": "earliest_observation_evidence_date",
+            "capability_date": "2026-10-23",
+            "capability_date_meaning": "earliest_observation_evidence_date",
+            "reported_date_meaning": "result_public_date",
+            "historical_frontier_date": "2026-10-23",
+            "temporal_class": "historical_or_unknown",
+            "retrospective": false,
+            "capability_frontier_eligible": false,
+            "historical_frontier_eligible": true,
+            "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+            "contemporaneous": true,
+            "source_ids": [
+              "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba",
+              "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
+            ],
+            "score_source_ids": [
+              "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
+            ],
+            "source": "https://www.kimi.com/blog/kimi-k3-1-pro",
+            "notes": "Operational evaluation timeline only; not a historical public-result date.",
+            "evidence_ids": [
+              "evidence-oct2026-humanitys-last-exam-kimi-k3-1-pro-max-no-8ead5e2befb8ce00"
+            ],
+            "evidence_count": 1,
+            "source_row_ids": [
+              "oct2026-humanitys-last-exam-kimi-k3-1-pro-max-no-tools"
+            ],
+            "plot_date": "2026-10-23",
+            "frontier_observation_ids": [
+              "obs-0-511-55ac6dc350daa23c"
+            ]
+          }
+        ]
+      },
+      {
+        "series_id": "humanitys-last-exam-auxiliary-hle-tools-kimi-blog-oct23",
+        "role": "auxiliary",
+        "label": "With tools / Kimi harness",
+        "metric_id": "humanitys-last-exam-metric-v1",
+        "metric_name": "Accuracy",
+        "protocol_id": "hle-tools-kimi-blog-oct23",
+        "task_set_id": "hle-tools-kimi-blog-oct23",
+        "lifecycle_eligible": false,
+        "explanation": {
+          "en": "Tool-enabled HLE score from the Kimi blog; tool set, budget and grader differ from the Anthropic tool-enabled canonical rows.",
+          "zh": "Kimi \u535a\u5ba2\u53d1\u5e03\u7684\u4f7f\u7528\u5de5\u5177 HLE \u6210\u7ee9\uff1b\u5de5\u5177\u96c6\u3001\u9884\u7b97\u548c\u8bc4\u5206\u5668\u4e0e Anthropic \u4f7f\u7528\u5de5\u5177\u7684\u4e3b\u5e8f\u5217\u4e0d\u540c\u3002"
+        },
+        "observation_ids": [
+          "obs-0-7-66a72d65ddff3e3f"
+        ],
+        "frontier_events": [
+          {
+            "observation_id": "obs-0-7-66a72d65ddff3e3f",
+            "benchmark_id": "humanitys-last-exam",
+            "benchmark_version_id": "humanitys-last-exam-canonical",
+            "model_id": "model-kimi-k3-1-pro-max-tools-f3fbeab09c933902",
+            "model_configuration": "Kimi K3.1 Pro (max, tools)",
+            "model_identity_organization": "moonshot",
+            "model_label_id": "kimi-k3-1-pro-max-tools",
+            "model_family_id": "moonshot-kimi-k3-1-pro",
+            "model": "Kimi K3.1 Pro (max, tools)",
+            "organization": "Moonshot",
+            "score": 0.7,
+            "input_score": 0.7,
+            "input_unit": "fraction",
+            "reported_cost_per_task": null,
+            "metric_id": "humanitys-last-exam-metric-v1",
+            "protocol_id": "hle-tools-kimi-blog-oct23",
+            "task_set_id": "hle-tools-kimi-blog-oct23",
+            "metric": "Accuracy",
+            "score_role": "auxiliary",
+            "score_series_id": "humanitys-last-exam-auxiliary-hle-tools-kimi-blog-oct23",
+            "evaluation_protocol": "Tool-enabled HLE score from the Kimi blog; tool set, budget and grader differ from the Anthropic tool-enabled canonical rows.",
+            "auxiliary_metadata": {
+              "protocol_id": "hle-tools-kimi-blog-oct23",
+              "task_set_id": "hle-tools-kimi-blog-oct23",
+              "label": "With tools / Kimi harness",
+              "explanation": {
+                "en": "Tool-enabled HLE score from the Kimi blog; tool set, budget and grader differ from the Anthropic tool-enabled canonical rows.",
+                "zh": "Kimi \u535a\u5ba2\u53d1\u5e03\u7684\u4f7f\u7528\u5de5\u5177 HLE \u6210\u7ee9\uff1b\u5de5\u5177\u96c6\u3001\u9884\u7b97\u548c\u8bc4\u5206\u5668\u4e0e Anthropic \u4f7f\u7528\u5de5\u5177\u7684\u4e3b\u5e8f\u5217\u4e0d\u540c\u3002"
+              }
+            },
+            "model_release_date": "2026-10-23",
+            "evaluation_date": null,
+            "result_public_date": "2026-10-23",
+            "source_publication_date": "2026-10-23",
+            "observation_date": "2026-10-23",
+            "observation_date_precision": "day",
+            "observation_date_sources": [
+              {
+                "date": "2026-10-23",
+                "kind": "model_release_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
+                ]
+              },
+              {
+                "date": "2026-10-23",
+                "kind": "score_publication_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
+                ]
+              }
+            ],
+            "observation_date_source_ids": [
+              "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
+            ],
+            "evaluation_date_sources": [],
+            "score_publication_date_sources": [
+              {
+                "date": "2026-10-23",
+                "kind": "Result public date",
+                "precision": "day"
+              }
+            ],
+            "ingested_at": "2026-10-27",
+            "date_precision": "day",
+            "date_notes": null,
+            "date": "2026-10-23",
+            "date_kind": "earliest_observation_evidence_date",
+            "capability_date": "2026-10-23",
+            "capability_date_meaning": "earliest_observation_evidence_date",
+            "reported_date_meaning": "result_public_date",
+            "historical_frontier_date": "2026-10-23",
+            "temporal_class": "historical_or_unknown",
+            "retrospective": false,
+            "capability_frontier_eligible": false,
+            "historical_frontier_eligible": true,
+            "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+            "contemporaneous": true,
+            "source_ids": [
+              "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba",
+              "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
+            ],
+            "score_source_ids": [
+              "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
+            ],
+            "source": "https://www.kimi.com/blog/kimi-k3-1-pro",
+            "notes": "Operational evaluation timeline only; not a historical public-result date.",
+            "evidence_ids": [
+              "evidence-oct2026-humanitys-last-exam-kimi-k3-1-pro-max-to-0b4c237784020b98"
+            ],
+            "evidence_count": 1,
+            "source_row_ids": [
+              "oct2026-humanitys-last-exam-kimi-k3-1-pro-max-tools"
+            ],
+            "plot_date": "2026-10-23",
+            "frontier_observation_ids": [
+              "obs-0-7-66a72d65ddff3e3f"
+            ]
+          }
+        ]
       }
     ],
     "benchmark_version_id": "humanitys-last-exam-canonical",
@@ -242,8 +589,8 @@
       }
     },
     "evaluation_target": "final_output",
-    "observation_count": 11,
-    "evidence_record_count": 11,
+    "observation_count": 20,
+    "evidence_record_count": 24,
     "observations": [
       {
         "observation_id": "obs-0-4644-ce2e5dfd8a336c2a",
@@ -288,7 +635,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-02-19",
@@ -360,7 +707,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-03-05",
@@ -434,7 +781,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-03",
@@ -508,7 +855,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -580,7 +927,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-11-18",
@@ -652,7 +999,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-03-05",
@@ -724,7 +1071,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-04-16",
@@ -796,7 +1143,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-02-05",
@@ -868,7 +1215,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-08-07",
@@ -954,7 +1301,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-09-22",
@@ -1052,7 +1399,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-09-22",
@@ -1083,330 +1430,20 @@
         "source_row_ids": [
           "sep2026-humanitys-last-exam-claude-opus-5-5-max-no-tools"
         ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-2532-fc3a781b481f516a",
-        "benchmark_id": "humanitys-last-exam",
-        "benchmark_version_id": "humanitys-last-exam-canonical",
-        "model_id": "model-gpt-5-cdd3b6d6cb9421c1",
-        "model_configuration": "GPT-5",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-5",
-        "model_family_id": "openai-gpt-5",
-        "model": "GPT-5",
-        "organization": "OpenAI",
-        "score": 0.2532,
-        "input_score": 0.2532,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "humanitys-last-exam-metric-v1",
-        "protocol_id": "humanitys-last-exam-source-export-v1",
-        "task_set_id": "humanitys-last-exam-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "humanitys-last-exam-canonical-score",
-        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
-        "model_release_date": "2025-08-07",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2025-08-07",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-08-07",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2025-08-07",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-08-07",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
-        ],
-        "score_source_ids": [
-          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
-        ],
-        "source": "https://labs.scale.com/leaderboard/humanitys_last_exam",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-accuracy-0-2532-name-gpt-5-notes-hle-finalized-2-e11e0a690908a5a9"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2025-08-07",
-        "frontier_observation_ids": [
-          "obs-0-2532-fc3a781b481f516a"
-        ]
       },
       {
-        "observation_id": "obs-0-3752-597ff632d7803385",
+        "observation_id": "obs-0-645-0caead19a32b3572",
         "benchmark_id": "humanitys-last-exam",
         "benchmark_version_id": "humanitys-last-exam-canonical",
-        "model_id": "model-gemini-3-pro-preview-6f9ce4666001cc6e",
-        "model_configuration": "Gemini 3 Pro Preview",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-3-pro-preview",
-        "model_family_id": "google-gemini-3-pro-preview",
-        "model": "Gemini 3 Pro Preview",
-        "organization": "Google",
-        "score": 0.3752,
-        "input_score": 0.3752,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "humanitys-last-exam-metric-v1",
-        "protocol_id": "humanitys-last-exam-source-export-v1",
-        "task_set_id": "humanitys-last-exam-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "humanitys-last-exam-canonical-score",
-        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
-        "model_release_date": "2025-11-18",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2025-11-18",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-11-18",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2025-11-18",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-11-18",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
-        ],
-        "score_source_ids": [
-          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
-        ],
-        "source": "https://labs.scale.com/leaderboard/humanitys_last_exam",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-accuracy-0-3752-name-gemini-3-pro-preview-notes--2dfca45e3104801c"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2025-11-18",
-        "frontier_observation_ids": [
-          "obs-0-3752-597ff632d7803385"
-        ]
-      },
-      {
-        "observation_id": "obs-0-4644-ce2e5dfd8a336c2a",
-        "benchmark_id": "humanitys-last-exam",
-        "benchmark_version_id": "humanitys-last-exam-canonical",
-        "model_id": "model-gemini-3-1-pro-preview-82888baa882fdc2c",
-        "model_configuration": "Gemini 3.1 Pro Preview",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-3-1-pro-preview",
-        "model_family_id": "google-gemini-3-1-pro-preview",
-        "model": "Gemini 3.1 Pro Preview",
-        "organization": "Google",
-        "score": 0.4644,
-        "input_score": 0.4644,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "humanitys-last-exam-metric-v1",
-        "protocol_id": "humanitys-last-exam-source-export-v1",
-        "task_set_id": "humanitys-last-exam-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "humanitys-last-exam-canonical-score",
-        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
-        "model_release_date": "2026-02-19",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-02-19",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-02-19",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-02-19",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-02-19",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
-        ],
-        "score_source_ids": [
-          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
-        ],
-        "source": "https://labs.scale.com/leaderboard/humanitys_last_exam",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-accuracy-0-4644-name-gemini-3-1-pro-preview-note-2ce30ed4754205a2"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2026-02-19",
-        "frontier_observation_ids": [
-          "obs-0-4644-ce2e5dfd8a336c2a"
-        ]
-      },
-      {
-        "observation_id": "obs-0-572-a741b6d38884ac98",
-        "benchmark_id": "humanitys-last-exam",
-        "benchmark_version_id": "humanitys-last-exam-canonical",
-        "model_id": "model-gpt-6-astra-c94798ba994c2800",
-        "model_configuration": "GPT-6 Astra",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-6-astra",
-        "model_family_id": "openai-gpt-6-astra",
-        "model": "GPT-6 Astra",
-        "organization": "OpenAI",
-        "score": 0.572,
-        "input_score": 0.572,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "humanitys-last-exam-metric-v1",
-        "protocol_id": "humanitys-last-exam-source-export-v1",
-        "task_set_id": "humanitys-last-exam-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "humanitys-last-exam-canonical-score",
-        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
-        "model_release_date": "2026-09-03",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-09-03",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-09-03",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
-              "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
-          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-09-03",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-09-03",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
-          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba",
-          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
-        ],
-        "score_source_ids": [
-          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
-        ],
-        "source": "https://openai.com/index/gpt-6-astra",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-accuracy-0-572-name-gpt-6-astra-notes-public-res-63918d5c656efc0d"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2026-09-03",
-        "frontier_observation_ids": [
-          "obs-0-572-a741b6d38884ac98"
-        ]
-      },
-      {
-        "observation_id": "obs-0-677-f5a7c280f51df0fc",
-        "benchmark_id": "humanitys-last-exam",
-        "benchmark_version_id": "humanitys-last-exam-canonical",
-        "model_id": "model-claude-opus-5-5-max-tools-safeguards-fallbacks-cd244c202b331dfe",
-        "model_configuration": "Claude Opus 5.5 (max, tools, safeguards/fallbacks)",
+        "model_id": "model-claude-sonnet-5-5-max-tools-25b08321afb3f736",
+        "model_configuration": "Claude Sonnet 5.5 (max, tools)",
         "model_identity_organization": "anthropic",
-        "model_label_id": "claude-opus-5-5-max-tools-safeguards-fallbacks",
-        "model_family_id": "anthropic-claude-opus-5-5",
-        "model": "Claude Opus 5.5 (max, tools, safeguards/fallbacks)",
+        "model_label_id": "claude-sonnet-5-5-max-tools",
+        "model_family_id": "anthropic-claude-sonnet-5-5",
+        "model": "Claude Sonnet 5.5 (max, tools)",
         "organization": "Anthropic",
-        "score": 0.677,
-        "input_score": 0.677,
+        "score": 0.645,
+        "input_score": 0.645,
         "input_unit": "fraction",
         "reported_cost_per_task": null,
         "metric_id": "humanitys-last-exam-metric-v1",
@@ -1416,50 +1453,72 @@
         "score_role": "canonical",
         "score_series_id": "humanitys-last-exam-canonical-score",
         "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
-        "model_release_date": "2026-09-22",
+        "model_release_date": "2026-09-28",
         "evaluation_date": null,
-        "result_public_date": "2026-09-22",
-        "source_publication_date": "2026-09-22",
-        "observation_date": "2026-09-22",
+        "result_public_date": "2026-09-28",
+        "source_publication_date": "2026-09-28",
+        "observation_date": "2026-09-28",
         "observation_date_precision": "day",
         "observation_date_sources": [
           {
-            "date": "2026-09-22",
+            "date": "2026-09-28",
             "kind": "model_release_date",
             "precision": "day",
             "resource_ids": [
-              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+              "resource-https-www-anthropic-com-news-claude-sonnet-5-5-96828b99e24f336d"
             ]
           },
           {
-            "date": "2026-09-22",
+            "date": "2026-09-28",
             "kind": "score_publication_date",
             "precision": "day",
             "resource_ids": [
-              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+              "resource-https-www-anthropic-com-news-claude-sonnet-5-5-96828b99e24f336d"
+            ]
+          },
+          {
+            "date": "2026-09-28",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-sonnet-5-5-system-add74e2fa0d003e6"
+            ]
+          },
+          {
+            "date": "2026-09-28",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-sonnet-5-5-system-add74e2fa0d003e6"
             ]
           }
         ],
         "observation_date_source_ids": [
-          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+          "resource-https-www-anthropic-com-claude-sonnet-5-5-system-add74e2fa0d003e6",
+          "resource-https-www-anthropic-com-news-claude-sonnet-5-5-96828b99e24f336d"
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [
           {
-            "date": "2026-09-22",
+            "date": "2026-09-28",
+            "kind": "Result public date",
+            "precision": "day"
+          },
+          {
+            "date": "2026-09-28",
             "kind": "Result public date",
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
-        "date": "2026-09-22",
+        "date": "2026-09-28",
         "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-09-22",
+        "capability_date": "2026-09-28",
         "capability_date_meaning": "earliest_observation_evidence_date",
         "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-09-22",
+        "historical_frontier_date": "2026-09-28",
         "temporal_class": "historical_or_unknown",
         "retrospective": false,
         "capability_frontier_eligible": true,
@@ -1468,348 +1527,38 @@
         "contemporaneous": true,
         "source_ids": [
           "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba",
-          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+          "resource-https-www-anthropic-com-claude-sonnet-5-5-system-add74e2fa0d003e6",
+          "resource-https-www-anthropic-com-news-claude-sonnet-5-5-96828b99e24f336d"
         ],
         "score_source_ids": [
-          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+          "resource-https-www-anthropic-com-claude-sonnet-5-5-system-add74e2fa0d003e6",
+          "resource-https-www-anthropic-com-news-claude-sonnet-5-5-96828b99e24f336d"
         ],
-        "source": "https://www.anthropic.com/claude-opus-5-5-system-card",
+        "source": "https://www.anthropic.com/news/claude-sonnet-5-5",
         "notes": "Operational evaluation timeline only; not a historical public-result date.",
         "evidence_ids": [
-          "evidence-sep2026-humanitys-last-exam-claude-opus-5-5-max--a357922905c71720"
+          "evidence-oct2026-humanitys-last-exam-claude-sonnet-5-5-ma-77b89adba48f9e92",
+          "evidence-oct2026-humanitys-last-exam-claude-sonnet-5-5-ma-e28332f776b67a46"
         ],
-        "evidence_count": 1,
+        "evidence_count": 2,
         "source_row_ids": [
-          "sep2026-humanitys-last-exam-claude-opus-5-5-max-tools-safeguards-fallbacks"
-        ],
-        "plot_date": "2026-09-22",
-        "frontier_observation_ids": [
-          "obs-0-677-f5a7c280f51df0fc"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-2532-fc3a781b481f516a",
-        "benchmark_id": "humanitys-last-exam",
-        "benchmark_version_id": "humanitys-last-exam-canonical",
-        "model_id": "model-gpt-5-cdd3b6d6cb9421c1",
-        "model_configuration": "GPT-5",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-5",
-        "model_family_id": "openai-gpt-5",
-        "model": "GPT-5",
-        "organization": "OpenAI",
-        "score": 0.2532,
-        "input_score": 0.2532,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "humanitys-last-exam-metric-v1",
-        "protocol_id": "humanitys-last-exam-source-export-v1",
-        "task_set_id": "humanitys-last-exam-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "humanitys-last-exam-canonical-score",
-        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
-        "model_release_date": "2025-08-07",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2025-08-07",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-08-07",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2025-08-07",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-08-07",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
-        ],
-        "score_source_ids": [
-          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
-        ],
-        "source": "https://labs.scale.com/leaderboard/humanitys_last_exam",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-accuracy-0-2532-name-gpt-5-notes-hle-finalized-2-e11e0a690908a5a9"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2025-08-07",
-        "frontier_observation_ids": [
-          "obs-0-2532-fc3a781b481f516a"
+          "oct2026-humanitys-last-exam-claude-sonnet-5-5-max-tools",
+          "oct2026-humanitys-last-exam-claude-sonnet-5-5-max-tools-system-card"
         ]
       },
       {
-        "observation_id": "obs-0-3752-597ff632d7803385",
+        "observation_id": "obs-0-574-6fb91769a63bc8ca",
         "benchmark_id": "humanitys-last-exam",
         "benchmark_version_id": "humanitys-last-exam-canonical",
-        "model_id": "model-gemini-3-pro-preview-6f9ce4666001cc6e",
-        "model_configuration": "Gemini 3 Pro Preview",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-3-pro-preview",
-        "model_family_id": "google-gemini-3-pro-preview",
-        "model": "Gemini 3 Pro Preview",
-        "organization": "Google",
-        "score": 0.3752,
-        "input_score": 0.3752,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "humanitys-last-exam-metric-v1",
-        "protocol_id": "humanitys-last-exam-source-export-v1",
-        "task_set_id": "humanitys-last-exam-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "humanitys-last-exam-canonical-score",
-        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
-        "model_release_date": "2025-11-18",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2025-11-18",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-11-18",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2025-11-18",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-11-18",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
-        ],
-        "score_source_ids": [
-          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
-        ],
-        "source": "https://labs.scale.com/leaderboard/humanitys_last_exam",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-accuracy-0-3752-name-gemini-3-pro-preview-notes--2dfca45e3104801c"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2025-11-18",
-        "frontier_observation_ids": [
-          "obs-0-3752-597ff632d7803385"
-        ]
-      },
-      {
-        "observation_id": "obs-0-4644-ce2e5dfd8a336c2a",
-        "benchmark_id": "humanitys-last-exam",
-        "benchmark_version_id": "humanitys-last-exam-canonical",
-        "model_id": "model-gemini-3-1-pro-preview-82888baa882fdc2c",
-        "model_configuration": "Gemini 3.1 Pro Preview",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-3-1-pro-preview",
-        "model_family_id": "google-gemini-3-1-pro-preview",
-        "model": "Gemini 3.1 Pro Preview",
-        "organization": "Google",
-        "score": 0.4644,
-        "input_score": 0.4644,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "humanitys-last-exam-metric-v1",
-        "protocol_id": "humanitys-last-exam-source-export-v1",
-        "task_set_id": "humanitys-last-exam-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "humanitys-last-exam-canonical-score",
-        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
-        "model_release_date": "2026-02-19",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-02-19",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-02-19",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-02-19",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-02-19",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
-        ],
-        "score_source_ids": [
-          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
-        ],
-        "source": "https://labs.scale.com/leaderboard/humanitys_last_exam",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-accuracy-0-4644-name-gemini-3-1-pro-preview-note-2ce30ed4754205a2"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2026-02-19",
-        "frontier_observation_ids": [
-          "obs-0-4644-ce2e5dfd8a336c2a"
-        ]
-      },
-      {
-        "observation_id": "obs-0-572-a741b6d38884ac98",
-        "benchmark_id": "humanitys-last-exam",
-        "benchmark_version_id": "humanitys-last-exam-canonical",
-        "model_id": "model-gpt-6-astra-c94798ba994c2800",
-        "model_configuration": "GPT-6 Astra",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-6-astra",
-        "model_family_id": "openai-gpt-6-astra",
-        "model": "GPT-6 Astra",
-        "organization": "OpenAI",
-        "score": 0.572,
-        "input_score": 0.572,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "humanitys-last-exam-metric-v1",
-        "protocol_id": "humanitys-last-exam-source-export-v1",
-        "task_set_id": "humanitys-last-exam-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "humanitys-last-exam-canonical-score",
-        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
-        "model_release_date": "2026-09-03",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-09-03",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-09-03",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
-              "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
-          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-09-03",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-09-03",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
-          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba",
-          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
-        ],
-        "score_source_ids": [
-          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
-        ],
-        "source": "https://openai.com/index/gpt-6-astra",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-accuracy-0-572-name-gpt-6-astra-notes-public-res-63918d5c656efc0d"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2026-09-03",
-        "frontier_observation_ids": [
-          "obs-0-572-a741b6d38884ac98"
-        ]
-      },
-      {
-        "observation_id": "obs-0-677-f5a7c280f51df0fc",
-        "benchmark_id": "humanitys-last-exam",
-        "benchmark_version_id": "humanitys-last-exam-canonical",
-        "model_id": "model-claude-opus-5-5-max-tools-safeguards-fallbacks-cd244c202b331dfe",
-        "model_configuration": "Claude Opus 5.5 (max, tools, safeguards/fallbacks)",
+        "model_id": "model-claude-haiku-5-5-max-tools-fd9737bb7c3c3375",
+        "model_configuration": "Claude Haiku 5.5 (max, tools)",
         "model_identity_organization": "anthropic",
-        "model_label_id": "claude-opus-5-5-max-tools-safeguards-fallbacks",
-        "model_family_id": "anthropic-claude-opus-5-5",
-        "model": "Claude Opus 5.5 (max, tools, safeguards/fallbacks)",
+        "model_label_id": "claude-haiku-5-5-max-tools",
+        "model_family_id": "anthropic-claude-haiku-5-5",
+        "model": "Claude Haiku 5.5 (max, tools)",
         "organization": "Anthropic",
-        "score": 0.677,
-        "input_score": 0.677,
+        "score": 0.574,
+        "input_score": 0.574,
         "input_unit": "fraction",
         "reported_cost_per_task": null,
         "metric_id": "humanitys-last-exam-metric-v1",
@@ -1819,50 +1568,72 @@
         "score_role": "canonical",
         "score_series_id": "humanitys-last-exam-canonical-score",
         "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
-        "model_release_date": "2026-09-22",
+        "model_release_date": "2026-10-07",
         "evaluation_date": null,
-        "result_public_date": "2026-09-22",
-        "source_publication_date": "2026-09-22",
-        "observation_date": "2026-09-22",
+        "result_public_date": "2026-10-07",
+        "source_publication_date": "2026-10-07",
+        "observation_date": "2026-10-07",
         "observation_date_precision": "day",
         "observation_date_sources": [
           {
-            "date": "2026-09-22",
+            "date": "2026-10-07",
             "kind": "model_release_date",
             "precision": "day",
             "resource_ids": [
-              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+              "resource-https-www-anthropic-com-claude-haiku-5-5-system--64f682d56dcdee02"
             ]
           },
           {
-            "date": "2026-09-22",
+            "date": "2026-10-07",
             "kind": "score_publication_date",
             "precision": "day",
             "resource_ids": [
-              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+              "resource-https-www-anthropic-com-claude-haiku-5-5-system--64f682d56dcdee02"
+            ]
+          },
+          {
+            "date": "2026-10-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-news-claude-haiku-5-5-98206229e61a13c2"
+            ]
+          },
+          {
+            "date": "2026-10-07",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-news-claude-haiku-5-5-98206229e61a13c2"
             ]
           }
         ],
         "observation_date_source_ids": [
-          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+          "resource-https-www-anthropic-com-claude-haiku-5-5-system--64f682d56dcdee02",
+          "resource-https-www-anthropic-com-news-claude-haiku-5-5-98206229e61a13c2"
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [
           {
-            "date": "2026-09-22",
+            "date": "2026-10-07",
+            "kind": "Result public date",
+            "precision": "day"
+          },
+          {
+            "date": "2026-10-07",
             "kind": "Result public date",
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
-        "date": "2026-09-22",
+        "date": "2026-10-07",
         "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-09-22",
+        "capability_date": "2026-10-07",
         "capability_date_meaning": "earliest_observation_evidence_date",
         "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-09-22",
+        "historical_frontier_date": "2026-10-07",
         "temporal_class": "historical_or_unknown",
         "retrospective": false,
         "capability_frontier_eligible": true,
@@ -1871,23 +1642,705 @@
         "contemporaneous": true,
         "source_ids": [
           "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba",
-          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+          "resource-https-www-anthropic-com-claude-haiku-5-5-system--64f682d56dcdee02",
+          "resource-https-www-anthropic-com-news-claude-haiku-5-5-98206229e61a13c2"
         ],
         "score_source_ids": [
-          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+          "resource-https-www-anthropic-com-claude-haiku-5-5-system--64f682d56dcdee02",
+          "resource-https-www-anthropic-com-news-claude-haiku-5-5-98206229e61a13c2"
         ],
-        "source": "https://www.anthropic.com/claude-opus-5-5-system-card",
+        "source": "https://www.anthropic.com/claude-haiku-5-5-system-card",
         "notes": "Operational evaluation timeline only; not a historical public-result date.",
         "evidence_ids": [
-          "evidence-sep2026-humanitys-last-exam-claude-opus-5-5-max--a357922905c71720"
+          "evidence-oct2026-humanitys-last-exam-claude-haiku-5-5-max-808f933ff5f5ee4f",
+          "evidence-oct2026-humanitys-last-exam-claude-haiku-5-5-max-b856fa24ed9eaa7f"
+        ],
+        "evidence_count": 2,
+        "source_row_ids": [
+          "oct2026-humanitys-last-exam-claude-haiku-5-5-max-tools",
+          "oct2026-humanitys-last-exam-claude-haiku-5-5-max-tools-system-card"
+        ]
+      },
+      {
+        "observation_id": "obs-0-569-3d8d5f40a0ed87ea",
+        "benchmark_id": "humanitys-last-exam",
+        "benchmark_version_id": "humanitys-last-exam-canonical",
+        "model_id": "model-claude-sonnet-5-5-max-no-tools-39459ffb3698d5c5",
+        "model_configuration": "Claude Sonnet 5.5 (max, no tools)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-sonnet-5-5-max-no-tools",
+        "model_family_id": "anthropic-claude-sonnet-5-5",
+        "model": "Claude Sonnet 5.5 (max, no tools)",
+        "organization": "Anthropic",
+        "score": 0.569,
+        "input_score": 0.569,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "humanitys-last-exam-metric-v1",
+        "protocol_id": "hle-no-tools-anthropic-sep22",
+        "task_set_id": "hle-no-tools-anthropic-sep22",
+        "metric": "Accuracy",
+        "score_role": "auxiliary",
+        "score_series_id": "humanitys-last-exam-auxiliary-hle-no-tools-anthropic-sep22",
+        "evaluation_protocol": "No-tools HLE score; isolated from the existing tool-enabled observations.",
+        "auxiliary_metadata": {
+          "protocol_id": "hle-no-tools-anthropic-sep22",
+          "task_set_id": "hle-no-tools-anthropic-sep22",
+          "label": "No tools / Anthropic grader",
+          "explanation": {
+            "en": "No-tools HLE score; isolated from the existing tool-enabled observations.",
+            "zh": "\u65e0\u5de5\u5177 HLE \u6210\u7ee9\uff0c\u4e0e\u5df2\u6709\u4f7f\u7528\u5de5\u5177\u7684\u89c2\u6d4b\u9694\u79bb\u3002"
+          }
+        },
+        "model_release_date": "2026-09-28",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-28",
+        "source_publication_date": "2026-09-28",
+        "observation_date": "2026-09-28",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-28",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-sonnet-5-5-system-add74e2fa0d003e6"
+            ]
+          },
+          {
+            "date": "2026-09-28",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-sonnet-5-5-system-add74e2fa0d003e6"
+            ]
+          },
+          {
+            "date": "2026-09-28",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-news-claude-haiku-5-5-98206229e61a13c2"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-sonnet-5-5-system-add74e2fa0d003e6",
+          "resource-https-www-anthropic-com-news-claude-haiku-5-5-98206229e61a13c2"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-28",
+            "kind": "Result public date",
+            "precision": "day"
+          },
+          {
+            "date": "2026-10-07",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-28",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-28",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-28",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba",
+          "resource-https-www-anthropic-com-claude-sonnet-5-5-system-add74e2fa0d003e6",
+          "resource-https-www-anthropic-com-news-claude-haiku-5-5-98206229e61a13c2"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-sonnet-5-5-system-add74e2fa0d003e6",
+          "resource-https-www-anthropic-com-news-claude-haiku-5-5-98206229e61a13c2"
+        ],
+        "source": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-humanitys-last-exam-claude-sonnet-5-5-ma-8d9fe66a266fa7f8",
+          "evidence-oct2026-humanitys-last-exam-claude-sonnet-5-5-ma-b2d332cc491f3be8"
+        ],
+        "evidence_count": 2,
+        "source_row_ids": [
+          "oct2026-humanitys-last-exam-claude-sonnet-5-5-max-no-tools",
+          "oct2026-humanitys-last-exam-claude-sonnet-5-5-max-no-tools-system-card"
+        ]
+      },
+      {
+        "observation_id": "obs-0-459-5e50157c19ae0a1f",
+        "benchmark_id": "humanitys-last-exam",
+        "benchmark_version_id": "humanitys-last-exam-canonical",
+        "model_id": "model-claude-haiku-5-5-max-no-tools-c59972cdc0133e75",
+        "model_configuration": "Claude Haiku 5.5 (max, no tools)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-haiku-5-5-max-no-tools",
+        "model_family_id": "anthropic-claude-haiku-5-5",
+        "model": "Claude Haiku 5.5 (max, no tools)",
+        "organization": "Anthropic",
+        "score": 0.459,
+        "input_score": 0.459,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "humanitys-last-exam-metric-v1",
+        "protocol_id": "hle-no-tools-anthropic-sep22",
+        "task_set_id": "hle-no-tools-anthropic-sep22",
+        "metric": "Accuracy",
+        "score_role": "auxiliary",
+        "score_series_id": "humanitys-last-exam-auxiliary-hle-no-tools-anthropic-sep22",
+        "evaluation_protocol": "No-tools HLE score; isolated from the existing tool-enabled observations.",
+        "auxiliary_metadata": {
+          "protocol_id": "hle-no-tools-anthropic-sep22",
+          "task_set_id": "hle-no-tools-anthropic-sep22",
+          "label": "No tools / Anthropic grader",
+          "explanation": {
+            "en": "No-tools HLE score; isolated from the existing tool-enabled observations.",
+            "zh": "\u65e0\u5de5\u5177 HLE \u6210\u7ee9\uff0c\u4e0e\u5df2\u6709\u4f7f\u7528\u5de5\u5177\u7684\u89c2\u6d4b\u9694\u79bb\u3002"
+          }
+        },
+        "model_release_date": "2026-10-07",
+        "evaluation_date": null,
+        "result_public_date": "2026-10-07",
+        "source_publication_date": "2026-10-07",
+        "observation_date": "2026-10-07",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-10-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-news-claude-haiku-5-5-98206229e61a13c2"
+            ]
+          },
+          {
+            "date": "2026-10-07",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-news-claude-haiku-5-5-98206229e61a13c2"
+            ]
+          },
+          {
+            "date": "2026-10-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-haiku-5-5-system--64f682d56dcdee02"
+            ]
+          },
+          {
+            "date": "2026-10-07",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-haiku-5-5-system--64f682d56dcdee02"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-anthropic-com-claude-haiku-5-5-system--64f682d56dcdee02",
+          "resource-https-www-anthropic-com-news-claude-haiku-5-5-98206229e61a13c2"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-10-07",
+            "kind": "Result public date",
+            "precision": "day"
+          },
+          {
+            "date": "2026-10-07",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-10-07",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-10-07",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-10-07",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba",
+          "resource-https-www-anthropic-com-claude-haiku-5-5-system--64f682d56dcdee02",
+          "resource-https-www-anthropic-com-news-claude-haiku-5-5-98206229e61a13c2"
+        ],
+        "score_source_ids": [
+          "resource-https-www-anthropic-com-claude-haiku-5-5-system--64f682d56dcdee02",
+          "resource-https-www-anthropic-com-news-claude-haiku-5-5-98206229e61a13c2"
+        ],
+        "source": "https://www.anthropic.com/news/claude-haiku-5-5",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-humanitys-last-exam-claude-haiku-5-5-max-08bc7cfa63dafa40",
+          "evidence-oct2026-humanitys-last-exam-claude-haiku-5-5-max-08dfd48073057df1"
+        ],
+        "evidence_count": 2,
+        "source_row_ids": [
+          "oct2026-humanitys-last-exam-claude-haiku-5-5-max-no-tools",
+          "oct2026-humanitys-last-exam-claude-haiku-5-5-max-no-tools-system-card"
+        ]
+      },
+      {
+        "observation_id": "obs-0-511-55ac6dc350daa23c",
+        "benchmark_id": "humanitys-last-exam",
+        "benchmark_version_id": "humanitys-last-exam-canonical",
+        "model_id": "model-kimi-k3-1-pro-max-no-tools-84a8ee867fbabe3c",
+        "model_configuration": "Kimi K3.1 Pro (max, no tools)",
+        "model_identity_organization": "moonshot",
+        "model_label_id": "kimi-k3-1-pro-max-no-tools",
+        "model_family_id": "moonshot-kimi-k3-1-pro",
+        "model": "Kimi K3.1 Pro (max, no tools)",
+        "organization": "Moonshot",
+        "score": 0.511,
+        "input_score": 0.511,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "humanitys-last-exam-metric-v1",
+        "protocol_id": "hle-no-tools-vendor-card-oct2026",
+        "task_set_id": "hle-no-tools-vendor-card-oct2026",
+        "metric": "Accuracy",
+        "score_role": "auxiliary",
+        "score_series_id": "humanitys-last-exam-auxiliary-hle-no-tools-vendor-card-oct2026",
+        "evaluation_protocol": "No-tools HLE score self-reported in a vendor release page with the vendor's own grader; isolated from the tool-enabled and leaderboard series.",
+        "auxiliary_metadata": {
+          "protocol_id": "hle-no-tools-vendor-card-oct2026",
+          "task_set_id": "hle-no-tools-vendor-card-oct2026",
+          "label": "No tools / vendor-reported grader",
+          "explanation": {
+            "en": "No-tools HLE score self-reported in a vendor release page with the vendor's own grader; isolated from the tool-enabled and leaderboard series.",
+            "zh": "\u5382\u5546\u53d1\u5e03\u9875\u81ea\u62a5\u7684\u65e0\u5de5\u5177 HLE \u6210\u7ee9\uff0c\u4f7f\u7528\u5382\u5546\u81ea\u5df1\u7684\u8bc4\u5206\u5668\uff1b\u4e0e\u4f7f\u7528\u5de5\u5177\u7684\u5e8f\u5217\u548c\u699c\u5355\u5e8f\u5217\u9694\u79bb\u3002"
+          }
+        },
+        "model_release_date": "2026-10-23",
+        "evaluation_date": null,
+        "result_public_date": "2026-10-23",
+        "source_publication_date": "2026-10-23",
+        "observation_date": "2026-10-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-10-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
+            ]
+          },
+          {
+            "date": "2026-10-23",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-10-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-10-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-10-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-10-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba",
+          "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
+        ],
+        "score_source_ids": [
+          "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
+        ],
+        "source": "https://www.kimi.com/blog/kimi-k3-1-pro",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-humanitys-last-exam-kimi-k3-1-pro-max-no-8ead5e2befb8ce00"
         ],
         "evidence_count": 1,
         "source_row_ids": [
-          "sep2026-humanitys-last-exam-claude-opus-5-5-max-tools-safeguards-fallbacks"
+          "oct2026-humanitys-last-exam-kimi-k3-1-pro-max-no-tools"
+        ]
+      },
+      {
+        "observation_id": "obs-0-426-1d226e3d57e91f36",
+        "benchmark_id": "humanitys-last-exam",
+        "benchmark_version_id": "humanitys-last-exam-canonical",
+        "model_id": "model-deepseek-v4-1-flash-1017-no-tools-32b06a820d9a7ed1",
+        "model_configuration": "DeepSeek-V4.1-Flash-1017 (no tools)",
+        "model_identity_organization": "deepseek",
+        "model_label_id": "deepseek-v4-1-flash-1017-no-tools",
+        "model_family_id": "deepseek-deepseek-v4-1-flash-1017",
+        "model": "DeepSeek-V4.1-Flash-1017 (no tools)",
+        "organization": "DeepSeek",
+        "score": 0.426,
+        "input_score": 0.426,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "humanitys-last-exam-metric-v1",
+        "protocol_id": "hle-no-tools-vendor-card-oct2026",
+        "task_set_id": "hle-no-tools-vendor-card-oct2026",
+        "metric": "Accuracy",
+        "score_role": "auxiliary",
+        "score_series_id": "humanitys-last-exam-auxiliary-hle-no-tools-vendor-card-oct2026",
+        "evaluation_protocol": "No-tools HLE score self-reported in a vendor release page with the vendor's own grader; isolated from the tool-enabled and leaderboard series.",
+        "auxiliary_metadata": {
+          "protocol_id": "hle-no-tools-vendor-card-oct2026",
+          "task_set_id": "hle-no-tools-vendor-card-oct2026",
+          "label": "No tools / vendor-reported grader",
+          "explanation": {
+            "en": "No-tools HLE score self-reported in a vendor release page with the vendor's own grader; isolated from the tool-enabled and leaderboard series.",
+            "zh": "\u5382\u5546\u53d1\u5e03\u9875\u81ea\u62a5\u7684\u65e0\u5de5\u5177 HLE \u6210\u7ee9\uff0c\u4f7f\u7528\u5382\u5546\u81ea\u5df1\u7684\u8bc4\u5206\u5668\uff1b\u4e0e\u4f7f\u7528\u5de5\u5177\u7684\u5e8f\u5217\u548c\u699c\u5355\u5e8f\u5217\u9694\u79bb\u3002"
+          }
+        },
+        "model_release_date": "2026-10-17",
+        "evaluation_date": null,
+        "result_public_date": "2026-10-17",
+        "source_publication_date": "2026-10-17",
+        "observation_date": "2026-10-17",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-10-17",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-huggingface-co-deepseek-ai-deepseek-v4-1-f-cac24968e5aa0d5b"
+            ]
+          },
+          {
+            "date": "2026-10-17",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-huggingface-co-deepseek-ai-deepseek-v4-1-f-cac24968e5aa0d5b"
+            ]
+          }
         ],
-        "plot_date": "2026-09-22",
-        "frontier_observation_ids": [
-          "obs-0-677-f5a7c280f51df0fc"
+        "observation_date_source_ids": [
+          "resource-https-huggingface-co-deepseek-ai-deepseek-v4-1-f-cac24968e5aa0d5b"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-10-17",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-10-17",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-10-17",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-10-17",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-huggingface-co-deepseek-ai-deepseek-v4-1-f-cac24968e5aa0d5b",
+          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
+        ],
+        "score_source_ids": [
+          "resource-https-huggingface-co-deepseek-ai-deepseek-v4-1-f-cac24968e5aa0d5b"
+        ],
+        "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-humanitys-last-exam-deepseek-v4-1-flash--f7299cb590a8108b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "oct2026-humanitys-last-exam-deepseek-v4-1-flash-1017-no-tools"
+        ]
+      },
+      {
+        "observation_id": "obs-0-7-66a72d65ddff3e3f",
+        "benchmark_id": "humanitys-last-exam",
+        "benchmark_version_id": "humanitys-last-exam-canonical",
+        "model_id": "model-kimi-k3-1-pro-max-tools-f3fbeab09c933902",
+        "model_configuration": "Kimi K3.1 Pro (max, tools)",
+        "model_identity_organization": "moonshot",
+        "model_label_id": "kimi-k3-1-pro-max-tools",
+        "model_family_id": "moonshot-kimi-k3-1-pro",
+        "model": "Kimi K3.1 Pro (max, tools)",
+        "organization": "Moonshot",
+        "score": 0.7,
+        "input_score": 0.7,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "humanitys-last-exam-metric-v1",
+        "protocol_id": "hle-tools-kimi-blog-oct23",
+        "task_set_id": "hle-tools-kimi-blog-oct23",
+        "metric": "Accuracy",
+        "score_role": "auxiliary",
+        "score_series_id": "humanitys-last-exam-auxiliary-hle-tools-kimi-blog-oct23",
+        "evaluation_protocol": "Tool-enabled HLE score from the Kimi blog; tool set, budget and grader differ from the Anthropic tool-enabled canonical rows.",
+        "auxiliary_metadata": {
+          "protocol_id": "hle-tools-kimi-blog-oct23",
+          "task_set_id": "hle-tools-kimi-blog-oct23",
+          "label": "With tools / Kimi harness",
+          "explanation": {
+            "en": "Tool-enabled HLE score from the Kimi blog; tool set, budget and grader differ from the Anthropic tool-enabled canonical rows.",
+            "zh": "Kimi \u535a\u5ba2\u53d1\u5e03\u7684\u4f7f\u7528\u5de5\u5177 HLE \u6210\u7ee9\uff1b\u5de5\u5177\u96c6\u3001\u9884\u7b97\u548c\u8bc4\u5206\u5668\u4e0e Anthropic \u4f7f\u7528\u5de5\u5177\u7684\u4e3b\u5e8f\u5217\u4e0d\u540c\u3002"
+          }
+        },
+        "model_release_date": "2026-10-23",
+        "evaluation_date": null,
+        "result_public_date": "2026-10-23",
+        "source_publication_date": "2026-10-23",
+        "observation_date": "2026-10-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-10-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
+            ]
+          },
+          {
+            "date": "2026-10-23",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-10-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-10-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-10-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-10-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": false,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba",
+          "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
+        ],
+        "score_source_ids": [
+          "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
+        ],
+        "source": "https://www.kimi.com/blog/kimi-k3-1-pro",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-humanitys-last-exam-kimi-k3-1-pro-max-to-0b4c237784020b98"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "oct2026-humanitys-last-exam-kimi-k3-1-pro-max-tools"
+        ]
+      },
+      {
+        "observation_id": "obs-0-4612-0b948ee15162caad",
+        "benchmark_id": "humanitys-last-exam",
+        "benchmark_version_id": "humanitys-last-exam-canonical",
+        "model_id": "model-claude-sonnet-5-5-xhigh-f39ec91b21728086",
+        "model_configuration": "Claude Sonnet 5.5 (xhigh)",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-sonnet-5-5-xhigh",
+        "model_family_id": "anthropic-claude-sonnet-5-5",
+        "model": "Claude Sonnet 5.5 (xhigh)",
+        "organization": "Anthropic",
+        "score": 0.4612,
+        "input_score": 0.4612,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "humanitys-last-exam-metric-v1",
+        "protocol_id": "humanitys-last-exam-source-export-v1",
+        "task_set_id": "humanitys-last-exam-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "humanitys-last-exam-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-09-28",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-09-28",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-28",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-09-28",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-28",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
+        ],
+        "score_source_ids": [
+          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
+        ],
+        "source": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-humanitys-last-exam-scale-claude-sonnet--881d9bb1cfaf1c5d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "oct2026-humanitys-last-exam-scale-claude-sonnet-5-5-xhigh"
+        ]
+      },
+      {
+        "observation_id": "obs-0-3012-c4940f85b1feba52",
+        "benchmark_id": "humanitys-last-exam",
+        "benchmark_version_id": "humanitys-last-exam-canonical",
+        "model_id": "model-claude-haiku-5-5-b5478bb6fe5e8156",
+        "model_configuration": "Claude Haiku 5.5",
+        "model_identity_organization": "anthropic",
+        "model_label_id": "claude-haiku-5-5",
+        "model_family_id": "anthropic-claude-haiku-5-5",
+        "model": "Claude Haiku 5.5",
+        "organization": "Anthropic",
+        "score": 0.3012,
+        "input_score": 0.3012,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "humanitys-last-exam-metric-v1",
+        "protocol_id": "humanitys-last-exam-source-export-v1",
+        "task_set_id": "humanitys-last-exam-canonical",
+        "metric": "Accuracy",
+        "score_role": "canonical",
+        "score_series_id": "humanitys-last-exam-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-10-07",
+        "evaluation_date": null,
+        "result_public_date": null,
+        "source_publication_date": null,
+        "observation_date": "2026-10-07",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-10-07",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": "A score-publication date is not present in the source export.",
+        "date": "2026-10-07",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-10-07",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": null,
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": false,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
+        ],
+        "score_source_ids": [
+          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba"
+        ],
+        "source": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-humanitys-last-exam-scale-claude-haiku-5-a6cf94fb50ea18e8"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "oct2026-humanitys-last-exam-scale-claude-haiku-5-5-unknown"
         ]
       }
     ],
@@ -1935,7 +2388,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-08-07",
@@ -2011,7 +2464,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-11-18",
@@ -2087,7 +2540,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-02-19",
@@ -2165,7 +2618,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-03",
@@ -2257,7 +2710,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-09-22",
@@ -2352,7 +2805,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-09-22",
@@ -2389,102 +2842,6 @@
         ]
       }
     ],
-    "historical_frontier": [
-      {
-        "observation_id": "obs-0-677-f5a7c280f51df0fc",
-        "benchmark_id": "humanitys-last-exam",
-        "benchmark_version_id": "humanitys-last-exam-canonical",
-        "model_id": "model-claude-opus-5-5-max-tools-safeguards-fallbacks-cd244c202b331dfe",
-        "model_configuration": "Claude Opus 5.5 (max, tools, safeguards/fallbacks)",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-opus-5-5-max-tools-safeguards-fallbacks",
-        "model_family_id": "anthropic-claude-opus-5-5",
-        "model": "Claude Opus 5.5 (max, tools, safeguards/fallbacks)",
-        "organization": "Anthropic",
-        "score": 0.677,
-        "input_score": 0.677,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "humanitys-last-exam-metric-v1",
-        "protocol_id": "humanitys-last-exam-source-export-v1",
-        "task_set_id": "humanitys-last-exam-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "humanitys-last-exam-canonical-score",
-        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
-        "model_release_date": "2026-09-22",
-        "evaluation_date": null,
-        "result_public_date": "2026-09-22",
-        "source_publication_date": "2026-09-22",
-        "observation_date": "2026-09-22",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-09-22",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
-            ]
-          },
-          {
-            "date": "2026-09-22",
-            "kind": "score_publication_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-09-22",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2026-09-22",
-        "date_kind": "result first-public date",
-        "capability_date": "2026-09-22",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-09-22",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-labs-scale-com-leaderboard-humanitys-last--3a6f8adfaefbf7ba",
-          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
-        ],
-        "score_source_ids": [
-          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
-        ],
-        "source": "https://www.anthropic.com/claude-opus-5-5-system-card",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-sep2026-humanitys-last-exam-claude-opus-5-5-max--a357922905c71720"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "sep2026-humanitys-last-exam-claude-opus-5-5-max-tools-safeguards-fallbacks"
-        ],
-        "plot_date": "2026-09-22",
-        "frontier_observation_ids": [
-          "obs-0-677-f5a7c280f51df0fc"
-        ]
-      }
-    ],
-    "retrospective_observations": [],
     "observed_frontier": 0.677,
     "capability_frontier_value": 0.677,
     "reported_frontier_value": 0.677,
@@ -2499,11 +2856,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 538
+        "days": 572
       },
       "T90": {
         "status": "right_censored",
-        "days": 538
+        "days": 572
       }
     },
     "capability_threshold_days": {
@@ -2514,11 +2871,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 538
+        "days": 572
       },
       "T90": {
         "status": "right_censored",
-        "days": 538
+        "days": 572
       }
     },
     "reported_threshold_days": {
@@ -2529,11 +2886,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 538
+        "days": 572
       },
       "T90": {
         "status": "right_censored",
-        "days": 538
+        "days": 572
       }
     },
     "velocity_180d": 0.030100204651162803,

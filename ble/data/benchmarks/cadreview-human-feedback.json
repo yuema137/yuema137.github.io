@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -175,7 +175,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-06-20",
@@ -255,7 +255,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-12-11",
@@ -335,7 +335,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-05-13",
@@ -415,7 +415,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-09-25",
@@ -444,184 +444,6 @@
         "evidence_count": 1,
         "source_row_ids": [
           "cadreview-llama32-lora"
-        ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-5124-c65e010160a088a8",
-        "benchmark_id": "cadreview-human-feedback",
-        "benchmark_version_id": "cadreview-human-feedback-canonical",
-        "model_id": "model-llama-3-2-11b-vision-lora-cadreview-19affb146ee07e4c",
-        "model_configuration": "Llama-3.2-11B Vision LoRA CADReview",
-        "model_identity_organization": "meta",
-        "model_label_id": "llama-3-2-11b-vision-lora-cadreview",
-        "model_family_id": "meta-llama-3-2-11b-vision-lora-cadreview",
-        "model": "Llama-3.2-11B Vision LoRA CADReview",
-        "organization": "Meta",
-        "score": 0.5124,
-        "input_score": 0.5124,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "cadreview-human-feedback-metric-v1",
-        "protocol_id": "cadreview-human-feedback-source-export-v1",
-        "task_set_id": "cadreview-human-feedback-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "cadreview-human-feedback-canonical-score",
-        "evaluation_protocol": "CADReview arXiv v1 human-written-program test stratum, zero-shot feedback Acc. Machine-written programs, one-shot prompting, text metrics, and corrected-geometry metrics are excluded.",
-        "model_release_date": "2024-09-25",
-        "evaluation_date": null,
-        "result_public_date": "2025-05-28",
-        "source_publication_date": "2025-05-28",
-        "observation_date": "2024-09-25",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-09-25",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2505-22304-6b8df309242396c0"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2505-22304-6b8df309242396c0"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2025-05-28",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-05-28",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-09-25",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2025-05-28",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2505-22304-6b8df309242396c0"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2505-22304-6b8df309242396c0"
-        ],
-        "source": "https://arxiv.org/abs/2505.22304",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-cadreview-llama32-lora-b6a643e3a10a3576"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "cadreview-llama32-lora"
-        ],
-        "plot_date": "2025-05-28",
-        "frontier_observation_ids": [
-          "obs-0-2151-96559ddf77d03997",
-          "obs-0-2336-b16a67b6569df4ac",
-          "obs-0-3184-5f38da85069592b4",
-          "obs-0-5124-c65e010160a088a8"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-5124-c65e010160a088a8",
-        "benchmark_id": "cadreview-human-feedback",
-        "benchmark_version_id": "cadreview-human-feedback-canonical",
-        "model_id": "model-llama-3-2-11b-vision-lora-cadreview-19affb146ee07e4c",
-        "model_configuration": "Llama-3.2-11B Vision LoRA CADReview",
-        "model_identity_organization": "meta",
-        "model_label_id": "llama-3-2-11b-vision-lora-cadreview",
-        "model_family_id": "meta-llama-3-2-11b-vision-lora-cadreview",
-        "model": "Llama-3.2-11B Vision LoRA CADReview",
-        "organization": "Meta",
-        "score": 0.5124,
-        "input_score": 0.5124,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "cadreview-human-feedback-metric-v1",
-        "protocol_id": "cadreview-human-feedback-source-export-v1",
-        "task_set_id": "cadreview-human-feedback-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "cadreview-human-feedback-canonical-score",
-        "evaluation_protocol": "CADReview arXiv v1 human-written-program test stratum, zero-shot feedback Acc. Machine-written programs, one-shot prompting, text metrics, and corrected-geometry metrics are excluded.",
-        "model_release_date": "2024-09-25",
-        "evaluation_date": null,
-        "result_public_date": "2025-05-28",
-        "source_publication_date": "2025-05-28",
-        "observation_date": "2024-09-25",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-09-25",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2505-22304-6b8df309242396c0"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2505-22304-6b8df309242396c0"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2025-05-28",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-05-28",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-09-25",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2025-05-28",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2505-22304-6b8df309242396c0"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2505-22304-6b8df309242396c0"
-        ],
-        "source": "https://arxiv.org/abs/2505.22304",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-cadreview-llama32-lora-b6a643e3a10a3576"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "cadreview-llama32-lora"
-        ],
-        "plot_date": "2025-05-28",
-        "frontier_observation_ids": [
-          "obs-0-2151-96559ddf77d03997",
-          "obs-0-2336-b16a67b6569df4ac",
-          "obs-0-3184-5f38da85069592b4",
-          "obs-0-5124-c65e010160a088a8"
         ]
       }
     ],
@@ -675,7 +497,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-05-28",
@@ -764,7 +586,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-05-28",
@@ -803,96 +625,6 @@
         ]
       }
     ],
-    "historical_frontier": [
-      {
-        "observation_id": "obs-0-5124-c65e010160a088a8",
-        "benchmark_id": "cadreview-human-feedback",
-        "benchmark_version_id": "cadreview-human-feedback-canonical",
-        "model_id": "model-llama-3-2-11b-vision-lora-cadreview-19affb146ee07e4c",
-        "model_configuration": "Llama-3.2-11B Vision LoRA CADReview",
-        "model_identity_organization": "meta",
-        "model_label_id": "llama-3-2-11b-vision-lora-cadreview",
-        "model_family_id": "meta-llama-3-2-11b-vision-lora-cadreview",
-        "model": "Llama-3.2-11B Vision LoRA CADReview",
-        "organization": "Meta",
-        "score": 0.5124,
-        "input_score": 0.5124,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "cadreview-human-feedback-metric-v1",
-        "protocol_id": "cadreview-human-feedback-source-export-v1",
-        "task_set_id": "cadreview-human-feedback-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "cadreview-human-feedback-canonical-score",
-        "evaluation_protocol": "CADReview arXiv v1 human-written-program test stratum, zero-shot feedback Acc. Machine-written programs, one-shot prompting, text metrics, and corrected-geometry metrics are excluded.",
-        "model_release_date": "2024-09-25",
-        "evaluation_date": null,
-        "result_public_date": "2025-05-28",
-        "source_publication_date": "2025-05-28",
-        "observation_date": "2024-09-25",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-09-25",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2505-22304-6b8df309242396c0"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2505-22304-6b8df309242396c0"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2025-05-28",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-05-28",
-        "date_kind": "result first-public date",
-        "capability_date": "2024-09-25",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2025-05-28",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2505-22304-6b8df309242396c0"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2505-22304-6b8df309242396c0"
-        ],
-        "source": "https://arxiv.org/abs/2505.22304",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-cadreview-llama32-lora-b6a643e3a10a3576"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "cadreview-llama32-lora"
-        ],
-        "plot_date": "2025-05-28",
-        "frontier_observation_ids": [
-          "obs-0-2151-96559ddf77d03997",
-          "obs-0-2336-b16a67b6569df4ac",
-          "obs-0-3184-5f38da85069592b4",
-          "obs-0-5124-c65e010160a088a8"
-        ]
-      }
-    ],
-    "retrospective_observations": [],
     "observed_frontier": 0.5124,
     "capability_frontier_value": 0.5124,
     "reported_frontier_value": 0.5124,
@@ -907,11 +639,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 483
+        "days": 517
       },
       "T90": {
         "status": "right_censored",
-        "days": 483
+        "days": 517
       }
     },
     "capability_threshold_days": {
@@ -922,11 +654,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 483
+        "days": 517
       },
       "T90": {
         "status": "right_censored",
-        "days": 483
+        "days": 517
       }
     },
     "reported_threshold_days": {
@@ -937,11 +669,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 483
+        "days": 517
       },
       "T90": {
         "status": "right_censored",
-        "days": 483
+        "days": 517
       }
     },
     "velocity_180d": null,

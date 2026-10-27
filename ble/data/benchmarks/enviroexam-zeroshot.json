@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -172,7 +172,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2023-11-29",
@@ -252,7 +252,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-02-21",
@@ -332,7 +332,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-02-05",
@@ -412,7 +412,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-04-18",
@@ -441,184 +441,6 @@
         "evidence_count": 1,
         "source_row_ids": [
           "enviroexam-llama3"
-        ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-8047-f6c70e1bf73c7695",
-        "benchmark_id": "enviroexam-zeroshot",
-        "benchmark_version_id": "enviroexam-zeroshot-canonical",
-        "model_id": "model-llama-3-70b-instruct-9a2dcd5ad2a0723b",
-        "model_configuration": "Llama-3-70B-Instruct",
-        "model_identity_organization": "meta",
-        "model_label_id": "llama-3-70b-instruct",
-        "model_family_id": "meta-llama-3-70b-instruct",
-        "model": "Llama-3-70B-Instruct",
-        "organization": "Meta",
-        "score": 0.8047,
-        "input_score": 0.8047,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "enviroexam-zeroshot-metric-v1",
-        "protocol_id": "enviroexam-zeroshot-source-export-v1",
-        "task_set_id": "enviroexam-zeroshot-canonical",
-        "metric": "Composite I",
-        "score_role": "canonical",
-        "score_series_id": "enviroexam-zeroshot-canonical-score",
-        "evaluation_protocol": "EnviroExam initial fixed 726-item test split, OpenCompass 2.1.0, zero-shot, max output 100, temperature 0.7, top-p 0.95, composite I. Five-shot and CoT variants are excluded.",
-        "model_release_date": "2024-04-18",
-        "evaluation_date": null,
-        "result_public_date": "2024-05-18",
-        "source_publication_date": "2024-05-18",
-        "observation_date": "2024-04-18",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-04-18",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-enviroscientist-enviroexam-8f87983354ef19b6"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-enviroscientist-enviroexam-8f87983354ef19b6"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2024-05-18",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2024-05-18",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-04-18",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2024-05-18",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-github-com-enviroscientist-enviroexam-8f87983354ef19b6"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-enviroscientist-enviroexam-8f87983354ef19b6"
-        ],
-        "source": "https://github.com/EnviroScientist/enviroexam",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-enviroexam-llama3-86f124a5c453bfd2"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "enviroexam-llama3"
-        ],
-        "plot_date": "2024-05-18",
-        "frontier_observation_ids": [
-          "obs-0-4317-84390423108c011b",
-          "obs-0-5944-c41d65e0168f0c03",
-          "obs-0-7066-85bd5e77a81a7dec",
-          "obs-0-8047-f6c70e1bf73c7695"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-8047-f6c70e1bf73c7695",
-        "benchmark_id": "enviroexam-zeroshot",
-        "benchmark_version_id": "enviroexam-zeroshot-canonical",
-        "model_id": "model-llama-3-70b-instruct-9a2dcd5ad2a0723b",
-        "model_configuration": "Llama-3-70B-Instruct",
-        "model_identity_organization": "meta",
-        "model_label_id": "llama-3-70b-instruct",
-        "model_family_id": "meta-llama-3-70b-instruct",
-        "model": "Llama-3-70B-Instruct",
-        "organization": "Meta",
-        "score": 0.8047,
-        "input_score": 0.8047,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "enviroexam-zeroshot-metric-v1",
-        "protocol_id": "enviroexam-zeroshot-source-export-v1",
-        "task_set_id": "enviroexam-zeroshot-canonical",
-        "metric": "Composite I",
-        "score_role": "canonical",
-        "score_series_id": "enviroexam-zeroshot-canonical-score",
-        "evaluation_protocol": "EnviroExam initial fixed 726-item test split, OpenCompass 2.1.0, zero-shot, max output 100, temperature 0.7, top-p 0.95, composite I. Five-shot and CoT variants are excluded.",
-        "model_release_date": "2024-04-18",
-        "evaluation_date": null,
-        "result_public_date": "2024-05-18",
-        "source_publication_date": "2024-05-18",
-        "observation_date": "2024-04-18",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-04-18",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-enviroscientist-enviroexam-8f87983354ef19b6"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-enviroscientist-enviroexam-8f87983354ef19b6"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2024-05-18",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2024-05-18",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-04-18",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2024-05-18",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-github-com-enviroscientist-enviroexam-8f87983354ef19b6"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-enviroscientist-enviroexam-8f87983354ef19b6"
-        ],
-        "source": "https://github.com/EnviroScientist/enviroexam",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-enviroexam-llama3-86f124a5c453bfd2"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "enviroexam-llama3"
-        ],
-        "plot_date": "2024-05-18",
-        "frontier_observation_ids": [
-          "obs-0-4317-84390423108c011b",
-          "obs-0-5944-c41d65e0168f0c03",
-          "obs-0-7066-85bd5e77a81a7dec",
-          "obs-0-8047-f6c70e1bf73c7695"
         ]
       }
     ],
@@ -672,7 +494,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-05-18",
@@ -761,7 +583,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-05-18",
@@ -800,96 +622,6 @@
         ]
       }
     ],
-    "historical_frontier": [
-      {
-        "observation_id": "obs-0-8047-f6c70e1bf73c7695",
-        "benchmark_id": "enviroexam-zeroshot",
-        "benchmark_version_id": "enviroexam-zeroshot-canonical",
-        "model_id": "model-llama-3-70b-instruct-9a2dcd5ad2a0723b",
-        "model_configuration": "Llama-3-70B-Instruct",
-        "model_identity_organization": "meta",
-        "model_label_id": "llama-3-70b-instruct",
-        "model_family_id": "meta-llama-3-70b-instruct",
-        "model": "Llama-3-70B-Instruct",
-        "organization": "Meta",
-        "score": 0.8047,
-        "input_score": 0.8047,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "enviroexam-zeroshot-metric-v1",
-        "protocol_id": "enviroexam-zeroshot-source-export-v1",
-        "task_set_id": "enviroexam-zeroshot-canonical",
-        "metric": "Composite I",
-        "score_role": "canonical",
-        "score_series_id": "enviroexam-zeroshot-canonical-score",
-        "evaluation_protocol": "EnviroExam initial fixed 726-item test split, OpenCompass 2.1.0, zero-shot, max output 100, temperature 0.7, top-p 0.95, composite I. Five-shot and CoT variants are excluded.",
-        "model_release_date": "2024-04-18",
-        "evaluation_date": null,
-        "result_public_date": "2024-05-18",
-        "source_publication_date": "2024-05-18",
-        "observation_date": "2024-04-18",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-04-18",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-enviroscientist-enviroexam-8f87983354ef19b6"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-enviroscientist-enviroexam-8f87983354ef19b6"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2024-05-18",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2024-05-18",
-        "date_kind": "result first-public date",
-        "capability_date": "2024-04-18",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2024-05-18",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-github-com-enviroscientist-enviroexam-8f87983354ef19b6"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-enviroscientist-enviroexam-8f87983354ef19b6"
-        ],
-        "source": "https://github.com/EnviroScientist/enviroexam",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-enviroexam-llama3-86f124a5c453bfd2"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "enviroexam-llama3"
-        ],
-        "plot_date": "2024-05-18",
-        "frontier_observation_ids": [
-          "obs-0-4317-84390423108c011b",
-          "obs-0-5944-c41d65e0168f0c03",
-          "obs-0-7066-85bd5e77a81a7dec",
-          "obs-0-8047-f6c70e1bf73c7695"
-        ]
-      }
-    ],
-    "retrospective_observations": [],
     "observed_frontier": 0.8047,
     "capability_frontier_value": 0.8047,
     "reported_frontier_value": 0.8047,
@@ -909,7 +641,7 @@
       },
       "T90": {
         "status": "right_censored",
-        "days": 858
+        "days": 892
       }
     },
     "capability_threshold_days": {
@@ -925,7 +657,7 @@
       },
       "T90": {
         "status": "right_censored",
-        "days": 858
+        "days": 892
       }
     },
     "reported_threshold_days": {
@@ -941,7 +673,7 @@
       },
       "T90": {
         "status": "right_censored",
-        "days": 858
+        "days": 892
       }
     },
     "velocity_180d": null,

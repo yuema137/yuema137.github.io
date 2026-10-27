@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -168,7 +168,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2024-05-13",
@@ -243,7 +243,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2024-09-18",
@@ -318,7 +318,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2024-10-30",
@@ -395,7 +395,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-03",
@@ -471,7 +471,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-02-03",
@@ -501,494 +501,6 @@
         "evidence_count": 1,
         "source_row_ids": [
           "sspro-holo2-235b"
-        ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-189-6210d3ecc0aebe2d",
-        "benchmark_id": "screenspot-pro",
-        "benchmark_version_id": "screenspot-pro-canonical",
-        "model_id": "model-os-atlas-7b-e3c3ed9a3243856c",
-        "model_configuration": "os-atlas-7b",
-        "model_identity_organization": "os-copilot",
-        "model_label_id": "os-atlas-7b",
-        "model_family_id": "os-copilot-os-atlas-7b",
-        "model": "OS-Atlas-7B",
-        "organization": "OS-Copilot",
-        "score": 0.189,
-        "input_score": 0.189,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "screenspot-pro-metric-v1",
-        "protocol_id": "screenspot-pro-source-export-v1",
-        "task_set_id": "screenspot-pro-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "screenspot-pro-canonical-score",
-        "evaluation_protocol": "Comparable direct-grounding results only: greedy decoding with a single predicted location. Agentic multi-step or zoom-assisted results are not mixed into this capability frontier.",
-        "model_release_date": "2024-10-30",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2024-10-30",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-10-30",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2410-23218-1e6b7bb6f8e5bb2b"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2410-23218-1e6b7bb6f8e5bb2b"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2025-01-04",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-10-30",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2410-23218-1e6b7bb6f8e5bb2b",
-          "resource-https-github-com-likaixin2000-screenspot-pro-gui-ef48fad28834ddb7"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2410-23218-1e6b7bb6f8e5bb2b"
-        ],
-        "source": "https://arxiv.org/abs/2410.23218",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-sspro-osatlas7b-03fbedfec265794d"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "sspro-osatlas7b"
-        ],
-        "plot_date": "2025-01-04",
-        "frontier_observation_ids": [
-          "obs-0-008-014749c14627483b",
-          "obs-0-01-ac68afc9fa5f9427",
-          "obs-0-189-6210d3ecc0aebe2d"
-        ]
-      },
-      {
-        "observation_id": "obs-0-706-6e10c433f6b2dac1",
-        "benchmark_id": "screenspot-pro",
-        "benchmark_version_id": "screenspot-pro-canonical",
-        "model_id": "model-holo2-235b-a22b-e3ed89e322f915f9",
-        "model_configuration": "holo2-235b-a22b",
-        "model_identity_organization": "h-company",
-        "model_label_id": "holo2-235b-a22b",
-        "model_family_id": "h-company-holo2-235b-a22b",
-        "model": "Holo2-235B-A22B",
-        "organization": "H Company",
-        "score": 0.706,
-        "input_score": 0.706,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "screenspot-pro-metric-v1",
-        "protocol_id": "screenspot-pro-source-export-v1",
-        "task_set_id": "screenspot-pro-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "screenspot-pro-canonical-score",
-        "evaluation_protocol": "Comparable direct-grounding results only: greedy decoding with a single predicted location. Agentic multi-step or zoom-assisted results are not mixed into this capability frontier.",
-        "model_release_date": "2026-02-03",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-02-03",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-02-03",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-hcompany-ai-holo2-235b-a22b-preview-8d600ab4aedbbbee"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-hcompany-ai-holo2-235b-a22b-preview-8d600ab4aedbbbee"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-02-03",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-02-03",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-github-com-likaixin2000-screenspot-pro-gui-ef48fad28834ddb7",
-          "resource-https-hcompany-ai-holo2-235b-a22b-preview-8d600ab4aedbbbee"
-        ],
-        "score_source_ids": [
-          "resource-https-hcompany-ai-holo2-235b-a22b-preview-8d600ab4aedbbbee"
-        ],
-        "source": "https://hcompany.ai/holo2-235b-a22b-preview",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-sspro-holo2-235b-37aea7882d047e3e"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "sspro-holo2-235b"
-        ],
-        "plot_date": "2026-02-03",
-        "frontier_observation_ids": [
-          "obs-0-706-6e10c433f6b2dac1"
-        ]
-      },
-      {
-        "observation_id": "obs-0-927-579129e0df349b04",
-        "benchmark_id": "screenspot-pro",
-        "benchmark_version_id": "screenspot-pro-canonical",
-        "model_id": "model-gpt-6-astra-c94798ba994c2800",
-        "model_configuration": "gpt-6-astra",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-6-astra",
-        "model_family_id": "openai-gpt-6-astra",
-        "model": "GPT-6 Astra",
-        "organization": "OpenAI",
-        "score": 0.927,
-        "input_score": 0.927,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "screenspot-pro-metric-v1",
-        "protocol_id": "screenspot-pro-source-export-v1",
-        "task_set_id": "screenspot-pro-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "screenspot-pro-canonical-score",
-        "evaluation_protocol": "Comparable direct-grounding results only: greedy decoding with a single predicted location. Agentic multi-step or zoom-assisted results are not mixed into this capability frontier.",
-        "model_release_date": "2026-09-03",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-09-03",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-09-03",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
-              "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
-          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-09-03",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-09-03",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
-          "resource-https-github-com-likaixin2000-screenspot-pro-gui-ef48fad28834ddb7",
-          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
-        ],
-        "score_source_ids": [
-          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
-        ],
-        "source": "https://openai.com/index/gpt-6-astra",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-sspro-gpt6-astra-f4fa042f3ac7527e"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "sspro-gpt6-astra"
-        ],
-        "plot_date": "2026-09-03",
-        "frontier_observation_ids": [
-          "obs-0-927-579129e0df349b04"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-189-6210d3ecc0aebe2d",
-        "benchmark_id": "screenspot-pro",
-        "benchmark_version_id": "screenspot-pro-canonical",
-        "model_id": "model-os-atlas-7b-e3c3ed9a3243856c",
-        "model_configuration": "os-atlas-7b",
-        "model_identity_organization": "os-copilot",
-        "model_label_id": "os-atlas-7b",
-        "model_family_id": "os-copilot-os-atlas-7b",
-        "model": "OS-Atlas-7B",
-        "organization": "OS-Copilot",
-        "score": 0.189,
-        "input_score": 0.189,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "screenspot-pro-metric-v1",
-        "protocol_id": "screenspot-pro-source-export-v1",
-        "task_set_id": "screenspot-pro-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "screenspot-pro-canonical-score",
-        "evaluation_protocol": "Comparable direct-grounding results only: greedy decoding with a single predicted location. Agentic multi-step or zoom-assisted results are not mixed into this capability frontier.",
-        "model_release_date": "2024-10-30",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2024-10-30",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-10-30",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2410-23218-1e6b7bb6f8e5bb2b"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2410-23218-1e6b7bb6f8e5bb2b"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2025-01-04",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-10-30",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2410-23218-1e6b7bb6f8e5bb2b",
-          "resource-https-github-com-likaixin2000-screenspot-pro-gui-ef48fad28834ddb7"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2410-23218-1e6b7bb6f8e5bb2b"
-        ],
-        "source": "https://arxiv.org/abs/2410.23218",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-sspro-osatlas7b-03fbedfec265794d"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "sspro-osatlas7b"
-        ],
-        "plot_date": "2025-01-04",
-        "frontier_observation_ids": [
-          "obs-0-008-014749c14627483b",
-          "obs-0-01-ac68afc9fa5f9427",
-          "obs-0-189-6210d3ecc0aebe2d"
-        ]
-      },
-      {
-        "observation_id": "obs-0-706-6e10c433f6b2dac1",
-        "benchmark_id": "screenspot-pro",
-        "benchmark_version_id": "screenspot-pro-canonical",
-        "model_id": "model-holo2-235b-a22b-e3ed89e322f915f9",
-        "model_configuration": "holo2-235b-a22b",
-        "model_identity_organization": "h-company",
-        "model_label_id": "holo2-235b-a22b",
-        "model_family_id": "h-company-holo2-235b-a22b",
-        "model": "Holo2-235B-A22B",
-        "organization": "H Company",
-        "score": 0.706,
-        "input_score": 0.706,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "screenspot-pro-metric-v1",
-        "protocol_id": "screenspot-pro-source-export-v1",
-        "task_set_id": "screenspot-pro-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "screenspot-pro-canonical-score",
-        "evaluation_protocol": "Comparable direct-grounding results only: greedy decoding with a single predicted location. Agentic multi-step or zoom-assisted results are not mixed into this capability frontier.",
-        "model_release_date": "2026-02-03",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-02-03",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-02-03",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-hcompany-ai-holo2-235b-a22b-preview-8d600ab4aedbbbee"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-hcompany-ai-holo2-235b-a22b-preview-8d600ab4aedbbbee"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-02-03",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-02-03",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-github-com-likaixin2000-screenspot-pro-gui-ef48fad28834ddb7",
-          "resource-https-hcompany-ai-holo2-235b-a22b-preview-8d600ab4aedbbbee"
-        ],
-        "score_source_ids": [
-          "resource-https-hcompany-ai-holo2-235b-a22b-preview-8d600ab4aedbbbee"
-        ],
-        "source": "https://hcompany.ai/holo2-235b-a22b-preview",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-sspro-holo2-235b-37aea7882d047e3e"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "sspro-holo2-235b"
-        ],
-        "plot_date": "2026-02-03",
-        "frontier_observation_ids": [
-          "obs-0-706-6e10c433f6b2dac1"
-        ]
-      },
-      {
-        "observation_id": "obs-0-927-579129e0df349b04",
-        "benchmark_id": "screenspot-pro",
-        "benchmark_version_id": "screenspot-pro-canonical",
-        "model_id": "model-gpt-6-astra-c94798ba994c2800",
-        "model_configuration": "gpt-6-astra",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-6-astra",
-        "model_family_id": "openai-gpt-6-astra",
-        "model": "GPT-6 Astra",
-        "organization": "OpenAI",
-        "score": 0.927,
-        "input_score": 0.927,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "screenspot-pro-metric-v1",
-        "protocol_id": "screenspot-pro-source-export-v1",
-        "task_set_id": "screenspot-pro-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "screenspot-pro-canonical-score",
-        "evaluation_protocol": "Comparable direct-grounding results only: greedy decoding with a single predicted location. Agentic multi-step or zoom-assisted results are not mixed into this capability frontier.",
-        "model_release_date": "2026-09-03",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-09-03",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-09-03",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
-              "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
-          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-09-03",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-09-03",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
-          "resource-https-github-com-likaixin2000-screenspot-pro-gui-ef48fad28834ddb7",
-          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
-        ],
-        "score_source_ids": [
-          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
-        ],
-        "source": "https://openai.com/index/gpt-6-astra",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-sspro-gpt6-astra-f4fa042f3ac7527e"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "sspro-gpt6-astra"
-        ],
-        "plot_date": "2026-09-03",
-        "frontier_observation_ids": [
-          "obs-0-927-579129e0df349b04"
         ]
       }
     ],
@@ -1036,7 +548,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-01-04",
@@ -1117,7 +629,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-02-03",
@@ -1198,7 +710,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-03",
@@ -1237,8 +749,6 @@
       }
     ],
     "reported_frontier": [],
-    "historical_frontier": [],
-    "retrospective_observations": [],
     "observed_frontier": 0.927,
     "capability_frontier_value": 0.927,
     "reported_frontier_value": null,

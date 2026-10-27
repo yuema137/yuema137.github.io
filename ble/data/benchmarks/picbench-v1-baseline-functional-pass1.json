@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -173,7 +173,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2023-03-14",
@@ -254,7 +254,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-02-15",
@@ -335,7 +335,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-05-13",
@@ -416,7 +416,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-06-20",
@@ -497,7 +497,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-09-12",
@@ -527,188 +527,6 @@
         "evidence_count": 1,
         "source_row_ids": [
           "picbench-o1mini"
-        ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-0833-48667f59fc06f468",
-        "benchmark_id": "picbench-v1-baseline-functional-pass1",
-        "benchmark_version_id": "picbench-v1-baseline-functional-pass1-canonical",
-        "model_id": "model-gemini-1-5-pro-cbb82d54e094a69c",
-        "model_configuration": "Gemini-1.5-Pro",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-1-5-pro",
-        "model_family_id": "google-gemini-1-5-pro",
-        "model": "Gemini-1.5-Pro",
-        "organization": "Google",
-        "score": 0.0833,
-        "input_score": 0.0833,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "picbench-v1-baseline-functional-pass1-metric-v1",
-        "protocol_id": "picbench-v1-baseline-functional-pass1-source-export-v1",
-        "task_set_id": "picbench-v1-baseline-functional-pass1-canonical",
-        "metric": "Pass@1",
-        "score_role": "canonical",
-        "score_series_id": "picbench-v1-baseline-functional-pass1-canonical-score",
-        "evaluation_protocol": "PICBench v1 fixed 24 tasks, baseline API prompt, zero feedback, five samples, functional Pass@1; restrictions, feedback, syntax-only and Pass@5 are excluded.",
-        "model_release_date": "2024-02-15",
-        "evaluation_date": null,
-        "result_public_date": "2025-02-05",
-        "source_publication_date": "2025-02-05",
-        "observation_date": "2024-02-15",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-02-15",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2502-03159-101bcaeb052fd407"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2502-03159-101bcaeb052fd407"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2025-02-05",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-02-05",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-02-15",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2025-02-05",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2502-03159-101bcaeb052fd407",
-          "resource-https-github-com-picda-picbench-0c66585c038c35cb"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2502-03159-101bcaeb052fd407"
-        ],
-        "source": "https://arxiv.org/abs/2502.03159",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-picbench-gemini15-3545b16769391ab4"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "picbench-gemini15"
-        ],
-        "plot_date": "2025-02-05",
-        "frontier_observation_ids": [
-          "obs-0-0167-39a5c08ec2f486fd",
-          "obs-0-0417-0fdf5e0d323f44ed",
-          "obs-0-0417-b8af5dead1ba0892",
-          "obs-0-0667-2d5d337000c3a051",
-          "obs-0-0833-48667f59fc06f468"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-0833-48667f59fc06f468",
-        "benchmark_id": "picbench-v1-baseline-functional-pass1",
-        "benchmark_version_id": "picbench-v1-baseline-functional-pass1-canonical",
-        "model_id": "model-gemini-1-5-pro-cbb82d54e094a69c",
-        "model_configuration": "Gemini-1.5-Pro",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-1-5-pro",
-        "model_family_id": "google-gemini-1-5-pro",
-        "model": "Gemini-1.5-Pro",
-        "organization": "Google",
-        "score": 0.0833,
-        "input_score": 0.0833,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "picbench-v1-baseline-functional-pass1-metric-v1",
-        "protocol_id": "picbench-v1-baseline-functional-pass1-source-export-v1",
-        "task_set_id": "picbench-v1-baseline-functional-pass1-canonical",
-        "metric": "Pass@1",
-        "score_role": "canonical",
-        "score_series_id": "picbench-v1-baseline-functional-pass1-canonical-score",
-        "evaluation_protocol": "PICBench v1 fixed 24 tasks, baseline API prompt, zero feedback, five samples, functional Pass@1; restrictions, feedback, syntax-only and Pass@5 are excluded.",
-        "model_release_date": "2024-02-15",
-        "evaluation_date": null,
-        "result_public_date": "2025-02-05",
-        "source_publication_date": "2025-02-05",
-        "observation_date": "2024-02-15",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-02-15",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2502-03159-101bcaeb052fd407"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2502-03159-101bcaeb052fd407"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2025-02-05",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-02-05",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-02-15",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2025-02-05",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2502-03159-101bcaeb052fd407",
-          "resource-https-github-com-picda-picbench-0c66585c038c35cb"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2502-03159-101bcaeb052fd407"
-        ],
-        "source": "https://arxiv.org/abs/2502.03159",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-picbench-gemini15-3545b16769391ab4"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "picbench-gemini15"
-        ],
-        "plot_date": "2025-02-05",
-        "frontier_observation_ids": [
-          "obs-0-0167-39a5c08ec2f486fd",
-          "obs-0-0417-0fdf5e0d323f44ed",
-          "obs-0-0417-b8af5dead1ba0892",
-          "obs-0-0667-2d5d337000c3a051",
-          "obs-0-0833-48667f59fc06f468"
         ]
       }
     ],
@@ -762,7 +580,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-02-05",
@@ -853,7 +671,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-02-05",
@@ -894,98 +712,6 @@
         ]
       }
     ],
-    "historical_frontier": [
-      {
-        "observation_id": "obs-0-0833-48667f59fc06f468",
-        "benchmark_id": "picbench-v1-baseline-functional-pass1",
-        "benchmark_version_id": "picbench-v1-baseline-functional-pass1-canonical",
-        "model_id": "model-gemini-1-5-pro-cbb82d54e094a69c",
-        "model_configuration": "Gemini-1.5-Pro",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-1-5-pro",
-        "model_family_id": "google-gemini-1-5-pro",
-        "model": "Gemini-1.5-Pro",
-        "organization": "Google",
-        "score": 0.0833,
-        "input_score": 0.0833,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "picbench-v1-baseline-functional-pass1-metric-v1",
-        "protocol_id": "picbench-v1-baseline-functional-pass1-source-export-v1",
-        "task_set_id": "picbench-v1-baseline-functional-pass1-canonical",
-        "metric": "Pass@1",
-        "score_role": "canonical",
-        "score_series_id": "picbench-v1-baseline-functional-pass1-canonical-score",
-        "evaluation_protocol": "PICBench v1 fixed 24 tasks, baseline API prompt, zero feedback, five samples, functional Pass@1; restrictions, feedback, syntax-only and Pass@5 are excluded.",
-        "model_release_date": "2024-02-15",
-        "evaluation_date": null,
-        "result_public_date": "2025-02-05",
-        "source_publication_date": "2025-02-05",
-        "observation_date": "2024-02-15",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-02-15",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2502-03159-101bcaeb052fd407"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2502-03159-101bcaeb052fd407"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2025-02-05",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-02-05",
-        "date_kind": "result first-public date",
-        "capability_date": "2024-02-15",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2025-02-05",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2502-03159-101bcaeb052fd407",
-          "resource-https-github-com-picda-picbench-0c66585c038c35cb"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2502-03159-101bcaeb052fd407"
-        ],
-        "source": "https://arxiv.org/abs/2502.03159",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-picbench-gemini15-3545b16769391ab4"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "picbench-gemini15"
-        ],
-        "plot_date": "2025-02-05",
-        "frontier_observation_ids": [
-          "obs-0-0167-39a5c08ec2f486fd",
-          "obs-0-0417-0fdf5e0d323f44ed",
-          "obs-0-0417-b8af5dead1ba0892",
-          "obs-0-0667-2d5d337000c3a051",
-          "obs-0-0833-48667f59fc06f468"
-        ]
-      }
-    ],
-    "retrospective_observations": [],
     "observed_frontier": 0.0833,
     "capability_frontier_value": 0.0833,
     "reported_frontier_value": 0.0833,
@@ -995,43 +721,43 @@
     "threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 595
+        "days": 629
       },
       "T80": {
         "status": "right_censored",
-        "days": 595
+        "days": 629
       },
       "T90": {
         "status": "right_censored",
-        "days": 595
+        "days": 629
       }
     },
     "capability_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 595
+        "days": 629
       },
       "T80": {
         "status": "right_censored",
-        "days": 595
+        "days": 629
       },
       "T90": {
         "status": "right_censored",
-        "days": 595
+        "days": 629
       }
     },
     "reported_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 595
+        "days": 629
       },
       "T80": {
         "status": "right_censored",
-        "days": 595
+        "days": 629
       },
       "T90": {
         "status": "right_censored",
-        "days": 595
+        "days": 629
       }
     },
     "velocity_180d": null,
