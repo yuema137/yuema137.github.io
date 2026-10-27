@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -172,7 +172,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-04-05",
@@ -253,7 +253,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-07-22",
@@ -333,7 +333,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-01-20",
@@ -414,7 +414,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-11-24",
@@ -495,7 +495,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-12-11",
@@ -576,7 +576,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-11-17",
@@ -656,7 +656,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-11-18",
@@ -686,192 +686,6 @@
         "evidence_count": 1,
         "source_row_ids": [
           "formationeval-gemini3"
-        ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-998-e4a476fb14dd83ff",
-        "benchmark_id": "formationeval-v0-1",
-        "benchmark_version_id": "formationeval-v0-1-canonical",
-        "model_id": "model-gemini-3-pro-preview-6f9ce4666001cc6e",
-        "model_configuration": "Gemini-3-Pro-Preview",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-3-pro-preview",
-        "model_family_id": "google-gemini-3-pro-preview",
-        "model": "Gemini-3-Pro-Preview",
-        "organization": "Google",
-        "score": 0.998,
-        "input_score": 0.998,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "formationeval-v0-1-metric-v1",
-        "protocol_id": "formationeval-v0-1-source-export-v1",
-        "task_set_id": "formationeval-v0-1-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "formationeval-v0-1-canonical-score",
-        "evaluation_protocol": "FormationEval v0.1 fixed 505-item English MCQ set, zero-shot, direct A-D answer, one published run and official extraction. Later DISKOS-QA and SPE extensions are excluded.",
-        "model_release_date": "2025-11-18",
-        "evaluation_date": null,
-        "result_public_date": "2026-01-05",
-        "source_publication_date": "2026-01-05",
-        "observation_date": "2025-11-18",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-11-18",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-01-05",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2026-01-05",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-11-18",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-01-05",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f",
-          "resource-https-www-formationeval-no-d6b207923244cad3"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
-        ],
-        "source": "https://arxiv.org/abs/2601.02158",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-formationeval-gemini3-0e8d5f5eeddca7ef"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "formationeval-gemini3"
-        ],
-        "plot_date": "2026-01-05",
-        "frontier_observation_ids": [
-          "obs-0-931-203f6a59a853fd19",
-          "obs-0-931-90349de44c60a2be",
-          "obs-0-962-a5849f6b8a1b015d",
-          "obs-0-97-df68df7783dd1944",
-          "obs-0-974-1e125b36f45212cd",
-          "obs-0-976-aba779906c0e183d",
-          "obs-0-998-e4a476fb14dd83ff"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-998-e4a476fb14dd83ff",
-        "benchmark_id": "formationeval-v0-1",
-        "benchmark_version_id": "formationeval-v0-1-canonical",
-        "model_id": "model-gemini-3-pro-preview-6f9ce4666001cc6e",
-        "model_configuration": "Gemini-3-Pro-Preview",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-3-pro-preview",
-        "model_family_id": "google-gemini-3-pro-preview",
-        "model": "Gemini-3-Pro-Preview",
-        "organization": "Google",
-        "score": 0.998,
-        "input_score": 0.998,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "formationeval-v0-1-metric-v1",
-        "protocol_id": "formationeval-v0-1-source-export-v1",
-        "task_set_id": "formationeval-v0-1-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "formationeval-v0-1-canonical-score",
-        "evaluation_protocol": "FormationEval v0.1 fixed 505-item English MCQ set, zero-shot, direct A-D answer, one published run and official extraction. Later DISKOS-QA and SPE extensions are excluded.",
-        "model_release_date": "2025-11-18",
-        "evaluation_date": null,
-        "result_public_date": "2026-01-05",
-        "source_publication_date": "2026-01-05",
-        "observation_date": "2025-11-18",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-11-18",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-01-05",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2026-01-05",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-11-18",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-01-05",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f",
-          "resource-https-www-formationeval-no-d6b207923244cad3"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
-        ],
-        "source": "https://arxiv.org/abs/2601.02158",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-formationeval-gemini3-0e8d5f5eeddca7ef"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "formationeval-gemini3"
-        ],
-        "plot_date": "2026-01-05",
-        "frontier_observation_ids": [
-          "obs-0-931-203f6a59a853fd19",
-          "obs-0-931-90349de44c60a2be",
-          "obs-0-962-a5849f6b8a1b015d",
-          "obs-0-97-df68df7783dd1944",
-          "obs-0-974-1e125b36f45212cd",
-          "obs-0-976-aba779906c0e183d",
-          "obs-0-998-e4a476fb14dd83ff"
         ]
       }
     ],
@@ -925,7 +739,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-01-05",
@@ -1018,7 +832,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-01-05",
@@ -1061,100 +875,6 @@
         ]
       }
     ],
-    "historical_frontier": [
-      {
-        "observation_id": "obs-0-998-e4a476fb14dd83ff",
-        "benchmark_id": "formationeval-v0-1",
-        "benchmark_version_id": "formationeval-v0-1-canonical",
-        "model_id": "model-gemini-3-pro-preview-6f9ce4666001cc6e",
-        "model_configuration": "Gemini-3-Pro-Preview",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-3-pro-preview",
-        "model_family_id": "google-gemini-3-pro-preview",
-        "model": "Gemini-3-Pro-Preview",
-        "organization": "Google",
-        "score": 0.998,
-        "input_score": 0.998,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "formationeval-v0-1-metric-v1",
-        "protocol_id": "formationeval-v0-1-source-export-v1",
-        "task_set_id": "formationeval-v0-1-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "formationeval-v0-1-canonical-score",
-        "evaluation_protocol": "FormationEval v0.1 fixed 505-item English MCQ set, zero-shot, direct A-D answer, one published run and official extraction. Later DISKOS-QA and SPE extensions are excluded.",
-        "model_release_date": "2025-11-18",
-        "evaluation_date": null,
-        "result_public_date": "2026-01-05",
-        "source_publication_date": "2026-01-05",
-        "observation_date": "2025-11-18",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-11-18",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-01-05",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2026-01-05",
-        "date_kind": "result first-public date",
-        "capability_date": "2025-11-18",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-01-05",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f",
-          "resource-https-www-formationeval-no-d6b207923244cad3"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2601-02158-d69be4e56366477f"
-        ],
-        "source": "https://arxiv.org/abs/2601.02158",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-formationeval-gemini3-0e8d5f5eeddca7ef"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "formationeval-gemini3"
-        ],
-        "plot_date": "2026-01-05",
-        "frontier_observation_ids": [
-          "obs-0-931-203f6a59a853fd19",
-          "obs-0-931-90349de44c60a2be",
-          "obs-0-962-a5849f6b8a1b015d",
-          "obs-0-97-df68df7783dd1944",
-          "obs-0-974-1e125b36f45212cd",
-          "obs-0-976-aba779906c0e183d",
-          "obs-0-998-e4a476fb14dd83ff"
-        ]
-      }
-    ],
-    "retrospective_observations": [],
     "observed_frontier": 0.998,
     "capability_frontier_value": 0.998,
     "reported_frontier_value": 0.998,

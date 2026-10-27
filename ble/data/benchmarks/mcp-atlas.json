@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -168,7 +168,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-04-16",
@@ -240,7 +240,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-02-19",
@@ -312,7 +312,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-04-23",
@@ -384,7 +384,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-02-17",
@@ -412,466 +412,6 @@
         ],
         "evidence_count": 1,
         "source_row_ids": []
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-695-f323c15dd17a7749",
-        "benchmark_id": "mcp-atlas",
-        "benchmark_version_id": "mcp-atlas-canonical",
-        "model_id": "model-claude-sonnet-4-6-91c1236e0cb411d9",
-        "model_configuration": "Claude Sonnet 4.6",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-sonnet-4-6",
-        "model_family_id": "anthropic-claude-sonnet-4-6",
-        "model": "Claude Sonnet 4.6",
-        "organization": "Anthropic",
-        "score": 0.695,
-        "input_score": 0.695,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "mcp-atlas-metric-v1",
-        "protocol_id": "mcp-atlas-source-export-v1",
-        "task_set_id": "mcp-atlas-canonical",
-        "metric": "Pass rate",
-        "score_role": "canonical",
-        "score_series_id": "mcp-atlas-canonical-score",
-        "evaluation_protocol": "MCP-Atlas updated evaluation methodology: 1,000 tasks, 36 MCP servers, 220 tools, up to 100 tool calls per task, Gemini-2.5-Pro claim judge. Earlier MCP-Atlas series is not merged.",
-        "model_release_date": "2026-02-17",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-02-17",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-02-17",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-labs-scale-com-leaderboard-mcp-atlas-19f038745d5382db"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-labs-scale-com-leaderboard-mcp-atlas-19f038745d5382db"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-02-17",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-02-17",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-labs-scale-com-leaderboard-mcp-atlas-19f038745d5382db"
-        ],
-        "score_source_ids": [
-          "resource-https-labs-scale-com-leaderboard-mcp-atlas-19f038745d5382db"
-        ],
-        "source": "https://labs.scale.com/leaderboard/mcp_atlas",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-model-version-claude-sonnet-4-6-name-claude-sonn-ea1d60a63507779a"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2026-02-17",
-        "frontier_observation_ids": [
-          "obs-0-695-f323c15dd17a7749"
-        ]
-      },
-      {
-        "observation_id": "obs-0-782-7c47519969581deb",
-        "benchmark_id": "mcp-atlas",
-        "benchmark_version_id": "mcp-atlas-canonical",
-        "model_id": "model-gemini-3-1-pro-4768a082b6c248b2",
-        "model_configuration": "Gemini 3.1 Pro",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-3-1-pro",
-        "model_family_id": "google-gemini-3-1-pro",
-        "model": "Gemini 3.1 Pro",
-        "organization": "Google",
-        "score": 0.782,
-        "input_score": 0.782,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "mcp-atlas-metric-v1",
-        "protocol_id": "mcp-atlas-source-export-v1",
-        "task_set_id": "mcp-atlas-canonical",
-        "metric": "Pass rate",
-        "score_role": "canonical",
-        "score_series_id": "mcp-atlas-canonical-score",
-        "evaluation_protocol": "MCP-Atlas updated evaluation methodology: 1,000 tasks, 36 MCP servers, 220 tools, up to 100 tool calls per task, Gemini-2.5-Pro claim judge. Earlier MCP-Atlas series is not merged.",
-        "model_release_date": "2026-02-19",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-02-19",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-02-19",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-labs-scale-com-leaderboard-mcp-atlas-19f038745d5382db"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-labs-scale-com-leaderboard-mcp-atlas-19f038745d5382db"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-02-19",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-02-19",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-labs-scale-com-leaderboard-mcp-atlas-19f038745d5382db"
-        ],
-        "score_source_ids": [
-          "resource-https-labs-scale-com-leaderboard-mcp-atlas-19f038745d5382db"
-        ],
-        "source": "https://labs.scale.com/leaderboard/mcp_atlas",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-model-version-gemini-3-1-pro-name-gemini-3-1-pro-8dd0032b834d56a7"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2026-02-19",
-        "frontier_observation_ids": [
-          "obs-0-782-7c47519969581deb"
-        ]
-      },
-      {
-        "observation_id": "obs-0-791-cafbd727c618d9b1",
-        "benchmark_id": "mcp-atlas",
-        "benchmark_version_id": "mcp-atlas-canonical",
-        "model_id": "model-claude-opus-4-7-bf3d188ffeabc598",
-        "model_configuration": "Claude Opus 4.7",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-opus-4-7",
-        "model_family_id": "anthropic-claude-opus-4-7",
-        "model": "Claude Opus 4.7",
-        "organization": "Anthropic",
-        "score": 0.791,
-        "input_score": 0.791,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "mcp-atlas-metric-v1",
-        "protocol_id": "mcp-atlas-source-export-v1",
-        "task_set_id": "mcp-atlas-canonical",
-        "metric": "Pass rate",
-        "score_role": "canonical",
-        "score_series_id": "mcp-atlas-canonical-score",
-        "evaluation_protocol": "MCP-Atlas updated evaluation methodology: 1,000 tasks, 36 MCP servers, 220 tools, up to 100 tool calls per task, Gemini-2.5-Pro claim judge. Earlier MCP-Atlas series is not merged.",
-        "model_release_date": "2026-04-16",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-04-16",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-04-16",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-labs-scale-com-leaderboard-mcp-atlas-19f038745d5382db"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-labs-scale-com-leaderboard-mcp-atlas-19f038745d5382db"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-04-16",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-04-16",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-labs-scale-com-leaderboard-mcp-atlas-19f038745d5382db"
-        ],
-        "score_source_ids": [
-          "resource-https-labs-scale-com-leaderboard-mcp-atlas-19f038745d5382db"
-        ],
-        "source": "https://labs.scale.com/leaderboard/mcp_atlas",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-model-version-claude-opus-4-7-name-claude-opus-4-8692cd03d6bf5338"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2026-04-16",
-        "frontier_observation_ids": [
-          "obs-0-791-cafbd727c618d9b1"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-695-f323c15dd17a7749",
-        "benchmark_id": "mcp-atlas",
-        "benchmark_version_id": "mcp-atlas-canonical",
-        "model_id": "model-claude-sonnet-4-6-91c1236e0cb411d9",
-        "model_configuration": "Claude Sonnet 4.6",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-sonnet-4-6",
-        "model_family_id": "anthropic-claude-sonnet-4-6",
-        "model": "Claude Sonnet 4.6",
-        "organization": "Anthropic",
-        "score": 0.695,
-        "input_score": 0.695,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "mcp-atlas-metric-v1",
-        "protocol_id": "mcp-atlas-source-export-v1",
-        "task_set_id": "mcp-atlas-canonical",
-        "metric": "Pass rate",
-        "score_role": "canonical",
-        "score_series_id": "mcp-atlas-canonical-score",
-        "evaluation_protocol": "MCP-Atlas updated evaluation methodology: 1,000 tasks, 36 MCP servers, 220 tools, up to 100 tool calls per task, Gemini-2.5-Pro claim judge. Earlier MCP-Atlas series is not merged.",
-        "model_release_date": "2026-02-17",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-02-17",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-02-17",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-labs-scale-com-leaderboard-mcp-atlas-19f038745d5382db"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-labs-scale-com-leaderboard-mcp-atlas-19f038745d5382db"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-02-17",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-02-17",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-labs-scale-com-leaderboard-mcp-atlas-19f038745d5382db"
-        ],
-        "score_source_ids": [
-          "resource-https-labs-scale-com-leaderboard-mcp-atlas-19f038745d5382db"
-        ],
-        "source": "https://labs.scale.com/leaderboard/mcp_atlas",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-model-version-claude-sonnet-4-6-name-claude-sonn-ea1d60a63507779a"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2026-02-17",
-        "frontier_observation_ids": [
-          "obs-0-695-f323c15dd17a7749"
-        ]
-      },
-      {
-        "observation_id": "obs-0-782-7c47519969581deb",
-        "benchmark_id": "mcp-atlas",
-        "benchmark_version_id": "mcp-atlas-canonical",
-        "model_id": "model-gemini-3-1-pro-4768a082b6c248b2",
-        "model_configuration": "Gemini 3.1 Pro",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-3-1-pro",
-        "model_family_id": "google-gemini-3-1-pro",
-        "model": "Gemini 3.1 Pro",
-        "organization": "Google",
-        "score": 0.782,
-        "input_score": 0.782,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "mcp-atlas-metric-v1",
-        "protocol_id": "mcp-atlas-source-export-v1",
-        "task_set_id": "mcp-atlas-canonical",
-        "metric": "Pass rate",
-        "score_role": "canonical",
-        "score_series_id": "mcp-atlas-canonical-score",
-        "evaluation_protocol": "MCP-Atlas updated evaluation methodology: 1,000 tasks, 36 MCP servers, 220 tools, up to 100 tool calls per task, Gemini-2.5-Pro claim judge. Earlier MCP-Atlas series is not merged.",
-        "model_release_date": "2026-02-19",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-02-19",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-02-19",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-labs-scale-com-leaderboard-mcp-atlas-19f038745d5382db"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-labs-scale-com-leaderboard-mcp-atlas-19f038745d5382db"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-02-19",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-02-19",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-labs-scale-com-leaderboard-mcp-atlas-19f038745d5382db"
-        ],
-        "score_source_ids": [
-          "resource-https-labs-scale-com-leaderboard-mcp-atlas-19f038745d5382db"
-        ],
-        "source": "https://labs.scale.com/leaderboard/mcp_atlas",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-model-version-gemini-3-1-pro-name-gemini-3-1-pro-8dd0032b834d56a7"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2026-02-19",
-        "frontier_observation_ids": [
-          "obs-0-782-7c47519969581deb"
-        ]
-      },
-      {
-        "observation_id": "obs-0-791-cafbd727c618d9b1",
-        "benchmark_id": "mcp-atlas",
-        "benchmark_version_id": "mcp-atlas-canonical",
-        "model_id": "model-claude-opus-4-7-bf3d188ffeabc598",
-        "model_configuration": "Claude Opus 4.7",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-opus-4-7",
-        "model_family_id": "anthropic-claude-opus-4-7",
-        "model": "Claude Opus 4.7",
-        "organization": "Anthropic",
-        "score": 0.791,
-        "input_score": 0.791,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "mcp-atlas-metric-v1",
-        "protocol_id": "mcp-atlas-source-export-v1",
-        "task_set_id": "mcp-atlas-canonical",
-        "metric": "Pass rate",
-        "score_role": "canonical",
-        "score_series_id": "mcp-atlas-canonical-score",
-        "evaluation_protocol": "MCP-Atlas updated evaluation methodology: 1,000 tasks, 36 MCP servers, 220 tools, up to 100 tool calls per task, Gemini-2.5-Pro claim judge. Earlier MCP-Atlas series is not merged.",
-        "model_release_date": "2026-04-16",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-04-16",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-04-16",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-labs-scale-com-leaderboard-mcp-atlas-19f038745d5382db"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-labs-scale-com-leaderboard-mcp-atlas-19f038745d5382db"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-04-16",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-04-16",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-labs-scale-com-leaderboard-mcp-atlas-19f038745d5382db"
-        ],
-        "score_source_ids": [
-          "resource-https-labs-scale-com-leaderboard-mcp-atlas-19f038745d5382db"
-        ],
-        "source": "https://labs.scale.com/leaderboard/mcp_atlas",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-model-version-claude-opus-4-7-name-claude-opus-4-8692cd03d6bf5338"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2026-04-16",
-        "frontier_observation_ids": [
-          "obs-0-791-cafbd727c618d9b1"
-        ]
       }
     ],
     "capability_frontier": [
@@ -918,7 +458,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-02-17",
@@ -994,7 +534,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-02-19",
@@ -1070,7 +610,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-04-16",
@@ -1105,8 +645,6 @@
       }
     ],
     "reported_frontier": [],
-    "historical_frontier": [],
-    "retrospective_observations": [],
     "observed_frontier": 0.791,
     "capability_frontier_value": 0.791,
     "reported_frontier_value": null,
@@ -1121,11 +659,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 357
+        "days": 391
       },
       "T90": {
         "status": "right_censored",
-        "days": 357
+        "days": 391
       }
     },
     "capability_threshold_days": {
@@ -1136,11 +674,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 357
+        "days": 391
       },
       "T90": {
         "status": "right_censored",
-        "days": 357
+        "days": 391
       }
     },
     "reported_threshold_days": {

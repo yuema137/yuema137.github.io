@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -175,7 +175,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-02-19",
@@ -256,7 +256,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-08-06",
@@ -337,7 +337,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-05-22",
@@ -418,7 +418,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-06-05",
@@ -448,186 +448,6 @@
         "evidence_count": 1,
         "source_row_ids": [
           "circuitsense-gemini25"
-        ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-1906-44725b682e75a23c",
-        "benchmark_id": "circuitsense-synthetic-analysis",
-        "benchmark_version_id": "circuitsense-synthetic-analysis-canonical",
-        "model_id": "model-gemini-2-5-pro-preview-0605-36a0c0e58b7216eb",
-        "model_configuration": "Gemini-2.5-Pro-preview-0605",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-2-5-pro-preview-0605",
-        "model_family_id": "google-gemini-2-5-pro-preview-0605",
-        "model": "Gemini-2.5-Pro-preview-0605",
-        "organization": "Google",
-        "score": 0.1906,
-        "input_score": 0.1906,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "circuitsense-synthetic-analysis-metric-v1",
-        "protocol_id": "circuitsense-synthetic-analysis-source-export-v1",
-        "task_set_id": "circuitsense-synthetic-analysis-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "circuitsense-synthetic-analysis-canonical-score",
-        "evaluation_protocol": "CircuitSense ICLR 2026 / arXiv v2 fixed 5,020-question synthetic Analysis partition, temperature 0.1, top-p 0.95, one response, official symbolic/numeric equivalence checker. Curated and Perception/Design tasks are excluded.",
-        "model_release_date": "2025-06-05",
-        "evaluation_date": null,
-        "result_public_date": "2026-02-28",
-        "source_publication_date": "2026-02-28",
-        "observation_date": "2025-06-05",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-06-05",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2509-22339-8f54be8a9d27a09c"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2509-22339-8f54be8a9d27a09c"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-02-28",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2026-02-28",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-06-05",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-02-28",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2509-22339-8f54be8a9d27a09c",
-          "resource-https-circuitsense-benchmark-github-io-3e5dbb4db9774187"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2509-22339-8f54be8a9d27a09c"
-        ],
-        "source": "https://arxiv.org/abs/2509.22339",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-circuitsense-gemini25-94f21709d7b6c006"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "circuitsense-gemini25"
-        ],
-        "plot_date": "2026-02-28",
-        "frontier_observation_ids": [
-          "obs-0-0496-4aef88e259f8b574",
-          "obs-0-0498-2f7df55fee96b0e5",
-          "obs-0-0629-3b7dbafdb7ca0c00",
-          "obs-0-1906-44725b682e75a23c"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-1906-44725b682e75a23c",
-        "benchmark_id": "circuitsense-synthetic-analysis",
-        "benchmark_version_id": "circuitsense-synthetic-analysis-canonical",
-        "model_id": "model-gemini-2-5-pro-preview-0605-36a0c0e58b7216eb",
-        "model_configuration": "Gemini-2.5-Pro-preview-0605",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-2-5-pro-preview-0605",
-        "model_family_id": "google-gemini-2-5-pro-preview-0605",
-        "model": "Gemini-2.5-Pro-preview-0605",
-        "organization": "Google",
-        "score": 0.1906,
-        "input_score": 0.1906,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "circuitsense-synthetic-analysis-metric-v1",
-        "protocol_id": "circuitsense-synthetic-analysis-source-export-v1",
-        "task_set_id": "circuitsense-synthetic-analysis-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "circuitsense-synthetic-analysis-canonical-score",
-        "evaluation_protocol": "CircuitSense ICLR 2026 / arXiv v2 fixed 5,020-question synthetic Analysis partition, temperature 0.1, top-p 0.95, one response, official symbolic/numeric equivalence checker. Curated and Perception/Design tasks are excluded.",
-        "model_release_date": "2025-06-05",
-        "evaluation_date": null,
-        "result_public_date": "2026-02-28",
-        "source_publication_date": "2026-02-28",
-        "observation_date": "2025-06-05",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-06-05",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2509-22339-8f54be8a9d27a09c"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2509-22339-8f54be8a9d27a09c"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-02-28",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2026-02-28",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-06-05",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-02-28",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2509-22339-8f54be8a9d27a09c",
-          "resource-https-circuitsense-benchmark-github-io-3e5dbb4db9774187"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2509-22339-8f54be8a9d27a09c"
-        ],
-        "source": "https://arxiv.org/abs/2509.22339",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-circuitsense-gemini25-94f21709d7b6c006"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "circuitsense-gemini25"
-        ],
-        "plot_date": "2026-02-28",
-        "frontier_observation_ids": [
-          "obs-0-0496-4aef88e259f8b574",
-          "obs-0-0498-2f7df55fee96b0e5",
-          "obs-0-0629-3b7dbafdb7ca0c00",
-          "obs-0-1906-44725b682e75a23c"
         ]
       }
     ],
@@ -681,7 +501,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-02-28",
@@ -771,7 +591,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-02-28",
@@ -811,97 +631,6 @@
         ]
       }
     ],
-    "historical_frontier": [
-      {
-        "observation_id": "obs-0-1906-44725b682e75a23c",
-        "benchmark_id": "circuitsense-synthetic-analysis",
-        "benchmark_version_id": "circuitsense-synthetic-analysis-canonical",
-        "model_id": "model-gemini-2-5-pro-preview-0605-36a0c0e58b7216eb",
-        "model_configuration": "Gemini-2.5-Pro-preview-0605",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-2-5-pro-preview-0605",
-        "model_family_id": "google-gemini-2-5-pro-preview-0605",
-        "model": "Gemini-2.5-Pro-preview-0605",
-        "organization": "Google",
-        "score": 0.1906,
-        "input_score": 0.1906,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "circuitsense-synthetic-analysis-metric-v1",
-        "protocol_id": "circuitsense-synthetic-analysis-source-export-v1",
-        "task_set_id": "circuitsense-synthetic-analysis-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "circuitsense-synthetic-analysis-canonical-score",
-        "evaluation_protocol": "CircuitSense ICLR 2026 / arXiv v2 fixed 5,020-question synthetic Analysis partition, temperature 0.1, top-p 0.95, one response, official symbolic/numeric equivalence checker. Curated and Perception/Design tasks are excluded.",
-        "model_release_date": "2025-06-05",
-        "evaluation_date": null,
-        "result_public_date": "2026-02-28",
-        "source_publication_date": "2026-02-28",
-        "observation_date": "2025-06-05",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-06-05",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2509-22339-8f54be8a9d27a09c"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2509-22339-8f54be8a9d27a09c"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-02-28",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2026-02-28",
-        "date_kind": "result first-public date",
-        "capability_date": "2025-06-05",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-02-28",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2509-22339-8f54be8a9d27a09c",
-          "resource-https-circuitsense-benchmark-github-io-3e5dbb4db9774187"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2509-22339-8f54be8a9d27a09c"
-        ],
-        "source": "https://arxiv.org/abs/2509.22339",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-circuitsense-gemini25-94f21709d7b6c006"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "circuitsense-gemini25"
-        ],
-        "plot_date": "2026-02-28",
-        "frontier_observation_ids": [
-          "obs-0-0496-4aef88e259f8b574",
-          "obs-0-0498-2f7df55fee96b0e5",
-          "obs-0-0629-3b7dbafdb7ca0c00",
-          "obs-0-1906-44725b682e75a23c"
-        ]
-      }
-    ],
-    "retrospective_observations": [],
     "observed_frontier": 0.1906,
     "capability_frontier_value": 0.1906,
     "reported_frontier_value": 0.1906,
@@ -911,43 +640,43 @@
     "threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 207
+        "days": 241
       },
       "T80": {
         "status": "right_censored",
-        "days": 207
+        "days": 241
       },
       "T90": {
         "status": "right_censored",
-        "days": 207
+        "days": 241
       }
     },
     "capability_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 207
+        "days": 241
       },
       "T80": {
         "status": "right_censored",
-        "days": 207
+        "days": 241
       },
       "T90": {
         "status": "right_censored",
-        "days": 207
+        "days": 241
       }
     },
     "reported_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 207
+        "days": 241
       },
       "T80": {
         "status": "right_censored",
-        "days": 207
+        "days": 241
       },
       "T90": {
         "status": "right_censored",
-        "days": 207
+        "days": 241
       }
     },
     "velocity_180d": null,

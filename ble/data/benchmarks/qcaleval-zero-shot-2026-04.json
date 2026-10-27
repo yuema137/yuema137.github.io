@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -173,7 +173,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-02-15",
@@ -254,7 +254,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-02-05",
@@ -335,7 +335,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-02-19",
@@ -416,7 +416,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-03-05",
@@ -446,186 +446,6 @@
         "evidence_count": 1,
         "source_row_ids": [
           "qcal-gpt54"
-        ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-723-133d63f60c9828c7",
-        "benchmark_id": "qcaleval-zero-shot-2026-04",
-        "benchmark_version_id": "qcaleval-zero-shot-2026-04-canonical",
-        "model_id": "model-gemini-3-1-pro-4768a082b6c248b2",
-        "model_configuration": "Gemini-3.1-Pro",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-3-1-pro",
-        "model_family_id": "google-gemini-3-1-pro",
-        "model": "Gemini-3.1-Pro",
-        "organization": "Google",
-        "score": 0.723,
-        "input_score": 72.3,
-        "input_unit": "percentage_points",
-        "reported_cost_per_task": null,
-        "metric_id": "qcaleval-zero-shot-2026-04-metric-v1",
-        "protocol_id": "qcaleval-zero-shot-2026-04-source-export-v1",
-        "task_set_id": "qcaleval-zero-shot-2026-04-canonical",
-        "metric": "Mean",
-        "score_role": "canonical",
-        "score_series_id": "qcaleval-zero-shot-2026-04-canonical-score",
-        "evaluation_protocol": "QCalEval April-2026 snapshot, 243 samples, zero-shot single-query plot, Table 3 six-axis mean; MM-ICL and tuned variants excluded.",
-        "model_release_date": "2026-02-19",
-        "evaluation_date": null,
-        "result_public_date": "2026-04-28",
-        "source_publication_date": "2026-04-28",
-        "observation_date": "2026-02-19",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-02-19",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2604-25884-acd312af1da82bec"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2604-25884-acd312af1da82bec"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-04-28",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2026-04-28",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-02-19",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-04-28",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2604-25884-acd312af1da82bec",
-          "resource-https-github-com-nvidia-qcaleval-65e22bfb55c66064"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2604-25884-acd312af1da82bec"
-        ],
-        "source": "https://arxiv.org/abs/2604.25884",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-qcal-gemini31-84204798989f7a04"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "qcal-gemini31"
-        ],
-        "plot_date": "2026-04-28",
-        "frontier_observation_ids": [
-          "obs-0-586-9acd056af3f5ad48",
-          "obs-0-646-917701a786c94b6f",
-          "obs-0-678-9c9ee1fa8e1dd77c",
-          "obs-0-723-133d63f60c9828c7"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-723-133d63f60c9828c7",
-        "benchmark_id": "qcaleval-zero-shot-2026-04",
-        "benchmark_version_id": "qcaleval-zero-shot-2026-04-canonical",
-        "model_id": "model-gemini-3-1-pro-4768a082b6c248b2",
-        "model_configuration": "Gemini-3.1-Pro",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-3-1-pro",
-        "model_family_id": "google-gemini-3-1-pro",
-        "model": "Gemini-3.1-Pro",
-        "organization": "Google",
-        "score": 0.723,
-        "input_score": 72.3,
-        "input_unit": "percentage_points",
-        "reported_cost_per_task": null,
-        "metric_id": "qcaleval-zero-shot-2026-04-metric-v1",
-        "protocol_id": "qcaleval-zero-shot-2026-04-source-export-v1",
-        "task_set_id": "qcaleval-zero-shot-2026-04-canonical",
-        "metric": "Mean",
-        "score_role": "canonical",
-        "score_series_id": "qcaleval-zero-shot-2026-04-canonical-score",
-        "evaluation_protocol": "QCalEval April-2026 snapshot, 243 samples, zero-shot single-query plot, Table 3 six-axis mean; MM-ICL and tuned variants excluded.",
-        "model_release_date": "2026-02-19",
-        "evaluation_date": null,
-        "result_public_date": "2026-04-28",
-        "source_publication_date": "2026-04-28",
-        "observation_date": "2026-02-19",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-02-19",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2604-25884-acd312af1da82bec"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2604-25884-acd312af1da82bec"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-04-28",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2026-04-28",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-02-19",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-04-28",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2604-25884-acd312af1da82bec",
-          "resource-https-github-com-nvidia-qcaleval-65e22bfb55c66064"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2604-25884-acd312af1da82bec"
-        ],
-        "source": "https://arxiv.org/abs/2604.25884",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-qcal-gemini31-84204798989f7a04"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "qcal-gemini31"
-        ],
-        "plot_date": "2026-04-28",
-        "frontier_observation_ids": [
-          "obs-0-586-9acd056af3f5ad48",
-          "obs-0-646-917701a786c94b6f",
-          "obs-0-678-9c9ee1fa8e1dd77c",
-          "obs-0-723-133d63f60c9828c7"
         ]
       }
     ],
@@ -679,7 +499,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-04-28",
@@ -769,7 +589,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-04-28",
@@ -809,97 +629,6 @@
         ]
       }
     ],
-    "historical_frontier": [
-      {
-        "observation_id": "obs-0-723-133d63f60c9828c7",
-        "benchmark_id": "qcaleval-zero-shot-2026-04",
-        "benchmark_version_id": "qcaleval-zero-shot-2026-04-canonical",
-        "model_id": "model-gemini-3-1-pro-4768a082b6c248b2",
-        "model_configuration": "Gemini-3.1-Pro",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-3-1-pro",
-        "model_family_id": "google-gemini-3-1-pro",
-        "model": "Gemini-3.1-Pro",
-        "organization": "Google",
-        "score": 0.723,
-        "input_score": 72.3,
-        "input_unit": "percentage_points",
-        "reported_cost_per_task": null,
-        "metric_id": "qcaleval-zero-shot-2026-04-metric-v1",
-        "protocol_id": "qcaleval-zero-shot-2026-04-source-export-v1",
-        "task_set_id": "qcaleval-zero-shot-2026-04-canonical",
-        "metric": "Mean",
-        "score_role": "canonical",
-        "score_series_id": "qcaleval-zero-shot-2026-04-canonical-score",
-        "evaluation_protocol": "QCalEval April-2026 snapshot, 243 samples, zero-shot single-query plot, Table 3 six-axis mean; MM-ICL and tuned variants excluded.",
-        "model_release_date": "2026-02-19",
-        "evaluation_date": null,
-        "result_public_date": "2026-04-28",
-        "source_publication_date": "2026-04-28",
-        "observation_date": "2026-02-19",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-02-19",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2604-25884-acd312af1da82bec"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2604-25884-acd312af1da82bec"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-04-28",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2026-04-28",
-        "date_kind": "result first-public date",
-        "capability_date": "2026-02-19",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-04-28",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2604-25884-acd312af1da82bec",
-          "resource-https-github-com-nvidia-qcaleval-65e22bfb55c66064"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2604-25884-acd312af1da82bec"
-        ],
-        "source": "https://arxiv.org/abs/2604.25884",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-qcal-gemini31-84204798989f7a04"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "qcal-gemini31"
-        ],
-        "plot_date": "2026-04-28",
-        "frontier_observation_ids": [
-          "obs-0-586-9acd056af3f5ad48",
-          "obs-0-646-917701a786c94b6f",
-          "obs-0-678-9c9ee1fa8e1dd77c",
-          "obs-0-723-133d63f60c9828c7"
-        ]
-      }
-    ],
-    "retrospective_observations": [],
     "observed_frontier": 0.723,
     "capability_frontier_value": 0.723,
     "reported_frontier_value": 0.723,
@@ -914,11 +643,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 148
+        "days": 182
       },
       "T90": {
         "status": "right_censored",
-        "days": 148
+        "days": 182
       }
     },
     "capability_threshold_days": {
@@ -929,11 +658,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 148
+        "days": 182
       },
       "T90": {
         "status": "right_censored",
-        "days": 148
+        "days": 182
       }
     },
     "reported_threshold_days": {
@@ -944,11 +673,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 148
+        "days": 182
       },
       "T90": {
         "status": "right_censored",
-        "days": 148
+        "days": 182
       }
     },
     "velocity_180d": null,

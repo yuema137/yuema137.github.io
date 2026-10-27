@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -104,7 +104,113 @@
       "progress_target": 1.0,
       "lifecycle_eligible": true
     },
-    "auxiliary_score_series": [],
+    "auxiliary_score_series": [
+      {
+        "series_id": "browsecomp-auxiliary-browsecomp-vendor-reported-kimi-harness",
+        "role": "auxiliary",
+        "label": "Vendor-reported / Kimi browsing harness",
+        "metric_id": "browsecomp-metric-v1",
+        "metric_name": "Score",
+        "protocol_id": "browsecomp-vendor-reported-kimi-harness",
+        "task_set_id": "browsecomp-1266-vendor-harness",
+        "lifecycle_eligible": false,
+        "explanation": {
+          "en": "Self-reported by Moonshot with its own browsing agent (context compaction at 200K tokens, up to 500 steps). No independent BrowseComp run of Kimi K3.1 Pro was found on 2026-10-27, and comparable vendor-reported scores at or above 90% for other models were published before this one, so this row is shown as supporting evidence and does not set the canonical frontier or saturation timing.",
+          "zh": "Moonshot \u7528\u81ea\u5bb6 browsing agent \u81ea\u884c\u62a5\u544a\u7684\u6210\u7ee9\uff08200K token \u65f6\u538b\u7f29\u4e0a\u4e0b\u6587\uff0c\u6700\u591a 500 \u6b65\uff09\u3002\u622a\u81f3 2026-10-27 \u6ca1\u6709\u627e\u5230 Kimi K3.1 Pro \u7684\u72ec\u7acb BrowseComp \u7ed3\u679c\uff0c\u800c\u4e14\u5176\u4ed6\u6a21\u578b\u5728\u6b64\u4e4b\u524d\u5df2\u6709 90% \u4ee5\u4e0a\u7684\u540c\u7c7b\u5382\u5546\u81ea\u62a5\u6210\u7ee9\uff0c\u6240\u4ee5\u8fd9\u4e00\u884c\u53ea\u4f5c\u4e3a\u8f85\u52a9\u8bc1\u636e\u5c55\u793a\uff0c\u4e0d\u51b3\u5b9a\u4e3b\u5e8f\u5217\u524d\u6cbf\uff0c\u4e5f\u4e0d\u51b3\u5b9a\u9971\u548c\u65f6\u95f4\u3002"
+        },
+        "observation_ids": [
+          "obs-0-921-f13334386e674039"
+        ],
+        "frontier_events": [
+          {
+            "observation_id": "obs-0-921-f13334386e674039",
+            "benchmark_id": "browsecomp",
+            "benchmark_version_id": "browsecomp-canonical",
+            "model_id": "model-kimi-k3-1-pro-max-1e6dd7b5888524e4",
+            "model_configuration": "kimi-k3.1-pro_max",
+            "model_identity_organization": "moonshot",
+            "model_label_id": "kimi-k3-1-pro-max",
+            "model_family_id": "moonshot-kimi-k3-1-pro",
+            "model": "Kimi K3.1 Pro (max)",
+            "organization": "Moonshot",
+            "score": 0.921,
+            "input_score": 0.921,
+            "input_unit": "fraction",
+            "reported_cost_per_task": null,
+            "metric_id": "browsecomp-metric-v1",
+            "protocol_id": "browsecomp-vendor-reported-kimi-harness",
+            "task_set_id": "browsecomp-1266-vendor-harness",
+            "metric": "Score",
+            "score_role": "auxiliary",
+            "score_series_id": "browsecomp-auxiliary-browsecomp-vendor-reported-kimi-harness",
+            "evaluation_protocol": "Self-reported by Moonshot with its own browsing agent (context compaction at 200K tokens, up to 500 steps). No independent BrowseComp run of Kimi K3.1 Pro was found on 2026-10-27, and comparable vendor-reported scores at or above 90% for other models were published before this one, so this row is shown as supporting evidence and does not set the canonical frontier or saturation timing.",
+            "auxiliary_metadata": {
+              "protocol_id": "browsecomp-vendor-reported-kimi-harness",
+              "task_set_id": "browsecomp-1266-vendor-harness",
+              "label": "Vendor-reported / Kimi browsing harness",
+              "explanation": {
+                "en": "Self-reported by Moonshot with its own browsing agent (context compaction at 200K tokens, up to 500 steps). No independent BrowseComp run of Kimi K3.1 Pro was found on 2026-10-27, and comparable vendor-reported scores at or above 90% for other models were published before this one, so this row is shown as supporting evidence and does not set the canonical frontier or saturation timing.",
+                "zh": "Moonshot \u7528\u81ea\u5bb6 browsing agent \u81ea\u884c\u62a5\u544a\u7684\u6210\u7ee9\uff08200K token \u65f6\u538b\u7f29\u4e0a\u4e0b\u6587\uff0c\u6700\u591a 500 \u6b65\uff09\u3002\u622a\u81f3 2026-10-27 \u6ca1\u6709\u627e\u5230 Kimi K3.1 Pro \u7684\u72ec\u7acb BrowseComp \u7ed3\u679c\uff0c\u800c\u4e14\u5176\u4ed6\u6a21\u578b\u5728\u6b64\u4e4b\u524d\u5df2\u6709 90% \u4ee5\u4e0a\u7684\u540c\u7c7b\u5382\u5546\u81ea\u62a5\u6210\u7ee9\uff0c\u6240\u4ee5\u8fd9\u4e00\u884c\u53ea\u4f5c\u4e3a\u8f85\u52a9\u8bc1\u636e\u5c55\u793a\uff0c\u4e0d\u51b3\u5b9a\u4e3b\u5e8f\u5217\u524d\u6cbf\uff0c\u4e5f\u4e0d\u51b3\u5b9a\u9971\u548c\u65f6\u95f4\u3002"
+              }
+            },
+            "model_release_date": "2026-10-23",
+            "evaluation_date": null,
+            "result_public_date": null,
+            "source_publication_date": null,
+            "observation_date": "2026-10-23",
+            "observation_date_precision": "day",
+            "observation_date_sources": [
+              {
+                "date": "2026-10-23",
+                "kind": "model_release_date",
+                "precision": "day",
+                "resource_ids": [
+                  "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
+                ]
+              }
+            ],
+            "observation_date_source_ids": [
+              "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
+            ],
+            "evaluation_date_sources": [],
+            "score_publication_date_sources": [],
+            "ingested_at": "2026-10-27",
+            "date_precision": "day",
+            "date_notes": "A score-publication date is not present in the source export.",
+            "date": "2026-10-23",
+            "date_kind": "earliest_observation_evidence_date",
+            "capability_date": "2026-10-23",
+            "capability_date_meaning": "earliest_observation_evidence_date",
+            "reported_date_meaning": "result_public_date",
+            "historical_frontier_date": null,
+            "temporal_class": "historical_or_unknown",
+            "retrospective": false,
+            "capability_frontier_eligible": false,
+            "historical_frontier_eligible": false,
+            "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
+            "contemporaneous": true,
+            "source_ids": [
+              "resource-https-openai-com-index-browsecomp-13a8c4bf46a315c2",
+              "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
+            ],
+            "score_source_ids": [
+              "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
+            ],
+            "source": "https://www.kimi.com/blog/kimi-k3-1-pro",
+            "notes": "Operational evaluation timeline only; not a historical public-result date.",
+            "evidence_ids": [
+              "evidence-auxiliary-explanation-en-self-reported-by-moonsh-f52776b8ea0bf631"
+            ],
+            "evidence_count": 1,
+            "source_row_ids": [],
+            "plot_date": "2026-10-23",
+            "frontier_observation_ids": [
+              "obs-0-921-f13334386e674039"
+            ]
+          }
+        ]
+      }
+    ],
     "benchmark_version_id": "browsecomp-canonical",
     "summary": {
       "en": "BrowseComp tests whether a browsing agent can find hard-to-locate facts that require persistent, multi-step web research.",
@@ -122,8 +228,8 @@
       }
     },
     "evaluation_target": "environment_outcome",
-    "observation_count": 5,
-    "evidence_record_count": 5,
+    "observation_count": 6,
+    "evidence_record_count": 6,
     "observations": [
       {
         "observation_id": "obs-0-006-5666e35b37b27c08",
@@ -168,7 +274,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2024-05-13",
@@ -240,7 +346,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2024-05-13",
@@ -312,7 +418,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-02-27",
@@ -384,7 +490,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2024-09-12",
@@ -456,7 +562,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-04-10",
@@ -484,170 +590,88 @@
         ],
         "evidence_count": 1,
         "source_row_ids": []
-      }
-    ],
-    "frontier": [
+      },
       {
-        "observation_id": "obs-0-515-8a42965b7def7019",
+        "observation_id": "obs-0-921-f13334386e674039",
         "benchmark_id": "browsecomp",
         "benchmark_version_id": "browsecomp-canonical",
-        "model_id": "model-deep-research-bb2f23fb82d532f1",
-        "model_configuration": "deep-research",
-        "model_identity_organization": "openai",
-        "model_label_id": "deep-research",
-        "model_family_id": "openai-deep-research",
-        "model": "Deep Research",
-        "organization": "OpenAI",
-        "score": 0.515,
-        "input_score": 0.515,
+        "model_id": "model-kimi-k3-1-pro-max-1e6dd7b5888524e4",
+        "model_configuration": "kimi-k3.1-pro_max",
+        "model_identity_organization": "moonshot",
+        "model_label_id": "kimi-k3-1-pro-max",
+        "model_family_id": "moonshot-kimi-k3-1-pro",
+        "model": "Kimi K3.1 Pro (max)",
+        "organization": "Moonshot",
+        "score": 0.921,
+        "input_score": 0.921,
         "input_unit": "fraction",
         "reported_cost_per_task": null,
         "metric_id": "browsecomp-metric-v1",
-        "protocol_id": "browsecomp-source-export-v1",
-        "task_set_id": "browsecomp-canonical",
+        "protocol_id": "browsecomp-vendor-reported-kimi-harness",
+        "task_set_id": "browsecomp-1266-vendor-harness",
         "metric": "Score",
-        "score_role": "canonical",
-        "score_series_id": "browsecomp-canonical-score",
-        "evaluation_protocol": "BrowseComp official 1,266-task benchmark; browsing availability and agent scaffold remain part of each observation's setup.",
-        "model_release_date": "2025-04-10",
+        "score_role": "auxiliary",
+        "score_series_id": "browsecomp-auxiliary-browsecomp-vendor-reported-kimi-harness",
+        "evaluation_protocol": "Self-reported by Moonshot with its own browsing agent (context compaction at 200K tokens, up to 500 steps). No independent BrowseComp run of Kimi K3.1 Pro was found on 2026-10-27, and comparable vendor-reported scores at or above 90% for other models were published before this one, so this row is shown as supporting evidence and does not set the canonical frontier or saturation timing.",
+        "auxiliary_metadata": {
+          "protocol_id": "browsecomp-vendor-reported-kimi-harness",
+          "task_set_id": "browsecomp-1266-vendor-harness",
+          "label": "Vendor-reported / Kimi browsing harness",
+          "explanation": {
+            "en": "Self-reported by Moonshot with its own browsing agent (context compaction at 200K tokens, up to 500 steps). No independent BrowseComp run of Kimi K3.1 Pro was found on 2026-10-27, and comparable vendor-reported scores at or above 90% for other models were published before this one, so this row is shown as supporting evidence and does not set the canonical frontier or saturation timing.",
+            "zh": "Moonshot \u7528\u81ea\u5bb6 browsing agent \u81ea\u884c\u62a5\u544a\u7684\u6210\u7ee9\uff08200K token \u65f6\u538b\u7f29\u4e0a\u4e0b\u6587\uff0c\u6700\u591a 500 \u6b65\uff09\u3002\u622a\u81f3 2026-10-27 \u6ca1\u6709\u627e\u5230 Kimi K3.1 Pro \u7684\u72ec\u7acb BrowseComp \u7ed3\u679c\uff0c\u800c\u4e14\u5176\u4ed6\u6a21\u578b\u5728\u6b64\u4e4b\u524d\u5df2\u6709 90% \u4ee5\u4e0a\u7684\u540c\u7c7b\u5382\u5546\u81ea\u62a5\u6210\u7ee9\uff0c\u6240\u4ee5\u8fd9\u4e00\u884c\u53ea\u4f5c\u4e3a\u8f85\u52a9\u8bc1\u636e\u5c55\u793a\uff0c\u4e0d\u51b3\u5b9a\u4e3b\u5e8f\u5217\u524d\u6cbf\uff0c\u4e5f\u4e0d\u51b3\u5b9a\u9971\u548c\u65f6\u95f4\u3002"
+          }
+        },
+        "model_release_date": "2026-10-23",
         "evaluation_date": null,
         "result_public_date": null,
         "source_publication_date": null,
-        "observation_date": "2025-04-10",
+        "observation_date": "2026-10-23",
         "observation_date_precision": "day",
         "observation_date_sources": [
           {
-            "date": "2025-04-10",
+            "date": "2026-10-23",
             "kind": "model_release_date",
             "precision": "day",
             "resource_ids": [
-              "resource-https-openai-com-index-browsecomp-13a8c4bf46a315c2"
+              "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
             ]
           }
         ],
         "observation_date_source_ids": [
-          "resource-https-openai-com-index-browsecomp-13a8c4bf46a315c2"
+          "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2025-04-10",
+        "date": "2026-10-23",
         "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-04-10",
+        "capability_date": "2026-10-23",
         "capability_date_meaning": "earliest_observation_evidence_date",
         "reported_date_meaning": "result_public_date",
         "historical_frontier_date": null,
         "temporal_class": "historical_or_unknown",
         "retrospective": false,
-        "capability_frontier_eligible": true,
+        "capability_frontier_eligible": false,
         "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "eligibility_reason": "Auxiliary protocol: excluded from canonical frontiers and lifecycle metrics.",
         "contemporaneous": true,
         "source_ids": [
-          "resource-https-openai-com-index-browsecomp-13a8c4bf46a315c2"
+          "resource-https-openai-com-index-browsecomp-13a8c4bf46a315c2",
+          "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
         ],
         "score_source_ids": [
-          "resource-https-openai-com-index-browsecomp-13a8c4bf46a315c2"
+          "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
         ],
-        "source": "https://openai.com/index/browsecomp",
+        "source": "https://www.kimi.com/blog/kimi-k3-1-pro",
         "notes": "Operational evaluation timeline only; not a historical public-result date.",
         "evidence_ids": [
-          "evidence-model-version-deep-research-name-deep-research-n-77849bad0a771288"
+          "evidence-auxiliary-explanation-en-self-reported-by-moonsh-f52776b8ea0bf631"
         ],
         "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2025-04-10",
-        "frontier_observation_ids": [
-          "obs-0-006-5666e35b37b27c08",
-          "obs-0-009-6934d8f240405f6a",
-          "obs-0-019-3b6c9990d1b41086",
-          "obs-0-099-ff6613f0edf58b38",
-          "obs-0-515-8a42965b7def7019"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-515-8a42965b7def7019",
-        "benchmark_id": "browsecomp",
-        "benchmark_version_id": "browsecomp-canonical",
-        "model_id": "model-deep-research-bb2f23fb82d532f1",
-        "model_configuration": "deep-research",
-        "model_identity_organization": "openai",
-        "model_label_id": "deep-research",
-        "model_family_id": "openai-deep-research",
-        "model": "Deep Research",
-        "organization": "OpenAI",
-        "score": 0.515,
-        "input_score": 0.515,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "browsecomp-metric-v1",
-        "protocol_id": "browsecomp-source-export-v1",
-        "task_set_id": "browsecomp-canonical",
-        "metric": "Score",
-        "score_role": "canonical",
-        "score_series_id": "browsecomp-canonical-score",
-        "evaluation_protocol": "BrowseComp official 1,266-task benchmark; browsing availability and agent scaffold remain part of each observation's setup.",
-        "model_release_date": "2025-04-10",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2025-04-10",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-04-10",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-openai-com-index-browsecomp-13a8c4bf46a315c2"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-openai-com-index-browsecomp-13a8c4bf46a315c2"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2025-04-10",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-04-10",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-openai-com-index-browsecomp-13a8c4bf46a315c2"
-        ],
-        "score_source_ids": [
-          "resource-https-openai-com-index-browsecomp-13a8c4bf46a315c2"
-        ],
-        "source": "https://openai.com/index/browsecomp",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-model-version-deep-research-name-deep-research-n-77849bad0a771288"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2025-04-10",
-        "frontier_observation_ids": [
-          "obs-0-006-5666e35b37b27c08",
-          "obs-0-009-6934d8f240405f6a",
-          "obs-0-019-3b6c9990d1b41086",
-          "obs-0-099-ff6613f0edf58b38",
-          "obs-0-515-8a42965b7def7019"
-        ]
+        "source_row_ids": []
       }
     ],
     "capability_frontier": [
@@ -694,7 +718,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-04-10",
@@ -733,8 +757,6 @@
       }
     ],
     "reported_frontier": [],
-    "historical_frontier": [],
-    "retrospective_observations": [],
     "observed_frontier": 0.515,
     "capability_frontier_value": 0.515,
     "reported_frontier_value": null,
@@ -749,11 +771,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 531
+        "days": 565
       },
       "T90": {
         "status": "right_censored",
-        "days": 531
+        "days": 565
       }
     },
     "capability_threshold_days": {
@@ -764,11 +786,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 531
+        "days": 565
       },
       "T90": {
         "status": "right_censored",
-        "days": 531
+        "days": 565
       }
     },
     "reported_threshold_days": {

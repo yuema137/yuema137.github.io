@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -166,7 +166,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2024-05-13",
@@ -238,7 +238,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2024-06-20",
@@ -310,7 +310,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2024-08-01",
@@ -382,7 +382,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2024-05-23",
@@ -410,168 +410,6 @@
         ],
         "evidence_count": 1,
         "source_row_ids": []
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-519-31c17b6fcc321488",
-        "benchmark_id": "mmmu-pro",
-        "benchmark_version_id": "mmmu-pro-canonical",
-        "model_id": "model-gpt-4o-2024-05-13-a8b4b8c99c9f9f6d",
-        "model_configuration": "gpt-4o-2024-05-13",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-4o-0513",
-        "model_family_id": "openai-gpt-4o",
-        "model": "GPT-4o (0513)",
-        "organization": "OpenAI",
-        "score": 0.519,
-        "input_score": 0.519,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "mmmu-pro-metric-v1",
-        "protocol_id": "mmmu-pro-source-export-v1",
-        "task_set_id": "mmmu-pro-canonical",
-        "metric": "Score",
-        "score_role": "canonical",
-        "score_series_id": "mmmu-pro-canonical-score",
-        "evaluation_protocol": "MMMU-Pro fixed release; overall score is the official average of Standard-10 and Vision settings. Original MMMU and later dynamic leaderboard configurations remain separate.",
-        "model_release_date": "2024-05-13",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2024-05-13",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-05-13",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-huggingface-co-datasets-mmmu-mmmu-pro-e184b8b2a6c06bd2"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-huggingface-co-datasets-mmmu-mmmu-pro-e184b8b2a6c06bd2"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2024-09-05",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-05-13",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-huggingface-co-datasets-mmmu-mmmu-pro-e184b8b2a6c06bd2"
-        ],
-        "score_source_ids": [
-          "resource-https-huggingface-co-datasets-mmmu-mmmu-pro-e184b8b2a6c06bd2"
-        ],
-        "source": "https://huggingface.co/datasets/MMMU/MMMU_Pro",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-model-version-gpt-4o-2024-05-13-name-gpt-4o-0513-a488dfc908c921cc"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2024-09-05",
-        "frontier_observation_ids": [
-          "obs-0-435-3e5079223c8e72c8",
-          "obs-0-469-924f9bf0ef1c4dc9",
-          "obs-0-515-11ec0d9213d92070",
-          "obs-0-519-31c17b6fcc321488"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-519-31c17b6fcc321488",
-        "benchmark_id": "mmmu-pro",
-        "benchmark_version_id": "mmmu-pro-canonical",
-        "model_id": "model-gpt-4o-2024-05-13-a8b4b8c99c9f9f6d",
-        "model_configuration": "gpt-4o-2024-05-13",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-4o-0513",
-        "model_family_id": "openai-gpt-4o",
-        "model": "GPT-4o (0513)",
-        "organization": "OpenAI",
-        "score": 0.519,
-        "input_score": 0.519,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "mmmu-pro-metric-v1",
-        "protocol_id": "mmmu-pro-source-export-v1",
-        "task_set_id": "mmmu-pro-canonical",
-        "metric": "Score",
-        "score_role": "canonical",
-        "score_series_id": "mmmu-pro-canonical-score",
-        "evaluation_protocol": "MMMU-Pro fixed release; overall score is the official average of Standard-10 and Vision settings. Original MMMU and later dynamic leaderboard configurations remain separate.",
-        "model_release_date": "2024-05-13",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2024-05-13",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-05-13",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-huggingface-co-datasets-mmmu-mmmu-pro-e184b8b2a6c06bd2"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-huggingface-co-datasets-mmmu-mmmu-pro-e184b8b2a6c06bd2"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2024-09-05",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-05-13",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-huggingface-co-datasets-mmmu-mmmu-pro-e184b8b2a6c06bd2"
-        ],
-        "score_source_ids": [
-          "resource-https-huggingface-co-datasets-mmmu-mmmu-pro-e184b8b2a6c06bd2"
-        ],
-        "source": "https://huggingface.co/datasets/MMMU/MMMU_Pro",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-model-version-gpt-4o-2024-05-13-name-gpt-4o-0513-a488dfc908c921cc"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2024-09-05",
-        "frontier_observation_ids": [
-          "obs-0-435-3e5079223c8e72c8",
-          "obs-0-469-924f9bf0ef1c4dc9",
-          "obs-0-515-11ec0d9213d92070",
-          "obs-0-519-31c17b6fcc321488"
-        ]
       }
     ],
     "capability_frontier": [
@@ -618,7 +456,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2024-09-05",
@@ -656,8 +494,6 @@
       }
     ],
     "reported_frontier": [],
-    "historical_frontier": [],
-    "retrospective_observations": [],
     "observed_frontier": 0.519,
     "capability_frontier_value": 0.519,
     "reported_frontier_value": null,
@@ -672,11 +508,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 748
+        "days": 782
       },
       "T90": {
         "status": "right_censored",
-        "days": 748
+        "days": 782
       }
     },
     "capability_threshold_days": {
@@ -687,11 +523,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 748
+        "days": 782
       },
       "T90": {
         "status": "right_censored",
-        "days": 748
+        "days": 782
       }
     },
     "reported_threshold_days": {

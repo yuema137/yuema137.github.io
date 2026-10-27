@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -174,7 +174,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-03-24",
@@ -257,7 +257,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-04-05",
@@ -339,7 +339,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-02-15",
@@ -420,7 +420,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-06-20",
@@ -501,7 +501,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-05-13",
@@ -531,188 +531,6 @@
         "evidence_count": 1,
         "source_row_ids": [
           "matcha-gpt4o"
-        ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-5907-48c9ba12ee002000",
-        "benchmark_id": "matcha-v1-zeroshot",
-        "benchmark_version_id": "matcha-v1-zeroshot-canonical",
-        "model_id": "model-gpt-4o-d491e46221c560b3",
-        "model_configuration": "GPT-4o",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-4o",
-        "model_family_id": "openai-gpt-4o",
-        "model": "GPT-4o",
-        "organization": "OpenAI",
-        "score": 0.5907,
-        "input_score": 0.5907,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "matcha-v1-zeroshot-metric-v1",
-        "protocol_id": "matcha-v1-zeroshot-source-export-v1",
-        "task_set_id": "matcha-v1-zeroshot-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "matcha-v1-zeroshot-canonical-score",
-        "evaluation_protocol": "MatCha v1 fixed 1,500-item full suite, generic zero-shot, direct option only, max 32 new tokens, Table 1 MatCha All. Few-shot, CoT, no-image, and subset columns are excluded.",
-        "model_release_date": "2024-05-13",
-        "evaluation_date": null,
-        "result_public_date": "2025-09-11",
-        "source_publication_date": "2025-09-11",
-        "observation_date": "2024-05-13",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-05-13",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2509-09307-352d4c556b714f67"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2509-09307-352d4c556b714f67"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2025-09-11",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-09-11",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-05-13",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2025-09-11",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2509-09307-352d4c556b714f67",
-          "resource-https-arxiv-org-abs-2509-09307v1-12b917853c017b04"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2509-09307-352d4c556b714f67"
-        ],
-        "source": "https://arxiv.org/abs/2509.09307",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-matcha-gpt4o-322b31935aa714e0"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "matcha-gpt4o"
-        ],
-        "plot_date": "2025-09-11",
-        "frontier_observation_ids": [
-          "obs-0-4993-e89d72ad4b5d4e39",
-          "obs-0-548-1f40cdfd4c6d15eb",
-          "obs-0-564-4248d77cf0f67739",
-          "obs-0-5773-a31030ffd004150b",
-          "obs-0-5907-48c9ba12ee002000"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-5907-48c9ba12ee002000",
-        "benchmark_id": "matcha-v1-zeroshot",
-        "benchmark_version_id": "matcha-v1-zeroshot-canonical",
-        "model_id": "model-gpt-4o-d491e46221c560b3",
-        "model_configuration": "GPT-4o",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-4o",
-        "model_family_id": "openai-gpt-4o",
-        "model": "GPT-4o",
-        "organization": "OpenAI",
-        "score": 0.5907,
-        "input_score": 0.5907,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "matcha-v1-zeroshot-metric-v1",
-        "protocol_id": "matcha-v1-zeroshot-source-export-v1",
-        "task_set_id": "matcha-v1-zeroshot-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "matcha-v1-zeroshot-canonical-score",
-        "evaluation_protocol": "MatCha v1 fixed 1,500-item full suite, generic zero-shot, direct option only, max 32 new tokens, Table 1 MatCha All. Few-shot, CoT, no-image, and subset columns are excluded.",
-        "model_release_date": "2024-05-13",
-        "evaluation_date": null,
-        "result_public_date": "2025-09-11",
-        "source_publication_date": "2025-09-11",
-        "observation_date": "2024-05-13",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-05-13",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2509-09307-352d4c556b714f67"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2509-09307-352d4c556b714f67"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2025-09-11",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-09-11",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-05-13",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2025-09-11",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2509-09307-352d4c556b714f67",
-          "resource-https-arxiv-org-abs-2509-09307v1-12b917853c017b04"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2509-09307-352d4c556b714f67"
-        ],
-        "source": "https://arxiv.org/abs/2509.09307",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-matcha-gpt4o-322b31935aa714e0"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "matcha-gpt4o"
-        ],
-        "plot_date": "2025-09-11",
-        "frontier_observation_ids": [
-          "obs-0-4993-e89d72ad4b5d4e39",
-          "obs-0-548-1f40cdfd4c6d15eb",
-          "obs-0-564-4248d77cf0f67739",
-          "obs-0-5773-a31030ffd004150b",
-          "obs-0-5907-48c9ba12ee002000"
         ]
       }
     ],
@@ -766,7 +584,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-09-11",
@@ -857,7 +675,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-09-11",
@@ -898,98 +716,6 @@
         ]
       }
     ],
-    "historical_frontier": [
-      {
-        "observation_id": "obs-0-5907-48c9ba12ee002000",
-        "benchmark_id": "matcha-v1-zeroshot",
-        "benchmark_version_id": "matcha-v1-zeroshot-canonical",
-        "model_id": "model-gpt-4o-d491e46221c560b3",
-        "model_configuration": "GPT-4o",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-4o",
-        "model_family_id": "openai-gpt-4o",
-        "model": "GPT-4o",
-        "organization": "OpenAI",
-        "score": 0.5907,
-        "input_score": 0.5907,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "matcha-v1-zeroshot-metric-v1",
-        "protocol_id": "matcha-v1-zeroshot-source-export-v1",
-        "task_set_id": "matcha-v1-zeroshot-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "matcha-v1-zeroshot-canonical-score",
-        "evaluation_protocol": "MatCha v1 fixed 1,500-item full suite, generic zero-shot, direct option only, max 32 new tokens, Table 1 MatCha All. Few-shot, CoT, no-image, and subset columns are excluded.",
-        "model_release_date": "2024-05-13",
-        "evaluation_date": null,
-        "result_public_date": "2025-09-11",
-        "source_publication_date": "2025-09-11",
-        "observation_date": "2024-05-13",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-05-13",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2509-09307-352d4c556b714f67"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2509-09307-352d4c556b714f67"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2025-09-11",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-09-11",
-        "date_kind": "result first-public date",
-        "capability_date": "2024-05-13",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2025-09-11",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2509-09307-352d4c556b714f67",
-          "resource-https-arxiv-org-abs-2509-09307v1-12b917853c017b04"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2509-09307-352d4c556b714f67"
-        ],
-        "source": "https://arxiv.org/abs/2509.09307",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-matcha-gpt4o-322b31935aa714e0"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "matcha-gpt4o"
-        ],
-        "plot_date": "2025-09-11",
-        "frontier_observation_ids": [
-          "obs-0-4993-e89d72ad4b5d4e39",
-          "obs-0-548-1f40cdfd4c6d15eb",
-          "obs-0-564-4248d77cf0f67739",
-          "obs-0-5773-a31030ffd004150b",
-          "obs-0-5907-48c9ba12ee002000"
-        ]
-      }
-    ],
-    "retrospective_observations": [],
     "observed_frontier": 0.5907,
     "capability_frontier_value": 0.5907,
     "reported_frontier_value": 0.5907,
@@ -999,43 +725,43 @@
     "threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 377
+        "days": 411
       },
       "T80": {
         "status": "right_censored",
-        "days": 377
+        "days": 411
       },
       "T90": {
         "status": "right_censored",
-        "days": 377
+        "days": 411
       }
     },
     "capability_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 377
+        "days": 411
       },
       "T80": {
         "status": "right_censored",
-        "days": 377
+        "days": 411
       },
       "T90": {
         "status": "right_censored",
-        "days": 377
+        "days": 411
       }
     },
     "reported_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 377
+        "days": 411
       },
       "T80": {
         "status": "right_censored",
-        "days": 377
+        "days": 411
       },
       "T90": {
         "status": "right_censored",
-        "days": 377
+        "days": 411
       }
     },
     "velocity_180d": null,

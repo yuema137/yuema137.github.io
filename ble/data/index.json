@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_index",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "source": "Curated benchmark exports; see resource registry for source lineage",
   "reference_organizations": [
     {
@@ -395,7 +395,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 2207
+          "days": 2241
         }
       },
       "velocity_180d": 0.000838703403565641,
@@ -592,9 +592,9 @@
       ],
       "score_format": "ratio",
       "score_decimals": null,
-      "capability_frontier_value": 0.96,
-      "normalized_progress": 0.9466666666666667,
-      "normalized_headroom": 0.053333333333333344,
+      "capability_frontier_value": 0.9640151515151515,
+      "normalized_progress": 0.952020202020202,
+      "normalized_headroom": 0.04797979797979801,
       "threshold_days": {
         "T50": {
           "status": "reached",
@@ -612,7 +612,7 @@
           "qualifying_observation_date": "2025-11-18"
         }
       },
-      "velocity_180d": 0.002341538461538464,
+      "velocity_180d": 0.0026238335508192005,
       "coverage": {
         "value": 1.0,
         "represented_organizations": [
@@ -684,7 +684,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 771
+          "days": 805
         }
       },
       "velocity_180d": 0.011979535615899253,
@@ -753,7 +753,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 1044
+          "days": 1078
         }
       },
       "velocity_180d": 0.012940676328502411,
@@ -817,11 +817,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 499
+          "days": 533
         },
         "T90": {
           "status": "right_censored",
-          "days": 499
+          "days": 533
         }
       },
       "velocity_180d": null,
@@ -884,11 +884,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 531
+          "days": 565
         },
         "T90": {
           "status": "right_censored",
-          "days": 531
+          "days": 565
         }
       },
       "velocity_180d": null,
@@ -949,11 +949,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 636
+          "days": 670
         },
         "T90": {
           "status": "right_censored",
-          "days": 636
+          "days": 670
         }
       },
       "velocity_180d": null,
@@ -1018,11 +1018,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 842
+          "days": 876
         },
         "T90": {
           "status": "right_censored",
-          "days": 842
+          "days": 876
         }
       },
       "velocity_180d": 0.0037649473684210565,
@@ -1087,11 +1087,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 1086
+          "days": 1120
         },
         "T90": {
           "status": "right_censored",
-          "days": 1086
+          "days": 1120
         }
       },
       "velocity_180d": 0.025565266903914592,
@@ -1154,11 +1154,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 842
+          "days": 876
         },
         "T90": {
           "status": "right_censored",
-          "days": 842
+          "days": 876
         }
       },
       "velocity_180d": null,
@@ -1209,9 +1209,9 @@
       ],
       "score_format": "ratio",
       "score_decimals": null,
-      "capability_frontier_value": 0.756,
-      "normalized_progress": 0.756,
-      "normalized_headroom": 0.244,
+      "capability_frontier_value": 0.76,
+      "normalized_progress": 0.76,
+      "normalized_headroom": 0.24,
       "threshold_days": {
         "T50": {
           "status": "at_release",
@@ -1220,14 +1220,14 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 379
+          "days": 413
         },
         "T90": {
           "status": "right_censored",
-          "days": 379
+          "days": 413
         }
       },
-      "velocity_180d": 0.003329375000000003,
+      "velocity_180d": 0.0034125560538116623,
       "coverage": {
         "value": 1.0,
         "represented_organizations": [
@@ -1301,13 +1301,14 @@
       },
       "velocity_180d": null,
       "coverage": {
-        "value": 0.8571428571428571,
+        "value": 1.0,
         "represented_organizations": [
           "OpenAI",
           "Anthropic",
           "Google",
           "DeepSeek",
           "Qwen",
+          "Meta",
           "xAI"
         ],
         "panel_size": 7,
@@ -1350,9 +1351,9 @@
       ],
       "score_format": "ratio",
       "score_decimals": null,
-      "capability_frontier_value": 0.925,
-      "normalized_progress": 0.925,
-      "normalized_headroom": 0.07499999999999996,
+      "capability_frontier_value": 0.9500000000000001,
+      "normalized_progress": 0.9500000000000001,
+      "normalized_headroom": 0.04999999999999993,
       "threshold_days": {
         "T50": {
           "status": "reached",
@@ -1370,7 +1371,7 @@
           "qualifying_observation_date": "2026-07-09"
         }
       },
-      "velocity_180d": 0.05557474285714287,
+      "velocity_180d": 0.015624866995073905,
       "coverage": {
         "value": 1.0,
         "represented_organizations": [
@@ -1400,7 +1401,7 @@
           "rule": "known reached T90 < 6 months"
         },
         "recently-saturated": {
-          "eligible": true,
+          "eligible": false,
           "rule": "T90 crossing within 3 months of snapshot"
         }
       },
@@ -1439,7 +1440,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 641
+          "days": 675
         }
       },
       "velocity_180d": 0.03495947598253275,
@@ -1519,11 +1520,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 89
+          "days": 123
         },
         "T90": {
           "status": "right_censored",
-          "days": 89
+          "days": 123
         }
       },
       "velocity_180d": null,
@@ -1593,7 +1594,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 320
+          "days": 354
         }
       },
       "velocity_180d": null,
@@ -1664,7 +1665,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 1437
+          "days": 1471
         }
       },
       "velocity_180d": 0.012755809523809527,
@@ -1869,11 +1870,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 2493
+          "days": 2527
         },
         "T90": {
           "status": "right_censored",
-          "days": 2493
+          "days": 2527
         }
       },
       "velocity_180d": 0.0036605063291139275,
@@ -1942,7 +1943,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 3424
+          "days": 3458
         }
       },
       "velocity_180d": 0.0040154893617021315,
@@ -2008,11 +2009,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 2702
+          "days": 2736
         },
         "T90": {
           "status": "right_censored",
-          "days": 2702
+          "days": 2736
         }
       },
       "velocity_180d": null,
@@ -2070,15 +2071,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 306
+          "days": 340
         },
         "T80": {
           "status": "right_censored",
-          "days": 306
+          "days": 340
         },
         "T90": {
           "status": "right_censored",
-          "days": 306
+          "days": 340
         }
       },
       "velocity_180d": 0.02607252173913044,
@@ -2148,15 +2149,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 571
+          "days": 605
         },
         "T80": {
           "status": "right_censored",
-          "days": 571
+          "days": 605
         },
         "T90": {
           "status": "right_censored",
-          "days": 571
+          "days": 605
         }
       },
       "velocity_180d": null,
@@ -2218,11 +2219,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 905
+          "days": 939
         },
         "T90": {
           "status": "right_censored",
-          "days": 905
+          "days": 939
         }
       },
       "velocity_180d": 0.0035305409836065564,
@@ -2289,7 +2290,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 482
+          "days": 516
         }
       },
       "velocity_180d": null,
@@ -2351,15 +2352,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 783
+          "days": 817
         },
         "T80": {
           "status": "right_censored",
-          "days": 783
+          "days": 817
         },
         "T90": {
           "status": "right_censored",
-          "days": 783
+          "days": 817
         }
       },
       "velocity_180d": 0.008316939890710386,
@@ -2425,11 +2426,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 467
+          "days": 501
         },
         "T90": {
           "status": "right_censored",
-          "days": 467
+          "days": 501
         }
       },
       "velocity_180d": 0.009533406593406575,
@@ -2487,9 +2488,9 @@
       ],
       "score_format": "ratio",
       "score_decimals": null,
-      "capability_frontier_value": 0.62037037037037,
-      "normalized_progress": 0.62037037037037,
-      "normalized_headroom": 0.37962962962963,
+      "capability_frontier_value": 0.668981481481482,
+      "normalized_progress": 0.668981481481482,
+      "normalized_headroom": 0.33101851851851805,
       "threshold_days": {
         "T50": {
           "status": "reached",
@@ -2498,14 +2499,14 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 797
+          "days": 831
         },
         "T90": {
           "status": "right_censored",
-          "days": 797
+          "days": 831
         }
       },
-      "velocity_180d": 0.004903350515463918,
+      "velocity_180d": 0.011306847545219757,
       "coverage": {
         "value": 1.0,
         "represented_organizations": [
@@ -2564,15 +2565,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 734
+          "days": 768
         },
         "T80": {
           "status": "right_censored",
-          "days": 734
+          "days": 768
         },
         "T90": {
           "status": "right_censored",
-          "days": 734
+          "days": 768
         }
       },
       "velocity_180d": 0.005519340659340655,
@@ -2627,7 +2628,7 @@
       ],
       "score_format": "number",
       "score_decimals": null,
-      "capability_frontier_value": 11181.87333333333,
+      "capability_frontier_value": 15514.701666666668,
       "normalized_progress": null,
       "normalized_headroom": null,
       "threshold_days": {
@@ -2644,7 +2645,7 @@
           "reason": "No defensible fixed floor and ceiling."
         }
       },
-      "velocity_180d": 700.0850594623649,
+      "velocity_180d": 1086.7236065396826,
       "coverage": {
         "value": 1.0,
         "represented_organizations": [
@@ -2712,11 +2713,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 53
+          "days": 87
         },
         "T90": {
           "status": "right_censored",
-          "days": 53
+          "days": 87
         }
       },
       "velocity_180d": null,
@@ -2865,11 +2866,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 519
+          "days": 553
         },
         "T90": {
           "status": "right_censored",
-          "days": 519
+          "days": 553
         }
       },
       "velocity_180d": 0.0354988380952381,
@@ -2931,11 +2932,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 546
+          "days": 580
         },
         "T90": {
           "status": "right_censored",
-          "days": 546
+          "days": 580
         }
       },
       "velocity_180d": null,
@@ -3010,7 +3011,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 167
+          "days": 201
         }
       },
       "velocity_180d": null,
@@ -3075,11 +3076,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 449
+          "days": 483
         },
         "T90": {
           "status": "right_censored",
-          "days": 449
+          "days": 483
         }
       },
       "velocity_180d": null,
@@ -3144,15 +3145,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 34
+          "days": 68
         },
         "T80": {
           "status": "right_censored",
-          "days": 34
+          "days": 68
         },
         "T90": {
           "status": "right_censored",
-          "days": 34
+          "days": 68
         }
       },
       "velocity_180d": null,
@@ -3217,11 +3218,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 335
+          "days": 369
         },
         "T90": {
           "status": "right_censored",
-          "days": 335
+          "days": 369
         }
       },
       "velocity_180d": null,
@@ -3287,11 +3288,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 230
+          "days": 264
         },
         "T90": {
           "status": "right_censored",
-          "days": 230
+          "days": 264
         }
       },
       "velocity_180d": 0.044452063492063494,
@@ -3346,9 +3347,9 @@
       ],
       "score_format": "ratio",
       "score_decimals": null,
-      "capability_frontier_value": 0.976,
-      "normalized_progress": 0.976,
-      "normalized_headroom": 0.02400000000000002,
+      "capability_frontier_value": 1.0,
+      "normalized_progress": 1.0,
+      "normalized_headroom": 0.0,
       "threshold_days": {
         "T50": {
           "status": "at_release",
@@ -3368,13 +3369,14 @@
       },
       "velocity_180d": null,
       "coverage": {
-        "value": 0.8571428571428571,
+        "value": 1.0,
         "represented_organizations": [
           "OpenAI",
           "Anthropic",
           "Google",
           "DeepSeek",
           "Qwen",
+          "Meta",
           "xAI"
         ],
         "panel_size": 7,
@@ -3490,9 +3492,9 @@
       ],
       "score_format": "ratio",
       "score_decimals": null,
-      "capability_frontier_value": 0.593,
-      "normalized_progress": 0.593,
-      "normalized_headroom": 0.40700000000000003,
+      "capability_frontier_value": 0.6,
+      "normalized_progress": 0.6,
+      "normalized_headroom": 0.4,
       "threshold_days": {
         "T50": {
           "status": "reached",
@@ -3501,11 +3503,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 112
+          "days": 146
         },
         "T90": {
           "status": "right_censored",
-          "days": 112
+          "days": 146
         }
       },
       "velocity_180d": null,
@@ -3575,11 +3577,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 126
+          "days": 160
         },
         "T90": {
           "status": "right_censored",
-          "days": 126
+          "days": 160
         }
       },
       "velocity_180d": null,
@@ -3645,11 +3647,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 125
+          "days": 159
         },
         "T90": {
           "status": "right_censored",
-          "days": 125
+          "days": 159
         }
       },
       "velocity_180d": null,
@@ -3722,7 +3724,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 140
+          "days": 174
         }
       },
       "velocity_180d": null,
@@ -3777,9 +3779,9 @@
       ],
       "score_format": "ratio",
       "score_decimals": null,
-      "capability_frontier_value": 0.664,
-      "normalized_progress": 0.664,
-      "normalized_headroom": 0.33599999999999997,
+      "capability_frontier_value": 0.706,
+      "normalized_progress": 0.706,
+      "normalized_headroom": 0.29400000000000004,
       "threshold_days": {
         "T50": {
           "status": "at_release",
@@ -3788,19 +3790,20 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 28
+          "days": 62
         },
         "T90": {
           "status": "right_censored",
-          "days": 28
+          "days": 62
         }
       },
       "velocity_180d": null,
       "coverage": {
-        "value": 0.42857142857142855,
+        "value": 0.5714285714285714,
         "represented_organizations": [
           "OpenAI",
           "Anthropic",
+          "DeepSeek",
           "xAI"
         ],
         "panel_size": 7,
@@ -3855,11 +3858,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 538
+          "days": 572
         },
         "T90": {
           "status": "right_censored",
-          "days": 538
+          "days": 572
         }
       },
       "velocity_180d": 0.030100204651162803,
@@ -3927,11 +3930,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 77
+          "days": 111
         },
         "T90": {
           "status": "right_censored",
-          "days": 77
+          "days": 111
         }
       },
       "velocity_180d": null,
@@ -4072,15 +4075,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 156
+          "days": 190
         },
         "T80": {
           "status": "right_censored",
-          "days": 156
+          "days": 190
         },
         "T90": {
           "status": "right_censored",
-          "days": 156
+          "days": 190
         }
       },
       "velocity_180d": null,
@@ -4211,15 +4214,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 135
+          "days": 169
         },
         "T80": {
           "status": "right_censored",
-          "days": 135
+          "days": 169
         },
         "T90": {
           "status": "right_censored",
-          "days": 135
+          "days": 169
         }
       },
       "velocity_180d": null,
@@ -4288,11 +4291,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 1037
+          "days": 1071
         },
         "T90": {
           "status": "right_censored",
-          "days": 1037
+          "days": 1071
         }
       },
       "velocity_180d": 0.0475253082706767,
@@ -4353,11 +4356,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 357
+          "days": 391
         },
         "T90": {
           "status": "right_censored",
-          "days": 357
+          "days": 391
         }
       },
       "velocity_180d": null,
@@ -4425,11 +4428,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 85
+          "days": 119
         },
         "T90": {
           "status": "right_censored",
-          "days": 85
+          "days": 119
         }
       },
       "velocity_180d": null,
@@ -4492,15 +4495,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 722
+          "days": 756
         },
         "T80": {
           "status": "right_censored",
-          "days": 722
+          "days": 756
         },
         "T90": {
           "status": "right_censored",
-          "days": 722
+          "days": 756
         }
       },
       "velocity_180d": 0.016833179723502303,
@@ -4560,9 +4563,9 @@
       ],
       "score_format": "ratio",
       "score_decimals": null,
-      "capability_frontier_value": 0.742,
-      "normalized_progress": 0.742,
-      "normalized_headroom": 0.258,
+      "capability_frontier_value": 0.77,
+      "normalized_progress": 0.77,
+      "normalized_headroom": 0.22999999999999998,
       "threshold_days": {
         "T50": {
           "status": "at_release",
@@ -4571,20 +4574,21 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 175
+          "days": 209
         },
         "T90": {
           "status": "right_censored",
-          "days": 175
+          "days": 209
         }
       },
-      "velocity_180d": null,
+      "velocity_180d": 0.03859316049272914,
       "coverage": {
-        "value": 0.8571428571428571,
+        "value": 1.0,
         "represented_organizations": [
           "OpenAI",
           "Anthropic",
           "Google",
+          "DeepSeek",
           "Qwen",
           "Meta",
           "xAI"
@@ -4593,7 +4597,7 @@
         "status": "high"
       },
       "cost_per_task": {
-        "value": 3.4698331108647453,
+        "value": 3.4438571028761062,
         "currency": "USD",
         "per_task": true,
         "method": "median of reported per-task values in the curated export",
@@ -4601,9 +4605,13 @@
           "resource-https-deepmind-google-models-model-cards-gemini--1867674ae3462202",
           "resource-https-deepswe-datacurve-ai-d404253d104c9262",
           "resource-https-docs-modelstudio-console-alibabacloud-com--6742ad46468fc647",
+          "resource-https-huggingface-co-deepseek-ai-deepseek-v4-1-f-cac24968e5aa0d5b",
           "resource-https-huggingface-co-xiaomimimo-mimo-v2-6-pro-rl-28584ca695de3349",
+          "resource-https-openai-com-index-introducing-gpt-6-1-sol-d6b9f5e651b1891e",
           "resource-https-openai-com-index-introducing-gpt-6-sol-and-73461b3e97af0d93",
           "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414",
+          "resource-https-www-anthropic-com-claude-sonnet-5-5-system-add74e2fa0d003e6",
+          "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec",
           "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067",
           "resource-https-x-ai-news-grok-4-7-39b901174b543376"
         ],
@@ -4662,11 +4670,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 84
+          "days": 118
         },
         "T90": {
           "status": "right_censored",
-          "days": 84
+          "days": 118
         }
       },
       "velocity_180d": null,
@@ -4691,7 +4699,9 @@
         "source_ids": [
           "resource-https-docs-modelstudio-console-alibabacloud-com--6742ad46468fc647",
           "resource-https-www-anthropic-com-claude-fable-e0f1ebb59adf2f6c",
+          "resource-https-www-anthropic-com-claude-haiku-5-5-system--64f682d56dcdee02",
           "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414",
+          "resource-https-www-anthropic-com-claude-sonnet-5-5-system-add74e2fa0d003e6",
           "resource-https-www-frontierswe-com-595e7d6ffd585872",
           "resource-https-x-ai-news-grok-4-6-66321e57ae7a5067"
         ],
@@ -4743,15 +4753,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 716
+          "days": 750
         },
         "T80": {
           "status": "right_censored",
-          "days": 716
+          "days": 750
         },
         "T90": {
           "status": "right_censored",
-          "days": 716
+          "days": 750
         }
       },
       "velocity_180d": null,
@@ -4814,15 +4824,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 713
+          "days": 747
         },
         "T80": {
           "status": "right_censored",
-          "days": 713
+          "days": 747
         },
         "T90": {
           "status": "right_censored",
-          "days": 713
+          "days": 747
         }
       },
       "velocity_180d": null,
@@ -4884,15 +4894,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 539
+          "days": 573
         },
         "T80": {
           "status": "right_censored",
-          "days": 539
+          "days": 573
         },
         "T90": {
           "status": "right_censored",
-          "days": 539
+          "days": 573
         }
       },
       "velocity_180d": null,
@@ -4957,11 +4967,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 1024
+          "days": 1058
         },
         "T90": {
           "status": "right_censored",
-          "days": 1024
+          "days": 1058
         }
       },
       "velocity_180d": null,
@@ -5024,11 +5034,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 748
+          "days": 782
         },
         "T90": {
           "status": "right_censored",
-          "days": 748
+          "days": 782
         }
       },
       "velocity_180d": null,
@@ -5095,11 +5105,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 433
+          "days": 467
         },
         "T90": {
           "status": "right_censored",
-          "days": 433
+          "days": 467
         }
       },
       "velocity_180d": null,
@@ -5232,11 +5242,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 827
+          "days": 861
         },
         "T90": {
           "status": "right_censored",
-          "days": 827
+          "days": 861
         }
       },
       "velocity_180d": null,
@@ -5297,15 +5307,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 792
+          "days": 826
         },
         "T80": {
           "status": "right_censored",
-          "days": 792
+          "days": 826
         },
         "T90": {
           "status": "right_censored",
-          "days": 792
+          "days": 826
         }
       },
       "velocity_180d": null,
@@ -5360,9 +5370,9 @@
       ],
       "score_format": "ratio",
       "score_decimals": null,
-      "capability_frontier_value": 0.5810000000000001,
-      "normalized_progress": 0.5810000000000001,
-      "normalized_headroom": 0.41899999999999993,
+      "capability_frontier_value": 0.6829999999999999,
+      "normalized_progress": 0.6829999999999999,
+      "normalized_headroom": 0.31700000000000006,
       "threshold_days": {
         "T50": {
           "status": "reached",
@@ -5371,14 +5381,14 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 672
+          "days": 706
         },
         "T90": {
           "status": "right_censored",
-          "days": 672
+          "days": 706
         }
       },
-      "velocity_180d": 0.01892907563025211,
+      "velocity_180d": 0.010743529411764692,
       "coverage": {
         "value": 1.0,
         "represented_organizations": [
@@ -5437,24 +5447,26 @@
       ],
       "score_format": "ratio",
       "score_decimals": null,
-      "capability_frontier_value": 0.4706,
-      "normalized_progress": 0.4706,
-      "normalized_headroom": 0.5294,
+      "capability_frontier_value": 0.8824,
+      "normalized_progress": 0.8824,
+      "normalized_headroom": 0.11760000000000004,
       "threshold_days": {
         "T50": {
-          "status": "right_censored",
-          "days": 482
+          "status": "reached",
+          "days": 376,
+          "qualifying_observation_date": "2026-06-09"
         },
         "T80": {
-          "status": "right_censored",
-          "days": 482
+          "status": "reached",
+          "days": 460,
+          "qualifying_observation_date": "2026-09-01"
         },
         "T90": {
           "status": "right_censored",
-          "days": 482
+          "days": 516
         }
       },
-      "velocity_180d": 0.03382953513513514,
+      "velocity_180d": 0.06884123076923077,
       "coverage": {
         "value": 0.5714285714285714,
         "represented_organizations": [
@@ -5473,7 +5485,7 @@
           "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
         },
         "still-frontier": {
-          "eligible": true,
+          "eligible": false,
           "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
         },
         "fastest-solved": {
@@ -5591,11 +5603,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 128
+          "days": 162
         },
         "T90": {
           "status": "right_censored",
-          "days": 128
+          "days": 162
         }
       },
       "velocity_180d": null,
@@ -5718,9 +5730,9 @@
       ],
       "score_format": "ratio",
       "score_decimals": null,
-      "capability_frontier_value": 0.9840000000000001,
-      "normalized_progress": 0.9840000000000001,
-      "normalized_headroom": 0.015999999999999903,
+      "capability_frontier_value": 0.9893000000000001,
+      "normalized_progress": 0.9893000000000001,
+      "normalized_headroom": 0.010699999999999932,
       "threshold_days": {
         "T50": {
           "status": "at_release",
@@ -5794,24 +5806,26 @@
       ],
       "score_format": "ratio",
       "score_decimals": null,
-      "capability_frontier_value": 0.474,
-      "normalized_progress": 0.474,
-      "normalized_headroom": 0.526,
+      "capability_frontier_value": 0.8240000000000001,
+      "normalized_progress": 0.8240000000000001,
+      "normalized_headroom": 0.17599999999999993,
       "threshold_days": {
         "T50": {
-          "status": "right_censored",
-          "days": 246
+          "status": "reached",
+          "days": 245,
+          "qualifying_observation_date": "2026-09-22"
         },
         "T80": {
-          "status": "right_censored",
-          "days": 246
+          "status": "reached",
+          "days": 253,
+          "qualifying_observation_date": "2026-09-30"
         },
         "T90": {
           "status": "right_censored",
-          "days": 246
+          "days": 280
         }
       },
-      "velocity_180d": 0.019278666666666666,
+      "velocity_180d": 0.0675797129186603,
       "coverage": {
         "value": 1.0,
         "represented_organizations": [
@@ -5833,7 +5847,7 @@
           "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
         },
         "still-frontier": {
-          "eligible": true,
+          "eligible": false,
           "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
         },
         "fastest-solved": {
@@ -5880,7 +5894,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 2938
+          "days": 2972
         }
       },
       "velocity_180d": 0.011942966507177029,
@@ -5947,7 +5961,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 2679
+          "days": 2713
         }
       },
       "velocity_180d": 0.0016413725490196094,
@@ -6014,11 +6028,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 583
+          "days": 617
         },
         "T90": {
           "status": "right_censored",
-          "days": 583
+          "days": 617
         }
       },
       "velocity_180d": null,
@@ -6080,15 +6094,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 950
+          "days": 984
         },
         "T80": {
           "status": "right_censored",
-          "days": 950
+          "days": 984
         },
         "T90": {
           "status": "right_censored",
-          "days": 950
+          "days": 984
         }
       },
       "velocity_180d": null,
@@ -6152,11 +6166,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 499
+          "days": 533
         },
         "T90": {
           "status": "right_censored",
-          "days": 499
+          "days": 533
         }
       },
       "velocity_180d": null,
@@ -6215,15 +6229,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 296
+          "days": 330
         },
         "T80": {
           "status": "right_censored",
-          "days": 296
+          "days": 330
         },
         "T90": {
           "status": "right_censored",
-          "days": 296
+          "days": 330
         }
       },
       "velocity_180d": null,
@@ -6285,11 +6299,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 107
+          "days": 141
         },
         "T90": {
           "status": "right_censored",
-          "days": 107
+          "days": 141
         }
       },
       "velocity_180d": null,
@@ -6361,7 +6375,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 118
+          "days": 152
         }
       },
       "velocity_180d": null,
@@ -6424,11 +6438,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 144
+          "days": 178
         },
         "T90": {
           "status": "right_censored",
-          "days": 144
+          "days": 178
         }
       },
       "velocity_180d": null,
@@ -6489,15 +6503,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 573
+          "days": 607
         },
         "T80": {
           "status": "right_censored",
-          "days": 573
+          "days": 607
         },
         "T90": {
           "status": "right_censored",
-          "days": 573
+          "days": 607
         }
       },
       "velocity_180d": null,
@@ -6571,7 +6585,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 231
+          "days": 265
         }
       },
       "velocity_180d": null,
@@ -6629,15 +6643,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 58
+          "days": 92
         },
         "T80": {
           "status": "right_censored",
-          "days": 58
+          "days": 92
         },
         "T90": {
           "status": "right_censored",
-          "days": 58
+          "days": 92
         }
       },
       "velocity_180d": null,
@@ -6695,15 +6709,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 474
+          "days": 508
         },
         "T80": {
           "status": "right_censored",
-          "days": 474
+          "days": 508
         },
         "T90": {
           "status": "right_censored",
-          "days": 474
+          "days": 508
         }
       },
       "velocity_180d": null,
@@ -6764,15 +6778,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 702
+          "days": 736
         },
         "T80": {
           "status": "right_censored",
-          "days": 702
+          "days": 736
         },
         "T90": {
           "status": "right_censored",
-          "days": 702
+          "days": 736
         }
       },
       "velocity_180d": null,
@@ -6832,15 +6846,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 798
+          "days": 832
         },
         "T80": {
           "status": "right_censored",
-          "days": 798
+          "days": 832
         },
         "T90": {
           "status": "right_censored",
-          "days": 798
+          "days": 832
         }
       },
       "velocity_180d": null,
@@ -6904,11 +6918,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 565
+          "days": 599
         },
         "T90": {
           "status": "right_censored",
-          "days": 565
+          "days": 599
         }
       },
       "velocity_180d": null,
@@ -6973,11 +6987,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 902
+          "days": 936
         },
         "T90": {
           "status": "right_censored",
-          "days": 902
+          "days": 936
         }
       },
       "velocity_180d": null,
@@ -7043,11 +7057,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 483
+          "days": 517
         },
         "T90": {
           "status": "right_censored",
-          "days": 483
+          "days": 517
         }
       },
       "velocity_180d": null,
@@ -7112,11 +7126,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 895
+          "days": 929
         },
         "T90": {
           "status": "right_censored",
-          "days": 895
+          "days": 929
         }
       },
       "velocity_180d": null,
@@ -7177,15 +7191,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 475
+          "days": 509
         },
         "T80": {
           "status": "right_censored",
-          "days": 475
+          "days": 509
         },
         "T90": {
           "status": "right_censored",
-          "days": 475
+          "days": 509
         }
       },
       "velocity_180d": null,
@@ -7246,15 +7260,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 344
+          "days": 378
         },
         "T80": {
           "status": "right_censored",
-          "days": 344
+          "days": 378
         },
         "T90": {
           "status": "right_censored",
-          "days": 344
+          "days": 378
         }
       },
       "velocity_180d": null,
@@ -7272,7 +7286,7 @@
       "cost_per_task": null,
       "lifecycle_eligibility": {
         "test-of-time": {
-          "eligible": false,
+          "eligible": true,
           "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
         },
         "still-frontier": {
@@ -7320,11 +7334,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 572
+          "days": 606
         },
         "T90": {
           "status": "right_censored",
-          "days": 572
+          "days": 606
         }
       },
       "velocity_180d": null,
@@ -7388,11 +7402,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 212
+          "days": 246
         },
         "T90": {
           "status": "right_censored",
-          "days": 212
+          "days": 246
         }
       },
       "velocity_180d": null,
@@ -7453,15 +7467,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 70
+          "days": 104
         },
         "T80": {
           "status": "right_censored",
-          "days": 70
+          "days": 104
         },
         "T90": {
           "status": "right_censored",
-          "days": 70
+          "days": 104
         }
       },
       "velocity_180d": null,
@@ -7521,15 +7535,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 730
+          "days": 764
         },
         "T80": {
           "status": "right_censored",
-          "days": 730
+          "days": 764
         },
         "T90": {
           "status": "right_censored",
-          "days": 730
+          "days": 764
         }
       },
       "velocity_180d": null,
@@ -7588,15 +7602,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 827
+          "days": 861
         },
         "T80": {
           "status": "right_censored",
-          "days": 827
+          "days": 861
         },
         "T90": {
           "status": "right_censored",
-          "days": 827
+          "days": 861
         }
       },
       "velocity_180d": null,
@@ -7656,15 +7670,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 1218
+          "days": 1252
         },
         "T80": {
           "status": "right_censored",
-          "days": 1218
+          "days": 1252
         },
         "T90": {
           "status": "right_censored",
-          "days": 1218
+          "days": 1252
         }
       },
       "velocity_180d": null,
@@ -7724,15 +7738,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 207
+          "days": 241
         },
         "T80": {
           "status": "right_censored",
-          "days": 207
+          "days": 241
         },
         "T90": {
           "status": "right_censored",
-          "days": 207
+          "days": 241
         }
       },
       "velocity_180d": null,
@@ -7791,15 +7805,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 266
+          "days": 300
         },
         "T80": {
           "status": "right_censored",
-          "days": 266
+          "days": 300
         },
         "T90": {
           "status": "right_censored",
-          "days": 266
+          "days": 300
         }
       },
       "velocity_180d": null,
@@ -7864,11 +7878,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 597
+          "days": 631
         },
         "T90": {
           "status": "right_censored",
-          "days": 597
+          "days": 631
         }
       },
       "velocity_180d": null,
@@ -8002,15 +8016,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 377
+          "days": 411
         },
         "T80": {
           "status": "right_censored",
-          "days": 377
+          "days": 411
         },
         "T90": {
           "status": "right_censored",
-          "days": 377
+          "days": 411
         }
       },
       "velocity_180d": null,
@@ -8072,15 +8086,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 117
+          "days": 151
         },
         "T80": {
           "status": "right_censored",
-          "days": 117
+          "days": 151
         },
         "T90": {
           "status": "right_censored",
-          "days": 117
+          "days": 151
         }
       },
       "velocity_180d": null,
@@ -8225,7 +8239,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 41
+          "days": 75
         }
       },
       "velocity_180d": null,
@@ -8295,7 +8309,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 858
+          "days": 892
         }
       },
       "velocity_180d": null,
@@ -8354,15 +8368,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 481
+          "days": 515
         },
         "T80": {
           "status": "right_censored",
-          "days": 481
+          "days": 515
         },
         "T90": {
           "status": "right_censored",
-          "days": 481
+          "days": 515
         }
       },
       "velocity_180d": null,
@@ -8430,11 +8444,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 104
+          "days": 138
         },
         "T90": {
           "status": "right_censored",
-          "days": 104
+          "days": 138
         }
       },
       "velocity_180d": null,
@@ -8501,11 +8515,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 90
+          "days": 124
         },
         "T90": {
           "status": "right_censored",
-          "days": 90
+          "days": 124
         }
       },
       "velocity_180d": null,
@@ -8642,11 +8656,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 607
+          "days": 641
         },
         "T90": {
           "status": "right_censored",
-          "days": 607
+          "days": 641
         }
       },
       "velocity_180d": null,
@@ -8713,11 +8727,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 828
+          "days": 862
         },
         "T90": {
           "status": "right_censored",
-          "days": 828
+          "days": 862
         }
       },
       "velocity_180d": null,
@@ -8774,15 +8788,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 730
+          "days": 764
         },
         "T80": {
           "status": "right_censored",
-          "days": 730
+          "days": 764
         },
         "T90": {
           "status": "right_censored",
-          "days": 730
+          "days": 764
         }
       },
       "velocity_180d": null,
@@ -8841,15 +8855,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 649
+          "days": 683
         },
         "T80": {
           "status": "right_censored",
-          "days": 649
+          "days": 683
         },
         "T90": {
           "status": "right_censored",
-          "days": 649
+          "days": 683
         }
       },
       "velocity_180d": null,
@@ -8906,15 +8920,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 418
+          "days": 452
         },
         "T80": {
           "status": "right_censored",
-          "days": 418
+          "days": 452
         },
         "T90": {
           "status": "right_censored",
-          "days": 418
+          "days": 452
         }
       },
       "velocity_180d": null,
@@ -8975,15 +8989,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 566
+          "days": 600
         },
         "T80": {
           "status": "right_censored",
-          "days": 566
+          "days": 600
         },
         "T90": {
           "status": "right_censored",
-          "days": 566
+          "days": 600
         }
       },
       "velocity_180d": null,
@@ -9049,11 +9063,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 533
+          "days": 567
         },
         "T90": {
           "status": "right_censored",
-          "days": 533
+          "days": 567
         }
       },
       "velocity_180d": null,
@@ -9112,15 +9126,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 369
+          "days": 403
         },
         "T80": {
           "status": "right_censored",
-          "days": 369
+          "days": 403
         },
         "T90": {
           "status": "right_censored",
-          "days": 369
+          "days": 403
         }
       },
       "velocity_180d": null,
@@ -9189,7 +9203,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 274
+          "days": 308
         }
       },
       "velocity_180d": null,
@@ -9254,11 +9268,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 128
+          "days": 162
         },
         "T90": {
           "status": "right_censored",
-          "days": 128
+          "days": 162
         }
       },
       "velocity_180d": null,
@@ -9326,7 +9340,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 701
+          "days": 735
         }
       },
       "velocity_180d": null,
@@ -9343,7 +9357,7 @@
       "cost_per_task": null,
       "lifecycle_eligibility": {
         "test-of-time": {
-          "eligible": false,
+          "eligible": true,
           "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
         },
         "still-frontier": {
@@ -9388,11 +9402,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 156
+          "days": 190
         },
         "T90": {
           "status": "right_censored",
-          "days": 156
+          "days": 190
         }
       },
       "velocity_180d": null,
@@ -9452,15 +9466,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 237
+          "days": 271
         },
         "T80": {
           "status": "right_censored",
-          "days": 237
+          "days": 271
         },
         "T90": {
           "status": "right_censored",
-          "days": 237
+          "days": 271
         }
       },
       "velocity_180d": null,
@@ -9523,15 +9537,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 589
+          "days": 623
         },
         "T80": {
           "status": "right_censored",
-          "days": 589
+          "days": 623
         },
         "T90": {
           "status": "right_censored",
-          "days": 589
+          "days": 623
         }
       },
       "velocity_180d": null,
@@ -9589,15 +9603,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 595
+          "days": 629
         },
         "T80": {
           "status": "right_censored",
-          "days": 595
+          "days": 629
         },
         "T90": {
           "status": "right_censored",
-          "days": 595
+          "days": 629
         }
       },
       "velocity_180d": null,
@@ -9660,11 +9674,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 2567
+          "days": 2601
         },
         "T90": {
           "status": "right_censored",
-          "days": 2567
+          "days": 2601
         }
       },
       "velocity_180d": null,
@@ -9734,7 +9748,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 932
+          "days": 966
         }
       },
       "velocity_180d": null,
@@ -9795,15 +9809,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 520
+          "days": 554
         },
         "T80": {
           "status": "right_censored",
-          "days": 520
+          "days": 554
         },
         "T90": {
           "status": "right_censored",
-          "days": 520
+          "days": 554
         }
       },
       "velocity_180d": null,
@@ -9864,15 +9878,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 643
+          "days": 677
         },
         "T80": {
           "status": "right_censored",
-          "days": 643
+          "days": 677
         },
         "T90": {
           "status": "right_censored",
-          "days": 643
+          "days": 677
         }
       },
       "velocity_180d": null,
@@ -9933,15 +9947,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 490
+          "days": 524
         },
         "T80": {
           "status": "right_censored",
-          "days": 490
+          "days": 524
         },
         "T90": {
           "status": "right_censored",
-          "days": 490
+          "days": 524
         }
       },
       "velocity_180d": null,
@@ -10002,11 +10016,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 468
+          "days": 502
         },
         "T90": {
           "status": "right_censored",
-          "days": 468
+          "days": 502
         }
       },
       "velocity_180d": null,
@@ -10072,11 +10086,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 895
+          "days": 929
         },
         "T90": {
           "status": "right_censored",
-          "days": 895
+          "days": 929
         }
       },
       "velocity_180d": null,
@@ -10141,11 +10155,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 646
+          "days": 680
         },
         "T90": {
           "status": "right_censored",
-          "days": 646
+          "days": 680
         }
       },
       "velocity_180d": null,
@@ -10214,11 +10228,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 37
+          "days": 71
         },
         "T90": {
           "status": "right_censored",
-          "days": 37
+          "days": 71
         }
       },
       "velocity_180d": null,
@@ -10276,15 +10290,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 336
+          "days": 370
         },
         "T80": {
           "status": "right_censored",
-          "days": 336
+          "days": 370
         },
         "T90": {
           "status": "right_censored",
-          "days": 336
+          "days": 370
         }
       },
       "velocity_180d": null,
@@ -10303,7 +10317,7 @@
       "cost_per_task": null,
       "lifecycle_eligibility": {
         "test-of-time": {
-          "eligible": false,
+          "eligible": true,
           "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
         },
         "still-frontier": {
@@ -10344,15 +10358,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 588
+          "days": 622
         },
         "T80": {
           "status": "right_censored",
-          "days": 588
+          "days": 622
         },
         "T90": {
           "status": "right_censored",
-          "days": 588
+          "days": 622
         }
       },
       "velocity_180d": null,
@@ -10418,11 +10432,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 714
+          "days": 748
         },
         "T90": {
           "status": "right_censored",
-          "days": 714
+          "days": 748
         }
       },
       "velocity_180d": null,
@@ -10440,7 +10454,7 @@
       "cost_per_task": null,
       "lifecycle_eligibility": {
         "test-of-time": {
-          "eligible": false,
+          "eligible": true,
           "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
         },
         "still-frontier": {
@@ -10486,11 +10500,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 275
+          "days": 309
         },
         "T90": {
           "status": "right_censored",
-          "days": 275
+          "days": 309
         }
       },
       "velocity_180d": null,
@@ -10555,11 +10569,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 133
+          "days": 167
         },
         "T90": {
           "status": "right_censored",
-          "days": 133
+          "days": 167
         }
       },
       "velocity_180d": null,
@@ -10624,11 +10638,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 148
+          "days": 182
         },
         "T90": {
           "status": "right_censored",
-          "days": 148
+          "days": 182
         }
       },
       "velocity_180d": null,
@@ -10698,7 +10712,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 1133
+          "days": 1167
         }
       },
       "velocity_180d": 0.010057268722466971,
@@ -10766,7 +10780,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 374
+          "days": 408
         }
       },
       "velocity_180d": null,
@@ -10830,11 +10844,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 495
+          "days": 529
         },
         "T90": {
           "status": "right_censored",
-          "days": 495
+          "days": 529
         }
       },
       "velocity_180d": null,
@@ -10899,11 +10913,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 101
+          "days": 135
         },
         "T90": {
           "status": "right_censored",
-          "days": 101
+          "days": 135
         }
       },
       "velocity_180d": null,
@@ -10966,15 +10980,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 29
+          "days": 63
         },
         "T80": {
           "status": "right_censored",
-          "days": 29
+          "days": 63
         },
         "T90": {
           "status": "right_censored",
-          "days": 29
+          "days": 63
         }
       },
       "velocity_180d": null,
@@ -11037,15 +11051,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 92
+          "days": 126
         },
         "T80": {
           "status": "right_censored",
-          "days": 92
+          "days": 126
         },
         "T90": {
           "status": "right_censored",
-          "days": 92
+          "days": 126
         }
       },
       "velocity_180d": null,
@@ -11106,15 +11120,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 162
+          "days": 196
         },
         "T80": {
           "status": "right_censored",
-          "days": 162
+          "days": 196
         },
         "T90": {
           "status": "right_censored",
-          "days": 162
+          "days": 196
         }
       },
       "velocity_180d": null,
@@ -11175,15 +11189,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 131
+          "days": 165
         },
         "T80": {
           "status": "right_censored",
-          "days": 131
+          "days": 165
         },
         "T90": {
           "status": "right_censored",
-          "days": 131
+          "days": 165
         }
       },
       "velocity_180d": null,
@@ -11247,15 +11261,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 135
+          "days": 169
         },
         "T80": {
           "status": "right_censored",
-          "days": 135
+          "days": 169
         },
         "T90": {
           "status": "right_censored",
-          "days": 135
+          "days": 169
         }
       },
       "velocity_180d": null,
@@ -11325,7 +11339,7 @@
         },
         "T90": {
           "status": "right_censored",
-          "days": 195
+          "days": 229
         }
       },
       "velocity_180d": null,
@@ -11391,11 +11405,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 206
+          "days": 240
         },
         "T90": {
           "status": "right_censored",
-          "days": 206
+          "days": 240
         }
       },
       "velocity_180d": null,
@@ -11454,15 +11468,15 @@
       "threshold_days": {
         "T50": {
           "status": "right_censored",
-          "days": 9
+          "days": 43
         },
         "T80": {
           "status": "right_censored",
-          "days": 9
+          "days": 43
         },
         "T90": {
           "status": "right_censored",
-          "days": 9
+          "days": 43
         }
       },
       "velocity_180d": null,
@@ -11594,11 +11608,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 0
+          "days": 34
         },
         "T90": {
           "status": "right_censored",
-          "days": 0
+          "days": 34
         }
       },
       "velocity_180d": null,
@@ -11800,11 +11814,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 13
+          "days": 47
         },
         "T90": {
           "status": "right_censored",
-          "days": 13
+          "days": 47
         }
       },
       "velocity_180d": null,
@@ -11865,11 +11879,11 @@
         },
         "T80": {
           "status": "right_censored",
-          "days": 43
+          "days": 77
         },
         "T90": {
           "status": "right_censored",
-          "days": 43
+          "days": 77
         }
       },
       "velocity_180d": null,
@@ -11963,6 +11977,81 @@
         }
       },
       "detail_path": "benchmarks/showandtell-v1-comprehension.json"
+    },
+    {
+      "id": "frontiercs-2",
+      "name": "FrontierCS 2",
+      "domain": "Software engineering",
+      "release": "2026-10-21",
+      "evaluation_type": "Agent",
+      "tags": [
+        "October 2026 curation",
+        "repository",
+        "research engineering",
+        "long-horizon"
+      ],
+      "labels": [
+        "planning",
+        "tool-use",
+        "environment-interaction",
+        "code-generation",
+        "code-execution-debugging",
+        "design-optimization"
+      ],
+      "score_format": "ratio",
+      "score_decimals": null,
+      "capability_frontier_value": 0.583333,
+      "normalized_progress": 0.583333,
+      "normalized_headroom": 0.416667,
+      "threshold_days": {
+        "T50": {
+          "status": "at_release",
+          "days": 0,
+          "qualifying_observation_date": "2026-10-21"
+        },
+        "T80": {
+          "status": "right_censored",
+          "days": 6
+        },
+        "T90": {
+          "status": "right_censored",
+          "days": 6
+        }
+      },
+      "velocity_180d": null,
+      "coverage": {
+        "value": 0.8571428571428571,
+        "represented_organizations": [
+          "OpenAI",
+          "Anthropic",
+          "Google",
+          "DeepSeek",
+          "Qwen",
+          "Meta"
+        ],
+        "panel_size": 7,
+        "status": "high"
+      },
+      "cost_per_task": null,
+      "lifecycle_eligibility": {
+        "test-of-time": {
+          "eligible": false,
+          "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
+        },
+        "still-frontier": {
+          "eligible": false,
+          "rule": "right-censored T50 AND normalized progress < 50% AND coverage not low"
+        },
+        "fastest-solved": {
+          "eligible": false,
+          "rule": "known reached T90 < 6 months"
+        },
+        "recently-saturated": {
+          "eligible": false,
+          "rule": "T90 crossing within 3 months of snapshot"
+        }
+      },
+      "detail_path": "benchmarks/frontiercs-2.json"
     }
   ],
   "lifecycle_views": {
@@ -12008,6 +12097,7 @@
       "controlbench",
       "openeqa-em-eqa-v0",
       "embodiedbench-manipulation-v3",
+      "ost-bench-v2-multiround",
       "physbench-seq",
       "olympic-arena-physics",
       "jeebench-physics",
@@ -12020,6 +12110,7 @@
       "isafetybench-2025-single-avg",
       "fle-neurips-2025-planning",
       "cfdcodebench-v1-zeroshot",
+      "climaqa-gold-mcq-default",
       "circuit-v1-zeroshot-global",
       "picbench-v1-baseline-functional-pass1",
       "pubmedqa-pqal-test500-zero-shot",
@@ -12028,7 +12119,9 @@
       "tomg-bench-v1-wacc",
       "mollangbench-v1-generation-pass1",
       "designqa-v2-functional-performance-rag",
+      "mv-robobench-v2-unified-zeroshot-avg",
       "spatial457-v4-l5-6d-spatial-accuracy",
+      "eai-v3-virtualhome-action-sequencing-task-sr",
       "mascqa-corrected-644"
     ],
     "still-frontier": [
@@ -12043,8 +12136,6 @@
       "mle-bench",
       "paperbench",
       "assistantbench",
-      "gso",
-      "apex-agents",
       "olympiadbench-physics",
       "eee-bench-v2",
       "pg-llm-proteingym",
@@ -12084,7 +12175,6 @@
     ],
     "recently-saturated": [
       "frontiermath-tiers-1-3-v2",
-      "arc-agi-2",
       "frontiermath-tier-4-v2",
       "arc-agi-3",
       "screenspot-pro",

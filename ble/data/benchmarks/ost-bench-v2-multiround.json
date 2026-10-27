@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -173,7 +173,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-03-24",
@@ -254,7 +254,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-06-20",
@@ -335,7 +335,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-05-13",
@@ -416,7 +416,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-12-11",
@@ -497,7 +497,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-04-14",
@@ -578,7 +578,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-12-19",
@@ -608,190 +608,6 @@
         "evidence_count": 1,
         "source_row_ids": [
           "ost-gemini-thinking"
-        ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-5425-05b58366ea934bb5",
-        "benchmark_id": "ost-bench-v2-multiround",
-        "benchmark_version_id": "ost-bench-v2-multiround-canonical",
-        "model_id": "model-gemini-2-0-flash-thinking-eecc0450529b690e",
-        "model_configuration": "Gemini-2.0-Flash-Thinking",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-2-0-flash-thinking",
-        "model_family_id": "google-gemini-2-0-flash-thinking",
-        "model": "Gemini-2.0-Flash-Thinking",
-        "organization": "Google",
-        "score": 0.5425,
-        "input_score": 0.5425,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "ost-bench-v2-multiround-metric-v1",
-        "protocol_id": "ost-bench-v2-multiround-source-export-v1",
-        "task_set_id": "ost-bench-v2-multiround-canonical",
-        "metric": "Overall score",
-        "score_role": "canonical",
-        "score_series_id": "ost-bench-v2-multiround-canonical-score",
-        "evaluation_protocol": "OST-Bench v2 pinned multi-round zero-shot protocol and official leaderboard overall score. Interleaved and VLMEvalKit variants are excluded.",
-        "model_release_date": "2024-12-19",
-        "evaluation_date": null,
-        "result_public_date": "2025-10-14",
-        "source_publication_date": "2025-10-14",
-        "observation_date": "2024-12-19",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-12-19",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2025-10-14",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-10-14",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-12-19",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2025-10-14",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-github-com-internrobotics-ost-bench-39c7c6f46430ad3c",
-          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
-        ],
-        "source": "https://github.com/InternRobotics/OST-Bench/blob/main/README.md",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-ost-gemini-thinking-ec9af269109d4612"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "ost-gemini-thinking"
-        ],
-        "plot_date": "2025-10-14",
-        "frontier_observation_ids": [
-          "obs-0-4686-a085d7f4a4cd2229",
-          "obs-0-4777-48fe23874f09fa4d",
-          "obs-0-4872-0474cb4e2135cfe3",
-          "obs-0-4954-f43a1850b9e2a45e",
-          "obs-0-534-3dbc73fa8df4d5d3",
-          "obs-0-5425-05b58366ea934bb5"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-5425-05b58366ea934bb5",
-        "benchmark_id": "ost-bench-v2-multiround",
-        "benchmark_version_id": "ost-bench-v2-multiround-canonical",
-        "model_id": "model-gemini-2-0-flash-thinking-eecc0450529b690e",
-        "model_configuration": "Gemini-2.0-Flash-Thinking",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-2-0-flash-thinking",
-        "model_family_id": "google-gemini-2-0-flash-thinking",
-        "model": "Gemini-2.0-Flash-Thinking",
-        "organization": "Google",
-        "score": 0.5425,
-        "input_score": 0.5425,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "ost-bench-v2-multiround-metric-v1",
-        "protocol_id": "ost-bench-v2-multiround-source-export-v1",
-        "task_set_id": "ost-bench-v2-multiround-canonical",
-        "metric": "Overall score",
-        "score_role": "canonical",
-        "score_series_id": "ost-bench-v2-multiround-canonical-score",
-        "evaluation_protocol": "OST-Bench v2 pinned multi-round zero-shot protocol and official leaderboard overall score. Interleaved and VLMEvalKit variants are excluded.",
-        "model_release_date": "2024-12-19",
-        "evaluation_date": null,
-        "result_public_date": "2025-10-14",
-        "source_publication_date": "2025-10-14",
-        "observation_date": "2024-12-19",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-12-19",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2025-10-14",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-10-14",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-12-19",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2025-10-14",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-github-com-internrobotics-ost-bench-39c7c6f46430ad3c",
-          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
-        ],
-        "source": "https://github.com/InternRobotics/OST-Bench/blob/main/README.md",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-ost-gemini-thinking-ec9af269109d4612"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "ost-gemini-thinking"
-        ],
-        "plot_date": "2025-10-14",
-        "frontier_observation_ids": [
-          "obs-0-4686-a085d7f4a4cd2229",
-          "obs-0-4777-48fe23874f09fa4d",
-          "obs-0-4872-0474cb4e2135cfe3",
-          "obs-0-4954-f43a1850b9e2a45e",
-          "obs-0-534-3dbc73fa8df4d5d3",
-          "obs-0-5425-05b58366ea934bb5"
         ]
       }
     ],
@@ -845,7 +661,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-10-14",
@@ -937,7 +753,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-10-14",
@@ -979,99 +795,6 @@
         ]
       }
     ],
-    "historical_frontier": [
-      {
-        "observation_id": "obs-0-5425-05b58366ea934bb5",
-        "benchmark_id": "ost-bench-v2-multiround",
-        "benchmark_version_id": "ost-bench-v2-multiround-canonical",
-        "model_id": "model-gemini-2-0-flash-thinking-eecc0450529b690e",
-        "model_configuration": "Gemini-2.0-Flash-Thinking",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-2-0-flash-thinking",
-        "model_family_id": "google-gemini-2-0-flash-thinking",
-        "model": "Gemini-2.0-Flash-Thinking",
-        "organization": "Google",
-        "score": 0.5425,
-        "input_score": 0.5425,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "ost-bench-v2-multiround-metric-v1",
-        "protocol_id": "ost-bench-v2-multiround-source-export-v1",
-        "task_set_id": "ost-bench-v2-multiround-canonical",
-        "metric": "Overall score",
-        "score_role": "canonical",
-        "score_series_id": "ost-bench-v2-multiround-canonical-score",
-        "evaluation_protocol": "OST-Bench v2 pinned multi-round zero-shot protocol and official leaderboard overall score. Interleaved and VLMEvalKit variants are excluded.",
-        "model_release_date": "2024-12-19",
-        "evaluation_date": null,
-        "result_public_date": "2025-10-14",
-        "source_publication_date": "2025-10-14",
-        "observation_date": "2024-12-19",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-12-19",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2025-10-14",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-10-14",
-        "date_kind": "result first-public date",
-        "capability_date": "2024-12-19",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2025-10-14",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-github-com-internrobotics-ost-bench-39c7c6f46430ad3c",
-          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-internrobotics-ost-bench-blob-m-1adba44cfe43ef16"
-        ],
-        "source": "https://github.com/InternRobotics/OST-Bench/blob/main/README.md",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-ost-gemini-thinking-ec9af269109d4612"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "ost-gemini-thinking"
-        ],
-        "plot_date": "2025-10-14",
-        "frontier_observation_ids": [
-          "obs-0-4686-a085d7f4a4cd2229",
-          "obs-0-4777-48fe23874f09fa4d",
-          "obs-0-4872-0474cb4e2135cfe3",
-          "obs-0-4954-f43a1850b9e2a45e",
-          "obs-0-534-3dbc73fa8df4d5d3",
-          "obs-0-5425-05b58366ea934bb5"
-        ]
-      }
-    ],
-    "retrospective_observations": [],
     "observed_frontier": 0.5425,
     "capability_frontier_value": 0.5425,
     "reported_frontier_value": 0.5425,
@@ -1081,43 +804,43 @@
     "threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 344
+        "days": 378
       },
       "T80": {
         "status": "right_censored",
-        "days": 344
+        "days": 378
       },
       "T90": {
         "status": "right_censored",
-        "days": 344
+        "days": 378
       }
     },
     "capability_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 344
+        "days": 378
       },
       "T80": {
         "status": "right_censored",
-        "days": 344
+        "days": 378
       },
       "T90": {
         "status": "right_censored",
-        "days": 344
+        "days": 378
       }
     },
     "reported_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 344
+        "days": 378
       },
       "T80": {
         "status": "right_censored",
-        "days": 344
+        "days": 378
       },
       "T90": {
         "status": "right_censored",
-        "days": 344
+        "days": 378
       }
     },
     "velocity_180d": null,
@@ -1144,7 +867,7 @@
     "timeline_default": "capability",
     "lifecycle_eligibility": {
       "test-of-time": {
-        "eligible": false,
+        "eligible": true,
         "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
       },
       "still-frontier": {

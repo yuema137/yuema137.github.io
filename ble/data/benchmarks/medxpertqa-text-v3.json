@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -172,7 +172,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-10-22",
@@ -253,7 +253,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-09-19",
@@ -334,7 +334,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-09-24",
@@ -415,7 +415,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-12-06",
@@ -496,7 +496,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-11-20",
@@ -577,7 +577,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-01-20",
@@ -607,190 +607,6 @@
         "evidence_count": 1,
         "source_row_ids": [
           "medxpertqa-deepseek-r1"
-        ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-3776-0bc5667d2bd2a402",
-        "benchmark_id": "medxpertqa-text-v3",
-        "benchmark_version_id": "medxpertqa-text-v3-canonical",
-        "model_id": "model-deepseek-r1-18eed2738c2c0e2c",
-        "model_configuration": "DeepSeek-R1",
-        "model_identity_organization": "deepseek",
-        "model_label_id": "deepseek-r1",
-        "model_family_id": "deepseek-deepseek-r1",
-        "model": "DeepSeek-R1",
-        "organization": "DeepSeek",
-        "score": 0.3776,
-        "input_score": 0.3776,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "medxpertqa-text-v3-metric-v1",
-        "protocol_id": "medxpertqa-text-v3-source-export-v1",
-        "task_set_id": "medxpertqa-text-v3-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "medxpertqa-text-v3-canonical-score",
-        "evaluation_protocol": "MedXpertQA v3 Text full 2,450-question test split, official zero-shot CoT and answer cleansing, no retrieval or tools. Seeded 10% sample results and the multimodal track are excluded.",
-        "model_release_date": "2025-01-20",
-        "evaluation_date": null,
-        "result_public_date": "2025-06-06",
-        "source_publication_date": "2025-06-06",
-        "observation_date": "2025-01-20",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-01-20",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2501-18362v3-3a73a23cc7b03c64"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2501-18362v3-3a73a23cc7b03c64"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2025-06-06",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-06-06",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-01-20",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2025-06-06",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2501-18362-ad7565b5e073b5f8",
-          "resource-https-arxiv-org-abs-2501-18362v3-3a73a23cc7b03c64"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2501-18362v3-3a73a23cc7b03c64"
-        ],
-        "source": "https://arxiv.org/abs/2501.18362v3",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-medxpertqa-deepseek-r1-739a6995e9b02947"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "medxpertqa-deepseek-r1"
-        ],
-        "plot_date": "2025-06-06",
-        "frontier_observation_ids": [
-          "obs-0-1776-725f6e61daa64abe",
-          "obs-0-189-9b0324f2e6f9d105",
-          "obs-0-1967-4cc4dd275f67ed97",
-          "obs-0-2449-afe8908c2f52c74f",
-          "obs-0-3037-6d2e16b0263286fd",
-          "obs-0-3776-0bc5667d2bd2a402"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-3776-0bc5667d2bd2a402",
-        "benchmark_id": "medxpertqa-text-v3",
-        "benchmark_version_id": "medxpertqa-text-v3-canonical",
-        "model_id": "model-deepseek-r1-18eed2738c2c0e2c",
-        "model_configuration": "DeepSeek-R1",
-        "model_identity_organization": "deepseek",
-        "model_label_id": "deepseek-r1",
-        "model_family_id": "deepseek-deepseek-r1",
-        "model": "DeepSeek-R1",
-        "organization": "DeepSeek",
-        "score": 0.3776,
-        "input_score": 0.3776,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "medxpertqa-text-v3-metric-v1",
-        "protocol_id": "medxpertqa-text-v3-source-export-v1",
-        "task_set_id": "medxpertqa-text-v3-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "medxpertqa-text-v3-canonical-score",
-        "evaluation_protocol": "MedXpertQA v3 Text full 2,450-question test split, official zero-shot CoT and answer cleansing, no retrieval or tools. Seeded 10% sample results and the multimodal track are excluded.",
-        "model_release_date": "2025-01-20",
-        "evaluation_date": null,
-        "result_public_date": "2025-06-06",
-        "source_publication_date": "2025-06-06",
-        "observation_date": "2025-01-20",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-01-20",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2501-18362v3-3a73a23cc7b03c64"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2501-18362v3-3a73a23cc7b03c64"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2025-06-06",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-06-06",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-01-20",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2025-06-06",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2501-18362-ad7565b5e073b5f8",
-          "resource-https-arxiv-org-abs-2501-18362v3-3a73a23cc7b03c64"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2501-18362v3-3a73a23cc7b03c64"
-        ],
-        "source": "https://arxiv.org/abs/2501.18362v3",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-medxpertqa-deepseek-r1-739a6995e9b02947"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "medxpertqa-deepseek-r1"
-        ],
-        "plot_date": "2025-06-06",
-        "frontier_observation_ids": [
-          "obs-0-1776-725f6e61daa64abe",
-          "obs-0-189-9b0324f2e6f9d105",
-          "obs-0-1967-4cc4dd275f67ed97",
-          "obs-0-2449-afe8908c2f52c74f",
-          "obs-0-3037-6d2e16b0263286fd",
-          "obs-0-3776-0bc5667d2bd2a402"
         ]
       }
     ],
@@ -844,7 +660,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-06-06",
@@ -936,7 +752,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-06-06",
@@ -978,99 +794,6 @@
         ]
       }
     ],
-    "historical_frontier": [
-      {
-        "observation_id": "obs-0-3776-0bc5667d2bd2a402",
-        "benchmark_id": "medxpertqa-text-v3",
-        "benchmark_version_id": "medxpertqa-text-v3-canonical",
-        "model_id": "model-deepseek-r1-18eed2738c2c0e2c",
-        "model_configuration": "DeepSeek-R1",
-        "model_identity_organization": "deepseek",
-        "model_label_id": "deepseek-r1",
-        "model_family_id": "deepseek-deepseek-r1",
-        "model": "DeepSeek-R1",
-        "organization": "DeepSeek",
-        "score": 0.3776,
-        "input_score": 0.3776,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "medxpertqa-text-v3-metric-v1",
-        "protocol_id": "medxpertqa-text-v3-source-export-v1",
-        "task_set_id": "medxpertqa-text-v3-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "medxpertqa-text-v3-canonical-score",
-        "evaluation_protocol": "MedXpertQA v3 Text full 2,450-question test split, official zero-shot CoT and answer cleansing, no retrieval or tools. Seeded 10% sample results and the multimodal track are excluded.",
-        "model_release_date": "2025-01-20",
-        "evaluation_date": null,
-        "result_public_date": "2025-06-06",
-        "source_publication_date": "2025-06-06",
-        "observation_date": "2025-01-20",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-01-20",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2501-18362v3-3a73a23cc7b03c64"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2501-18362v3-3a73a23cc7b03c64"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2025-06-06",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-06-06",
-        "date_kind": "result first-public date",
-        "capability_date": "2025-01-20",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2025-06-06",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2501-18362-ad7565b5e073b5f8",
-          "resource-https-arxiv-org-abs-2501-18362v3-3a73a23cc7b03c64"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2501-18362v3-3a73a23cc7b03c64"
-        ],
-        "source": "https://arxiv.org/abs/2501.18362v3",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-medxpertqa-deepseek-r1-739a6995e9b02947"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "medxpertqa-deepseek-r1"
-        ],
-        "plot_date": "2025-06-06",
-        "frontier_observation_ids": [
-          "obs-0-1776-725f6e61daa64abe",
-          "obs-0-189-9b0324f2e6f9d105",
-          "obs-0-1967-4cc4dd275f67ed97",
-          "obs-0-2449-afe8908c2f52c74f",
-          "obs-0-3037-6d2e16b0263286fd",
-          "obs-0-3776-0bc5667d2bd2a402"
-        ]
-      }
-    ],
-    "retrospective_observations": [],
     "observed_frontier": 0.3776,
     "capability_frontier_value": 0.3776,
     "reported_frontier_value": 0.3776,
@@ -1080,43 +803,43 @@
     "threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 474
+        "days": 508
       },
       "T80": {
         "status": "right_censored",
-        "days": 474
+        "days": 508
       },
       "T90": {
         "status": "right_censored",
-        "days": 474
+        "days": 508
       }
     },
     "capability_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 474
+        "days": 508
       },
       "T80": {
         "status": "right_censored",
-        "days": 474
+        "days": 508
       },
       "T90": {
         "status": "right_censored",
-        "days": 474
+        "days": 508
       }
     },
     "reported_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 474
+        "days": 508
       },
       "T80": {
         "status": "right_censored",
-        "days": 474
+        "days": 508
       },
       "T90": {
         "status": "right_censored",
-        "days": 474
+        "days": 508
       }
     },
     "velocity_180d": null,

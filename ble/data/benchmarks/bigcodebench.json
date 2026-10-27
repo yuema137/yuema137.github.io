@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -167,7 +167,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2024-05-13",
@@ -239,7 +239,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2024-06-20",
@@ -311,7 +311,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2024-05-14",
@@ -339,164 +339,6 @@
         ],
         "evidence_count": 1,
         "source_row_ids": []
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-611-bc1b8a984adac3fa",
-        "benchmark_id": "bigcodebench",
-        "benchmark_version_id": "bigcodebench-canonical",
-        "model_id": "model-gpt-4o-2024-05-13-a8b4b8c99c9f9f6d",
-        "model_configuration": "gpt-4o-2024-05-13",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-4o",
-        "model_family_id": "openai-gpt-4o",
-        "model": "GPT-4o",
-        "organization": "OpenAI",
-        "score": 0.611,
-        "input_score": 0.611,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "bigcodebench-metric-v1",
-        "protocol_id": "bigcodebench-source-export-v1",
-        "task_set_id": "bigcodebench-canonical",
-        "metric": "Complete Pass@1",
-        "score_role": "canonical",
-        "score_series_id": "bigcodebench-canonical-score",
-        "evaluation_protocol": "BigCodeBench Complete fixed release with calibrated greedy Pass@1. BigCodeBench Instruct and BigCodeBench-Hard are not merged.",
-        "model_release_date": "2024-05-13",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2024-05-13",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-05-13",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-huggingface-co-blog-leaderboard-bigcodeben-6c96b00f513cb2f6"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-huggingface-co-blog-leaderboard-bigcodeben-6c96b00f513cb2f6"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2024-06-18",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-05-13",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-huggingface-co-blog-leaderboard-bigcodeben-6c96b00f513cb2f6"
-        ],
-        "score_source_ids": [
-          "resource-https-huggingface-co-blog-leaderboard-bigcodeben-6c96b00f513cb2f6"
-        ],
-        "source": "https://huggingface.co/blog/leaderboard-bigcodebench",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-complete-pass-1-0-611-model-version-gpt-4o-2024--ce1c50c5252bbd5c"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2024-06-18",
-        "frontier_observation_ids": [
-          "obs-0-575-d673cc4a0b682be0",
-          "obs-0-611-bc1b8a984adac3fa"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-611-bc1b8a984adac3fa",
-        "benchmark_id": "bigcodebench",
-        "benchmark_version_id": "bigcodebench-canonical",
-        "model_id": "model-gpt-4o-2024-05-13-a8b4b8c99c9f9f6d",
-        "model_configuration": "gpt-4o-2024-05-13",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-4o",
-        "model_family_id": "openai-gpt-4o",
-        "model": "GPT-4o",
-        "organization": "OpenAI",
-        "score": 0.611,
-        "input_score": 0.611,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "bigcodebench-metric-v1",
-        "protocol_id": "bigcodebench-source-export-v1",
-        "task_set_id": "bigcodebench-canonical",
-        "metric": "Complete Pass@1",
-        "score_role": "canonical",
-        "score_series_id": "bigcodebench-canonical-score",
-        "evaluation_protocol": "BigCodeBench Complete fixed release with calibrated greedy Pass@1. BigCodeBench Instruct and BigCodeBench-Hard are not merged.",
-        "model_release_date": "2024-05-13",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2024-05-13",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-05-13",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-huggingface-co-blog-leaderboard-bigcodeben-6c96b00f513cb2f6"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-huggingface-co-blog-leaderboard-bigcodeben-6c96b00f513cb2f6"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2024-06-18",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-05-13",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-huggingface-co-blog-leaderboard-bigcodeben-6c96b00f513cb2f6"
-        ],
-        "score_source_ids": [
-          "resource-https-huggingface-co-blog-leaderboard-bigcodeben-6c96b00f513cb2f6"
-        ],
-        "source": "https://huggingface.co/blog/leaderboard-bigcodebench",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-complete-pass-1-0-611-model-version-gpt-4o-2024--ce1c50c5252bbd5c"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2024-06-18",
-        "frontier_observation_ids": [
-          "obs-0-575-d673cc4a0b682be0",
-          "obs-0-611-bc1b8a984adac3fa"
-        ]
       }
     ],
     "capability_frontier": [
@@ -543,7 +385,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2024-06-18",
@@ -579,8 +421,6 @@
       }
     ],
     "reported_frontier": [],
-    "historical_frontier": [],
-    "retrospective_observations": [],
     "observed_frontier": 0.611,
     "capability_frontier_value": 0.611,
     "reported_frontier_value": null,
@@ -595,11 +435,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 827
+        "days": 861
       },
       "T90": {
         "status": "right_censored",
-        "days": 827
+        "days": 861
       }
     },
     "capability_threshold_days": {
@@ -610,11 +450,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 827
+        "days": 861
       },
       "T90": {
         "status": "right_censored",
-        "days": 827
+        "days": 861
       }
     },
     "reported_threshold_days": {

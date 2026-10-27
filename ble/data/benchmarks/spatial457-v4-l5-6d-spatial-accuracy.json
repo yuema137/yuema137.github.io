@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -172,7 +172,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-02-15",
@@ -253,7 +253,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-05-13",
@@ -334,7 +334,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-06-20",
@@ -415,7 +415,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-08-29",
@@ -445,186 +445,6 @@
         "evidence_count": 1,
         "source_row_ids": [
           "sp457-qwen2vl"
-        ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-3936-bbfad24547945b8c",
-        "benchmark_id": "spatial457-v4-l5-6d-spatial-accuracy",
-        "benchmark_version_id": "spatial457-v4-l5-6d-spatial-accuracy-canonical",
-        "model_id": "model-gemini-1-5-pro-cbb82d54e094a69c",
-        "model_configuration": "Gemini-1.5-Pro",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-1-5-pro",
-        "model_family_id": "google-gemini-1-5-pro",
-        "model": "Gemini-1.5-Pro",
-        "organization": "Google",
-        "score": 0.3936,
-        "input_score": 0.3936,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "spatial457-v4-l5-6d-spatial-accuracy-metric-v1",
-        "protocol_id": "spatial457-v4-l5-6d-spatial-accuracy-source-export-v1",
-        "task_set_id": "spatial457-v4-l5-6d-spatial-accuracy-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "spatial457-v4-l5-6d-spatial-accuracy-canonical-score",
-        "evaluation_protocol": "Spatial457 arXiv-v4 L5 6D Spatial 1,837-question subset, VLMEvalKit exact accuracy; other levels excluded.",
-        "model_release_date": "2024-02-15",
-        "evaluation_date": null,
-        "result_public_date": "2025-06-08",
-        "source_publication_date": "2025-06-08",
-        "observation_date": "2024-02-15",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-02-15",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2502-08636-83ab8e7ba611fc29"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2502-08636-83ab8e7ba611fc29"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2025-06-08",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-02-12",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-02-15",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2025-06-08",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2502-08636-83ab8e7ba611fc29",
-          "resource-https-github-com-xingruiwang-spatial457-03cb7e44bb328f4b"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2502-08636-83ab8e7ba611fc29"
-        ],
-        "source": "https://arxiv.org/abs/2502.08636",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-sp457-gemini15-5d26a4b2922851f9"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "sp457-gemini15"
-        ],
-        "plot_date": "2025-02-12",
-        "frontier_observation_ids": [
-          "obs-0-3348-76a948a1d2307bfa",
-          "obs-0-3375-fbc10d51652d37c4",
-          "obs-0-3701-87db4058e9680937",
-          "obs-0-3936-bbfad24547945b8c"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-3936-bbfad24547945b8c",
-        "benchmark_id": "spatial457-v4-l5-6d-spatial-accuracy",
-        "benchmark_version_id": "spatial457-v4-l5-6d-spatial-accuracy-canonical",
-        "model_id": "model-gemini-1-5-pro-cbb82d54e094a69c",
-        "model_configuration": "Gemini-1.5-Pro",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-1-5-pro",
-        "model_family_id": "google-gemini-1-5-pro",
-        "model": "Gemini-1.5-Pro",
-        "organization": "Google",
-        "score": 0.3936,
-        "input_score": 0.3936,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "spatial457-v4-l5-6d-spatial-accuracy-metric-v1",
-        "protocol_id": "spatial457-v4-l5-6d-spatial-accuracy-source-export-v1",
-        "task_set_id": "spatial457-v4-l5-6d-spatial-accuracy-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "spatial457-v4-l5-6d-spatial-accuracy-canonical-score",
-        "evaluation_protocol": "Spatial457 arXiv-v4 L5 6D Spatial 1,837-question subset, VLMEvalKit exact accuracy; other levels excluded.",
-        "model_release_date": "2024-02-15",
-        "evaluation_date": null,
-        "result_public_date": "2025-06-08",
-        "source_publication_date": "2025-06-08",
-        "observation_date": "2024-02-15",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-02-15",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2502-08636-83ab8e7ba611fc29"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2502-08636-83ab8e7ba611fc29"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2025-06-08",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-02-12",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-02-15",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2025-06-08",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2502-08636-83ab8e7ba611fc29",
-          "resource-https-github-com-xingruiwang-spatial457-03cb7e44bb328f4b"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2502-08636-83ab8e7ba611fc29"
-        ],
-        "source": "https://arxiv.org/abs/2502.08636",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-sp457-gemini15-5d26a4b2922851f9"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "sp457-gemini15"
-        ],
-        "plot_date": "2025-02-12",
-        "frontier_observation_ids": [
-          "obs-0-3348-76a948a1d2307bfa",
-          "obs-0-3375-fbc10d51652d37c4",
-          "obs-0-3701-87db4058e9680937",
-          "obs-0-3936-bbfad24547945b8c"
         ]
       }
     ],
@@ -678,7 +498,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-02-12",
@@ -768,7 +588,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-06-08",
@@ -808,97 +628,6 @@
         ]
       }
     ],
-    "historical_frontier": [
-      {
-        "observation_id": "obs-0-3936-bbfad24547945b8c",
-        "benchmark_id": "spatial457-v4-l5-6d-spatial-accuracy",
-        "benchmark_version_id": "spatial457-v4-l5-6d-spatial-accuracy-canonical",
-        "model_id": "model-gemini-1-5-pro-cbb82d54e094a69c",
-        "model_configuration": "Gemini-1.5-Pro",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-1-5-pro",
-        "model_family_id": "google-gemini-1-5-pro",
-        "model": "Gemini-1.5-Pro",
-        "organization": "Google",
-        "score": 0.3936,
-        "input_score": 0.3936,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "spatial457-v4-l5-6d-spatial-accuracy-metric-v1",
-        "protocol_id": "spatial457-v4-l5-6d-spatial-accuracy-source-export-v1",
-        "task_set_id": "spatial457-v4-l5-6d-spatial-accuracy-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "spatial457-v4-l5-6d-spatial-accuracy-canonical-score",
-        "evaluation_protocol": "Spatial457 arXiv-v4 L5 6D Spatial 1,837-question subset, VLMEvalKit exact accuracy; other levels excluded.",
-        "model_release_date": "2024-02-15",
-        "evaluation_date": null,
-        "result_public_date": "2025-06-08",
-        "source_publication_date": "2025-06-08",
-        "observation_date": "2024-02-15",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-02-15",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2502-08636-83ab8e7ba611fc29"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2502-08636-83ab8e7ba611fc29"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2025-06-08",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-06-08",
-        "date_kind": "result first-public date",
-        "capability_date": "2024-02-15",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2025-06-08",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2502-08636-83ab8e7ba611fc29",
-          "resource-https-github-com-xingruiwang-spatial457-03cb7e44bb328f4b"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2502-08636-83ab8e7ba611fc29"
-        ],
-        "source": "https://arxiv.org/abs/2502.08636",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-sp457-gemini15-5d26a4b2922851f9"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "sp457-gemini15"
-        ],
-        "plot_date": "2025-06-08",
-        "frontier_observation_ids": [
-          "obs-0-3348-76a948a1d2307bfa",
-          "obs-0-3375-fbc10d51652d37c4",
-          "obs-0-3701-87db4058e9680937",
-          "obs-0-3936-bbfad24547945b8c"
-        ]
-      }
-    ],
-    "retrospective_observations": [],
     "observed_frontier": 0.3936,
     "capability_frontier_value": 0.3936,
     "reported_frontier_value": 0.3936,
@@ -908,43 +637,43 @@
     "threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 588
+        "days": 622
       },
       "T80": {
         "status": "right_censored",
-        "days": 588
+        "days": 622
       },
       "T90": {
         "status": "right_censored",
-        "days": 588
+        "days": 622
       }
     },
     "capability_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 588
+        "days": 622
       },
       "T80": {
         "status": "right_censored",
-        "days": 588
+        "days": 622
       },
       "T90": {
         "status": "right_censored",
-        "days": 588
+        "days": 622
       }
     },
     "reported_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 588
+        "days": 622
       },
       "T80": {
         "status": "right_censored",
-        "days": 588
+        "days": 622
       },
       "T90": {
         "status": "right_censored",
-        "days": 588
+        "days": 622
       }
     },
     "velocity_180d": null,

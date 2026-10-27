@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -174,7 +174,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-04-05",
@@ -255,7 +255,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-04-16",
@@ -335,7 +335,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-04-28",
@@ -415,7 +415,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-05-22",
@@ -495,7 +495,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-06-17",
@@ -575,7 +575,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-08-07",
@@ -655,7 +655,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-01-20",
@@ -684,190 +684,6 @@
         "evidence_count": 1,
         "source_row_ids": [
           "matscibench-v2-deepseek-r1"
-        ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-7522-d17fb294f40a359c",
-        "benchmark_id": "matscibench-v2",
-        "benchmark_version_id": "matscibench-v2-canonical",
-        "model_id": "model-deepseek-r1-18eed2738c2c0e2c",
-        "model_configuration": "deepseek-r1",
-        "model_identity_organization": "deepseek",
-        "model_label_id": "deepseek-r1",
-        "model_family_id": "deepseek-deepseek-r1",
-        "model": "DeepSeek-R1",
-        "organization": "DeepSeek",
-        "score": 0.7522,
-        "input_score": 0.7522,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "matscibench-v2-metric-v1",
-        "protocol_id": "matscibench-v2-source-export-v1",
-        "task_set_id": "matscibench-v2-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "matscibench-v2-canonical-score",
-        "evaluation_protocol": "MatSciBench v2 fixed 1,340-question text-only direct/basic-CoT evaluation. Image questions and tool/RAG/self-correction settings are excluded.",
-        "model_release_date": "2025-01-20",
-        "evaluation_date": "2026-06-08",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2025-01-20",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-01-20",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-06-08",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-06-08",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-01-20",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-        ],
-        "source": "https://github.com/Jun-Kai-Zhang/MatSciBench",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-matscibench-v2-deepseek-r1-e7670a9e2c2d1878"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "matscibench-v2-deepseek-r1"
-        ],
-        "plot_date": "2026-06-08",
-        "frontier_observation_ids": [
-          "obs-0-6741-513415624b2b0cb3",
-          "obs-0-6849-1562a1643b7415a4",
-          "obs-0-7054-88a8365e23116328",
-          "obs-0-7337-7caa05199b8f3448",
-          "obs-0-7444-667d3867d6a7ba49",
-          "obs-0-7502-8647b599a3ff0027",
-          "obs-0-7522-d17fb294f40a359c"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-7522-d17fb294f40a359c",
-        "benchmark_id": "matscibench-v2",
-        "benchmark_version_id": "matscibench-v2-canonical",
-        "model_id": "model-deepseek-r1-18eed2738c2c0e2c",
-        "model_configuration": "deepseek-r1",
-        "model_identity_organization": "deepseek",
-        "model_label_id": "deepseek-r1",
-        "model_family_id": "deepseek-deepseek-r1",
-        "model": "DeepSeek-R1",
-        "organization": "DeepSeek",
-        "score": 0.7522,
-        "input_score": 0.7522,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "matscibench-v2-metric-v1",
-        "protocol_id": "matscibench-v2-source-export-v1",
-        "task_set_id": "matscibench-v2-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "matscibench-v2-canonical-score",
-        "evaluation_protocol": "MatSciBench v2 fixed 1,340-question text-only direct/basic-CoT evaluation. Image questions and tool/RAG/self-correction settings are excluded.",
-        "model_release_date": "2025-01-20",
-        "evaluation_date": "2026-06-08",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2025-01-20",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-01-20",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-06-08",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-06-08",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-01-20",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-        ],
-        "source": "https://github.com/Jun-Kai-Zhang/MatSciBench",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-matscibench-v2-deepseek-r1-e7670a9e2c2d1878"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "matscibench-v2-deepseek-r1"
-        ],
-        "plot_date": "2026-06-08",
-        "frontier_observation_ids": [
-          "obs-0-6741-513415624b2b0cb3",
-          "obs-0-6849-1562a1643b7415a4",
-          "obs-0-7054-88a8365e23116328",
-          "obs-0-7337-7caa05199b8f3448",
-          "obs-0-7444-667d3867d6a7ba49",
-          "obs-0-7502-8647b599a3ff0027",
-          "obs-0-7522-d17fb294f40a359c"
         ]
       }
     ],
@@ -921,7 +737,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-06-08",
@@ -964,572 +780,6 @@
       }
     ],
     "reported_frontier": [],
-    "historical_frontier": [],
-    "retrospective_observations": [
-      {
-        "observation_id": "obs-0-6741-513415624b2b0cb3",
-        "benchmark_id": "matscibench-v2",
-        "benchmark_version_id": "matscibench-v2-canonical",
-        "model_id": "model-llama-4-maverick-9cc7b902981846cb",
-        "model_configuration": "llama-4-maverick",
-        "model_identity_organization": "meta",
-        "model_label_id": "llama-4-maverick",
-        "model_family_id": "meta-llama-4-maverick",
-        "model": "Llama 4 Maverick",
-        "organization": "Meta",
-        "score": 0.6741,
-        "input_score": 0.6741,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "matscibench-v2-metric-v1",
-        "protocol_id": "matscibench-v2-source-export-v1",
-        "task_set_id": "matscibench-v2-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "matscibench-v2-canonical-score",
-        "evaluation_protocol": "MatSciBench v2 fixed 1,340-question text-only direct/basic-CoT evaluation. Image questions and tool/RAG/self-correction settings are excluded.",
-        "model_release_date": "2025-04-05",
-        "evaluation_date": "2026-06-08",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2025-04-05",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-04-05",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
-              "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
-          "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-06-08",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2025-04-05",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-04-05",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-ai-meta-com-llama-get-started-a804e6acae9e80fa",
-          "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-        ],
-        "source": "https://github.com/Jun-Kai-Zhang/MatSciBench",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-matscibench-v2-llama-4-maverick-8c345d36c8f34e4c"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "matscibench-v2-llama-4-maverick"
-        ]
-      },
-      {
-        "observation_id": "obs-0-7054-88a8365e23116328",
-        "benchmark_id": "matscibench-v2",
-        "benchmark_version_id": "matscibench-v2-canonical",
-        "model_id": "model-o3-7ac6ae4921cdbada",
-        "model_configuration": "o3",
-        "model_identity_organization": "openai",
-        "model_label_id": "o3",
-        "model_family_id": "openai-o3",
-        "model": "o3",
-        "organization": "OpenAI",
-        "score": 0.7054,
-        "input_score": 0.7054,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "matscibench-v2-metric-v1",
-        "protocol_id": "matscibench-v2-source-export-v1",
-        "task_set_id": "matscibench-v2-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "matscibench-v2-canonical-score",
-        "evaluation_protocol": "MatSciBench v2 fixed 1,340-question text-only direct/basic-CoT evaluation. Image questions and tool/RAG/self-correction settings are excluded.",
-        "model_release_date": "2025-04-16",
-        "evaluation_date": "2026-06-08",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2025-04-16",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-04-16",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-06-08",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2025-04-16",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-04-16",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-        ],
-        "source": "https://github.com/Jun-Kai-Zhang/MatSciBench",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-matscibench-v2-o3-7a9a3a3e99794277"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "matscibench-v2-o3"
-        ]
-      },
-      {
-        "observation_id": "obs-0-7337-7caa05199b8f3448",
-        "benchmark_id": "matscibench-v2",
-        "benchmark_version_id": "matscibench-v2-canonical",
-        "model_id": "model-qwen3-235b-ebd9e288fed2eca9",
-        "model_configuration": "qwen3-235b",
-        "model_identity_organization": "qwen",
-        "model_label_id": "qwen3-235b",
-        "model_family_id": "qwen-qwen3-235b",
-        "model": "Qwen3-235B",
-        "organization": "Qwen",
-        "score": 0.7337,
-        "input_score": 0.7337,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "matscibench-v2-metric-v1",
-        "protocol_id": "matscibench-v2-source-export-v1",
-        "task_set_id": "matscibench-v2-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "matscibench-v2-canonical-score",
-        "evaluation_protocol": "MatSciBench v2 fixed 1,340-question text-only direct/basic-CoT evaluation. Image questions and tool/RAG/self-correction settings are excluded.",
-        "model_release_date": "2025-04-28",
-        "evaluation_date": "2026-06-08",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2025-04-28",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-04-28",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-06-08",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2025-04-28",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-04-28",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-        ],
-        "source": "https://github.com/Jun-Kai-Zhang/MatSciBench",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-matscibench-v2-qwen3-235b-2c6cf98b35058fe7"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "matscibench-v2-qwen3-235b"
-        ]
-      },
-      {
-        "observation_id": "obs-0-6849-1562a1643b7415a4",
-        "benchmark_id": "matscibench-v2",
-        "benchmark_version_id": "matscibench-v2-canonical",
-        "model_id": "model-claude-sonnet-4-2be683d638f8d836",
-        "model_configuration": "claude-sonnet-4",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-sonnet-4",
-        "model_family_id": "anthropic-claude-sonnet-4",
-        "model": "Claude Sonnet 4",
-        "organization": "Anthropic",
-        "score": 0.6849,
-        "input_score": 0.6849,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "matscibench-v2-metric-v1",
-        "protocol_id": "matscibench-v2-source-export-v1",
-        "task_set_id": "matscibench-v2-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "matscibench-v2-canonical-score",
-        "evaluation_protocol": "MatSciBench v2 fixed 1,340-question text-only direct/basic-CoT evaluation. Image questions and tool/RAG/self-correction settings are excluded.",
-        "model_release_date": "2025-05-22",
-        "evaluation_date": "2026-06-08",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2025-05-22",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-05-22",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-06-08",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2025-05-22",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-05-22",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-        ],
-        "source": "https://github.com/Jun-Kai-Zhang/MatSciBench",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-matscibench-v2-claude-sonnet-4-207e0e1da41eba19"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "matscibench-v2-claude-sonnet-4"
-        ]
-      },
-      {
-        "observation_id": "obs-0-7444-667d3867d6a7ba49",
-        "benchmark_id": "matscibench-v2",
-        "benchmark_version_id": "matscibench-v2-canonical",
-        "model_id": "model-gemini-2-5-pro-53e6252cbff1cfa8",
-        "model_configuration": "gemini-2-5-pro",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-2-5-pro",
-        "model_family_id": "google-gemini-2-5-pro",
-        "model": "Gemini 2.5 Pro",
-        "organization": "Google",
-        "score": 0.7444,
-        "input_score": 0.7444,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "matscibench-v2-metric-v1",
-        "protocol_id": "matscibench-v2-source-export-v1",
-        "task_set_id": "matscibench-v2-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "matscibench-v2-canonical-score",
-        "evaluation_protocol": "MatSciBench v2 fixed 1,340-question text-only direct/basic-CoT evaluation. Image questions and tool/RAG/self-correction settings are excluded.",
-        "model_release_date": "2025-06-17",
-        "evaluation_date": "2026-06-08",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2025-06-17",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-06-17",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-06-08",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2025-06-17",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-06-17",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-        ],
-        "source": "https://github.com/Jun-Kai-Zhang/MatSciBench",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-matscibench-v2-gemini-2-5-pro-7bd4f2e61fdf20a2"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "matscibench-v2-gemini-2-5-pro"
-        ]
-      },
-      {
-        "observation_id": "obs-0-7502-8647b599a3ff0027",
-        "benchmark_id": "matscibench-v2",
-        "benchmark_version_id": "matscibench-v2-canonical",
-        "model_id": "model-gpt-5-cdd3b6d6cb9421c1",
-        "model_configuration": "gpt-5",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-5",
-        "model_family_id": "openai-gpt-5",
-        "model": "GPT-5",
-        "organization": "OpenAI",
-        "score": 0.7502,
-        "input_score": 0.7502,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "matscibench-v2-metric-v1",
-        "protocol_id": "matscibench-v2-source-export-v1",
-        "task_set_id": "matscibench-v2-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "matscibench-v2-canonical-score",
-        "evaluation_protocol": "MatSciBench v2 fixed 1,340-question text-only direct/basic-CoT evaluation. Image questions and tool/RAG/self-correction settings are excluded.",
-        "model_release_date": "2025-08-07",
-        "evaluation_date": "2026-06-08",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2025-08-07",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-08-07",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-06-08",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2025-08-07",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-08-07",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-        ],
-        "source": "https://github.com/Jun-Kai-Zhang/MatSciBench",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-matscibench-v2-gpt-5-0903fc06c4df642c"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "matscibench-v2-gpt-5"
-        ]
-      },
-      {
-        "observation_id": "obs-0-7522-d17fb294f40a359c",
-        "benchmark_id": "matscibench-v2",
-        "benchmark_version_id": "matscibench-v2-canonical",
-        "model_id": "model-deepseek-r1-18eed2738c2c0e2c",
-        "model_configuration": "deepseek-r1",
-        "model_identity_organization": "deepseek",
-        "model_label_id": "deepseek-r1",
-        "model_family_id": "deepseek-deepseek-r1",
-        "model": "DeepSeek-R1",
-        "organization": "DeepSeek",
-        "score": 0.7522,
-        "input_score": 0.7522,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "matscibench-v2-metric-v1",
-        "protocol_id": "matscibench-v2-source-export-v1",
-        "task_set_id": "matscibench-v2-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "matscibench-v2-canonical-score",
-        "evaluation_protocol": "MatSciBench v2 fixed 1,340-question text-only direct/basic-CoT evaluation. Image questions and tool/RAG/self-correction settings are excluded.",
-        "model_release_date": "2025-01-20",
-        "evaluation_date": "2026-06-08",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2025-01-20",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-01-20",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-06-08",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2025-01-20",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-01-20",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-jun-kai-zhang-matscibench-c25ca2fa248e9cda"
-        ],
-        "source": "https://github.com/Jun-Kai-Zhang/MatSciBench",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-matscibench-v2-deepseek-r1-e7670a9e2c2d1878"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "matscibench-v2-deepseek-r1"
-        ]
-      }
-    ],
     "observed_frontier": 0.7522,
     "capability_frontier_value": 0.7522,
     "reported_frontier_value": null,
@@ -1544,11 +794,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 107
+        "days": 141
       },
       "T90": {
         "status": "right_censored",
-        "days": 107
+        "days": 141
       }
     },
     "capability_threshold_days": {
@@ -1559,11 +809,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 107
+        "days": 141
       },
       "T90": {
         "status": "right_censored",
-        "days": 107
+        "days": 141
       }
     },
     "reported_threshold_days": {

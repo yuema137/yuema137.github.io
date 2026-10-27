@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -171,7 +171,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-01-28",
@@ -251,7 +251,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-05-13",
@@ -280,180 +280,6 @@
         "evidence_count": 1,
         "source_row_ids": [
           "isafety-gpt4o"
-        ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-4025-32202e355bc938f7",
-        "benchmark_id": "isafetybench-2025-single-avg",
-        "benchmark_version_id": "isafetybench-2025-single-avg-canonical",
-        "model_id": "model-qwen2-5-vl-7b-instruct-d84363f0df4a9f3e",
-        "model_configuration": "Qwen2.5-VL-7B-Instruct",
-        "model_identity_organization": "qwen",
-        "model_label_id": "qwen2-5-vl-7b-instruct",
-        "model_family_id": "qwen-qwen2-5-vl-7b-instruct",
-        "model": "Qwen2.5-VL-7B-Instruct",
-        "organization": "Qwen",
-        "score": 0.4025,
-        "input_score": 0.4025,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "isafetybench-2025-single-avg-metric-v1",
-        "protocol_id": "isafetybench-2025-single-avg-source-export-v1",
-        "task_set_id": "isafetybench-2025-single-avg-canonical",
-        "metric": "Average accuracy",
-        "score_role": "canonical",
-        "score_series_id": "isafetybench-2025-single-avg-canonical-score",
-        "evaluation_protocol": "iSafetyBench 2025 fixed 1,100-video zero-shot single-label protocol; multi-label metrics are excluded.",
-        "model_release_date": "2025-01-28",
-        "evaluation_date": null,
-        "result_public_date": "2025-08-01",
-        "source_publication_date": "2025-08-01",
-        "observation_date": "2025-01-28",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-01-28",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-isafetybench-data-a91b1cbd6dfed3c4"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-isafetybench-data-a91b1cbd6dfed3c4"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2025-08-01",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-08-01",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-01-28",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2025-08-01",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-github-com-isafetybench-data-a91b1cbd6dfed3c4"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-isafetybench-data-a91b1cbd6dfed3c4"
-        ],
-        "source": "https://github.com/iSafetyBench/data",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-isafety-qwen25vl-adf7089c1fa3cb50"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "isafety-qwen25vl"
-        ],
-        "plot_date": "2025-08-01",
-        "frontier_observation_ids": [
-          "obs-0-388-96a360f7eaab9043",
-          "obs-0-4025-32202e355bc938f7"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-4025-32202e355bc938f7",
-        "benchmark_id": "isafetybench-2025-single-avg",
-        "benchmark_version_id": "isafetybench-2025-single-avg-canonical",
-        "model_id": "model-qwen2-5-vl-7b-instruct-d84363f0df4a9f3e",
-        "model_configuration": "Qwen2.5-VL-7B-Instruct",
-        "model_identity_organization": "qwen",
-        "model_label_id": "qwen2-5-vl-7b-instruct",
-        "model_family_id": "qwen-qwen2-5-vl-7b-instruct",
-        "model": "Qwen2.5-VL-7B-Instruct",
-        "organization": "Qwen",
-        "score": 0.4025,
-        "input_score": 0.4025,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "isafetybench-2025-single-avg-metric-v1",
-        "protocol_id": "isafetybench-2025-single-avg-source-export-v1",
-        "task_set_id": "isafetybench-2025-single-avg-canonical",
-        "metric": "Average accuracy",
-        "score_role": "canonical",
-        "score_series_id": "isafetybench-2025-single-avg-canonical-score",
-        "evaluation_protocol": "iSafetyBench 2025 fixed 1,100-video zero-shot single-label protocol; multi-label metrics are excluded.",
-        "model_release_date": "2025-01-28",
-        "evaluation_date": null,
-        "result_public_date": "2025-08-01",
-        "source_publication_date": "2025-08-01",
-        "observation_date": "2025-01-28",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-01-28",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-isafetybench-data-a91b1cbd6dfed3c4"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-isafetybench-data-a91b1cbd6dfed3c4"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2025-08-01",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-08-01",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-01-28",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2025-08-01",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-github-com-isafetybench-data-a91b1cbd6dfed3c4"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-isafetybench-data-a91b1cbd6dfed3c4"
-        ],
-        "source": "https://github.com/iSafetyBench/data",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-isafety-qwen25vl-adf7089c1fa3cb50"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "isafety-qwen25vl"
-        ],
-        "plot_date": "2025-08-01",
-        "frontier_observation_ids": [
-          "obs-0-388-96a360f7eaab9043",
-          "obs-0-4025-32202e355bc938f7"
         ]
       }
     ],
@@ -507,7 +333,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-08-01",
@@ -594,7 +420,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-08-01",
@@ -631,94 +457,6 @@
         ]
       }
     ],
-    "historical_frontier": [
-      {
-        "observation_id": "obs-0-4025-32202e355bc938f7",
-        "benchmark_id": "isafetybench-2025-single-avg",
-        "benchmark_version_id": "isafetybench-2025-single-avg-canonical",
-        "model_id": "model-qwen2-5-vl-7b-instruct-d84363f0df4a9f3e",
-        "model_configuration": "Qwen2.5-VL-7B-Instruct",
-        "model_identity_organization": "qwen",
-        "model_label_id": "qwen2-5-vl-7b-instruct",
-        "model_family_id": "qwen-qwen2-5-vl-7b-instruct",
-        "model": "Qwen2.5-VL-7B-Instruct",
-        "organization": "Qwen",
-        "score": 0.4025,
-        "input_score": 0.4025,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "isafetybench-2025-single-avg-metric-v1",
-        "protocol_id": "isafetybench-2025-single-avg-source-export-v1",
-        "task_set_id": "isafetybench-2025-single-avg-canonical",
-        "metric": "Average accuracy",
-        "score_role": "canonical",
-        "score_series_id": "isafetybench-2025-single-avg-canonical-score",
-        "evaluation_protocol": "iSafetyBench 2025 fixed 1,100-video zero-shot single-label protocol; multi-label metrics are excluded.",
-        "model_release_date": "2025-01-28",
-        "evaluation_date": null,
-        "result_public_date": "2025-08-01",
-        "source_publication_date": "2025-08-01",
-        "observation_date": "2025-01-28",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-01-28",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-isafetybench-data-a91b1cbd6dfed3c4"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-isafetybench-data-a91b1cbd6dfed3c4"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2025-08-01",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-08-01",
-        "date_kind": "result first-public date",
-        "capability_date": "2025-01-28",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2025-08-01",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-github-com-isafetybench-data-a91b1cbd6dfed3c4"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-isafetybench-data-a91b1cbd6dfed3c4"
-        ],
-        "source": "https://github.com/iSafetyBench/data",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-isafety-qwen25vl-adf7089c1fa3cb50"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "isafety-qwen25vl"
-        ],
-        "plot_date": "2025-08-01",
-        "frontier_observation_ids": [
-          "obs-0-388-96a360f7eaab9043",
-          "obs-0-4025-32202e355bc938f7"
-        ]
-      }
-    ],
-    "retrospective_observations": [],
     "observed_frontier": 0.4025,
     "capability_frontier_value": 0.4025,
     "reported_frontier_value": 0.4025,
@@ -728,43 +466,43 @@
     "threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 418
+        "days": 452
       },
       "T80": {
         "status": "right_censored",
-        "days": 418
+        "days": 452
       },
       "T90": {
         "status": "right_censored",
-        "days": 418
+        "days": 452
       }
     },
     "capability_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 418
+        "days": 452
       },
       "T80": {
         "status": "right_censored",
-        "days": 418
+        "days": 452
       },
       "T90": {
         "status": "right_censored",
-        "days": 418
+        "days": 452
       }
     },
     "reported_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 418
+        "days": 452
       },
       "T80": {
         "status": "right_censored",
-        "days": 418
+        "days": 452
       },
       "T90": {
         "status": "right_censored",
-        "days": 418
+        "days": 452
       }
     },
     "velocity_180d": null,

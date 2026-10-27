@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -174,7 +174,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-01-24",
@@ -254,7 +254,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-02-15",
@@ -334,7 +334,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-05-13",
@@ -414,7 +414,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-06-20",
@@ -443,350 +443,6 @@
         "evidence_count": 1,
         "source_row_ids": [
           "olympicarena-claude35"
-        ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-3001-87ed2d486cb78504",
-        "benchmark_id": "olympic-arena-physics",
-        "benchmark_version_id": "olympic-arena-physics-canonical",
-        "model_id": "model-gpt-4o-d491e46221c560b3",
-        "model_configuration": "GPT-4o",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-4o",
-        "model_family_id": "openai-gpt-4o",
-        "model": "GPT-4o",
-        "organization": "OpenAI",
-        "score": 0.3001,
-        "input_score": 0.3001,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "olympic-arena-physics-metric-v1",
-        "protocol_id": "olympic-arena-physics-source-export-v1",
-        "task_set_id": "olympic-arena-physics-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "olympic-arena-physics-canonical-score",
-        "evaluation_protocol": "OlympicArena official test split, Physics subject, LMM setting with original images, official zero-shot prompts, temperature 0 and answer extraction. Validation, combined-paper, caption, and text-only rows are excluded.",
-        "model_release_date": "2024-05-13",
-        "evaluation_date": null,
-        "result_public_date": "2024-06-18",
-        "source_publication_date": "2024-06-18",
-        "observation_date": "2024-05-13",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-05-13",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-gair-nlp-github-io-olympicarena-67a2f17cc7c80910"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-gair-nlp-github-io-olympicarena-67a2f17cc7c80910"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2024-06-18",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2024-06-18",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-05-13",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2024-06-18",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-gair-nlp-github-io-olympicarena-67a2f17cc7c80910"
-        ],
-        "score_source_ids": [
-          "resource-https-gair-nlp-github-io-olympicarena-67a2f17cc7c80910"
-        ],
-        "source": "https://gair-nlp.github.io/OlympicArena",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-olympicarena-gpt4o-dd9d2b1ed0941452"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "olympicarena-gpt4o"
-        ],
-        "plot_date": "2024-06-18",
-        "frontier_observation_ids": [
-          "obs-0-1412-4648e78fd77cd97b",
-          "obs-0-2893-c6476c79d0c64322",
-          "obs-0-3001-87ed2d486cb78504"
-        ]
-      },
-      {
-        "observation_id": "obs-0-3116-8495bd8f0638ef4c",
-        "benchmark_id": "olympic-arena-physics",
-        "benchmark_version_id": "olympic-arena-physics-canonical",
-        "model_id": "model-claude-3-5-sonnet-ca0330ced73b499d",
-        "model_configuration": "Claude-3.5-Sonnet",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-3-5-sonnet",
-        "model_family_id": "anthropic-claude-3-5-sonnet",
-        "model": "Claude-3.5-Sonnet",
-        "organization": "Anthropic",
-        "score": 0.3116,
-        "input_score": 0.3116,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "olympic-arena-physics-metric-v1",
-        "protocol_id": "olympic-arena-physics-source-export-v1",
-        "task_set_id": "olympic-arena-physics-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "olympic-arena-physics-canonical-score",
-        "evaluation_protocol": "OlympicArena official test split, Physics subject, LMM setting with original images, official zero-shot prompts, temperature 0 and answer extraction. Validation, combined-paper, caption, and text-only rows are excluded.",
-        "model_release_date": "2024-06-20",
-        "evaluation_date": null,
-        "result_public_date": "2024-06-21",
-        "source_publication_date": "2024-06-21",
-        "observation_date": "2024-06-20",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-06-20",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-gair-nlp-github-io-olympicarena-67a2f17cc7c80910"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-gair-nlp-github-io-olympicarena-67a2f17cc7c80910"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2024-06-21",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2024-06-20",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-06-20",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2024-06-21",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-gair-nlp-github-io-olympicarena-67a2f17cc7c80910"
-        ],
-        "score_source_ids": [
-          "resource-https-gair-nlp-github-io-olympicarena-67a2f17cc7c80910"
-        ],
-        "source": "https://gair-nlp.github.io/OlympicArena",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-olympicarena-claude35-41256fc65d401647"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "olympicarena-claude35"
-        ],
-        "plot_date": "2024-06-20",
-        "frontier_observation_ids": [
-          "obs-0-3116-8495bd8f0638ef4c"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-3001-87ed2d486cb78504",
-        "benchmark_id": "olympic-arena-physics",
-        "benchmark_version_id": "olympic-arena-physics-canonical",
-        "model_id": "model-gpt-4o-d491e46221c560b3",
-        "model_configuration": "GPT-4o",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-4o",
-        "model_family_id": "openai-gpt-4o",
-        "model": "GPT-4o",
-        "organization": "OpenAI",
-        "score": 0.3001,
-        "input_score": 0.3001,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "olympic-arena-physics-metric-v1",
-        "protocol_id": "olympic-arena-physics-source-export-v1",
-        "task_set_id": "olympic-arena-physics-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "olympic-arena-physics-canonical-score",
-        "evaluation_protocol": "OlympicArena official test split, Physics subject, LMM setting with original images, official zero-shot prompts, temperature 0 and answer extraction. Validation, combined-paper, caption, and text-only rows are excluded.",
-        "model_release_date": "2024-05-13",
-        "evaluation_date": null,
-        "result_public_date": "2024-06-18",
-        "source_publication_date": "2024-06-18",
-        "observation_date": "2024-05-13",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-05-13",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-gair-nlp-github-io-olympicarena-67a2f17cc7c80910"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-gair-nlp-github-io-olympicarena-67a2f17cc7c80910"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2024-06-18",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2024-06-18",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-05-13",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2024-06-18",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-gair-nlp-github-io-olympicarena-67a2f17cc7c80910"
-        ],
-        "score_source_ids": [
-          "resource-https-gair-nlp-github-io-olympicarena-67a2f17cc7c80910"
-        ],
-        "source": "https://gair-nlp.github.io/OlympicArena",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-olympicarena-gpt4o-dd9d2b1ed0941452"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "olympicarena-gpt4o"
-        ],
-        "plot_date": "2024-06-18",
-        "frontier_observation_ids": [
-          "obs-0-1412-4648e78fd77cd97b",
-          "obs-0-2893-c6476c79d0c64322",
-          "obs-0-3001-87ed2d486cb78504"
-        ]
-      },
-      {
-        "observation_id": "obs-0-3116-8495bd8f0638ef4c",
-        "benchmark_id": "olympic-arena-physics",
-        "benchmark_version_id": "olympic-arena-physics-canonical",
-        "model_id": "model-claude-3-5-sonnet-ca0330ced73b499d",
-        "model_configuration": "Claude-3.5-Sonnet",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-3-5-sonnet",
-        "model_family_id": "anthropic-claude-3-5-sonnet",
-        "model": "Claude-3.5-Sonnet",
-        "organization": "Anthropic",
-        "score": 0.3116,
-        "input_score": 0.3116,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "olympic-arena-physics-metric-v1",
-        "protocol_id": "olympic-arena-physics-source-export-v1",
-        "task_set_id": "olympic-arena-physics-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "olympic-arena-physics-canonical-score",
-        "evaluation_protocol": "OlympicArena official test split, Physics subject, LMM setting with original images, official zero-shot prompts, temperature 0 and answer extraction. Validation, combined-paper, caption, and text-only rows are excluded.",
-        "model_release_date": "2024-06-20",
-        "evaluation_date": null,
-        "result_public_date": "2024-06-21",
-        "source_publication_date": "2024-06-21",
-        "observation_date": "2024-06-20",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-06-20",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-gair-nlp-github-io-olympicarena-67a2f17cc7c80910"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-gair-nlp-github-io-olympicarena-67a2f17cc7c80910"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2024-06-21",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2024-06-20",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-06-20",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2024-06-21",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-gair-nlp-github-io-olympicarena-67a2f17cc7c80910"
-        ],
-        "score_source_ids": [
-          "resource-https-gair-nlp-github-io-olympicarena-67a2f17cc7c80910"
-        ],
-        "source": "https://gair-nlp.github.io/OlympicArena",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-olympicarena-claude35-41256fc65d401647"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "olympicarena-claude35"
-        ],
-        "plot_date": "2024-06-20",
-        "frontier_observation_ids": [
-          "obs-0-3116-8495bd8f0638ef4c"
         ]
       }
     ],
@@ -840,7 +496,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-06-18",
@@ -926,7 +582,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-06-20",
@@ -1012,7 +668,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-06-18",
@@ -1097,7 +753,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-06-21",
@@ -1133,178 +789,6 @@
         ]
       }
     ],
-    "historical_frontier": [
-      {
-        "observation_id": "obs-0-3001-87ed2d486cb78504",
-        "benchmark_id": "olympic-arena-physics",
-        "benchmark_version_id": "olympic-arena-physics-canonical",
-        "model_id": "model-gpt-4o-d491e46221c560b3",
-        "model_configuration": "GPT-4o",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-4o",
-        "model_family_id": "openai-gpt-4o",
-        "model": "GPT-4o",
-        "organization": "OpenAI",
-        "score": 0.3001,
-        "input_score": 0.3001,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "olympic-arena-physics-metric-v1",
-        "protocol_id": "olympic-arena-physics-source-export-v1",
-        "task_set_id": "olympic-arena-physics-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "olympic-arena-physics-canonical-score",
-        "evaluation_protocol": "OlympicArena official test split, Physics subject, LMM setting with original images, official zero-shot prompts, temperature 0 and answer extraction. Validation, combined-paper, caption, and text-only rows are excluded.",
-        "model_release_date": "2024-05-13",
-        "evaluation_date": null,
-        "result_public_date": "2024-06-18",
-        "source_publication_date": "2024-06-18",
-        "observation_date": "2024-05-13",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-05-13",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-gair-nlp-github-io-olympicarena-67a2f17cc7c80910"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-gair-nlp-github-io-olympicarena-67a2f17cc7c80910"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2024-06-18",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2024-06-18",
-        "date_kind": "result first-public date",
-        "capability_date": "2024-05-13",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2024-06-18",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-gair-nlp-github-io-olympicarena-67a2f17cc7c80910"
-        ],
-        "score_source_ids": [
-          "resource-https-gair-nlp-github-io-olympicarena-67a2f17cc7c80910"
-        ],
-        "source": "https://gair-nlp.github.io/OlympicArena",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-olympicarena-gpt4o-dd9d2b1ed0941452"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "olympicarena-gpt4o"
-        ],
-        "plot_date": "2024-06-18",
-        "frontier_observation_ids": [
-          "obs-0-1412-4648e78fd77cd97b",
-          "obs-0-3001-87ed2d486cb78504"
-        ]
-      },
-      {
-        "observation_id": "obs-0-3116-8495bd8f0638ef4c",
-        "benchmark_id": "olympic-arena-physics",
-        "benchmark_version_id": "olympic-arena-physics-canonical",
-        "model_id": "model-claude-3-5-sonnet-ca0330ced73b499d",
-        "model_configuration": "Claude-3.5-Sonnet",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-3-5-sonnet",
-        "model_family_id": "anthropic-claude-3-5-sonnet",
-        "model": "Claude-3.5-Sonnet",
-        "organization": "Anthropic",
-        "score": 0.3116,
-        "input_score": 0.3116,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "olympic-arena-physics-metric-v1",
-        "protocol_id": "olympic-arena-physics-source-export-v1",
-        "task_set_id": "olympic-arena-physics-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "olympic-arena-physics-canonical-score",
-        "evaluation_protocol": "OlympicArena official test split, Physics subject, LMM setting with original images, official zero-shot prompts, temperature 0 and answer extraction. Validation, combined-paper, caption, and text-only rows are excluded.",
-        "model_release_date": "2024-06-20",
-        "evaluation_date": null,
-        "result_public_date": "2024-06-21",
-        "source_publication_date": "2024-06-21",
-        "observation_date": "2024-06-20",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-06-20",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-gair-nlp-github-io-olympicarena-67a2f17cc7c80910"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-gair-nlp-github-io-olympicarena-67a2f17cc7c80910"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2024-06-21",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2024-06-21",
-        "date_kind": "result first-public date",
-        "capability_date": "2024-06-20",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2024-06-21",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-gair-nlp-github-io-olympicarena-67a2f17cc7c80910"
-        ],
-        "score_source_ids": [
-          "resource-https-gair-nlp-github-io-olympicarena-67a2f17cc7c80910"
-        ],
-        "source": "https://gair-nlp.github.io/OlympicArena",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-olympicarena-claude35-41256fc65d401647"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "olympicarena-claude35"
-        ],
-        "plot_date": "2024-06-21",
-        "frontier_observation_ids": [
-          "obs-0-3116-8495bd8f0638ef4c"
-        ]
-      }
-    ],
-    "retrospective_observations": [],
     "observed_frontier": 0.3116,
     "capability_frontier_value": 0.3116,
     "reported_frontier_value": 0.3116,
@@ -1314,43 +798,43 @@
     "threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 827
+        "days": 861
       },
       "T80": {
         "status": "right_censored",
-        "days": 827
+        "days": 861
       },
       "T90": {
         "status": "right_censored",
-        "days": 827
+        "days": 861
       }
     },
     "capability_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 827
+        "days": 861
       },
       "T80": {
         "status": "right_censored",
-        "days": 827
+        "days": 861
       },
       "T90": {
         "status": "right_censored",
-        "days": 827
+        "days": 861
       }
     },
     "reported_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 827
+        "days": 861
       },
       "T80": {
         "status": "right_censored",
-        "days": 827
+        "days": 861
       },
       "T90": {
         "status": "right_censored",
-        "days": 827
+        "days": 861
       }
     },
     "velocity_180d": null,

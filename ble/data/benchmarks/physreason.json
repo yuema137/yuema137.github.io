@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -175,7 +175,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2024-05-13",
@@ -255,7 +255,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2024-06-20",
@@ -335,7 +335,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-01-21",
@@ -415,7 +415,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-01-20",
@@ -495,7 +495,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-01-31",
@@ -575,7 +575,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-02-05",
@@ -655,7 +655,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-02-17",
@@ -684,190 +684,6 @@
         "evidence_count": 1,
         "source_row_ids": [
           "physreason-qwq-32b"
-        ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-5675-b1c372c68f311b5d",
-        "benchmark_id": "physreason",
-        "benchmark_version_id": "physreason-canonical",
-        "model_id": "model-deepseek-r1-20250120-6e58fe3e0d0fd549",
-        "model_configuration": "deepseek-r1-20250120",
-        "model_identity_organization": "deepseek",
-        "model_label_id": "deepseek-r1",
-        "model_family_id": "deepseek-deepseek-r1",
-        "model": "DeepSeek-R1",
-        "organization": "DeepSeek",
-        "score": 0.5675,
-        "input_score": 0.5675,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "physreason-metric-v1",
-        "protocol_id": "physreason-source-export-v1",
-        "task_set_id": "physreason-canonical",
-        "metric": "PSAS-A",
-        "score_role": "canonical",
-        "score_series_id": "physreason-canonical-score",
-        "evaluation_protocol": "PhysReason full 1,200-item benchmark, zero-shot chain-of-thought, PSAS-A answer-level weighted average. Q+image and Q+image-caption input conditions are preserved in observation notes and are not treated as interchangeable hidden metadata.",
-        "model_release_date": "2025-01-20",
-        "evaluation_date": "2025-02-17",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2025-01-20",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-01-20",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2025-02-17",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2025-02-17",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-01-20",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-        ],
-        "source": "https://github.com/zhang-xinyu-1204/PhysReason",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-physreason-deepseek-r1-c13be093bbf289ae"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "physreason-deepseek-r1"
-        ],
-        "plot_date": "2025-02-17",
-        "frontier_observation_ids": [
-          "obs-0-2958-5340bcd0681a5996",
-          "obs-0-3469-c09e5c646bfc7882",
-          "obs-0-4589-15a68b7282c0a4f0",
-          "obs-0-4788-5a122f939a9fcd9a",
-          "obs-0-5332-1cabc8fd47933d87",
-          "obs-0-5473-791486a5e00a5350",
-          "obs-0-5675-b1c372c68f311b5d"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-5675-b1c372c68f311b5d",
-        "benchmark_id": "physreason",
-        "benchmark_version_id": "physreason-canonical",
-        "model_id": "model-deepseek-r1-20250120-6e58fe3e0d0fd549",
-        "model_configuration": "deepseek-r1-20250120",
-        "model_identity_organization": "deepseek",
-        "model_label_id": "deepseek-r1",
-        "model_family_id": "deepseek-deepseek-r1",
-        "model": "DeepSeek-R1",
-        "organization": "DeepSeek",
-        "score": 0.5675,
-        "input_score": 0.5675,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "physreason-metric-v1",
-        "protocol_id": "physreason-source-export-v1",
-        "task_set_id": "physreason-canonical",
-        "metric": "PSAS-A",
-        "score_role": "canonical",
-        "score_series_id": "physreason-canonical-score",
-        "evaluation_protocol": "PhysReason full 1,200-item benchmark, zero-shot chain-of-thought, PSAS-A answer-level weighted average. Q+image and Q+image-caption input conditions are preserved in observation notes and are not treated as interchangeable hidden metadata.",
-        "model_release_date": "2025-01-20",
-        "evaluation_date": "2025-02-17",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2025-01-20",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-01-20",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2025-02-17",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2025-02-17",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-01-20",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-        ],
-        "source": "https://github.com/zhang-xinyu-1204/PhysReason",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-physreason-deepseek-r1-c13be093bbf289ae"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "physreason-deepseek-r1"
-        ],
-        "plot_date": "2025-02-17",
-        "frontier_observation_ids": [
-          "obs-0-2958-5340bcd0681a5996",
-          "obs-0-3469-c09e5c646bfc7882",
-          "obs-0-4589-15a68b7282c0a4f0",
-          "obs-0-4788-5a122f939a9fcd9a",
-          "obs-0-5332-1cabc8fd47933d87",
-          "obs-0-5473-791486a5e00a5350",
-          "obs-0-5675-b1c372c68f311b5d"
         ]
       }
     ],
@@ -921,7 +737,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2025-02-17",
@@ -964,489 +780,6 @@
       }
     ],
     "reported_frontier": [],
-    "historical_frontier": [],
-    "retrospective_observations": [
-      {
-        "observation_id": "obs-0-2958-5340bcd0681a5996",
-        "benchmark_id": "physreason",
-        "benchmark_version_id": "physreason-canonical",
-        "model_id": "model-gpt-4o-2024-05-13-a8b4b8c99c9f9f6d",
-        "model_configuration": "gpt-4o-2024-05-13",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-4o",
-        "model_family_id": "openai-gpt-4o",
-        "model": "GPT-4o",
-        "organization": "OpenAI",
-        "score": 0.2958,
-        "input_score": 0.2958,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "physreason-metric-v1",
-        "protocol_id": "physreason-source-export-v1",
-        "task_set_id": "physreason-canonical",
-        "metric": "PSAS-A",
-        "score_role": "canonical",
-        "score_series_id": "physreason-canonical-score",
-        "evaluation_protocol": "PhysReason full 1,200-item benchmark, zero-shot chain-of-thought, PSAS-A answer-level weighted average. Q+image and Q+image-caption input conditions are preserved in observation notes and are not treated as interchangeable hidden metadata.",
-        "model_release_date": "2024-05-13",
-        "evaluation_date": "2025-02-17",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2024-05-13",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-05-13",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2025-02-17",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2024-05-13",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-05-13",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-        ],
-        "source": "https://github.com/zhang-xinyu-1204/PhysReason",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-physreason-gpt-4o-dd240f1ecd5ca86b"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "physreason-gpt-4o"
-        ]
-      },
-      {
-        "observation_id": "obs-0-3469-c09e5c646bfc7882",
-        "benchmark_id": "physreason",
-        "benchmark_version_id": "physreason-canonical",
-        "model_id": "model-claude-3-5-sonnet-20240620-f30b888514e2c660",
-        "model_configuration": "claude-3-5-sonnet-20240620",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-3-5-sonnet",
-        "model_family_id": "anthropic-claude-3-5-sonnet",
-        "model": "Claude 3.5 Sonnet",
-        "organization": "Anthropic",
-        "score": 0.3469,
-        "input_score": 0.3469,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "physreason-metric-v1",
-        "protocol_id": "physreason-source-export-v1",
-        "task_set_id": "physreason-canonical",
-        "metric": "PSAS-A",
-        "score_role": "canonical",
-        "score_series_id": "physreason-canonical-score",
-        "evaluation_protocol": "PhysReason full 1,200-item benchmark, zero-shot chain-of-thought, PSAS-A answer-level weighted average. Q+image and Q+image-caption input conditions are preserved in observation notes and are not treated as interchangeable hidden metadata.",
-        "model_release_date": "2024-06-20",
-        "evaluation_date": "2025-02-17",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2024-06-20",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-06-20",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2025-02-17",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2024-06-20",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-06-20",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-        ],
-        "source": "https://github.com/zhang-xinyu-1204/PhysReason",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-physreason-claude-3-5-sonnet-e6e2a5e47c1c38be"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "physreason-claude-3-5-sonnet"
-        ]
-      },
-      {
-        "observation_id": "obs-0-5473-791486a5e00a5350",
-        "benchmark_id": "physreason",
-        "benchmark_version_id": "physreason-canonical",
-        "model_id": "model-gemini-2-0-flash-thinking-20250121-3b49c6f481e5730e",
-        "model_configuration": "gemini-2-0-flash-thinking-20250121",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-2-0-flash-thinking-0121",
-        "model_family_id": "google-gemini-2-0-flash-thinking-0121",
-        "model": "Gemini 2.0 Flash Thinking 0121",
-        "organization": "Google",
-        "score": 0.5473,
-        "input_score": 0.5473,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "physreason-metric-v1",
-        "protocol_id": "physreason-source-export-v1",
-        "task_set_id": "physreason-canonical",
-        "metric": "PSAS-A",
-        "score_role": "canonical",
-        "score_series_id": "physreason-canonical-score",
-        "evaluation_protocol": "PhysReason full 1,200-item benchmark, zero-shot chain-of-thought, PSAS-A answer-level weighted average. Q+image and Q+image-caption input conditions are preserved in observation notes and are not treated as interchangeable hidden metadata.",
-        "model_release_date": "2025-01-21",
-        "evaluation_date": "2025-02-17",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2025-01-21",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-01-21",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2025-02-17",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2025-01-21",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-01-21",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-        ],
-        "source": "https://github.com/zhang-xinyu-1204/PhysReason",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-physreason-gemini-2-flash-thinking-9e36137d937865cc"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "physreason-gemini-2-flash-thinking"
-        ]
-      },
-      {
-        "observation_id": "obs-0-5675-b1c372c68f311b5d",
-        "benchmark_id": "physreason",
-        "benchmark_version_id": "physreason-canonical",
-        "model_id": "model-deepseek-r1-20250120-6e58fe3e0d0fd549",
-        "model_configuration": "deepseek-r1-20250120",
-        "model_identity_organization": "deepseek",
-        "model_label_id": "deepseek-r1",
-        "model_family_id": "deepseek-deepseek-r1",
-        "model": "DeepSeek-R1",
-        "organization": "DeepSeek",
-        "score": 0.5675,
-        "input_score": 0.5675,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "physreason-metric-v1",
-        "protocol_id": "physreason-source-export-v1",
-        "task_set_id": "physreason-canonical",
-        "metric": "PSAS-A",
-        "score_role": "canonical",
-        "score_series_id": "physreason-canonical-score",
-        "evaluation_protocol": "PhysReason full 1,200-item benchmark, zero-shot chain-of-thought, PSAS-A answer-level weighted average. Q+image and Q+image-caption input conditions are preserved in observation notes and are not treated as interchangeable hidden metadata.",
-        "model_release_date": "2025-01-20",
-        "evaluation_date": "2025-02-17",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2025-01-20",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-01-20",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2025-02-17",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2025-01-20",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-01-20",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-        ],
-        "source": "https://github.com/zhang-xinyu-1204/PhysReason",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-physreason-deepseek-r1-c13be093bbf289ae"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "physreason-deepseek-r1"
-        ]
-      },
-      {
-        "observation_id": "obs-0-5332-1cabc8fd47933d87",
-        "benchmark_id": "physreason",
-        "benchmark_version_id": "physreason-canonical",
-        "model_id": "model-o3-mini-high-20250131-d7d70e576d15e20d",
-        "model_configuration": "o3-mini-high-20250131",
-        "model_identity_organization": "openai",
-        "model_label_id": "o3-mini-high",
-        "model_family_id": "openai-o3-mini",
-        "model": "o3-mini (High)",
-        "organization": "OpenAI",
-        "score": 0.5332,
-        "input_score": 0.5332,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "physreason-metric-v1",
-        "protocol_id": "physreason-source-export-v1",
-        "task_set_id": "physreason-canonical",
-        "metric": "PSAS-A",
-        "score_role": "canonical",
-        "score_series_id": "physreason-canonical-score",
-        "evaluation_protocol": "PhysReason full 1,200-item benchmark, zero-shot chain-of-thought, PSAS-A answer-level weighted average. Q+image and Q+image-caption input conditions are preserved in observation notes and are not treated as interchangeable hidden metadata.",
-        "model_release_date": "2025-01-31",
-        "evaluation_date": "2025-02-17",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2025-01-31",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-01-31",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2025-02-17",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2025-01-31",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-01-31",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-        ],
-        "source": "https://github.com/zhang-xinyu-1204/PhysReason",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-physreason-o3-mini-high-23b259e9aeb90552"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "physreason-o3-mini-high"
-        ]
-      },
-      {
-        "observation_id": "obs-0-4788-5a122f939a9fcd9a",
-        "benchmark_id": "physreason",
-        "benchmark_version_id": "physreason-canonical",
-        "model_id": "model-gemini-2-0-pro-exp-0205-a1532d02a20abe96",
-        "model_configuration": "gemini-2-0-pro-exp-0205",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-2-0-pro",
-        "model_family_id": "google-gemini-2-0-pro",
-        "model": "Gemini 2.0 Pro",
-        "organization": "Google",
-        "score": 0.4788,
-        "input_score": 0.4788,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "physreason-metric-v1",
-        "protocol_id": "physreason-source-export-v1",
-        "task_set_id": "physreason-canonical",
-        "metric": "PSAS-A",
-        "score_role": "canonical",
-        "score_series_id": "physreason-canonical-score",
-        "evaluation_protocol": "PhysReason full 1,200-item benchmark, zero-shot chain-of-thought, PSAS-A answer-level weighted average. Q+image and Q+image-caption input conditions are preserved in observation notes and are not treated as interchangeable hidden metadata.",
-        "model_release_date": "2025-02-05",
-        "evaluation_date": "2025-02-17",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2025-02-05",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-02-05",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2025-02-17",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2025-02-05",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-02-05",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-zhang-xinyu-1204-physreason-d88a29a576cae9a0"
-        ],
-        "source": "https://github.com/zhang-xinyu-1204/PhysReason",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-physreason-gemini-2-pro-7a8ffb8b5ed1b932"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "physreason-gemini-2-pro"
-        ]
-      }
-    ],
     "observed_frontier": 0.5675,
     "capability_frontier_value": 0.5675,
     "reported_frontier_value": null,
@@ -1461,11 +794,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 583
+        "days": 617
       },
       "T90": {
         "status": "right_censored",
-        "days": 583
+        "days": 617
       }
     },
     "capability_threshold_days": {
@@ -1476,11 +809,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 583
+        "days": 617
       },
       "T90": {
         "status": "right_censored",
-        "days": 583
+        "days": 617
       }
     },
     "reported_threshold_days": {

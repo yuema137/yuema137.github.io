@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -172,7 +172,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-06-17",
@@ -253,7 +253,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-05-13",
@@ -334,7 +334,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-06-20",
@@ -415,7 +415,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-08-29",
@@ -496,7 +496,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-04-05",
@@ -579,7 +579,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-04-05",
@@ -661,7 +661,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-08-07",
@@ -691,192 +691,6 @@
         "evidence_count": 1,
         "source_row_ids": [
           "mvrb-gpt5"
-        ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-5641-365a218ec3eeb9b0",
-        "benchmark_id": "mv-robobench-v2-unified-zeroshot-avg",
-        "benchmark_version_id": "mv-robobench-v2-unified-zeroshot-avg-canonical",
-        "model_id": "model-gpt-5-cdd3b6d6cb9421c1",
-        "model_configuration": "GPT-5",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-5",
-        "model_family_id": "openai-gpt-5",
-        "model": "GPT-5",
-        "organization": "OpenAI",
-        "score": 0.5641,
-        "input_score": 0.5641,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "mv-robobench-v2-unified-zeroshot-avg-metric-v1",
-        "protocol_id": "mv-robobench-v2-unified-zeroshot-avg-source-export-v1",
-        "task_set_id": "mv-robobench-v2-unified-zeroshot-avg-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "mv-robobench-v2-unified-zeroshot-avg-canonical-score",
-        "evaluation_protocol": "MV-RoboBench v2 fixed multiview set, zero-shot A-E choice, published unified average; per-task and alternative prompting excluded.",
-        "model_release_date": "2025-08-07",
-        "evaluation_date": null,
-        "result_public_date": "2026-03-02",
-        "source_publication_date": "2026-03-02",
-        "observation_date": "2025-08-07",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-08-07",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2510-19400v2-748f04fbc5bb6f0c"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2510-19400v2-748f04fbc5bb6f0c"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-03-02",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-10-22",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-08-07",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-03-02",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-aaronfengzy-github-io-mv-robobench-webpage-1bdd17f604da327c",
-          "resource-https-arxiv-org-abs-2510-19400v2-748f04fbc5bb6f0c"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2510-19400v2-748f04fbc5bb6f0c"
-        ],
-        "source": "https://arxiv.org/abs/2510.19400v2",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-mvrb-gpt5-ccfc0674c6352861"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "mvrb-gpt5"
-        ],
-        "plot_date": "2025-10-22",
-        "frontier_observation_ids": [
-          "obs-0-2084-fe40c5195aa008c4",
-          "obs-0-2212-18eb9fe24d8a3837",
-          "obs-0-2371-a145807c23514f97",
-          "obs-0-2611-a5ad7c3169515890",
-          "obs-0-2759-4583b3839e4336cd",
-          "obs-0-4952-893304cfbb13ab11",
-          "obs-0-5641-365a218ec3eeb9b0"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-5641-365a218ec3eeb9b0",
-        "benchmark_id": "mv-robobench-v2-unified-zeroshot-avg",
-        "benchmark_version_id": "mv-robobench-v2-unified-zeroshot-avg-canonical",
-        "model_id": "model-gpt-5-cdd3b6d6cb9421c1",
-        "model_configuration": "GPT-5",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-5",
-        "model_family_id": "openai-gpt-5",
-        "model": "GPT-5",
-        "organization": "OpenAI",
-        "score": 0.5641,
-        "input_score": 0.5641,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "mv-robobench-v2-unified-zeroshot-avg-metric-v1",
-        "protocol_id": "mv-robobench-v2-unified-zeroshot-avg-source-export-v1",
-        "task_set_id": "mv-robobench-v2-unified-zeroshot-avg-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "mv-robobench-v2-unified-zeroshot-avg-canonical-score",
-        "evaluation_protocol": "MV-RoboBench v2 fixed multiview set, zero-shot A-E choice, published unified average; per-task and alternative prompting excluded.",
-        "model_release_date": "2025-08-07",
-        "evaluation_date": null,
-        "result_public_date": "2026-03-02",
-        "source_publication_date": "2026-03-02",
-        "observation_date": "2025-08-07",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-08-07",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2510-19400v2-748f04fbc5bb6f0c"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2510-19400v2-748f04fbc5bb6f0c"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-03-02",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-10-22",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-08-07",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-03-02",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-aaronfengzy-github-io-mv-robobench-webpage-1bdd17f604da327c",
-          "resource-https-arxiv-org-abs-2510-19400v2-748f04fbc5bb6f0c"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2510-19400v2-748f04fbc5bb6f0c"
-        ],
-        "source": "https://arxiv.org/abs/2510.19400v2",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-mvrb-gpt5-ccfc0674c6352861"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "mvrb-gpt5"
-        ],
-        "plot_date": "2025-10-22",
-        "frontier_observation_ids": [
-          "obs-0-2084-fe40c5195aa008c4",
-          "obs-0-2212-18eb9fe24d8a3837",
-          "obs-0-2371-a145807c23514f97",
-          "obs-0-2611-a5ad7c3169515890",
-          "obs-0-2759-4583b3839e4336cd",
-          "obs-0-4952-893304cfbb13ab11",
-          "obs-0-5641-365a218ec3eeb9b0"
         ]
       }
     ],
@@ -930,7 +744,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-10-22",
@@ -1023,7 +837,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-03-02",
@@ -1066,100 +880,6 @@
         ]
       }
     ],
-    "historical_frontier": [
-      {
-        "observation_id": "obs-0-5641-365a218ec3eeb9b0",
-        "benchmark_id": "mv-robobench-v2-unified-zeroshot-avg",
-        "benchmark_version_id": "mv-robobench-v2-unified-zeroshot-avg-canonical",
-        "model_id": "model-gpt-5-cdd3b6d6cb9421c1",
-        "model_configuration": "GPT-5",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-5",
-        "model_family_id": "openai-gpt-5",
-        "model": "GPT-5",
-        "organization": "OpenAI",
-        "score": 0.5641,
-        "input_score": 0.5641,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "mv-robobench-v2-unified-zeroshot-avg-metric-v1",
-        "protocol_id": "mv-robobench-v2-unified-zeroshot-avg-source-export-v1",
-        "task_set_id": "mv-robobench-v2-unified-zeroshot-avg-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "mv-robobench-v2-unified-zeroshot-avg-canonical-score",
-        "evaluation_protocol": "MV-RoboBench v2 fixed multiview set, zero-shot A-E choice, published unified average; per-task and alternative prompting excluded.",
-        "model_release_date": "2025-08-07",
-        "evaluation_date": null,
-        "result_public_date": "2026-03-02",
-        "source_publication_date": "2026-03-02",
-        "observation_date": "2025-08-07",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-08-07",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2510-19400v2-748f04fbc5bb6f0c"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2510-19400v2-748f04fbc5bb6f0c"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-03-02",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2026-03-02",
-        "date_kind": "result first-public date",
-        "capability_date": "2025-08-07",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-03-02",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-aaronfengzy-github-io-mv-robobench-webpage-1bdd17f604da327c",
-          "resource-https-arxiv-org-abs-2510-19400v2-748f04fbc5bb6f0c"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2510-19400v2-748f04fbc5bb6f0c"
-        ],
-        "source": "https://arxiv.org/abs/2510.19400v2",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-mvrb-gpt5-ccfc0674c6352861"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "mvrb-gpt5"
-        ],
-        "plot_date": "2026-03-02",
-        "frontier_observation_ids": [
-          "obs-0-2084-fe40c5195aa008c4",
-          "obs-0-2212-18eb9fe24d8a3837",
-          "obs-0-2371-a145807c23514f97",
-          "obs-0-2611-a5ad7c3169515890",
-          "obs-0-2759-4583b3839e4336cd",
-          "obs-0-4952-893304cfbb13ab11",
-          "obs-0-5641-365a218ec3eeb9b0"
-        ]
-      }
-    ],
-    "retrospective_observations": [],
     "observed_frontier": 0.5641,
     "capability_frontier_value": 0.5641,
     "reported_frontier_value": 0.5641,
@@ -1169,43 +889,43 @@
     "threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 336
+        "days": 370
       },
       "T80": {
         "status": "right_censored",
-        "days": 336
+        "days": 370
       },
       "T90": {
         "status": "right_censored",
-        "days": 336
+        "days": 370
       }
     },
     "capability_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 336
+        "days": 370
       },
       "T80": {
         "status": "right_censored",
-        "days": 336
+        "days": 370
       },
       "T90": {
         "status": "right_censored",
-        "days": 336
+        "days": 370
       }
     },
     "reported_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 336
+        "days": 370
       },
       "T80": {
         "status": "right_censored",
-        "days": 336
+        "days": 370
       },
       "T90": {
         "status": "right_censored",
-        "days": 336
+        "days": 370
       }
     },
     "velocity_180d": null,
@@ -1233,7 +953,7 @@
     "timeline_default": "capability",
     "lifecycle_eligibility": {
       "test-of-time": {
-        "eligible": false,
+        "eligible": true,
         "rule": "T50 >= 12 months OR T90 >= 24 months, including censoring"
       },
       "still-frontier": {

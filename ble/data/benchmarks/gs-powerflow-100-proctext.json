@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -178,7 +178,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2023-03-01",
@@ -264,7 +264,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-03-25",
@@ -350,7 +350,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-09-29",
@@ -379,194 +379,6 @@
         "evidence_count": 1,
         "source_row_ids": [
           "gspower-sonnet45"
-        ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-53-2210c9adb0d9a2f1",
-        "benchmark_id": "gs-powerflow-100-proctext",
-        "benchmark_version_id": "gs-powerflow-100-proctext-canonical",
-        "model_id": "model-gemini-2-5-pro-preview-03-25-a5dfe87e5cdb99d2",
-        "model_configuration": "Gemini-2.5-Pro-Preview-03-25",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-2-5-pro-preview-03-25",
-        "model_family_id": "google-gemini-2-5-pro-preview-03-25",
-        "model": "Gemini-2.5-Pro-Preview-03-25",
-        "organization": "Google",
-        "score": 0.53,
-        "input_score": 0.53,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "gs-powerflow-100-proctext-metric-v1",
-        "protocol_id": "gs-powerflow-100-proctext-source-export-v1",
-        "task_set_id": "gs-powerflow-100-proctext-canonical",
-        "metric": "Within 5%",
-        "score_role": "canonical",
-        "score_series_id": "gs-powerflow-100-proctext-canonical-score",
-        "evaluation_protocol": "GS-PowerFlow fixed 100-case replication, procedural-text prompt, no tools, one run per case, strict <5% relative-error success.",
-        "model_release_date": "2025-03-25",
-        "evaluation_date": "2026-01-01",
-        "result_public_date": "2026-05-18",
-        "source_publication_date": "2026-05-18",
-        "observation_date": "2025-03-25",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-03-25",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2605-18642-cf3acde8f571d024"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2605-18642-cf3acde8f571d024"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-01-01",
-            "kind": "Started at",
-            "precision": "month"
-          }
-        ],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-05-18",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2026-05-18",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-03-25",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-05-18",
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2605-18642-cf3acde8f571d024"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2605-18642-cf3acde8f571d024"
-        ],
-        "source": "https://arxiv.org/abs/2605.18642",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-gspower-gemini25-c22dc228f1a1252b"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "gspower-gemini25"
-        ],
-        "plot_date": "2026-05-18",
-        "frontier_observation_ids": [
-          "obs-0-01-36f8681ab24af19e",
-          "obs-0-37-b2dc82c0ca291f56",
-          "obs-0-53-2210c9adb0d9a2f1"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-53-2210c9adb0d9a2f1",
-        "benchmark_id": "gs-powerflow-100-proctext",
-        "benchmark_version_id": "gs-powerflow-100-proctext-canonical",
-        "model_id": "model-gemini-2-5-pro-preview-03-25-a5dfe87e5cdb99d2",
-        "model_configuration": "Gemini-2.5-Pro-Preview-03-25",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-2-5-pro-preview-03-25",
-        "model_family_id": "google-gemini-2-5-pro-preview-03-25",
-        "model": "Gemini-2.5-Pro-Preview-03-25",
-        "organization": "Google",
-        "score": 0.53,
-        "input_score": 0.53,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "gs-powerflow-100-proctext-metric-v1",
-        "protocol_id": "gs-powerflow-100-proctext-source-export-v1",
-        "task_set_id": "gs-powerflow-100-proctext-canonical",
-        "metric": "Within 5%",
-        "score_role": "canonical",
-        "score_series_id": "gs-powerflow-100-proctext-canonical-score",
-        "evaluation_protocol": "GS-PowerFlow fixed 100-case replication, procedural-text prompt, no tools, one run per case, strict <5% relative-error success.",
-        "model_release_date": "2025-03-25",
-        "evaluation_date": "2026-01-01",
-        "result_public_date": "2026-05-18",
-        "source_publication_date": "2026-05-18",
-        "observation_date": "2025-03-25",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-03-25",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2605-18642-cf3acde8f571d024"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2605-18642-cf3acde8f571d024"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-01-01",
-            "kind": "Started at",
-            "precision": "month"
-          }
-        ],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-05-18",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2026-05-18",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-03-25",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-05-18",
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2605-18642-cf3acde8f571d024"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2605-18642-cf3acde8f571d024"
-        ],
-        "source": "https://arxiv.org/abs/2605.18642",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-gspower-gemini25-c22dc228f1a1252b"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "gspower-gemini25"
-        ],
-        "plot_date": "2026-05-18",
-        "frontier_observation_ids": [
-          "obs-0-01-36f8681ab24af19e",
-          "obs-0-37-b2dc82c0ca291f56",
-          "obs-0-53-2210c9adb0d9a2f1"
         ]
       }
     ],
@@ -626,7 +438,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-05-18",
@@ -720,7 +532,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-05-18",
@@ -755,360 +567,6 @@
           "obs-0-01-36f8681ab24af19e",
           "obs-0-37-b2dc82c0ca291f56",
           "obs-0-53-2210c9adb0d9a2f1"
-        ]
-      }
-    ],
-    "historical_frontier": [
-      {
-        "observation_id": "obs-0-53-2210c9adb0d9a2f1",
-        "benchmark_id": "gs-powerflow-100-proctext",
-        "benchmark_version_id": "gs-powerflow-100-proctext-canonical",
-        "model_id": "model-gemini-2-5-pro-preview-03-25-a5dfe87e5cdb99d2",
-        "model_configuration": "Gemini-2.5-Pro-Preview-03-25",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-2-5-pro-preview-03-25",
-        "model_family_id": "google-gemini-2-5-pro-preview-03-25",
-        "model": "Gemini-2.5-Pro-Preview-03-25",
-        "organization": "Google",
-        "score": 0.53,
-        "input_score": 0.53,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "gs-powerflow-100-proctext-metric-v1",
-        "protocol_id": "gs-powerflow-100-proctext-source-export-v1",
-        "task_set_id": "gs-powerflow-100-proctext-canonical",
-        "metric": "Within 5%",
-        "score_role": "canonical",
-        "score_series_id": "gs-powerflow-100-proctext-canonical-score",
-        "evaluation_protocol": "GS-PowerFlow fixed 100-case replication, procedural-text prompt, no tools, one run per case, strict <5% relative-error success.",
-        "model_release_date": "2025-03-25",
-        "evaluation_date": "2026-01-01",
-        "result_public_date": "2026-05-18",
-        "source_publication_date": "2026-05-18",
-        "observation_date": "2025-03-25",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-03-25",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2605-18642-cf3acde8f571d024"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2605-18642-cf3acde8f571d024"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-01-01",
-            "kind": "Started at",
-            "precision": "month"
-          }
-        ],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-05-18",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2026-05-18",
-        "date_kind": "result first-public date",
-        "capability_date": "2025-03-25",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-05-18",
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2605-18642-cf3acde8f571d024"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2605-18642-cf3acde8f571d024"
-        ],
-        "source": "https://arxiv.org/abs/2605.18642",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-gspower-gemini25-c22dc228f1a1252b"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "gspower-gemini25"
-        ],
-        "plot_date": "2026-05-18",
-        "frontier_observation_ids": [
-          "obs-0-01-36f8681ab24af19e",
-          "obs-0-37-b2dc82c0ca291f56",
-          "obs-0-53-2210c9adb0d9a2f1"
-        ]
-      }
-    ],
-    "retrospective_observations": [
-      {
-        "observation_id": "obs-0-01-36f8681ab24af19e",
-        "benchmark_id": "gs-powerflow-100-proctext",
-        "benchmark_version_id": "gs-powerflow-100-proctext-canonical",
-        "model_id": "model-gpt-3-5-turbo-130d6c1b27b8d572",
-        "model_configuration": "GPT-3.5-Turbo",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-3-5-turbo",
-        "model_family_id": "openai-gpt-3-5-turbo",
-        "model": "GPT-3.5-Turbo",
-        "organization": "OpenAI",
-        "score": 0.01,
-        "input_score": 0.01,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "gs-powerflow-100-proctext-metric-v1",
-        "protocol_id": "gs-powerflow-100-proctext-source-export-v1",
-        "task_set_id": "gs-powerflow-100-proctext-canonical",
-        "metric": "Within 5%",
-        "score_role": "canonical",
-        "score_series_id": "gs-powerflow-100-proctext-canonical-score",
-        "evaluation_protocol": "GS-PowerFlow fixed 100-case replication, procedural-text prompt, no tools, one run per case, strict <5% relative-error success.",
-        "model_release_date": "2023-03-01",
-        "evaluation_date": "2026-01-01",
-        "result_public_date": "2026-05-18",
-        "source_publication_date": "2026-05-18",
-        "observation_date": "2023-03-01",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2023-03-01",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2605-18642-cf3acde8f571d024"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2605-18642-cf3acde8f571d024"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-01-01",
-            "kind": "Started at",
-            "precision": "month"
-          }
-        ],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-05-18",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2023-03-01",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2023-03-01",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-05-18",
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2605-18642-cf3acde8f571d024"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2605-18642-cf3acde8f571d024"
-        ],
-        "source": "https://arxiv.org/abs/2605.18642",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-gspower-gpt35-9ef137c56eb49a89"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "gspower-gpt35"
-        ]
-      },
-      {
-        "observation_id": "obs-0-53-2210c9adb0d9a2f1",
-        "benchmark_id": "gs-powerflow-100-proctext",
-        "benchmark_version_id": "gs-powerflow-100-proctext-canonical",
-        "model_id": "model-gemini-2-5-pro-preview-03-25-a5dfe87e5cdb99d2",
-        "model_configuration": "Gemini-2.5-Pro-Preview-03-25",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-2-5-pro-preview-03-25",
-        "model_family_id": "google-gemini-2-5-pro-preview-03-25",
-        "model": "Gemini-2.5-Pro-Preview-03-25",
-        "organization": "Google",
-        "score": 0.53,
-        "input_score": 0.53,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "gs-powerflow-100-proctext-metric-v1",
-        "protocol_id": "gs-powerflow-100-proctext-source-export-v1",
-        "task_set_id": "gs-powerflow-100-proctext-canonical",
-        "metric": "Within 5%",
-        "score_role": "canonical",
-        "score_series_id": "gs-powerflow-100-proctext-canonical-score",
-        "evaluation_protocol": "GS-PowerFlow fixed 100-case replication, procedural-text prompt, no tools, one run per case, strict <5% relative-error success.",
-        "model_release_date": "2025-03-25",
-        "evaluation_date": "2026-01-01",
-        "result_public_date": "2026-05-18",
-        "source_publication_date": "2026-05-18",
-        "observation_date": "2025-03-25",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-03-25",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2605-18642-cf3acde8f571d024"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2605-18642-cf3acde8f571d024"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-01-01",
-            "kind": "Started at",
-            "precision": "month"
-          }
-        ],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-05-18",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-03-25",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-03-25",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-05-18",
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2605-18642-cf3acde8f571d024"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2605-18642-cf3acde8f571d024"
-        ],
-        "source": "https://arxiv.org/abs/2605.18642",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-gspower-gemini25-c22dc228f1a1252b"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "gspower-gemini25"
-        ]
-      },
-      {
-        "observation_id": "obs-0-37-b2dc82c0ca291f56",
-        "benchmark_id": "gs-powerflow-100-proctext",
-        "benchmark_version_id": "gs-powerflow-100-proctext-canonical",
-        "model_id": "model-claude-sonnet-4-5-1375953e5a053324",
-        "model_configuration": "Claude-Sonnet-4.5",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-sonnet-4-5",
-        "model_family_id": "anthropic-claude-sonnet-4-5",
-        "model": "Claude-Sonnet-4.5",
-        "organization": "Anthropic",
-        "score": 0.37,
-        "input_score": 0.37,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "gs-powerflow-100-proctext-metric-v1",
-        "protocol_id": "gs-powerflow-100-proctext-source-export-v1",
-        "task_set_id": "gs-powerflow-100-proctext-canonical",
-        "metric": "Within 5%",
-        "score_role": "canonical",
-        "score_series_id": "gs-powerflow-100-proctext-canonical-score",
-        "evaluation_protocol": "GS-PowerFlow fixed 100-case replication, procedural-text prompt, no tools, one run per case, strict <5% relative-error success.",
-        "model_release_date": "2025-09-29",
-        "evaluation_date": "2026-01-01",
-        "result_public_date": "2026-05-18",
-        "source_publication_date": "2026-05-18",
-        "observation_date": "2025-09-29",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-09-29",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2605-18642-cf3acde8f571d024"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2605-18642-cf3acde8f571d024"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-01-01",
-            "kind": "Started at",
-            "precision": "month"
-          }
-        ],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-05-18",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-09-29",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-09-29",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-05-18",
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2605-18642-cf3acde8f571d024"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2605-18642-cf3acde8f571d024"
-        ],
-        "source": "https://arxiv.org/abs/2605.18642",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-gspower-sonnet45-dcfe4202a73522ef"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "gspower-sonnet45"
         ]
       }
     ],
@@ -1126,11 +584,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 128
+        "days": 162
       },
       "T90": {
         "status": "right_censored",
-        "days": 128
+        "days": 162
       }
     },
     "capability_threshold_days": {
@@ -1141,11 +599,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 128
+        "days": 162
       },
       "T90": {
         "status": "right_censored",
-        "days": 128
+        "days": 162
       }
     },
     "reported_threshold_days": {
@@ -1156,11 +614,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 128
+        "days": 162
       },
       "T90": {
         "status": "right_censored",
-        "days": 128
+        "days": 162
       }
     },
     "velocity_180d": null,

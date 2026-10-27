@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -172,7 +172,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-04-23",
@@ -253,7 +253,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-05-19",
@@ -334,7 +334,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-05-28",
@@ -415,7 +415,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -496,7 +496,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-24",
@@ -526,188 +526,6 @@
         "evidence_count": 1,
         "source_row_ids": [
           "pgllm-claude-opus-5"
-        ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-406-ffaf2ccf85f6b6d9",
-        "benchmark_id": "pg-llm-proteingym",
-        "benchmark_version_id": "pg-llm-proteingym-canonical",
-        "model_id": "model-claude-opus-5-bf4dc0c2f36c7035",
-        "model_configuration": "claude-opus-5",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-opus-5",
-        "model_family_id": "anthropic-claude-opus-5",
-        "model": "Claude Opus 5",
-        "organization": "Anthropic",
-        "score": 0.406,
-        "input_score": 0.406,
-        "input_unit": "number",
-        "reported_cost_per_task": null,
-        "metric_id": "pg-llm-proteingym-metric-v1",
-        "protocol_id": "pg-llm-proteingym-source-export-v1",
-        "task_set_id": "pg-llm-proteingym-canonical",
-        "metric": "Spearman rho",
-        "score_role": "canonical",
-        "score_series_id": "pg-llm-proteingym-canonical-score",
-        "evaluation_protocol": "PG-LLM ProteinGym v1.3 primary track: 217 assays, N=50 variants, fixed seeds 1\u20133, no tools/MSA/structure, nested-macro Spearman rho. The 59-assay recent holdout is excluded.",
-        "model_release_date": "2026-07-24",
-        "evaluation_date": "2026-07-27",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-07-24",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-07-24",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-www-proteingymllm-com-benchmark-77b933918636dec9"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-www-proteingymllm-com-benchmark-77b933918636dec9"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-07-27",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-07-27",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-07-24",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-www-proteingymllm-com-benchmark-77b933918636dec9",
-          "resource-https-www-proteingymllm-com-f7cde2f74bfb999c"
-        ],
-        "score_source_ids": [
-          "resource-https-www-proteingymllm-com-benchmark-77b933918636dec9"
-        ],
-        "source": "https://www.proteingymllm.com/benchmark",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-pgllm-claude-opus-5-b6c7cfd1052d9569"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "pgllm-claude-opus-5"
-        ],
-        "plot_date": "2026-07-27",
-        "frontier_observation_ids": [
-          "obs-0-336-77ae4669d79b0795",
-          "obs-0-343-a6f8ab61b18ca958",
-          "obs-0-356-3cdafca0e6abd18c",
-          "obs-0-402-3f27f6bfc7c0f92e",
-          "obs-0-406-ffaf2ccf85f6b6d9"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-406-ffaf2ccf85f6b6d9",
-        "benchmark_id": "pg-llm-proteingym",
-        "benchmark_version_id": "pg-llm-proteingym-canonical",
-        "model_id": "model-claude-opus-5-bf4dc0c2f36c7035",
-        "model_configuration": "claude-opus-5",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-opus-5",
-        "model_family_id": "anthropic-claude-opus-5",
-        "model": "Claude Opus 5",
-        "organization": "Anthropic",
-        "score": 0.406,
-        "input_score": 0.406,
-        "input_unit": "number",
-        "reported_cost_per_task": null,
-        "metric_id": "pg-llm-proteingym-metric-v1",
-        "protocol_id": "pg-llm-proteingym-source-export-v1",
-        "task_set_id": "pg-llm-proteingym-canonical",
-        "metric": "Spearman rho",
-        "score_role": "canonical",
-        "score_series_id": "pg-llm-proteingym-canonical-score",
-        "evaluation_protocol": "PG-LLM ProteinGym v1.3 primary track: 217 assays, N=50 variants, fixed seeds 1\u20133, no tools/MSA/structure, nested-macro Spearman rho. The 59-assay recent holdout is excluded.",
-        "model_release_date": "2026-07-24",
-        "evaluation_date": "2026-07-27",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-07-24",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-07-24",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-www-proteingymllm-com-benchmark-77b933918636dec9"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-www-proteingymllm-com-benchmark-77b933918636dec9"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-07-27",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-07-27",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-07-24",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-www-proteingymllm-com-benchmark-77b933918636dec9",
-          "resource-https-www-proteingymllm-com-f7cde2f74bfb999c"
-        ],
-        "score_source_ids": [
-          "resource-https-www-proteingymllm-com-benchmark-77b933918636dec9"
-        ],
-        "source": "https://www.proteingymllm.com/benchmark",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-pgllm-claude-opus-5-b6c7cfd1052d9569"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "pgllm-claude-opus-5"
-        ],
-        "plot_date": "2026-07-27",
-        "frontier_observation_ids": [
-          "obs-0-336-77ae4669d79b0795",
-          "obs-0-343-a6f8ab61b18ca958",
-          "obs-0-356-3cdafca0e6abd18c",
-          "obs-0-402-3f27f6bfc7c0f92e",
-          "obs-0-406-ffaf2ccf85f6b6d9"
         ]
       }
     ],
@@ -761,7 +579,7 @@
           }
         ],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-27",
@@ -803,414 +621,6 @@
       }
     ],
     "reported_frontier": [],
-    "historical_frontier": [],
-    "retrospective_observations": [
-      {
-        "observation_id": "obs-0-336-77ae4669d79b0795",
-        "benchmark_id": "pg-llm-proteingym",
-        "benchmark_version_id": "pg-llm-proteingym-canonical",
-        "model_id": "model-gpt-5-5-b9eab149c040dfca",
-        "model_configuration": "gpt-5-5",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-5-5",
-        "model_family_id": "openai-gpt-5-5",
-        "model": "GPT-5.5",
-        "organization": "OpenAI",
-        "score": 0.336,
-        "input_score": 0.336,
-        "input_unit": "number",
-        "reported_cost_per_task": null,
-        "metric_id": "pg-llm-proteingym-metric-v1",
-        "protocol_id": "pg-llm-proteingym-source-export-v1",
-        "task_set_id": "pg-llm-proteingym-canonical",
-        "metric": "Spearman rho",
-        "score_role": "canonical",
-        "score_series_id": "pg-llm-proteingym-canonical-score",
-        "evaluation_protocol": "PG-LLM ProteinGym v1.3 primary track: 217 assays, N=50 variants, fixed seeds 1\u20133, no tools/MSA/structure, nested-macro Spearman rho. The 59-assay recent holdout is excluded.",
-        "model_release_date": "2026-04-23",
-        "evaluation_date": "2026-07-27",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-04-23",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-04-23",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-www-proteingymllm-com-benchmark-77b933918636dec9"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-www-proteingymllm-com-benchmark-77b933918636dec9"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-07-27",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-04-23",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-04-23",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-www-proteingymllm-com-benchmark-77b933918636dec9",
-          "resource-https-www-proteingymllm-com-f7cde2f74bfb999c"
-        ],
-        "score_source_ids": [
-          "resource-https-www-proteingymllm-com-benchmark-77b933918636dec9"
-        ],
-        "source": "https://www.proteingymllm.com/benchmark",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-pgllm-gpt-5-5-dea15957a4afa36a"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "pgllm-gpt-5-5"
-        ]
-      },
-      {
-        "observation_id": "obs-0-343-a6f8ab61b18ca958",
-        "benchmark_id": "pg-llm-proteingym",
-        "benchmark_version_id": "pg-llm-proteingym-canonical",
-        "model_id": "model-gemini-3-5-flash-cab40f246147caf6",
-        "model_configuration": "gemini-3-5-flash",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-3-5-flash",
-        "model_family_id": "google-gemini-3-5-flash",
-        "model": "Gemini 3.5 Flash",
-        "organization": "Google",
-        "score": 0.343,
-        "input_score": 0.343,
-        "input_unit": "number",
-        "reported_cost_per_task": null,
-        "metric_id": "pg-llm-proteingym-metric-v1",
-        "protocol_id": "pg-llm-proteingym-source-export-v1",
-        "task_set_id": "pg-llm-proteingym-canonical",
-        "metric": "Spearman rho",
-        "score_role": "canonical",
-        "score_series_id": "pg-llm-proteingym-canonical-score",
-        "evaluation_protocol": "PG-LLM ProteinGym v1.3 primary track: 217 assays, N=50 variants, fixed seeds 1\u20133, no tools/MSA/structure, nested-macro Spearman rho. The 59-assay recent holdout is excluded.",
-        "model_release_date": "2026-05-19",
-        "evaluation_date": "2026-07-27",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-05-19",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-05-19",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-www-proteingymllm-com-benchmark-77b933918636dec9"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-www-proteingymllm-com-benchmark-77b933918636dec9"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-07-27",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-05-19",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-05-19",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-www-proteingymllm-com-benchmark-77b933918636dec9",
-          "resource-https-www-proteingymllm-com-f7cde2f74bfb999c"
-        ],
-        "score_source_ids": [
-          "resource-https-www-proteingymllm-com-benchmark-77b933918636dec9"
-        ],
-        "source": "https://www.proteingymllm.com/benchmark",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-pgllm-gemini-3-5-flash-823b826b35cbd896"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "pgllm-gemini-3-5-flash"
-        ]
-      },
-      {
-        "observation_id": "obs-0-356-3cdafca0e6abd18c",
-        "benchmark_id": "pg-llm-proteingym",
-        "benchmark_version_id": "pg-llm-proteingym-canonical",
-        "model_id": "model-claude-opus-4-8-4b678e58822d2ea5",
-        "model_configuration": "claude-opus-4-8",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-opus-4-8",
-        "model_family_id": "anthropic-claude-opus-4-8",
-        "model": "Claude Opus 4.8",
-        "organization": "Anthropic",
-        "score": 0.356,
-        "input_score": 0.356,
-        "input_unit": "number",
-        "reported_cost_per_task": null,
-        "metric_id": "pg-llm-proteingym-metric-v1",
-        "protocol_id": "pg-llm-proteingym-source-export-v1",
-        "task_set_id": "pg-llm-proteingym-canonical",
-        "metric": "Spearman rho",
-        "score_role": "canonical",
-        "score_series_id": "pg-llm-proteingym-canonical-score",
-        "evaluation_protocol": "PG-LLM ProteinGym v1.3 primary track: 217 assays, N=50 variants, fixed seeds 1\u20133, no tools/MSA/structure, nested-macro Spearman rho. The 59-assay recent holdout is excluded.",
-        "model_release_date": "2026-05-28",
-        "evaluation_date": "2026-07-27",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-05-28",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-05-28",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-www-proteingymllm-com-benchmark-77b933918636dec9"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-www-proteingymllm-com-benchmark-77b933918636dec9"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-07-27",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-05-28",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-05-28",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-www-proteingymllm-com-benchmark-77b933918636dec9",
-          "resource-https-www-proteingymllm-com-f7cde2f74bfb999c"
-        ],
-        "score_source_ids": [
-          "resource-https-www-proteingymllm-com-benchmark-77b933918636dec9"
-        ],
-        "source": "https://www.proteingymllm.com/benchmark",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-pgllm-claude-opus-4-8-6b9e3b545838a979"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "pgllm-claude-opus-4-8"
-        ]
-      },
-      {
-        "observation_id": "obs-0-402-3f27f6bfc7c0f92e",
-        "benchmark_id": "pg-llm-proteingym",
-        "benchmark_version_id": "pg-llm-proteingym-canonical",
-        "model_id": "model-gpt-5-6-sol-5f1ffa469585aab8",
-        "model_configuration": "gpt-5-6-sol",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-5-6-sol",
-        "model_family_id": "openai-gpt-5-6-sol",
-        "model": "GPT-5.6 Sol",
-        "organization": "OpenAI",
-        "score": 0.402,
-        "input_score": 0.402,
-        "input_unit": "number",
-        "reported_cost_per_task": null,
-        "metric_id": "pg-llm-proteingym-metric-v1",
-        "protocol_id": "pg-llm-proteingym-source-export-v1",
-        "task_set_id": "pg-llm-proteingym-canonical",
-        "metric": "Spearman rho",
-        "score_role": "canonical",
-        "score_series_id": "pg-llm-proteingym-canonical-score",
-        "evaluation_protocol": "PG-LLM ProteinGym v1.3 primary track: 217 assays, N=50 variants, fixed seeds 1\u20133, no tools/MSA/structure, nested-macro Spearman rho. The 59-assay recent holdout is excluded.",
-        "model_release_date": "2026-07-09",
-        "evaluation_date": "2026-07-27",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-07-09",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-07-09",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-www-proteingymllm-com-benchmark-77b933918636dec9"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-www-proteingymllm-com-benchmark-77b933918636dec9"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-07-27",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-07-09",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-07-09",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-www-proteingymllm-com-benchmark-77b933918636dec9",
-          "resource-https-www-proteingymllm-com-f7cde2f74bfb999c"
-        ],
-        "score_source_ids": [
-          "resource-https-www-proteingymllm-com-benchmark-77b933918636dec9"
-        ],
-        "source": "https://www.proteingymllm.com/benchmark",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-pgllm-gpt-5-6-sol-0fcc416381f8e192"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "pgllm-gpt-5-6-sol"
-        ]
-      },
-      {
-        "observation_id": "obs-0-406-ffaf2ccf85f6b6d9",
-        "benchmark_id": "pg-llm-proteingym",
-        "benchmark_version_id": "pg-llm-proteingym-canonical",
-        "model_id": "model-claude-opus-5-bf4dc0c2f36c7035",
-        "model_configuration": "claude-opus-5",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-opus-5",
-        "model_family_id": "anthropic-claude-opus-5",
-        "model": "Claude Opus 5",
-        "organization": "Anthropic",
-        "score": 0.406,
-        "input_score": 0.406,
-        "input_unit": "number",
-        "reported_cost_per_task": null,
-        "metric_id": "pg-llm-proteingym-metric-v1",
-        "protocol_id": "pg-llm-proteingym-source-export-v1",
-        "task_set_id": "pg-llm-proteingym-canonical",
-        "metric": "Spearman rho",
-        "score_role": "canonical",
-        "score_series_id": "pg-llm-proteingym-canonical-score",
-        "evaluation_protocol": "PG-LLM ProteinGym v1.3 primary track: 217 assays, N=50 variants, fixed seeds 1\u20133, no tools/MSA/structure, nested-macro Spearman rho. The 59-assay recent holdout is excluded.",
-        "model_release_date": "2026-07-24",
-        "evaluation_date": "2026-07-27",
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-07-24",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-07-24",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-www-proteingymllm-com-benchmark-77b933918636dec9"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-www-proteingymllm-com-benchmark-77b933918636dec9"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-07-27",
-            "kind": "Evaluation date",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-07-24",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-07-24",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-www-proteingymllm-com-benchmark-77b933918636dec9",
-          "resource-https-www-proteingymllm-com-f7cde2f74bfb999c"
-        ],
-        "score_source_ids": [
-          "resource-https-www-proteingymllm-com-benchmark-77b933918636dec9"
-        ],
-        "source": "https://www.proteingymllm.com/benchmark",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-pgllm-claude-opus-5-b6c7cfd1052d9569"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "pgllm-claude-opus-5"
-        ]
-      }
-    ],
     "observed_frontier": 0.406,
     "capability_frontier_value": 0.406,
     "reported_frontier_value": null,
@@ -1220,29 +630,29 @@
     "threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 58
+        "days": 92
       },
       "T80": {
         "status": "right_censored",
-        "days": 58
+        "days": 92
       },
       "T90": {
         "status": "right_censored",
-        "days": 58
+        "days": 92
       }
     },
     "capability_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 58
+        "days": 92
       },
       "T80": {
         "status": "right_censored",
-        "days": 58
+        "days": 92
       },
       "T90": {
         "status": "right_censored",
-        "days": 58
+        "days": 92
       }
     },
     "reported_threshold_days": {

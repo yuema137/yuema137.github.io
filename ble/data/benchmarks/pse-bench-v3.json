@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -178,7 +178,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-12-06",
@@ -265,7 +265,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-08-06",
@@ -352,7 +352,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-04-17",
@@ -439,7 +439,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-05-22",
@@ -526,7 +526,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-12-26",
@@ -556,200 +556,6 @@
         "evidence_count": 1,
         "source_row_ids": [
           "pse-deepseek-v3"
-        ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-519-431fe5c6c728381d",
-        "benchmark_id": "pse-bench-v3",
-        "benchmark_version_id": "pse-bench-v3-canonical",
-        "model_id": "model-deepseek-v3-44b935d802b0efaa",
-        "model_configuration": "DeepSeek-V3",
-        "model_identity_organization": "deepseek",
-        "model_label_id": "deepseek-v3",
-        "model_family_id": "deepseek-deepseek-v3",
-        "model": "DeepSeek-V3",
-        "organization": "DeepSeek",
-        "score": 0.519,
-        "input_score": 0.519,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "pse-bench-v3-metric-v1",
-        "protocol_id": "pse-bench-v3-source-export-v1",
-        "task_set_id": "pse-bench-v3-canonical",
-        "metric": "Overall",
-        "score_role": "canonical",
-        "score_series_id": "pse-bench-v3-canonical-score",
-        "evaluation_protocol": "PSE-Bench v3 fixed 200-question set, zero-shot responses, released five-judge rubric evaluator and weighted 0.15/0.15/0.20/0.50 composite. Earlier evaluator versions are excluded.",
-        "model_release_date": "2024-12-26",
-        "evaluation_date": "2026-02-23",
-        "result_public_date": "2026-08-01",
-        "source_publication_date": "2026-08-01",
-        "observation_date": "2024-12-26",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-12-26",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-02-23",
-            "kind": "Started at",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-08-01",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2026-02-23",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-12-26",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-08-01",
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-github-com-sombsuk-pse-bench-1f22ac3240f150dc",
-          "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-        ],
-        "source": "https://github.com/sombsuk/PSE-Bench/blob/main/PSE-Bench_Summary.xlsx",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-pse-deepseek-v3-2a2b9c51715dde71"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "pse-deepseek-v3"
-        ],
-        "plot_date": "2026-02-23",
-        "frontier_observation_ids": [
-          "obs-0-406-3c89b9b916b631b2",
-          "obs-0-448-770229fac28403a8",
-          "obs-0-473-17894eede78c7ba4",
-          "obs-0-506-6cf08e5a8e3baca6",
-          "obs-0-519-431fe5c6c728381d"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-519-431fe5c6c728381d",
-        "benchmark_id": "pse-bench-v3",
-        "benchmark_version_id": "pse-bench-v3-canonical",
-        "model_id": "model-deepseek-v3-44b935d802b0efaa",
-        "model_configuration": "DeepSeek-V3",
-        "model_identity_organization": "deepseek",
-        "model_label_id": "deepseek-v3",
-        "model_family_id": "deepseek-deepseek-v3",
-        "model": "DeepSeek-V3",
-        "organization": "DeepSeek",
-        "score": 0.519,
-        "input_score": 0.519,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "pse-bench-v3-metric-v1",
-        "protocol_id": "pse-bench-v3-source-export-v1",
-        "task_set_id": "pse-bench-v3-canonical",
-        "metric": "Overall",
-        "score_role": "canonical",
-        "score_series_id": "pse-bench-v3-canonical-score",
-        "evaluation_protocol": "PSE-Bench v3 fixed 200-question set, zero-shot responses, released five-judge rubric evaluator and weighted 0.15/0.15/0.20/0.50 composite. Earlier evaluator versions are excluded.",
-        "model_release_date": "2024-12-26",
-        "evaluation_date": "2026-02-23",
-        "result_public_date": "2026-08-01",
-        "source_publication_date": "2026-08-01",
-        "observation_date": "2024-12-26",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-12-26",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-02-23",
-            "kind": "Started at",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-08-01",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2026-02-23",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-12-26",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-08-01",
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-github-com-sombsuk-pse-bench-1f22ac3240f150dc",
-          "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-        ],
-        "source": "https://github.com/sombsuk/PSE-Bench/blob/main/PSE-Bench_Summary.xlsx",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-pse-deepseek-v3-2a2b9c51715dde71"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "pse-deepseek-v3"
-        ],
-        "plot_date": "2026-02-23",
-        "frontier_observation_ids": [
-          "obs-0-406-3c89b9b916b631b2",
-          "obs-0-448-770229fac28403a8",
-          "obs-0-473-17894eede78c7ba4",
-          "obs-0-506-6cf08e5a8e3baca6",
-          "obs-0-519-431fe5c6c728381d"
         ]
       }
     ],
@@ -809,7 +615,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-02-23",
@@ -906,7 +712,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-08-01",
@@ -944,540 +750,6 @@
           "obs-0-473-17894eede78c7ba4",
           "obs-0-506-6cf08e5a8e3baca6",
           "obs-0-519-431fe5c6c728381d"
-        ]
-      }
-    ],
-    "historical_frontier": [
-      {
-        "observation_id": "obs-0-519-431fe5c6c728381d",
-        "benchmark_id": "pse-bench-v3",
-        "benchmark_version_id": "pse-bench-v3-canonical",
-        "model_id": "model-deepseek-v3-44b935d802b0efaa",
-        "model_configuration": "DeepSeek-V3",
-        "model_identity_organization": "deepseek",
-        "model_label_id": "deepseek-v3",
-        "model_family_id": "deepseek-deepseek-v3",
-        "model": "DeepSeek-V3",
-        "organization": "DeepSeek",
-        "score": 0.519,
-        "input_score": 0.519,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "pse-bench-v3-metric-v1",
-        "protocol_id": "pse-bench-v3-source-export-v1",
-        "task_set_id": "pse-bench-v3-canonical",
-        "metric": "Overall",
-        "score_role": "canonical",
-        "score_series_id": "pse-bench-v3-canonical-score",
-        "evaluation_protocol": "PSE-Bench v3 fixed 200-question set, zero-shot responses, released five-judge rubric evaluator and weighted 0.15/0.15/0.20/0.50 composite. Earlier evaluator versions are excluded.",
-        "model_release_date": "2024-12-26",
-        "evaluation_date": "2026-02-23",
-        "result_public_date": "2026-08-01",
-        "source_publication_date": "2026-08-01",
-        "observation_date": "2024-12-26",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-12-26",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-02-23",
-            "kind": "Started at",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-08-01",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2026-08-01",
-        "date_kind": "result first-public date",
-        "capability_date": "2024-12-26",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-08-01",
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-github-com-sombsuk-pse-bench-1f22ac3240f150dc",
-          "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-        ],
-        "source": "https://github.com/sombsuk/PSE-Bench/blob/main/PSE-Bench_Summary.xlsx",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-pse-deepseek-v3-2a2b9c51715dde71"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "pse-deepseek-v3"
-        ],
-        "plot_date": "2026-08-01",
-        "frontier_observation_ids": [
-          "obs-0-406-3c89b9b916b631b2",
-          "obs-0-448-770229fac28403a8",
-          "obs-0-473-17894eede78c7ba4",
-          "obs-0-506-6cf08e5a8e3baca6",
-          "obs-0-519-431fe5c6c728381d"
-        ]
-      }
-    ],
-    "retrospective_observations": [
-      {
-        "observation_id": "obs-0-406-3c89b9b916b631b2",
-        "benchmark_id": "pse-bench-v3",
-        "benchmark_version_id": "pse-bench-v3-canonical",
-        "model_id": "model-llama-3-3-70b-versatile-b27aceedf516d4c7",
-        "model_configuration": "Llama-3.3-70B-Versatile",
-        "model_identity_organization": "meta",
-        "model_label_id": "llama-3-3-70b-versatile",
-        "model_family_id": "meta-llama-3-3-70b-versatile",
-        "model": "Llama-3.3-70B-Versatile",
-        "organization": "Meta",
-        "score": 0.406,
-        "input_score": 0.406,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "pse-bench-v3-metric-v1",
-        "protocol_id": "pse-bench-v3-source-export-v1",
-        "task_set_id": "pse-bench-v3-canonical",
-        "metric": "Overall",
-        "score_role": "canonical",
-        "score_series_id": "pse-bench-v3-canonical-score",
-        "evaluation_protocol": "PSE-Bench v3 fixed 200-question set, zero-shot responses, released five-judge rubric evaluator and weighted 0.15/0.15/0.20/0.50 composite. Earlier evaluator versions are excluded.",
-        "model_release_date": "2024-12-06",
-        "evaluation_date": "2026-02-23",
-        "result_public_date": "2026-08-01",
-        "source_publication_date": "2026-08-01",
-        "observation_date": "2024-12-06",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-12-06",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-02-23",
-            "kind": "Started at",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-08-01",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2024-12-06",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-12-06",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-08-01",
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-github-com-sombsuk-pse-bench-1f22ac3240f150dc",
-          "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-        ],
-        "source": "https://github.com/sombsuk/PSE-Bench/blob/main/PSE-Bench_Summary.xlsx",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-pse-llama33-cf057f55655a2001"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "pse-llama33"
-        ]
-      },
-      {
-        "observation_id": "obs-0-448-770229fac28403a8",
-        "benchmark_id": "pse-bench-v3",
-        "benchmark_version_id": "pse-bench-v3-canonical",
-        "model_id": "model-gpt-4o-2024-08-06-1dd50f58d8c57cf8",
-        "model_configuration": "GPT-4o-2024-08-06",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-4o-2024-08-06",
-        "model_family_id": "openai-gpt-4o-2024-08-06",
-        "model": "GPT-4o-2024-08-06",
-        "organization": "OpenAI",
-        "score": 0.448,
-        "input_score": 0.448,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "pse-bench-v3-metric-v1",
-        "protocol_id": "pse-bench-v3-source-export-v1",
-        "task_set_id": "pse-bench-v3-canonical",
-        "metric": "Overall",
-        "score_role": "canonical",
-        "score_series_id": "pse-bench-v3-canonical-score",
-        "evaluation_protocol": "PSE-Bench v3 fixed 200-question set, zero-shot responses, released five-judge rubric evaluator and weighted 0.15/0.15/0.20/0.50 composite. Earlier evaluator versions are excluded.",
-        "model_release_date": "2024-08-06",
-        "evaluation_date": "2026-02-23",
-        "result_public_date": "2026-08-01",
-        "source_publication_date": "2026-08-01",
-        "observation_date": "2024-08-06",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-08-06",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-02-23",
-            "kind": "Started at",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-08-01",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2024-08-06",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-08-06",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-08-01",
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-github-com-sombsuk-pse-bench-1f22ac3240f150dc",
-          "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-        ],
-        "source": "https://github.com/sombsuk/PSE-Bench/blob/main/PSE-Bench_Summary.xlsx",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-pse-gpt4o-a30603d625d99c47"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "pse-gpt4o"
-        ]
-      },
-      {
-        "observation_id": "obs-0-473-17894eede78c7ba4",
-        "benchmark_id": "pse-bench-v3",
-        "benchmark_version_id": "pse-bench-v3-canonical",
-        "model_id": "model-gemini-2-5-flash-b0628e9ec15ee1ca",
-        "model_configuration": "Gemini-2.5-Flash",
-        "model_identity_organization": "google",
-        "model_label_id": "gemini-2-5-flash",
-        "model_family_id": "google-gemini-2-5-flash",
-        "model": "Gemini-2.5-Flash",
-        "organization": "Google",
-        "score": 0.473,
-        "input_score": 0.473,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "pse-bench-v3-metric-v1",
-        "protocol_id": "pse-bench-v3-source-export-v1",
-        "task_set_id": "pse-bench-v3-canonical",
-        "metric": "Overall",
-        "score_role": "canonical",
-        "score_series_id": "pse-bench-v3-canonical-score",
-        "evaluation_protocol": "PSE-Bench v3 fixed 200-question set, zero-shot responses, released five-judge rubric evaluator and weighted 0.15/0.15/0.20/0.50 composite. Earlier evaluator versions are excluded.",
-        "model_release_date": "2025-04-17",
-        "evaluation_date": "2026-02-23",
-        "result_public_date": "2026-08-01",
-        "source_publication_date": "2026-08-01",
-        "observation_date": "2025-04-17",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-04-17",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-02-23",
-            "kind": "Started at",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-08-01",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-04-17",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-04-17",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-08-01",
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-github-com-sombsuk-pse-bench-1f22ac3240f150dc",
-          "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-        ],
-        "source": "https://github.com/sombsuk/PSE-Bench/blob/main/PSE-Bench_Summary.xlsx",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-pse-gemini25-37a2dbdec71c4dcd"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "pse-gemini25"
-        ]
-      },
-      {
-        "observation_id": "obs-0-506-6cf08e5a8e3baca6",
-        "benchmark_id": "pse-bench-v3",
-        "benchmark_version_id": "pse-bench-v3-canonical",
-        "model_id": "model-claude-sonnet-4-20250514-f00868816258ebe5",
-        "model_configuration": "Claude-Sonnet-4-20250514",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-sonnet-4-20250514",
-        "model_family_id": "anthropic-claude-sonnet-4-20250514",
-        "model": "Claude-Sonnet-4-20250514",
-        "organization": "Anthropic",
-        "score": 0.506,
-        "input_score": 0.506,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "pse-bench-v3-metric-v1",
-        "protocol_id": "pse-bench-v3-source-export-v1",
-        "task_set_id": "pse-bench-v3-canonical",
-        "metric": "Overall",
-        "score_role": "canonical",
-        "score_series_id": "pse-bench-v3-canonical-score",
-        "evaluation_protocol": "PSE-Bench v3 fixed 200-question set, zero-shot responses, released five-judge rubric evaluator and weighted 0.15/0.15/0.20/0.50 composite. Earlier evaluator versions are excluded.",
-        "model_release_date": "2025-05-22",
-        "evaluation_date": "2026-02-23",
-        "result_public_date": "2026-08-01",
-        "source_publication_date": "2026-08-01",
-        "observation_date": "2025-05-22",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-05-22",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-02-23",
-            "kind": "Started at",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-08-01",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2025-05-22",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-05-22",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-08-01",
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-github-com-sombsuk-pse-bench-1f22ac3240f150dc",
-          "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-        ],
-        "source": "https://github.com/sombsuk/PSE-Bench/blob/main/PSE-Bench_Summary.xlsx",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-pse-claude4-389748adc2a6ed0b"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "pse-claude4"
-        ]
-      },
-      {
-        "observation_id": "obs-0-519-431fe5c6c728381d",
-        "benchmark_id": "pse-bench-v3",
-        "benchmark_version_id": "pse-bench-v3-canonical",
-        "model_id": "model-deepseek-v3-44b935d802b0efaa",
-        "model_configuration": "DeepSeek-V3",
-        "model_identity_organization": "deepseek",
-        "model_label_id": "deepseek-v3",
-        "model_family_id": "deepseek-deepseek-v3",
-        "model": "DeepSeek-V3",
-        "organization": "DeepSeek",
-        "score": 0.519,
-        "input_score": 0.519,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "pse-bench-v3-metric-v1",
-        "protocol_id": "pse-bench-v3-source-export-v1",
-        "task_set_id": "pse-bench-v3-canonical",
-        "metric": "Overall",
-        "score_role": "canonical",
-        "score_series_id": "pse-bench-v3-canonical-score",
-        "evaluation_protocol": "PSE-Bench v3 fixed 200-question set, zero-shot responses, released five-judge rubric evaluator and weighted 0.15/0.15/0.20/0.50 composite. Earlier evaluator versions are excluded.",
-        "model_release_date": "2024-12-26",
-        "evaluation_date": "2026-02-23",
-        "result_public_date": "2026-08-01",
-        "source_publication_date": "2026-08-01",
-        "observation_date": "2024-12-26",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-12-26",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-        ],
-        "evaluation_date_sources": [
-          {
-            "date": "2026-02-23",
-            "kind": "Started at",
-            "precision": "day"
-          }
-        ],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-08-01",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2024-12-26",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-12-26",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-08-01",
-        "temporal_class": "retrospective_evaluation",
-        "retrospective": true,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": false,
-        "source_ids": [
-          "resource-https-github-com-sombsuk-pse-bench-1f22ac3240f150dc",
-          "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-        ],
-        "score_source_ids": [
-          "resource-https-github-com-sombsuk-pse-bench-blob-main-pse-87b9e9212651dda4"
-        ],
-        "source": "https://github.com/sombsuk/PSE-Bench/blob/main/PSE-Bench_Summary.xlsx",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-pse-deepseek-v3-2a2b9c51715dde71"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "pse-deepseek-v3"
         ]
       }
     ],
@@ -1495,11 +767,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 212
+        "days": 246
       },
       "T90": {
         "status": "right_censored",
-        "days": 212
+        "days": 246
       }
     },
     "capability_threshold_days": {
@@ -1510,11 +782,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 212
+        "days": 246
       },
       "T90": {
         "status": "right_censored",
-        "days": 212
+        "days": 246
       }
     },
     "reported_threshold_days": {
@@ -1525,11 +797,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 212
+        "days": 246
       },
       "T90": {
         "status": "right_censored",
-        "days": 212
+        "days": 246
       }
     },
     "velocity_180d": null,

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -174,7 +174,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2023-12-06",
@@ -254,7 +254,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2023-03-14",
@@ -334,7 +334,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-03-04",
@@ -363,182 +363,6 @@
         "evidence_count": 1,
         "source_row_ids": [
           "controlbench-claude3-opus"
-        ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-585-e7d926be0ae31c9e",
-        "benchmark_id": "controlbench",
-        "benchmark_version_id": "controlbench-canonical",
-        "model_id": "model-claude-3-opus-745c8473c8207c04",
-        "model_configuration": "Claude 3 Opus",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-3-opus",
-        "model_family_id": "anthropic-claude-3-opus",
-        "model": "Claude 3 Opus",
-        "organization": "Anthropic",
-        "score": 0.585,
-        "input_score": 0.585,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "controlbench-metric-v1",
-        "protocol_id": "controlbench-source-export-v1",
-        "task_set_id": "controlbench-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "controlbench-canonical-score",
-        "evaluation_protocol": "ControlBench original 147-problem open-ended set, zero-shot initial response, no tools, expert binary grading. ACC-s self-check and ControlBench-C are excluded.",
-        "model_release_date": "2024-03-04",
-        "evaluation_date": null,
-        "result_public_date": "2024-04-04",
-        "source_publication_date": "2024-04-04",
-        "observation_date": "2024-03-04",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-03-04",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2404-03647-83668fcf5642c146"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2404-03647-83668fcf5642c146"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2024-04-04",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2024-04-04",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-03-04",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2024-04-04",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2404-03647-83668fcf5642c146"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2404-03647-83668fcf5642c146"
-        ],
-        "source": "https://arxiv.org/abs/2404.03647",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-controlbench-claude3-opus-8b6e55584856696a"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "controlbench-claude3-opus"
-        ],
-        "plot_date": "2024-04-04",
-        "frontier_observation_ids": [
-          "obs-0-34-2037245f612ecbb4",
-          "obs-0-456-2120e56251950ab2",
-          "obs-0-585-e7d926be0ae31c9e"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-585-e7d926be0ae31c9e",
-        "benchmark_id": "controlbench",
-        "benchmark_version_id": "controlbench-canonical",
-        "model_id": "model-claude-3-opus-745c8473c8207c04",
-        "model_configuration": "Claude 3 Opus",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-3-opus",
-        "model_family_id": "anthropic-claude-3-opus",
-        "model": "Claude 3 Opus",
-        "organization": "Anthropic",
-        "score": 0.585,
-        "input_score": 0.585,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "controlbench-metric-v1",
-        "protocol_id": "controlbench-source-export-v1",
-        "task_set_id": "controlbench-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "controlbench-canonical-score",
-        "evaluation_protocol": "ControlBench original 147-problem open-ended set, zero-shot initial response, no tools, expert binary grading. ACC-s self-check and ControlBench-C are excluded.",
-        "model_release_date": "2024-03-04",
-        "evaluation_date": null,
-        "result_public_date": "2024-04-04",
-        "source_publication_date": "2024-04-04",
-        "observation_date": "2024-03-04",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-03-04",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2404-03647-83668fcf5642c146"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2404-03647-83668fcf5642c146"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2024-04-04",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2024-04-04",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-03-04",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2024-04-04",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2404-03647-83668fcf5642c146"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2404-03647-83668fcf5642c146"
-        ],
-        "source": "https://arxiv.org/abs/2404.03647",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-controlbench-claude3-opus-8b6e55584856696a"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "controlbench-claude3-opus"
-        ],
-        "plot_date": "2024-04-04",
-        "frontier_observation_ids": [
-          "obs-0-34-2037245f612ecbb4",
-          "obs-0-456-2120e56251950ab2",
-          "obs-0-585-e7d926be0ae31c9e"
         ]
       }
     ],
@@ -592,7 +416,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-04-04",
@@ -680,7 +504,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-04-04",
@@ -718,95 +542,6 @@
         ]
       }
     ],
-    "historical_frontier": [
-      {
-        "observation_id": "obs-0-585-e7d926be0ae31c9e",
-        "benchmark_id": "controlbench",
-        "benchmark_version_id": "controlbench-canonical",
-        "model_id": "model-claude-3-opus-745c8473c8207c04",
-        "model_configuration": "Claude 3 Opus",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-3-opus",
-        "model_family_id": "anthropic-claude-3-opus",
-        "model": "Claude 3 Opus",
-        "organization": "Anthropic",
-        "score": 0.585,
-        "input_score": 0.585,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "controlbench-metric-v1",
-        "protocol_id": "controlbench-source-export-v1",
-        "task_set_id": "controlbench-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "controlbench-canonical-score",
-        "evaluation_protocol": "ControlBench original 147-problem open-ended set, zero-shot initial response, no tools, expert binary grading. ACC-s self-check and ControlBench-C are excluded.",
-        "model_release_date": "2024-03-04",
-        "evaluation_date": null,
-        "result_public_date": "2024-04-04",
-        "source_publication_date": "2024-04-04",
-        "observation_date": "2024-03-04",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-03-04",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2404-03647-83668fcf5642c146"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2404-03647-83668fcf5642c146"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2024-04-04",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2024-04-04",
-        "date_kind": "result first-public date",
-        "capability_date": "2024-03-04",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2024-04-04",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2404-03647-83668fcf5642c146"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2404-03647-83668fcf5642c146"
-        ],
-        "source": "https://arxiv.org/abs/2404.03647",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-controlbench-claude3-opus-8b6e55584856696a"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "controlbench-claude3-opus"
-        ],
-        "plot_date": "2024-04-04",
-        "frontier_observation_ids": [
-          "obs-0-34-2037245f612ecbb4",
-          "obs-0-456-2120e56251950ab2",
-          "obs-0-585-e7d926be0ae31c9e"
-        ]
-      }
-    ],
-    "retrospective_observations": [],
     "observed_frontier": 0.585,
     "capability_frontier_value": 0.585,
     "reported_frontier_value": 0.585,
@@ -821,11 +556,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 902
+        "days": 936
       },
       "T90": {
         "status": "right_censored",
-        "days": 902
+        "days": 936
       }
     },
     "capability_threshold_days": {
@@ -836,11 +571,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 902
+        "days": 936
       },
       "T90": {
         "status": "right_censored",
-        "days": 902
+        "days": 936
       }
     },
     "reported_threshold_days": {
@@ -851,11 +586,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 902
+        "days": 936
       },
       "T90": {
         "status": "right_censored",
-        "days": 902
+        "days": 936
       }
     },
     "velocity_180d": null,

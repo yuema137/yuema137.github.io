@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -171,7 +171,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-08-21",
@@ -251,7 +251,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-09-29",
@@ -331,7 +331,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-10-15",
@@ -411,7 +411,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-11-12",
@@ -491,7 +491,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-11-24",
@@ -571,7 +571,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-12-11",
@@ -651,7 +651,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2025-12-17",
@@ -680,190 +680,6 @@
         "evidence_count": 1,
         "source_row_ids": [
           "tps-gemini3flash"
-        ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-519-cf219b5410ad18bf",
-        "benchmark_id": "tps-calcbench-v1-core-exact",
-        "benchmark_version_id": "tps-calcbench-v1-core-exact-canonical",
-        "model_id": "model-gpt-5-2-8af9dc0bd1f19a37",
-        "model_configuration": "GPT-5.2",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-5-2",
-        "model_family_id": "openai-gpt-5-2",
-        "model": "GPT-5.2",
-        "organization": "OpenAI",
-        "score": 0.519,
-        "input_score": 0.519,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "tps-calcbench-v1-core-exact-metric-v1",
-        "protocol_id": "tps-calcbench-v1-core-exact-source-export-v1",
-        "task_set_id": "tps-calcbench-v1-core-exact-canonical",
-        "metric": "Exact accuracy",
-        "score_role": "canonical",
-        "score_series_id": "tps-calcbench-v1-core-exact-canonical-score",
-        "evaluation_protocol": "TPS-CalcBench arXiv-v1 420-item high-confidence core, Track A, zero-shot standardized prompt, no tools/RAG/fine-tuning, exact <1% accuracy.",
-        "model_release_date": "2025-12-11",
-        "evaluation_date": null,
-        "result_public_date": "2026-04-20",
-        "source_publication_date": "2026-04-20",
-        "observation_date": "2025-12-11",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-12-11",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2604-17966-cdeec3a6b1b058cd"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2604-17966-cdeec3a6b1b058cd"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-04-20",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2026-04-20",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-12-11",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-04-20",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2604-17966-cdeec3a6b1b058cd"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2604-17966-cdeec3a6b1b058cd"
-        ],
-        "source": "https://arxiv.org/abs/2604.17966",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-tps-gpt52-a54763b8a6c7cd1f"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "tps-gpt52"
-        ],
-        "plot_date": "2026-04-20",
-        "frontier_observation_ids": [
-          "obs-0-098-fb09050a297be936",
-          "obs-0-243-930e5d3bc7ddc609",
-          "obs-0-336-21d619b15526a650",
-          "obs-0-419-6c90fe51dadbd705",
-          "obs-0-431-1944b365f522f758",
-          "obs-0-481-83a02703c901ec8b",
-          "obs-0-519-cf219b5410ad18bf"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-519-cf219b5410ad18bf",
-        "benchmark_id": "tps-calcbench-v1-core-exact",
-        "benchmark_version_id": "tps-calcbench-v1-core-exact-canonical",
-        "model_id": "model-gpt-5-2-8af9dc0bd1f19a37",
-        "model_configuration": "GPT-5.2",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-5-2",
-        "model_family_id": "openai-gpt-5-2",
-        "model": "GPT-5.2",
-        "organization": "OpenAI",
-        "score": 0.519,
-        "input_score": 0.519,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "tps-calcbench-v1-core-exact-metric-v1",
-        "protocol_id": "tps-calcbench-v1-core-exact-source-export-v1",
-        "task_set_id": "tps-calcbench-v1-core-exact-canonical",
-        "metric": "Exact accuracy",
-        "score_role": "canonical",
-        "score_series_id": "tps-calcbench-v1-core-exact-canonical-score",
-        "evaluation_protocol": "TPS-CalcBench arXiv-v1 420-item high-confidence core, Track A, zero-shot standardized prompt, no tools/RAG/fine-tuning, exact <1% accuracy.",
-        "model_release_date": "2025-12-11",
-        "evaluation_date": null,
-        "result_public_date": "2026-04-20",
-        "source_publication_date": "2026-04-20",
-        "observation_date": "2025-12-11",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-12-11",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2604-17966-cdeec3a6b1b058cd"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2604-17966-cdeec3a6b1b058cd"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-04-20",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2026-04-20",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2025-12-11",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-04-20",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2604-17966-cdeec3a6b1b058cd"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2604-17966-cdeec3a6b1b058cd"
-        ],
-        "source": "https://arxiv.org/abs/2604.17966",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-tps-gpt52-a54763b8a6c7cd1f"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "tps-gpt52"
-        ],
-        "plot_date": "2026-04-20",
-        "frontier_observation_ids": [
-          "obs-0-098-fb09050a297be936",
-          "obs-0-243-930e5d3bc7ddc609",
-          "obs-0-336-21d619b15526a650",
-          "obs-0-419-6c90fe51dadbd705",
-          "obs-0-431-1944b365f522f758",
-          "obs-0-481-83a02703c901ec8b",
-          "obs-0-519-cf219b5410ad18bf"
         ]
       }
     ],
@@ -917,7 +733,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-04-20",
@@ -1009,7 +825,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-04-20",
@@ -1051,99 +867,6 @@
         ]
       }
     ],
-    "historical_frontier": [
-      {
-        "observation_id": "obs-0-519-cf219b5410ad18bf",
-        "benchmark_id": "tps-calcbench-v1-core-exact",
-        "benchmark_version_id": "tps-calcbench-v1-core-exact-canonical",
-        "model_id": "model-gpt-5-2-8af9dc0bd1f19a37",
-        "model_configuration": "GPT-5.2",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-5-2",
-        "model_family_id": "openai-gpt-5-2",
-        "model": "GPT-5.2",
-        "organization": "OpenAI",
-        "score": 0.519,
-        "input_score": 0.519,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "tps-calcbench-v1-core-exact-metric-v1",
-        "protocol_id": "tps-calcbench-v1-core-exact-source-export-v1",
-        "task_set_id": "tps-calcbench-v1-core-exact-canonical",
-        "metric": "Exact accuracy",
-        "score_role": "canonical",
-        "score_series_id": "tps-calcbench-v1-core-exact-canonical-score",
-        "evaluation_protocol": "TPS-CalcBench arXiv-v1 420-item high-confidence core, Track A, zero-shot standardized prompt, no tools/RAG/fine-tuning, exact <1% accuracy.",
-        "model_release_date": "2025-12-11",
-        "evaluation_date": null,
-        "result_public_date": "2026-04-20",
-        "source_publication_date": "2026-04-20",
-        "observation_date": "2025-12-11",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2025-12-11",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2604-17966-cdeec3a6b1b058cd"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2604-17966-cdeec3a6b1b058cd"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2026-04-20",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2026-04-20",
-        "date_kind": "result first-public date",
-        "capability_date": "2025-12-11",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-04-20",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2604-17966-cdeec3a6b1b058cd"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2604-17966-cdeec3a6b1b058cd"
-        ],
-        "source": "https://arxiv.org/abs/2604.17966",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-tps-gpt52-a54763b8a6c7cd1f"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "tps-gpt52"
-        ],
-        "plot_date": "2026-04-20",
-        "frontier_observation_ids": [
-          "obs-0-098-fb09050a297be936",
-          "obs-0-243-930e5d3bc7ddc609",
-          "obs-0-336-21d619b15526a650",
-          "obs-0-419-6c90fe51dadbd705",
-          "obs-0-431-1944b365f522f758",
-          "obs-0-481-83a02703c901ec8b",
-          "obs-0-519-cf219b5410ad18bf"
-        ]
-      }
-    ],
-    "retrospective_observations": [],
     "observed_frontier": 0.519,
     "capability_frontier_value": 0.519,
     "reported_frontier_value": 0.519,
@@ -1158,11 +881,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 156
+        "days": 190
       },
       "T90": {
         "status": "right_censored",
-        "days": 156
+        "days": 190
       }
     },
     "capability_threshold_days": {
@@ -1173,11 +896,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 156
+        "days": 190
       },
       "T90": {
         "status": "right_censored",
-        "days": 156
+        "days": 190
       }
     },
     "reported_threshold_days": {
@@ -1188,11 +911,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 156
+        "days": 190
       },
       "T90": {
         "status": "right_censored",
-        "days": 156
+        "days": 190
       }
     },
     "velocity_180d": null,

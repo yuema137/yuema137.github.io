@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -126,8 +126,8 @@
       }
     },
     "evaluation_target": "environment_outcome",
-    "observation_count": 11,
-    "evidence_record_count": 11,
+    "observation_count": 24,
+    "evidence_record_count": 24,
     "observations": [
       {
         "observation_id": "obs-0-3-d704fae885d61005",
@@ -172,7 +172,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-24",
@@ -245,7 +245,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -320,7 +320,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-03",
@@ -394,7 +394,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-06-09",
@@ -467,7 +467,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-05-28",
@@ -540,7 +540,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -613,7 +613,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-08-14",
@@ -686,7 +686,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-16",
@@ -761,7 +761,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-08-12",
@@ -835,7 +835,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -922,7 +922,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-09-22",
@@ -953,22 +953,20 @@
         "source_row_ids": [
           "sep2026-terminal-bench-science-0-1-claude-opus-5-5-max-claude-code-bare-safeguards-fallbacks"
         ]
-      }
-    ],
-    "frontier": [
+      },
       {
-        "observation_id": "obs-0-105-5f42e4a5ffe292d7",
+        "observation_id": "obs-0-599-c270914de5ebb7f3",
         "benchmark_id": "terminal-bench-science-0-1",
         "benchmark_version_id": "terminal-bench-science-0-1-canonical",
-        "model_id": "model-claude-opus-4-8-claude-code-7f3082160e0731f0",
-        "model_configuration": "Claude Opus 4.8 + Claude Code",
+        "model_id": "model-claude-sonnet-5-5-max-claude-code-bare-safeguard-f9d5cf8417604804",
+        "model_configuration": "Claude Sonnet 5.5 (max, Claude Code bare, safeguards)",
         "model_identity_organization": "anthropic",
-        "model_label_id": "claude-opus-4-8-claude-code",
-        "model_family_id": "anthropic-claude-opus-4-8-claude-code",
-        "model": "Claude Opus 4.8 + Claude Code",
+        "model_label_id": "claude-sonnet-5-5-max-claude-code-bare-safeguards",
+        "model_family_id": "anthropic-claude-sonnet-5-5",
+        "model": "Claude Sonnet 5.5 (max, Claude Code bare, safeguards)",
         "organization": "Anthropic",
-        "score": 0.105,
-        "input_score": 0.105,
+        "score": 0.599,
+        "input_score": 0.599,
         "input_unit": "fraction",
         "reported_cost_per_task": null,
         "metric_id": "terminal-bench-science-0-1-metric-v1",
@@ -978,74 +976,86 @@
         "score_role": "canonical",
         "score_series_id": "terminal-bench-science-0-1-canonical-score",
         "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
-        "model_release_date": "2026-05-28",
+        "model_release_date": "2026-09-28",
         "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-05-28",
+        "result_public_date": "2026-09-28",
+        "source_publication_date": "2026-09-28",
+        "observation_date": "2026-09-28",
         "observation_date_precision": "day",
         "observation_date_sources": [
           {
-            "date": "2026-05-28",
+            "date": "2026-09-28",
             "kind": "model_release_date",
             "precision": "day",
             "resource_ids": [
-              "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862"
+              "resource-https-www-anthropic-com-claude-sonnet-5-5-system-add74e2fa0d003e6"
+            ]
+          },
+          {
+            "date": "2026-09-28",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-sonnet-5-5-system-add74e2fa0d003e6"
             ]
           }
         ],
         "observation_date_source_ids": [
-          "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862"
+          "resource-https-www-anthropic-com-claude-sonnet-5-5-system-add74e2fa0d003e6"
         ],
         "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-28",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-05-28",
+        "date_notes": null,
+        "date": "2026-09-28",
         "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-05-28",
+        "capability_date": "2026-09-28",
         "capability_date_meaning": "earliest_observation_evidence_date",
         "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
+        "historical_frontier_date": "2026-09-28",
         "temporal_class": "historical_or_unknown",
         "retrospective": false,
         "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
+        "historical_frontier_eligible": true,
         "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
         "contemporaneous": true,
         "source_ids": [
-          "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862",
+          "resource-https-www-anthropic-com-claude-sonnet-5-5-system-add74e2fa0d003e6",
           "resource-https-www-terminal-bench-science-ai-announcement-6f8f0395b3313ab9"
         ],
         "score_source_ids": [
-          "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862"
+          "resource-https-www-anthropic-com-claude-sonnet-5-5-system-add74e2fa0d003e6"
         ],
-        "source": "https://www.terminal-bench-science.ai/",
+        "source": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
         "notes": "Operational evaluation timeline only; not a historical public-result date.",
         "evidence_ids": [
-          "evidence-name-claude-opus-4-8-claude-code-notes-0-1-70-ta-31f733f38d3a4cd1"
+          "evidence-oct2026-terminal-bench-science-0-1-claude-sonnet-9b460cbe7464581a"
         ],
         "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2026-05-28",
-        "frontier_observation_ids": [
-          "obs-0-105-5f42e4a5ffe292d7"
+        "source_row_ids": [
+          "oct2026-terminal-bench-science-0-1-claude-sonnet-5-5-max"
         ]
       },
       {
-        "observation_id": "obs-0-214-6f0917ef5423c24a",
+        "observation_id": "obs-0-206-15b0c9fe4bec2b0d",
         "benchmark_id": "terminal-bench-science-0-1",
         "benchmark_version_id": "terminal-bench-science-0-1-canonical",
-        "model_id": "model-claude-fable-5-claude-code-24828e7c882d633d",
-        "model_configuration": "Claude Fable 5 + Claude Code",
+        "model_id": "model-claude-haiku-5-5-max-claude-code-bare-safeguards-3d1ec7e2438d53b6",
+        "model_configuration": "Claude Haiku 5.5 (max, Claude Code bare, safeguards)",
         "model_identity_organization": "anthropic",
-        "model_label_id": "claude-fable-5-claude-code",
-        "model_family_id": "anthropic-claude-fable-5-claude-code",
-        "model": "Claude Fable 5 + Claude Code",
+        "model_label_id": "claude-haiku-5-5-max-claude-code-bare-safeguards",
+        "model_family_id": "anthropic-claude-haiku-5-5",
+        "model": "Claude Haiku 5.5 (max, Claude Code bare, safeguards)",
         "organization": "Anthropic",
-        "score": 0.214,
-        "input_score": 0.214,
+        "score": 0.206,
+        "input_score": 0.206,
         "input_unit": "fraction",
         "reported_cost_per_task": null,
         "metric_id": "terminal-bench-science-0-1-metric-v1",
@@ -1055,74 +1065,86 @@
         "score_role": "canonical",
         "score_series_id": "terminal-bench-science-0-1-canonical-score",
         "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
-        "model_release_date": "2026-06-09",
+        "model_release_date": "2026-10-07",
         "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-06-09",
+        "result_public_date": "2026-10-07",
+        "source_publication_date": "2026-10-07",
+        "observation_date": "2026-10-07",
         "observation_date_precision": "day",
         "observation_date_sources": [
           {
-            "date": "2026-06-09",
+            "date": "2026-10-07",
             "kind": "model_release_date",
             "precision": "day",
             "resource_ids": [
-              "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862"
+              "resource-https-www-anthropic-com-claude-haiku-5-5-system--64f682d56dcdee02"
+            ]
+          },
+          {
+            "date": "2026-10-07",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-anthropic-com-claude-haiku-5-5-system--64f682d56dcdee02"
             ]
           }
         ],
         "observation_date_source_ids": [
-          "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862"
+          "resource-https-www-anthropic-com-claude-haiku-5-5-system--64f682d56dcdee02"
         ],
         "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "score_publication_date_sources": [
+          {
+            "date": "2026-10-07",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-06-09",
+        "date_notes": null,
+        "date": "2026-10-07",
         "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-06-09",
+        "capability_date": "2026-10-07",
         "capability_date_meaning": "earliest_observation_evidence_date",
         "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
+        "historical_frontier_date": "2026-10-07",
         "temporal_class": "historical_or_unknown",
         "retrospective": false,
         "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
+        "historical_frontier_eligible": true,
         "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
         "contemporaneous": true,
         "source_ids": [
-          "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862",
+          "resource-https-www-anthropic-com-claude-haiku-5-5-system--64f682d56dcdee02",
           "resource-https-www-terminal-bench-science-ai-announcement-6f8f0395b3313ab9"
         ],
         "score_source_ids": [
-          "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862"
+          "resource-https-www-anthropic-com-claude-haiku-5-5-system--64f682d56dcdee02"
         ],
-        "source": "https://www.terminal-bench-science.ai/",
+        "source": "https://www.anthropic.com/claude-haiku-5-5-system-card",
         "notes": "Operational evaluation timeline only; not a historical public-result date.",
         "evidence_ids": [
-          "evidence-name-claude-fable-5-claude-code-notes-0-1-70-tas-ff2bef445dc378ee"
+          "evidence-oct2026-terminal-bench-science-0-1-claude-haiku--ac6bcc227148cb31"
         ],
         "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2026-06-09",
-        "frontier_observation_ids": [
-          "obs-0-214-6f0917ef5423c24a"
+        "source_row_ids": [
+          "oct2026-terminal-bench-science-0-1-claude-haiku-5-5-max"
         ]
       },
       {
-        "observation_id": "obs-0-224-3c93f1831dfbba6b",
+        "observation_id": "obs-0-437-a4e32d7d8e925d55",
         "benchmark_id": "terminal-bench-science-0-1",
         "benchmark_version_id": "terminal-bench-science-0-1-canonical",
-        "model_id": "model-gpt-5-6-sol-codex-963229d6fd1e5bc4",
-        "model_configuration": "GPT-5.6 Sol + Codex",
+        "model_id": "model-gpt-6-1-sol-low-b7c3d9a5f6823764",
+        "model_configuration": "GPT-6.1 Sol (low)",
         "model_identity_organization": "openai",
-        "model_label_id": "gpt-5-6-sol-codex",
-        "model_family_id": "openai-gpt-5-6-sol-codex",
-        "model": "GPT-5.6 Sol + Codex",
+        "model_label_id": "gpt-6-1-sol-low",
+        "model_family_id": "openai-gpt-6-1-sol",
+        "model": "GPT-6.1 Sol (low)",
         "organization": "OpenAI",
-        "score": 0.224,
-        "input_score": 0.224,
+        "score": 0.437,
+        "input_score": 0.437,
         "input_unit": "fraction",
         "reported_cost_per_task": null,
         "metric_id": "terminal-bench-science-0-1-metric-v1",
@@ -1132,153 +1154,86 @@
         "score_role": "canonical",
         "score_series_id": "terminal-bench-science-0-1-canonical-score",
         "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
-        "model_release_date": "2026-07-09",
+        "model_release_date": "2026-09-29",
         "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-07-09",
+        "result_public_date": "2026-09-29",
+        "source_publication_date": "2026-09-29",
+        "observation_date": "2026-09-29",
         "observation_date_precision": "day",
         "observation_date_sources": [
           {
-            "date": "2026-07-09",
+            "date": "2026-09-29",
             "kind": "model_release_date",
             "precision": "day",
             "resource_ids": [
-              "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862"
+              "resource-https-openai-com-index-introducing-gpt-6-1-sol-d6b9f5e651b1891e"
+            ]
+          },
+          {
+            "date": "2026-09-29",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openai-com-index-introducing-gpt-6-1-sol-d6b9f5e651b1891e"
             ]
           }
         ],
         "observation_date_source_ids": [
-          "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862"
+          "resource-https-openai-com-index-introducing-gpt-6-1-sol-d6b9f5e651b1891e"
         ],
         "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-07-09",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-07-09",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862",
-          "resource-https-www-terminal-bench-science-ai-announcement-6f8f0395b3313ab9"
-        ],
-        "score_source_ids": [
-          "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862"
-        ],
-        "source": "https://www.terminal-bench-science.ai/",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-name-gpt-5-6-sol-codex-notes-0-1-70-task-release-fa0d1c27ee600551"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2026-07-09",
-        "frontier_observation_ids": [
-          "obs-0-033-2be4d1e677ca2cf7",
-          "obs-0-086-74b9b14ff4446605",
-          "obs-0-224-3c93f1831dfbba6b"
-        ]
-      },
-      {
-        "observation_id": "obs-0-3-d704fae885d61005",
-        "benchmark_id": "terminal-bench-science-0-1",
-        "benchmark_version_id": "terminal-bench-science-0-1-canonical",
-        "model_id": "model-claude-opus-5-claude-code-c49fe73ec0a14691",
-        "model_configuration": "Claude Opus 5 + Claude Code",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-opus-5-claude-code",
-        "model_family_id": "anthropic-claude-opus-5-claude-code",
-        "model": "Claude Opus 5 + Claude Code",
-        "organization": "Anthropic",
-        "score": 0.3,
-        "input_score": 0.3,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "terminal-bench-science-0-1-metric-v1",
-        "protocol_id": "terminal-bench-science-0-1-source-export-v1",
-        "task_set_id": "terminal-bench-science-0-1-canonical",
-        "metric": "Resolution rate",
-        "score_role": "canonical",
-        "score_series_id": "terminal-bench-science-0-1-canonical-score",
-        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
-        "model_release_date": "2026-07-24",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-07-24",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
+        "score_publication_date_sources": [
           {
-            "date": "2026-07-24",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862"
-            ]
+            "date": "2026-09-29",
+            "kind": "Result public date",
+            "precision": "day"
           }
         ],
-        "observation_date_source_ids": [
-          "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-07-24",
+        "date_notes": null,
+        "date": "2026-09-29",
         "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-07-24",
+        "capability_date": "2026-09-29",
         "capability_date_meaning": "earliest_observation_evidence_date",
         "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
+        "historical_frontier_date": "2026-09-29",
         "temporal_class": "historical_or_unknown",
         "retrospective": false,
         "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
+        "historical_frontier_eligible": true,
         "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
         "contemporaneous": true,
         "source_ids": [
-          "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862",
+          "resource-https-openai-com-index-introducing-gpt-6-1-sol-d6b9f5e651b1891e",
           "resource-https-www-terminal-bench-science-ai-announcement-6f8f0395b3313ab9"
         ],
         "score_source_ids": [
-          "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862"
+          "resource-https-openai-com-index-introducing-gpt-6-1-sol-d6b9f5e651b1891e"
         ],
-        "source": "https://www.terminal-bench-science.ai/",
+        "source": "https://openai.com/index/introducing-gpt-6-1-sol",
         "notes": "Operational evaluation timeline only; not a historical public-result date.",
         "evidence_ids": [
-          "evidence-name-claude-opus-5-claude-code-notes-0-1-70-task-92c6eb4cb9600d1f"
+          "evidence-oct2026-terminal-bench-science-0-1-gpt-6-1-sol-l-e7ad1d838153cdf2"
         ],
         "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2026-07-24",
-        "frontier_observation_ids": [
-          "obs-0-3-d704fae885d61005"
+        "source_row_ids": [
+          "oct2026-terminal-bench-science-0-1-gpt-6-1-sol-low"
         ]
       },
       {
-        "observation_id": "obs-0-646-4b06a88e2620eb73",
+        "observation_id": "obs-0-476-b0466e22dfd47981",
         "benchmark_id": "terminal-bench-science-0-1",
         "benchmark_version_id": "terminal-bench-science-0-1-canonical",
-        "model_id": "model-gpt-6-astra-c94798ba994c2800",
-        "model_configuration": "GPT-6 Astra",
+        "model_id": "model-gpt-6-1-sol-medium-e972b4917e224df0",
+        "model_configuration": "GPT-6.1 Sol (medium)",
         "model_identity_organization": "openai",
-        "model_label_id": "gpt-6-astra",
-        "model_family_id": "openai-gpt-6-astra",
-        "model": "GPT-6 Astra",
+        "model_label_id": "gpt-6-1-sol-medium",
+        "model_family_id": "openai-gpt-6-1-sol",
+        "model": "GPT-6.1 Sol (medium)",
         "organization": "OpenAI",
-        "score": 0.646,
-        "input_score": 0.646,
+        "score": 0.476,
+        "input_score": 0.476,
         "input_unit": "fraction",
         "reported_cost_per_task": null,
         "metric_id": "terminal-bench-science-0-1-metric-v1",
@@ -1288,233 +1243,86 @@
         "score_role": "canonical",
         "score_series_id": "terminal-bench-science-0-1-canonical-score",
         "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
-        "model_release_date": "2026-09-03",
+        "model_release_date": "2026-09-29",
         "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-09-03",
+        "result_public_date": "2026-09-29",
+        "source_publication_date": "2026-09-29",
+        "observation_date": "2026-09-29",
         "observation_date_precision": "day",
         "observation_date_sources": [
           {
-            "date": "2026-09-03",
+            "date": "2026-09-29",
             "kind": "model_release_date",
             "precision": "day",
             "resource_ids": [
-              "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
-              "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+              "resource-https-openai-com-index-introducing-gpt-6-1-sol-d6b9f5e651b1891e"
+            ]
+          },
+          {
+            "date": "2026-09-29",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openai-com-index-introducing-gpt-6-1-sol-d6b9f5e651b1891e"
             ]
           }
         ],
         "observation_date_source_ids": [
-          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
-          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+          "resource-https-openai-com-index-introducing-gpt-6-1-sol-d6b9f5e651b1891e"
         ],
         "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-09-03",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-09-03",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
-          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53",
-          "resource-https-www-terminal-bench-science-ai-announcement-6f8f0395b3313ab9"
-        ],
-        "score_source_ids": [
-          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
-        ],
-        "source": "https://openai.com/index/gpt-6-astra",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-name-gpt-6-astra-notes-openai-published-result-0-5b2ced68576f7909"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2026-09-03",
-        "frontier_observation_ids": [
-          "obs-0-646-4b06a88e2620eb73"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-105-5f42e4a5ffe292d7",
-        "benchmark_id": "terminal-bench-science-0-1",
-        "benchmark_version_id": "terminal-bench-science-0-1-canonical",
-        "model_id": "model-claude-opus-4-8-claude-code-7f3082160e0731f0",
-        "model_configuration": "Claude Opus 4.8 + Claude Code",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-opus-4-8-claude-code",
-        "model_family_id": "anthropic-claude-opus-4-8-claude-code",
-        "model": "Claude Opus 4.8 + Claude Code",
-        "organization": "Anthropic",
-        "score": 0.105,
-        "input_score": 0.105,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "terminal-bench-science-0-1-metric-v1",
-        "protocol_id": "terminal-bench-science-0-1-source-export-v1",
-        "task_set_id": "terminal-bench-science-0-1-canonical",
-        "metric": "Resolution rate",
-        "score_role": "canonical",
-        "score_series_id": "terminal-bench-science-0-1-canonical-score",
-        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
-        "model_release_date": "2026-05-28",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-05-28",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
+        "score_publication_date_sources": [
           {
-            "date": "2026-05-28",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862"
-            ]
+            "date": "2026-09-29",
+            "kind": "Result public date",
+            "precision": "day"
           }
         ],
-        "observation_date_source_ids": [
-          "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-05-28",
+        "date_notes": null,
+        "date": "2026-09-29",
         "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-05-28",
+        "capability_date": "2026-09-29",
         "capability_date_meaning": "earliest_observation_evidence_date",
         "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
+        "historical_frontier_date": "2026-09-29",
         "temporal_class": "historical_or_unknown",
         "retrospective": false,
         "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
+        "historical_frontier_eligible": true,
         "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
         "contemporaneous": true,
         "source_ids": [
-          "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862",
+          "resource-https-openai-com-index-introducing-gpt-6-1-sol-d6b9f5e651b1891e",
           "resource-https-www-terminal-bench-science-ai-announcement-6f8f0395b3313ab9"
         ],
         "score_source_ids": [
-          "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862"
+          "resource-https-openai-com-index-introducing-gpt-6-1-sol-d6b9f5e651b1891e"
         ],
-        "source": "https://www.terminal-bench-science.ai/",
+        "source": "https://openai.com/index/introducing-gpt-6-1-sol",
         "notes": "Operational evaluation timeline only; not a historical public-result date.",
         "evidence_ids": [
-          "evidence-name-claude-opus-4-8-claude-code-notes-0-1-70-ta-31f733f38d3a4cd1"
+          "evidence-oct2026-terminal-bench-science-0-1-gpt-6-1-sol-m-7154c78283b47932"
         ],
         "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2026-05-28",
-        "frontier_observation_ids": [
-          "obs-0-105-5f42e4a5ffe292d7"
+        "source_row_ids": [
+          "oct2026-terminal-bench-science-0-1-gpt-6-1-sol-medium"
         ]
       },
       {
-        "observation_id": "obs-0-214-6f0917ef5423c24a",
+        "observation_id": "obs-0-511-0a6b9403b54625f8",
         "benchmark_id": "terminal-bench-science-0-1",
         "benchmark_version_id": "terminal-bench-science-0-1-canonical",
-        "model_id": "model-claude-fable-5-claude-code-24828e7c882d633d",
-        "model_configuration": "Claude Fable 5 + Claude Code",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-fable-5-claude-code",
-        "model_family_id": "anthropic-claude-fable-5-claude-code",
-        "model": "Claude Fable 5 + Claude Code",
-        "organization": "Anthropic",
-        "score": 0.214,
-        "input_score": 0.214,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "terminal-bench-science-0-1-metric-v1",
-        "protocol_id": "terminal-bench-science-0-1-source-export-v1",
-        "task_set_id": "terminal-bench-science-0-1-canonical",
-        "metric": "Resolution rate",
-        "score_role": "canonical",
-        "score_series_id": "terminal-bench-science-0-1-canonical-score",
-        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
-        "model_release_date": "2026-06-09",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-06-09",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2026-06-09",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-06-09",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-06-09",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862",
-          "resource-https-www-terminal-bench-science-ai-announcement-6f8f0395b3313ab9"
-        ],
-        "score_source_ids": [
-          "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862"
-        ],
-        "source": "https://www.terminal-bench-science.ai/",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-name-claude-fable-5-claude-code-notes-0-1-70-tas-ff2bef445dc378ee"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2026-06-09",
-        "frontier_observation_ids": [
-          "obs-0-214-6f0917ef5423c24a"
-        ]
-      },
-      {
-        "observation_id": "obs-0-224-3c93f1831dfbba6b",
-        "benchmark_id": "terminal-bench-science-0-1",
-        "benchmark_version_id": "terminal-bench-science-0-1-canonical",
-        "model_id": "model-gpt-5-6-sol-codex-963229d6fd1e5bc4",
-        "model_configuration": "GPT-5.6 Sol + Codex",
+        "model_id": "model-gpt-6-1-sol-high-378a98e234a99dc3",
+        "model_configuration": "GPT-6.1 Sol (high)",
         "model_identity_organization": "openai",
-        "model_label_id": "gpt-5-6-sol-codex",
-        "model_family_id": "openai-gpt-5-6-sol-codex",
-        "model": "GPT-5.6 Sol + Codex",
+        "model_label_id": "gpt-6-1-sol-high",
+        "model_family_id": "openai-gpt-6-1-sol",
+        "model": "GPT-6.1 Sol (high)",
         "organization": "OpenAI",
-        "score": 0.224,
-        "input_score": 0.224,
+        "score": 0.511,
+        "input_score": 0.511,
         "input_unit": "fraction",
         "reported_cost_per_task": null,
         "metric_id": "terminal-bench-science-0-1-metric-v1",
@@ -1524,153 +1332,86 @@
         "score_role": "canonical",
         "score_series_id": "terminal-bench-science-0-1-canonical-score",
         "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
-        "model_release_date": "2026-07-09",
+        "model_release_date": "2026-09-29",
         "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-07-09",
+        "result_public_date": "2026-09-29",
+        "source_publication_date": "2026-09-29",
+        "observation_date": "2026-09-29",
         "observation_date_precision": "day",
         "observation_date_sources": [
           {
-            "date": "2026-07-09",
+            "date": "2026-09-29",
             "kind": "model_release_date",
             "precision": "day",
             "resource_ids": [
-              "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862"
+              "resource-https-openai-com-index-introducing-gpt-6-1-sol-d6b9f5e651b1891e"
+            ]
+          },
+          {
+            "date": "2026-09-29",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openai-com-index-introducing-gpt-6-1-sol-d6b9f5e651b1891e"
             ]
           }
         ],
         "observation_date_source_ids": [
-          "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862"
+          "resource-https-openai-com-index-introducing-gpt-6-1-sol-d6b9f5e651b1891e"
         ],
         "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-07-09",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-07-09",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862",
-          "resource-https-www-terminal-bench-science-ai-announcement-6f8f0395b3313ab9"
-        ],
-        "score_source_ids": [
-          "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862"
-        ],
-        "source": "https://www.terminal-bench-science.ai/",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-name-gpt-5-6-sol-codex-notes-0-1-70-task-release-fa0d1c27ee600551"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2026-07-09",
-        "frontier_observation_ids": [
-          "obs-0-033-2be4d1e677ca2cf7",
-          "obs-0-086-74b9b14ff4446605",
-          "obs-0-224-3c93f1831dfbba6b"
-        ]
-      },
-      {
-        "observation_id": "obs-0-3-d704fae885d61005",
-        "benchmark_id": "terminal-bench-science-0-1",
-        "benchmark_version_id": "terminal-bench-science-0-1-canonical",
-        "model_id": "model-claude-opus-5-claude-code-c49fe73ec0a14691",
-        "model_configuration": "Claude Opus 5 + Claude Code",
-        "model_identity_organization": "anthropic",
-        "model_label_id": "claude-opus-5-claude-code",
-        "model_family_id": "anthropic-claude-opus-5-claude-code",
-        "model": "Claude Opus 5 + Claude Code",
-        "organization": "Anthropic",
-        "score": 0.3,
-        "input_score": 0.3,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "terminal-bench-science-0-1-metric-v1",
-        "protocol_id": "terminal-bench-science-0-1-source-export-v1",
-        "task_set_id": "terminal-bench-science-0-1-canonical",
-        "metric": "Resolution rate",
-        "score_role": "canonical",
-        "score_series_id": "terminal-bench-science-0-1-canonical-score",
-        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
-        "model_release_date": "2026-07-24",
-        "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-07-24",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
+        "score_publication_date_sources": [
           {
-            "date": "2026-07-24",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862"
-            ]
+            "date": "2026-09-29",
+            "kind": "Result public date",
+            "precision": "day"
           }
         ],
-        "observation_date_source_ids": [
-          "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-07-24",
+        "date_notes": null,
+        "date": "2026-09-29",
         "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-07-24",
+        "capability_date": "2026-09-29",
         "capability_date_meaning": "earliest_observation_evidence_date",
         "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
+        "historical_frontier_date": "2026-09-29",
         "temporal_class": "historical_or_unknown",
         "retrospective": false,
         "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
+        "historical_frontier_eligible": true,
         "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
         "contemporaneous": true,
         "source_ids": [
-          "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862",
+          "resource-https-openai-com-index-introducing-gpt-6-1-sol-d6b9f5e651b1891e",
           "resource-https-www-terminal-bench-science-ai-announcement-6f8f0395b3313ab9"
         ],
         "score_source_ids": [
-          "resource-https-www-terminal-bench-science-ai-7bb77b99c4108862"
+          "resource-https-openai-com-index-introducing-gpt-6-1-sol-d6b9f5e651b1891e"
         ],
-        "source": "https://www.terminal-bench-science.ai/",
+        "source": "https://openai.com/index/introducing-gpt-6-1-sol",
         "notes": "Operational evaluation timeline only; not a historical public-result date.",
         "evidence_ids": [
-          "evidence-name-claude-opus-5-claude-code-notes-0-1-70-task-92c6eb4cb9600d1f"
+          "evidence-oct2026-terminal-bench-science-0-1-gpt-6-1-sol-h-f228a3d682552a46"
         ],
         "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2026-07-24",
-        "frontier_observation_ids": [
-          "obs-0-3-d704fae885d61005"
+        "source_row_ids": [
+          "oct2026-terminal-bench-science-0-1-gpt-6-1-sol-high"
         ]
       },
       {
-        "observation_id": "obs-0-646-4b06a88e2620eb73",
+        "observation_id": "obs-0-537-718c1c801141d537",
         "benchmark_id": "terminal-bench-science-0-1",
         "benchmark_version_id": "terminal-bench-science-0-1-canonical",
-        "model_id": "model-gpt-6-astra-c94798ba994c2800",
-        "model_configuration": "GPT-6 Astra",
+        "model_id": "model-gpt-6-1-sol-xhigh-ae7e1494b18ce653",
+        "model_configuration": "GPT-6.1 Sol (xhigh)",
         "model_identity_organization": "openai",
-        "model_label_id": "gpt-6-astra",
-        "model_family_id": "openai-gpt-6-astra",
-        "model": "GPT-6 Astra",
+        "model_label_id": "gpt-6-1-sol-xhigh",
+        "model_family_id": "openai-gpt-6-1-sol",
+        "model": "GPT-6.1 Sol (xhigh)",
         "organization": "OpenAI",
-        "score": 0.646,
-        "input_score": 0.646,
+        "score": 0.537,
+        "input_score": 0.537,
         "input_unit": "fraction",
         "reported_cost_per_task": null,
         "metric_id": "terminal-bench-science-0-1-metric-v1",
@@ -1680,62 +1421,694 @@
         "score_role": "canonical",
         "score_series_id": "terminal-bench-science-0-1-canonical-score",
         "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
-        "model_release_date": "2026-09-03",
+        "model_release_date": "2026-09-29",
         "evaluation_date": null,
-        "result_public_date": null,
-        "source_publication_date": null,
-        "observation_date": "2026-09-03",
+        "result_public_date": "2026-09-29",
+        "source_publication_date": "2026-09-29",
+        "observation_date": "2026-09-29",
         "observation_date_precision": "day",
         "observation_date_sources": [
           {
-            "date": "2026-09-03",
+            "date": "2026-09-29",
             "kind": "model_release_date",
             "precision": "day",
             "resource_ids": [
-              "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
-              "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+              "resource-https-openai-com-index-introducing-gpt-6-1-sol-d6b9f5e651b1891e"
+            ]
+          },
+          {
+            "date": "2026-09-29",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openai-com-index-introducing-gpt-6-1-sol-d6b9f5e651b1891e"
             ]
           }
         ],
         "observation_date_source_ids": [
-          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
-          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+          "resource-https-openai-com-index-introducing-gpt-6-1-sol-d6b9f5e651b1891e"
         ],
         "evaluation_date_sources": [],
-        "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-29",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
-        "date_notes": "A score-publication date is not present in the source export.",
-        "date": "2026-09-03",
+        "date_notes": null,
+        "date": "2026-09-29",
         "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2026-09-03",
+        "capability_date": "2026-09-29",
         "capability_date_meaning": "earliest_observation_evidence_date",
         "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": null,
+        "historical_frontier_date": "2026-09-29",
         "temporal_class": "historical_or_unknown",
         "retrospective": false,
         "capability_frontier_eligible": true,
-        "historical_frontier_eligible": false,
+        "historical_frontier_eligible": true,
         "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
         "contemporaneous": true,
         "source_ids": [
-          "resource-https-developers-openai-com-api-docs-models-gpt--67b4ce9b4e6ab350",
-          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53",
+          "resource-https-openai-com-index-introducing-gpt-6-1-sol-d6b9f5e651b1891e",
           "resource-https-www-terminal-bench-science-ai-announcement-6f8f0395b3313ab9"
         ],
         "score_source_ids": [
-          "resource-https-openai-com-index-gpt-6-astra-039a4975e102cb53"
+          "resource-https-openai-com-index-introducing-gpt-6-1-sol-d6b9f5e651b1891e"
         ],
-        "source": "https://openai.com/index/gpt-6-astra",
+        "source": "https://openai.com/index/introducing-gpt-6-1-sol",
         "notes": "Operational evaluation timeline only; not a historical public-result date.",
         "evidence_ids": [
-          "evidence-name-gpt-6-astra-notes-openai-published-result-0-5b2ced68576f7909"
+          "evidence-oct2026-terminal-bench-science-0-1-gpt-6-1-sol-x-0a37fb266b12700b"
         ],
         "evidence_count": 1,
-        "source_row_ids": [],
-        "plot_date": "2026-09-03",
-        "frontier_observation_ids": [
-          "obs-0-646-4b06a88e2620eb73"
+        "source_row_ids": [
+          "oct2026-terminal-bench-science-0-1-gpt-6-1-sol-xhigh"
+        ]
+      },
+      {
+        "observation_id": "obs-0-57-5b2cdd530618867e",
+        "benchmark_id": "terminal-bench-science-0-1",
+        "benchmark_version_id": "terminal-bench-science-0-1-canonical",
+        "model_id": "model-gpt-6-1-sol-max-fc944f7472a7d64e",
+        "model_configuration": "GPT-6.1 Sol (max)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-1-sol-max",
+        "model_family_id": "openai-gpt-6-1-sol",
+        "model": "GPT-6.1 Sol (max)",
+        "organization": "OpenAI",
+        "score": 0.57,
+        "input_score": 0.57,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "terminal-bench-science-0-1-metric-v1",
+        "protocol_id": "terminal-bench-science-0-1-source-export-v1",
+        "task_set_id": "terminal-bench-science-0-1-canonical",
+        "metric": "Resolution rate",
+        "score_role": "canonical",
+        "score_series_id": "terminal-bench-science-0-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-09-29",
+        "evaluation_date": null,
+        "result_public_date": "2026-09-29",
+        "source_publication_date": "2026-09-29",
+        "observation_date": "2026-09-29",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-09-29",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openai-com-index-introducing-gpt-6-1-sol-d6b9f5e651b1891e"
+            ]
+          },
+          {
+            "date": "2026-09-29",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openai-com-index-introducing-gpt-6-1-sol-d6b9f5e651b1891e"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-1-sol-d6b9f5e651b1891e"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-09-29",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-09-29",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-09-29",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-09-29",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-1-sol-d6b9f5e651b1891e",
+          "resource-https-www-terminal-bench-science-ai-announcement-6f8f0395b3313ab9"
+        ],
+        "score_source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-1-sol-d6b9f5e651b1891e"
+        ],
+        "source": "https://openai.com/index/introducing-gpt-6-1-sol",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-terminal-bench-science-0-1-gpt-6-1-sol-m-189c3683c69af70d"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "oct2026-terminal-bench-science-0-1-gpt-6-1-sol-max"
+        ]
+      },
+      {
+        "observation_id": "obs-0-243-76a0f2920ca9966c",
+        "benchmark_id": "terminal-bench-science-0-1",
+        "benchmark_version_id": "terminal-bench-science-0-1-canonical",
+        "model_id": "model-gpt-6-1-terra-low-0f37dab0d5a67250",
+        "model_configuration": "GPT-6.1 Terra (low)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-1-terra-low",
+        "model_family_id": "openai-gpt-6-1-terra",
+        "model": "GPT-6.1 Terra (low)",
+        "organization": "OpenAI",
+        "score": 0.243,
+        "input_score": 0.243,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "terminal-bench-science-0-1-metric-v1",
+        "protocol_id": "terminal-bench-science-0-1-source-export-v1",
+        "task_set_id": "terminal-bench-science-0-1-canonical",
+        "metric": "Resolution rate",
+        "score_role": "canonical",
+        "score_series_id": "terminal-bench-science-0-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-10-26",
+        "evaluation_date": null,
+        "result_public_date": "2026-10-26",
+        "source_publication_date": "2026-10-26",
+        "observation_date": "2026-10-26",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-10-26",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openai-com-index-introducing-gpt-6-1-terra-35e334c198740f74"
+            ]
+          },
+          {
+            "date": "2026-10-26",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openai-com-index-introducing-gpt-6-1-terra-35e334c198740f74"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-1-terra-35e334c198740f74"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-10-26",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-10-26",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-10-26",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-10-26",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-1-terra-35e334c198740f74",
+          "resource-https-www-terminal-bench-science-ai-announcement-6f8f0395b3313ab9"
+        ],
+        "score_source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-1-terra-35e334c198740f74"
+        ],
+        "source": "https://openai.com/index/introducing-gpt-6-1-terra",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-terminal-bench-science-0-1-gpt-6-1-terra-1e898cb570ded04b"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "oct2026-terminal-bench-science-0-1-gpt-6-1-terra-low"
+        ]
+      },
+      {
+        "observation_id": "obs-0-343-f6e9dbfdf230e940",
+        "benchmark_id": "terminal-bench-science-0-1",
+        "benchmark_version_id": "terminal-bench-science-0-1-canonical",
+        "model_id": "model-gpt-6-1-terra-medium-6893cf6e2848bf28",
+        "model_configuration": "GPT-6.1 Terra (medium)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-1-terra-medium",
+        "model_family_id": "openai-gpt-6-1-terra",
+        "model": "GPT-6.1 Terra (medium)",
+        "organization": "OpenAI",
+        "score": 0.343,
+        "input_score": 0.343,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "terminal-bench-science-0-1-metric-v1",
+        "protocol_id": "terminal-bench-science-0-1-source-export-v1",
+        "task_set_id": "terminal-bench-science-0-1-canonical",
+        "metric": "Resolution rate",
+        "score_role": "canonical",
+        "score_series_id": "terminal-bench-science-0-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-10-26",
+        "evaluation_date": null,
+        "result_public_date": "2026-10-26",
+        "source_publication_date": "2026-10-26",
+        "observation_date": "2026-10-26",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-10-26",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openai-com-index-introducing-gpt-6-1-terra-35e334c198740f74"
+            ]
+          },
+          {
+            "date": "2026-10-26",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openai-com-index-introducing-gpt-6-1-terra-35e334c198740f74"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-1-terra-35e334c198740f74"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-10-26",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-10-26",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-10-26",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-10-26",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-1-terra-35e334c198740f74",
+          "resource-https-www-terminal-bench-science-ai-announcement-6f8f0395b3313ab9"
+        ],
+        "score_source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-1-terra-35e334c198740f74"
+        ],
+        "source": "https://openai.com/index/introducing-gpt-6-1-terra",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-terminal-bench-science-0-1-gpt-6-1-terra-78ba7897b3bb0ce4"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "oct2026-terminal-bench-science-0-1-gpt-6-1-terra-medium"
+        ]
+      },
+      {
+        "observation_id": "obs-0-397-4c482e604f69e09f",
+        "benchmark_id": "terminal-bench-science-0-1",
+        "benchmark_version_id": "terminal-bench-science-0-1-canonical",
+        "model_id": "model-gpt-6-1-terra-high-faa308242d540d7f",
+        "model_configuration": "GPT-6.1 Terra (high)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-1-terra-high",
+        "model_family_id": "openai-gpt-6-1-terra",
+        "model": "GPT-6.1 Terra (high)",
+        "organization": "OpenAI",
+        "score": 0.397,
+        "input_score": 0.397,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "terminal-bench-science-0-1-metric-v1",
+        "protocol_id": "terminal-bench-science-0-1-source-export-v1",
+        "task_set_id": "terminal-bench-science-0-1-canonical",
+        "metric": "Resolution rate",
+        "score_role": "canonical",
+        "score_series_id": "terminal-bench-science-0-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-10-26",
+        "evaluation_date": null,
+        "result_public_date": "2026-10-26",
+        "source_publication_date": "2026-10-26",
+        "observation_date": "2026-10-26",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-10-26",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openai-com-index-introducing-gpt-6-1-terra-35e334c198740f74"
+            ]
+          },
+          {
+            "date": "2026-10-26",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openai-com-index-introducing-gpt-6-1-terra-35e334c198740f74"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-1-terra-35e334c198740f74"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-10-26",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-10-26",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-10-26",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-10-26",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-1-terra-35e334c198740f74",
+          "resource-https-www-terminal-bench-science-ai-announcement-6f8f0395b3313ab9"
+        ],
+        "score_source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-1-terra-35e334c198740f74"
+        ],
+        "source": "https://openai.com/index/introducing-gpt-6-1-terra",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-terminal-bench-science-0-1-gpt-6-1-terra-c563eecc58b189b2"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "oct2026-terminal-bench-science-0-1-gpt-6-1-terra-high"
+        ]
+      },
+      {
+        "observation_id": "obs-0-434-eea1293169563c4b",
+        "benchmark_id": "terminal-bench-science-0-1",
+        "benchmark_version_id": "terminal-bench-science-0-1-canonical",
+        "model_id": "model-gpt-6-1-terra-xhigh-b5b8bde3591e7dfe",
+        "model_configuration": "GPT-6.1 Terra (xhigh)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-1-terra-xhigh",
+        "model_family_id": "openai-gpt-6-1-terra",
+        "model": "GPT-6.1 Terra (xhigh)",
+        "organization": "OpenAI",
+        "score": 0.434,
+        "input_score": 0.434,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "terminal-bench-science-0-1-metric-v1",
+        "protocol_id": "terminal-bench-science-0-1-source-export-v1",
+        "task_set_id": "terminal-bench-science-0-1-canonical",
+        "metric": "Resolution rate",
+        "score_role": "canonical",
+        "score_series_id": "terminal-bench-science-0-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-10-26",
+        "evaluation_date": null,
+        "result_public_date": "2026-10-26",
+        "source_publication_date": "2026-10-26",
+        "observation_date": "2026-10-26",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-10-26",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openai-com-index-introducing-gpt-6-1-terra-35e334c198740f74"
+            ]
+          },
+          {
+            "date": "2026-10-26",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openai-com-index-introducing-gpt-6-1-terra-35e334c198740f74"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-1-terra-35e334c198740f74"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-10-26",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-10-26",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-10-26",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-10-26",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-1-terra-35e334c198740f74",
+          "resource-https-www-terminal-bench-science-ai-announcement-6f8f0395b3313ab9"
+        ],
+        "score_source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-1-terra-35e334c198740f74"
+        ],
+        "source": "https://openai.com/index/introducing-gpt-6-1-terra",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-terminal-bench-science-0-1-gpt-6-1-terra-56ece27f168dbed5"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "oct2026-terminal-bench-science-0-1-gpt-6-1-terra-xhigh"
+        ]
+      },
+      {
+        "observation_id": "obs-0-583-5849467f2e2dbe7f",
+        "benchmark_id": "terminal-bench-science-0-1",
+        "benchmark_version_id": "terminal-bench-science-0-1-canonical",
+        "model_id": "model-gpt-6-1-terra-max-e404824a37bb32e1",
+        "model_configuration": "GPT-6.1 Terra (max)",
+        "model_identity_organization": "openai",
+        "model_label_id": "gpt-6-1-terra-max",
+        "model_family_id": "openai-gpt-6-1-terra",
+        "model": "GPT-6.1 Terra (max)",
+        "organization": "OpenAI",
+        "score": 0.583,
+        "input_score": 0.583,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "terminal-bench-science-0-1-metric-v1",
+        "protocol_id": "terminal-bench-science-0-1-source-export-v1",
+        "task_set_id": "terminal-bench-science-0-1-canonical",
+        "metric": "Resolution rate",
+        "score_role": "canonical",
+        "score_series_id": "terminal-bench-science-0-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-10-26",
+        "evaluation_date": null,
+        "result_public_date": "2026-10-26",
+        "source_publication_date": "2026-10-26",
+        "observation_date": "2026-10-26",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-10-26",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openai-com-index-introducing-gpt-6-1-terra-35e334c198740f74"
+            ]
+          },
+          {
+            "date": "2026-10-26",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-openai-com-index-introducing-gpt-6-1-terra-35e334c198740f74"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-1-terra-35e334c198740f74"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-10-26",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-10-26",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-10-26",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-10-26",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-1-terra-35e334c198740f74",
+          "resource-https-www-terminal-bench-science-ai-announcement-6f8f0395b3313ab9"
+        ],
+        "score_source_ids": [
+          "resource-https-openai-com-index-introducing-gpt-6-1-terra-35e334c198740f74"
+        ],
+        "source": "https://openai.com/index/introducing-gpt-6-1-terra",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-terminal-bench-science-0-1-gpt-6-1-terra-d47dde35a98c76d2"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "oct2026-terminal-bench-science-0-1-gpt-6-1-terra-max"
+        ]
+      },
+      {
+        "observation_id": "obs-0-381-b8b51aac08b177fb",
+        "benchmark_id": "terminal-bench-science-0-1",
+        "benchmark_version_id": "terminal-bench-science-0-1-canonical",
+        "model_id": "model-kimi-k3-1-pro-max-claude-code-89a81ae909d59ad2",
+        "model_configuration": "Kimi K3.1 Pro (max, Claude Code)",
+        "model_identity_organization": "moonshot",
+        "model_label_id": "kimi-k3-1-pro-max-claude-code",
+        "model_family_id": "moonshot-kimi-k3-1-pro",
+        "model": "Kimi K3.1 Pro (max, Claude Code)",
+        "organization": "Moonshot",
+        "score": 0.381,
+        "input_score": 0.381,
+        "input_unit": "fraction",
+        "reported_cost_per_task": null,
+        "metric_id": "terminal-bench-science-0-1-metric-v1",
+        "protocol_id": "terminal-bench-science-0-1-source-export-v1",
+        "task_set_id": "terminal-bench-science-0-1-canonical",
+        "metric": "Resolution rate",
+        "score_role": "canonical",
+        "score_series_id": "terminal-bench-science-0-1-canonical-score",
+        "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
+        "model_release_date": "2026-10-23",
+        "evaluation_date": null,
+        "result_public_date": "2026-10-23",
+        "source_publication_date": "2026-10-23",
+        "observation_date": "2026-10-23",
+        "observation_date_precision": "day",
+        "observation_date_sources": [
+          {
+            "date": "2026-10-23",
+            "kind": "model_release_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
+            ]
+          },
+          {
+            "date": "2026-10-23",
+            "kind": "score_publication_date",
+            "precision": "day",
+            "resource_ids": [
+              "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
+            ]
+          }
+        ],
+        "observation_date_source_ids": [
+          "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
+        ],
+        "evaluation_date_sources": [],
+        "score_publication_date_sources": [
+          {
+            "date": "2026-10-23",
+            "kind": "Result public date",
+            "precision": "day"
+          }
+        ],
+        "ingested_at": "2026-10-27",
+        "date_precision": "day",
+        "date_notes": null,
+        "date": "2026-10-23",
+        "date_kind": "earliest_observation_evidence_date",
+        "capability_date": "2026-10-23",
+        "capability_date_meaning": "earliest_observation_evidence_date",
+        "reported_date_meaning": "result_public_date",
+        "historical_frontier_date": "2026-10-23",
+        "temporal_class": "historical_or_unknown",
+        "retrospective": false,
+        "capability_frontier_eligible": true,
+        "historical_frontier_eligible": true,
+        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
+        "contemporaneous": true,
+        "source_ids": [
+          "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec",
+          "resource-https-www-terminal-bench-science-ai-announcement-6f8f0395b3313ab9"
+        ],
+        "score_source_ids": [
+          "resource-https-www-kimi-com-blog-kimi-k3-1-pro-a39c44d95d805fec"
+        ],
+        "source": "https://www.kimi.com/blog/kimi-k3-1-pro",
+        "notes": "Operational evaluation timeline only; not a historical public-result date.",
+        "evidence_ids": [
+          "evidence-oct2026-terminal-bench-science-0-1-kimi-k3-1-pro-7867fa52fc891b1a"
+        ],
+        "evidence_count": 1,
+        "source_row_ids": [
+          "oct2026-terminal-bench-science-0-1-kimi-k3-1-pro-max"
         ]
       }
     ],
@@ -1783,7 +2156,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-05-28",
@@ -1860,7 +2233,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-06-09",
@@ -1937,7 +2310,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-09",
@@ -2016,7 +2389,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-07-24",
@@ -2095,7 +2468,7 @@
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": "A score-publication date is not present in the source export.",
         "date": "2026-09-03",
@@ -2189,7 +2562,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2026-09-22",
@@ -2224,22 +2597,20 @@
         "frontier_observation_ids": [
           "obs-0-587-620a4ddf7113c0d4"
         ]
-      }
-    ],
-    "historical_frontier": [
+      },
       {
-        "observation_id": "obs-0-587-620a4ddf7113c0d4",
+        "observation_id": "obs-0-599-c270914de5ebb7f3",
         "benchmark_id": "terminal-bench-science-0-1",
         "benchmark_version_id": "terminal-bench-science-0-1-canonical",
-        "model_id": "model-claude-opus-5-5-max-claude-code-bare-safeguards--4e88fbda62f37aef",
-        "model_configuration": "Claude Opus 5.5 (max, Claude Code bare, safeguards/fallbacks)",
+        "model_id": "model-claude-sonnet-5-5-max-claude-code-bare-safeguard-f9d5cf8417604804",
+        "model_configuration": "Claude Sonnet 5.5 (max, Claude Code bare, safeguards)",
         "model_identity_organization": "anthropic",
-        "model_label_id": "claude-opus-5-5-max-claude-code-bare-safeguards-fallbacks",
-        "model_family_id": "anthropic-claude-opus-5-5",
-        "model": "Claude Opus 5.5 (max, Claude Code bare, safeguards/fallbacks)",
+        "model_label_id": "claude-sonnet-5-5-max-claude-code-bare-safeguards",
+        "model_family_id": "anthropic-claude-sonnet-5-5",
+        "model": "Claude Sonnet 5.5 (max, Claude Code bare, safeguards)",
         "organization": "Anthropic",
-        "score": 0.587,
-        "input_score": 0.587,
+        "score": 0.599,
+        "input_score": 0.599,
         "input_unit": "fraction",
         "reported_cost_per_task": null,
         "metric_id": "terminal-bench-science-0-1-metric-v1",
@@ -2249,50 +2620,50 @@
         "score_role": "canonical",
         "score_series_id": "terminal-bench-science-0-1-canonical-score",
         "evaluation_protocol": "Source export protocol; row-level protocol details are preserved when available.",
-        "model_release_date": "2026-09-22",
+        "model_release_date": "2026-09-28",
         "evaluation_date": null,
-        "result_public_date": "2026-09-22",
-        "source_publication_date": "2026-09-22",
-        "observation_date": "2026-09-22",
+        "result_public_date": "2026-09-28",
+        "source_publication_date": "2026-09-28",
+        "observation_date": "2026-09-28",
         "observation_date_precision": "day",
         "observation_date_sources": [
           {
-            "date": "2026-09-22",
+            "date": "2026-09-28",
             "kind": "model_release_date",
             "precision": "day",
             "resource_ids": [
-              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+              "resource-https-www-anthropic-com-claude-sonnet-5-5-system-add74e2fa0d003e6"
             ]
           },
           {
-            "date": "2026-09-22",
+            "date": "2026-09-28",
             "kind": "score_publication_date",
             "precision": "day",
             "resource_ids": [
-              "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+              "resource-https-www-anthropic-com-claude-sonnet-5-5-system-add74e2fa0d003e6"
             ]
           }
         ],
         "observation_date_source_ids": [
-          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+          "resource-https-www-anthropic-com-claude-sonnet-5-5-system-add74e2fa0d003e6"
         ],
         "evaluation_date_sources": [],
         "score_publication_date_sources": [
           {
-            "date": "2026-09-22",
+            "date": "2026-09-28",
             "kind": "Result public date",
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
-        "date": "2026-09-22",
+        "date": "2026-09-28",
         "date_kind": "result first-public date",
-        "capability_date": "2026-09-22",
+        "capability_date": "2026-09-28",
         "capability_date_meaning": "earliest_observation_evidence_date",
         "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2026-09-22",
+        "historical_frontier_date": "2026-09-28",
         "temporal_class": "historical_or_unknown",
         "retrospective": false,
         "capability_frontier_eligible": true,
@@ -2300,31 +2671,30 @@
         "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
         "contemporaneous": true,
         "source_ids": [
-          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414",
+          "resource-https-www-anthropic-com-claude-sonnet-5-5-system-add74e2fa0d003e6",
           "resource-https-www-terminal-bench-science-ai-announcement-6f8f0395b3313ab9"
         ],
         "score_source_ids": [
-          "resource-https-www-anthropic-com-claude-opus-5-5-system-c-b473df8343ee1414"
+          "resource-https-www-anthropic-com-claude-sonnet-5-5-system-add74e2fa0d003e6"
         ],
-        "source": "https://www.anthropic.com/claude-opus-5-5-system-card",
+        "source": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
         "notes": "Operational evaluation timeline only; not a historical public-result date.",
         "evidence_ids": [
-          "evidence-sep2026-terminal-bench-science-0-1-claude-opus-5-bc3afdac683660ba"
+          "evidence-oct2026-terminal-bench-science-0-1-claude-sonnet-9b460cbe7464581a"
         ],
         "evidence_count": 1,
         "source_row_ids": [
-          "sep2026-terminal-bench-science-0-1-claude-opus-5-5-max-claude-code-bare-safeguards-fallbacks"
+          "oct2026-terminal-bench-science-0-1-claude-sonnet-5-5-max"
         ],
-        "plot_date": "2026-09-22",
+        "plot_date": "2026-09-28",
         "frontier_observation_ids": [
-          "obs-0-587-620a4ddf7113c0d4"
+          "obs-0-599-c270914de5ebb7f3"
         ]
       }
     ],
-    "retrospective_observations": [],
     "observed_frontier": 0.646,
     "capability_frontier_value": 0.646,
-    "reported_frontier_value": 0.587,
+    "reported_frontier_value": 0.599,
     "current_frontier": 0.646,
     "normalized_progress": 0.646,
     "normalized_headroom": 0.354,
@@ -2336,11 +2706,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 126
+        "days": 160
       },
       "T90": {
         "status": "right_censored",
-        "days": 126
+        "days": 160
       }
     },
     "capability_threshold_days": {
@@ -2351,11 +2721,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 126
+        "days": 160
       },
       "T90": {
         "status": "right_censored",
-        "days": 126
+        "days": 160
       }
     },
     "reported_threshold_days": {
@@ -2366,11 +2736,11 @@
       },
       "T80": {
         "status": "right_censored",
-        "days": 126
+        "days": 160
       },
       "T90": {
         "status": "right_censored",
-        "days": 126
+        "days": 160
       }
     },
     "velocity_180d": null,

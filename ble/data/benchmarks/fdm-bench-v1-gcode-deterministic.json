@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "bundle_kind": "benchmark_detail",
-  "snapshot_id": "2026-09-23",
+  "snapshot_id": "2026-10-27",
   "reference_organizations": [
     {
       "id": "openai",
@@ -171,7 +171,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-07-23",
@@ -252,7 +252,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-07-23",
@@ -333,7 +333,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-05-13",
@@ -414,7 +414,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-06-20",
@@ -444,186 +444,6 @@
         "evidence_count": 1,
         "source_row_ids": [
           "fdm-sonnet35"
-        ]
-      }
-    ],
-    "frontier": [
-      {
-        "observation_id": "obs-0-62-6c2e4ce3f17bfd7b",
-        "benchmark_id": "fdm-bench-v1-gcode-deterministic",
-        "benchmark_version_id": "fdm-bench-v1-gcode-deterministic-canonical",
-        "model_id": "model-gpt-4o-d491e46221c560b3",
-        "model_configuration": "GPT-4o",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-4o",
-        "model_family_id": "openai-gpt-4o",
-        "model": "GPT-4o",
-        "organization": "OpenAI",
-        "score": 0.62,
-        "input_score": 0.62,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "fdm-bench-v1-gcode-deterministic-metric-v1",
-        "protocol_id": "fdm-bench-v1-gcode-deterministic-source-export-v1",
-        "task_set_id": "fdm-bench-v1-gcode-deterministic-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "fdm-bench-v1-gcode-deterministic-canonical-score",
-        "evaluation_protocol": "FDM-Bench v1 deterministic 16-file G-code anomaly task, temperature 0; subjective ratings and probability outputs are excluded.",
-        "model_release_date": "2024-05-13",
-        "evaluation_date": null,
-        "result_public_date": "2024-12-13",
-        "source_publication_date": "2024-12-13",
-        "observation_date": "2024-05-13",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-05-13",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2412-09819v1-88866ecb84a1f3fc"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2412-09819v1-88866ecb84a1f3fc"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2024-12-13",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2024-12-13",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-05-13",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2024-12-13",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2412-09819v1-88866ecb84a1f3fc",
-          "resource-https-github-com-ahmadrezania-fdm-bench-0d34196344835bb6"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2412-09819v1-88866ecb84a1f3fc"
-        ],
-        "source": "https://arxiv.org/abs/2412.09819v1",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-fdm-gpt4o-8c133ec5a39c5fcc"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "fdm-gpt4o"
-        ],
-        "plot_date": "2024-12-13",
-        "frontier_observation_ids": [
-          "obs-0-31-26c9490499785c83",
-          "obs-0-44-29193f57689590f7",
-          "obs-0-44-11646276877ba4f4",
-          "obs-0-62-6c2e4ce3f17bfd7b"
-        ]
-      }
-    ],
-    "frontier_events": [
-      {
-        "observation_id": "obs-0-62-6c2e4ce3f17bfd7b",
-        "benchmark_id": "fdm-bench-v1-gcode-deterministic",
-        "benchmark_version_id": "fdm-bench-v1-gcode-deterministic-canonical",
-        "model_id": "model-gpt-4o-d491e46221c560b3",
-        "model_configuration": "GPT-4o",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-4o",
-        "model_family_id": "openai-gpt-4o",
-        "model": "GPT-4o",
-        "organization": "OpenAI",
-        "score": 0.62,
-        "input_score": 0.62,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "fdm-bench-v1-gcode-deterministic-metric-v1",
-        "protocol_id": "fdm-bench-v1-gcode-deterministic-source-export-v1",
-        "task_set_id": "fdm-bench-v1-gcode-deterministic-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "fdm-bench-v1-gcode-deterministic-canonical-score",
-        "evaluation_protocol": "FDM-Bench v1 deterministic 16-file G-code anomaly task, temperature 0; subjective ratings and probability outputs are excluded.",
-        "model_release_date": "2024-05-13",
-        "evaluation_date": null,
-        "result_public_date": "2024-12-13",
-        "source_publication_date": "2024-12-13",
-        "observation_date": "2024-05-13",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-05-13",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2412-09819v1-88866ecb84a1f3fc"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2412-09819v1-88866ecb84a1f3fc"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2024-12-13",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2024-12-13",
-        "date_kind": "earliest_observation_evidence_date",
-        "capability_date": "2024-05-13",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2024-12-13",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2412-09819v1-88866ecb84a1f3fc",
-          "resource-https-github-com-ahmadrezania-fdm-bench-0d34196344835bb6"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2412-09819v1-88866ecb84a1f3fc"
-        ],
-        "source": "https://arxiv.org/abs/2412.09819v1",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-fdm-gpt4o-8c133ec5a39c5fcc"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "fdm-gpt4o"
-        ],
-        "plot_date": "2024-12-13",
-        "frontier_observation_ids": [
-          "obs-0-31-26c9490499785c83",
-          "obs-0-44-29193f57689590f7",
-          "obs-0-44-11646276877ba4f4",
-          "obs-0-62-6c2e4ce3f17bfd7b"
         ]
       }
     ],
@@ -677,7 +497,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-12-13",
@@ -767,7 +587,7 @@
             "precision": "day"
           }
         ],
-        "ingested_at": "2026-09-23",
+        "ingested_at": "2026-10-27",
         "date_precision": "day",
         "date_notes": null,
         "date": "2024-12-13",
@@ -807,97 +627,6 @@
         ]
       }
     ],
-    "historical_frontier": [
-      {
-        "observation_id": "obs-0-62-6c2e4ce3f17bfd7b",
-        "benchmark_id": "fdm-bench-v1-gcode-deterministic",
-        "benchmark_version_id": "fdm-bench-v1-gcode-deterministic-canonical",
-        "model_id": "model-gpt-4o-d491e46221c560b3",
-        "model_configuration": "GPT-4o",
-        "model_identity_organization": "openai",
-        "model_label_id": "gpt-4o",
-        "model_family_id": "openai-gpt-4o",
-        "model": "GPT-4o",
-        "organization": "OpenAI",
-        "score": 0.62,
-        "input_score": 0.62,
-        "input_unit": "fraction",
-        "reported_cost_per_task": null,
-        "metric_id": "fdm-bench-v1-gcode-deterministic-metric-v1",
-        "protocol_id": "fdm-bench-v1-gcode-deterministic-source-export-v1",
-        "task_set_id": "fdm-bench-v1-gcode-deterministic-canonical",
-        "metric": "Accuracy",
-        "score_role": "canonical",
-        "score_series_id": "fdm-bench-v1-gcode-deterministic-canonical-score",
-        "evaluation_protocol": "FDM-Bench v1 deterministic 16-file G-code anomaly task, temperature 0; subjective ratings and probability outputs are excluded.",
-        "model_release_date": "2024-05-13",
-        "evaluation_date": null,
-        "result_public_date": "2024-12-13",
-        "source_publication_date": "2024-12-13",
-        "observation_date": "2024-05-13",
-        "observation_date_precision": "day",
-        "observation_date_sources": [
-          {
-            "date": "2024-05-13",
-            "kind": "model_release_date",
-            "precision": "day",
-            "resource_ids": [
-              "resource-https-arxiv-org-abs-2412-09819v1-88866ecb84a1f3fc"
-            ]
-          }
-        ],
-        "observation_date_source_ids": [
-          "resource-https-arxiv-org-abs-2412-09819v1-88866ecb84a1f3fc"
-        ],
-        "evaluation_date_sources": [],
-        "score_publication_date_sources": [
-          {
-            "date": "2024-12-13",
-            "kind": "Result public date",
-            "precision": "day"
-          }
-        ],
-        "ingested_at": "2026-09-23",
-        "date_precision": "day",
-        "date_notes": null,
-        "date": "2024-12-13",
-        "date_kind": "result first-public date",
-        "capability_date": "2024-05-13",
-        "capability_date_meaning": "earliest_observation_evidence_date",
-        "reported_date_meaning": "result_public_date",
-        "historical_frontier_date": "2024-12-13",
-        "temporal_class": "historical_or_unknown",
-        "retrospective": false,
-        "capability_frontier_eligible": true,
-        "historical_frontier_eligible": true,
-        "eligibility_reason": "Capability eligibility uses the dated curated observation and canonical protocol; reported-result eligibility requires result_public_date.",
-        "contemporaneous": true,
-        "source_ids": [
-          "resource-https-arxiv-org-abs-2412-09819v1-88866ecb84a1f3fc",
-          "resource-https-github-com-ahmadrezania-fdm-bench-0d34196344835bb6"
-        ],
-        "score_source_ids": [
-          "resource-https-arxiv-org-abs-2412-09819v1-88866ecb84a1f3fc"
-        ],
-        "source": "https://arxiv.org/abs/2412.09819v1",
-        "notes": "Operational evaluation timeline only; not a historical public-result date.",
-        "evidence_ids": [
-          "evidence-fdm-gpt4o-8c133ec5a39c5fcc"
-        ],
-        "evidence_count": 1,
-        "source_row_ids": [
-          "fdm-gpt4o"
-        ],
-        "plot_date": "2024-12-13",
-        "frontier_observation_ids": [
-          "obs-0-31-26c9490499785c83",
-          "obs-0-44-29193f57689590f7",
-          "obs-0-44-11646276877ba4f4",
-          "obs-0-62-6c2e4ce3f17bfd7b"
-        ]
-      }
-    ],
-    "retrospective_observations": [],
     "observed_frontier": 0.62,
     "capability_frontier_value": 0.62,
     "reported_frontier_value": 0.62,
@@ -907,43 +636,43 @@
     "threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 649
+        "days": 683
       },
       "T80": {
         "status": "right_censored",
-        "days": 649
+        "days": 683
       },
       "T90": {
         "status": "right_censored",
-        "days": 649
+        "days": 683
       }
     },
     "capability_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 649
+        "days": 683
       },
       "T80": {
         "status": "right_censored",
-        "days": 649
+        "days": 683
       },
       "T90": {
         "status": "right_censored",
-        "days": 649
+        "days": 683
       }
     },
     "reported_threshold_days": {
       "T50": {
         "status": "right_censored",
-        "days": 649
+        "days": 683
       },
       "T80": {
         "status": "right_censored",
-        "days": 649
+        "days": 683
       },
       "T90": {
         "status": "right_censored",
-        "days": 649
+        "days": 683
       }
     },
     "velocity_180d": null,
