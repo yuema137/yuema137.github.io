@@ -198,6 +198,18 @@ site. Its palette tokens are copied from the ones in
 block too. Its Chinese version is an in-page toggle rather than a `/zh/` URL,
 because both languages live in the same data arrays.
 
+Its sections are rendered by JavaScript from those arrays, so the page also
+carries a static copy of the full English text for readers without
+JavaScript, between the `STATIC:NAV` and `STATIC:MAIN` markers. The copy is
+generated, not hand-written: after editing the post's content, run
+
+```sh
+npm run av:static
+```
+
+and commit the page. With JavaScript the copy is hidden before the body is
+parsed (the head script adds `class="js"` to `<html>`), so there is no flash.
+
 ## Games
 
 `/games/` is a plain page listing the games; each game lives in its own

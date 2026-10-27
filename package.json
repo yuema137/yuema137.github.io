@@ -2,11 +2,12 @@
   "name": "yuema137-website-tools",
   "private": true,
   "version": "1.0.0",
-  "description": "Build tooling for yuema137.github.io. The site itself has no runtime dependencies; this is only used to compile the CV to PDF.",
+  "description": "Build tooling for yuema137.github.io. The site itself has no runtime dependencies; this compiles the CV to PDF and writes the no-JavaScript copy of the AV evaluation post.",
   "type": "module",
   "scripts": {
     "cv": "node tools/build-cv.mjs",
-    "cv:png": "node tools/build-cv.mjs --png"
+    "cv:png": "node tools/build-cv.mjs --png",
+    "av:static": "node tools/prerender-av.mjs"
   },
   "devDependencies": {
     "playwright": "1.62.1"
