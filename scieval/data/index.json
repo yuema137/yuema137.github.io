@@ -4,7 +4,7 @@
     "note": "This dataset is generated from repository Markdown. The explorer is a render layer only."
   },
   "stats": {
-    "works": 405,
+    "works": 408,
     "topics": 15,
     "domains": 19,
     "activities": 11,
@@ -27,7 +27,7 @@
       "zh_name": "General Long-Horizon Agent Benchmarks",
       "url": "./documents/en/topics/long_horizon_evaluation.json",
       "zh_url": "./documents/zh/topics/long_horizon_evaluation.json",
-      "count": 64
+      "count": 65
     },
     {
       "slug": "trajectory_evaluation",
@@ -86,6 +86,14 @@
       "count": 15
     },
     {
+      "slug": "agent_harnesses_scaffolding",
+      "name": "Agent Harnesses & Scaffolding",
+      "zh_name": "Agent Harnesses & Scaffolding",
+      "url": "./documents/en/topics/agent_harnesses_scaffolding.json",
+      "zh_url": "./documents/zh/topics/agent_harnesses_scaffolding.json",
+      "count": 12
+    },
+    {
       "slug": "evaluation_driven_post_training",
       "name": "Evaluation-Driven Post-Training",
       "zh_name": "Evaluation-Driven Post-Training",
@@ -94,12 +102,12 @@
       "count": 12
     },
     {
-      "slug": "agent_harnesses_scaffolding",
-      "name": "Agent Harnesses & Scaffolding",
-      "zh_name": "Agent Harnesses & Scaffolding",
-      "url": "./documents/en/topics/agent_harnesses_scaffolding.json",
-      "zh_url": "./documents/zh/topics/agent_harnesses_scaffolding.json",
-      "count": 11
+      "slug": "skill_learning_evolution",
+      "name": "Skill Learning & Evolution",
+      "zh_name": "Skill Learning & Evolution",
+      "url": "./documents/en/topics/skill_learning_evolution.json",
+      "zh_url": "./documents/zh/topics/skill_learning_evolution.json",
+      "count": 10
     },
     {
       "slug": "survey",
@@ -115,14 +123,6 @@
       "zh_name": "Hierarchical Decision Abstraction",
       "url": "./documents/en/topics/hierarchical_decision_abstraction.json",
       "zh_url": "./documents/zh/topics/hierarchical_decision_abstraction.json",
-      "count": 7
-    },
-    {
-      "slug": "skill_learning_evolution",
-      "name": "Skill Learning & Evolution",
-      "zh_name": "Skill Learning & Evolution",
-      "url": "./documents/en/topics/skill_learning_evolution.json",
-      "zh_url": "./documents/zh/topics/skill_learning_evolution.json",
       "count": 7
     },
     {
@@ -200,6 +200,14 @@
       "count": 25
     },
     {
+      "slug": "robotics",
+      "name": "Robotics",
+      "zh_name": "Robotics",
+      "url": "./documents/en/domains/robotics.json",
+      "zh_url": "./documents/zh/domains/robotics.json",
+      "count": 21
+    },
+    {
       "slug": "software_systems_engineering",
       "name": "Software & Systems Engineering",
       "zh_name": "Software & Systems Engineering",
@@ -214,14 +222,6 @@
       "url": "./documents/en/domains/mathematics.json",
       "zh_url": "./documents/zh/domains/mathematics.json",
       "count": 20
-    },
-    {
-      "slug": "robotics",
-      "name": "Robotics",
-      "zh_name": "Robotics",
-      "url": "./documents/en/domains/robotics.json",
-      "zh_url": "./documents/zh/domains/robotics.json",
-      "count": 19
     },
     {
       "slug": "electrical_engineering",
@@ -925,7 +925,7 @@
     },
     {
       "month": "2026-10",
-      "count": 10
+      "count": 13
     }
   ],
   "documents": {
@@ -1809,6 +1809,10 @@
       "url": "./documents/en/works/embodiedbench.json",
       "zh_url": "./documents/zh/works/embodiedbench.json"
     },
+    "works/embodiedclbench.md": {
+      "url": "./documents/en/works/embodiedclbench.json",
+      "zh_url": "./documents/zh/works/embodiedclbench.json"
+    },
     "works/embodiedeval.md": {
       "url": "./documents/en/works/embodiedeval.json",
       "zh_url": "./documents/zh/works/embodiedeval.json"
@@ -2401,6 +2405,10 @@
       "url": "./documents/en/works/physics-benchmark.json",
       "zh_url": "./documents/zh/works/physics-benchmark.json"
     },
+    "works/physrsi-eval.md": {
+      "url": "./documents/en/works/physrsi-eval.json",
+      "zh_url": "./documents/zh/works/physrsi-eval.json"
+    },
     "works/plan-rewardbench.md": {
       "url": "./documents/en/works/plan-rewardbench.json",
       "zh_url": "./documents/zh/works/plan-rewardbench.json"
@@ -2528,6 +2536,10 @@
     "works/robospatial.md": {
       "url": "./documents/en/works/robospatial.json",
       "zh_url": "./documents/zh/works/robospatial.json"
+    },
+    "works/robotagentbench.md": {
+      "url": "./documents/en/works/robotagentbench.json",
+      "zh_url": "./documents/zh/works/robotagentbench.json"
     },
     "works/robotouille.md": {
       "url": "./documents/en/works/robotouille.json",
@@ -2947,6 +2959,89 @@
       "zh": {
         "overview": "Labference 检查实验室机器人能否根据刚观察到的结果选出下一步操作，并把这一步实际做出来。只看流程是否完成，是分不清这两件事的：选对了，也可能因为物体掉落而失败；搬运成功了，搬的也可能是错的东西。因此，Labference 对操作选择、物理执行和任务完成分别打分。",
         "summary": "每个任务都有一份任务契约，规定哪些状态与决策有关、机器人可以使用哪些证据、下一步有哪些合法操作、用什么物理判据确认结果、等待和终止条件，以及支持哪些诊断接口。选择看机器人第一次可识别的操作；执行从共享的已验证起点出发，按固定子目标评分；完成则要求终止判据得到确认。设计中还定义了会改变正确答案的证据配对，以及用于定位瓶颈的 Oracle 辅助续跑；但已报告的实验只覆盖随机化的简单反馈称量回合。"
+      },
+      "domains": [
+        {
+          "name": "Robotics",
+          "zh_name": "Robotics",
+          "slug": "robotics",
+          "url": "./documents/en/domains/robotics.json",
+          "zh_url": "./documents/zh/domains/robotics.json"
+        }
+      ],
+      "first_appeared_month": "2026-10"
+    },
+    {
+      "slug": "robotagentbench",
+      "title": "RobotAgentBench",
+      "year": 2026,
+      "card_url": "./documents/en/works/robotagentbench.json",
+      "zh_card_url": "./documents/zh/works/robotagentbench.json",
+      "first_appeared": "2026-10-26",
+      "first_appeared_source": {
+        "label": "arXiv initial submission",
+        "url": "https://arxiv.org/abs/2610.34649"
+      },
+      "overview": "RobotAgentBench (RAB) asks whether a household robot can act on its own, not only whether it can manipulate objects. It rebuilds one real home in Isaac Sim as 50 household layouts and tests standalone VLA and world-action-model (WAM) policies alongside coding agents that plan, execute, and verify through a shared framework. Tasks are scored on five abilities (manipulation, task discovery, context reasoning, failure recovery, robustness) and on four open-ended scenarios that combine them. The best configuration averages 48.5 on the task level and 15.4 on the open-ended scenarios; the best standalone policy averages 18.0.",
+      "summary": "A semi-automated real-to-sim pipeline builds the environments. A coding agent retrieves or reconstructs 3D assets to match measurements and photos of a real home, human reviewers check visual and physical fidelity, and teleoperated real demonstrations are replayed in simulation to tune geometry and physics. The robot is an AgiBot G1 with a mobile base; no planned routes or automatic navigation actions are provided. Every system is described as a planner, an executor, and a verifier, each of which is code-based (C), a learned VLA/WAM policy (L), hybrid (H), or absent (–). Standalone policies, fully code-based coding agents (C/C/C), mixed configurations, and a C/C/C configuration with recursive self-improvement (RSI) are evaluated on the same tasks. In the RSI setting, the coding agent creates, refines, and reuses control tools from execution feedback over ten iterations, and successful improvements are kept.",
+      "domains_text": "Robotics: household mobile manipulation on a simulated AgiBot G1, task planning for long-horizon and open-ended household goals, self-directed navigation, failure recovery, and VLA/WAM policy evaluation. A sim-to-real comparison runs a subset on the physical robot.",
+      "topics": [
+        {
+          "name": "General Long-Horizon Agent Benchmarks",
+          "zh_name": "General Long-Horizon Agent Benchmarks",
+          "slug": "long_horizon_evaluation",
+          "url": "./documents/en/topics/long_horizon_evaluation.json",
+          "zh_url": "./documents/zh/topics/long_horizon_evaluation.json"
+        },
+        {
+          "name": "Agent Harnesses & Scaffolding",
+          "zh_name": "Agent Harnesses & Scaffolding",
+          "slug": "agent_harnesses_scaffolding",
+          "url": "./documents/en/topics/agent_harnesses_scaffolding.json",
+          "zh_url": "./documents/zh/topics/agent_harnesses_scaffolding.json"
+        },
+        {
+          "name": "Skill Learning & Evolution",
+          "zh_name": "Skill Learning & Evolution",
+          "slug": "skill_learning_evolution",
+          "url": "./documents/en/topics/skill_learning_evolution.json",
+          "zh_url": "./documents/zh/topics/skill_learning_evolution.json"
+        }
+      ],
+      "activities": [],
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.34649"
+        },
+        {
+          "label": "Full text",
+          "url": "https://arxiv.org/html/2610.34649v1"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/AetherLabsAI/RobotAgentBench"
+        },
+        {
+          "label": "Assets",
+          "url": "https://huggingface.co/datasets/AetherLabs-AI/RobotAgentBench-assets"
+        },
+        {
+          "label": "Training data",
+          "url": "https://huggingface.co/datasets/AetherLabs-AI/RobotAgentBench-TrainingData"
+        },
+        {
+          "label": "Model",
+          "url": "https://huggingface.co/AetherLabs-AI/InternVLA-A1.5-RAB"
+        },
+        {
+          "label": "Project",
+          "url": "https://aetherlabsai.github.io/RobotAgentBench/"
+        }
+      ],
+      "zh": {
+        "overview": "RobotAgentBench（RAB）要回答的问题是：家用机器人能不能自己把事办成，而不只是会不会抓取和摆放物体。它在 Isaac Sim 里把一套真实住宅重建成 50 种家居布局，把单独运行的 VLA 和世界动作模型（WAM）策略，与在同一套规划、执行、验证框架下工作的 coding agent 放在一起测试。打分分两层：任务层看五种能力（操作、任务发现、情境推理、失败恢复、鲁棒性），场景层看四个把这些能力串起来的开放式场景。表现最好的配置在任务层平均得 48.5 分，开放式场景得 15.4 分；单独运行的策略最高只有 18.0 分。",
+        "summary": "环境由一条半自动的 real-to-sim 流程搭建。coding agent 按真实住宅的测量数据和照片检索或重建 3D 资产，人工审核视觉和物理上是否逼真，再把真实遥操作演示放回仿真里回放，用来校准几何形状和物理参数。机器人是带移动底盘的 AgiBot G1；基准不提供规划好的路线，也不提供自动导航动作。每个系统都拆成规划器、执行器、验证器三部分，每部分可以是基于代码（C）、学习得到的 VLA/WAM 策略（L）、两者混合（H），或者不存在（–）。单独运行的策略、完全基于代码的 coding agent（C/C/C）、各种混合配置，以及带递归自我改进（RSI）的 C/C/C 配置，都在同一批任务上评测。在 RSI 设置下，coding agent 根据执行反馈创建、改进并复用控制工具，共迭代十轮，有效的改进会保留下来。"
       },
       "domains": [
         {
@@ -3489,6 +3584,63 @@
       "first_appeared_month": "2026-10"
     },
     {
+      "slug": "physrsi-eval",
+      "title": "PhysRSI-eval",
+      "year": 2026,
+      "card_url": "./documents/en/works/physrsi-eval.json",
+      "zh_card_url": "./documents/zh/works/physrsi-eval.json",
+      "first_appeared": "2026-10-19",
+      "first_appeared_source": {
+        "label": "arXiv initial submission",
+        "url": "https://arxiv.org/abs/2610.26848"
+      },
+      "overview": "PhysRSI-eval measures physical recursive self-improvement: whether an LLM agent controlling a simulated dual-arm robot gets better at a manipulation task by revising its own code, tools, skills, and notes after failed attempts. Each of 18 RoboDojo tasks gets a first attempt and up to 17 refinement rounds, each round a full physical attempt. Five axes score the run: first-attempt performance, efficiency of the gain, success, budget, and improvement from failure. The paper then relates each axis to public benchmark scores and tests, by ablation, which parts of the persistent workspace carry the improvement.",
+      "summary": "Round K0 is an in-context attempt with shared robot tools and no workspace, run three times per task. From K1 to K17 the agent makes one physical attempt per round from a persistent workspace of policy code, tools, skills, and notes. After each round it receives the native score, a success flag, and the failure reason, then revises the workspace with robot actions disabled. A chain stops at the first native success. Robot actions are target-pose calls of at most 5 cm translation and 0.35 rad rotation, each executed for 1–5 control steps and returning a state JSON and three camera images. GPT systems run in Codex CLI and Claude systems in Claude Code.",
+      "domains_text": "Robotics: dual-arm manipulation in RoboDojo simulation, controlled through agent-written policy code that issues end-effector target poses. No physical-robot experiments are reported.",
+      "topics": [
+        {
+          "name": "Skill Learning & Evolution",
+          "zh_name": "Skill Learning & Evolution",
+          "slug": "skill_learning_evolution",
+          "url": "./documents/en/topics/skill_learning_evolution.json",
+          "zh_url": "./documents/zh/topics/skill_learning_evolution.json"
+        }
+      ],
+      "activities": [],
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.26848"
+        },
+        {
+          "label": "Full text",
+          "url": "https://arxiv.org/html/2610.26848v1"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/PhysRSI-Eval/PhysRSI-Eval-code"
+        },
+        {
+          "label": "Project",
+          "url": "https://physrsi-eval.github.io/"
+        }
+      ],
+      "zh": {
+        "overview": "PhysRSI-eval 测的是物理层面的递归自我改进：一个控制仿真双臂机器人的 LLM agent，在尝试失败后修改自己的代码、工具、技能和笔记，能不能把一项操作任务越做越好。18 个 RoboDojo 任务每个先做一次首次尝试，再给最多 17 轮改进，每轮都是一次完整的物理尝试。结果按五个维度打分：首次尝试表现、提升的效率、成功、预算，以及从失败中改进的程度。论文随后把每个维度和公开基准分数做关联，并用消融实验检验持久工作区里到底是哪些内容带来了改进。",
+        "summary": "K0 轮是上下文内尝试：agent 使用共享的机器人工具，没有工作区，每个任务跑三次。从 K1 到 K17，agent 每轮基于一个持久工作区做一次物理尝试，工作区里有策略代码、工具、技能和笔记。每轮结束后它会拿到原生分数、成功标记和失败原因，然后在机器人动作被禁用的情况下修改工作区。一条改进链在第一次原生判定成功时停止。机器人动作是目标位姿调用，每次平移不超过 5 cm、旋转不超过 0.35 rad，执行 1–5 个控制步，返回一份状态 JSON 和三张相机图像。GPT 系列在 Codex CLI 中运行，Claude 系列在 Claude Code 中运行。"
+      },
+      "domains": [
+        {
+          "name": "Robotics",
+          "zh_name": "Robotics",
+          "slug": "robotics",
+          "url": "./documents/en/domains/robotics.json",
+          "zh_url": "./documents/zh/domains/robotics.json"
+        }
+      ],
+      "first_appeared_month": "2026-10"
+    },
+    {
       "slug": "physclosurebench",
       "title": "PhysClosureBench",
       "year": 2026,
@@ -3647,6 +3799,59 @@
           "zh_url": "./documents/zh/domains/physics.json"
         }
       ],
+      "first_appeared_month": "2026-10"
+    },
+    {
+      "slug": "embodiedclbench",
+      "title": "EmbodiedCLBench",
+      "year": 2026,
+      "card_url": "./documents/en/works/embodiedclbench.json",
+      "zh_card_url": "./documents/zh/works/embodiedclbench.json",
+      "first_appeared": "2026-10-09",
+      "first_appeared_source": {
+        "label": "arXiv initial submission",
+        "url": "https://arxiv.org/abs/2610.13021"
+      },
+      "overview": "EmbodiedCLBench tests whether an embodied agent can learn from basic household tasks and recombine what it learned on unseen, more complex ones. Agents first attempt basic tasks, then face an advanced task that composes skills from two to four basic-task categories. The benchmark compares no prior experience, full earlier trajectories kept in context, and a written skill summary distilled from them. Advanced-task success is 3–12% zero-shot and 16–52% with either form of experience, but adding more learning samples beyond one brings no consistent further gain.",
+      "summary": "Tasks come from indoor household scenes in the closed-source version of the TongSim simulator, chosen for its wider action set. Because online simulation of that version is not practical for evaluation, each task is turned into a pre-built state-transition graph: every node pairs a first-person image with four candidate actions, which are optimal, suboptimal (an executable detour), or invalid. The agent observes the current image and picks one action per step. A task succeeds when the agent reaches the goal node within the step budget, its shortest path plus 3 extra steps at test time (6 during learning). In the In-Context Learning (ICL) setting, the agent first completes two related basic tasks and keeps the full interaction history in context. In the Skill Learning setting, it writes a concise Markdown skill summary after the same basic tasks, and only that summary is available at test time.",
+      "domains_text": "Embodied household simulation (TongSim), solved by choosing among discrete high-level actions; outside the repository's science/engineering domain axis, and the paper evaluates no robot platform or robot control.",
+      "topics": [
+        {
+          "name": "Skill Learning & Evolution",
+          "zh_name": "Skill Learning & Evolution",
+          "slug": "skill_learning_evolution",
+          "url": "./documents/en/topics/skill_learning_evolution.json",
+          "zh_url": "./documents/zh/topics/skill_learning_evolution.json"
+        }
+      ],
+      "activities": [],
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.13021"
+        },
+        {
+          "label": "Full text",
+          "url": "https://arxiv.org/html/2610.13021v1"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/PKU-VaLuE-Lab/EmbodiedCLBench"
+        },
+        {
+          "label": "Data",
+          "url": "https://huggingface.co/datasets/PKU-VaLuE-Lab/EmbodiedCLBench"
+        },
+        {
+          "label": "Project",
+          "url": "https://pku-value-lab.github.io/EmbodiedCLBench-homepage"
+        }
+      ],
+      "zh": {
+        "overview": "EmbodiedCLBench 测的是：具身 agent 能不能从基础家务任务中学到东西，再把学到的东西重新组合起来，完成没见过的更复杂的任务。agent 先做基础任务，然后面对一个进阶任务，它组合了两到四个基础任务类别里的技能。基准比较三种情况：没有任何经验、把之前的完整轨迹留在上下文里、以及从这些轨迹中提炼出的一份书面技能摘要。进阶任务零样本的成功率是 3–12%，有了任一种经验后是 16–52%；但学习样本超过一个之后，再多也没有带来稳定的提升。",
+        "summary": "任务来自 TongSim 模拟器闭源版本中的室内家居场景，选闭源版本是因为它支持的动作更多。由于这个版本无法实际用于在线仿真评测，每个任务都被转换成预先构建好的状态转移图：每个节点对应一张第一人称图像和四个候选动作，候选动作分为最优、次优（能执行但绕远）和无效三种。agent 看着当前图像，每一步选一个动作。在步数预算内到达目标节点就算成功；测试时的预算是最短路径加 3 步，学习阶段加 6 步。在 In-Context Learning（ICL）设置下，agent 先完成两个相关的基础任务，并把完整的交互历史留在上下文里。在 Skill Learning 设置下，它做完同样的基础任务后写一份简短的 Markdown 技能摘要，测试时只能看到这份摘要。"
+      },
+      "domains": [],
       "first_appeared_month": "2026-10"
     },
     {
