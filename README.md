@@ -4,8 +4,9 @@ Personal academic/research website for Yue Ma.
 Plain HTML + CSS. No build step, no framework, no dependencies, almost no
 JavaScript (see "Conventions").
 
-Live at <https://yuema137.github.io>, deployed from the `main` branch root by
-GitHub Pages.
+Live at <https://yuema137.github.io>. Every merge to `main` deploys it through
+the GitHub Actions workflow in `.github/workflows/pages.yml`, which publishes an
+explicit allowlist of paths (see "The CV" for why).
 
 ## Local preview
 
@@ -415,8 +416,9 @@ syncing is cheaper than any abstraction.
 ## Deliberately not used
 
 React, Next.js, Vue, Svelte, Tailwind, bundlers, static-site generators,
-webfonts, analytics, and external runtime dependencies of any kind. Every page
-loads one HTML file and one stylesheet, and nothing else.
+third-party webfonts, analytics, and external runtime dependencies of any kind.
+A regular page loads one HTML file, one stylesheet and the self-hosted fonts;
+the exceptions are the scripts named under "Almost no JavaScript".
 
 The one npm dependency, Playwright, is **build tooling for the CV only**. It is
 a devDependency, it runs on your machine or in CI, and not one byte of it
