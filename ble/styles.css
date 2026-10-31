@@ -2,7 +2,7 @@
 :root[data-theme="light"] { color-scheme: light; --bg:#f4f7fb; --panel:#ffffff; --line:#d5deea; --text:#172235; --muted:#51627a; --accent:#087d70; --warn:#8a5d00; --link:#086b61; }
 * { box-sizing:border-box; }
 body { margin:0; background:var(--bg); color:var(--text); font:15px/1.45 ui-sans-serif,system-ui,-apple-system,sans-serif; }
-.shell { max-width:1240px; margin:0 auto; padding:48px 24px 80px; }.hero { position:relative; }
+.shell { max-width:1160px; margin:0 auto; padding:48px 24px 80px; }.hero { position:relative; }
 .eyebrow { color:var(--accent); font-size:12px; letter-spacing:.16em; font-weight:700; }
 h1 { margin:8px 0; font-size:clamp(34px,5vw,64px); letter-spacing:-.05em; }
 .lede { color:var(--muted); font-size:18px; margin:0 0 34px; }
@@ -253,3 +253,8 @@ a:hover { color:var(--text); }
 .site-footer h2 { margin:0 0 10px; color:var(--text); font-size:14px; letter-spacing:.02em; }
 .site-footer p { margin:0 0 10px; }
 .site-footer a { color:var(--link); }
+
+/* Homepage geometry: 1160px outer container, 24px / 20px gutters. */
+@media(max-width:860px){.shell{padding-inline:20px}}
+/* Checkbox controls must not inherit the search field's minimum width. */
+input[type="checkbox"]{min-width:0;width:auto}

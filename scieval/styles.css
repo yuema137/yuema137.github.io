@@ -18,7 +18,7 @@
   --shadow: 0 22px 64px rgba(0, 5, 14, 0.38);
   --shadow-soft: 0 12px 36px rgba(0, 5, 14, 0.24);
   --radius: 18px;
-  --maxw: 1400px;
+  --maxw: 1112px;
   --figure-bg: #f8fbff;
   --code-bg: #07101d;
   --table-head: #142640;
@@ -105,7 +105,7 @@ button, input, select { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
 
 .shell {
-  width: min(var(--maxw), calc(100% - 40px));
+  width: min(var(--maxw), calc(100% - 48px));
   margin: 0 auto;
   padding: 34px 0 48px;
 }
@@ -642,7 +642,7 @@ a.tag:hover { border-color: var(--line-strong); background: color-mix(in srgb, v
 }
 
 @media (max-width: 700px) {
-  .shell { width: min(100% - 24px, var(--maxw)); padding-top: 14px; }
+  .shell { width: min(100% - 40px, var(--maxw)); padding-top: 14px; }
   .site-header { gap: 22px; padding: 24px 20px; border-radius: 16px; }
   .site-header::after { right: -210px; }
   h1 { font-size: clamp(2.2rem, 12vw, 3.4rem); }
@@ -661,3 +661,6 @@ a.tag:hover { border-color: var(--line-strong); background: color-mix(in srgb, v
   html { scroll-behavior: auto; }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
 }
+
+/* Homepage content edges: 1160px outer width minus its gutters. */
+@media(max-width:860px){.shell{width:calc(100% - 40px)}}
